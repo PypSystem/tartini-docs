@@ -1,14 +1,20 @@
 ---
-title: "Campos de qualificação"
-sidebarTitle: "Qualificação"
-description: "Colete dados estruturados dos clientes durante o atendimento."
+title: "Campos do contato"
+sidebarTitle: "Campos do contato"
+description: "Defina os dados estruturados que a IA coleta e a equipe edita na ficha do contato."
 ---
 
-Os campos de qualificação permitem coletar informações estruturadas dos clientes durante as conversas. O agente de IA pode solicitar esses dados automaticamente conforme configurado.
+Os campos do contato são os dados estruturados que a sua operação guarda de cada cliente — CPF/CNPJ, e-mail, domínio, número do pedido, o que fizer sentido.
+
+A IA coleta esses dados durante as conversas e os relê nos atendimentos seguintes; a equipe edita o que for preciso na [ficha do contato](/contatos/ficha-do-contato). Este catálogo define **quais campos existem**.
+
+<Note>
+  Este recurso já se chamou "campos de qualificação". O nome mudou porque ele passou a ser mais do que um roteiro de coleta: é o cadastro do contato, lido e escrito pelos dois lados.
+</Note>
 
 ## Configuração
 
-No Dashboard, acesse **Operações > Campos de qualificação**:
+No Dashboard, acesse **Identidade → Operações → Campos do contato**:
 
 - **Criar campos** — defina quais informações coletar (nome, e-mail, CPF, etc.)
 - **Tipos de campo** — texto, número, seleção, data
@@ -34,4 +40,14 @@ O agente de IA coleta os dados de forma natural durante a conversa, sem parecer 
 
 <Tip>
   Mantenha poucos campos obrigatórios para não frustrar o cliente. Colete apenas o essencial e use campos opcionais para informações complementares.
+</Tip>
+
+## Campos criados pela IA
+
+Quando o cliente informa um dado reaproveitável para o qual não existe campo cadastrado, a IA **cria o campo sozinha** e guarda o valor. Ele aparece na ficha do contato como qualquer outro.
+
+Esses campos entram como opcionais e **fora da coleta proativa**: a IA não passa a perseguir aquele dado em toda conversa só porque o guardou uma vez.
+
+<Tip>
+  Vale revisar de tempos em tempos os campos que apareceram sozinhos. Eles mostram, na prática, que dados os seus clientes trazem — e alguns merecem virar coleta proativa.
 </Tip>

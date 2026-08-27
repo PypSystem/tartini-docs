@@ -30,6 +30,7 @@
               "atendimento/conversas",
               "atendimento/copilot",
               "atendimento/atendente-passivo",
+              "atendimento/anotacoes-da-ia",
               "atendimento/widget-de-chat",
               "atendimento/mensagens-rapidas"
             ]
@@ -64,7 +65,8 @@
           {
             "group": "Contatos",
             "pages": [
-              "contatos/gerenciar-contatos"
+              "contatos/gerenciar-contatos",
+              "contatos/ficha-do-contato"
             ]
           },
           {
@@ -81,7 +83,8 @@
               "operacoes/horarios-de-atendimento",
               "operacoes/sla",
               "operacoes/roteamento",
-              "operacoes/campos-de-qualificacao"
+              "operacoes/campos-de-qualificacao",
+              "operacoes/status-de-contato"
             ]
           },
           {
