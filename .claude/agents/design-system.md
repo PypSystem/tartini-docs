@@ -21,7 +21,7 @@ o conteúdo contra o sistema.
 docs. O visual vive em **`docs.json`** (cores, fontes, fundo — validado pelo schema
 `https://mintlify.com/docs.json`, não invente chaves) e **`style.css`** (só o que o docs.json não
 cobre, ex.: IBM Plex Mono no código). O DS canônico do produto está em
-`../projeto-ia-web/DESIGN_SYSTEM.md`.
+`../tartini-web/DESIGN_SYSTEM.md`.
 
 ## Princípios inegociáveis (o núcleo)
 

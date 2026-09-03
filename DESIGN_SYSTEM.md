@@ -5,7 +5,7 @@
 > código (`docs.json` + `style.css`), o código vence — e este doc deve ser corrigido.
 >
 > Atalhos: comando **`/ds`** · subagente **`design-system`**. DS canônico do produto:
-> `../projeto-ia-web/DESIGN_SYSTEM.md` (san-web). Este repo é **Mintlify** (tema `mint`) — o DS
+> `../tartini-web/DESIGN_SYSTEM.md` (san-web). Este repo é **Mintlify** (tema `mint`) — o DS
 > aqui é aplicado por configuração (`docs.json`), não por classes CSS.
 
 ---
