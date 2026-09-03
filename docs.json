@@ -31,7 +31,8 @@
               "atendimento/central-de-conversas",
               "atendimento/copilot",
               "atendimento/atendente-passivo",
-              "atendimento/mensagens-rapidas",
+              "atendimento/anotacoes-da-ia",
+              "atendimento/widget-de-chat",
               "atendimento/widget-de-chat"
             ]
           },
@@ -71,9 +72,10 @@
           {
             "group": "Campanhas e contatos",
             "pages": [
+              "contatos/gerenciar-contatos",
+              "contatos/ficha-do-contato"
               "campanhas/criar-e-gerenciar",
-              "campanhas/metricas",
-              "contatos/gerenciar-contatos"
+              "campanhas/metricas"
             ]
           },
           {
@@ -87,6 +89,11 @@
           {
             "group": "Integrações",
             "pages": [
+              "operacoes/horarios-de-atendimento",
+              "operacoes/sla",
+              "operacoes/roteamento",
+              "operacoes/campos-de-qualificacao",
+              "operacoes/status-de-contato"
               "integracoes/conectores",
               "integracoes/contatos-de-campanha",
               "integracoes/webhook-de-atendimento",
