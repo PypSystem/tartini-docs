@@ -1,64 +1,81 @@
 ---
 title: "Visão geral do atendimento"
 sidebarTitle: "Visão geral"
-description: "Entenda como funciona o fluxo de atendimento no SAN Talk AI."
+description: "IA e humanos trabalhando juntos para que nenhum cliente fique sem resposta."
 ---
 
-O SAN Talk AI oferece um sistema completo de atendimento ao cliente que combina inteligência artificial com atendentes humanos. As conversas chegam via WhatsApp e são roteadas automaticamente conforme as regras configuradas.
+O Tartini combina agentes de IA com atendentes humanos em uma plataforma unificada de atendimento. A IA conhece seu negócio, responde com naturalidade e resolve a maioria dos casos sozinha. Quando a situação exige um toque humano, transfere automaticamente com todo o contexto da conversa.
 
 ## Como funciona o fluxo
 
-```mermaid
-flowchart TD
-    A[Cliente envia mensagem] --> B{Horário de atendimento?}
-    B -->|Sim| C{Critérios de roteamento}
-    B -->|Não| D[Atendente passivo]
-    C -->|Automático| E[Agente de IA]
-    C -->|Manual| F[Fila de atendentes]
-    E -->|Transferência| F
-    F --> G[Atendente humano + Copilot]
-    D --> H[Resposta automática fora do expediente]
-    E --> I[Resposta ao cliente]
-    G --> I
-```
+<Steps>
+  <Step title="Cliente inicia uma conversa">
+    Uma mensagem chega ao Tartini pelo canal que o cliente escolheu usar.
+  </Step>
+  <Step title="Verificação de horário">
+    Dentro do expediente, a conversa segue o fluxo normal. Fora do horário, o [atendente passivo](/atendimento/atendente-passivo) assume, garantindo atendimento 24/7 sem precisar de equipe noturna.
+  </Step>
+  <Step title="Roteamento inteligente">
+    A conversa é direcionada para o agente de IA ou para a fila de atendentes humanos, conforme os [critérios de roteamento](/operacoes/roteamento) que você configurou.
+  </Step>
+  <Step title="IA responde com conhecimento">
+    O agente de IA já sabe sobre seus produtos, políticas e processos. Responde com a [identidade](/ia-e-personalidade/comunicacao) da sua marca e resolve a maioria dos casos de forma autônoma.
+  </Step>
+  <Step title="Transferência com contexto">
+    Se a conversa exige um humano, a IA transfere automaticamente. O atendente recebe todo o histórico e conta com o [Copilot](/atendimento/copilot) para responder mais rápido.
+  </Step>
+</Steps>
 
-## Componentes do atendimento
+## Recursos do atendimento
 
 <CardGroup cols={2}>
-  <Card title="Conversas" icon="message" href="/atendimento/conversas">
-    Gerencie conversas em tempo real, atribua a atendentes e acompanhe o histórico.
+  <Card title="Inbox" icon="inbox" href="/atendimento/conversas">
+    Todas as conversas em um só lugar. Filtre por status, atendente ou setor e acompanhe cada interação em tempo real.
   </Card>
-  <Card title="Copilot" icon="user-astronaut" href="/atendimento/copilot">
-    Assistente de IA que ajuda atendentes humanos com sugestões em tempo real.
+  <Card title="Central de Conversas" icon="table-list" href="/atendimento/central-de-conversas">
+    Visão completa de todas as conversas da operação. Audite, analise e exporte dados para gestão e compliance.
+  </Card>
+  <Card title="Copilot" icon="wand-magic-sparkles" href="/atendimento/copilot">
+    Sugestões inteligentes em tempo real para seus atendentes responderem com a rapidez de um especialista.
   </Card>
   <Card title="Atendente passivo" icon="moon" href="/atendimento/atendente-passivo">
-    IA que atende automaticamente fora do horário de expediente.
+    IA que garante atendimento contínuo 24/7, mesmo fora do horário de expediente.
+  </Card>
+  <Card title="Mensagens rápidas" icon="bolt" href="/atendimento/mensagens-rapidas">
+    Atalhos de texto para agilizar respostas recorrentes com o comando `/`.
   </Card>
   <Card title="Widget de chat" icon="comment-dots" href="/atendimento/widget-de-chat">
-    Widget embutível para sites que conecta ao SAN Talk AI.
+    Atendimento direto no seu site com histórico, status de entrega e handoff para humano.
   </Card>
 </CardGroup>
 
 ## Funcionalidades principais
 
-### Gerenciamento de conversas
-- Criar, listar e acompanhar conversas em tempo real
-- Atribuir conversas a atendentes específicos
-- Finalizar conversas com motivo de encerramento
-- Visualizar histórico completo de mensagens
+<AccordionGroup>
+  <Accordion title="Canais integrados">
+    - **WhatsApp** via QR Code para conexão rápida
+    - **WhatsApp Business (WABA)** via API oficial da Meta para alto volume
+    - **Widget de chat** para visitantes do seu site
+  </Accordion>
 
-### Multicanal
-- WhatsApp Web (via Evolution API)
-- WhatsApp Business Account (WABA - API oficial da Meta)
-- Widget de chat para sites
+  <Accordion title="Tipos de mensagem">
+    - Texto, imagens, áudio e documentos
+    - Reações a mensagens
+    - Edição e exclusão de mensagens
+    - Indicadores de presença (digitando, gravando áudio)
+  </Accordion>
 
-### Roteamento inteligente
-- Regras de roteamento configuráveis por prioridade
-- Distribuição automática entre atendentes
-- Transferência de IA para humano quando necessário
+  <Accordion title="Gestão de conversas">
+    - Atribuição manual ou automática de conversas
+    - Transferência entre atendentes ou setores com contexto
+    - Notas internas para comunicação entre a equipe
+    - Motivo de encerramento para alimentar métricas
+  </Accordion>
 
-### Mensagens
-- Texto, imagens, áudio e documentos
-- Reações a mensagens
-- Edição e exclusão de mensagens
-- Indicadores de presença (digitando, gravando áudio)
+  <Accordion title="Monitoramento e SLA">
+    - Indicador visual de SLA com cores (verde, amarelo, vermelho)
+    - Tempo de resposta e duração da conversa
+    - Exportação de dados em CSV para auditoria
+    - Avaliação de conversas e CSAT
+  </Accordion>
+</AccordionGroup>

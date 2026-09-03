@@ -1,0 +1,64 @@
+---
+title: "Informações da Empresa"
+sidebarTitle: "Informações"
+description: "Defina o nome da Empresa exibido no Talk e o idioma preferido para as respostas da IA."
+---
+
+A página **Informações** concentra dois ajustes simples mas com efeito grande no produto: o **nome da Empresa** (que aparece em toda a plataforma e em pontos visíveis ao cliente) e o **idioma preferido** para as respostas geradas pela IA.
+
+A página fica em **Configurações &rarr; Informações** ([talk.saninternet.com/settings/parameters](https://talk.saninternet.com/settings/parameters)).
+
+<Note>
+  Apenas usuários com papel de **Proprietário** ou **Gestor da empresa** podem alterar essas informações.
+</Note>
+
+---
+
+## Nome da Empresa
+
+O nome que identifica sua organização dentro do Talk. Ele aparece em vários pontos:
+
+- Topo da barra lateral, ao lado do logo.
+- Cabeçalho do card de Empresa em [Áreas & Unidades](/administracao/empresas-e-unidades).
+- Assinaturas e comunicações automáticas (quando a IA precisa se apresentar em nome da Empresa).
+- Recibos e faturas.
+
+<Tip>
+  Use o nome **comercial** da empresa, não a razão social. Curto e reconhecível pelo cliente — ex.: "Acme" em vez de "Acme Comércio e Serviços Ltda".
+</Tip>
+
+Ao salvar, a mudança é refletida **imediatamente** em toda a sessão sem necessidade de reload.
+
+---
+
+## Idioma
+
+Define o **idioma preferido** que a IA usará nas respostas geradas — tanto pelo agente principal quanto pelo Copilot e pelo Scout.
+
+Opções disponíveis:
+
+| Código | Idioma |
+|--------|--------|
+| `pt-BR` | Português (Brasil) |
+| `en` | English |
+| `es` | Español |
+| `fr` | Français |
+| `de` | Deutsch |
+| `it` | Italiano |
+
+<Warning>
+  O idioma controla **a saída da IA**, não a interface do dashboard. A UI continua em português independentemente da escolha.
+</Warning>
+
+<Tip>
+  Mesmo configurando um idioma preferido, a IA tenta espelhar o idioma do **cliente** durante a conversa — se um cliente escreve em inglês para uma Empresa configurada em `pt-BR`, a IA responde em inglês. O idioma da página serve como fallback quando o cliente não dá pistas claras de qual idioma quer.
+</Tip>
+
+---
+
+## Aplicação das mudanças
+
+Ao clicar em **Salvar**:
+
+- O **nome da Empresa** é gravado no perfil organizacional e atualizado em todos os pontos que mostram esse nome.
+- O **idioma preferido** é gravado nos parâmetros da Empresa e passa a valer para as próximas mensagens geradas pela IA. Conversas já em andamento mantêm o idioma escolhido pelo agente até aquele momento.

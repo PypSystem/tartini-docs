@@ -1,0 +1,121 @@
+---
+title: "Conectores (MCP)"
+sidebarTitle: "Conectores"
+description: "Conecte ferramentas externas via MCP (Model Context Protocol) e expanda as capacidades do agente de IA — Google Calendar, sistemas internos e qualquer servidor MCP customizado."
+---
+
+Os **Conectores** ampliam o que o agente de IA do Talk consegue fazer: consultar a agenda do cliente, criar eventos, buscar dados num sistema interno, abrir tickets em outra ferramenta etc. Tudo isso acontece sobre o **MCP (Model Context Protocol)** — um padrão aberto que descreve "ferramentas" que a IA pode chamar durante uma conversa.
+
+A página fica em **Configurações &rarr; Conectores** ([talk.saninternet.com/settings/connectors](https://talk.saninternet.com/settings/connectors)).
+
+<Warning>
+  Em alguns planos a funcionalidade de Conectores fica indisponível. Quando esse for o caso, a página exibe um bloqueio e os conectores não podem ser configurados.
+</Warning>
+
+---
+
+## Como funciona o MCP
+
+O MCP permite que o agente de IA do Talk **descubra** quais ferramentas um servidor externo oferece e **as use** durante uma conversa, quando faz sentido. Cada ferramenta é uma função com nome, descrição e parâmetros — exatamente como uma API REST, mas descrita no formato MCP.
+
+**Exemplo de fluxo:**
+
+1. O cliente pergunta no WhatsApp: *"Qual horário tenho livre amanhã?"*
+2. O agente de IA percebe que precisa consultar uma agenda.
+3. Ele chama a ferramenta `list_events` exposta pelo conector **Google Calendar**.
+4. Com o resultado em mãos, formata uma resposta natural para o cliente.
+
+Tudo isso fica registrado nas mensagens da conversa (você consegue ver no Inbox quais ferramentas foram chamadas).
+
+---
+
+## Integrações populares
+
+A página abre com cards das integrações pré-configuradas. Hoje:
+
+### Google Calendar
+
+Conecta a agenda do Google Workspace ou conta pessoal do Google. Permite ao agente listar eventos, criar agendamentos, verificar disponibilidade e cancelar reuniões.
+
+**Conectar:**
+
+1. Clique em **Conectar via OAuth**.
+2. Você é redirecionado para o login do Google.
+3. Após autorizar, o sistema volta para `/settings/connectors` mostrando o status **Conectado** com selo verde.
+
+**Depois de conectado:**
+
+- **Gerenciar ferramentas**: ativa/desativa as ferramentas individuais que o Google Calendar oferece (você pode, por exemplo, permitir só leitura e bloquear criação).
+- **Desconectar**: revoga o acesso e remove o conector.
+
+### MCP Customizado
+
+Para conectar **qualquer outro servidor MCP** — seja um sistema interno da sua empresa, um SaaS de terceiros ou uma ferramenta open-source — use o cartão **MCP Customizado** e clique em **Configurar**.
+
+---
+
+## Criar um conector customizado
+
+O modal de criação tem **2 etapas**.
+
+<Steps>
+  <Step title="Dados do servidor">
+    Informe:
+
+    - **Nome** — como o conector aparecerá no painel.
+    - **URL do servidor** — endpoint do MCP (ex.: `https://meu-mcp.empresa.com/mcp`).
+    - **Tipo de transporte** — `streamable_http` (recomendado e padrão), `sse` ou outros, conforme suportado pelo seu servidor.
+    - **Tipo de autenticação** — `Nenhuma`, `API Key` (header) ou outro mecanismo suportado.
+    - **API Key** — quando aplicável; o campo aceita exibir/ocultar o valor para conferência.
+
+    Ao avançar, o servidor é criado no Talk e você passa para a etapa 2.
+  </Step>
+
+  <Step title="Testar e descobrir ferramentas">
+    Nesta etapa você pode:
+
+    - **Testar conexão** — verifica se o Talk consegue se comunicar com o servidor MCP. Mostra status de sucesso ou mensagem de erro.
+    - **Descobrir ferramentas** — pede ao servidor a lista de tools que ele expõe. Cada ferramenta vem com nome, descrição e parâmetros.
+
+    Depois de descobrir, salve. O conector aparece na seção **Meus conectores** com a contagem de ferramentas detectadas.
+  </Step>
+</Steps>
+
+<Tip>
+  Recomendamos sempre rodar **Testar conexão** antes de salvar. Um conector ativo com servidor offline gera erros nas conversas do cliente.
+</Tip>
+
+---
+
+## Meus conectores
+
+Lista todos os conectores customizados criados pela Empresa, em formato de tabela:
+
+| Coluna | Descrição |
+|--------|-----------|
+| **Nome** | Nome do conector e URL do servidor (truncado). |
+| **Status** | `Ativo` (verde) ou `Inativo` (cinza), conforme o estado configurado. |
+| **Ferramentas** | Quantidade de tools descobertas e disponíveis para uso. |
+| **Ações** | Ícones para **Gerenciar ferramentas**, **Editar** e **Excluir**. |
+
+### Gerenciar ferramentas
+
+Abre um painel listando todas as ferramentas que o servidor MCP descobriu. Cada uma pode ser **habilitada ou desabilitada individualmente** — útil quando o servidor expõe muitas tools e você quer que o agente use só algumas.
+
+### Editar
+
+Reabre o modal de criação preenchido para alterar URL, autenticação, transporte ou nome. Após salvar, é recomendável re-testar a conexão e re-descobrir ferramentas.
+
+### Excluir
+
+Remove o conector. Conversas em andamento que estavam chamando ferramentas dele param de funcionar imediatamente — confirme antes.
+
+---
+
+## Quem pode gerenciar
+
+Apenas usuários **Proprietário** ou **Gestor da empresa** veem a página de Conectores. A configuração vale para toda a Empresa: uma vez criado e ativado, o conector está disponível para o agente de IA em todas as Unidades.
+
+<Note>
+  As chamadas a ferramentas MCP consomem créditos de IA, pois cada chamada conta como uso do modelo. Acompanhe em **Configurações &rarr; Faturamento &rarr; Consumo**.
+</Note>

@@ -8,19 +8,30 @@ A personalidade define como o agente de IA se comunica com seus clientes. É o q
 
 ## O que você pode configurar
 
-- **Tom de voz** — formal, informal, técnico, amigável
-- **Estilo de comunicação** — direto, detalhado, consultivo
-- **Identidade** — como a IA se apresenta e se refere à empresa
-- **Limitações** — o que a IA **não** deve falar ou prometer
+- **Tom de voz**: formal, informal, técnico, amigável
+- **Estilo de comunicação**: direto, detalhado, consultivo
+- **Identidade**: como a IA se apresenta e se refere à empresa
+- **Limitações**: o que a IA **não** deve falar ou prometer
 
-## Configuração
+## Como configurar
 
-No Dashboard, acesse **IA e personalidade > Personalidade** para:
+No Dashboard, acesse **IA e personalidade > Personalidade**:
 
-1. Definir a descrição da personalidade da IA
-2. Configurar o estilo de comunicação
-3. Visualizar um resumo da personalidade ativa
-4. Testar no **Playground** antes de ativar
+<Steps>
+  <Step title="Descreva a personalidade">
+    Escreva como a IA deve se comportar nas conversas. Quanto mais específico, melhor o resultado.
+  </Step>
+  <Step title="Configure o estilo">
+    Defina o estilo de comunicação e o nível de formalidade.
+  </Step>
+  <Step title="Teste no Playground">
+    Simule conversas com a personalidade configurada antes de ativá-la.
+  </Step>
+</Steps>
+
+<Tip>
+  Uma boa personalidade é específica. Em vez de "seja amigável", descreva: "Use emojis moderadamente, trate o cliente pelo nome e sempre ofereça uma próxima ação clara."
+</Tip>
 
 ## Playground
 
@@ -30,10 +41,15 @@ O Playground permite simular conversas com a personalidade configurada antes de 
 - Verificar se as respostas estão precisas
 - Validar regras de compliance e diretrizes
 
-<Tip>
-  Uma boa personalidade é específica. Em vez de "seja amigável", descreva: "Use emojis moderadamente, trate o cliente pelo nome e sempre ofereça uma próxima ação clara."
-</Tip>
-
 ## Múltiplas configurações
 
-Você pode criar múltiplas configurações de personalidade e ativá-las conforme a necessidade — por exemplo, uma personalidade para vendas e outra para suporte técnico.
+Você pode criar múltiplas configurações de personalidade e ativá-las conforme a necessidade, por exemplo, uma personalidade para vendas e outra para suporte técnico.
+
+## Hierarquia de regras
+
+A IA prioriza as configurações na seguinte ordem:
+
+1. **[Regras de compliance](/ia-e-personalidade/compliance)**: obrigatórias, sempre respeitadas
+2. **[Diretrizes](/ia-e-personalidade/diretrizes)**: seguidas quando não conflitam com compliance
+3. **Personalidade**: tom e estilo geral da comunicação
+4. **[Base de conhecimento](/base-de-conhecimento/visao-geral)**: conteúdo factual para as respostas

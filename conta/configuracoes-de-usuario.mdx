@@ -1,0 +1,79 @@
+---
+title: "Configurações de usuário"
+sidebarTitle: "Configurações de usuário"
+description: "Atualize seu nome, e-mail, nome de atendimento e troque sua senha — tudo no perfil pessoal do usuário logado."
+---
+
+A página **Configurações de usuário** mostra o **seu** perfil dentro do Talk (do usuário logado). É onde você atualiza o nome que aparece para colegas, o nome de assinatura que vai para os clientes e a sua senha.
+
+A página fica em **Configurações &rarr; Configurações de usuário** ([talk.saninternet.com/settings/user](https://talk.saninternet.com/settings/user)).
+
+<Tip>
+  Para **gerenciar outros usuários** (Proprietário/Gestor), vá para [Usuários e permissões](/administracao/usuarios-e-permissoes). Esta página é para editar **somente o seu** perfil.
+</Tip>
+
+---
+
+## Banner de perfil
+
+No topo, um banner azul mostra:
+
+- **Iniciais** do seu nome em um círculo branco translúcido.
+- **Nome completo** atual.
+- **E-mail** cadastrado.
+
+É só uma referência visual — todos os campos editáveis ficam nas seções abaixo.
+
+---
+
+## Informações Pessoais
+
+Bloco com seus dados de identificação:
+
+| Campo | O que é | Onde aparece |
+|-------|---------|--------------|
+| **Nome completo** (obrigatório) | Nome usado para identificar você na plataforma. | Lista de [Usuários](/administracao/usuarios-e-permissoes), histórico de avaliações, atribuição de conversas no Inbox. |
+| **Nome de atendimento** | Assinatura curta usada nas mensagens enviadas para o cliente. | Topo de cada mensagem enviada por você no WhatsApp/Widget, como prefixo do texto (ex.: "_João_: Bom dia!"). |
+
+<Note>
+  O **Nome de atendimento** só vira assinatura nas mensagens quando a Empresa habilita "Assinatura obrigatória" em [Regras de Conversa](/configuracoes/regras-de-conversa). Se a regra estiver desligada, o nome fica registrado mas não aparece para o cliente.
+</Note>
+
+---
+
+## Segurança
+
+Bloco para trocar a senha. Três campos, **todos exigidos** para alterar — deixar em branco mantém a senha atual.
+
+| Campo | Regra |
+|-------|-------|
+| **Senha atual** | Obrigatória para confirmar que é você. |
+| **Nova senha** | Mínimo de **6 caracteres**. |
+| **Confirmar nova senha** | Precisa ser **idêntica** à Nova senha. |
+
+Cada campo tem um botão de olho à direita para mostrar/esconder o que você digitou.
+
+<Warning>
+  Se você for o **Administrador da assinatura** da Empresa, apenas você mesmo pode trocar sua senha — nenhum outro Proprietário consegue resetá-la pelo painel.
+</Warning>
+
+### Erros comuns
+
+- _"Senha atual é obrigatória para alterar a senha"_ — você preencheu a Nova senha mas não a atual.
+- _"A nova senha deve ter no mínimo 6 caracteres"_ — a Nova senha está curta demais.
+- _"Nova senha e confirmação não coincidem"_ — os dois campos não batem; digite de novo.
+
+---
+
+## Salvar alterações
+
+O botão **Salvar Alterações** valida o formulário e aplica:
+
+1. Se algum campo de senha estiver preenchido, valida e atualiza a senha junto com os demais dados.
+2. Se nenhum campo de senha estiver preenchido, apenas atualiza Nome, E-mail e Nome de Atendimento.
+
+O nome atualizado é **propagado imediatamente** para a sessão atual — o cabeçalho da plataforma já reflete o novo nome sem precisar de logout.
+
+<Tip>
+  Trocou de senha? Verifique também em [Sessões ativas](/conta/sessoes-ativas) se há dispositivos antigos conectados que devem ser desconectados.
+</Tip>

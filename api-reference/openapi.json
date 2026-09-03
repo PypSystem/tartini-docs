@@ -1,9 +1,9 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "SAN Talk AI API",
+    "title": "Tartini API",
     "version": "1.0.0",
-    "description": "API publica do SAN Talk AI para integracao de RAG e inteligencia artificial com sistemas externos."
+    "description": "API publica do Tartini para integracao de RAG e inteligencia artificial com sistemas externos."
   },
   "servers": [
     {

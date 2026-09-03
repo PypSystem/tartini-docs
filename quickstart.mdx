@@ -1,77 +1,44 @@
 ---
 title: "Início rápido"
 sidebarTitle: "Início rápido"
-description: "Configure o SAN Talk AI e comece a atender em poucos minutos."
+description: "Configure o Tartini e comece a atender em poucos minutos."
 ---
 
-## 1. Acesse o Dashboard
+Em poucos passos, sua operação estará no ar com agentes de IA atendendo seus clientes.
 
-Entre em [talk.saninternet.com](https://talk.saninternet.com) com suas credenciais. Se ainda não tem uma conta, fale com nosso time comercial.
+## 1. Crie sua conta ou faça login
 
-## 2. Configure sua empresa
+Acesse [talk.saninternet.com](https://talk.saninternet.com) e entre com suas credenciais. Se ainda não tem uma conta, clique em **Criar conta** para começar.
 
-Após o login, o assistente de configuração inicial vai guiar você pelos passos essenciais:
+## 2. Prepare sua operação
+
+Na primeira vez que acessar, o assistente de configuração vai guiar você em 5 etapas para deixar tudo pronto:
 
 <Steps>
-  <Step title="Conecte um canal">
-    Vá em **Canais** e conecte seu WhatsApp escaneando o QR Code ou configurando o WhatsApp Business (WABA). [Saiba mais →](/canais/whatsapp)
+  <Step title="Propriedades da empresa">
+    Ensine sua IA sobre o negócio: segmento, proposta de valor, diferenciais e público-alvo. Quanto mais contexto, melhores as respostas. [Saiba mais →](/base-de-conhecimento/visao-geral)
   </Step>
-  <Step title="Alimente a base de conhecimento">
-    Vá em **Base de conhecimento** e adicione documentos, perguntas frequentes ou URLs de sites. Esses conteúdos serão usados pela IA para responder seus clientes. [Saiba mais →](/base-de-conhecimento/visao-geral)
+  <Step title="Personalidade">
+    Defina como a IA se comunica: tom de voz, estilo e regras. A IA vai falar com a voz da sua marca. [Saiba mais →](/ia-e-personalidade/comunicacao)
   </Step>
-  <Step title="Configure a personalidade da IA">
-    Vá em **Personalidade** e defina o tom de voz, regras de compliance e diretrizes para o agente de IA. [Saiba mais →](/ia-e-personalidade/personalidade)
+  <Step title="Operações">
+    Configure horários de atendimento, roteamento e qualificação de leads. Fora do expediente, a IA continua respondendo automaticamente. [Saiba mais →](/operacoes/horarios-de-atendimento)
   </Step>
-  <Step title="Defina horários de atendimento">
-    Vá em **Operações > Horários** e configure os dias e horários em que sua equipe atende. Fora do expediente, o atendente passivo assume. [Saiba mais →](/operacoes/horarios-de-atendimento)
+  <Step title="Canal de atendimento">
+    Conecte seu WhatsApp escaneando um QR Code ou configurando o WhatsApp Business. Em minutos você já está recebendo mensagens. [Saiba mais →](/canais/whatsapp)
+  </Step>
+  <Step title="Equipe">
+    Convide seus atendentes e defina permissões. Cada membro da equipe recebe acesso ao inbox com suporte do Copilot. [Saiba mais →](/administracao/usuarios-e-permissoes)
   </Step>
 </Steps>
 
-## 3. Teste sua configuração
+## 3. Acompanhe sua operação
 
-Com tudo configurado, envie uma mensagem de teste para o número do WhatsApp conectado. O agente de IA deve responder usando a base de conhecimento e a personalidade configurada.
+Com tudo configurado, o Dashboard mostra suas métricas em tempo real: conversas, tempo de espera, taxa de resolução por IA, satisfação do cliente e muito mais.
 
 <Tip>
-  Use o **Playground** no Dashboard para testar respostas da IA antes de ir ao vivo. Ele permite simular conversas com a personalidade configurada.
+  O indicador de maturidade (canto superior direito) mostra o quanto sua operação está configurada. Chegue a 100% para aproveitar ao máximo a plataforma.
 </Tip>
-
-## 4. Integre via API (opcional)
-
-Se você deseja integrar o SAN Talk AI a outros sistemas, gere uma API key:
-
-1. Acesse **Configurações > API Keys** no Dashboard
-2. Clique em **Criar nova chave**
-3. Copie a chave gerada (formato `pyp_live_...`)
-
-<CodeGroup>
-```bash cURL
-curl -X GET https://api-talk.saninternet.com/v1/api/status \
-  -H "Authorization: Bearer pyp_live_SUA_API_KEY"
-```
-
-```javascript Node.js
-const response = await fetch('https://api-talk.saninternet.com/v1/api/status', {
-  headers: {
-    'Authorization': 'Bearer pyp_live_SUA_API_KEY'
-  }
-});
-console.log(await response.json());
-```
-
-```python Python
-import requests
-
-response = requests.get(
-    'https://api-talk.saninternet.com/v1/api/status',
-    headers={'Authorization': 'Bearer pyp_live_SUA_API_KEY'}
-)
-print(response.json())
-```
-</CodeGroup>
-
-<Warning>
-  Guarde sua API key em local seguro. Ela não será exibida novamente após a criação.
-</Warning>
 
 ## Próximos passos
 
@@ -83,9 +50,9 @@ print(response.json())
     Crie sua primeira campanha de marketing.
   </Card>
   <Card title="Base de conhecimento" icon="book-open" href="/base-de-conhecimento/visao-geral">
-    Aprenda a alimentar a IA com conteúdo da sua empresa.
+    Ensine a IA tudo sobre a sua empresa.
   </Card>
   <Card title="API Reference" icon="code" href="/api-reference/introduction">
-    Documentação completa da API pública.
+    Integre o Tartini ao seu sistema via API.
   </Card>
 </CardGroup>

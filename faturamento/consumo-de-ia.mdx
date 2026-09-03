@@ -1,0 +1,171 @@
+---
+title: "Consumo de IA"
+sidebarTitle: "Consumo de IA"
+description: "Acompanhe quantos tokens cada operação de IA consome, em quais Unidades, modelos e conversas — com gráficos, comparação mensal e drill-down por conversa."
+---
+
+A página **Consumo de IA** mostra **onde os créditos da Empresa estão indo**: quais funcionalidades usaram mais tokens, em quais Unidades, em quais conversas e quanto cada modelo de IA custou. É a fonte principal para entender o custo da operação e identificar pontos para otimizar.
+
+A página fica em **Configurações &rarr; Consumo de IA** ([talk.saninternet.com/settings/billing/consumption](https://talk.saninternet.com/settings/billing/consumption)).
+
+---
+
+## Conceitos rápidos
+
+| Termo | O que é |
+|-------|---------|
+| **Token** | Unidade que os modelos de IA usam para contar texto. Aproximadamente 0,75 palavra em português. |
+| **Tokens de entrada** | Tudo que o Talk envia para a IA (contexto, instruções, base de conhecimento, histórico da conversa). |
+| **Tokens de saída** | Tudo que a IA gera em resposta. |
+| **Chamada** | Uma requisição à IA. Uma conversa longa pode ter dezenas de chamadas. |
+| **Categoria** | Função que usou a IA (Copilot, Scout, RAG, Atendimento Passivo, Campanha, etc.). |
+| **Custo USD** | Custo real em dólares cobrado pelos provedores (OpenAI, Anthropic, etc.). |
+
+---
+
+## Filtros do topo
+
+### Período
+
+| Opção | Janela considerada |
+|-------|-------------------|
+| **Dia** | Hoje (últimas 24h). |
+| **Semana** | Últimos 7 dias. |
+| **Mês** | Mês corrente (do dia 1 até hoje). |
+| **Personalizado** | Datas de início e fim escolhidas pelo usuário. |
+
+### Filtro por Unidade
+
+Logo abaixo dos filtros aparecem chips de cada Unidade da Empresa com o custo USD daquela Unidade. Cliques alternam a inclusão/exclusão. **Nenhum selecionado** mostra o total da Empresa; selecionar uma ou mais filtra **toda a tela** (KPIs, gráfico, tabelas) só para aquelas Unidades.
+
+<Tip>
+  Use o filtro de Unidades para responder perguntas do tipo: "Qual loja está consumindo mais IA?" ou "Quanto a Unidade X gastou esta semana?".
+</Tip>
+
+---
+
+## KPIs no topo
+
+Quatro grandes cards resumem o consumo do período selecionado:
+
+| KPI | Conteúdo |
+|-----|----------|
+| **Tokens consumidos** | Total de entrada + saída no período, com badge de variação **vs. mês anterior** (apenas em modo Mês). Mostra a quebra entrada/saída e uma barra lateral de progresso do mês. |
+| **Custo USD** | Total em dólares no período, com badge de variação vs. mês anterior. |
+| **Chamadas de IA** | Quantidade total de requisições aos modelos. |
+| **Conversas com IA** | Quantidade de conversas que tiveram chamadas de IA, mais tokens totais e média por conversa. |
+
+A barra lateral verde-azulada do KPI de **Tokens** indica em que ponto do mês você está (ex.: "12/30d"). Quanto mais alto a barra, mais perto do fim do mês — útil para estimar gasto final.
+
+---
+
+## Gráfico de evolução
+
+Mostra a série diária do consumo nos últimos **7, 30 ou 90 dias** (botões `7d`, `30d`, `90d`).
+
+Dois modos de visualização:
+
+- **Barras empilhadas**: cada dia é uma barra dividida por categoria com cores fixas.
+- **Linha**: total agregado por dia — mais limpo para ver tendência.
+
+Abaixo do gráfico há uma **legenda interativa**: clicar em uma categoria oculta/exibe ela no gráfico. Útil para isolar comportamento de uma função específica.
+
+---
+
+## Onde os tokens são gastos
+
+Painel lateral com gráfico **donut** (anel) mostrando a divisão do **Custo USD** por categoria. As mesmas cores do gráfico de evolução são usadas para consistência visual.
+
+Abaixo do donut, lista detalhada por categoria, ordenada pelo maior custo, mostrando:
+
+- Bolinha colorida (cor da categoria) + nome
+- Tokens totais e número de chamadas
+- Minutos de áudio (quando aplicável — Transcrição)
+- Custo USD
+- Percentual sobre o total
+- Barra de progresso proporcional
+
+### Categorias monitoradas
+
+| Categoria | Quando aparece |
+|-----------|----------------|
+| **PASSIVE_ATTENDANT** | Conversas resolvidas pelo Atendimento Passivo. |
+| **COPILOT** | Sugestões de resposta do Copilot. |
+| **CAMPAIGN** | Geração de mensagens para Campanhas. |
+| **CONVERSATION_SUMMARY** | Análise do [Scout](/avaliacao/conversas) ao final de cada conversa. |
+| **RAG_RETRIEVAL** | Busca na [Base de Conhecimento](/base-de-conhecimento/visao-geral) durante uma conversa. |
+| **RAG_INDEXING** | Indexação de documentos, sites e Q&A na Base de Conhecimento. |
+| **TRANSCRIPTION** | Transcrição de áudios recebidos no WhatsApp. |
+| **ATTENDANT_FEEDBACK** | Geração de [feedback de atendentes](/avaliacao/atendentes). |
+| **INTAKE** | Cadastro e qualificação inicial do cliente. |
+| **PROCESS_MAPPING** | Mapeamento automático de processos da operação. |
+| **CHAT** | Outras interações do agente de IA. |
+
+---
+
+## Detalhes por modelo de IA
+
+Se a empresa usa múltiplos modelos (OpenAI, Anthropic, etc.), o botão **Detalhes por modelo de IA** abre um modal com:
+
+### Consumo por modelo
+
+Tabela com colunas: **Modelo**, **Provider**, **Processo** (categoria), **Entrada**, **Saída**, **Custo USD** e **Chamadas**. Mostra exatamente quanto cada combinação modelo + processo consumiu nos últimos 90 dias.
+
+### Tabela de preços
+
+Lista todos os modelos disponíveis e o custo unitário cobrado pelo provedor:
+
+- `$ / 1M Entrada` — preço por milhão de tokens de entrada.
+- `$ / 1M Saída` — preço por milhão de tokens de saída.
+- `$ / min Áudio` — preço por minuto de áudio (modelos de transcrição).
+
+<Tip>
+  Esta tabela é a referência de como o Talk converte tokens em custo. Modelos mais caros são reservados para tarefas mais complexas (raciocínio, geração longa) e modelos baratos para tarefas simples (classificação, summarization curta).
+</Tip>
+
+---
+
+## Consumo por conversa
+
+Tabela na parte inferior listando **cada conversa** que envolveu IA no período:
+
+| Coluna | Descrição |
+|--------|-----------|
+| **Contato** | Nome do contato (ou número do JID) e ID curto da conversa. |
+| **Categorias** | Quais categorias de IA foram usadas nessa conversa. |
+| **Msgs IA** | Mensagens geradas por IA / Total de mensagens da conversa. |
+| **Chamadas** | Quantidade de chamadas à IA. |
+| **Tokens** | Soma de entrada + saída. |
+| **Custo** | Custo USD da conversa. |
+| **Última** | Data e hora da última chamada de IA na conversa. |
+
+### Filtros da tabela
+
+- **Chips de categoria** acima da tabela (Todas + Top 7 categorias do período).
+- **Campo de busca** para filtrar por nome do contato, telefone ou ID da conversa.
+- **Paginação** configurável (5, 10, 20, 50 por página).
+
+### Drill-down em uma conversa
+
+Clicar em uma linha abre um **drawer lateral** com:
+
+- Detalhes da conversa (contato, canal, atendente, datas).
+- Todas as mensagens trocadas, igual à Central de Conversas.
+- Botão **Compartilhar** para copiar um link da conversa para colar em chats internos.
+
+<Note>
+  Esse drawer é o mesmo da [Central de Conversas](/atendimento/central-de-conversas), trazido para facilitar a investigação direto da página de consumo.
+</Note>
+
+---
+
+## Como interpretar os dados
+
+- **Pico de tokens em um dia específico** sem aumento proporcional de conversas → provavelmente alguma operação batch (re-indexação de base, atualização de campanha massiva).
+- **Categoria CONVERSATION_SUMMARY com participação alta** → muitas conversas estão sendo encerradas e analisadas pelo Scout. Pode ser bom revisar se vale ajustar a configuração em [Regras de Conversa](/configuracoes/regras-de-conversa).
+- **RAG_RETRIEVAL alto** → a base de conhecimento está sendo bastante consultada. Verifique se faz sentido com o volume de conversas; se desproporcional, talvez seja preciso afinar a [Base de Conhecimento](/base-de-conhecimento/visao-geral).
+- **Custo médio por conversa alto** (`Média $X/conversa` no topo da tabela) → reveja o tamanho do contexto enviado à IA ou troque modelos para versões mais econômicas se a qualidade permitir.
+
+<Tip>
+  Use a comparação **vs. mês anterior** dos KPIs como o primeiro sinal: variações grandes (> 30%) merecem investigação detalhada na tabela "Onde os tokens são gastos".
+</Tip>

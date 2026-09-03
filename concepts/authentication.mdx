@@ -1,11 +1,11 @@
 ---
 title: "Autenticação"
-description: "Como autenticar suas requisições na API do SAN Talk AI."
+description: "Como autenticar suas requisições na API do Tartini."
 ---
 
 ## API Keys
 
-Todas as requisições à API do SAN Talk AI são autenticadas via **API key**. Chaves são geradas no [Dashboard](https://talk.saninternet.com) e associadas a uma empresa.
+Todas as requisições à API do Tartini são autenticadas via **API key**. Chaves são geradas no [Dashboard](https://talk.saninternet.com) e associadas a uma empresa.
 
 ### Formato da chave
 
@@ -30,7 +30,7 @@ curl -X GET https://api-talk.saninternet.com/v1/api/status \
 
 ## Segurança
 
-- As chaves são armazenadas como hash SHA-256 no servidor — nunca em texto puro
+- As chaves são armazenadas como hash SHA-256 no servidor, nunca em texto puro
 - Cada chave é associada a uma única empresa
 - Todas as requisições são logadas com IP, user-agent e timestamp
 - Chaves podem ser revogadas a qualquer momento no Dashboard

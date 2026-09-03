@@ -1,35 +1,62 @@
 ---
 title: "Diretrizes"
-description: "Orientações comportamentais para guiar as respostas da IA."
+description: "Orientações comportamentais que guiam a IA para entregar a melhor experiência ao cliente."
 ---
 
-As diretrizes são orientações gerais que guiam o comportamento do agente de IA durante as conversas. Diferente das [regras de compliance](/ia-e-personalidade/compliance) (obrigatórias), as diretrizes são **recomendações** que a IA segue quando possível.
+As diretrizes são orientações que guiam o comportamento do agente de IA durante as conversas. Diferente das [regras de conformidade](/ia-e-personalidade/compliance) (obrigatórias), as diretrizes são recomendações que a IA segue para entregar a melhor experiência possível.
 
-## Exemplos de diretrizes
+Você pode criar até **7 diretrizes** ativas simultaneamente, cada uma com título, instrução detalhada e prioridade.
 
-- "Sempre ofereça uma próxima ação ao final da resposta"
-- "Se o cliente demonstrar insatisfação, ofereça transferir para um atendente humano"
-- "Priorize respostas curtas e diretas, com no máximo 3 parágrafos"
-- "Para questões de pagamento, sempre solicite o número do pedido"
+## Configuração
 
-## Gerenciamento
+No Tartini, acesse **Identidade > Personalidade > Diretrizes**:
 
-No Dashboard, acesse **IA e personalidade > Diretrizes**:
+<Steps>
+  <Step title="Escolha um modelo ou crie do zero">
+    Clique em **Adicionar diretriz**. Use um dos modelos prontos como ponto de partida ou escreva suas próprias orientações.
+  </Step>
+  <Step title="Defina título e instrução">
+    Dê um nome claro (ex: "Saudação inicial") e descreva em detalhes o comportamento esperado.
+  </Step>
+  <Step title="Defina a prioridade">
+    Diretrizes com maior prioridade são aplicadas primeiro. Se houver conflito entre diretrizes, a de maior prioridade prevalece.
+  </Step>
+  <Step title="Ative ou desative">
+    Controle quais diretrizes estão ativas sem precisar excluí-las.
+  </Step>
+</Steps>
 
-- **Criar diretrizes** — descreva o comportamento desejado
-- **Ordenar por prioridade** — diretrizes mais importantes ficam no topo
-- **Filtrar por categoria** — associe diretrizes a categorias de campanha
-- **Ativar/desativar** — controle quais diretrizes estão ativas
+## Modelos prontos
+
+O Tartini oferece modelos prontos que cobrem os cenários mais comuns:
+
+<AccordionGroup>
+  <Accordion title="Saudação inicial">
+    Configure como a IA cumprimenta o cliente na primeira interação, incluindo apresentação e tom.
+  </Accordion>
+  <Accordion title="Tratamento baseado no canal de atendimento">
+    Instrua a IA a adaptar o comportamento conforme o canal (chat no site, WhatsApp, etc.), reconhecendo o contexto de cada um.
+  </Accordion>
+  <Accordion title="Disponibilidade de atendimento">
+    Oriente a IA a informar horários e canais disponíveis quando o cliente precisar de suporte adicional.
+  </Accordion>
+  <Accordion title="Agendamento de reuniões">
+    Defina como a IA deve lidar com solicitações de agendamento, incluindo links e horários disponíveis.
+  </Accordion>
+  <Accordion title="Recuperação de senha">
+    Instrua a IA a guiar o cliente pelo processo de redefinição de senha de forma segura.
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+  Escreva diretrizes específicas e acionáveis. "Seja bom" é vago. "Quando o cliente perguntar sobre prazos, sempre mencione a opção de entrega expressa" é claro e gera resultados.
+</Tip>
 
 ## Hierarquia de regras
 
-A IA prioriza as configurações na seguinte ordem:
+As diretrizes ocupam o segundo nível na hierarquia de prioridades:
 
-1. **Regras de compliance** — obrigatórias, sempre respeitadas
-2. **Diretrizes** — seguidas quando não conflitam com compliance
-3. **Personalidade** — tom e estilo geral da comunicação
-4. **Base de conhecimento** — conteúdo factual para as respostas
-
-<Tip>
-  Escreva diretrizes específicas e acionáveis. "Seja bom" é vago. "Quando o cliente perguntar sobre prazos, sempre mencione a opção de entrega expressa" é claro.
-</Tip>
+1. **[Conformidade](/ia-e-personalidade/compliance)**: obrigatórias, sempre respeitadas
+2. **Diretrizes**: seguidas quando não conflitam com conformidade
+3. **[Comunicação](/ia-e-personalidade/comunicacao)**: tom e estilo geral
+4. **[Base de conhecimento](/base-de-conhecimento/visao-geral)**: conteúdo factual

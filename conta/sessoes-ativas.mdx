@@ -1,0 +1,87 @@
+---
+title: "Sessões ativas"
+sidebarTitle: "Sessões ativas"
+description: "Veja todos os dispositivos conectados à sua conta e encerre sessões que você não reconhece."
+---
+
+A página **Sessões ativas** lista todos os **dispositivos atualmente logados** com a sua conta. Use-a para confirmar de onde sua conta está sendo acessada e **encerrar acessos** que você não reconhece — por exemplo, um computador antigo do trabalho, um celular emprestado ou uma sessão suspeita.
+
+A página fica em **Configurações &rarr; Sessões ativas** ([talk.saninternet.com/settings/security](https://talk.saninternet.com/settings/security)).
+
+---
+
+## Sessão atual
+
+No topo, em destaque com fundo verde claro e ícone de escudo, aparece a **sessão deste dispositivo** (o que você está usando agora). Mostra:
+
+- Ícone do tipo de dispositivo (computador ou celular).
+- Navegador e sistema operacional (ex.: "Chrome - macOS").
+- Localização (cidade, estado, país) — obtida do IP.
+- **Última atividade** em formato relativo (ex.: "há 2 minutos").
+- **Data de criação** da sessão (quando você logou).
+
+<Note>
+  A sessão atual **não pode** ser encerrada por aqui — para sair dela, use a opção **Sair da conta** no menu de Configurações.
+</Note>
+
+---
+
+## Outras sessões
+
+Logo abaixo, uma lista das demais sessões ativas, com:
+
+- Tipo de dispositivo (com ícone).
+- Navegador e sistema operacional.
+- Localização aproximada.
+- Quando foi criada e qual foi a última atividade.
+- Botão **Encerrar** vermelho à direita.
+
+### Encerrar uma sessão específica
+
+Clique em **Encerrar** ao lado da sessão que quer revogar. Um modal pede confirmação. Ao confirmar:
+
+- A sessão é **invalidada imediatamente**.
+- O dispositivo é deslogado na próxima ação ou refresh.
+- Qualquer requisição feita pelo dispositivo passa a retornar `401 Unauthorized`.
+
+### Encerrar todas as outras
+
+No cabeçalho da lista há um botão **Encerrar todas** vermelho. Ele revoga **todas as outras sessões de uma vez**, mantendo só a sessão atual ativa.
+
+<Warning>
+  "Encerrar todas" é destrutivo: todos os outros logins precisarão refazer login. Use quando suspeitar que **mais de uma** sessão foi comprometida ou quando trocar de senha por motivo de segurança.
+</Warning>
+
+---
+
+## Como o Talk identifica cada sessão
+
+Quando você faz login, o Talk cria uma sessão e registra:
+
+- **IP de origem** (para localização aproximada).
+- **User-Agent** (para extrair navegador e sistema operacional).
+- **Tipo de dispositivo** (desktop ou mobile).
+
+Esses dados ficam nesta página até a sessão expirar ou ser revogada.
+
+<Note>
+  A **localização** vem de um serviço de geolocalização por IP — é uma aproximação, geralmente da cidade do provedor de internet. Pode estar "errada" em alguns quilômetros, mas se mostrar **outro estado ou país** que você não usa, é um forte sinal de alerta.
+</Note>
+
+---
+
+## Quando agir
+
+Algumas situações que justificam encerrar uma sessão:
+
+| Cenário | O que fazer |
+|---------|-------------|
+| Computador do trabalho antigo | Encerre a sessão específica. |
+| Celular emprestado para alguém | Encerre a sessão específica. |
+| Localização desconhecida ou país que você não usa | Encerre a sessão e troque a senha em [Configurações de usuário](/conta/configuracoes-de-usuario). |
+| Acabou de trocar a senha | Encerre **todas as outras** para garantir que ninguém continua logado com a credencial antiga. |
+| Suspeita geral de invasão | Encerre todas, troque a senha, e verifique se há atividade estranha no [Inbox](/atendimento/visao-geral) ou nas [Conversas](/atendimento/central-de-conversas). |
+
+<Tip>
+  Toda vez que **trocar a senha** em [Configurações de usuário](/conta/configuracoes-de-usuario), vale revisar esta página e encerrar dispositivos que não estiver mais usando.
+</Tip>

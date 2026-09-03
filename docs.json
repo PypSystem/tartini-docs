@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "SAN Talk AI",
+  "name": "Tartini",
   "colors": {
-    "primary": "#004bad",
-    "light": "#1875f0",
-    "dark": "#003d8f"
+    "primary": "#14120F",
+    "light": "#FAF7F0",
+    "dark": "#14120F"
   },
   "appearance": {
     "default": "light"
@@ -28,18 +28,25 @@
             "pages": [
               "atendimento/visao-geral",
               "atendimento/conversas",
+              "atendimento/central-de-conversas",
               "atendimento/copilot",
               "atendimento/atendente-passivo",
               "atendimento/anotacoes-da-ia",
               "atendimento/widget-de-chat",
-              "atendimento/mensagens-rapidas"
+              "atendimento/widget-de-chat"
             ]
           },
           {
-            "group": "Campanhas",
+            "group": "Identidade",
             "pages": [
-              "campanhas/criar-e-gerenciar",
-              "campanhas/metricas"
+              "ia-e-personalidade/comunicacao",
+              "ia-e-personalidade/diretrizes",
+              "ia-e-personalidade/compliance",
+              "ia-e-personalidade/esclarecimentos",
+              "operacoes/campos-de-qualificacao",
+              "operacoes/roteamento",
+              "operacoes/horarios-de-atendimento",
+              "ia-e-personalidade/contexto-situacional"
             ]
           },
           {
@@ -54,51 +61,68 @@
           {
             "group": "Canais",
             "pages": [
-              "canais/waba-onboarding",
-              "canais/waba-bsp",
-              "canais/whatsapp-business",
-              "canais/waba-troubleshooting",
               "canais/whatsapp",
+              "canais/waba-onboarding",
+              "canais/whatsapp-business",
+              "canais/waba-bsp",
+              "canais/waba-troubleshooting",
               "canais/templates"
             ]
           },
           {
-            "group": "Contatos",
+            "group": "Campanhas e contatos",
             "pages": [
               "contatos/gerenciar-contatos",
               "contatos/ficha-do-contato"
+              "campanhas/criar-e-gerenciar",
+              "campanhas/metricas"
             ]
           },
           {
-            "group": "IA e personalidade",
+            "group": "Configurações",
             "pages": [
-              "ia-e-personalidade/personalidade",
-              "ia-e-personalidade/compliance",
-              "ia-e-personalidade/diretrizes"
+              "configuracoes/regras-de-conversa",
+              "configuracoes/pesquisa-de-satisfacao",
+              "operacoes/sla"
             ]
           },
           {
-            "group": "Operações",
+            "group": "Integrações",
             "pages": [
               "operacoes/horarios-de-atendimento",
               "operacoes/sla",
               "operacoes/roteamento",
               "operacoes/campos-de-qualificacao",
               "operacoes/status-de-contato"
+              "integracoes/conectores",
+              "integracoes/contatos-de-campanha",
+              "integracoes/webhook-de-atendimento",
+              "canais/conexao-via-api"
             ]
           },
           {
-            "group": "Avaliação e feedback",
+            "group": "Faturamento",
             "pages": [
+              "faturamento/assinatura",
+              "faturamento/consumo-de-ia",
+              "faturamento/mensagens-e-conversas"
+            ]
+          },
+          {
+            "group": "Gestão",
+            "pages": [
+              "administracao/informacoes",
+              "administracao/empresas-e-unidades",
+              "administracao/usuarios-e-permissoes",
               "avaliacao/conversas",
               "avaliacao/atendentes"
             ]
           },
           {
-            "group": "Administração",
+            "group": "Conta",
             "pages": [
-              "administracao/empresas-e-entidades",
-              "administracao/usuarios-e-permissoes"
+              "conta/configuracoes-de-usuario",
+              "conta/sessoes-ativas"
             ]
           }
         ]
@@ -147,8 +171,8 @@
   "navbar": {
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://talk.saninternet.com"
+      "label": "Acessar",
+      "href": "https://talk.saninternet.com/login"
     }
   },
   "api": {
@@ -158,7 +182,9 @@
       "name": "Authorization"
     }
   },
-  "openapi": ["/api-reference/openapi.json"],
+  "openapi": [
+    "/api-reference/openapi.json"
+  ],
   "contextual": {
     "options": [
       "copy",
@@ -167,9 +193,28 @@
       "claude"
     ]
   },
+  "feedback": {
+    "suggestEdit": true,
+    "raiseIssue": true
+  },
   "footer": {
     "socials": {
       "website": "https://talk.saninternet.com"
+    }
+  },
+  "background": {
+    "color": {
+      "light": "#FAF7F0",
+      "dark": "#14120F"
+    }
+  },
+  "fonts": {
+    "heading": {
+      "family": "Schibsted Grotesk",
+      "weight": 700
+    },
+    "body": {
+      "family": "Hanken Grotesk"
     }
   }
 }

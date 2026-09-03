@@ -1,0 +1,81 @@
+---
+title: "Regras de Conversa"
+sidebarTitle: "Regras de Conversa"
+description: "Configure o comportamento padrão das conversas: assinatura do atendente, encerramento automático, análise do Scout e Copilot."
+---
+
+As **Regras de Conversa** controlam comportamentos globais que valem para toda a Empresa, em todos os canais. É aqui que você decide se o atendente precisa assinar as mensagens, se conversas inativas devem fechar sozinhas, se o **Scout** entra em ação ao final da conversa e se o **Copilot** acompanha por padrão cada atendimento humano.
+
+A página fica em **Configurações &rarr; Regras de Conversa** ([talk.saninternet.com/settings/conversation-rules](https://talk.saninternet.com/settings/conversation-rules)).
+
+<Note>
+  Apenas usuários com papel de **Proprietário** ou **Gestor** no nível Empresa conseguem alterar essas regras.
+</Note>
+
+---
+
+## Assinatura do Atendente
+
+Controla como aparece a "assinatura" (nome de atendimento) do atendente nas mensagens enviadas ao cliente.
+
+| Opção | O que faz |
+|-------|-----------|
+| **Assinatura obrigatória** | Todas as mensagens enviadas por atendentes humanos saem com o nome de atendimento configurado no perfil do usuário. Sem assinatura, o atendente não consegue enviar. |
+| **Permitir mudança de assinatura** | Habilita o atendente a alterar o próprio nome de atendimento na hora — útil quando vários atendentes compartilham a mesma conta ou quando o atendimento muda de turno. |
+
+<Tip>
+  O nome de atendimento de cada pessoa é definido em [Usuários e permissões](/administracao/usuarios-e-permissoes) — campo "Nome de Atendimento" no modal de edição.
+</Tip>
+
+---
+
+## Finalização Automática
+
+Conversas em mãos humanas podem ficar abertas indefinidamente se ninguém as encerrar. Esta regra resolve o problema fechando-as automaticamente após um período de inatividade.
+
+| Campo | Descrição |
+|-------|-----------|
+| **Encerrar conversa automaticamente** | Liga/desliga o auto-encerramento. |
+| **Horas sem interação para encerramento** | Quantas horas a conversa pode ficar sem nova mensagem (do cliente ou do atendente) antes de ser fechada. Mínimo: 1 hora. |
+
+<Warning>
+  Conversas encerradas pelo auto-encerramento entram normalmente na análise do Scout. Use junto da [Pesquisa de Satisfação](/configuracoes/pesquisa-de-satisfacao) para coletar feedback do cliente antes do fechamento definitivo.
+</Warning>
+
+---
+
+## Scout — Análise de Conversas
+
+Liga o **Scout**, o agente de IA que analisa cada conversa encerrada e gera resumo, nota geral, notas por critério e recomendações para o atendente.
+
+| Opção | O que faz |
+|-------|-----------|
+| **Ativar Scout ao finalizar conversa** | Toda conversa encerrada (manualmente ou pelo auto-encerramento) entra na fila do Scout para análise. |
+
+<Note>
+  Cada análise do Scout consome créditos de IA. Acompanhe o consumo em **Configurações &rarr; Faturamento &rarr; Consumo**. Os feedbacks gerados aparecem em [Aprendizado &rarr; Scout](/avaliacao/conversas).
+</Note>
+
+---
+
+## Copilot
+
+O **Copilot** é o assistente que monitora conversas em mãos humanas em tempo real, sugerindo respostas e alertando sobre desvios de tom ou compliance. Esta regra define o estado padrão dele em **toda nova conversa**.
+
+| Opção | O que faz |
+|-------|-----------|
+| **Copilot ativo por padrão em novas conversas** | Quando ligado, o Copilot já entra em ação no momento em que a conversa cai em mãos humanas. O atendente ainda pode desligar individualmente em cada conversa pelo botão dentro do Inbox. |
+
+<Note>
+  O Copilot consome créditos de IA por mensagem monitorada. Veja a operação completa em [Copilot](/atendimento/copilot).
+</Note>
+
+<Warning>
+  Em alguns planos a configuração do **Copilot ativo por padrão** fica indisponível. Nesses casos a seção aparece bloqueada na interface.
+</Warning>
+
+---
+
+## Aplicação imediata
+
+Ao clicar em **Salvar**, todas as regras valem **a partir das próximas conversas**. Conversas em andamento não são afetadas — exceto a opção de Copilot, que pode ser ligada/desligada a qualquer momento dentro de cada conversa.

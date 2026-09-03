@@ -1,0 +1,95 @@
+---
+title: "Pesquisa de Satisfação (CSAT)"
+sidebarTitle: "Pesquisa de Satisfação"
+description: "Configure a pesquisa de satisfação enviada ao cliente após cada atendimento e acompanhe o CSAT da operação."
+---
+
+A **Pesquisa de Satisfação (CSAT)** é enviada automaticamente ao cliente assim que o atendimento termina. Ela coleta uma nota de 1 a 5 e, opcionalmente, um comentário livre — alimentando os dashboards e o filtro de "Satisfação do cliente" do [Scout](/avaliacao/conversas).
+
+A página fica em **Configurações &rarr; Pesquisa de Satisfação** ([talk.saninternet.com/settings/csat](https://talk.saninternet.com/settings/csat)).
+
+---
+
+## Habilitar a pesquisa
+
+O primeiro toggle da página liga ou desliga a coleta de CSAT em toda a Empresa. Enquanto desligado, todas as seções abaixo ficam em cinza e nenhuma pesquisa é enviada.
+
+---
+
+## Regras de coleta
+
+Definem **quando** e **em que tipo** de atendimento a pesquisa é disparada.
+
+### Coletar em
+
+Em quais atendimentos a pesquisa deve ser enviada:
+
+| Valor | Quem recebe a pesquisa |
+|-------|------------------------|
+| **Todos os atendimentos** | Toda conversa, independentemente de quem atendeu. |
+| **Apenas atendimentos de IA** | Só conversas resolvidas pelo agente de IA. |
+| **Apenas atendimentos humanos** | Só conversas que tiveram intervenção de um atendente humano. |
+
+### Regra de disparo
+
+Quando a pesquisa é disparada:
+
+| Valor | Quando dispara |
+|-------|----------------|
+| **Todas as conversas** | Em toda conversa encerrada que se enquadre na regra "Coletar em". |
+| **Apenas conversas resolvidas** | Só conversas marcadas como resolvidas no fechamento. |
+
+<Tip>
+  Combinar **"Apenas atendimentos humanos"** com **"Apenas conversas resolvidas"** é uma boa forma de medir só os atendimentos em que houve esforço humano e o problema foi efetivamente solucionado.
+</Tip>
+
+---
+
+## Canais habilitados
+
+A pesquisa segue um modelo **opt-in por canal**: só os canais explicitamente marcados enviam o CSAT. Os canais aparecem listados com ícone, nome, tipo e a Unidade a que pertencem.
+
+Tipos suportados:
+
+- **WhatsApp (Rookie)** — número conectado via QR Code/pareamento.
+- **WhatsApp Business API (WABA)** — número oficial da Meta.
+- **Chat Widget** — widget embutido no site.
+
+<Warning>
+  Se nenhum canal estiver marcado, **nenhuma pesquisa é enviada** mesmo com o toggle geral ativado. Verifique a lista sempre que adicionar um novo canal.
+</Warning>
+
+---
+
+## Tempo limite
+
+Define quantos **minutos** o cliente tem para responder à pesquisa depois de recebida. Aceita valores de **1 a 1440** (24 horas).
+
+Se o cliente não responder dentro do prazo, a conversa é fechada normalmente — mas sem nota de CSAT. Esses casos aparecem como "Precisa revisar" no filtro de Satisfação do [Scout](/avaliacao/conversas).
+
+---
+
+## Mensagens personalizadas (opcional)
+
+Por padrão o sistema envia textos genéricos. Você pode personalizar dois momentos da pesquisa:
+
+| Campo | Quando aparece | Exemplo de uso |
+|-------|----------------|----------------|
+| **Mensagem de solicitação de avaliação** | Logo após o fim do atendimento, pedindo a nota. | "Como você avalia o atendimento que recebeu? Responda com uma nota de 1 a 5." |
+| **Mensagem de solicitação de feedback** | Após o cliente dar a nota, pedindo o comentário em texto. | "Obrigado pela avaliação! Se quiser, compartilhe um comentário sobre o atendimento." |
+
+<Note>
+  Deixar os campos em branco mantém os textos padrão do sistema. Personalize para alinhar o tom com a personalidade da marca configurada em [IA e personalidade](/ia-e-personalidade/comunicacao).
+</Note>
+
+---
+
+## Como o CSAT aparece para os gestores
+
+- **Filtro do Scout**: a página de Aprendizado mostra o filtro **Satisfação do cliente** com três opções — `Precisa revisar` (sem resposta), `Satisfeitas`, `Todas`.
+- **Cards de conversa**: cada card mostra a nota de CSAT recebida (quando houver) ao lado da Nota do Scout.
+- **Dashboards de performance**: o CSAT consolidado entra nos relatórios de atendentes em [Feedback de atendentes](/avaliacao/atendentes).
+
+<Tip>
+  Use CSAT baixo combinado com Nota do Scout alta como sinal de alerta: o atendimento pode ter sido tecnicamente correto mas a percepção do cliente ficou ruim. Aproveite a [Validação do Gestor](/avaliacao/conversas#validação-do-gestor) para entender o que aconteceu.
+</Tip>

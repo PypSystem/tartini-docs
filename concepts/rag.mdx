@@ -1,7 +1,7 @@
 ---
 title: "RAG (Retrieval-Augmented Generation)"
 sidebarTitle: "RAG"
-description: "Entenda como funciona a busca inteligente e geração de respostas do SAN Talk AI."
+description: "Entenda como funciona a busca inteligente e geração de respostas do Tartini."
 ---
 
 ## O que é RAG?
@@ -16,13 +16,13 @@ flowchart LR
     D --> E[Resposta fundamentada]
 ```
 
-## Como funciona no SAN Talk AI
+## Como funciona no Tartini
 
 ### 1. Base de conhecimento
 Seus documentos, FAQs e conteúdo de sites são processados e armazenados em um **banco de dados vetorial** (embeddings). Cada pedaço de conteúdo vira um "chunk" com metadados.
 
 ### 2. Busca semântica
-Quando você envia uma consulta, o sistema converte o texto em um vetor e busca os chunks mais similares — mesmo que usem palavras diferentes.
+Quando você envia uma consulta, o sistema converte o texto em um vetor e busca os chunks mais similares, mesmo que usem palavras diferentes.
 
 > "Como devolver um produto?" encontra conteúdo sobre "política de devolução" mesmo sem usar as mesmas palavras.
 

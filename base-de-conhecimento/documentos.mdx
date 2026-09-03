@@ -1,9 +1,9 @@
 ---
 title: "Documentos"
-description: "Adicione documentos à base de conhecimento para a IA consultar."
+description: "Adicione documentos para a IA aprender sobre sua empresa."
 ---
 
-Documentos são arquivos (PDF, DOCX, etc.) que contêm informações sobre sua empresa, produtos, políticas e procedimentos. O sistema extrai o texto, divide em chunks e indexa para busca semântica.
+Documentos são arquivos (PDF, DOCX, etc.) que contêm informações sobre sua empresa, produtos, políticas e procedimentos. Basta fazer o upload: a IA lê, aprende e passa a usar esse conhecimento para responder seus clientes.
 
 ## Formatos suportados
 
@@ -14,7 +14,7 @@ Documentos são arquivos (PDF, DOCX, etc.) que contêm informações sobre sua e
 ## Limites
 
 - Até **10 arquivos** por upload
-- Máximo de **100MB** por arquivo
+- Máximo de **100 MB** por arquivo
 
 ## Adicionando documentos
 
@@ -29,7 +29,7 @@ Documentos são arquivos (PDF, DOCX, etc.) que contêm informações sobre sua e
     Defina o título, categoria e audiência para cada documento.
   </Step>
   <Step title="Aguarde o processamento">
-    O sistema extrai o texto, divide em chunks e gera os embeddings. Isso pode levar alguns minutos dependendo do tamanho do arquivo.
+    A IA lê e absorve o conteúdo do documento. Isso pode levar alguns minutos dependendo do tamanho do arquivo.
   </Step>
 </Steps>
 
@@ -38,22 +38,22 @@ Documentos são arquivos (PDF, DOCX, etc.) que contêm informações sobre sua e
 Crie pastas para organizar seus documentos por tema:
 
 ```
-📁 Políticas
-  📄 Política de devolução.pdf
-  📄 Termos de uso.pdf
-📁 Produtos
-  📄 Catálogo 2026.pdf
-  📄 Manual do produto X.pdf
-📁 Treinamento
-  📄 Script de atendimento.docx
+Politicas
+  Politica de devolucao.pdf
+  Termos de uso.pdf
+Produtos
+  Catalogo 2026.pdf
+  Manual do produto X.pdf
+Treinamento
+  Script de atendimento.docx
 ```
 
 ## Gerenciamento
 
-- **Visualizar texto extraído** — confira o que a IA "enxerga" de cada documento
-- **Excluir documentos** — a exclusão é assíncrona e remove o conteúdo do banco vetorial
-- **Atualizar** — substitua o arquivo para reprocessar o conteúdo
+- **Visualizar texto extraído**: confira exatamente o que a IA aprendeu de cada documento
+- **Excluir documentos**: a IA deixa de usar essas informações em respostas futuras
+- **Atualizar**: substitua o arquivo para a IA aprender a versão mais recente
 
-<Warning>
-  Ao excluir um documento, os chunks correspondentes são removidos do banco vetorial. A IA deixará de usar essas informações em respostas futuras.
-</Warning>
+<Tip>
+  Mantenha seus documentos atualizados. A IA sempre responde com base na versão mais recente: se suas políticas mudaram, basta atualizar o arquivo.
+</Tip>

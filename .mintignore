@@ -5,3 +5,8 @@
 # Draft content
 drafts/
 *.draft.mdx
+
+# Arquivos internos (não são páginas da docs)
+DESIGN_SYSTEM.md
+CLAUDE.md
+AGENTS.md

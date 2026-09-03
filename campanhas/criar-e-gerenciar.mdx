@@ -1,25 +1,37 @@
 ---
 title: "Criar e gerenciar campanhas"
 sidebarTitle: "Criar e gerenciar"
-description: "Crie campanhas de marketing via WhatsApp e gerencie envios em escala."
+description: "Alcance seus clientes em escala com campanhas segmentadas e inteligentes."
 ---
 
-As campanhas permitem enviar mensagens em massa para seus contatos via WhatsApp usando templates aprovados. Você pode segmentar audiências, agendar envios e acompanhar resultados em tempo real.
+As campanhas permitem alcançar seus clientes em escala, com templates aprovados, segmentação inteligente e métricas completas para acompanhar cada envio em tempo real.
+
+<Warning>
+  Campanhas podem não estar disponíveis em alguns planos. Quando o módulo não estiver liberado, a página exibe a mensagem "Campanhas não disponível no seu plano atual" e os botões de criação ficam bloqueados.
+</Warning>
 
 ## Tipos de campanha
 
-| Tipo | Descrição |
-|------|-----------|
-| **Campanha simples** | Envio para contatos de uma única entidade |
-| **Multi-entidade** | Envio coordenado para contatos de múltiplas entidades |
-| **Webhook** | Campanha disparada por eventos externos via integração |
-| **Inbound** | Campanhas acionadas quando o cliente entra em contato |
+<AccordionGroup>
+  <Accordion title="Campanha simples">
+    Envio para contatos de uma única unidade. Ideal para ações locais ou segmentadas.
+  </Accordion>
+  <Accordion title="Multi-unidade">
+    Envio coordenado para contatos de múltiplas unidades ao mesmo tempo. Perfeito para ações nacionais.
+  </Accordion>
+  <Accordion title="Webhook">
+    Campanha disparada automaticamente por eventos do seu sistema, por exemplo, quando um pedido é finalizado ou um pagamento é confirmado.
+  </Accordion>
+  <Accordion title="Inbound">
+    Campanha acionada quando o cliente entra em contato, permitindo respostas automatizadas e contextuais.
+  </Accordion>
+</AccordionGroup>
 
 ## Criando uma campanha
 
 <Steps>
   <Step title="Defina o objetivo">
-    Escolha o tipo de campanha e selecione a entidade (ou entidades) de destino.
+    Escolha o tipo de campanha e selecione a unidade (ou unidades) de destino.
   </Step>
   <Step title="Selecione o template">
     Escolha um [template de WhatsApp](/canais/templates) aprovado pela Meta. Configure as variáveis do template com os dados dos contatos.
@@ -37,17 +49,13 @@ As campanhas permitem enviar mensagens em massa para seus contatos via WhatsApp 
 
 ## Gerenciando campanhas
 
-Após criada, você pode:
+Após criada, você tem controle total:
 
-- **Pausar** — interrompe o envio temporariamente
-- **Retomar** — continua o envio de onde parou
-- **Acompanhar** — veja o progresso em tempo real (enviados, entregues, lidos)
-- **Reenviar** — reprocesse entregas que falharam
-
-## Ferramentas (Tools)
-
-Campanhas podem ter **ferramentas** associadas — integrações externas que o agente de IA pode usar durante a conversa com o contato. Exemplos: consulta de estoque, agendamento, consulta de pedidos.
+- **Pausar**: interrompe o envio temporariamente
+- **Retomar**: continua de onde parou
+- **Acompanhar**: progresso em tempo real (enviados, entregues, lidos)
+- **Reenviar**: reprocesse entregas que falharam
 
 <Tip>
-  Teste sua campanha com um grupo pequeno antes de fazer o envio completo. Use a funcionalidade de teste para validar variáveis e formatação.
+  Teste sua campanha com um grupo pequeno antes do envio completo. Valide variáveis e formatação para garantir a melhor experiência.
 </Tip>

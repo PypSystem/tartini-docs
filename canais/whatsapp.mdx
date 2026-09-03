@@ -1,9 +1,9 @@
 ---
 title: "WhatsApp"
-description: "Conecte o WhatsApp Web ao SAN Talk AI via QR Code ou código de pareamento."
+description: "Conecte o WhatsApp ao Tartini via QR Code ou código de pareamento."
 ---
 
-O canal WhatsApp (ROOKIE) permite conectar um número de WhatsApp ao SAN Talk AI usando a Evolution API. É a forma mais rápida de começar — basta escanear um QR Code.
+O canal WhatsApp permite conectar um número ao Tartini de forma rápida: basta escanear um QR Code ou usar um código de pareamento.
 
 ## Conectando via QR Code
 
@@ -31,12 +31,23 @@ Se preferir, você pode conectar usando um código numérico:
 
 ## Gerenciamento
 
-- **Reiniciar conexão** — útil se a conexão cair
-- **Reconexão automática** — o sistema tenta reconectar automaticamente em caso de queda
-- **Webhook** — configure uma URL para receber mensagens em tempo real
+- **Reiniciar conexão**: útil se a conexão cair
+- **Reconexão automática**: o sistema tenta reconectar automaticamente em caso de queda
 
-## Limitações
+## Qual WhatsApp usar?
+
+<Tip>
+  Este canal é ideal para começar rápido e testar a plataforma. Para operações em produção com alto volume ou envio de campanhas, recomendamos o [WhatsApp Business (WABA)](/canais/waba-onboarding).
+</Tip>
+
+| Aspecto | WhatsApp | WhatsApp Business (WABA) |
+|---------|----------|--------------------------|
+| **Conexão** | QR Code / Pareamento | OAuth da Meta |
+| **Estabilidade** | Pode variar | API oficial, estável |
+| **Volume** | Limitado | Alto volume |
+| **Templates** | Não suporta | Suporta templates aprovados |
+| **Campanhas** | Não disponível | Disponível |
 
 <Warning>
-  Cada entidade pode ter no máximo **um canal** conectado. O canal WhatsApp Web (ROOKIE) usa uma conexão não oficial e pode ser desconectado pela Meta. Para uso em produção com alto volume, recomendamos o [WhatsApp Business (WABA)](/canais/whatsapp-business).
+  Cada unidade pode ter no máximo **um canal** conectado.
 </Warning>

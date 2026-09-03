@@ -11,32 +11,66 @@ A IA coleta esses dados durante as conversas e os relê nos atendimentos seguint
 <Note>
   Este recurso já se chamou "campos de qualificação". O nome mudou porque ele passou a ser mais do que um roteiro de coleta: é o cadastro do contato, lido e escrito pelos dois lados.
 </Note>
+title: "Qualificação"
+sidebarTitle: "Qualificação"
+description: "Colete dados dos clientes de forma natural durante a conversa, sem formulários."
+---
+
+A qualificação permite que o agente de IA colete informações estruturadas dos clientes durante as conversas de forma natural, sem parecer um formulário. Você define os campos que precisa (nome, e-mail, interesse, etc.) e a IA os solicita ao longo da interação.
+
+Você pode configurar até **10 campos** de qualificação.
+
+No Dashboard, acesse **Identidade → Operações → Campos do contato**:
+## Como funciona
+
+O agente de IA coleta os dados de forma conversacional, integrando as perguntas no fluxo natural do atendimento:
+
+> **IA:** Ótimo, para te ajudar melhor, pode me dizer seu nome completo?
+>
+> **Cliente:** João Silva
+>
+> **IA:** Obrigado, João! E qual seu e-mail para contato?
+
+Os dados coletados ficam registrados na conversa e podem ser usados para segmentação, campanhas e análises.
 
 ## Configuração
 
-No Dashboard, acesse **Identidade → Operações → Campos do contato**:
+No Tartini, acesse **Identidade > Operações > Qualificação**:
 
-- **Criar campos** — defina quais informações coletar (nome, e-mail, CPF, etc.)
-- **Tipos de campo** — texto, número, seleção, data
-- **Ordenar** — defina a sequência em que os campos são solicitados
-- **Obrigatoriedade** — marque campos como obrigatórios ou opcionais
+<Steps>
+  <Step title="Adicione um campo">
+    Clique em **Adicionar campo** e defina o nome do campo (ex: "Nome do Cliente").
+  </Step>
+  <Step title="Escolha o tipo">
+    Selecione o tipo de dado: texto, e-mail, telefone, data, seleção ou área de texto.
+  </Step>
+  <Step title="Defina a pergunta">
+    Escreva a pergunta que a IA fará ao cliente para coletar essa informação.
+  </Step>
+  <Step title="Configure obrigatoriedade e ordem">
+    Marque se o campo é obrigatório e defina a ordem em que os campos são solicitados.
+  </Step>
+</Steps>
+
+## Tipos de campo
+
+| Tipo | Uso |
+|------|-----|
+| **Texto** | Nome, empresa, observações gerais |
+| **E-mail** | Endereço de e-mail com validação de formato |
+| **Telefone** | Número de telefone |
+| **Data** | Datas (nascimento, vencimento, etc.) |
+| **Seleção** | Opções predefinidas (ex: Produto A, B ou C) |
+| **Área de texto** | Descrições longas ou comentários detalhados |
 
 ## Exemplo
 
-| Campo | Tipo | Obrigatório |
-|-------|------|-------------|
-| Nome completo | Texto | Sim |
-| E-mail | Texto | Sim |
-| Interesse | Seleção (Produto A, B, C) | Sim |
-| Observações | Texto | Não |
-
-## Como funciona na prática
-
-O agente de IA coleta os dados de forma natural durante a conversa, sem parecer um formulário. Exemplo:
-
-> **IA:** Ótimo, para eu te ajudar melhor, pode me dizer seu nome completo?
-> **Cliente:** João Silva
-> **IA:** Obrigado, João! E qual seu e-mail para contato?
+| Campo | Tipo | Obrigatório | Pergunta |
+|-------|------|-------------|----------|
+| Nome completo | Texto | Sim | "Qual é o seu nome completo?" |
+| E-mail | E-mail | Sim | "Qual seu e-mail para contato?" |
+| Interesse | Seleção | Sim | "Qual produto te interessa?" |
+| Observações | Área de texto | Não | "Algo mais que gostaria de nos contar?" |
 
 <Tip>
   Mantenha poucos campos obrigatórios para não frustrar o cliente. Colete apenas o essencial e use campos opcionais para informações complementares.

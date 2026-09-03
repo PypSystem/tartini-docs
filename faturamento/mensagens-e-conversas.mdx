@@ -1,0 +1,136 @@
+---
+title: "Mensagens e Conversas"
+sidebarTitle: "Mensagens e Conversas"
+description: "Acompanhe o volume de mensagens trocadas e conversas iniciadas, com quebras por canal, tipo de conteúdo e direção (cliente, atendente, IA)."
+---
+
+A página **Mensagens e Conversas** mede o **volume operacional** do Talk: quantas conversas começaram, quantas mensagens trafegaram, em quais canais, com que tipo de conteúdo (texto, áudio, imagem, etc.) e de quem veio cada uma (cliente, atendente humano ou IA).
+
+Diferente da página de [Consumo de IA](/faturamento/consumo-de-ia) (que olha tokens e custo dos modelos), esta página olha **mensagens trocadas** — útil para entender o uso da operação independentemente do quanto a IA está envolvida.
+
+A página fica em **Configurações &rarr; Mensagens e Conversas** ([talk.saninternet.com/settings/billing/messaging](https://talk.saninternet.com/settings/billing/messaging)).
+
+---
+
+## Filtros do topo
+
+### Período
+
+| Opção | Janela considerada |
+|-------|-------------------|
+| **Dia** | Hoje. |
+| **Semana** | Últimos 7 dias. |
+| **Mês** | Mês corrente. |
+| **Personalizado** | Datas escolhidas (início e fim). |
+
+### Filtro por Unidade
+
+Chips com cada Unidade da Empresa. Clicar inclui/exclui da visualização. **Sem nenhuma marcada** = visão total da Empresa.
+
+### Filtro por Canal
+
+Chips com os canais disponíveis:
+
+- **WhatsApp Rookie** (QR Code/pareamento)
+- **WhatsApp WABA** (API oficial Meta)
+- **Chat Widget** (widget no site)
+
+Sem seleção, mostra todos. Selecionando um ou mais, filtra **toda a página**.
+
+<Tip>
+  Combinando filtros de Unidade + Canal, dá pra responder perguntas como "Quantas conversas a Loja Centro teve via Chat Widget esta semana?".
+</Tip>
+
+---
+
+## KPIs no topo
+
+Quatro grandes cards resumem o período:
+
+| KPI | Conteúdo |
+|-----|----------|
+| **Conversas** | Total de conversas iniciadas no período + média de conversas por dia. |
+| **Total de mensagens** | Soma de todas as mensagens trocadas + quebra entrada/saída. |
+| **Msgs / conversa** | Média de mensagens por conversa — indicador de profundidade do atendimento. |
+| **Tokens estimados** | Estimativa de tokens equivalentes — útil para projetar o consumo de IA. |
+
+<Tip>
+  Subidas em **Msgs / conversa** podem indicar atendimentos mais demorados (positivo se aprofundamento na venda; negativo se enrolação para resolver). Cruze com a Nota do [Scout](/avaliacao/conversas) para entender o que está acontecendo.
+</Tip>
+
+---
+
+## Direção das mensagens
+
+Painel com **donut** mostrando a proporção entre três origens:
+
+| Origem | Cor | O que representa |
+|--------|-----|------------------|
+| **Recebidas (cliente)** | Azul | Mensagens que o cliente mandou para você. |
+| **Enviadas (atendente)** | Verde | Mensagens enviadas por atendentes humanos. |
+| **Enviadas (IA)** | Roxo | Mensagens geradas pelo agente de IA ou Atendimento Passivo. |
+
+Abaixo do donut, lista com o número absoluto e percentual de cada origem. Em uma operação saudável o equilíbrio depende da estratégia: muito atendimento por IA → boa taxa de automação; muito atendimento humano → atendimento mais consultivo.
+
+---
+
+## Mensagens por tipo de conteúdo
+
+Painel mostrando quantas mensagens são de cada tipo:
+
+| Tipo | Quando aparece |
+|------|----------------|
+| **Texto** | Mensagens escritas. |
+| **Imagem** | Fotos enviadas/recebidas. |
+| **Áudio** | Mensagens de voz. |
+| **Vídeo** | Vídeos. |
+| **Documento** | PDF, planilhas, etc. |
+| **Sticker** | Figurinhas. |
+| **Reação** | Reações com emojis. |
+| **Localização** | Localização compartilhada. |
+| **Contato** | vCard de contato. |
+| **Outro** | Demais formatos suportados. |
+
+Cada linha mostra contagem e barra de progresso proporcional ao maior tipo. Útil para descobrir, por exemplo, que **40% das mensagens recebidas são áudio** — sinal de que vale a pena reforçar o uso da Transcrição (que aparece em [Consumo de IA](/faturamento/consumo-de-ia)).
+
+---
+
+## Volume por canal
+
+Distribuição das mensagens entre os canais configurados — mostra de onde vem o volume real:
+
+- WhatsApp Rookie
+- WhatsApp WABA
+- Chat Widget
+
+Cada barra ou anel mostra a participação do canal no total. Ajuda a entender se vale investir em um canal específico (por exemplo, expandir para WABA se o ROOKIE já está com alto volume).
+
+---
+
+## Evolução no tempo
+
+Gráfico mostrando a série diária de mensagens, separadas por **direção** (cliente / atendente / IA) ou agrupadas conforme a seleção.
+
+Padrões típicos:
+
+- **Picos em horário comercial** → operação humana ativa.
+- **Plateau noturno** → mensagens de IA respondendo fora do horário (configurado em [Atendimento Passivo](/atendimento/atendente-passivo)).
+- **Picos isolados em dias atípicos** → quase sempre campanhas (verifique em [Campanhas](/campanhas/criar-e-gerenciar)).
+
+---
+
+## Como interpretar os dados
+
+Algumas perguntas comuns e onde buscar a resposta:
+
+| Pergunta | Onde olhar |
+|----------|------------|
+| "Quanto a IA está atendendo sozinha?" | Direção das mensagens — `Enviadas (IA)` / `Recebidas (cliente)`. |
+| "Quanto áudio chega da clientela?" | Mensagens por tipo — `Áudio` na entrada. |
+| "Qual canal está crescendo mais?" | Volume por canal + comparação com mês anterior em [Consumo de IA](/faturamento/consumo-de-ia). |
+| "Tem unidade gastando muito mais que as outras?" | Filtre uma Unidade por vez e compare KPIs. |
+| "Quantas conversas demoradas (muitas msgs) tivemos?" | KPI `Msgs / conversa` + drill no [Scout](/avaliacao/conversas) com filtro de baixa nota. |
+
+<Note>
+  A página é informativa — não há ações de configuração aqui. Use os números como insumo para ajustes no [Atendimento Passivo](/atendimento/atendente-passivo), no [Copilot](/atendimento/copilot), nas [Regras de Conversa](/configuracoes/regras-de-conversa) e nas [Campanhas](/campanhas/criar-e-gerenciar).
+</Note>

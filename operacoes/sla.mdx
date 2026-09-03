@@ -4,7 +4,7 @@ sidebarTitle: "SLA"
 description: "Defina o tempo máximo para a primeira resposta humana e alerte sua equipe antes do estouro."
 ---
 
-O SLA de atendimento monitora o tempo até a primeira resposta humana depois que uma conversa é transferida da IA para a fila. Se o tempo estourar, a equipe recebe alertas escalonados — primeiro o atendente responsável, depois os gestores.
+O SLA de atendimento monitora o tempo até a primeira resposta humana depois que uma conversa é transferida da IA para a fila. Se o tempo estourar, a equipe recebe alertas escalonados: primeiro o atendente responsável, depois os gestores.
 
 O SLA só entra em ação em conversas transferidas para atendimento humano. Conversas ainda em fluxo de IA não são contabilizadas.
 
@@ -12,9 +12,9 @@ O SLA só entra em ação em conversas transferidas para atendimento humano. Con
 
 O tempo configurado é dividido em três zonas:
 
-- **Dentro do SLA** (0 até 50% do tempo máximo) — nada acontece, a equipe tem folga para responder.
-- **Primeiro alerta** (50% até 100%) — o atendente responsável é avisado para pegar a conversa.
-- **Crítico** (acima de 100%) — os gestores são notificados e um reforço é reenviado a cada 30 segundos enquanto a conversa permanecer sem resposta.
+- **Dentro do SLA** (0 até 50% do tempo máximo): nada acontece, a equipe tem folga para responder.
+- **Primeiro alerta** (50% até 100%): o atendente responsável é avisado para pegar a conversa.
+- **Crítico** (acima de 100%): os gestores são notificados e um reforço é reenviado a cada 30 segundos enquanto a conversa permanecer sem resposta.
 
 ## Configuração
 
@@ -23,7 +23,7 @@ No Dashboard, acesse **Configurações > SLA de Atendimento**:
 1. **Ative o SLA** com o toggle mestre
 2. **Defina o tempo máximo** para a primeira resposta (entre 1 e 1440 minutos)
 3. **Use os presets** para ajustes rápidos (5, 10, 15, 30, 60 ou 120 minutos)
-4. **Revise a prévia ao vivo** — a timeline e as linhas de alerta recalculam automaticamente conforme você altera o tempo
+4. **Revise a prévia ao vivo**: a timeline e as linhas de alerta recalculam automaticamente conforme você altera o tempo
 5. **Salve as alterações**
 
 <Tip>
@@ -35,16 +35,16 @@ No Dashboard, acesse **Configurações > SLA de Atendimento**:
 | Estágio | Momento | Notificação |
 |---------|---------|-------------|
 | **Primeiro alerta** | aos 50% do tempo máximo | Atendente responsável pela conversa |
-| **Alerta crítico** | ao atingir o tempo máximo | Gestores da entidade |
+| **Alerta crítico** | ao atingir o tempo máximo | Gestores da unidade |
 | **Reforço** | a cada 30 segundos após o crítico | Gestores, enquanto a conversa não receber resposta |
 
 ## Indicadores no inbox
 
 Quando o SLA está ativo, atendentes veem o tempo decorrido diretamente na [tela de conversas](/atendimento/conversas):
 
-- **Badge com relógio** em cada item da lista de conversas — muda de verde para amarelo e vermelho conforme o tempo avança
-- **Chip no cabeçalho** da conversa aberta — mostra `MM:SS / TT:00` (tempo decorrido sobre o total configurado)
-- **Banner no topo da lista** — destaca quantas conversas estouraram o SLA, visível apenas quando há pelo menos uma
+- **Badge com relógio** em cada item da lista de conversas, muda de verde para amarelo e vermelho conforme o tempo avança
+- **Chip no cabeçalho** da conversa aberta. mostra `MM:SS / TT:00` (tempo decorrido sobre o total configurado)
+- **Banner no topo da lista**: destaca quantas conversas estouraram o SLA, visível apenas quando há pelo menos uma
 
 A cor do badge segue o estágio atual: verde dentro do SLA, amarelo no primeiro alerta, vermelho quando excedido.
 
@@ -54,10 +54,10 @@ A cor do badge segue o estágio atual: verde dentro do SLA, amarelo no primeiro 
   O timer de SLA só conta dentro dos [horários de atendimento](/operacoes/horarios-de-atendimento) configurados. Fora do expediente o contador é pausado automaticamente e retomado na próxima abertura.
 </Note>
 
-Se nenhum horário comercial estiver cadastrado, o SLA contará 24/7 — a tela mostra um aviso para configurar horários antes de habilitar a regra em produção.
+Se nenhum horário comercial estiver cadastrado, o SLA contará 24/7, e a tela mostra um aviso para configurar horários antes de habilitar a regra em produção.
 
 ## Boas práticas
 
 - **Comece generoso e ajuste**. Um SLA muito agressivo gera fadiga de alerta e prejudica a equipe; um SLA muito frouxo deixa clientes esperando.
-- **Alinhe com o [roteamento](/operacoes/roteamento)**. O SLA conta a partir do momento em que a conversa entra na fila humana — certifique-se de que a distribuição para atendentes é rápida.
+- **Alinhe com o [roteamento](/operacoes/roteamento)**. O SLA conta a partir do momento em que a conversa entra na fila humana, então certifique-se de que a distribuição para atendentes é rápida.
 - **Revise após as primeiras semanas**. Use o indicador "X conversas com SLA excedido" na lista como termômetro: se ele aparece com frequência, o tempo configurado pode estar abaixo da capacidade real da equipe.

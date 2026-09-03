@@ -1,37 +1,25 @@
 ---
-title: "Onboarding WABA"
+title: "Configurar WhatsApp Business"
 sidebarTitle: "Onboarding WABA"
-description: "Guia inicial para conectar o WhatsApp Business API (WABA) ao SAN Talk AI."
+description: "Guia inicial para conectar o WhatsApp Business API (WABA) ao Tartini."
 ---
 
-Antes de conectar um canal WABA no SAN Talk, você precisa de uma conta Meta Business verificada e um número de telefone registrado no WhatsApp Business API. Este guia explica os pré-requisitos e os caminhos disponíveis.
-
-## WABA vs WhatsApp Web
-
-| Aspecto | WhatsApp Web (ROOKIE) | WABA |
-|---------|----------------------|------|
-| **Conexão** | QR Code / Pareamento | OAuth da Meta |
-| **Estabilidade** | Pode cair | API oficial, estável |
-| **Volume** | Limitado | Alto volume |
-| **Templates** | Não suporta | Suporta templates aprovados |
-| **Qualidade** | Sem monitoramento | Rating de qualidade da Meta |
-
-Use WABA quando precisar de operação em produção, alto volume ou envio de campanhas com templates.
+Para usar o WhatsApp Business (WABA) no Tartini, você precisa de uma conta Meta Business verificada e um número de telefone registrado na API oficial da Meta. Este guia explica os pré-requisitos e os caminhos disponíveis.
 
 ## Pré-requisitos
 
 <Steps>
   <Step title="Conta Meta Business">
-    Crie uma conta em [business.facebook.com](https://business.facebook.com). É a partir dela que toda a configuração de WhatsApp oficial é feita.
+    Crie uma conta em [business.facebook.com](https://business.facebook.com). É a partir dela que toda a configuração é feita.
   </Step>
   <Step title="Verificação da empresa">
-    Faça a verificação de empresa na Meta enviando documentos (CNPJ, comprovantes). Sem verificação, o WhatsApp Business API tem limites severos de volume.
+    Faça a verificação de empresa na Meta enviando documentos (CNPJ, comprovantes). Sem verificação, o WhatsApp Business tem limites severos de volume.
   </Step>
   <Step title="WhatsApp Business Account (WABA)">
-    Dentro do Meta Business, crie uma WhatsApp Business Account — é o "container" que agrupa números, templates e configurações de WhatsApp.
+    Dentro do Meta Business, crie uma WhatsApp Business Account, que agrupa seus números, templates e configurações.
   </Step>
   <Step title="Número de telefone disponível">
-    Tenha um número que **não esteja em uso** no WhatsApp pessoal nem no WhatsApp Business comum (app verde). Se o número já estiver em uso, será preciso desvincular antes.
+    Tenha um número que **não esteja em uso** no WhatsApp pessoal nem no WhatsApp Business (app verde). Se o número já estiver em uso, será preciso desvincular antes.
   </Step>
 </Steps>
 
@@ -39,21 +27,19 @@ Use WABA quando precisar de operação em produção, alto volume ou envio de ca
   A verificação da empresa pela Meta pode levar de poucas horas a vários dias úteis. Comece esse processo o quanto antes.
 </Warning>
 
-## Escolha seu caminho
+## Próximo passo
 
 <CardGroup cols={2}>
   <Card title="Já tenho um número WABA" icon="circle-check" href="/canais/whatsapp-business">
     Vá direto para a conexão via OAuth da Meta.
   </Card>
   <Card title="Preciso de um número" icon="phone-plus" href="/canais/waba-bsp">
-    Veja como obter um número via Embedded Signup ou parceiro autorizado da Meta.
+    Veja como obter um número via cadastro direto na Meta ou parceiro autorizado.
   </Card>
 </CardGroup>
 
 <Tip>
-  Em dúvida sobre qual caminho seguir? Se você já consegue ver um número de telefone dentro de **WhatsApp Manager → Visão geral → Números** no Meta Business, escolha "Já tenho um número WABA". Caso contrário, siga para "Preciso de um número".
+  Em dúvida sobre qual caminho seguir? Se você já consegue ver um número de telefone dentro de **WhatsApp Manager > Visão geral > Números** no Meta Business, escolha "Já tenho um número WABA". Caso contrário, siga para "Preciso de um número".
 </Tip>
 
-## Próximos passos
-
-Depois de cumprir os pré-requisitos, siga para [Conectar WhatsApp Business](/canais/whatsapp-business). Se algo der errado durante a conexão, consulte o [Troubleshooting WABA](/canais/waba-troubleshooting).
+Se algo der errado durante a conexão, consulte o [Troubleshooting WABA](/canais/waba-troubleshooting).

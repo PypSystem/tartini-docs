@@ -1,0 +1,59 @@
+---
+title: "Contexto Situacional"
+description: "Instrua a IA com informações temporárias: promoções, manutenções, eventos e campanhas sazonais."
+---
+
+O Contexto Situacional permite adicionar instruções temporárias ao agente de IA para situações específicas: uma promoção de fim de ano, uma manutenção programada, mudança de horário em feriados ou o lançamento de um produto novo.
+
+Diferente das diretrizes (que são permanentes), os contextos situacionais têm data de início e fim. A IA aplica a instrução automaticamente no período definido e para quando o contexto expira.
+
+Você pode ter até **10 contextos situacionais** cadastrados.
+
+## Status dos contextos
+
+| Status | Cor | Significado |
+|--------|-----|-------------|
+| **Ativo** | Verde | Instrução sendo aplicada agora |
+| **Agendado** | Azul | Data de início no futuro, será ativado automaticamente |
+| **Expirado** | Cinza | Data de fim já passou |
+| **Inativo** | Cinza | Desativado manualmente |
+
+## Configuração
+
+No Tartini, acesse **Identidade > Operações > Contexto Situacional**:
+
+<Steps>
+  <Step title="Crie um novo contexto">
+    Clique em **Adicionar contexto** e defina um título descritivo.
+  </Step>
+  <Step title="Escreva a instrução">
+    Descreva o que a IA deve saber ou fazer diferente durante esse período. Seja específico.
+  </Step>
+  <Step title="Defina o período (opcional)">
+    Configure data de início e fim. Se não definir datas, o contexto fica ativo enquanto estiver habilitado.
+  </Step>
+  <Step title="Ative">
+    O contexto entra em vigor imediatamente (ou na data agendada).
+  </Step>
+</Steps>
+
+## Exemplos de uso
+
+<AccordionGroup>
+  <Accordion title="Promoção sazonal">
+    "Estamos com 20% de desconto em todos os planos anuais até 31/12. Quando o cliente perguntar sobre preços, mencione a promoção e incentive o fechamento."
+  </Accordion>
+  <Accordion title="Manutenção programada">
+    "Nosso sistema ficará em manutenção no dia 15/03 das 22h às 6h. Informe os clientes que reportarem instabilidade e peça desculpas pelo inconveniente."
+  </Accordion>
+  <Accordion title="Feriado">
+    "Hoje é feriado nacional. Informe que o atendimento humano retorna no próximo dia útil, mas que você (IA) pode ajudar com as dúvidas mais comuns."
+  </Accordion>
+  <Accordion title="Lançamento de produto">
+    "Acabamos de lançar o Plano Enterprise. Quando clientes perguntarem sobre planos, mencione o novo plano e destaque os diferenciais: suporte prioritário, API dedicada e gerente de conta."
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+  Use contextos situacionais para manter a IA atualizada sobre eventos temporários sem precisar alterar as diretrizes permanentes. Quando o contexto expira, a IA volta automaticamente ao comportamento padrão.
+</Tip>

@@ -1,0 +1,85 @@
+---
+title: "Contatos de Campanha"
+sidebarTitle: "Contatos de Campanha"
+description: "Integre o Talk com sistemas externos (Varejo Online, SAN Internet) para puxar a base de clientes e usá-la em campanhas de WhatsApp."
+---
+
+A página **Contatos de Campanha** centraliza as integrações que abastecem o módulo de [Campanhas](/campanhas/criar-e-gerenciar) com a base de clientes da sua empresa. Em vez de subir CSV toda vez que for disparar uma campanha, você configura aqui a integração com o sistema que já tem essa base e o Talk consulta direto.
+
+A página fica em **Configurações &rarr; Contatos de Campanha** ([talk.saninternet.com/settings/campaign-integrations](https://talk.saninternet.com/settings/campaign-integrations)).
+
+<Warning>
+  Em alguns planos a página fica bloqueada. Quando esse for o caso, será exibida a mensagem "Integrações de campanha não disponível no seu plano atual".
+</Warning>
+
+---
+
+## Integrações disponíveis
+
+### Varejo Online
+
+Importa a base de clientes do **Varejo Online** (sistema de gestão para varejo) usando uma **chave API** fornecida pelo próprio Varejo.
+
+**Status possíveis:**
+
+| Status | Cor | Significado |
+|--------|-----|-------------|
+| **Não configurada** | Cinza | Nenhuma chave foi salva ainda. |
+| **Ativa** | Verde + ícone de check | Chave salva e validada — a integração está funcionando. |
+| **Chave inválida** | Vermelho + ícone de erro | Chave salva mas o Varejo Online recusou a autenticação. Atualize com uma chave válida. |
+
+**Configurar pela primeira vez:**
+
+1. Pegue sua **chave API** no painel do Varejo Online.
+2. Cole-a no campo **Chave API** da página.
+3. Use o ícone de olho à direita do campo para conferir o valor antes de salvar.
+4. Clique em **Salvar Chave**.
+
+A chave é **criptografada** antes de ser armazenada; o Talk nunca exibe o valor completo depois — apenas uma versão mascarada (ex.: `••••••••a1b2`).
+
+**Alterar uma chave existente:**
+
+Quando a integração já está ativa, a página mostra a chave mascarada e um botão **Alterar Chave**. Clicando nele, o campo fica editável para você colar uma nova chave (e salvar) ou cancelar.
+
+<Tip>
+  Se a chave ficar inválida (porque foi rotacionada no Varejo Online, por exemplo), a página mostra um alerta vermelho com o aviso "Chave API Inválida". Atualize imediatamente para não interromper o disparo de campanhas.
+</Tip>
+
+### SAN Internet
+
+Importa clientes do **painel SAN Internet** (provedor de internet). Diferente do Varejo Online, esta integração é configurada **no servidor** (via variáveis de ambiente) e não pelo cliente.
+
+**Status possíveis:**
+
+| Status | Significado |
+|--------|-------------|
+| **Não configurada** | A integração existe mas o servidor ainda não recebeu as credenciais. |
+| **Ativa** | A integração está pronta para uso em campanhas. |
+
+<Note>
+  Para habilitar a integração SAN, entre em contato com o time de suporte do Talk. As credenciais SAN são gerenciadas internamente.
+</Note>
+
+O cartão da integração SAN só aparece quando ela está **disponível para sua conta**. Se não aparecer, sua empresa não tem essa integração liberada.
+
+---
+
+## Atualizar status
+
+Há um botão **Atualizar Status** no rodapé que força uma nova verificação das integrações. Use sempre que:
+
+- Acabar de salvar uma chave nova.
+- Suspeitar que a chave foi invalidada externamente.
+- A integração estava ativa e parou de funcionar.
+
+---
+
+## Como as integrações entram nas campanhas
+
+Depois de configuradas, as integrações aparecem como **fontes de contatos** na hora de criar uma campanha. Em vez de importar um CSV, você seleciona o sistema e o Talk puxa o público diretamente.
+
+Veja o fluxo completo em [Campanhas &rarr; Criar e gerenciar](/campanhas/criar-e-gerenciar).
+
+<Warning>
+  Mantenha a chave do Varejo Online **rotacionada periodicamente** (60 a 90 dias) por segurança. O Talk não invalida a chave automaticamente — quem decide o tempo de vida é o sistema externo.
+</Warning>

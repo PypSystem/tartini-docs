@@ -1,0 +1,179 @@
+---
+title: "Webhook de Atendimento"
+sidebarTitle: "Webhook de Atendimento"
+description: "Receba no seu sistema (ERP, CRM ou qualquer aplicação) um POST com os dados de cada atendimento finalizado no Talk, com payload assinado via HMAC-SHA256."
+---
+
+O **Webhook de Atendimento** notifica seu sistema externo sempre que uma conversa é finalizada no Talk. A cada encerramento, o Talk envia um `POST` em JSON para a URL configurada, contendo os dados da conversa e do contato. Opcionalmente, o payload pode incluir o resumo gerado por IA, o histórico de mensagens e a nota CSAT.
+
+A configuração fica em **Configurações &rarr; Webhooks &rarr; Finalização de Atendimento** ([talk.saninternet.com/settings/webhooks](https://talk.saninternet.com/settings/webhooks)).
+
+<Info>
+  O disparo acontece quando a conversa é finalizada de fato. Isso inclui a finalização manual pelo atendente, o encerramento automático por inatividade e a finalização após a avaliação CSAT (com ou sem resposta do cliente).
+</Info>
+
+## Configuração
+
+<Steps>
+  <Step title="Ative o webhook">
+    Em **Configurações &rarr; Webhooks &rarr; Finalização de Atendimento**, ligue a chave **Ativar webhook**.
+  </Step>
+  <Step title="Informe a URL de destino">
+    O endpoint do seu sistema que receberá o `POST`. Use sempre `https://` em produção.
+  </Step>
+  <Step title="Gere o secret de assinatura">
+    Clique em **Gerar novo** e guarde o valor com segurança. Ele será usado para validar a autenticidade de cada entrega.
+  </Step>
+  <Step title="Escolha o conteúdo do payload">
+    Conversa e contato são sempre enviados. Você pode incluir também o resumo da IA, o histórico de mensagens e a nota CSAT.
+  </Step>
+  <Step title="Defina o filtro de relevância (opcional)">
+    Com **Registrar apenas atendimentos relevantes** ativo, conversas triviais (como um cumprimento sem continuação) não são enviadas ao seu sistema.
+  </Step>
+  <Step title="Teste a entrega">
+    O botão **Testar webhook** envia um payload de exemplo (com `test: true`) para validar a integração antes de ativar.
+  </Step>
+</Steps>
+
+## Identificando o cliente: o ID externo
+
+Para o seu sistema saber a qual cliente o atendimento pertence, cada contato do Talk possui um campo **ID externo**: um código livre que referencia o cliente no seu sistema (por exemplo, o ID dele no seu ERP ou CRM).
+
+O atendente define esse valor no painel de detalhes do contato, dentro do Inbox (seção **Conversa**, campo **ID externo**). Uma vez preenchido, ele acompanha o contato em todas as finalizações futuras e chega no payload como `contact.externalId`.
+
+<Tip>
+  Quando o ID externo não estiver preenchido, `contact.externalId` chega como `null`. Nesse caso, use `contact.phoneNumber` como alternativa de vínculo.
+</Tip>
+
+## Formato do payload
+
+```json
+{
+  "event": "conversation.finished",
+  "version": "v1",
+  "requestId": "f3a1c2d4-5e6f-4a7b-8c9d-0e1f2a3b4c5d",
+  "sentAt": "2026-06-12T15:40:49.716Z",
+  "data": {
+    "conversation": {
+      "id": "c0a8012e-7d3b-4f1a-9e2c-5b6d8f0a1c3e",
+      "createdAt": "2026-06-12T14:02:11.000Z",
+      "closedAt": "2026-06-12T15:40:49.000Z",
+      "closeReason": "Dúvida resolvida pelo atendente",
+      "attendant": { "id": "...", "name": "João Atendente" },
+      "sector": { "id": "...", "name": "Suporte" },
+      "channel": { "id": "...", "type": "ROOKIE", "name": "whatsapp-principal" }
+    },
+    "contact": {
+      "id": "...",
+      "name": "Camila Ribeiro",
+      "phoneNumber": "5511999999999",
+      "externalId": "ERP-12345"
+    },
+    "summary": {
+      "text": "Cliente entrou em contato com dúvida sobre fatura...",
+      "score": 9.2,
+      "generatedAt": "2026-06-12T15:41:30.000Z"
+    },
+    "csat": {
+      "rating": 5,
+      "comment": "Atendimento excelente!",
+      "respondedAt": "2026-06-12T15:43:02.000Z"
+    },
+    "messages": [
+      { "sender": "USER", "content": "Oi, tenho uma dúvida sobre minha fatura", "sentAt": "2026-06-12T14:02:11.000Z" }
+    ]
+  }
+}
+```
+
+### Campos especiais
+
+| Campo | Significado |
+| --- | --- |
+| `summary: null` | Resumo desativado na configuração. Se vier acompanhado de `summaryPending: true`, o resumo foi solicitado mas não ficou pronto a tempo. |
+| `csat: { rating: null }` | O cliente não respondeu a avaliação antes do tempo limite. |
+| `contact.externalId: null` | Nenhum ID externo definido para o contato. |
+| `messages: null` | Histórico de mensagens desativado na configuração. |
+| `test: true` | Entrega gerada pelo botão **Testar webhook**, com dados fictícios. Não registre como atendimento real. |
+
+<Note>
+  Quando o resumo da IA está habilitado, a entrega aguarda a geração do resumo e pode atrasar alguns minutos em relação ao encerramento da conversa.
+</Note>
+
+## Entrega e resposta
+
+- O `POST` é enviado com `Content-Type: application/json`.
+- Seu endpoint deve responder com status `2xx` em até **30 segundos**.
+- Recomendação: receba, salve e responda. Deixe processamentos demorados para depois da resposta.
+
+## Headers enviados
+
+| Header | Conteúdo |
+| --- | --- |
+| `X-Webhook-Event` | Nome do evento (`conversation.finished`). |
+| `X-Webhook-Signature` | Assinatura do corpo: `sha256=<HMAC-SHA256(corpo bruto, secret)>`. |
+| `X-Request-Id` | Identificador único da entrega. |
+
+## Validando a assinatura
+
+Toda entrega é assinada com **HMAC-SHA256** usando o secret configurado. Recalcule o HMAC sobre o **corpo bruto da requisição** (antes do parse do JSON) e compare com o valor do header `X-Webhook-Signature` usando comparação de tempo constante. Requisições com assinatura inválida devem ser rejeitadas.
+
+<CodeGroup>
+
+```javascript Node.js
+const crypto = require('crypto');
+
+// use o corpo bruto (antes do JSON.parse) para calcular o HMAC
+app.post('/webhook', express.raw({ type: 'application/json' }), (req, res) => {
+  const esperado =
+    'sha256=' + crypto.createHmac('sha256', SECRET).update(req.body).digest('hex');
+
+  const recebido = req.headers['x-webhook-signature'] || '';
+  const valido =
+    recebido.length === esperado.length &&
+    crypto.timingSafeEqual(Buffer.from(recebido), Buffer.from(esperado));
+
+  if (!valido) return res.status(401).end();
+
+  const evento = JSON.parse(req.body);
+  res.status(200).end();
+});
+```
+
+```python Python
+import hmac, hashlib
+from flask import Flask, request
+
+@app.post('/webhook')
+def webhook():
+    corpo = request.get_data()  # corpo bruto
+    esperado = 'sha256=' + hmac.new(SECRET.encode(), corpo, hashlib.sha256).hexdigest()
+    recebido = request.headers.get('X-Webhook-Signature', '')
+
+    if not hmac.compare_digest(recebido, esperado):
+        return '', 401
+
+    evento = request.get_json()
+    return '', 200
+```
+
+```php PHP
+<?php
+$corpo = file_get_contents('php://input'); // corpo bruto
+$esperado = 'sha256=' . hash_hmac('sha256', $corpo, $secret);
+$recebido = $_SERVER['HTTP_X_WEBHOOK_SIGNATURE'] ?? '';
+
+if (!hash_equals($esperado, $recebido)) {
+    http_response_code(401);
+    exit;
+}
+
+$evento = json_decode($corpo, true);
+http_response_code(200);
+```
+
+</CodeGroup>
+
+<Warning>
+  O secret nunca trafega nas requisições. Se ele vazar, gere um novo na tela de configuração e salve. As próximas entregas passam a usar o novo valor imediatamente.
+</Warning>

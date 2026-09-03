@@ -1,76 +1,78 @@
 ---
-title: "Introdução ao SAN Talk AI"
+title: "Introdução"
 sidebarTitle: "Introdução"
-description: "Conheça a plataforma de IA para atendimento, campanhas e automação de vendas."
+description: "Conheça o Tartini — comunicação e gestão de equipe com IA que entende a sua empresa."
 ---
 
-O SAN Talk AI é uma plataforma de inteligência artificial que automatiza o atendimento ao cliente, campanhas de marketing e operações de vendas via WhatsApp. Combine agentes de IA com atendentes humanos para oferecer experiências personalizadas em escala.
+Imagine uma IA que conhece cada detalhe do seu negócio, conversa com seus clientes em segundos e nunca tira folga. O Tartini leva a comunicação da sua empresa — da primeira mensagem ao pós-venda — para uma inteligência artificial que aprende e evolui com a sua operação, e ainda ajuda você a gerir a qualidade do seu time.
 
-## O que você pode fazer
+## Por que usar o Tartini
 
-<CardGroup cols={2}>
-  <Card title="Atendimento automatizado" icon="robot">
-    Agentes de IA que conversam com seus clientes 24/7, usando a base de conhecimento da sua empresa para responder com precisão.
+<CardGroup cols={3}>
+  <Card title="Disponibilidade total" icon="clock">
+    Seus clientes são atendidos a qualquer hora, em qualquer dia. A IA assume quando sua equipe não está disponível.
   </Card>
-  <Card title="Copilot para atendentes" icon="user-astronaut">
-    Assistente de IA que sugere respostas em tempo real para seus atendentes humanos durante conversas.
+  <Card title="IA que aprende" icon="fingerprint">
+    Quanto mais você ensina, mais inteligente ela fica. Documentos, FAQs, sites: tudo vira conhecimento aplicado.
   </Card>
-  <Card title="Campanhas via WhatsApp" icon="bullhorn">
-    Envie campanhas segmentadas com templates aprovados, acompanhe métricas de engajamento e conversão.
-  </Card>
-  <Card title="Base de conhecimento" icon="database">
-    Alimente a IA com documentos, perguntas frequentes e conteúdo de sites. O sistema usa RAG para gerar respostas fundamentadas.
-  </Card>
-  <Card title="Personalidade da IA" icon="brain">
-    Configure tom de voz, regras de compliance e diretrizes comportamentais para que a IA represente sua marca.
-  </Card>
-  <Card title="Métricas e avaliações" icon="chart-line">
-    Acompanhe performance de atendentes, avaliações de conversas e feedback automatizado.
+  <Card title="Controle total" icon="shield-check">
+    Regras de compliance, diretrizes e personalidade. A IA só fala o que você autoriza.
   </Card>
 </CardGroup>
 
+---
+
+## Conheça a plataforma
+
+<CardGroup cols={2}>
+  <Card title="Inbox" icon="inbox" href="/atendimento/visao-geral">
+    Todas as conversas em um só lugar. IA e atendentes humanos trabalhando juntos, com histórico completo e transferência com contexto.
+  </Card>
+  <Card title="Identidade" icon="fingerprint" href="/ia-e-personalidade/comunicacao">
+    Configure quem a sua IA é: personalidade, tom de voz, regras de compliance e diretrizes. Ela fala com a voz da sua marca.
+  </Card>
+  <Card title="Aprendizado" icon="lightbulb" href="/avaliacao/conversas">
+    O Scout avalia cada conversa encerrada com nota, critérios e recomendações. O gestor valida, o Scout aprende e sua equipe melhora continuamente.
+  </Card>
+  <Card title="Campanhas" icon="rocket" href="/campanhas/criar-e-gerenciar">
+    Alcance seus clientes em escala com campanhas segmentadas, templates aprovados e métricas de engajamento em tempo real.
+  </Card>
+  <Card title="Base de conhecimento" icon="cube" href="/base-de-conhecimento/visao-geral">
+    Ensine a IA sobre o seu negócio. Documentos, perguntas frequentes e sites. Ela absorve tudo e usa nas conversas.
+  </Card>
+  <Card title="Configurações" icon="gear" href="/operacoes/horarios-de-atendimento">
+    Horários, SLA, roteamento, canais, equipe e integrações. Toda a operação configurável em um só lugar.
+  </Card>
+</CardGroup>
+
+---
+
 ## Como funciona
 
-```mermaid
-flowchart LR
-    A[Cliente envia mensagem] --> B[WhatsApp]
-    B --> C[SAN Talk AI]
-    C --> D{Roteamento}
-    D -->|Automático| E[Agente de IA]
-    D -->|Manual| F[Atendente humano]
-    E --> G[Base de conhecimento]
-    F --> H[Copilot]
-    G --> I[Resposta ao cliente]
-    H --> I
-```
+<Steps>
+  <Step title="Cliente inicia uma conversa" icon="comment">
+    Seu cliente entra em contato pelo canal que preferir. A conversa chega direto no Tartini.
+  </Step>
+  <Step title="A IA responde com conhecimento" icon="bolt">
+    Ela já sabe sobre seus produtos, políticas e processos. Responde com naturalidade e resolve a maioria dos casos sozinha.
+  </Step>
+  <Step title="Transfere quando precisa" icon="arrow-right">
+    Se a situação exige um humano, a IA transfere automaticamente, com todo o contexto, sem o cliente repetir nada.
+  </Step>
+  <Step title="Atendente responde com Copilot" icon="wand-magic-sparkles">
+    O atendente recebe sugestões inteligentes baseadas no conhecimento da empresa. Responde mais rápido e com mais precisão.
+  </Step>
+</Steps>
 
-1. O cliente envia uma mensagem via WhatsApp
-2. O SAN Talk AI recebe e roteia a conversa conforme as regras configuradas
-3. O agente de IA consulta a base de conhecimento e responde automaticamente
-4. Se necessário, a conversa é transferida para um atendente humano com suporte do Copilot
+---
 
-## Hierarquia organizacional
+## Comece agora
 
-O SAN Talk AI organiza sua operação em três níveis:
-
-| Nível | Descrição | Exemplo |
-|-------|-----------|---------|
-| **Empresa** | Organização principal | "Grupo Acme" |
-| **Classe** | Divisão ou segmento | "Região Sul", "Premium" |
-| **Entidade** | Unidade operacional (loja, filial) | "Loja Centro", "Filial SP" |
-
-Cada entidade tem seus próprios canais, atendentes, campanhas e configurações de IA.
-
-## Próximos passos
-
-<CardGroup cols={3}>
+<CardGroup cols={2}>
   <Card title="Início rápido" icon="rocket" href="/quickstart">
     Configure e comece a usar em minutos.
   </Card>
-  <Card title="Atendimento" icon="headset" href="/atendimento/visao-geral">
-    Entenda como funciona o fluxo de atendimento.
-  </Card>
   <Card title="API Reference" icon="code" href="/api-reference/introduction">
-    Integre o SAN Talk AI ao seu sistema.
+    Integre o Tartini ao seu sistema.
   </Card>
 </CardGroup>

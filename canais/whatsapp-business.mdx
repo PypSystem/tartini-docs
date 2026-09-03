@@ -1,30 +1,20 @@
 ---
-title: "WhatsApp Business (WABA)"
+title: "Conectar WhatsApp Business"
 sidebarTitle: "WhatsApp Business"
 description: "Conecte o WhatsApp Business Account via API oficial da Meta."
 ---
 
-O canal WABA (WhatsApp Business Account) usa a API oficial da Meta (Cloud API) para enviar e receber mensagens. É a opção recomendada para operações em produção com alto volume.
+O canal WABA (WhatsApp Business Account) usa a API oficial da Meta para enviar e receber mensagens. É a opção recomendada para operações em produção com alto volume.
 
 <Note>
-  Esta página cobre o passo de **conexão** no SAN Talk. Se você ainda não tem uma conta Meta Business verificada ou um número WABA provisionado, comece pelo [Onboarding WABA](/canais/waba-onboarding).
+  Esta página cobre o passo de **conexão** no Tartini. Se você ainda não tem uma conta Meta Business verificada ou um número WABA provisionado, comece pelo [Onboarding WABA](/canais/waba-onboarding).
 </Note>
 
-## Vantagens sobre o WhatsApp Web
-
-| Aspecto | WhatsApp Web (ROOKIE) | WABA |
-|---------|----------------------|------|
-| **Conexão** | QR Code / Pareamento | OAuth da Meta |
-| **Estabilidade** | Pode cair | API oficial, estável |
-| **Volume** | Limitado | Alto volume |
-| **Templates** | Não suporta | Suporta templates aprovados |
-| **Qualidade** | Sem monitoramento | Rating de qualidade da Meta |
-
-## Configuração
+## Passo a passo
 
 <Steps>
   <Step title="Acesse Configurações > Canais">
-    No Dashboard do SAN Talk, abra **Configurações** e clique na aba **Canais**.
+    No Dashboard do Tartini, abra **Configurações** e clique na aba **Canais**.
 
     <Frame>
       <img src="/canais/images/access-waba-settings.png" alt="Tela de Configurações > Canais com a opção WhatsApp Business (WABA)" />
@@ -40,7 +30,7 @@ O canal WABA (WhatsApp Business Account) usa a API oficial da Meta (Cloud API) p
   </Step>
 
   <Step title="Inicie a conexão">
-    Clique em **Conectar ao WhatsApp**. Um popup do Facebook será aberto para iniciar o fluxo OAuth oficial da Meta.
+    Clique em **Conectar ao WhatsApp**. Um popup do Facebook será aberto para iniciar o fluxo de autenticação oficial da Meta.
 
     <Frame>
       <img src="/canais/images/start-connection.png" alt="Tela inicial de conexão WABA com o botão Conectar ao WhatsApp" />
@@ -50,20 +40,20 @@ O canal WABA (WhatsApp Business Account) usa a API oficial da Meta (Cloud API) p
   <Step title="Autentique com a Meta">
     Faça login com a conta Meta que administra a sua WhatsApp Business Account. O fluxo é guiado pela própria Meta.
 
-    <Frame caption="Etapa 1 — Confirme sua conta Meta Business">
-      <img src="/canais/images/connecting-to-meta-step1.png" alt="Embedded Signup da Meta — etapa 1" />
+    <Frame caption="Etapa 1. Confirme sua conta Meta Business">
+      <img src="/canais/images/connecting-to-meta-step1.png" alt="Embedded Signup da Meta. etapa 1" />
     </Frame>
 
-    <Frame caption="Etapa 2 — Selecione ou crie a WhatsApp Business Account">
-      <img src="/canais/images/connecting-to-meta-step2.png" alt="Embedded Signup da Meta — etapa 2" />
+    <Frame caption="Etapa 2. Selecione ou crie a WhatsApp Business Account">
+      <img src="/canais/images/connecting-to-meta-step2.png" alt="Embedded Signup da Meta. etapa 2" />
     </Frame>
 
-    <Frame caption="Etapa 3 — Confirmação dos dados da etapa anterior">
-      <img src="/canais/images/connecting-to-meta-step3.png" alt="Embedded Signup da Meta — etapa 3" />
+    <Frame caption="Etapa 3. Confirmação dos dados">
+      <img src="/canais/images/connecting-to-meta-step3.png" alt="Embedded Signup da Meta. etapa 3" />
     </Frame>
 
-    <Frame caption="Etapa 4 — Selecione o número de telefone que será conectado">
-      <img src="/canais/images/connecting-to-meta-step4.png" alt="Embedded Signup da Meta — seleção do número" />
+    <Frame caption="Etapa 4. Selecione o número de telefone">
+      <img src="/canais/images/connecting-to-meta-step4.png" alt="Embedded Signup da Meta. seleção do número" />
     </Frame>
   </Step>
 
@@ -77,17 +67,13 @@ O canal WABA (WhatsApp Business Account) usa a API oficial da Meta (Cloud API) p
     - Se o número **ainda não tem PIN cadastrado**, o primeiro código informado será vinculado ao número.
     - Se já existe um PIN cadastrado anteriormente, informe o mesmo PIN para concluir a conexão.
 
-    <Tip>
-      Você também pode cadastrar ou redefinir o PIN diretamente no Meta Business Suite, em **Configurações → Contas do WhatsApp → [sua WABA] → Números → [seu número] → Verificação em duas etapas**. Mais detalhes na [documentação oficial da Meta](https://www.facebook.com/business/help).
-    </Tip>
-
     <Warning>
-      Guarde o PIN em local seguro. Ele será solicitado caso você precise recadastrar o número em outro app, refazer a verificação ou migrar de BSP no futuro.
+      Guarde o PIN em local seguro. Ele será solicitado caso você precise recadastrar o número em outro app ou migrar de provedor no futuro.
     </Warning>
   </Step>
 
   <Step title="Confirme a conexão">
-    Ao final, o SAN Talk confirma que o canal foi conectado com sucesso. O canal já está pronto para receber e enviar mensagens.
+    Ao final, o Tartini confirma que o canal foi conectado com sucesso. O canal já está pronto para receber e enviar mensagens.
 
     <Frame>
       <img src="/canais/images/connection-successful.png" alt="Tela de conexão bem-sucedida do canal WABA" />
@@ -101,10 +87,10 @@ O canal WABA (WhatsApp Business Account) usa a API oficial da Meta (Cloud API) p
 Com o WABA, você pode usar [templates aprovados pela Meta](/canais/templates) para iniciar conversas e enviar campanhas.
 
 ### Rating de qualidade
-A Meta atribui uma nota de qualidade ao seu número. O SAN Talk AI monitora esse rating e exibe no Dashboard.
+A Meta atribui uma nota de qualidade ao seu número. O Tartini monitora esse rating e exibe no Dashboard.
 
 ### Sincronização de templates
-Os templates criados no Meta Business Manager são sincronizados automaticamente com o SAN Talk AI.
+Os templates criados no Meta Business Manager são sincronizados automaticamente com o Tartini.
 
 <Tip>
   Mantenha o rating de qualidade alto respondendo rapidamente e evitando mensagens consideradas spam. Um rating baixo pode limitar o volume de envios.
@@ -112,4 +98,4 @@ Os templates criados no Meta Business Manager são sincronizados automaticamente
 
 ## Problemas na conexão?
 
-Consulte o [Troubleshooting WABA](/canais/waba-troubleshooting) para erros comuns no fluxo OAuth e seleção de número.
+Consulte o [Troubleshooting WABA](/canais/waba-troubleshooting) para erros comuns durante o processo.

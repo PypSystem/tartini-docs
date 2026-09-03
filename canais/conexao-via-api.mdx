@@ -1,0 +1,95 @@
+---
+title: "Conexão via API"
+sidebarTitle: "Conexão via API"
+description: "Gere tokens de API para integrar seus próprios sistemas diretamente com o Talk e usar a plataforma como um canal programático."
+---
+
+A **Conexão via API** transforma o Talk em um canal acessível pelos seus próprios sistemas: você consegue enviar e receber mensagens, criar contatos, iniciar conversas e consultar dados via REST. A página gerencia os **tokens de API** que autenticam essas chamadas.
+
+A página fica em **Configurações &rarr; Canais &rarr; Conexão via API** ([talk.saninternet.com/settings/channels/api](https://talk.saninternet.com/settings/channels/api)).
+
+<Note>
+  Para a referência completa de endpoints, autenticação, payloads e códigos de erro, veja a [API Reference](/api-reference/introduction).
+</Note>
+
+---
+
+## Como funciona
+
+Cada token é uma credencial pessoal-de-aplicação (não está vinculada a um usuário humano) que autentica requisições à API REST do Talk. Você cria quantos tokens precisar — um por integração, por exemplo — e revoga individualmente quando alguma chave vaza ou um sistema antigo é desativado.
+
+A autenticação segue o padrão **Bearer Token** no header HTTP:
+
+```http
+Authorization: Bearer <seu-token>
+```
+
+<Warning>
+  O token completo aparece **uma única vez**, no momento da criação. Depois disso, o Talk mostra apenas uma versão mascarada (ex.: `talk_••••••••a1b2`). Se você perder o token, terá que gerar um novo.
+</Warning>
+
+---
+
+## Criar um token
+
+<Steps>
+  <Step title="Abra o modal de criação">
+    Clique em **Criar Token** no canto superior direito da página (ou no botão central, no estado vazio).
+  </Step>
+
+  <Step title="Preencha os dados">
+    - **Nome** (obrigatório) — identificador curto, ex.: `Integração ERP`, `Webhook Site`.
+    - **Descrição** (opcional) — texto livre para você lembrar o propósito do token.
+  </Step>
+
+  <Step title="Copie o token">
+    Após a criação, um modal exibe o **token completo**. Copie e guarde em local seguro (cofre de senhas, variável de ambiente do servidor, gerenciador de segredos).
+
+    <Warning>
+      Este é o único momento em que o valor completo fica visível. Ao fechar o modal, o Talk passa a exibir apenas a versão mascarada.
+    </Warning>
+  </Step>
+</Steps>
+
+---
+
+## Ver e gerenciar tokens
+
+A página lista todos os tokens criados pela Empresa em cards, com:
+
+| Campo | Descrição |
+|-------|-----------|
+| **Nome** | Identificador do token. |
+| **Ícone de status** | Verde (ativo) ou vermelho (inativo). |
+| **Descrição** | Texto opcional inserido na criação. |
+| **Token** | Valor **mascarado** (ex.: `talk_••••••••a1b2`). |
+| **Último uso** | Data e hora da última requisição autenticada, ou "Nunca" se nunca foi usado. |
+| **Criado em** | Data e hora da geração. |
+
+### Excluir um token
+
+Cada card tem um botão vermelho de lixeira. Clicar abre uma confirmação — ao confirmar, o token é **revogado imediatamente** e qualquer requisição que tentar usá-lo passa a receber `401 Unauthorized`.
+
+<Warning>
+  Não há "desativação" — apenas exclusão. Antes de remover, certifique-se de que nenhum sistema crítico ainda está usando aquele token.
+</Warning>
+
+---
+
+## Boas práticas
+
+- **Um token por integração**: se três sistemas conversam com o Talk, crie três tokens. Assim, ao desativar um sistema, você revoga só o token dele.
+- **Nome descritivo**: use prefixos como `prod-`, `staging-`, `webhook-` para distinguir rapidamente.
+- **Rotação periódica**: gere um token novo, atualize a integração, valide funcionamento e só então revogue o antigo. Recomenda-se rotacionar a cada 90 dias.
+- **Não comite tokens**: nunca deixe um token em código aberto, repositório git ou ticket de suporte. Use variáveis de ambiente ou um gerenciador de segredos.
+- **Acompanhe "Último uso"**: tokens com mais de 30 dias sem uso provavelmente podem ser revogados.
+
+---
+
+## Quem pode gerar tokens
+
+Apenas usuários **Proprietário** da Empresa têm permissão para criar e revogar tokens de API. Gestores, Gerentes e Atendentes não veem a página de Conexão via API.
+
+<Tip>
+  Para começar a integrar, comece pelo endpoint de [autenticação](/concepts/authentication) e pelo guia de [erros padronizados](/concepts/errors) da API.
+</Tip>

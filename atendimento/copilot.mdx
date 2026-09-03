@@ -1,48 +1,41 @@
 ---
 title: "Copilot"
-description: "Assistente de IA que ajuda atendentes humanos em tempo real."
+description: "Seus atendentes respondem mais rápido e melhor com sugestões inteligentes da IA."
 ---
 
-O Copilot é um assistente de IA integrado à tela de atendimento que ajuda seus atendentes humanos a responder clientes de forma mais rápida e precisa.
+O Copilot é o assistente de IA dos seus atendentes humanos. Integrado diretamente ao Inbox, ele sugere respostas prontas com base no conhecimento da empresa, para que cada atendente responda com a rapidez e precisão de um especialista.
 
 ## Como funciona
 
-Durante uma conversa, o atendente pode consultar o Copilot a qualquer momento. O assistente:
+O Copilot está disponível no painel lateral do Inbox, na aba dedicada. Durante uma conversa, o atendente pode consultar o assistente a qualquer momento:
 
-1. Analisa o contexto da conversa atual
-2. Consulta a [base de conhecimento](/base-de-conhecimento/visao-geral) da empresa
-3. Considera as regras de [personalidade](/ia-e-personalidade/personalidade), [compliance](/ia-e-personalidade/compliance) e [diretrizes](/ia-e-personalidade/diretrizes)
-4. Sugere uma resposta personalizada para o atendente
+1. O Copilot analisa o contexto completo da conversa
+2. Usa o conhecimento da [base de conhecimento](/base-de-conhecimento/visao-geral) da empresa
+3. Considera as regras de [comunicação](/ia-e-personalidade/comunicacao), [conformidade](/ia-e-personalidade/compliance) e [diretrizes](/ia-e-personalidade/diretrizes)
+4. Sugere uma resposta pronta para o atendente revisar e enviar
 
-```mermaid
-flowchart LR
-    A[Atendente faz pergunta] --> B[Copilot]
-    B --> C[Base de conhecimento]
-    B --> D[Personalidade e regras]
-    B --> E[Histórico da conversa]
-    C --> F[Sugestão de resposta]
-    D --> F
-    E --> F
-    F --> G[Atendente revisa e envia]
-```
+<Tip>
+  O Copilot mantém o histórico da conversa em cache, então as sugestões ficam cada vez mais contextuais ao longo da interação.
+</Tip>
 
 ## Quando usar
 
-O Copilot é especialmente útil quando:
+O Copilot faz a diferença especialmente quando:
 
 - O atendente precisa de informações técnicas ou de políticas da empresa
-- A pergunta do cliente é complexa e exige consulta à base de conhecimento
+- A pergunta do cliente é complexa e exige conhecimento específico do negócio
 - O atendente é novo e precisa de suporte para manter o tom de voz da marca
+- A agilidade na resposta é crítica para cumprir o SLA
 
-<Tip>
-  O Copilot mantém o histórico da conversa em cache, então sugestões ficam cada vez mais contextuais ao longo da interação.
-</Tip>
-
-## Diferença entre Copilot e Agente de IA
+## Copilot vs. Agente de IA
 
 | Aspecto | Agente de IA | Copilot |
 |---------|-------------|---------|
 | **Quem responde** | A IA responde diretamente ao cliente | O atendente humano responde |
 | **Controle** | Automático | O atendente decide se usa a sugestão |
 | **Uso** | Atendimento autônomo | Suporte ao atendente |
-| **Audience** | `ai_agent` | `copilot` |
+| **Disponibilidade** | Sempre ativo conforme roteamento | Aba no painel lateral do Inbox |
+
+<Note>
+  O Copilot só aparece quando a conversa está atribuída ao atendente logado. Se a conversa não está atribuída a você, a aba não será exibida.
+</Note>

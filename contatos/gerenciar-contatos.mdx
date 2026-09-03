@@ -1,33 +1,37 @@
 ---
 title: "Gerenciar contatos"
 sidebarTitle: "Contatos"
-description: "Crie, organize e gerencie seus contatos no SAN Talk AI."
+description: "Crie, organize e gerencie seus contatos no Tartini."
 ---
 
-Os contatos são as pessoas com quem sua empresa se comunica pelo SAN Talk AI. Cada contato está vinculado a uma entidade e pode participar de conversas e campanhas.
+Os contatos são as pessoas com quem sua empresa se comunica pelo Tartini. Cada contato está vinculado a uma unidade e pode participar de conversas e campanhas.
 
-## Funcionalidades
+## Criação de contatos
 
-### Criação e edição
-- Crie contatos manualmente ou importe via CSV
-- Edite informações como nome, telefone e dados adicionais
-- Contatos são criados automaticamente quando um número desconhecido envia mensagem
+Contatos podem ser criados de três formas:
 
-### Organização
-- **Fixar contatos** — marque contatos importantes para acesso rápido
-- **Marcar como spam** — filtre contatos indesejados
-- **Busca e filtros** — encontre contatos por nome, número ou outros critérios
+<AccordionGroup>
+  <Accordion title="Automaticamente">
+    Quando um número desconhecido envia mensagem, o contato é criado automaticamente no sistema.
+  </Accordion>
+  <Accordion title="Manualmente">
+    Crie contatos individualmente pelo Dashboard, informando nome, telefone e dados adicionais.
+  </Accordion>
+  <Accordion title="Importação em massa">
+    Faça upload de um arquivo CSV com os contatos. O arquivo deve conter pelo menos o número de telefone de cada contato. Contatos existentes são atualizados e novos são criados automaticamente.
+  </Accordion>
+</AccordionGroup>
 
-### Deduplicação
+## Organização
+
+- **Fixar contatos**: marque contatos importantes para acesso rápido
+- **Marcar como spam**: filtre contatos indesejados
+- **Busca e filtros**: encontre contatos por nome, número ou outros critérios
+
+## Deduplicação
+
 O sistema identifica e permite mesclar contatos duplicados, evitando que um mesmo cliente tenha múltiplos registros.
 
-### Sincronização
-Contatos podem ser sincronizados com a Evolution API para manter a base atualizada com os contatos do WhatsApp.
-
-## Importação de contatos
-
-Para campanhas, você pode importar contatos em massa via upload de arquivo CSV. O arquivo deve conter pelo menos o número de telefone de cada contato.
-
-<Note>
-  Ao importar contatos, o sistema verifica se o número já existe na base. Contatos existentes são atualizados, novos são criados.
-</Note>
+<Tip>
+  Mantenha sua base de contatos organizada antes de enviar [campanhas](/campanhas/criar-e-gerenciar). Contatos duplicados podem gerar envios repetidos e prejudicar o rating de qualidade do seu número.
+</Tip>

@@ -1,60 +1,68 @@
 ---
-title: "Base de conhecimento"
+title: "Propriedades e Fontes"
 sidebarTitle: "Visão geral"
-description: "Alimente a IA com conteúdo da sua empresa para respostas precisas e personalizadas."
+description: "Ensine a IA tudo sobre sua empresa. Documentos, FAQs e sites viram conhecimento aplicado."
 ---
 
-A base de conhecimento é o coração da inteligência do SAN Talk AI. Todo conteúdo que você adiciona — documentos, perguntas frequentes e sites — é processado e transformado em embeddings vetoriais que a IA usa para gerar respostas fundamentadas.
+As Propriedades e Fontes são o que transforma o Tartini em um especialista no seu negócio. Todo conteúdo que você adiciona (documentos, perguntas frequentes e sites) é absorvido pela IA, que passa a dominar o assunto e responder seus clientes com a mesma precisão da sua melhor equipe.
 
 ## Como funciona
 
-```mermaid
-flowchart LR
-    A[Conteúdo] --> B[Processamento]
-    B --> C[Embeddings vetoriais]
-    C --> D[Banco vetorial]
-    D --> E[Busca semântica RAG]
-    E --> F[Resposta da IA]
-```
-
-1. Você adiciona conteúdo (documentos, Q&A ou sites)
-2. O sistema processa e divide em chunks (pedaços de texto)
-3. Cada chunk é convertido em um embedding (vetor numérico)
-4. Quando um cliente faz uma pergunta, o sistema busca os chunks mais relevantes
-5. A IA gera uma resposta baseada nos chunks encontrados
+<Steps>
+  <Step title="Você ensina a IA">
+    Faça upload de documentos, crie pares de pergunta e resposta ou adicione URLs do seu site.
+  </Step>
+  <Step title="A IA aprende">
+    O conteúdo é processado e indexado automaticamente. Em poucos minutos, a IA já domina as informações que você adicionou.
+  </Step>
+  <Step title="Clientes recebem respostas precisas">
+    Quando um cliente faz uma pergunta, a IA responde com base no que aprendeu, com naturalidade e sem inventar informações.
+  </Step>
+</Steps>
 
 ## Tipos de conteúdo
 
 <CardGroup cols={3}>
   <Card title="Documentos" icon="file-pdf" href="/base-de-conhecimento/documentos">
-    PDF, DOCX e outros formatos. Até 10 arquivos de 100MB cada.
+    PDF, DOCX, TXT e Markdown. A IA lê e aprende o conteúdo inteiro.
   </Card>
   <Card title="Perguntas e respostas" icon="circle-question" href="/base-de-conhecimento/perguntas-e-respostas">
-    Pares de pergunta e resposta que a IA usa como referência direta.
+    Pares diretos de pergunta e resposta, ideal para FAQs e respostas padronizadas.
   </Card>
   <Card title="Sites" icon="globe" href="/base-de-conhecimento/sites">
-    URLs de sites que são rastreados e indexados automaticamente.
+    Adicione URLs e a IA aprende automaticamente o conteúdo de todas as páginas.
   </Card>
 </CardGroup>
 
-## Organização
+## Audiências
 
-O conteúdo pode ser organizado em **pastas hierárquicas** para manter tudo estruturado. Cada item possui:
+Cada conteúdo pode ser direcionado para uma ou mais audiências, controlando quem tem acesso a essa informação:
 
-- **Título** — identificação do conteúdo
-- **Categoria** — classificação do tipo de informação
-- **Audiência** — para quem o conteúdo é relevante:
+| Audiência | Quem usa | Quando usar |
+|-----------|----------|-------------|
+| **Agente de IA** | O agente que responde diretamente aos clientes | Informações públicas: produtos, preços, políticas, FAQs |
+| **Copilot** | O assistente que ajuda atendentes humanos | Informações internas: processos, procedimentos, scripts |
+| **Strategist** | O módulo de análise estratégica | Dados para geração de insights e relatórios |
 
-| Audiência | Uso |
-|-----------|-----|
-| `ai_agent` | Agentes de IA que respondem clientes diretamente |
-| `copilot` | Copilot que auxilia atendentes humanos |
-| `strategist` | Análise estratégica e insights |
+As abas **Todas as fontes**, **Strategist**, **AI Agent** e **Copilot** na parte superior da tela permitem filtrar o conteúdo por audiência.
 
-## Estatísticas
+## Status do conteúdo
 
-O Dashboard mostra um resumo da sua base de conhecimento:
+| Status | Significado |
+|--------|-------------|
+| **Indexado** | Conteúdo processado e disponível para a IA |
+| **Processando** | Conteúdo sendo analisado e indexado |
+| **Falhou** | Erro no processamento, requer ação |
 
-- Número total de documentos, Q&As e sites
-- Volume de conteúdo processado
-- Status do processamento (pendente, processado, erro)
+## Testar Agente
+
+O botão **Teste** no canto inferior direito abre o Playground, onde você pode simular conversas com a IA para validar se ela está usando corretamente o conteúdo da base de conhecimento.
+
+No Playground, você pode:
+- Testar respostas com diferentes audiências (AI Agent, Copilot, Strategist)
+- Ver quais fontes a IA usou para cada resposta
+- Editar fontes diretamente quando encontrar informações incorretas
+
+<Tip>
+  Mantenha a base de conhecimento atualizada. Conteúdo desatualizado gera respostas incorretas. Revise periodicamente e remova informações que não são mais válidas.
+</Tip>

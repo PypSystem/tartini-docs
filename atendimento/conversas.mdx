@@ -1,57 +1,143 @@
 ---
-title: "Conversas"
-description: "Gerencie conversas com clientes em tempo real."
+title: "Inbox"
+sidebarTitle: "Inbox"
+description: "Todas as conversas em um só lugar. Gerencie, filtre e acompanhe cada interação em tempo real."
 ---
 
-As conversas são o centro do atendimento no SAN Talk AI. Cada conversa representa uma interação entre um cliente e sua empresa, podendo ser atendida por um agente de IA ou por um atendente humano.
+O Inbox é o centro do atendimento no Tartini. Todas as conversas chegam aqui, organizadas por status, atendente e setor. Você acompanha cada interação em tempo real, com histórico completo e controle total sobre o fluxo de atendimento.
 
-## Ciclo de vida de uma conversa
+## Navegação do Inbox
 
-Uma conversa passa pelos seguintes estados:
+O menu lateral do Inbox organiza suas conversas de forma intuitiva:
 
-1. **Criada** — o cliente envia a primeira mensagem
-2. **Em atendimento** — atribuída a um atendente ou agente de IA
-3. **Finalizada** — encerrada com um motivo de fechamento
+| Seção | O que mostra |
+|-------|--------------|
+| **Sua caixa** | Conversas atribuídas a você |
+| **Tudo** | Todas as conversas da unidade |
+| **Não atribuído** | Conversas que ainda não têm um responsável |
+| **Contatos** | Lista completa de contatos da unidade |
 
-## Gerenciando conversas
+### Agentes de IA
 
-### Criar uma conversa
+Uma seção dedicada permite acompanhar o desempenho dos agentes de IA:
 
-Conversas são criadas automaticamente quando um cliente envia uma mensagem. Você também pode iniciar uma conversa proativamente a partir da lista de contatos.
+- **Todas as conversas** atendidas pela IA
+- **Finalizadas** com sucesso pela IA
+- **Transferidas** pela IA para um humano
+- **Abandonadas** pelo cliente durante atendimento da IA
 
-### Atribuir a um atendente
+### Canais
 
-Conversas podem ser atribuídas manualmente a um atendente específico ou distribuídas automaticamente com base nos [critérios de roteamento](/operacoes/roteamento).
+Filtre conversas por canal de origem para visualizar apenas as interações de um canal específico.
 
-### Finalizar uma conversa
+## Filtros e organização
 
-Ao encerrar uma conversa, selecione um motivo de fechamento para manter o histórico organizado e alimentar as métricas de atendimento.
+<AccordionGroup>
+  <Accordion title="Filtro por status">
+    Use as abas no topo para filtrar por status da conversa:
+    - **Todos**: todas as conversas ativas
+    - **Aguardando**: conversas que ainda não receberam a primeira resposta de um atendente
+    - **Em andamento**: conversas sendo atendidas neste momento
+    - **Finalizados**: conversas já encerradas
+  </Accordion>
 
-## Histórico de mensagens
+  <Accordion title="Filtro por atendente">
+    Visualize conversas de atendentes específicos. Cada atendente mostra um indicador de status (online/offline) para facilitar a distribuição de trabalho.
+  </Accordion>
 
-Todas as mensagens trocadas ficam registradas no histórico da conversa, incluindo:
+  <Accordion title="Filtro por setor">
+    Filtre por setor (Comercial, Financeiro, Suporte e outros setores configurados) para focar nas conversas de uma área específica da operação.
+  </Accordion>
 
-- Mensagens de texto, áudio, imagem e documentos
-- Reações a mensagens
-- Mensagens editadas ou excluídas
-- Indicadores de quem enviou (cliente, atendente ou IA)
+  <Accordion title="Busca por contato">
+    Pesquise por nome ou telefone para encontrar rapidamente uma conversa específica.
+  </Accordion>
+</AccordionGroup>
 
-## Funcionalidades
+### Organização por data
 
-| Funcionalidade | Descrição |
-|----------------|-----------|
-| **Atribuição** | Atribua conversas a atendentes específicos |
-| **Transferência** | Transfira entre atendentes ou de IA para humano |
-| **Notas internas** | Adicione anotações visíveis apenas para a equipe |
-| **Mídia** | Envie e receba imagens, áudios e documentos |
-| **Presença** | Veja quando o cliente está digitando ou gravando áudio |
-| **Timeout** | Conversas expiram automaticamente após período de inatividade |
-| **SLA** | Badge com tempo decorrido em conversas que têm SLA ativo — verde, amarelo ou vermelho conforme o status |
+As conversas são agrupadas automaticamente por período:
 
-<Note>
-  Quando o [SLA de atendimento](/operacoes/sla) está configurado, conversas transferidas para humanos exibem um relógio colorido indicando o tempo até a primeira resposta.
-</Note>
+- **Fixados**: conversas marcadas como prioritárias ficam sempre no topo
+- **Hoje**: conversas do dia atual
+- **Ontem**: conversas do dia anterior
+- **Anteriores**: conversas mais antigas
+
+## Status das conversas
+
+Cada conversa passa por um ciclo de vida com status claros:
+
+| Status | Cor | Significado |
+|--------|-----|-------------|
+| **Aguardando** | Amarelo | Conversa sem primeira resposta de um atendente |
+| **Em andamento** | Azul | Atendente já respondeu, conversa ativa |
+| **Aguardando CSAT** | Roxo | Aguardando avaliação de satisfação do cliente |
+| **Finalizada** | Verde | Conversa encerrada |
+
+## Painel de detalhes
+
+Ao abrir uma conversa, o painel lateral exibe duas abas:
+
+<Tabs>
+  <Tab title="Detalhes">
+    Informações do contato, atendente responsável, setor e status da conversa. Permite transferir ou reatribuir diretamente.
+  </Tab>
+  <Tab title="Copilot">
+    O assistente de IA sugere respostas com base no conhecimento da empresa. Disponível quando a conversa está atribuída ao atendente logado.
+  </Tab>
+</Tabs>
+
+## Ações em uma conversa
+
+### Transferir conversa
+
+Redirecione uma conversa para outro atendente ou setor quando necessário:
+
+<Steps>
+  <Step title="Abra o painel de transferência">
+    Clique no botão de transferência dentro da conversa.
+  </Step>
+  <Step title="Escolha o destino">
+    Selecione um atendente específico ou um setor. Use a busca para encontrar rapidamente.
+  </Step>
+  <Step title="Adicione o motivo (opcional)">
+    Descreva o motivo da transferência para dar contexto ao próximo atendente.
+  </Step>
+  <Step title="Confirme">
+    O próximo atendente recebe a conversa com todo o histórico e o motivo da transferência.
+  </Step>
+</Steps>
+
+### Finalizar conversa
+
+<Steps>
+  <Step title="Clique em Finalizar">
+    O botão fica disponível na conversa ativa.
+  </Step>
+  <Step title="Informe o motivo de encerramento">
+    Descreva o motivo do fechamento. Essa informação alimenta as métricas e a avaliação de conversas.
+  </Step>
+  <Step title="Confirme">
+    A conversa muda para o status **Finalizada** e sai da fila ativa.
+  </Step>
+</Steps>
+
+## Tipos de mensagem
+
+O Inbox suporta múltiplos formatos de comunicação:
+
+- **Texto** com formatação
+- **Imagens** e **documentos** (PDFs, planilhas)
+- **Áudio** gravado ou enviado pelo cliente
+- **Reações** a mensagens
+- **Edição e exclusão** de mensagens enviadas
+
+Indicadores visuais mostram quando o cliente está digitando ou gravando áudio.
+
+## Notas internas
+
+Adicione anotações visíveis apenas para a equipe. Útil para compartilhar contexto antes de transferir uma conversa ou registrar informações relevantes.
 
 <Tip>
-  Use as notas internas para compartilhar contexto com outros atendentes antes de transferir uma conversa.
+  Fixe conversas prioritárias para que elas fiquem sempre visíveis no topo do Inbox, independente de novos atendimentos.
 </Tip>
