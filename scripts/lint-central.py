@@ -11,7 +11,7 @@ try:
     nav=json.load(open(os.path.join(D,"docs.json"),encoding="utf-8"))["navigation"]
     def walk(o):
         if isinstance(o,str): slugs.add("/"+o)
-        elif isinstance(o,dict): walk(o.get("pages",[])); [walk(v) for k,v in o.items() if k in("tabs","groups")]
+        elif isinstance(o,dict): walk(o.get("pages",[])); [walk(v) for k,v in o.items() if k in("tabs","groups","languages")]
         elif isinstance(o,list): [walk(x) for x in o]
     walk(nav)
 except Exception: pass
