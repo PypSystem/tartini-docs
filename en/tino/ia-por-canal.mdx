@@ -1,0 +1,106 @@
+---
+title: "Turn Tino on in a channel"
+sidebarTitle: "AI by channel"
+description: "Set which channels Tino serves on its own, with what hours, follow-up, and closing."
+---
+
+With Tino turned on in a channel, it replies to the customer automatically within the hours you set, and hands off the conversation to the team when needed.
+
+<Note>
+  Who configures it: Administrator, Company Manager, and Area Manager. Available on the Scale plan.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Turn Tino on in a channel
+
+By default, Tino is turned off in every channel.
+
+Where it is: **Configurações > Atendimento > IA por canal** (Settings > Service > AI by channel).
+
+<Steps>
+  <Step title="Open the screen">Go to **Configurações > Atendimento > IA por canal** (Settings > Service > AI by channel).</Step>
+  <Step title="Choose the channel">In the list on the left, click the channel you want to configure.</Step>
+  <Step title="Turn on Tino">Turn on the **Tino ligado** (Tino on) switch.</Step>
+</Steps>
+
+{/* CAPTURA: images/tino/ia-por-canal-lista.png | alt: tela IA por canal com a lista de canais e o detalhe do canal selecionado | olhar: o selo Tino nos canais já ligados */}
+
+<Note>
+  A channel turned on for the first time starts with the **Sempre ativo** (Always active) schedule. Adjust the schedule before or after turning it on, whichever you prefer.
+</Note>
+
+---
+
+## Set when Tino serves
+
+Choose one of three options:
+
+- **Sempre ativo** (Always active): Tino replies at any time.
+- **Horário do expediente** (Business hours): copies the business hours already registered for your company.
+- **Personalizado** (Custom): days and periods just for this channel.
+
+<Steps>
+  <Step title="Open the channel's schedule">In the channel's detail view, go to **Quando Tino atende** (When Tino serves).</Step>
+  <Step title="Choose the schedule type">Select **Sempre ativo** (Always active), **Horário do expediente** (Business hours), or **Personalizado** (Custom).</Step>
+  <Step title="Build the periods, if Custom">Check the days of the week and set the start and end time for each period. Click **+ Adicionar período** (+ Add period) to include more than one.</Step>
+  <Step title="Save">Click **Salvar** (Save).</Step>
+</Steps>
+
+<Note>
+  The schedule copied from **Horário do expediente** (Business hours) doesn't follow future changes. If you change the company's business hours later, come back here and choose it again.
+</Note>
+
+---
+
+## Set what Tino does outside business hours and on follow-up
+
+Three situations, each with its own message:
+
+- **Alguém chama fora do horário** (Someone reaches out outside business hours): Tino lets them know the team will reply later. Only appears when the channel isn't set to **Sempre ativo** (Always active).
+- **O cliente para de responder** (The customer stops responding): Tino tries to pick the conversation back up. Set how long to wait (1 to 60 minutes) and how many attempts to make (1 to 5).
+- **A conversa fica parada** (The conversation goes idle): Tino says goodbye and closes it after a period of inactivity (5 to 120 minutes). This rule applies only to conversations Tino is leading; conversations with the team follow Automatic Closing, in [Conversation Rules](/en/atendimento/regras-de-conversa).
+
+<Steps>
+  <Step title="Turn on follow-up">In the **O que ele faz** (What it does) section, turn on **O cliente para de responder** (The customer stops responding) and set the wait time and number of attempts.</Step>
+  <Step title="Turn on closing">Turn on **A conversa fica parada** (The conversation goes idle) and set the inactivity time.</Step>
+  <Step title="Write the messages, if you want to customize them">Fill in the message field on each card, or leave it blank to use the default text.</Step>
+  <Step title="Save">Click **Salvar** (Save).</Step>
+</Steps>
+
+{/* CAPTURA: images/tino/ia-por-canal-follow-up.png | alt: cards de follow-up e encerramento com os campos de tempo e mensagem | olhar: os limites de minutos e tentativas em cada card */}
+
+---
+
+## What changes when Tino is turned on
+
+With Tino turned on and within business hours, it serves the conversation as soon as it arrives, without waiting for an agent. Outside business hours, or when the customer needs a person, the conversation goes to the team.
+
+{/* CONFIRMAR: como a transferência aparece exatamente no Inbox para o atendente que recebe a conversa */}
+
+---
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Can I turn Tino off during just some hours?">
+  Yes. Choose **Personalizado** (Custom) and build the days and periods it should serve. Outside those periods, the conversation goes straight to the team.
+  </Accordion>
+  <Accordion title="Does follow-up run at any time?">
+  No. It only runs within the hours Tino is serving the channel.
+  </Accordion>
+  <Accordion title="Does each channel have its own settings?">
+  Yes. Schedule, follow-up, and closing are set channel by channel.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Channels explained" href="/en/canais/canais-explicados">The channels available in Tartini.</Card>
+  <Card title="Set your conversation rules" href="/en/atendimento/regras-de-conversa">Automatic closing of conversations with the team.</Card>
+</CardGroup>

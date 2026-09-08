@@ -1,0 +1,107 @@
+---
+title: "Consulta la suscripción y el plan"
+sidebarTitle: "Suscripción"
+description: "Consulta tu plan, la franquicia contratada y los datos registrados de tu cuenta en un solo lugar."
+---
+
+Con esta pantalla, confirmas de un vistazo qué plan está activo, cuánto te queda de franquicia y si los datos de tu cuenta están correctos.
+
+<Note>
+  Quién lo ve: solo Administrador. {/* CONFIRMAR: divergência entre a documentação interna, que reserva esta tela ao dono da conta, e o comportamento atual da interface, que libera para o Administrador */}
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Consulta tu plan y tu franquicia
+
+Dónde está: **Configurações > Cobrança > Assinatura** (Configuración > Facturación > Suscripción).
+
+<Steps>
+  <Step title="Abre la pantalla">Ve a **Configurações > Cobrança > Assinatura**.</Step>
+  <Step title="Consulta el resumen">Revisa el nombre del plan, el precio mensual y la barra de consumo de la franquicia.</Step>
+</Steps>
+
+{/* CAPTURA: images/creditos/assinatura-plano.png | alt: Bloco Plano na tela Assinatura com nome, preço e barra de franquia | olhar: o nome do plano e a barra de consumo */}
+
+<Note>
+  Una cuenta gratuita no tiene franquicia ni facturación. En ese caso, la pantalla muestra solo el aviso de cuenta gratuita.
+</Note>
+
+---
+
+## Consulta los datos registrados de la cuenta
+
+Dónde está: **Configurações > Cobrança > Assinatura**, sección **Dados da conta** (Datos de la cuenta).
+
+La pantalla muestra Responsable, Correo electrónico, Contacto, CNPJ o CPF, Razón social, Empresa, Estado de la cuenta y la fecha de cliente desde.
+
+<Note>
+  Los datos registrados no se editan en esta pantalla. {/* CONFIRMAR: onde e como o Administrador solicita a alteração dos dados cadastrais */}
+</Note>
+
+---
+
+## Entiende los estados de la suscripción
+
+| Status | Qué significa |
+|---|---|
+| Ativa (Activa) | Suscripción al día. Acceso completo. |
+| Completa | Suscripción al día. Acceso completo. |
+| Pendente (Pendiente) | Esperando confirmación. Acceso en modo de solo lectura. |
+| Suspensa (Suspendida) | Suscripción suspendida. Acceso en modo de solo lectura. |
+| Encerrada (Finalizada) | Suscripción finalizada. Acceso en modo de solo lectura. |
+| Cancelada | Suscripción cancelada. Acceso en modo de solo lectura. |
+| Fraude | Suscripción bloqueada. Acceso en modo de solo lectura. |
+
+---
+
+## Qué cambia en el modo de solo lectura
+
+Fuera de Ativa y Completa, toda la plataforma entra en modo de solo lectura.
+
+<Warning>
+  Con la suscripción fuera de Ativa o Completa, una franja avisa que la suscripción no está activa y que el acceso está en modo de solo lectura. Los botones, campos y selecciones quedan deshabilitados. La navegación sigue funcionando con normalidad.
+</Warning>
+
+---
+
+## Cambia tu plan o tu franquicia
+
+Dónde está: **Configurações > Cobrança > Assinatura**, botón **Gerenciar plano e franquia** (Gestionar plan y franquicia).
+
+<Steps>
+  <Step title="Abre las opciones">Haz clic en **Gerenciar plano e franquia**.</Step>
+  <Step title="Elige qué cambiar">Consulta los planes disponibles, o ajusta la franquicia mensual contratada.</Step>
+  <Step title="Confirma fuera de Tartini">El cambio de plan o de franquicia se completa en un portal externo, fuera de Tartini.</Step>
+</Steps>
+
+<Note>
+  El botón solo aparece en cuentas de pago. El cambio de plan o de franquicia entra en vigor a partir de la próxima renovación, nunca de inmediato.
+</Note>
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Puedo editar mis datos registrados en esta pantalla?">
+  No. {/* CONFIRMAR: canal correto para solicitar alteração de dados cadastrais */}
+  </Accordion>
+  <Accordion title="¿Por qué no veo esta pantalla?">
+  Solo el Administrador de la empresa accede a Assinatura. Otros roles son redirigidos al inicio de Configurações.
+  </Accordion>
+  <Accordion title="¿Cambiar de plan cobra algo de inmediato?">
+  No. El cambio solo entra en vigor a partir del próximo ciclo de renovación.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Consulta el saldo y el extracto de créditos" href="/es/creditos/creditos-e-extrato">Consulta el consumo diario de créditos.</Card>
+  <Card title="Planes y qué habilita cada uno" href="/es/visao-geral/planos-e-recursos">Compara los recursos de cada plan.</Card>
+</CardGroup>

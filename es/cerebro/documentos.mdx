@@ -1,0 +1,84 @@
+---
+title: "Enseña a la IA con documentos"
+sidebarTitle: "Documentos"
+description: "Sube manuales, catálogos y políticas para que Tino aprenda el contenido automáticamente."
+---
+
+Subir un documento es la forma más rápida de incorporar contenido ya existente a la base de conocimiento: Tino lee el archivo y aprende solo, sin que tengas que reescribir nada.
+
+<Note>
+  Quién lo ve: Administrador y Gestor de la Empresa. Disponible en todos los planes. La audiencia pública requiere el plan Scale.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Sube uno o más documentos
+
+Por defecto, un documento nuevo espera la elección de audiencia antes del envío.
+
+Dónde está: **Cérebro > Propriedades** (Cérebro > Propiedades), botón **Arquivo** (Archivo).
+
+<Steps>
+  <Step title="Abre el envío">Haz clic en **Arquivo** (Archivo), en el grupo Agregar (o, con la lista vacía, en la tarjeta **Enviar documento**).</Step>
+  <Step title="Elige la audiencia">Marca **Conhecimento Público** (Conocimiento Público, que usa Tino) o **Conhecimento Privado** (Conocimiento Privado, que usa solo Copilot).</Step>
+  <Step title="Selecciona los archivos">Haz clic en **Selecionar arquivos** (Seleccionar archivos) o arrastra los archivos hasta el área indicada.</Step>
+  <Step title="Envía">Haz clic en **Enviar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/documentos-upload.png | alt: Modal Enviar documento com arquivos selecionados e a barra de progresso | olhar: o contador de arquivos e o botão Enviar */}
+
+<Note>
+  Formatos aceptados: PDF, DOCX, XLSX, CSV, TXT o MD. El límite es de 30 MB por archivo y hasta 10 archivos por envío. Por encima de eso, quita algún archivo o envíalo en otro lote.
+</Note>
+
+---
+
+## Sigue el procesamiento
+
+Después del envío, cada documento aparece en la lista de Propiedades con el estado Processando (Procesando) o Indexando, actualizado en tiempo real. Cuando termina, el estado cambia a Indexado.
+
+Si un archivo supera el límite de tamaño o no tiene un formato aceptado, se rechaza antes del envío, y los demás archivos del lote continúan normalmente.
+
+<Note>
+  Subir e indexar documentos consume créditos. Sigue el consumo en Configurações > Faturamento > Consumo (Configuración > Facturación > Consumo).
+</Note>
+
+---
+
+## Qué pasa después del envío
+
+Cuando la indexación termina, el contenido ya puede ser usado por Tino (si es público) o por Copilot (si es privado o público). Puede aparecer una tarjeta **Tino aprendeu** (Tino aprendió) con un resumen de lo que se extrajo, y un botón para probar el conocimiento en el chat lateral del Cérebro.
+
+Si el documento genera sugerencias automáticas de personalidad o candidatos a proceso, la lista muestra un ícono en la columna Descobertas (Descubrimientos), y llega un aviso en tiempo real. Consulta cómo revisar esas sugerencias en [Usa la inteligencia de la base de conocimiento](/es/cerebro/inteligencia-da-base).
+
+Para revisar o corregir el texto extraído, editar la audiencia o eliminar el documento, usa el panel de detalles descrito en [Registra las propiedades de la empresa](/es/cerebro/propriedades-da-empresa).
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Qué tipos de archivo puedo enviar?">
+  PDF, DOCX, XLSX, CSV, TXT o MD.
+  </Accordion>
+  <Accordion title="¿Cuál es el tamaño máximo por archivo?">
+  30 MB. Los archivos más grandes se rechazan antes del envío, con un aviso del nombre del archivo.
+  </Accordion>
+  <Accordion title="¿Puedo enviar varios documentos a la vez?">
+  Sí, hasta 10 archivos en el mismo envío.
+  </Accordion>
+  <Accordion title="¿El documento queda visible para el cliente final?">
+  Solo si la audiencia elegida incluye Conhecimento Público (Conocimiento Público). Con Conhecimento Privado (Conocimiento Privado), el contenido queda restringido a Copilot y al equipo interno.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Registra las propiedades de la empresa" href="/es/cerebro/propriedades-da-empresa">Consulta, edita y gestiona lo que ya se registró.</Card>
+  <Card title="Usa la inteligencia de la base de conocimiento" href="/es/cerebro/inteligencia-da-base">Revisa lo que Tino descubrió a partir de tus documentos.</Card>
+</CardGroup>

@@ -1,0 +1,92 @@
+---
+title: "Cuándo Tino pasa la conversación a una persona"
+sidebarTitle: "Tino pasa la conversación"
+description: "Cómo una conversación sale de Tino y llega al equipo, qué ve la persona al recibirla y cómo tomar el control en cualquier momento."
+---
+
+Una conversación empieza con Tino y termina con una persona cuando tú lo decides, cuando él no puede continuar o cuando alguien del equipo decide tomar el control. En todos los casos la persona recibe la conversación con el historial y un resumen de lo que Tino ya hizo.
+
+<Note>
+  Vale para los planes Scale y Enterprise, con Tino activado en al menos un canal. Cualquier persona con acceso a la conversación puede tomar el control.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Los tres caminos
+
+| Camino | Qué sucede |
+|---|---|
+| **Tino pasa la conversación** | Un criterio de enrutamiento del Cérebro o una etapa de proceso envía la conversación al equipo. La conversación aparece en la fila como pendiente. |
+| **Fuera de horario** | El cliente escribe fuera del horario definido en **Quando Tino atende** (Cuándo atiende Tino). Tino envía el aviso configurado, si existe, y la conversación queda con el equipo. |
+| **Alguien interrumpe** | Una persona abre la conversación y hace clic en **Interromper** (Interrumpir). La conversación pasa a ella en el momento. |
+
+---
+
+## Qué ve la persona
+
+En la conversación, el momento del traspaso aparece como un evento en medio de los mensajes, seguido de la tarjeta **Tino · resumo do atendimento** (Tino · resumen de la atención), con el cliente y el resumen. El enlace **ver atendimento completo →** (ver atención completa →) abre la pestaña Copilot con el detalle.
+
+En el panel de detalles, la sección **Conversa** (Conversación) muestra **Transferido pelo Tino: Sim** (Transferido por Tino: Sí) o **Interrompido por** (Interrumpido por) y el nombre de quien tomó el control. Cuando la conversación pasó por un proceso, la sección **Processo** (Proceso) muestra el aviso **Chegou até você pelo Tino** (Llegó a ti a través de Tino) con el motivo, la etapa en que se detuvo y el enlace al diagnóstico del proceso en Scout.
+
+En el celular, la conversación lleva la etiqueta **Transferida pelo Tino** (Transferida por Tino) o **Interrompida** (Interrumpida).
+
+{/* CAPTURA: images/tino/handoff-resumo.png | alt: conversa no Inbox com o evento de transferência e o cartão Tino resumo do atendimento | olhar: a pílula de transferência e o cartão com o resumo logo abaixo */}
+
+<Tip>
+  Lee el resumen antes de responder. Dice qué pidió el cliente y qué hizo Tino, para que no preguntes de nuevo.
+</Tip>
+
+---
+
+## Toma el control de una conversación de Tino
+
+Por defecto, mientras Tino conduce, el campo de respuesta queda bloqueado.
+
+<Steps>
+  <Step title="Abre la conversación">En el Inbox, abre la conversación con el sello **Tino conversando**.</Step>
+  <Step title="Interrumpe">En la línea encima del campo de mensaje, haz clic en **Interromper** (Interrumpir). La pantalla confirma con "Conversa interrompida e transferida ao atendente."</Step>
+  <Step title="Responde">El campo se libera y la conversación pasa a ser tuya. Tino no vuelve a responder en ella.</Step>
+</Steps>
+
+<Note>
+  No hay manera de devolverle la conversación a Tino después de interrumpir. Si la idea era solo leer, usa el panel de detalles y el resumen, sin interrumpir.
+</Note>
+
+---
+
+## Quién recibe la conversación
+
+La conversación que Tino pasa aparece en el Inbox con el chip **Pendente** (Pendiente) hasta que alguien la toma; con un sector o un agente definidos, entra en la fila del sector o en **Sua caixa** (Tu bandeja) de la persona, que recibe el aviso "Nova conversa atribuída a você". {/* CONFIRMAR: se o roteamento do Cérebro escolhe setor ou atendente, ou só devolve à fila da Unidade */} Los criterios están en **Cérebro > Operações > Roteamento** (Cérebro > Operaciones > Enrutamiento). Consulta [Configura el enrutamiento](/es/cerebro/roteamento).
+
+---
+
+## Después del traspaso
+
+La conversación sigue las reglas del equipo: el cierre automático de las Reglas de Conversación, el SLA del canal y la encuesta de satisfacción. En Scout, cuenta como **handoff**: la IA empezó y el equipo tomó el control. La nota de esas conversaciones aparece separada en **Scout > Satisfação** (Scout > Satisfacción).
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="No puedo escribir en la conversación.">
+  Tino está conduciendo. Haz clic en **Interromper** (Interrumpir) para tomar el control. La pantalla muestra el aviso "Para enviar mensagens, primeiro interrompa a conversa do Tino utilizando o botão abaixo."
+  </Accordion>
+  <Accordion title="Tino pasó la conversación al sector equivocado.">
+  Ajusta los criterios en **Cérebro > Operações > Roteamento** (Cérebro > Operaciones > Enrutamiento). Para entender qué llevó a la decisión, abre **Por que ela disse isso** (Por qué dijo eso) en el último mensaje de Tino.
+  </Accordion>
+  <Accordion title="Tino pasó la conversación sin motivo aparente.">
+  Abre el panel de detalles: la sección **Processo** (Proceso) muestra el motivo y la etapa. Si no hay proceso, el motivo está en las instrucciones listadas en **Por que ela disse isso** (Por qué dijo eso).
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Atiende una conversación" href="/es/inbox/atenda-uma-conversa">El campo de mensaje, la firma y los adjuntos.</Card>
+  <Card title="Configura el enrutamiento" href="/es/cerebro/roteamento">Cuándo transfiere la IA y a quién.</Card>
+</CardGroup>

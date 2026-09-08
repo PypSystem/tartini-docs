@@ -1,0 +1,135 @@
+---
+title: "Campaigns explained"
+sidebarTitle: "Campaigns explained"
+description: "Understand how Tino reaches out to contacts on its own, the campaign types, statuses, and what to prepare before creating one."
+---
+
+A campaign has Tino reach out to contacts first and carry the whole conversation, from start to finish. You decide who's included, what it follows, and which channel the message goes out on.
+
+<Note>
+  Campaigns is a feature of the Scale and Enterprise plans. Who sees the menu: Account owner, Administrator (Company), Company Manager, Area Manager, and Unit Manager, each within their own scope. Agent doesn't see the **Campanhas** (Campaigns) menu.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## What a campaign does
+
+When you create a campaign, you choose whether Tino follows a process mapped out in Cérebro, step by step, or works with an open-ended mission, guided only by a written goal. After that, it carries the conversation on its own: reaches out to the contact, replies, follows up when no one answers, and hands the conversation to the team when the process calls for it.
+
+Every contact that enters a campaign generates an execution. That's what you use to track what happened with that specific contact.
+
+---
+
+## The campaign types
+
+What changes between the three types is where the contacts come from, in other words, what makes Tino start talking to someone.
+
+| Type | The wizard calls it | What triggers it |
+|---|---|---|
+| List | **Tenho uma lista** (I have a list) | You upload a CSV file with the contacts |
+| Webhook | **Meu sistema envia** (My system sends) | Your system (CRM, e-commerce, billing) sends each contact through a URL |
+| Keyword | **O cliente chega até mim** (The customer comes to me) | Someone writes a configured keyword |
+
+List campaigns with an end date show up in the list as **Projetos** (Projects). The others, with no end date, along with webhook and keyword campaigns, show up as **Contínuas** (Ongoing): they stay ready to receive new contacts at all times.
+
+See how to build each one in [Create a campaign](/en/campanhas/crie-uma-campanha), [Import campaign contacts](/en/campanhas/contatos-e-csv), and [Trigger campaigns by webhook or by incoming message](/en/campanhas/webhook-e-inbound).
+
+---
+
+## The categories
+
+Campaigns are organized into categories: Vendas (Sales), Cobrança (Collections), Qualificação de Leads (Lead Qualification), Reativação (Reactivation), Nutrição (Nurturing), and Pós-venda (After-sales). Each campaign's category shows up on the **Detalhes** (Details) tab of the campaign dashboard.
+
+---
+
+## The statuses
+
+The campaign list and the campaign dashboard use different names for the same status.
+
+| In the campaign list | In the campaign dashboard | What it means |
+|---|---|---|
+| **Rascunho** (Draft) | **Não Iniciada** (Not Started) | Created, hasn't started reaching out to anyone yet |
+| **Ativa** (Active) | **Ativa** (Active) | In progress |
+| **Pausada** (Paused) | **Pausada** (Paused) | Paused, not reaching out to new contacts |
+| **Concluída** (Completed) | **Finalizada** (Finished) | Ended |
+| **Arquivada** (Archived) | **Arquivada** (Archived) | Closed, no action available on screen |
+
+Webhook and keyword campaigns are already active the moment they're created: as soon as you create one, Tino is already listening. List campaigns start as a draft; you start the send whenever you want, from the list or the campaign dashboard.
+
+---
+
+## What needs to be ready before you create one
+
+- A WhatsApp channel connected on the Unit (WhatsApp Business or WABA).
+- On an official channel (WABA), an opening template approved by Meta.
+- Credits available in the month's allowance, because every campaign message consumes credits.
+
+See how to get this ready in [Prepare the Unit for campaigns](/en/campanhas/setup).
+
+---
+
+## The Campaigns submenu
+
+When you open **Campanhas** (Campaigns) in the main menu, you land in an area with two screens:
+
+- **Panorama** (Overview): a snapshot of the period (7 or 30 days) with a one-sentence verdict, the main signals, and a queue of what needs your attention, with a suggested action for each item.
+- **Campanhas** (Campaigns): the list of every campaign you have access to, with filters by unit, status, and source.
+
+---
+
+## Who sees what
+
+| Role | Access |
+|---|---|
+| Account owner | All campaigns |
+| Administrator (Company) | All campaigns |
+| Company Manager | All campaigns |
+| Area Manager | Campaigns for the units in their area |
+| Unit Manager | Campaigns for their unit |
+| Agent | Doesn't see the Campaigns menu; in the Inbox, sees the campaign name on the contact's card, with no link to open it |
+
+The **Configurações > Integrações > Contatos de Campanha** (Settings > Integrations > Campaign Contacts) screen is more restricted: only the Administrator (Company) sees it.
+
+---
+
+## Where each task points to
+
+- Prepare channel, template, and credits: [Prepare the Unit for campaigns](/en/campanhas/setup)
+- Build a campaign from scratch: [Create a campaign](/en/campanhas/crie-uma-campanha)
+- Format and upload the contact list: [Import campaign contacts](/en/campanhas/contatos-e-csv)
+- Set hours, follow-ups, pause and resume: [Schedule the send and follow-ups](/en/campanhas/agendamento-e-follow-ups)
+- Connect your system by webhook or react to a keyword: [Trigger campaigns by webhook or by incoming message](/en/campanhas/webhook-e-inbound)
+- Read conversations, conversions, and drop-offs: [Track the results](/en/campanhas/resultados)
+- Connect Varejo Online and SAN: [Pull contacts from external systems](/en/campanhas/contatos-de-campanha)
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Why don't I see the Campaigns menu?">
+  Either your plan doesn't include the feature (it's part of the Scale and Enterprise plans), or your role is Agent, which doesn't have access to this area.
+  </Accordion>
+  <Accordion title="I don't see another unit's campaign, is that normal?">
+  Yes. You only see campaigns within your scope: a Unit Manager sees their own unit, an Area Manager sees the units in their area. Use the unit filter in the list to check what's accessible to you.
+  </Accordion>
+  <Accordion title="Can I delete a campaign?">
+  Not through the interface today. A paused or archived campaign stays on record, with no delete action available.
+  </Accordion>
+  <Accordion title="Does a paused campaign keep counting follow-ups?">
+  No. While paused, Tino doesn't reach out to new contacts or send pending follow-ups. Resume the campaign for it to start acting again.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Prepare the Unit for campaigns" href="/en/campanhas/setup">Channel, template, and credits before you create one.</Card>
+  <Card title="Create a campaign" href="/en/campanhas/crie-uma-campanha">The wizard in three steps.</Card>
+  <Card title="Schedule the send and follow-ups" href="/en/campanhas/agendamento-e-follow-ups">Hours, attempts, pause and resume.</Card>
+  <Card title="Track the results" href="/en/campanhas/resultados">Conversations, conversions, and drop-offs.</Card>
+</CardGroup>

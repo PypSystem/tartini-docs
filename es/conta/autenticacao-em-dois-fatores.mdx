@@ -1,0 +1,91 @@
+---
+title: "Activa la autenticación en dos factores"
+sidebarTitle: "Doble factor"
+description: "Un código del celular en cada entrada. Aunque alguien descubra tu contraseña, no entra sin él."
+---
+
+Con la autenticación en dos factores, la pantalla de acceso pide la contraseña y, después, un código de seis dígitos generado por una app autenticadora en tu celular. Todo está en **Configurações > Pessoal > Segurança** (Configuración > Personal > Seguridad), en la tarjeta **Autenticação em dois fatores** (Autenticación en dos factores).
+
+<Note>
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+<Note>
+  Cuando la empresa exige la función, Tartini pide la configuración justo al entrar, en la pantalla **Proteja sua conta** (Protege tu cuenta), y el botón **Desativar** (Desactivar) no aparece.
+</Note>
+
+---
+
+## Actívala
+
+Por defecto la función viene inactiva. Necesitas una app autenticadora instalada en el celular, como Google Authenticator, Authy o 1Password.
+
+<Steps>
+  <Step title="Confirma la contraseña">
+    En la tarjeta, haz clic en **Ativar** (Activar). Escribe la **Senha atual** (Contraseña actual) y haz clic en **Continuar**.
+  </Step>
+  <Step title="Escanea el código">
+    Abre la app autenticadora y escanea el código de la pantalla. Si no logras escanearlo, haz clic en copiar al lado de la clave en **Digite esta chave manualmente no app** (Escribe esta clave manualmente en la app) y pégala en la app.
+  </Step>
+  <Step title="Confirma con el primer código">
+    Escribe en **Código de 6 dígitos do app** (Código de 6 dígitos de la app) el número que muestra la app y haz clic en **Ativar** (Activar).
+  </Step>
+  <Step title="Guarda los códigos de recuperación">
+    La pantalla muestra los códigos una única vez. Usa **Copiar** o **Baixar .txt** (Descargar .txt), guárdalos en un lugar seguro, marca **Guardei meus códigos de recuperação em um lugar seguro.** (Guardé mis códigos de recuperación en un lugar seguro.) y haz clic en **Concluir** (Finalizar).
+  </Step>
+</Steps>
+
+{/* CAPTURA: images/conta/dois-fatores-qr.png | Passo App do assistente com o QR code e a chave manual | O QR code e o campo Código de 6 dígitos do app */}
+
+Listo: la tarjeta muestra **Ativa** (Activa) y la fecha. En el próximo acceso, después de la contraseña, la pantalla pide el código.
+
+<Warning>
+  Cada código de recuperación entra en lugar del código de la app una única vez. Sin el celular y sin los códigos, no entras a la cuenta.
+</Warning>
+
+---
+
+## Cambia de app o de celular
+
+Haz clic en **Trocar app** (Cambiar app). El asistente pide la contraseña y un código de la app actual (o uno de recuperación), muestra un código nuevo para escanear en la app nueva y genera códigos de recuperación nuevos. Los antiguos dejan de valer. La app antigua sigue funcionando hasta que haces clic en **Confirmar troca** (Confirmar cambio).
+
+---
+
+## Genera nuevos códigos de recuperación
+
+Haz clic en **Novos códigos** (Nuevos códigos), confirma la contraseña y un código de la app, y haz clic en **Gerar** (Generar). Los códigos anteriores dejan de valer. La tarjeta muestra cuántos códigos quedan.
+
+---
+
+## Desactívala
+
+Haz clic en **Desativar** (Desactivar), confirma con la **Senha atual** (Contraseña actual) y un **Código** de la app (o de recuperación) y haz clic en **Desativar** (Desactivar). La cuenta vuelve a estar protegida solo por la contraseña.
+
+<Note>
+  El botón **Desativar** (Desactivar) no aparece cuando la empresa exige la función. En ese caso la tarjeta muestra "Sua empresa exige autenticação em dois fatores."
+</Note>
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="Perdí el celular.">
+  En el acceso, haz clic en **Usar um código de recuperação** (Usar un código de recuperación) y escribe uno de los códigos guardados. Después, en Seguridad, usa **Trocar app** (Cambiar app) para registrar el celular nuevo.
+  </Accordion>
+  <Accordion title="Cerré la pantalla sin guardar los códigos.">
+  No se muestran de nuevo. Genera otros en **Novos códigos** (Nuevos códigos).
+  </Accordion>
+  <Accordion title="El código de la app es rechazado.">
+  Revisa la hora del celular: la app genera el código a partir del reloj. Un reloj atrasado invalida los códigos.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Cierra sesiones en otros dispositivos" href="/es/conta/sessoes-e-dispositivos">Consulta dónde está abierta tu cuenta.</Card>
+  <Card title="Entra a Tartini y recupera tu contraseña" href="/es/conta/entrar-e-recuperar-senha">La pantalla de acceso con el código.</Card>
+</CardGroup>

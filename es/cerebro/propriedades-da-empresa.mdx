@@ -1,0 +1,133 @@
+---
+title: "Registra las propiedades de la empresa"
+sidebarTitle: "Propiedades"
+description: "Consulta, filtra y gestiona en un solo lugar todo lo que ya se le enseñó a Tino y a Copilot."
+---
+
+Propriedades e Fontes (Propiedades y Fuentes) es la lista central de todo lo que compone el conocimiento de tu empresa: documentos, preguntas y respuestas y páginas de sitio. Es donde consultas qué está indexado, editas el contenido y decides quién usa cada elemento.
+
+<Note>
+  Quién lo ve: Administrador y Gestor de la Empresa. Disponible en todos los planes. La opción de audiencia pública requiere el plan Scale.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Consulta la lista de contenido
+
+Por defecto, la lista muestra todos los elementos registrados, los más recientes primero.
+
+Dónde está: **Cérebro > Propriedades** (Cérebro > Propiedades).
+
+Cada fila muestra el título del elemento, el ícono del tipo de fuente, el estado de indexación, quién lo creó y la audiencia. Un clic en la fila abre el panel de detalles.
+
+{/* CAPTURA: images/cerebro/propriedades-lista.png | alt: Tela Propriedades e Fontes com a lista de conteúdo e as colunas de status, criado por e audiência | olhar: os status coloridos por linha */}
+
+<Note>
+  Un sitio sincronizado con varias páginas aparece como un único elemento en la lista, con un distintivo que indica cuántas subpáginas reúne.
+</Note>
+
+---
+
+## Filtra por audiencia y busca un elemento
+
+Por defecto, la lista muestra contenido público y privado juntos.
+
+Dónde está: **Cérebro > Propriedades**, filtros en la parte superior de la lista.
+
+<Steps>
+  <Step title="Elige el tipo de conocimiento">Marca **Conhecimento Público** (Conocimiento Público) para ver lo que Tino usa en la atención, o **Conhecimento Privado** (Conocimiento Privado) para lo que solo usa Copilot. Sin ninguna marca, la lista muestra todo.</Step>
+  <Step title="Busca por título">Escribe en el campo **Pesquisar...** (Buscar...) para filtrar por el nombre del elemento.</Step>
+</Steps>
+
+<Note>
+  Sin el plan Scale, la opción **Conhecimento Público** no aparece en el filtro, y un aviso fijo explica que el contenido público no lo usa Tino en tu plan.
+</Note>
+
+---
+
+## Sigue el estado de indexación
+
+Cada elemento muestra uno de los siguientes estados, actualizado en tiempo real: Extraindo conteúdo (Extrayendo contenido), Indexando, Processando (Procesando), Sincronizando páginas, Falhou (Falló), Completo o Indexado. Sin ningún estado activo, el elemento muestra **Indexado**.
+
+Un elemento atascado en procesamiento durante 5 minutos o más se considera bloqueado. En ese caso, pasa a poder eliminarse aunque no haya terminado de procesarse.
+
+---
+
+## Elimina un elemento
+
+Dónde está: **Cérebro > Propriedades**, menú de tres puntos en la fila del elemento.
+
+<Steps>
+  <Step title="Abre el menú">Haz clic en el ícono de tres puntos en la fila del elemento.</Step>
+  <Step title="Elige eliminar">Haz clic en **Excluir** (Eliminar).</Step>
+  <Step title="Confirma">Confirma la eliminación en la ventana que se abre.</Step>
+</Steps>
+
+<Note>
+  Si el elemento todavía está procesándose, la confirmación avisa que la eliminación es forzada y permanente, aunque la indexación no haya terminado.
+</Note>
+
+Para eliminar varios elementos a la vez, haz clic en **Selecionar** (Seleccionar), marca las filas deseadas y haz clic en **Excluir (N)** (Eliminar (N)).
+
+---
+
+## Consulta los detalles y edita el contenido
+
+Dónde está: **Cérebro > Propriedades**, haz clic en cualquier fila de la lista (o en **Ver detalhes** (Ver detalles) en el menú de tres puntos).
+
+<Steps>
+  <Step title="Abre el panel">Haz clic en la fila del elemento que quieras revisar.</Step>
+  <Step title="Haz clic en editar">Haz clic en el ícono de lápiz, en la parte superior del panel.</Step>
+  <Step title="Modifica el contenido">Edita el texto, la audiencia o, en el caso de preguntas y respuestas, los campos de pregunta y respuesta.</Step>
+  <Step title="Guarda">Haz clic en **Salvar** (Guardar).</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/propriedades-detalhe-edicao.png | alt: Painel de detalhes de um documento em modo de edição, com o editor de conteúdo aberto | olhar: os botões Cancelar e Salvar no rodapé do painel */}
+
+<Note>
+  Guardar una edición de contenido reprocesa y reindexa el elemento, que vuelve al estado Processando (Procesando) por unos instantes. Los sitios registrados como raíz de un dominio solo permiten editar la audiencia, no el contenido. El límite de texto editable es de 500.000 caracteres.
+</Note>
+
+---
+
+## Entiende la tarjeta "Tino aprendeu" (Tino aprendió)
+
+Después de que un elemento termina de indexarse, puede aparecer una tarjeta con un resumen de lo que Tino aprendió de ese contenido, escrito en primera persona.
+
+Dónde está: justo debajo del elemento recién indexado, en la lista, y también dentro del panel de detalles.
+
+<Steps>
+  <Step title="Lee el resumen">Revisa lo que Tino registró de ese contenido.</Step>
+  <Step title="Pruébalo, si quieres">Haz clic en **Testar conhecimentos adquiridos** (Probar conocimientos adquiridos) para abrir Copilot con una pregunta de ejemplo lista para enviar.</Step>
+</Steps>
+
+<Note>
+  La tarjeta se puede cerrar con la X y no vuelve a aparecer después de eso.
+</Note>
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Cuál es la diferencia entre público y privado?">
+  El contenido público lo usa Tino al atender a los clientes y requiere el plan Scale. El contenido privado lo usa solo Copilot, para apoyar al equipo internamente, y está disponible en cualquier plan.
+  </Accordion>
+  <Accordion title="¿Puedo eliminar un elemento que todavía está procesándose?">
+  Sí, con confirmación de eliminación forzada. También se habilita automáticamente para eliminarse después de 5 minutos bloqueado en procesamiento.
+  </Accordion>
+  <Accordion title="¿Registrar un documento consume créditos?">
+  Sí. El procesamiento y la indexación de cualquier contenido consumen créditos. Sigue el consumo en Configurações > Faturamento > Consumo (Configuración > Facturación > Consumo).
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Enseña a la IA con documentos" href="/es/cerebro/documentos">Sube archivos a la base de conocimiento.</Card>
+  <Card title="Enseña a la IA con tu sitio" href="/es/cerebro/sites">Sincroniza e indexa páginas de tu sitio.</Card>
+</CardGroup>

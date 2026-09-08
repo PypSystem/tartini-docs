@@ -1,0 +1,174 @@
+---
+title: "Handle a conversation"
+sidebarTitle: "Handle a conversation"
+description: "Reply with the right text, media, audio, or signature, and know when to take over from Tino."
+---
+
+Every conversation in the Inbox has everything you need to reply quickly: text, media, audio, and signature. When Tino is handling it, you can take control at any moment.
+
+<Note>
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Open and take over a conversation
+
+By default, a new conversation appears with no agent, under "Não atribuído".
+
+Where to find it: **Inbox**.
+
+<Steps>
+  <Step title="Open the conversation">Click the conversation in the list. It opens alongside, keeping the filters in the URL.</Step>
+  <Step title="See who is handling it">The avatar in the header shows the agent's initials or Tino's badge.</Step>
+  <Step title="Reply to take over">Write and send a message to become the conversation's agent. If Tino is still handling it, see "Stop Tino and take over" below.</Step>
+</Steps>
+
+{/* CAPTURA: images/inbox/inbox-conversa-aberta.png | alt: conversa aberta com o cabeçalho, mensagens e o compositor | olhar: o avatar do atendente, o protocolo e o campo de mensagem */}
+
+---
+
+## Reply to the customer
+
+By default the message field is empty, with the text "Digite sua mensagem...".
+
+Where to find it: footer of the open conversation.
+
+<Steps>
+  <Step title="Write the message">Type in the field. The limit is 4096 characters per message; the counter appears once you reach 80% of the limit.</Step>
+  <Step title="Send">Press Enter or click **Enviar** (Send). Shift+Enter breaks the line without sending.</Step>
+</Steps>
+
+<Note>
+  The bubble appears right away with a clock icon and turns into a check when the server confirms delivery. If it fails, the icon turns red: tap to resend.
+</Note>
+
+---
+
+## Sign the message
+
+By default the **Assinar como** (Sign as) toggle is off, unless your company requires a signature.
+
+Where to find it: footer of the conversation, next to the message field.
+
+<Steps>
+  <Step title="Turn on Assinar como">Turn on the toggle above the message field.</Step>
+  <Step title="Check the name">The default name is your support name. If the company allows it, edit it under **Nome na assinatura** (Name in signature).</Step>
+  <Step title="Send as usual">The message goes out with your name highlighted in the first line.</Step>
+</Steps>
+
+<Note>
+  If the company set the signature as mandatory, the toggle stays locked on and you can't turn it off.
+</Note>
+
+---
+
+## Attach media and documents
+
+By default the conversation has no pending attachment.
+
+Where to find it: paperclip icon in the footer of the conversation.
+
+<Steps>
+  <Step title="Open the attachment menu">Click the paperclip and choose **Arquivo Individual** (Single file) or **Múltiplos Arquivos** (Multiple files).</Step>
+  <Step title="Select the files">Accepts PDF, Word, image, audio, and video. You can also paste with Ctrl+V.</Step>
+  <Step title="Write a caption, if you want">The text in the message field becomes the caption for the first media file.</Step>
+  <Step title="Send">Click **Enviar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/inbox/inbox-anexar-arquivos.png | alt: modal Enviar Múltiplos Arquivos com miniaturas numeradas | olhar: o limite de arquivos e o tamanho de cada um */}
+
+<Note>
+  Limits via the paperclip or paste: up to 4 files per send, one video at a time, videos up to 15 MB. In the multiple files modal, up to 10 files of 10 MB each on computer, or 8 images of 8 MB on mobile.
+</Note>
+
+---
+
+## Record and send an audio message
+
+By default there is no recording in progress.
+
+Where to find it: microphone icon in the footer (doesn't appear in the Chat Widget).
+
+<Steps>
+  <Step title="Click the microphone">The first time, allow microphone access when the browser asks.</Step>
+  <Step title="Record">Speak. A timer shows the duration.</Step>
+  <Step title="Listen before sending">Tap play to check it. The trash icon discards the recording.</Step>
+  <Step title="Send">Click the send button.</Step>
+</Steps>
+
+<Note>
+  Whoever receives the audio can request the transcript by clicking **Transcrever** (Transcribe), in the message player.
+</Note>
+
+---
+
+## Understand the delivery icons
+
+| Icon | What it means |
+|---|---|
+| Clock | Sending. |
+| One check | Sent. |
+| Two gray checks | Delivered. |
+| Two blue checks | Seen by the customer. |
+| Red icon | Failed. Tap to resend. |
+
+<Note>
+  For a Chat Widget visitor who has left the site, the message stays with the clock icon until they open the page again. It's not a failure, it's a pending delivery.
+</Note>
+
+---
+
+## Stop Tino and take over
+
+While Tino is handling the conversation, the message field stays disabled, with the text "Tino está conversando...".
+
+Where to find it: in the bar right above the message field, in the footer of the conversation, the **Interromper** (Stop) button.
+
+<Steps>
+  <Step title="Click Interromper">The button appears next to "Tino ativo", above the message field.</Step>
+  <Step title="Check the confirmation">The screen shows "Conversa interrompida e transferida ao atendente." and the field is released.</Step>
+  <Step title="Reply as usual">From here on, you're handling the conversation.</Step>
+</Steps>
+
+<Note>
+  After stopping Tino, there's no button on this screen to hand the conversation back to him.
+</Note>
+
+---
+
+## The WhatsApp 24-hour window
+
+On the WhatsApp Business API (WABA), Meta requires an approved template for you to message someone who hasn't written recently. This control only appears when starting a new conversation, in the "Iniciar conversa" modal. Inside a conversation that's already open, the screen doesn't show a warning about this time limit.
+
+{/* CONFIRMAR: o que acontece ao enviar uma mensagem livre depois de 24 horas dentro de uma conversa já aberta no canal WABA */}
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Why can't I type in the conversation?">
+  Tino is handling it. Click **Interromper**, in the bar right above the message field, to take over.
+  </Accordion>
+  <Accordion title="Why did the microphone disappear from the footer?">
+  The Chat Widget doesn't send audio.
+  </Accordion>
+  <Accordion title="Why can't I edit or delete a message?">
+  The time limit has passed (10 minutes to edit, 2 hours and 12 minutes to delete) or the message isn't yours.
+  </Accordion>
+  <Accordion title="My message is stuck with the clock icon, is that an error?">
+  Not necessarily. It could be sending, or the channel could be reconnecting. If it turns red, tap to resend.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Get to know the Inbox" href="/en/inbox/conheca-o-inbox">The screen, the lists, and conversation statuses.</Card>
+  <Card title="Use Copilot" href="/en/inbox/copilot">Ask for reply suggestions while helping customers.</Card>
+  <Card title="Transfer, note, and tag conversations" href="/en/inbox/transfira-notas-e-tags">Pass the conversation along and record what matters.</Card>
+  <Card title="Close a conversation and send the survey" href="/en/inbox/encerre-uma-conversa">Close it out with the right reason.</Card>
+</CardGroup>

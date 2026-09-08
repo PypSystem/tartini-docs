@@ -1,0 +1,94 @@
+---
+title: "Set up contact statuses"
+sidebarTitle: "Contact Status"
+description: "Build the list of statuses the team uses on the contact record to say where each person stands in the relationship."
+---
+
+Contact statuses show, in a standardized way, where each person stands in the relationship, such as "Lead", "Cliente ativo", or "Inativo". The order set here is the same one that appears in the contact record's selector.
+
+<Note>
+  Who sees this: any role with access to the Cérebro (the company's brain) can view the list. Only Administrator and Company Manager can create, edit, reorder, or delete statuses. Requires the Scale plan.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Create a status
+
+By default, no statuses are set up beyond the ones that came with the account.
+
+Where to find it: **Cérebro > Operações > Status de Contato** (Brain > Operations > Contact Status).
+
+<Steps>
+  <Step title="Open the form">Click **Adicionar status** (Add status).</Step>
+  <Step title="Choose the color">Select a color to identify the status.</Step>
+  <Step title="Write the name">Fill in the name, for example "Cliente ativo", with up to 40 characters.</Step>
+  <Step title="Mark it as default, if applicable">Turn on **Atribuir por padrão a contatos sem status** (Assign by default to contacts with no status).</Step>
+  <Step title="Save">Click **Salvar** (Save).</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/status-contato-criar.png | alt: Formulário de novo status de contato com cor e nome preenchidos | olhar: o checkbox de status padrão e o nome do status padrão atual ao lado */}
+
+<Note>
+  Only one status can be the default at a time. Marking a new one as default automatically replaces the previous one.
+</Note>
+
+---
+
+## Reorder the statuses
+
+The order of the list is the order that appears in the contact record's selector.
+
+Where to find it: **Cérebro > Operações > Status de Contato**, arrows next to each status.
+
+<Steps>
+  <Step title="Choose the status">Find the status you want to move.</Step>
+  <Step title="Move it">Click the up or down arrow.</Step>
+</Steps>
+
+<Note>
+  The arrows are disabled at both ends of the list.
+</Note>
+
+---
+
+## Edit or delete a status
+
+Where to find it: **Cérebro > Operações > Status de Contato**, action buttons on each card.
+
+<Steps>
+  <Step title="Edit">Click **Editar** (Edit), adjust the color or the name, and confirm.</Step>
+  <Step title="Delete">Click **Excluir** (Delete) and confirm.</Step>
+</Steps>
+
+<Note>
+  If the status is already in use by contacts, the screen shows the count of affected contacts before you confirm. Deleting anyway doesn't erase or move the contacts: they simply end up with no status.
+</Note>
+
+{/* CAPTURA: images/cerebro/status-contato-exclusao-em-uso.png | alt: Card de status com o aviso de contatos afetados e os botões Excluir mesmo assim e Cancelar | olhar: a contagem de contatos exibida antes da confirmação */}
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Who can create or edit contact statuses?">
+  Only Administrator or Company Manager. Other roles that access the screen can only read the list.
+  </Accordion>
+  <Accordion title="If I delete a status that's in use, what happens to the contacts?">
+  They aren't erased or moved to another status. They simply end up with no status assigned.
+  </Accordion>
+  <Accordion title="Does the order of the statuses matter?">
+  Yes, it's the order shown in the contact record's selector.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Set up contact fields" href="/en/cerebro/qualificacao">Define the data Tino collects in the conversation.</Card>
+  <Card title="Set up clarifications" href="/en/cerebro/esclarecimentos">Define when Tino asks for more information.</Card>
+</CardGroup>

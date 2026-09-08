@@ -1,0 +1,109 @@
+---
+title: "Gestiona los contactos"
+sidebarTitle: "Contactos"
+description: "Busca, edita y une contactos duplicados en una sola lista, organizada por unidad."
+---
+
+La lista de Contactos reúne a todos los que ya hablaron con tu empresa. Busca, filtra y abre la ficha completa de cada uno.
+
+<Note>
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Busca un contacto
+
+De forma predeterminada, la lista aparece ordenada por el último mensaje.
+
+Dónde está: **Inbox > Contatos** (Inbox > Contactos).
+
+<Steps>
+  <Step title="Abre Contatos (Contactos)">En el menú del Inbox, haz clic en **Contatos**.</Step>
+  <Step title="Busca">Escribe nombre, teléfono o correo electrónico en el campo de búsqueda.</Step>
+  <Step title="Filtra si es necesario">Usa **Status** (Estado) o **Tag** (Etiqueta) para refinar la lista.</Step>
+</Steps>
+
+{/* CAPTURA: images/inbox/inbox-contatos-lista.png | alt: tela Contatos com a busca, os filtros Status e Tag e a lista de contatos | olhar: a pílula de status e as tags em cada linha */}
+
+<Note>
+  La búsqueda también encuentra por el ID externo del contacto y por los dígitos del teléfono.
+</Note>
+
+---
+
+## Sincroniza contactos de WhatsApp
+
+Dónde está: **Inbox > Contatos**, botón de sincronizar en el encabezado.
+
+<Steps>
+  <Step title="Haz clic en el botón de sincronizar">El tooltip muestra "Sincronizar contatos do WhatsApp" (Sincronizar contactos de WhatsApp).</Step>
+  <Step title="Espera">Tartini trae los contactos de la agenda conectada.</Step>
+</Steps>
+
+---
+
+## Abre y edita un contacto
+
+Dónde está: haz clic en el contacto en la lista.
+
+<Steps>
+  <Step title="Haz clic en el contacto">Abre la ficha del contacto.</Step>
+  <Step title="Edita el nombre">Haz clic en el lápiz junto al nombre, escribe el nombre nuevo y guarda.</Step>
+</Steps>
+
+---
+
+## Une contactos duplicados
+
+De forma predeterminada, los contactos con el mismo teléfono en canales diferentes no se unen solos.
+
+Dónde está: tarjeta del contacto, en el panel de detalles de la conversación o en la ficha, botón **Mesclar** (Fusionar).
+
+<Steps>
+  <Step title="Haz clic en Mesclar (Fusionar)">En la tarjeta del contacto.</Step>
+  <Step title="Elige el contacto principal">Es quien recibe el historial después de la fusión.</Step>
+  <Step title="Busca los duplicados">Escribe al menos dos letras. La pantalla sugiere candidatos con teléfono, IP o nombre iguales.</Step>
+  <Step title="Confirma">Haz clic en **Mesclar N contato(s)** (Fusionar N contacto(s)) y luego en **Confirmar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/inbox/inbox-mesclar-contatos.png | alt: modal Mesclar contatos com o contato principal e a lista de sugestões | olhar: os motivos da sugestão, como Mesmo telefone ou Mesmo IP */}
+
+<Warning>
+  Fusionar no se puede deshacer. Los mensajes de los contactos elegidos pasan al contacto principal y desaparecen de la lista separada.
+</Warning>
+
+---
+
+## Entiende la lista vacía
+
+Sin ningún contacto todavía, la pantalla muestra "Nenhum contato ainda" (Ningún contacto todavía). Con filtros que no encuentran nada, muestra "Nenhum contato para esta busca" (Ningún contacto para esta búsqueda) y el botón **Limpar filtros** (Limpiar filtros).
+
+La lista carga 30 contactos por página, con desplazamiento infinito. Si abres la ficha de un contacto y vuelves, la lista aparece tal como la dejaste, incluso en la misma posición de desplazamiento.
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Por qué un contacto no aparece en la lista?">
+  Los contactos de WhatsApp solo entran después de existir en Tartini. Sincroniza para traer los que están solo en la agenda.
+  </Accordion>
+  <Accordion title="¿Qué es un contacto duplicado de verdad?">
+  El mismo teléfono, en otro canal, en la misma unidad. La misma persona en otra unidad no es duplicado, es solo otra ficha.
+  </Accordion>
+  <Accordion title="¿Fusionar contactos se puede deshacer?">
+  No. Revisa el contacto principal antes de confirmar.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="La ficha del contacto" href="/es/inbox/ficha-do-contato">Datos, estado, campos, notas y conversaciones.</Card>
+  <Card title="Conoce el Inbox" href="/es/inbox/conheca-o-inbox">La pantalla, las listas y los estados de conversación.</Card>
+  <Card title="Sigue a los visitantes del sitio" href="/es/inbox/visitantes">Quién está navegando por el Chat Widget ahora.</Card>
+  <Card title="Transfiere, anota y etiqueta conversaciones" href="/es/inbox/transfira-notas-e-tags">Pasa la conversación y registra lo que importa.</Card>
+</CardGroup>

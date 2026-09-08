@@ -1,0 +1,110 @@
+---
+title: "Create and use quick messages"
+sidebarTitle: "Quick messages"
+description: "Set up text shortcuts to reply faster and keep a standard set for the whole team."
+---
+
+Quick messages insert ready-made text into the message field just by typing a slash and the shortcut. You save time on replies that repeat.
+
+<Note>
+  Who can see this: all users. Only Administrator, Company Manager, Area Manager, or Unit Manager can create, edit, delete, and reorder "Da empresa" messages. For everyone else, they're read-only.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Create a quick message
+
+By default the quick messages list starts empty.
+
+Where to find it: **Configurações > Atendimento > Mensagens Rápidas** (Settings > Support > Quick Messages).
+
+<Steps>
+  <Step title="Open the screen">Go to **Configurações > Atendimento > Mensagens Rápidas**.</Step>
+  <Step title="Click Nova mensagem (New message)">Opens the Nova Mensagem Rápida (New Quick Message) modal.</Step>
+  <Step title="Choose the visibility">Managers choose between **Pessoal** (Personal) (just you) and **Da empresa** (Company) (the whole team); everyone else can only create personal messages.</Step>
+  <Step title="Fill in the shortcut">Type in **Atalho** (Shortcut), without the slash. Use only letters, numbers, hyphens, and underscores.</Step>
+  <Step title="Write the content">Fill in **Conteúdo** (Content). Use `{{nome_cliente}}` or `{{nome_atendente}}` to insert the name automatically.</Step>
+  <Step title="Save">Click **Criar** (Create).</Step>
+</Steps>
+
+{/* CAPTURA: images/atendimento/mensagens-rapidas-novo-modal.png | alt: modal Nova Mensagem Rápida com atalho, conteúdo e variáveis disponíveis | olhar: os campos Atalho e Conteúdo e a lista de variáveis */}
+
+<Note>
+  Visibility doesn't change once the message is created. To switch it, delete the message and create it again with the right visibility.
+</Note>
+
+---
+
+## Edit or delete a message
+
+Where to find it: **Configurações > Atendimento > Mensagens Rápidas**, **Ações** (Actions) column.
+
+<Steps>
+  <Step title="Click Editar (Edit)">Opens the same modal, with the data filled in.</Step>
+  <Step title="Adjust and save">Change the shortcut or content and click **Salvar** (Save).</Step>
+  <Step title="Or click Deletar (Delete)">Confirm with **Confirmar** (Confirm) to delete, or **Cancelar** (Cancel) to back out.</Step>
+</Steps>
+
+<Note>
+  Only Administrator, Company Manager, Area Manager, or Unit Manager can edit or delete "Da empresa" messages. You can always edit your own personal messages.
+</Note>
+
+---
+
+## Reorder the messages
+
+Where to find it: same screen, within each group (Minhas mensagens or Da empresa).
+
+<Steps>
+  <Step title="Drag the row">Click and hold the row of the message you want to move.</Step>
+  <Step title="Drop it in the desired position">The new order applies to everyone who uses that message.</Step>
+</Steps>
+
+---
+
+## Use a quick message in a conversation
+
+By default the quick messages menu stays closed until you start typing.
+
+Where to find it: message field, inside an open conversation.
+
+<Steps>
+  <Step title="Type the slash">Type "/" at the start of the message field.</Step>
+  <Step title="Type the start of the shortcut">The list filters to matching shortcuts.</Step>
+  <Step title="Choose the message">Use the arrow keys and Enter, or click the option.</Step>
+</Steps>
+
+{/* CAPTURA: images/inbox/inbox-menu-mensagens-rapidas.png | alt: menu de mensagens rápidas aberto no campo de mensagem, com a lista de atalhos filtrada | olhar: a prévia com as variáveis já resolvidas */}
+
+<Note>
+  The `{{nome_cliente}}` and `{{nome_atendente}}` variables already come filled in the menu preview.
+</Note>
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Why can't I edit a 'Da empresa' message?">
+  Only managers can create, edit, and delete these messages. For you, they're read-only.
+  </Accordion>
+  <Accordion title="Can I change a message's visibility after it's created?">
+  No. Delete it and create it again with the right visibility.
+  </Accordion>
+  <Accordion title="Is the shortcut case-sensitive?">
+  No. The menu in the Inbox filters without distinguishing case.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Handle a conversation" href="/en/inbox/atenda-uma-conversa">Open, reply, attach files, and take over from Tino.</Card>
+  <Card title="Get to know the Inbox" href="/en/inbox/conheca-o-inbox">The screen, the lists, and conversation statuses.</Card>
+  <Card title="Set the conversation rules" href="/en/atendimento/regras-de-conversa">Signature, automatic closing, and active Copilot.</Card>
+  <Card title="Roles and access explained" href="/en/visao-geral/papeis-e-acessos">Who is a manager and what each role unlocks.</Card>
+</CardGroup>

@@ -1,0 +1,90 @@
+---
+title: "Pull contacts from external systems"
+sidebarTitle: "Campaign Contacts"
+description: "Connect your Varejo Online key and check the status of the SAN integration to bring customer data into Tartini."
+---
+
+Connecting Varejo Online securely stores your account's key and gets Tartini ready to use data from your management system in campaigns.
+
+<Note>
+  Campaigns is a feature of the Scale and Enterprise plans. Who configures it: only the Administrator (Company) sees this screen.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Set up the Varejo Online key
+
+By default, the integration shows up as **Não configurada** (Not configured).
+
+Where to find it: **Configurações > Integrações > Contatos de Campanha** (Settings > Integrations > Campaign Contacts).
+
+<Steps>
+  <Step title="Open the screen">Go to **Configurações > Integrações > Contatos de Campanha**.</Step>
+  <Step title="Paste the key">In the **Varejo Online** card, paste the API key into the **Chave API** (API key) field.</Step>
+  <Step title="Save">Click **Salvar Chave** (Save key).</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/contatos-campanha-varejo-online.png | alt: Cartão Varejo Online com o campo de chave API e o selo de status Ativa | olhar: o selo de status ao lado do nome Varejo Online */}
+
+Once saved, the card shows the **Ativa** (Active) badge and the masked key. To change it, use **Alterar Chave** (Change key).
+
+<Note>
+  An invalid key shows the alert **Chave API Inválida** (Invalid API key). The key is encrypted and stored securely, and is validated by Varejo Online itself when you save it.
+</Note>
+
+---
+
+## Check the SAN integration status
+
+The **SAN Internet** card shows up on this screen when your company has this integration available, with the **Ativa** (Active) or **Não configurada** (Not configured) badge.
+
+This integration is set up through server environment variables, not through a form on the screen. If you need to activate or review it, contact your system administrator.
+
+<Steps>
+  <Step title="See the current status">Open **Configurações > Integrações > Contatos de Campanha** and check the badge on the **SAN Internet** card.</Step>
+  <Step title="Refresh if needed">Click **Atualizar Status** (Refresh status) to fetch the latest status for both integrations.</Step>
+</Steps>
+
+---
+
+## What these integrations do today
+
+Connecting Varejo Online and checking on SAN here lays the groundwork for bringing customers from these systems in as campaign contacts. The current campaign creation wizard, however, only accepts a contact list as a CSV file: it doesn't yet offer a step to search within these integrations.
+
+<Note>
+  If you set up the key and can't find the option to import directly through the wizard, it's because this step isn't in the standard wizard yet. Keep using the CSV, described in [Import campaign contacts](/en/campanhas/contatos-e-csv), until the search feature shows up there.
+</Note>
+
+{/* CONFIRMAR: se e quando a busca de contatos do Varejo Online e da SAN passa a ficar disponível dentro do assistente de criação atual. */}
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Who can set up these integrations?">
+  Only whoever has the Administrator (Company) role. Other roles don't see the **Contatos de Campanha** tile in Settings.
+  </Accordion>
+  <Accordion title="Does the Varejo Online key expire?">
+  The screen warns when the saved key stops being valid, with the **Chave API Inválida** alert. In that case, paste a new key under **Alterar Chave**.
+  </Accordion>
+  <Accordion title="How do I activate the SAN integration?">
+  It depends on a configuration made by the system administrator, outside this screen. Contact support to review its availability on your account.
+  </Accordion>
+  <Accordion title="I set up the key, but I don't see the contacts in my campaign">
+  Today, importing through these integrations doesn't feed the creation wizard directly. Use the CSV to upload the contact list.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Import campaign contacts" href="/en/campanhas/contatos-e-csv">The CSV format the wizard accepts today.</Card>
+  <Card title="Connect external tools to the AI" href="/en/integracoes/conectores">Other Tartini integrations.</Card>
+  <Card title="Campaigns explained" href="/en/campanhas/campanhas-explicadas">Overview of the Campaigns area.</Card>
+  <Card title="Create a campaign" href="/en/campanhas/crie-uma-campanha">The wizard in three steps.</Card>
+</CardGroup>

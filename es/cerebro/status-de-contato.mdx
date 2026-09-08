@@ -1,0 +1,94 @@
+---
+title: "Configura los estados de contacto"
+sidebarTitle: "Estado de Contacto"
+description: "Arma la lista de estados que el equipo usa en la ficha del contacto para decir en qué punto de la relación está cada persona."
+---
+
+Los estados de contacto dicen, de forma estandarizada, en qué punto de la relación está cada persona, como "Lead", "Cliente ativo" o "Inativo". El orden definido aquí es el mismo que aparece en el selector de la ficha del contacto.
+
+<Note>
+  Quién lo ve: cualquier rol que acceda al Cérebro puede consultar la lista. Solo Administrador y Gestor de la Empresa pueden crear, editar, reordenar o eliminar estados. Requiere el plan Scale.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Crea un estado
+
+De forma predeterminada, no hay ningún estado registrado además de los que ya vienen con la cuenta.
+
+Dónde está: **Cérebro > Operações > Status de Contato** (Cerebro > Operaciones > Estado de Contacto).
+
+<Steps>
+  <Step title="Abre el formulario">Haz clic en **Adicionar status** (Agregar estado).</Step>
+  <Step title="Elige el color">Selecciona un color para identificar el estado.</Step>
+  <Step title="Escribe el nombre">Completa el nombre, por ejemplo "Cliente ativo", con hasta 40 caracteres.</Step>
+  <Step title="Marca como predeterminado, si corresponde">Activa **Atribuir por padrão a contatos sem status** (Asignar por defecto a contactos sin estado).</Step>
+  <Step title="Guarda">Haz clic en **Salvar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/status-contato-criar.png | alt: Formulário de novo status de contato com cor e nome preenchidos | olhar: o checkbox de status padrão e o nome do status padrão atual ao lado */}
+
+<Note>
+  Solo un estado puede ser el predeterminado a la vez. Marcar uno nuevo como predeterminado reemplaza al anterior automáticamente.
+</Note>
+
+---
+
+## Reordena los estados
+
+El orden de la lista es el orden que aparece en el selector de la ficha del contacto.
+
+Dónde está: **Cérebro > Operações > Status de Contato**, flechas junto a cada estado.
+
+<Steps>
+  <Step title="Elige el estado">Localiza el estado que quieras mover.</Step>
+  <Step title="Mueve">Haz clic en la flecha hacia arriba o hacia abajo.</Step>
+</Steps>
+
+<Note>
+  Las flechas quedan deshabilitadas en los dos extremos de la lista.
+</Note>
+
+---
+
+## Edita o elimina un estado
+
+Dónde está: **Cérebro > Operações > Status de Contato**, botones de acción en cada tarjeta.
+
+<Steps>
+  <Step title="Edita">Haz clic en **Editar**, ajusta el color o el nombre, y confirma.</Step>
+  <Step title="Elimina">Haz clic en **Excluir** (Eliminar) y confirma.</Step>
+</Steps>
+
+<Note>
+  Si el estado ya está en uso por contactos, la pantalla muestra el recuento de contactos afectados antes de confirmar. Eliminar de todas formas no borra ni mueve los contactos: simplemente quedan sin estado.
+</Note>
+
+{/* CAPTURA: images/cerebro/status-contato-exclusao-em-uso.png | alt: Card de status com o aviso de contatos afetados e os botões Excluir mesmo assim e Cancelar | olhar: a contagem de contatos exibida antes da confirmação */}
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Quién puede crear o editar estados de contacto?">
+  Solo Administrador o Gestor de la Empresa. Otros roles que accedan a la pantalla solo pueden leer la lista.
+  </Accordion>
+  <Accordion title="Si elimino un estado en uso, ¿qué pasa con los contactos?">
+  No se eliminan ni se mueven a otro estado. Simplemente quedan sin estado asignado.
+  </Accordion>
+  <Accordion title="¿El orden de los estados importa?">
+  Sí, es el orden que se muestra en el selector de la ficha del contacto.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Configura los campos del contacto" href="/es/cerebro/qualificacao">Define los datos que Tino recopila en la conversación.</Card>
+  <Card title="Configura los esclarecimientos" href="/es/cerebro/esclarecimentos">Define cuándo Tino pide más información.</Card>
+</CardGroup>

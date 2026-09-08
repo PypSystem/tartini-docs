@@ -1,0 +1,129 @@
+---
+title: "Métricas de la operación"
+sidebarTitle: "Operación"
+description: "Sigue lo que está pasando ahora, la calidad del atendimiento y el desempeño de cada persona del equipo."
+---
+
+La pantalla Operação (Operación) muestra la salud del atendimiento en el período: quién está en línea ahora, si el SLA está al día, de dónde vienen las conversaciones y cómo le va a cada agente. Todo comparado con el período anterior.
+
+<Note>
+  Quién ve: Administrador, Gestor de la Empresa, Gestor de Área y Gestor de Unidad, cada uno en su alcance. Disponible en todos los planes.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+Dónde está: **Métricas > Operação**.
+
+---
+
+## Sigue el ahora
+
+Cuando el período elegido alcanza hoy, un panel en vivo aparece en la parte superior de la pantalla y se actualiza cada 30 segundos.
+
+| Indicador | Qué significa |
+|---|---|
+| **em andamento** (en curso) | Conversaciones abiertas siendo atendidas en este momento, con la división entre equipo y Tino. |
+| **na fila** (en la cola) | Conversaciones esperando la primera respuesta. Se pone en alerta por encima de cinco. |
+| **ia ativa** (IA activa) | Conversaciones que el Tino conduce ahora, sin ninguna persona involucrada. |
+| **equipe online** (equipo en línea) | Cuántos agentes están en línea, del total del equipo. |
+
+<Note>
+  Cuando algún SLA ya venció, un sello **crítico** aparece en el encabezado del panel. El panel en vivo desaparece cuando el período elegido no alcanza hoy.
+</Note>
+
+---
+
+## Mide la calidad del atendimiento
+
+Esta sección trae el gráfico de adherencia a SLA y una grilla con seis indicadores de tiempo y tasa.
+
+Para tiempos, el valor mostrado es la mediana: la mitad de los atendimientos fue más rápida que ese número, la mitad fue más lenta. Al lado, el p90 muestra el tiempo del diez por ciento de casos más demorados, para que veas los extremos sin que se pierdan en el promedio.
+
+| Indicador | Qué significa |
+|---|---|
+| **1ª resposta** | Tiempo hasta la primera respuesta del equipo. Es el único con plazo configurado: la píldora de SLA muestra el límite del canal. |
+| **espera / fila** (espera / cola) | Tiempo que el cliente espera antes de ser atendido. |
+| **até resolução** (hasta resolución) | Tiempo hasta que la conversación se resuelve. |
+| **aderência a SLA** (adherencia a SLA) | Porcentaje de los plazos cumplidos. |
+| **transferências ia→humano** (transferencias IA→humano) | Porcentaje de conversaciones que el Tino pasó al equipo. |
+| **reaberturas** (reaperturas) | Porcentaje de conversaciones cerradas que volvieron a ser respondidas. |
+
+<Note>
+  Solo la 1ª respuesta tiene un plazo configurado, el SLA del canal. Los otros cinco indicadores comparan solo con el período anterior.
+</Note>
+
+---
+
+## Consulta el volumen y el origen de las conversaciones
+
+El gráfico **quem conduziu** (quién condujo) muestra el total de conversaciones del período dividido entre equipo y Tino. Al lado, tres bloques completan el cuadro:
+
+- **canais** (canales): el volumen por WhatsApp, WhatsApp Business y Chat Widget.
+- **quem começou** (quién empezó): separa conversaciones **recebidas** (recibidas) (el cliente buscó), **iniciadas** (el equipo buscó) e **iniciadas pela ia** (iniciadas por la IA), con el porcentaje de proactividad.
+- **transferências** (transferencias): cuántas conversaciones cambiaron de sector en el período, y a qué sector fueron.
+
+<Note>
+  Las conversaciones anteriores al rastreo de origen entran como "sin origen registrado" y quedan fuera del porcentaje de proactividad.
+</Note>
+
+---
+
+## Compara áreas, unidades y agentes
+
+El comparativo aparece cuando hay más de un hijo en el nivel actual y ningún agente está en foco. Eliges el indicador de comparación: **SLA**, **1ª resposta** (1ª respuesta), **Atendimento** (Atendimiento), **Volume** (Volumen), **Iniciadas**, **Reaberturas** (Reaperturas) o **Transferências** (Transferencias).
+
+<Steps>
+  <Step title="Elige el indicador">Haz clic en una de las píldoras arriba del comparativo, por ejemplo **SLA**.</Step>
+  <Step title="Baja el nivel">Haz clic en una tarjeta de área para ver sus unidades, o en una tarjeta de unidad para ver los agentes.</Step>
+  <Step title="Vuelve cuando quieras">Usa **Voltar um nível** (Volver un nivel) o elige otra área o unidad en la ruta.</Step>
+</Steps>
+
+<Note>
+  Hacer clic en una tarjeta de agente no baja el nivel: abre un panel lateral con los números de esa persona.
+</Note>
+
+---
+
+## Consulta la tabla de agentes
+
+Debajo del comparativo, la tabla lista todos los agentes con actividad en el período: **atendente** (agente), **resolvidas** (resueltas), **em andamento** (en curso), **1ª resposta**, **atendimento** y **csat**. Haz clic en el encabezado de una columna para ordenar. Usa la búsqueda para encontrar a alguien por el nombre.
+
+<Steps>
+  <Step title="Haz clic en una fila">Toda la pantalla pasa a mostrar solo los números de esa persona.</Step>
+  <Step title="Abre sus conversaciones">Haz clic en el botón de acción de la fila, o en **Ver as conversas deste atendente** (Ver las conversaciones de este agente) en el panel lateral. Esto abre la Central de Conversas en una pestaña nueva, ya filtrada.</Step>
+  <Step title="Vuelve a todos">Haz clic en **ver todos**, en el pie de la tabla.</Step>
+</Steps>
+
+<Note>
+  La tabla de agentes nunca aplica el filtro de agente. Es a propósito: con alguien en foco, sigue mostrando a todos, para servir de camino de vuelta.
+</Note>
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Dónde veo el SLA de ahora, en tiempo real?">
+  En el encabezado del panel en vivo, que muestra cuántos SLA están en alerta o vencidos. La tasa de adherencia de todo el período está en la sección de calidad del atendimiento.
+  </Accordion>
+  <Accordion title="¿Por qué desapareció el comparativo entre áreas o unidades?">
+  Porque hay un agente en foco, o porque el nivel actual solo tiene un hijo para comparar.
+  </Accordion>
+  <Accordion title="¿Por qué la tabla muestra a todos aunque haya un agente filtrado?">
+  A propósito. El pie avisa, y el botón **ver todos** limpia el foco cuando quieras.
+  </Accordion>
+  <Accordion title="¿Cómo comparo dos meses?">
+  Elige un mes específico en la píldora de período. La variación mostrada ya es contra el mes anterior.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="El Panorama de las métricas" href="/es/metricas/panorama">El retrato ejecutivo del período.</Card>
+  <Card title="Métricas del Tino" href="/es/metricas/tino">Qué entregó la IA y a qué velocidad.</Card>
+  <Card title="SLA de atendimiento" href="/es/atendimento/sla">El plazo que aparece en la 1ª respuesta.</Card>
+  <Card title="Usa la Central de Conversas" href="/es/inbox/central-de-conversas">Consulta las conversaciones detrás de cada número.</Card>
+</CardGroup>

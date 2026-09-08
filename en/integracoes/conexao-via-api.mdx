@@ -1,0 +1,101 @@
+---
+title: "Use Tartini as your system's channel"
+sidebarTitle: "API connection"
+description: "Generate access tokens to integrate your own systems directly with Tartini."
+---
+
+With an API token, your system talks directly to Tartini, without needing anyone to open the screen.
+
+<Note>
+  Who can generate and revoke tokens: only Administrator. Available on the Scale plan.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## What it's for
+
+An API token gives your system access to the Tartini API, to integrate conversation, contact, and support data with your ERP, CRM, or any other system. The technical details of using the API are for whoever develops your system.
+
+Where to find it: **Configurações > Canais > Conexão via API** (Settings > Channels > API Connection).
+
+<Note>
+  Keep your tokens secure and never share them. Whoever has the token can access your account through the API, the same way you can.
+</Note>
+
+---
+
+## Create a token per system
+
+If you integrate more than one system, create a separate token for each one, with a name that identifies where it's used, like "Integração ERP" or "Portal do cliente".
+
+That way, if you need to cut off access for a specific system, you revoke only its token, without affecting the other integrations.
+
+---
+
+## Generate a token
+
+By default, a new account has no tokens created yet.
+
+<Steps>
+  <Step title="Open the screen">Go to **Configurações > Canais > Conexão via API**.</Step>
+  <Step title="Start a new token">Click **Criar Token** (Create token).</Step>
+  <Step title="Name the token">Fill in **Nome do Token** (Token name), to identify later where it's used, and optionally a **Descrição** (Description).</Step>
+  <Step title="Create it">Click **Criar Token**.</Step>
+  <Step title="Copy and save it">Click **Copiar** (Copy) and store the token somewhere secure.</Step>
+</Steps>
+
+{/* CAPTURA: images/integracoes/conexao-via-api-token-criado.png | alt: modal com o token de API gerado e o botão de copiar | olhar: o aviso de que o token só aparece essa vez */}
+
+<Warning>
+  The token is only shown once, at the moment it's created. If you lose it, there's no way to recover it: create a new one and revoke the old one.
+</Warning>
+
+---
+
+## Track your tokens
+
+Each registered token shows the name, the description, when it was created, and the last time it was used, or **Nunca** (Never), if it hasn't been used yet.
+
+---
+
+## Revoke a token
+
+<Steps>
+  <Step title="Open the screen">Go to **Configurações > Canais > Conexão via API**.</Step>
+  <Step title="Delete the token">Click the trash icon on the token's card.</Step>
+  <Step title="Confirm">Click **Excluir** (Delete).</Step>
+</Steps>
+
+<Warning>
+  Revoking a token is immediate: any system still using that token loses access right away.
+</Warning>
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Who can create or revoke tokens?">
+  Only Administrator.
+  </Accordion>
+  <Accordion title="I lost the token before copying it. How do I recover it?">
+  It's not possible to recover a token after closing the modal. Create a new one and revoke the old one, if it's not in use.
+  </Accordion>
+  <Accordion title="Do tokens expire on their own?">
+  {/* CONFIRMAR: se os tokens de API têm expiração automática */}
+  </Accordion>
+  <Accordion title="Do I need a different token for each system I integrate?">
+  It's not required, but it's recommended. One token per system makes it easier to know who's using what and lets you revoke one access without touching the others.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Receive events in your system" href="/en/integracoes/webhooks">Automatic notifications when a conversation is closed.</Card>
+  <Card title="Channels explained" href="/en/canais/canais-explicados">The channels available in Tartini.</Card>
+</CardGroup>

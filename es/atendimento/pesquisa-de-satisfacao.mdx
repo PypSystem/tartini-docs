@@ -1,0 +1,111 @@
+---
+title: "Configura la encuesta de satisfacción"
+sidebarTitle: "Encuesta de Satisfacción"
+description: "Envía una encuesta de satisfacción al cliente después de la atención y haz seguimiento de las notas en el Scout."
+---
+
+Con la encuesta configurada, todo cliente recibe una invitación para evaluar la atención, y tú haces seguimiento del resultado sin salir de Tartini.
+
+<Note>
+  Quién lo ve: Administrador y Gestor de la Empresa. La configuración vale para toda la empresa, sin distinción por área o unidad.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Activa la encuesta
+
+Dónde está: **Configurações > Atendimento > Pesquisa de Satisfação** (Configuraciones > Atención > Encuesta de Satisfacción).
+
+<Steps>
+  <Step title="Abre la pantalla">Ve a **Configurações > Atendimento > Pesquisa de Satisfação**.</Step>
+  <Step title="Activa">Enciende **Habilitar Pesquisa de Satisfação** (Habilitar Encuesta de Satisfacción).</Step>
+  <Step title="Guarda">Haz clic en **Salvar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/atendimento/pesquisa-satisfacao-ativar.png | alt: Tela Pesquisa de Satisfação com o toggle Habilitar Pesquisa de Satisfação ligado | olhar: o card de ativação no topo */}
+
+---
+
+## Elige cuándo se envía la encuesta
+
+Dónde está: **Configurações > Atendimento > Pesquisa de Satisfação**, sección **Regras de Coleta** (Reglas de Recopilación).
+
+<Steps>
+  <Step title="Elige quién la recibe">En **Coletar em** (Recopilar en), elige entre Todos os atendimentos (Todas las atenciones), Apenas atendimentos do Tino (Solo atenciones de Tino) o Apenas atendimentos humanos (Solo atenciones humanas).</Step>
+  <Step title="Elige el disparador">En **Regra de disparo** (Regla de disparo), elige entre Todas as conversas (Todas las conversaciones) o Apenas conversas resolvidas (Solo conversaciones resueltas).</Step>
+  <Step title="Guarda">Haz clic en **Salvar**.</Step>
+</Steps>
+
+<Note>
+  De forma predeterminada, la encuesta se recopila en todas las atenciones y se dispara en todas las conversaciones.
+</Note>
+
+---
+
+## Elige los canales
+
+Las evaluaciones solo llegan por los canales marcados aquí.
+
+Dónde está: **Configurações > Atendimento > Pesquisa de Satisfação**, sección **Canais Habilitados** (Canales Habilitados).
+
+<Steps>
+  <Step title="Marca los canales">Activa el interruptor de cada canal que deba enviar la encuesta.</Step>
+  <Step title="Guarda">Haz clic en **Salvar**.</Step>
+</Steps>
+
+<Note>
+  Un canal no marcado simplemente no recopila evaluaciones, aunque la encuesta esté activa en la empresa.
+</Note>
+
+---
+
+## Define el tiempo límite y los mensajes
+
+Dónde está: **Configurações > Atendimento > Pesquisa de Satisfação**, secciones **Tempo Limite** (Tiempo Límite) y **Mensagens Personalizadas** (Mensajes Personalizados).
+
+<Steps>
+  <Step title="Define el plazo">En **Tempo limite para resposta** (Tiempo límite para respuesta), elige un valor entre 1 y 1.440 minutos.</Step>
+  <Step title="Personaliza los mensajes (opcional)">Escribe tu propio mensaje de solicitud de evaluación y de solicitud de feedback, o déjalo en blanco para usar el texto predeterminado.</Step>
+  <Step title="Guarda">Haz clic en **Salvar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/atendimento/pesquisa-satisfacao-mensagens.png | alt: Seção Mensagens Personalizadas com os dois campos de texto | olhar: os campos de mensagem e o contador de caracteres */}
+
+<Note>
+  De forma predeterminada, el plazo es de 60 minutos y la escala de respuesta sugerida va de 1 a 5. {/* CONFIRMAR: texto exato das mensagens padrão enviadas quando os campos ficam em branco */}
+</Note>
+
+---
+
+## Mira los resultados
+
+Las evaluaciones aparecen en [Scout, en la sección de Satisfacción](/es/scout/satisfacao), con el historial de notas por agente y por período.
+
+{/* CONFIRMAR: se os resultados da pesquisa também aparecem em alguma tela de Métricas */}
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Qué cuenta como 'conversa resolvida' en la Regla de disparo?">
+  {/* CONFIRMAR: critério exato usado para marcar uma conversa como resolvida */}
+  </Accordion>
+  <Accordion title="¿Puedo enviar la encuesta solo por WhatsApp?">
+  Sí. Deja marcado solo el canal deseado en Canais Habilitados.
+  </Accordion>
+  <Accordion title="¿Qué pasa si el cliente no responde dentro del tiempo límite?">
+  {/* CONFIRMAR: comportamento da pesquisa após o tempo limite para resposta */}
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Haz seguimiento de la satisfacción de los clientes" href="/es/scout/satisfacao">Mira las notas y comentarios recopilados por la encuesta.</Card>
+  <Card title="Define las reglas de conversación" href="/es/atendimento/regras-de-conversa">Configura el cierre que dispara la encuesta.</Card>
+</CardGroup>

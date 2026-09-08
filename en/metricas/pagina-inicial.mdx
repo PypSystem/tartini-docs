@@ -1,0 +1,87 @@
+---
+title: "The Home Page Explained"
+sidebarTitle: "Home Page"
+description: "The day's dashboard: the real-time queue, what needs you, today's numbers and the team, or your own conversations if you provide service."
+---
+
+After the setup checklist, the Página Inicial (Home Page) becomes the day's dashboard. Managers see the whole operation; agents see their own conversations and their own performance.
+
+<Note>
+  While the checklist isn't finished, the Página Inicial shows the setup steps. See [Prepare your operation with the checklist](/en/primeiros-passos/configuracao/checklist-de-preparacao). The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## The Manager's Dashboard
+
+{/* CAPTURA: images/metricas/pagina-inicial-gestor.png | Página Inicial do gestor com o bloco agora em tempo real e o painel precisa de você | Os quatro cards do bloco agora e a lista de alertas ao lado */}
+
+### Choose the Units
+
+At the top, the **equipe/…** (team/…) line shows the scope of the numbers: the current Unit or all the Units you have access to. Click it to filter by a Unit. The filter changes only this screen's numbers; to switch Units across all of Tartini, use the button below the logo, in the top-left corner. In the top-right corner, the **Abrir atendimento →** (Open service →) button leads to the Inbox.
+
+### Right Now, in Real Time
+
+| Card | What it shows | On click |
+|---|---|---|
+| **na fila** (in queue) | Conversations waiting for service and the average wait. Turns orange above five | The Inbox filtered to waiting |
+| **em andamento** (in progress) | Conversations being handled right now | The Inbox filtered to in progress |
+| **resolvidas por ia** (resolved by AI) | Conversations Tino closed today without transferring | The Inbox filtered to finished |
+| **equipe online** (team online) | How many agents are online, out of the total | |
+
+### Needs You
+
+The list shows what needs action: an offline channel, an open conversation with an overdue SLA, an average wait time above fifteen minutes, or more than ten customers in the queue. Each row has a link to the right screen. With nothing pending, it shows **Tudo em dia ✓** (All caught up ✓).
+
+### Today
+
+Four numbers compared with yesterday up to the same time: **conversas** (conversations), **resolvidas pela ia** (resolved by AI), **concluídas** (completed), and **satisfação** (satisfaction). The variation arrow only appears when there are at least five occurrences on one of the days. Satisfação leads to Scout's satisfaction screen.
+
+### Operation
+
+- **Pico de atendimento** (Service peak): today's conversations hour by hour, with the peak marked and the split between AI and team. The **ver detalhes por hora →** (see hourly details →) link opens the service metrics.
+- **Tino em ação** (Tino in action): how much of today's conversations Tino resolved without the team, and the share from campaigns. If Tino isn't handling service yet, the card offers **Ativar agente** (Activate agent). Below, the month's AI credit consumption, with the **ver consumo →** (see consumption →) link.
+- **Equipe hoje** (Team today): one row per agent with status, total, in progress, completed, and first response time. Click the row to see that person's services in the Conversation Center.
+
+<Note>
+  The **ver consumo →** link opens the Créditos (Credits) screen, which only the Administrator can access. Managers return to the Página Inicial when they click.
+</Note>
+
+---
+
+## The Agent's Dashboard
+
+{/* CAPTURA: images/metricas/pagina-inicial-atendente.png | Página Inicial do atendente com Minhas conversas e Meu desempenho | Os cards Pendentes e Em andamento e o gráfico de evolução diária */}
+
+### My Conversations
+
+Three cards: the average satisfaction score of your services (from zero to ten, with the badge Excelente (Excellent), Bom (Good), Regular (Fair), or Precisa melhorar (Needs improvement)), **Pendentes** (Pending) (conversations waiting for your reply), and **Em andamento** (In progress). The last two have the **Abrir inbox** (Open inbox) button.
+
+### My Performance
+
+The last fourteen days: **Clientes atendidos** (Customers served), **Tempo médio** (Average time) of service, **Primeira resposta** (First response), and the **Evolução diária** (Daily trend) chart.
+
+---
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Which Unit do the numbers consider?">
+  By default, all the Units you have access to. The **equipe/…** line at the top filters by a Unit without changing Tartini's overall context.
+  </Accordion>
+  <Accordion title="Why doesn't the variation arrow appear?">
+  It only appears when one of the days has at least five occurrences. With fewer, the comparison doesn't mean anything.
+  </Accordion>
+  <Accordion title="The 'Tino em ação' card says he still isn't handling conversations.">
+  Tino is turned off in your channels. See [Turn on Tino in a channel](/en/tino/ia-por-canal).
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related Articles
+
+<CardGroup cols={2}>
+  <Card title="Operation Metrics" href="/en/metricas/operacao">The numbers by period, Unit, and agent.</Card>
+  <Card title="Tino Metrics" href="/en/metricas/tino">What Tino resolves and how much it consumes.</Card>
+</CardGroup>

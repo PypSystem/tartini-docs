@@ -1,0 +1,95 @@
+---
+title: "Conexión vía API"
+sidebarTitle: "Conexión vía API"
+description: "Genera tokens de API para integrar tus propios sistemas directamente con Tartini y usar la plataforma como un canal programático."
+---
+
+La **Conexión vía API** transforma a Tartini en un canal accesible por tus propios sistemas: puedes enviar y recibir mensajes, crear contactos, iniciar conversaciones y consultar datos vía REST. La página gestiona los **tokens de API** que autentican esas llamadas.
+
+La página está en **Configurações > Canais > Conexão via API** (Configuraciones > Canales > Conexión vía API) ([talk.saninternet.com/settings/channels/api](https://talk.saninternet.com/settings/channels/api)).
+
+<Note>
+  Para la referencia completa de endpoints, autenticación, payloads y códigos de error, consulta la [Referencia de la API](/es/api-reference/introduction).
+</Note>
+
+---
+
+## Cómo funciona
+
+Cada token es una credencial personal de aplicación (no está vinculada a un usuario humano) que autentica solicitudes a la API REST de Tartini. Creas tantos tokens como necesites, uno por integración, por ejemplo, y revocas individualmente cuando alguna clave se filtra o un sistema antiguo se desactiva.
+
+La autenticación sigue el estándar **Bearer Token** en el header HTTP:
+
+```http
+Authorization: Bearer <seu-token>
+```
+
+<Warning>
+  El token completo aparece **una única vez**, en el momento de la creación. Después de eso, Tartini muestra solo una versión enmascarada (ej.: `talk_••••••••a1b2`). Si pierdes el token, tendrás que generar uno nuevo.
+</Warning>
+
+---
+
+## Crear un token
+
+<Steps>
+  <Step title="Abre el modal de creación">
+    Haz clic en **Criar Token** (Crear Token) en la esquina superior derecha de la página (o en el botón central, en el estado vacío).
+  </Step>
+
+  <Step title="Completa los datos">
+    - **Nome** (Nombre) (obligatorio): identificador corto, ej.: `Integração ERP`, `Webhook Site`.
+    - **Descrição** (Descripción) (opcional): texto libre para que recuerdes el propósito del token.
+  </Step>
+
+  <Step title="Copia el token">
+    Después de la creación, un modal muestra el **token completo**. Cópialo y guárdalo en un lugar seguro (gestor de contraseñas, variable de entorno del servidor, gestor de secretos).
+
+    <Warning>
+      Este es el único momento en que el valor completo queda visible. Al cerrar el modal, Tartini pasa a mostrar solo la versión enmascarada.
+    </Warning>
+  </Step>
+</Steps>
+
+---
+
+## Ver y gestionar tokens
+
+La página lista todos los tokens creados por la Empresa en tarjetas, con:
+
+| Campo | Descripción |
+|-------|-----------|
+| **Nome** (Nombre) | Identificador del token. |
+| **Ícone de status** (Ícono de estado) | Verde (activo) o rojo (inactivo). |
+| **Descrição** (Descripción) | Texto opcional insertado en la creación. |
+| **Token** | Valor **enmascarado** (ej.: `talk_••••••••a1b2`). |
+| **Último uso** | Fecha y hora de la última solicitud autenticada, o "Nunca" si nunca se usó. |
+| **Criado em** (Creado en) | Fecha y hora de la generación. |
+
+### Eliminar un token
+
+Cada tarjeta tiene un botón rojo de papelera. Al hacer clic se abre una confirmación. Al confirmar, el token se **revoca de inmediato** y cualquier solicitud que intente usarlo pasa a recibir `401 Unauthorized`.
+
+<Warning>
+  No existe "desactivación", solo eliminación. Antes de eliminar, asegúrate de que ningún sistema crítico siga usando ese token.
+</Warning>
+
+---
+
+## Buenas prácticas
+
+- **Un token por integración**: si tres sistemas conversan con Tartini, crea tres tokens. Así, al desactivar un sistema, revocas solo el token de ese sistema.
+- **Nombre descriptivo**: usa prefijos como `prod-`, `staging-`, `webhook-` para distinguir rápidamente.
+- **Rotación periódica**: genera un token nuevo, actualiza la integración, valida el funcionamiento y solo entonces revoca el antiguo. Se recomienda rotar cada 90 días.
+- **No subas tokens a repositorios**: nunca dejes un token en código abierto, repositorio git o ticket de soporte. Usa variables de entorno o un gestor de secretos.
+- **Sigue el "Último uso"**: los tokens con más de 30 días sin uso probablemente puedan revocarse.
+
+---
+
+## Quién puede generar tokens
+
+Solo los usuarios **Titular** de la Empresa tienen permiso para crear y revocar tokens de API. Gestores, Gerentes y Agentes no ven la página de Conexión vía API.
+
+<Tip>
+  Para empezar a integrar, comienza por el endpoint de [autenticación](/es/concepts/authentication) y por la guía de [errores estandarizados](/es/concepts/errors) de la API.
+</Tip>

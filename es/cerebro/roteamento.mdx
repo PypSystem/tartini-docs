@@ -1,0 +1,113 @@
+---
+title: "Configura el enrutamiento"
+sidebarTitle: "Enrutamiento"
+description: "Define las condiciones que hacen que Tino transfiera la conversación a un agente humano."
+---
+
+El enrutamiento le indica a Tino cuándo detenerse y pasar la conversación a una persona, como un cliente molesto o un pedido para hablar con un agente.
+
+<Note>
+  Quién lo ve: Administrador y Gestor de la Empresa. Requiere el plan Scale.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Crea un criterio de enrutamiento
+
+De forma predeterminada, no hay ningún criterio registrado.
+
+Dónde está: **Cérebro > Operações > Roteamento** (Cerebro > Operaciones > Enrutamiento).
+
+<Steps>
+  <Step title="Abre el formulario">Haz clic en **Adicionar critério** (Agregar criterio).</Step>
+  <Step title="Escribe el nombre">Completa el título, por ejemplo "Transferir cliente irritado".</Step>
+  <Step title="Describe la condición">Explica cuándo y cómo debe ocurrir el enrutamiento.</Step>
+  <Step title="Guarda">Haz clic en **Salvar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/roteamento-criar-criterio.png | alt: Formulário de novo critério de roteamento com título e descrição preenchidos | olhar: os modelos sugeridos abaixo dos campos vazios */}
+
+<Note>
+  El título y la descripción no pueden repetirse entre los criterios ya registrados. No hay límite de cantidad de criterios.
+</Note>
+
+---
+
+## Activa o desactiva un criterio
+
+Dónde está: dentro de la edición de la tarjeta del criterio.
+
+<Steps>
+  <Step title="Abre la tarjeta">Haz clic en el criterio que quieras cambiar.</Step>
+  <Step title="Enciende o apaga">Usa el interruptor **Ativo**/**Inativo** (Activo/Inactivo).</Step>
+  <Step title="Guarda">Haz clic en **Salvar**.</Step>
+</Steps>
+
+Cuando un criterio aprobado vino de una sugerencia de Tino, la tarjeta muestra un enlace **Origem** (Origen) que apunta al documento del Cérebro de donde fue extraído.
+
+---
+
+## Usa una plantilla lista
+
+Dónde está: **Cérebro > Operações > Roteamento**, bloque de plantillas, con sugerencias como "Insatisfação, reclamação ou linguagem agressiva" y "Cliente solicita falar com atendente humano".
+
+<Steps>
+  <Step title="Elige una plantilla">Haz clic en una de las plantillas sugeridas, o en **Explorar modelos** (Explorar plantillas) para ver todas.</Step>
+  <Step title="Ajusta el texto">El formulario se abre completado con el título y la descripción de la plantilla.</Step>
+  <Step title="Guarda">Haz clic en **Salvar**.</Step>
+</Steps>
+
+---
+
+## Revisa las sugerencias de Tino
+
+Dónde está: **Cérebro > Operações > Roteamento**, bloque **Sugestões do Tino** (Sugerencias de Tino), cuando hay alguna pendiente.
+
+<Steps>
+  <Step title="Lee la sugerencia">Revisa el título, la descripción y, si la hay, el origen en el Cérebro.</Step>
+  <Step title="Decide">Haz clic en **Aceitar**, **Editar** o **Negar** (Aceptar, Editar o Rechazar).</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/roteamento-sugestoes-tino.png | alt: Bloco Sugestões do Tino em Roteamento com um card de critério sugerido | olhar: o link de Origem apontando para o documento de onde veio a sugestão */}
+
+<Note>
+  Una sugerencia no vale en la atención antes de ser aceptada. Editar y guardar ya aprueba el criterio en el mismo acto.
+</Note>
+
+---
+
+## Elimina un criterio
+
+Dónde está: dentro de la edición de la tarjeta del criterio.
+
+<Steps>
+  <Step title="Abre la tarjeta">Haz clic en el criterio que quieras eliminar.</Step>
+  <Step title="Haz clic en Excluir">Confirma en la ventana que se abre.</Step>
+</Steps>
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Puedo configurar el enrutamiento para otra acción además de transferir a una persona?">
+  No. Todo criterio registrado aquí transfiere a atención humana.
+  </Accordion>
+  <Accordion title="¿Existe alguna forma de simular una conversación contra los criterios de enrutamiento?">
+  No hay simulación en esta pantalla. Para revisar el comportamiento, usa el chat de prueba del Cérebro.
+  </Accordion>
+  <Accordion title="¿Cuántos criterios puedo registrar?">
+  No hay límite de cantidad.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Configura los esclarecimientos" href="/es/cerebro/esclarecimentos">Define cuándo Tino pide más información.</Card>
+  <Card title="Define horarios y zona horaria de la IA" href="/es/cerebro/disponibilidade">Configura cuándo la empresa está en atendimiento.</Card>
+</CardGroup>

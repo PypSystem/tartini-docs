@@ -1,0 +1,95 @@
+---
+title: "API Connection"
+sidebarTitle: "API Connection"
+description: "Generate API tokens to integrate your own systems directly with Tartini and use the platform as a programmatic channel."
+---
+
+The **API Connection** turns Tartini into a channel accessible by your own systems: you can send and receive messages, create contacts, start conversations, and query data via REST. The page manages the **API tokens** that authenticate these calls.
+
+The page is at **Configurações > Canais > Conexão via API** (Settings > Channels > API Connection) ([talk.saninternet.com/settings/channels/api](https://talk.saninternet.com/settings/channels/api)).
+
+<Note>
+  For the complete reference of endpoints, authentication, payloads, and error codes, see the [API Reference](/en/api-reference/introduction).
+</Note>
+
+---
+
+## How It Works
+
+Each token is an application credential (it isn't tied to a human user) that authenticates requests to Tartini's REST API. You create as many tokens as you need, one per integration, for example, and revoke them individually when a key leaks or an old system is decommissioned.
+
+Authentication follows the **Bearer Token** standard in the HTTP header:
+
+```http
+Authorization: Bearer <seu-token>
+```
+
+<Warning>
+  The full token appears **only once**, at the moment of creation. After that, Tartini shows only a masked version (e.g., `talk_••••••••a1b2`). If you lose the token, you'll have to generate a new one.
+</Warning>
+
+---
+
+## Create a Token
+
+<Steps>
+  <Step title="Open the creation modal">
+    Click **Criar Token** (Create Token) in the top-right corner of the page (or the center button, in the empty state).
+  </Step>
+
+  <Step title="Fill in the details">
+    - **Nome** (Name) (required): a short identifier, e.g.: `Integração ERP`, `Webhook Site`.
+    - **Descrição** (Description) (optional): free text to help you remember the token's purpose.
+  </Step>
+
+  <Step title="Copy the token">
+    After creation, a modal displays the **full token**. Copy it and store it somewhere secure (a password vault, a server environment variable, a secrets manager).
+
+    <Warning>
+      This is the only moment the full value is visible. Once you close the modal, Tartini only shows the masked version from then on.
+    </Warning>
+  </Step>
+</Steps>
+
+---
+
+## View and Manage Tokens
+
+The page lists all tokens created by the Company in cards, with:
+
+| Field | Description |
+|-------|-----------|
+| **Nome** | The token's identifier. |
+| **Ícone de status** (Status icon) | Green (active) or red (inactive). |
+| **Descrição** | Optional text entered at creation. |
+| **Token** | **Masked** value (e.g., `talk_••••••••a1b2`). |
+| **Último uso** (Last used) | Date and time of the last authenticated request, or "Nunca" (Never) if it's never been used. |
+| **Criado em** (Created on) | Date and time it was generated. |
+
+### Delete a Token
+
+Each card has a red trash-can button. Clicking it opens a confirmation. Once confirmed, the token is **revoked immediately**, and any request that tries to use it starts receiving `401 Unauthorized`.
+
+<Warning>
+  There's no "deactivation," only deletion. Before removing one, make sure no critical system is still using that token.
+</Warning>
+
+---
+
+## Best Practices
+
+- **One token per integration**: if three systems talk to Tartini, create three tokens. That way, when you deactivate a system, you only revoke its token.
+- **Descriptive name**: use prefixes like `prod-`, `staging-`, `webhook-` to tell them apart quickly.
+- **Periodic rotation**: generate a new token, update the integration, validate that it works, and only then revoke the old one. Rotating every 90 days is recommended.
+- **Don't commit tokens**: never leave a token in open code, a git repository, or a support ticket. Use environment variables or a secrets manager.
+- **Watch "Último uso"**: tokens unused for more than 30 days can probably be revoked.
+
+---
+
+## Who Can Generate Tokens
+
+Only **Proprietário** (Owner) users of the Company can create and revoke API tokens. Managers and Agents don't see the API Connection page.
+
+<Tip>
+  To start integrating, begin with the [authentication](/en/concepts/authentication) endpoint and the API's [standardized errors](/en/concepts/errors) guide.
+</Tip>

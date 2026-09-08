@@ -1,0 +1,89 @@
+---
+title: "Procesos explicados"
+sidebarTitle: "Procesos"
+description: "Entiende qué es un proceso mapeado, cómo Tino usa ese playbook y cómo hacer seguimiento de si se está cumpliendo."
+---
+
+Un proceso es el playbook de un tipo de atendimiento: cómo tu empresa resuelve un pedido de segunda vía de boleto, un reembolso o un agendamiento, paso a paso. Mapeado, se convierte en la guía que Tino sigue en las conversaciones reales.
+
+<Note>
+  Quién lo ve: Administrador y Gestor de la Empresa. Toda el área de Procesos requiere el plan Scale.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Qué es un proceso
+
+Cada proceso reúne:
+
+- **5W2H**: el qué, el por qué, el quién, el cuándo, el dónde y el cuánto (prioridad) de ese atendimiento.
+- **Paso a paso**: las etapas que Tino sigue, con el texto que envía en cada una.
+- **Salidas**: hacia dónde va la conversación cuando el proceso termina, en cada desenlace posible (Concluído, Parcial, Falhou o Faltou dado).
+- **Cobertura de Tino**: cuánto de ese proceso resuelve Tino solo, calculado etapa por etapa.
+
+Un proceso mapeado solo empieza a valer en la atención cuando está activo. Los procesos creados por descubrimiento automático nacen inactivos, a menos que elijas publicarlos ya activos.
+
+---
+
+## El submenú Procesos, en el orden de la pantalla
+
+Dónde está: **Cérebro > Processos** (Cerebro > Procesos).
+
+1. **Mapeamento** (Mapeo): lista todos los procesos ya mapeados y es el punto de entrada para crear uno nuevo, conversando con el agente de mapeo.
+2. **Descobertas** (Descubrimientos): fila de candidatos a proceso que Tino identificó solo, a partir de conversaciones reales o de documentos enviados.
+3. **Grupos**: conjuntos de procesos con un camino de salidas propio, usados por campañas.
+4. **Catálogo**: auditoría del registro de los procesos, sin depender de conversaciones, con los problemas estructurales y cómo corregirlos.
+
+{/* CAPTURA: images/cerebro/processos-submenu.png | alt: Sidebar do Cérebro com a seção Processos expandida mostrando Mapeamento, Descobertas, Grupos e Catálogo | olhar: o badge de contagem em Descobertas */}
+
+---
+
+## Cómo Tino usa un proceso mapeado
+
+Durante la atención, Tino sigue el paso a paso del proceso que corresponde al pedido del cliente. En cada etapa, usa el texto definido en el mapeo, o redacta el mensaje solo cuando la guía no define un texto fijo. Al final, sigue la salida definida para ese desenlace, o vuelve a la clasificación si no se definió ninguna salida.
+
+Quien pone el proceso por escrito contigo es **Quattro**, el cuarto agente de Tartini. Tú cuentas, con tus palabras, cómo sucede la atención hoy; Quattro pregunta qué faltó y arma el proceso, con etapas, transiciones y salidas. Una etapa que consulta un sistema tuyo también entra: tú autorizas, y la IA hace la verificación durante la atención. Nada de lo que arma entra en vigor sin tu aprobación. Publicado, el proceso se convierte en el playbook que Tino sigue en las conversaciones reales y en la vara con la que el Scout mide cada una.
+
+---
+
+## Cómo el Scout hace seguimiento de la adherencia
+
+Después de que un proceso está en marcha, el Scout audita las conversaciones reales contra lo que fue mapeado y muestra qué resolvió Tino solo, dónde necesitó ayuda y dónde el proceso previsto no coincidió con lo que sucedió en realidad. Ese análisis de ejecución vive en el Scout, fuera del Cérebro.
+
+---
+
+## Hacia dónde apunta cada tarea
+
+<CardGroup cols={2}>
+  <Card title="Mapea procesos a partir de las conversaciones" href="/es/cerebro/mapeie-processos">Construye un proceso conversando con Quattro y revisa los descubrimientos automáticos.</Card>
+  <Card title="Organiza procesos en grupos" href="/es/cerebro/grupos-de-processos">Reúne procesos relacionados para usar en campañas.</Card>
+  <Card title="Haz seguimiento del Catálogo de procesos" href="/es/cerebro/consistencia-e-insights">Mira qué está roto en el registro de los procesos.</Card>
+  <Card title="Mira la adherencia a los procesos" href="/es/scout/processos-e-aderencia">Haz seguimiento, en el Scout, de lo que Tino resolvió siguiendo cada proceso.</Card>
+</CardGroup>
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Por qué a veces aparece 'Quattro' y en otras 'Tino'?">
+  Quattro es quien conduce la conversación de mapeo contigo. Tino es quien atiende al cliente de verdad, siguiendo el proceso ya publicado.
+  </Accordion>
+  <Accordion title="¿Cómo aparece un proceso mapeado sin ninguna etapa?">
+  Aparece como "Sem playbook" (Sin playbook), diferente de un proceso con 0% de cobertura. Completa el mapeo para que Tino pueda conducirlo.
+  </Accordion>
+  <Accordion title="¿Dónde veo si Tino de hecho está siguiendo los procesos mapeados?">
+  En el Scout, en la pantalla de adherencia a los procesos, fuera del Cérebro.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Mapea procesos a partir de las conversaciones" href="/es/cerebro/mapeie-processos">Construye el playbook de cada tipo de atendimiento.</Card>
+  <Card title="El Cérebro explicado" href="/es/cerebro/o-cerebro-explicado">Entiende las demás partes del Cérebro.</Card>
+</CardGroup>

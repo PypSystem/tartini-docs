@@ -1,0 +1,97 @@
+---
+title: "Canales explicados"
+sidebarTitle: "Canales"
+description: "Descubre las formas de hablar con tus clientes dentro de Tartini y elige el canal correcto para cada situación."
+---
+
+Cada canal conectado se convierte en una puerta de entrada para las conversaciones de tus clientes, que llegan directo al Inbox de tu equipo. Puedes conectar más de uno al mismo tiempo y decidir, canal por canal, si Tino atiende solo.
+
+<Note>
+  Quién conecta canales: Administrador, Gestor de la Empresa, Gestor de Área y Gestor de Unidad. La Conexión vía API es solo del Administrador.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Los canales disponibles
+
+Tartini conecta cuatro tipos de canal:
+
+- **WhatsApp Business**: conexión por código QR o código de vinculación, el mismo proceso que ya usas en la aplicación del celular.
+- **WABA**: WhatsApp Business API, la conexión oficial de Meta.
+- **Chat Widget**: un chat de atención integrado en tu sitio web.
+- **Conexión vía API**: una forma de que tu propio sistema hable con Tartini como si fuera un canal más.
+
+---
+
+## WhatsApp por código QR o WABA: cuál elegir
+
+Los dos conectan tu número de WhatsApp a Tartini, pero por caminos diferentes.
+
+WhatsApp Business por código QR usa una conexión no oficial: escaneas un código con el celular, como lo harías en cualquier aplicación espejo de WhatsApp. Es rápido para empezar, pero Meta puede banear números que usan este tipo de conexión, y las actualizaciones de WhatsApp pueden causar desconexiones.
+
+WABA usa la API oficial de Meta. Exige un número exclusivo y una cuenta Meta Business verificada, pero no corre el mismo riesgo de baneo y permite enviar plantillas de mensaje aprobadas. La facturación de WABA se basa en el uso.
+
+<Tip>
+  Empieza por el código QR si quieres probar rápido. Para una operación estable, migra a WABA en cuanto puedas.
+</Tip>
+
+---
+
+## El Chat Widget
+
+El Chat Widget coloca un chat de atención en tu sitio web. Personalizas colores, mensaje de bienvenida y posición, y cada Unidad puede tener su propio widget.
+
+---
+
+## La Conexión vía API
+
+La Conexión vía API integra tu sistema directamente con Tartini, usando tokens de acceso. Es el camino de quien tiene un equipo técnico y quiere enviar o recibir datos por cuenta propia.
+
+---
+
+## Límite de canales por Unidad
+
+Cada Unidad puede tener un canal de WhatsApp Business (código QR), un canal WABA y un Chat Widget, cada uno conectado una sola vez. Para conectar otro número del mismo tipo, usa otra Unidad.
+
+---
+
+## Estado de un canal
+
+Todo canal muestra un estado:
+
+- **Conectado**: recibiendo y enviando mensajes normalmente.
+- **Conectando**: la conexión sigue en curso.
+- **Desconectado**: el canal dejó de funcionar y necesita reconectarse.
+
+<Note>
+  WhatsApp Business por código QR puede desconectarse solo cuando termina la sesión del celular. Solo tienes que reconectar escaneando un nuevo código.
+</Note>
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Puedo conectar más de un número de WhatsApp?">
+  Sí, uno por Unidad, ya sea por código QR o por WABA.
+  </Accordion>
+  <Accordion title="¿Qué cambia para el cliente que habla por el widget en vez de WhatsApp?">
+  Nada en la experiencia de atención: la conversación llega de la misma forma al Inbox de tu equipo, con el canal identificado.
+  </Accordion>
+  <Accordion title="¿Tengo que elegir entre código QR y WABA para siempre?">
+  No. Puedes mantener los dos conectados o cambiar cuando quieras, siguiendo los pasos de cada canal.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Conecta WhatsApp por código QR" href="/es/canais/whatsapp-qr-code">Escanea un código y empieza a atender por WhatsApp.</Card>
+  <Card title="Conecta WhatsApp Business API (WABA)" href="/es/canais/whatsapp-business-api">La conexión oficial de Meta, paso a paso.</Card>
+  <Card title="Instala el Chat Widget en tu sitio" href="/es/canais/chat-widget">Un chat de atención directo en tu sitio.</Card>
+  <Card title="Resuelve problemas de conexión" href="/es/canais/problemas-de-conexao">Síntomas comunes y cómo corregirlos.</Card>
+</CardGroup>

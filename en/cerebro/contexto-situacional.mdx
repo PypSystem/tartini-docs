@@ -1,0 +1,104 @@
+---
+title: "Log a temporary context"
+sidebarTitle: "Situational Context"
+description: "Let Tino know about maintenance, promotions, or schedule changes, with a start and end date you define."
+---
+
+A situational context lets Tino know about a temporary situation, such as scheduled maintenance or a promotion, without touching the permanent rules.
+
+<Note>
+  Who sees this: Administrator and Company Manager. Requires the Scale plan.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Create a context
+
+By default, a new context has no start or end date, and applies right away.
+
+Where to find it: **Cérebro > Operações > Contexto Situacional** (Brain > Operations > Situational Context).
+
+<Steps>
+  <Step title="Open the form">Click **Adicionar contexto** (Add context).</Step>
+  <Step title="Write the title">Fill in the title, for example "Manutenção programada".</Step>
+  <Step title="Describe the instruction">Explain the situation and how Tino should behave during that period.</Step>
+  <Step title="Set the period (optional)">Fill in **Início** (Start) and **Fim** (End), with date and time, if the context has a deadline.</Step>
+  <Step title="Save">Click **Adicionar** (Add).</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/contexto-situacional-criar.png | alt: Formulário de novo contexto situacional com título, instrução e campos de data Início e Fim preenchidos | olhar: o interruptor Ativo/Inativo ao lado da lixeira */}
+
+<Note>
+  Title and instruction are required. Dates are optional: without them, the context applies indefinitely.
+</Note>
+
+---
+
+## Understand each context's status
+
+Each context shows one of the four statuses below, calculated automatically from the dates and the Ativo/Inativo (Active/Inactive) toggle:
+
+| Status | When it appears |
+|---|---|
+| Ativo (Active) | Within the set period, or with no dates, with the context turned on. |
+| Agendado (Scheduled) | The start date is still in the future. |
+| Expirado (Expired) | The end date has already passed. |
+| Inativo (Inactive) | The toggle is off, regardless of the dates. |
+
+<Note>
+  Turning off the toggle always shows Inativo, even if the context is within the period. The status is recalculated every time the screen is opened.
+</Note>
+
+---
+
+## Edit or delete a context
+
+Where to find it: **Cérebro > Operações > Contexto Situacional**, click any card in the list.
+
+<Steps>
+  <Step title="Open the card">Click the context you want to change.</Step>
+  <Step title="Adjust the fields">Change the title, the instruction, the dates, or the Ativo/Inativo toggle.</Step>
+  <Step title="Save or delete">Click **Salvar** (Save), or the trash icon **Excluir contexto** (Delete context), with confirmation.</Step>
+</Steps>
+
+---
+
+## Review Tino's suggestions
+
+Where to find it: **Cérebro > Operações > Contexto Situacional**, **Sugestões do Tino** (Tino's Suggestions) block, when there's one pending.
+
+<Steps>
+  <Step title="Read the suggestion">Check the title and the instruction.</Step>
+  <Step title="Decide">Click **Aceitar** (Accept), **Editar** (Edit), or **Negar** (Deny).</Step>
+</Steps>
+
+<Note>
+  A suggestion doesn't apply to service before it's accepted. Editing and saving already approves the context in the same action.
+</Note>
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Does a context with no start or end date apply forever?">
+  Yes, as long as it's active. Without dates, the status shown is Ativo and the period appears as "sem período definido".
+  </Accordion>
+  <Accordion title="If I deactivate a context that's within its period, what happens?">
+  The status shown becomes Inativo, even if the date is still in effect. The toggle always takes priority over the dates.
+  </Accordion>
+  <Accordion title="How many situational contexts can I have?">
+  There's no limit on the number in effect today.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Set the AI's hours and time zone" href="/en/cerebro/disponibilidade">Set the fixed business hours.</Card>
+  <Card title="Set up routing" href="/en/cerebro/roteamento">Define when Tino transfers to a person.</Card>
+</CardGroup>

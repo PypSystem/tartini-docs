@@ -1,0 +1,191 @@
+---
+title: "Webhook de Atendimiento"
+sidebarTitle: "Webhook de Atendimiento"
+description: "Recibe en tu sistema (ERP, CRM o cualquier aplicación) un POST con los datos de cada atendimiento finalizado en Tartini, con payload firmado vía HMAC-SHA256."
+---
+
+El **Webhook de Atendimiento** notifica a tu sistema externo cada vez que una conversación se finaliza en Tartini. En cada cierre, Tartini envía un `POST` en JSON a la URL configurada, con los datos de la conversación y del contacto. Opcionalmente, el payload puede incluir el resumen generado por IA, el historial de mensajes y la nota CSAT.
+
+La configuración está en **Configurações > Integrações > Webhooks > Finalização de Atendimento** (Configuraciones > Integraciones > Webhooks > Finalización de Atendimiento) ([talk.saninternet.com/settings/webhooks](https://talk.saninternet.com/settings/webhooks)).
+
+<Info>
+  El disparo ocurre cuando la conversación se finaliza de hecho. Esto incluye la finalización manual por el agente, el cierre automático por inactividad y la finalización después de la evaluación CSAT (con o sin respuesta del cliente).
+</Info>
+
+---
+
+## Configuración
+
+<Steps>
+  <Step title="Activa el webhook">
+    En **Configurações > Integrações > Webhooks > Finalização de Atendimento**, activa la llave **Ativar webhook** (Activar webhook).
+  </Step>
+  <Step title="Indica la URL de destino">
+    El endpoint de tu sistema que recibirá el `POST`. Usa siempre `https://` en producción.
+  </Step>
+  <Step title="Genera el secret de firma">
+    Haz clic en **Gerar novo** (Generar nuevo) y guarda el valor con seguridad. Se usará para validar la autenticidad de cada entrega.
+  </Step>
+  <Step title="Elige el contenido del payload">
+    Conversación y contacto siempre se envían. También puedes incluir el resumen de la IA, el historial de mensajes y la nota CSAT.
+  </Step>
+  <Step title="Define el filtro de relevancia (opcional)">
+    Con **Registrar apenas atendimentos relevantes** (Registrar solo atendimientos relevantes) activo, las conversaciones triviales (como un saludo sin continuación) no se envían a tu sistema.
+  </Step>
+  <Step title="Prueba la entrega">
+    El botón **Testar webhook** (Probar webhook) envía un payload de ejemplo (con `test: true`) para validar la integración antes de activarla.
+  </Step>
+</Steps>
+
+---
+
+## Identificando al cliente: el ID externo
+
+Para que tu sistema sepa a qué cliente pertenece el atendimiento, cada contacto de Tartini tiene un campo **ID externo**: un código libre que hace referencia al cliente en tu sistema (por ejemplo, su ID en tu ERP o CRM).
+
+El agente define ese valor en el panel de detalles del contacto, dentro del Inbox (sección **Conversa** (Conversación), campo **ID externo**). Una vez completado, acompaña al contacto en todas las finalizaciones futuras y llega en el payload como `contact.externalId`.
+
+<Tip>
+  Cuando el ID externo no esté completado, `contact.externalId` llega como `null`. En ese caso, usa `contact.phoneNumber` como alternativa de vínculo.
+</Tip>
+
+---
+
+## Formato del payload
+
+```json
+{
+  "event": "conversation.finished",
+  "version": "v1",
+  "requestId": "f3a1c2d4-5e6f-4a7b-8c9d-0e1f2a3b4c5d",
+  "sentAt": "2026-06-12T15:40:49.716Z",
+  "data": {
+    "conversation": {
+      "id": "c0a8012e-7d3b-4f1a-9e2c-5b6d8f0a1c3e",
+      "createdAt": "2026-06-12T14:02:11.000Z",
+      "closedAt": "2026-06-12T15:40:49.000Z",
+      "closeReason": "Dúvida resolvida pelo atendente",
+      "attendant": { "id": "...", "name": "João Atendente" },
+      "sector": { "id": "...", "name": "Suporte" },
+      "channel": { "id": "...", "type": "ROOKIE", "name": "whatsapp-principal" }
+    },
+    "contact": {
+      "id": "...",
+      "name": "Camila Ribeiro",
+      "phoneNumber": "5511999999999",
+      "externalId": "ERP-12345"
+    },
+    "summary": {
+      "text": "Cliente entrou em contato com dúvida sobre fatura...",
+      "score": 9.2,
+      "generatedAt": "2026-06-12T15:41:30.000Z"
+    },
+    "csat": {
+      "rating": 5,
+      "comment": "Atendimento excelente!",
+      "respondedAt": "2026-06-12T15:43:02.000Z"
+    },
+    "messages": [
+      { "sender": "USER", "content": "Oi, tenho uma dúvida sobre minha fatura", "sentAt": "2026-06-12T14:02:11.000Z" }
+    ]
+  }
+}
+```
+
+### Campos especiales
+
+| Campo | Significado |
+| --- | --- |
+| `summary: null` | Resumen desactivado en la configuración. Si viene acompañado de `summaryPending: true`, el resumen fue solicitado pero no quedó listo a tiempo. |
+| `csat: { rating: null }` | El cliente no respondió la evaluación antes del tiempo límite. |
+| `contact.externalId: null` | Ningún ID externo definido para el contacto. |
+| `messages: null` | Historial de mensajes desactivado en la configuración. |
+| `test: true` | Entrega generada por el botón **Testar webhook** (Probar webhook), con datos ficticios. No la registres como atendimiento real. |
+
+<Note>
+  Cuando el resumen de la IA está habilitado, la entrega espera la generación del resumen y puede demorar algunos minutos respecto al cierre de la conversación.
+</Note>
+
+---
+
+## Entrega y respuesta
+
+- El `POST` se envía con `Content-Type: application/json`.
+- Tu endpoint debe responder con estado `2xx` en hasta **30 segundos**.
+- Recomendación: recibe, guarda y responde. Deja los procesamientos demorados para después de la respuesta.
+
+---
+
+## Headers enviados
+
+| Header | Contenido |
+| --- | --- |
+| `X-Webhook-Event` | Nombre del evento (`conversation.finished`). |
+| `X-Webhook-Signature` | Firma del cuerpo: `sha256=<HMAC-SHA256(cuerpo bruto, secret)>`. |
+| `X-Request-Id` | Identificador único de la entrega. |
+
+---
+
+## Validando la firma
+
+Toda entrega se firma con **HMAC-SHA256** usando el secret configurado. Recalcula el HMAC sobre el **cuerpo bruto de la solicitud** (antes del parse del JSON) y compáralo con el valor del header `X-Webhook-Signature` usando comparación de tiempo constante. Las solicitudes con firma inválida deben rechazarse.
+
+<CodeGroup>
+
+```javascript Node.js
+const crypto = require('crypto');
+
+// use o corpo bruto (antes do JSON.parse) para calcular o HMAC
+app.post('/webhook', express.raw({ type: 'application/json' }), (req, res) => {
+  const esperado =
+    'sha256=' + crypto.createHmac('sha256', SECRET).update(req.body).digest('hex');
+
+  const recebido = req.headers['x-webhook-signature'] || '';
+  const valido =
+    recebido.length === esperado.length &&
+    crypto.timingSafeEqual(Buffer.from(recebido), Buffer.from(esperado));
+
+  if (!valido) return res.status(401).end();
+
+  const evento = JSON.parse(req.body);
+  res.status(200).end();
+});
+```
+
+```python Python
+import hmac, hashlib
+from flask import Flask, request
+
+@app.post('/webhook')
+def webhook():
+    corpo = request.get_data()  # corpo bruto
+    esperado = 'sha256=' + hmac.new(SECRET.encode(), corpo, hashlib.sha256).hexdigest()
+    recebido = request.headers.get('X-Webhook-Signature', '')
+
+    if not hmac.compare_digest(recebido, esperado):
+        return '', 401
+
+    evento = request.get_json()
+    return '', 200
+```
+
+```php PHP
+<?php
+$corpo = file_get_contents('php://input'); // corpo bruto
+$esperado = 'sha256=' . hash_hmac('sha256', $corpo, $secret);
+$recebido = $_SERVER['HTTP_X_WEBHOOK_SIGNATURE'] ?? '';
+
+if (!hash_equals($esperado, $recebido)) {
+    http_response_code(401);
+    exit;
+}
+
+$evento = json_decode($corpo, true);
+http_response_code(200);
+```
+
+</CodeGroup>
+
+<Warning>
+  El secret nunca viaja en las solicitudes. Si se filtra, genera uno nuevo en la pantalla de configuración y guarda. Las próximas entregas pasan a usar el nuevo valor de inmediato.
+</Warning>

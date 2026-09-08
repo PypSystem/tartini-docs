@@ -1,0 +1,101 @@
+---
+title: "Install the Chat Widget on your website"
+sidebarTitle: "Chat Widget"
+description: "Add a support chat to your website and get conversations straight in your team's Inbox."
+---
+
+With the Chat Widget installed, any visitor to your website can open a conversation that arrives straight in the Inbox, alongside your other channels.
+
+<Note>
+  Who activates and configures: Administrator, Company Manager, Area Manager, and Unit Manager. Available on all plans; turning on Tino in the widget requires the Scale plan.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Activate the Chat Widget on a Unit
+
+By default, no Unit has an active widget.
+
+Where to find it: **Configurações > Canais > Chat Widget** (Settings > Channels > Chat Widget).
+
+<Steps>
+  <Step title="Start a new widget">Click **Novo widget** (New widget) and choose the Unit, or click **Ativar** (Activate) directly on the row for the Unit you want.</Step>
+  <Step title="Choose where conversations show up">Check **Usar entidade atual** (Use current entity) to bring the widget's conversations together with your other channels, or **Criar entidade dedicada** (Create dedicated entity) to keep them in a separate Inbox.</Step>
+  <Step title="Give the agent a name">Fill in **Nome do agente** (Agent name), the name that shows to the visitor in the chat header.</Step>
+  <Step title="Activate">Click **Ativar** (Activate).</Step>
+</Steps>
+
+{/* CAPTURA: images/canais/chat-widget-ativar.png | alt: tela de ativação do Chat Widget com as opções de entidade | olhar: a diferença entre entidade atual e entidade dedicada */}
+
+---
+
+## Install the code on your website
+
+Where to find it: inside the Unit's widget, **Chave pública & Integração** (Public key & Integration) section.
+
+<Steps>
+  <Step title="Open the Unit's widget">In the list, click **Gerenciar** (Manage) next to the Unit.</Step>
+  <Step title="Copy the snippet">In the **Chave pública & Integração** section, copy the code under **Snippet de integração** (Integration snippet).</Step>
+  <Step title="Paste it into your website">Ask whoever manages your website to paste this code before the closing `</body>` tag, on every page where the chat should appear.</Step>
+</Steps>
+
+<Note>
+  If your website already has user login, there's an advanced setting to identify who's chatting. Whoever manages your system will find the details next to the snippet, in the **Sistema com login** (System with login) block.
+</Note>
+
+---
+
+## Customize the appearance
+
+<Steps>
+  <Step title="Open Configuração">In the Unit's widget, go to the **Configuração** (Configuration) section.</Step>
+  <Step title="Adjust color, message, and position">Set **Cor primária** (Primary color), **Mensagem de boas-vindas** (Welcome message), and **Posição no site** (Position on site).</Step>
+  <Step title="Choose the button style">Under **Estilo do botão** (Button style), choose between **Bolinha** (Bubble), **Expandido** (Expanded), or **Ícone da marca** (Brand icon).</Step>
+  <Step title="Save">Click **Salvar alterações** (Save changes).</Step>
+</Steps>
+
+{/* CAPTURA: images/canais/chat-widget-preview.png | alt: tela de personalização do widget com o preview ao lado | olhar: como cada ajuste aparece no preview em tempo real */}
+
+<Note>
+  The preview alongside shows the widget as the visitor will see it, including the agent name and the welcome message.
+</Note>
+
+---
+
+## Turn on Tino in the widget
+
+By default, Tino is off on every new widget.
+
+<Steps>
+  <Step title="Choose the transfer departments">In the **Configurações do chat** (Chat settings) section, check under **Setores disponíveis para transferência** (Departments available for transfer) which teams can receive a conversation from Tino.</Step>
+  <Step title="Turn on Tino">Click **Inteligência Artificial deste canal** (Artificial intelligence for this channel) and follow the steps in AI by channel.</Step>
+</Steps>
+
+<Note>Available from the Scale plan onward. See how to set up hours and follow-up in [Turn on Tino for a channel](/en/tino/ia-por-canal).</Note>
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Where do I paste the code on my website?">
+  Before the closing `</body>` tag, on every page where the chat should appear. Copy the snippet in the **Chave pública & Integração** section.
+  </Accordion>
+  <Accordion title="I changed the widget's color and the website didn't update. Why?">
+  The code copied earlier loads the old configuration. Copy the snippet again after saving your changes.
+  </Accordion>
+  <Accordion title="Visitors show up as 'Visitante' instead of the customer's name. Why?">
+  This happens when the website doesn't send the logged-in user's identification. Generate an identity secret in the **Chave pública & Integração** section and set it up with whoever manages your system.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Channels explained" href="/en/canais/canais-explicados">The channels available in Tartini.</Card>
+  <Card title="Turn on Tino for a channel" href="/en/tino/ia-por-canal">Hours, follow-up, and closing for this channel.</Card>
+</CardGroup>

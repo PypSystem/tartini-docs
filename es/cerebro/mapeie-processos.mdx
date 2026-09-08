@@ -1,0 +1,118 @@
+---
+title: "Mapea procesos a partir de las conversaciones"
+sidebarTitle: "Mapeo"
+description: "Construye el playbook de una atención conversando con Quattro, o aprueba los procesos que Tino ya identificó solo."
+---
+
+Mapear un proceso no es completar un formulario: tú conversas con Quattro, que arma el playbook mientras entiende cómo sucede realmente la atención en tu empresa.
+
+<Note>
+  Quién lo ve: Administrador y Gestor de la Empresa. Requiere el plan Scale. La conversación con Quattro consume créditos.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Comienza un proceso nuevo
+
+De forma predeterminada, la lista de Mapeamento muestra los procesos ya mapeados, con un atajo para comenzar uno nuevo.
+
+Dónde está: **Cérebro > Processos > Mapeamento** (Cerebro > Procesos > Mapeo).
+
+<Steps>
+  <Step title="Elige un punto de partida">Haz clic en **Novo processo** (Nuevo proceso) para comenzar desde cero, o en una de las tarjetas de ejemplo, como "2ª via de boleto" o "Reset de senha", para ya comenzar con un mensaje listo.</Step>
+  <Step title="Conversa con Quattro">Describe con tus palabras cómo sucede la atención. Quattro pregunta lo que falte.</Step>
+  <Step title="Sigue la vista previa">Al lado de la conversación, un panel muestra los campos del proceso completándose en tiempo real.</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/mapeamento-nova-sessao.png | alt: Tela de mapeamento com o chat do Quattro à esquerda e a prévia do processo à direita | olhar: os cartões 5W2H sendo preenchidos na prévia */}
+
+---
+
+## Evalúa y publica el proceso
+
+De forma predeterminada, el mapeo solo se considera completo después de la etapa Saídas (Salidas).
+
+<Steps>
+  <Step title="Evalúa la capacidad, si está disponible">Cuando ya existe el paso a paso, haz clic en **Avaliar capacidade** (Evaluar capacidad) para que Quattro mida lo que Tino resuelve en cada etapa, o en **Pular por ora** (Omitir por ahora).</Step>
+  <Step title="Revisa">Haz clic en **Revisar** (o **Revisar e publicar**, Revisar y publicar) para verificar el 5W2H, la cobertura y el paso a paso completos.</Step>
+  <Step title="Ajusta las salidas">Para cada desenlace, acepta, edita o descarta el destino sugerido por Quattro.</Step>
+  <Step title="Publica">Haz clic en **Publicar processo** (Publicar proceso).</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/mapeamento-revisao-final.png | alt: Tela de revisão final do processo com o passo a passo e a seção Revisar saídas | olhar: o botão Publicar processo no rodapé */}
+
+<Note>
+  Guardar sin publicar crea o actualiza el proceso, pero desactivado, y no graba las salidas. Las salidas solo se graban al publicar.
+</Note>
+
+---
+
+## Mira y edita un proceso ya mapeado
+
+Dónde está: **Cérebro > Processos > Mapeamento**, haz clic en cualquier tarjeta de la lista.
+
+<Steps>
+  <Step title="Abre el proceso">Haz clic en la tarjeta del proceso.</Step>
+  <Step title="Elige el tipo de edición">Usa **Editar conteúdo** (Editar contenido) para cambiar solo textos y códigos de etapa, o **Editar com o Quattro** (Editar con Quattro) para cambiar la estructura, agregar, quitar o reordenar etapas.</Step>
+  <Step title="Guarda">Confirma la edición.</Step>
+</Steps>
+
+<Note>
+  Agregar, quitar o reordenar etapas, y modificar puertas y condiciones, solo es posible por la conversación con Quattro. El editor de contenido es solo para el texto que ya existe.
+</Note>
+
+---
+
+## Mira el camino de salidas del proceso
+
+Dónde está: tarjeta del proceso, ícono **Ver fluxo** (Ver flujo), o dentro del detalle del proceso.
+
+Un grafo muestra hacia dónde sigue la conversación en cada desenlace de ese proceso. Es solo lectura: para cambiar las salidas, usa **Editar com o Quattro**.
+
+{/* CAPTURA: images/cerebro/mapeamento-fluxo-processo.png | alt: Grafo de saídas de um processo com os nós de desfecho e as arestas coloridas | olhar: a legenda de cores no topo do grafo */}
+
+---
+
+## Revisa los Descobertas de proceso
+
+Tino también identifica candidatos a proceso solo, a partir de conversaciones reales ya indexadas en el Cérebro o de documentos enviados específicamente para ese análisis.
+
+Dónde está: **Cérebro > Processos > Descobertas** (Cerebro > Procesos > Descubrimientos).
+
+<Steps>
+  <Step title="Envía documentos, si quieres">Arrastra o selecciona hasta 10 archivos para descubrir procesos a partir de ellos.</Step>
+  <Step title="Revisa un candidato">Haz clic en **Abrir mapeamento** (Abrir mapeo) para revisar en detalle, sin descartar ni publicar nada todavía.</Step>
+  <Step title="Aprueba">Haz clic en **Aprovar** (Aprobar) para crear el proceso inactivo, o en **Aprovar e publicar ativo** (Aprobar y publicar activo) para ya ponerlo en operación.</Step>
+  <Step title="O descarta">Haz clic en **Descartar** y confirma.</Step>
+</Steps>
+
+<Note>
+  Enviar un documento en esta pantalla sirve solo para descubrir procesos: el contenido no se indexa en el Cérebro como conocimiento.
+</Note>
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Guardar sin publicar deja a Tino usando el proceso?">
+  No. El proceso queda desactivado hasta ser activado manualmente o publicado por la revisión.
+  </Accordion>
+  <Accordion title="Si abro el mapeo de un candidato y no termino, ¿desaparece de la fila de Descobertas?">
+  No. Abrir el mapeo no descarta ni materializa el candidato. Sigue pendiente hasta que el proceso sea publicado.
+  </Accordion>
+  <Accordion title="¿Las salidas sugeridas por Quattro se guardan junto cuando guardo el proceso?">
+  No. Solo al publicar, en la etapa de revisión, las salidas se graban de hecho.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Procesos explicados" href="/es/cerebro/processos-explicados">Entiende qué es un proceso y cómo lo usa Tino.</Card>
+  <Card title="Organiza procesos en grupos" href="/es/cerebro/grupos-de-processos">Reúne procesos relacionados para usar en campañas.</Card>
+</CardGroup>

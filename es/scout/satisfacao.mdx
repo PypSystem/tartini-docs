@@ -1,0 +1,128 @@
+---
+title: "Sigue la satisfacción de los clientes"
+sidebarTitle: "Satisfacción"
+description: "Consulta la nota que los clientes dieron en la encuesta de satisfacción, dónde varía y las conversaciones detrás de cada nota."
+---
+
+La pantalla Satisfação (Satisfacción) junta la nota que el cliente dio en la encuesta con la lectura del Scout sobre la conversación, para que veas rápido dónde está cayendo la experiencia.
+
+<Note>
+  Todos los roles ven la pantalla en su propio alcance. Activar la encuesta de satisfacción es de la Empresa: solo Administrador y Gestor de la Empresa. Disponible en todos los planes.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Consulta la nota general
+
+De forma predeterminada, la pantalla muestra el alcance y el período elegidos en la barra de alcance, con el mes actual como período inicial.
+
+Dónde está: **Scout > Satisfação**.
+
+<Steps>
+  <Step title="Abre la pantalla">Ve a **Scout > Satisfação**.</Step>
+  <Step title="Lee el csat general">Revisa la nota de 1 a 5 y la variación frente al período anterior.</Step>
+  <Step title="Consulta la frecuencia de notas">En el histograma de abajo, compara cuántas respuestas fueron positivas, neutras y negativas.</Step>
+</Steps>
+
+{/* CAPTURA: images/scout/satisfacao-csat-geral.png | alt: Tela Satisfação com o card csat geral e o histograma de frequência de notas | olhar: a nota em destaque e a régua de 1 a 5 */}
+
+<Note>
+  Una lectura con menos de 5 respuestas aparece como sin base, para no afirmar algo sin base suficiente.
+</Note>
+
+---
+
+## Compara por Unidad y por tipo de atendimiento
+
+<Steps>
+  <Step title="Compara Unidades">En la tarjeta **csat por unidade** (csat por unidad), consulta la nota de cada Unidad del contacto, ordenada por las que tienen más respuestas.</Step>
+  <Step title="Compara por tipo de atendimiento">En la tarjeta **csat por tipo de atendimento** (csat por tipo de atendimiento), compara la nota de conversaciones resueltas por la IA, por el equipo y por handoff.</Step>
+  <Step title="Consulta la distribución">Abre los tres histogramas de frecuencia, uno para IA, uno para equipo y uno para handoff.</Step>
+</Steps>
+
+<Note>
+  La tarjeta **csat do Tino** (csat del Tino) cuenta solo las conversaciones que él resolvió de principio a fin. Una conversación con handoff entra en la lectura de handoff, no en la del Tino ni en la del equipo.
+</Note>
+
+---
+
+## Sigue la evolución en el período
+
+<Steps>
+  <Step title="Elige la granularidad">Alterna entre ver el gráfico por semana o por mes.</Step>
+  <Step title="Lee las tres series">Compara las líneas de IA, equipo y handoff a lo largo del tiempo.</Step>
+  <Step title="Filtra por la nota">Haz clic en una columna del histograma de frecuencia para filtrar la lista de conversaciones por esa nota.</Step>
+</Steps>
+
+{/* CAPTURA: images/scout/satisfacao-evolucao.png | alt: Gráfico csat ao longo do período com as séries IA, equipe e handoff | olhar: os pontos em anel que indicam período sem base */}
+
+<Note>
+  Un punto en anillo es un período vecino sin base suficiente, no una caída real.
+</Note>
+
+---
+
+## Consulta las tasas de envío y respuesta
+
+La **taxa de solicitação** (tasa de solicitud) muestra cuántas invitaciones de encuesta se enviaron por cada atendimiento finalizado. La **taxa de resposta** (tasa de respuesta) muestra cuántos clientes respondieron entre los invitados. Las dos aparecen por canal.
+
+<Note>
+  Las dos tasas cuentan solo WhatsApp y el chat del sitio, los canales en que la encuesta se puede enviar hoy.
+</Note>
+
+---
+
+## Activa la encuesta de satisfacción
+
+De forma predeterminada, la encuesta está apagada hasta que alguien la active en al menos un canal.
+
+Dónde está: tarjeta de aviso en la propia pantalla, o directamente en **Configurações > Atendimento > Pesquisa de Satisfação** (Configuraciones > Atendimiento > Encuesta de Satisfacción).
+
+<Steps>
+  <Step title="Abre la configuración">En la tarjeta **Nenhum canal está enviando a pesquisa** (Ningún canal está enviando la encuesta), haz clic en **Ligar a pesquisa de satisfação** (Activar la encuesta de satisfacción).</Step>
+  <Step title="Configura la encuesta">Activa la encuesta en los canales deseados. Consulta el paso a paso en [Configura la encuesta de satisfacción](/es/atendimento/pesquisa-de-satisfacao).</Step>
+  <Step title="Vuelve a la pantalla">Usa el enlace **voltar ao achado** (volver al hallazgo) para regresar directo a la pantalla Satisfação.</Step>
+</Steps>
+
+---
+
+## Lee las conversaciones detrás de las notas
+
+<Steps>
+  <Step title="Filtra por la nota">Haz clic en una columna del histograma para filtrar la tabla, o alterna entre **pior nota** (peor nota) y **melhor nota** (mejor nota).</Step>
+  <Step title="Lee el comentario">Consulta lo que el cliente escribió, cuando lo haya.</Step>
+  <Step title="Abre la conversación">Haz clic en una fila para abrir la conversación en la [Central de Conversas](/es/inbox/central-de-conversas), en modo lectura.</Step>
+</Steps>
+
+<Note>
+  En alcances de Área o Unidad, esta lista muestra toda la empresa, no solo el alcance elegido. La pantalla avisa esto arriba de la tabla.
+</Note>
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Por qué una Unidad aparece sin base?">
+  Menos de 5 respuestas de la encuesta en esa Unidad, en el período elegido.
+  </Accordion>
+  <Accordion title="¿La lista de conversaciones cambia cuando elijo una Unidad?">
+  No. Esa lista siempre muestra toda la empresa. Solo las tarjetas de arriba siguen el alcance elegido en la barra de alcance.
+  </Accordion>
+  <Accordion title="¿El csat del Tino cuenta las conversaciones que él empezó y pasó al equipo?">
+  No. Solo entran las conversaciones que el Tino resolvió de principio a fin, sin handoff.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Configura la encuesta de satisfacción" href="/es/atendimento/pesquisa-de-satisfacao">Activa la encuesta por canal.</Card>
+  <Card title="Scout explicado" href="/es/scout/o-scout-explicado">Roles, planes y el menú del Scout.</Card>
+  <Card title="Usa la Central de Conversas" href="/es/inbox/central-de-conversas">Abre cualquier conversación en modo lectura.</Card>
+  <Card title="Lee las evaluaciones del Scout" href="/es/scout/avaliacoes">El análisis completo de cada conversación.</Card>
+</CardGroup>

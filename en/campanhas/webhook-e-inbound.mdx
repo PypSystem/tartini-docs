@@ -1,0 +1,117 @@
+---
+title: "Trigger campaigns by webhook or by incoming message"
+sidebarTitle: "Webhook and inbound"
+description: "Connect your system so every new contact enters the campaign on its own, or activate Tino when someone writes a keyword."
+---
+
+Not every campaign starts with a ready-made list. Two other sources put Tino to work without you having to upload a file: your own system notifying each new contact, or a word the customer writes first.
+
+<Note>
+  Campaigns is a feature of the Scale and Enterprise plans. Who configures it: Administrator (Company), Company Manager, Area Manager, and Unit Manager.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Webhook campaign
+
+A webhook campaign lets your system, such as your CRM, e-commerce, or billing platform, notify Tartini every time there's a new contact to reach out to, for example an abandoned cart. Every contact sent already enters the campaign, with no further step from you.
+
+Where to find it: step 2 of the wizard, **Meu sistema envia** (My system sends) source.
+
+<Steps>
+  <Step title="Choose the source">In the **Público** (Audience) step, check **Meu sistema envia**.</Step>
+  <Step title="Continue the wizard">There's nothing to fill in for this source besides the rest of the campaign (mission, channel, hours). The URL only exists after you create it.</Step>
+  <Step title="Create the campaign">When you click **Criar campanha** (Create campaign), a **Conecte seu sistema** (Connect your system) modal shows up with the webhook URL and the secret token.</Step>
+  <Step title="Copy the URL and the token">Use the **copiar** (copy) buttons next to each one. The token stays hidden by default; click **revelar** (reveal) to see it.</Step>
+  <Step title="Hand it to your technical team">Send the URL and the token to whoever sets up your system. They need to send a POST to that URL for every new contact, with the name and phone in the message body.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/webhook-conecte-seu-sistema.png | alt: Modal Conecte seu sistema com a URL do webhook, o token oculto e o exemplo de payload | olhar: os botões copiar da URL e do token */}
+
+<Note>
+  The URL and the token also stay available later, at any time, on the **Detalhes** (Details) tab of the campaign dashboard. You don't need to save the creation modal.
+</Note>
+
+The payload example shown in the modal and on the **Detalhes** tab shows the expected format: the contact's name and phone in one block, and any other data (like the cart value) in a second block, which becomes context data available for Tino to use in the conversation. The technical details of signing and the full payload format are in the developers tab.
+
+### Choose when Tino reaches out
+
+<Steps>
+  <Step title="Immediate">**Disparar imediatamente ao receber** (Trigger immediately on receipt) reaches out to each contact as soon as it arrives, 24 hours a day.</Step>
+  <Step title="Within the window">**Somente dentro da janela de horários** (Only within the time window) waits for the next configured time slot if the contact arrives outside it.</Step>
+</Steps>
+
+<Note>
+  A contact that arrives outside the time window sits in the **Fila de Eventos** (Event queue), on the tab of the same name in the campaign dashboard, and is processed at the next available time slot, with no action from you.
+</Note>
+
+### Rotate the token if needed
+
+If the token leaks or you want to invalidate the old URL, regenerate the token on the **Detalhes** tab of the campaign dashboard.
+
+<Warning>
+  Regenerating the token drops the old URL immediately. Update the URL in every system that uses this webhook before regenerating, so you don't lose new contacts.
+</Warning>
+
+---
+
+## Keyword campaign (inbound)
+
+A keyword campaign activates Tino when a contact writes something that matches a pattern you define, for example a word tied to a promotion.
+
+Where to find it: step 2 of the wizard, **O cliente chega até mim** (The customer comes to me) source.
+
+<Steps>
+  <Step title="Choose the source">In the **Público** step, check **O cliente chega até mim**.</Step>
+  <Step title="Add the keywords">Type each word and press Enter. Remove one with the **X** next to it.</Step>
+  <Step title="Choose the match type">**Contém** (Contains, default), **Igual a** (Equals), **Começa com** (Starts with), **Termina com** (Ends with), or **Regex**, for anyone who needs a more advanced pattern.</Step>
+  <Step title="Set the tag applied to the contact">Choose a color and write the tag's text, for example `BF25`. It tags the contact as soon as they write the keyword.</Step>
+  <Step title="Adjust the fine-grained options">Check **Diferenciar maiúsculas** (Case-sensitive) if you want the match to be case-sensitive. **Aplicar somente na primeira mensagem** (Apply only to the first message) is checked by default, so the trigger doesn't repeat on every message from the contact.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/inbound-palavras-chave.png | alt: Passo Público com os chips de palavras-chave, o tipo de correspondência e a tag colorida | olhar: os chips de palavras-chave e o seletor de cor da tag */}
+
+Once created, the campaign starts **Ativa** (Active) right away, listening for the configured words. There's no external connection step for this source: everything happens inside Tartini.
+
+---
+
+## Where to track it after it's created
+
+- Campaign dashboard, **Detalhes** tab: the webhook's URL and token, or the keyword's pattern and tag.
+- Campaign dashboard, **Fila de Eventos** (Event queue) tab (webhook) or **Execuções** (Executions) tab (keyword): one record per contact that entered.
+- Inbox: conversations opened by a campaign show a **Campanha** (Campaign) chip.
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="I lost the webhook URL, how do I get it back?">
+  Open the campaign dashboard, **Detalhes** tab. The URL and the copy button are still there.
+  </Accordion>
+  <Accordion title="What happens to a contact that arrives outside the time window?">
+  It enters the **Fila de Eventos** and is processed as soon as the window opens again, with no action from you.
+  </Accordion>
+  <Accordion title="Can I cancel an event that's waiting in the queue?">
+  Not through the interface today. It waits for the next available time slot.
+  </Accordion>
+  <Accordion title="Does the keyword campaign repeat for every message from the same contact?">
+  Only if you uncheck **Aplicar somente na primeira mensagem**, which is checked by default.
+  </Accordion>
+  <Accordion title="Can I switch from webhook to list after creating the campaign?">
+  No. The source of the contacts is set at creation and doesn't change when editing.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Create a campaign" href="/en/campanhas/crie-uma-campanha">The wizard in three steps.</Card>
+  <Card title="Receive events in your system" href="/en/integracoes/webhooks">Other Tartini webhooks.</Card>
+  <Card title="Track the results" href="/en/campanhas/resultados">Where to see conversations from each source.</Card>
+  <Card title="Manage contacts" href="/en/inbox/contatos">The tag applied by a keyword campaign.</Card>
+</CardGroup>

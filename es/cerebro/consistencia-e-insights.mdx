@@ -1,0 +1,102 @@
+---
+title: "Haz seguimiento del Catálogo de procesos"
+sidebarTitle: "Catálogo"
+description: "Mira qué está roto en el registro de tus procesos, sin depender de conversaciones, y corrígelo con un clic."
+---
+
+El Catálogo audita la estructura de tus procesos mapeados, salidas sin destino, disparadores repetidos, procesos sin paso a paso, y muestra el próximo paso para cada problema encontrado.
+
+<Note>
+  Quién lo ve: Administrador y Gestor de la Empresa. Requiere el plan Scale.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Mira los hallazgos del Catálogo
+
+De forma predeterminada, la pantalla ya carga con el informe más reciente, recalculado en cada apertura.
+
+Dónde está: **Cérebro > Processos > Catálogo** (Cerebro > Procesos > Catálogo).
+
+Los hallazgos aparecen agrupados por gravedad, de los más graves a los más leves. Cada uno muestra el tipo de problema, el proceso relacionado, una explicación de qué está mal y cómo resolverlo.
+
+{/* CAPTURA: images/cerebro/catalogo-lista-achados.png | alt: Tela Catálogo com achados agrupados por gravidade Alta, Média e Baixa | olhar: os badges de gravidade e o botão de conserto de cada achado */}
+
+<Note>
+  La pantalla muestra hasta 30 hallazgos a la vez, aunque haya más. Usa **Carregar mais** (Cargar más) para ver el resto.
+</Note>
+
+---
+
+## Filtra y busca un hallazgo
+
+Dónde está: **Cérebro > Processos > Catálogo**, barra de filtros arriba.
+
+<Steps>
+  <Step title="Filtra por gravedad">Marca **Alta**, **Média** (Media) o **Baixa** (Baja), una o más a la vez.</Step>
+  <Step title="Filtra por tipo">Elige un tipo específico, como "saída sem destino" o "avaliação desatualizada".</Step>
+  <Step title="Busca por proceso">Escribe en el campo **Buscar processo...** (Buscar proceso...).</Step>
+</Steps>
+
+---
+
+## Corrige un hallazgo
+
+Cada hallazgo tiene un botón de reparación que ya lleva a la pantalla correcta para resolver el problema.
+
+Dónde está: **Cérebro > Processos > Catálogo**, dentro de cada tarjeta de hallazgo.
+
+<Steps>
+  <Step title="Lee el problema">Revisa el texto del problema y la explicación de cómo resolverlo.</Step>
+  <Step title="Haz clic en el botón de reparación">La etiqueta cambia según el tipo, por ejemplo "Definir o próximo passo em Fluxo" o "Reescrever o passo a passo em Mapeamento".</Step>
+  <Step title="Corrige en la pantalla de destino">Llegas a la pantalla correcta, con un aviso que explica por qué llegaste ahí y un enlace para volver.</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/catalogo-botao-conserto.png | alt: Cartão de achado com o texto "como resolver" e o botão de conserto | olhar: o link "ver no diagnóstico" ao lado do botão de conserto */}
+
+<Note>
+  El enlace "ver no diagnóstico" (ver en el diagnóstico) es solo evidencia: muestra el impacto del problema en conversaciones reales, en el Scout. Quien resuelve el problema siempre es el botón de reparación.
+</Note>
+
+---
+
+## Vuelve a evaluar el Catálogo
+
+El informe siempre se recalcula al abrir la pantalla. El botón **Reavaliar** (Reevaluar) solo rehace esa misma consulta.
+
+<Steps>
+  <Step title="Haz clic en Reavaliar">El ícono gira mientras se rehace el informe.</Step>
+</Steps>
+
+---
+
+## El puente hacia el diagnóstico en el Scout
+
+El Catálogo mira solo el registro, sin depender de conversaciones reales. Para ver cómo se desempeñó cada proceso de hecho en la atención, el diagnóstico está en el Scout, accesible por el enlace "ver no diagnóstico" de cualquier hallazgo con proceso asociado.
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿'Reavaliar' consume créditos?">
+  {/* CONFIRMAR: o inventário não encontrou indicação de custo de IA nesta tela; o relatório parece ser um cálculo determinístico sobre o cadastro, sem chamada de modelo. */}
+  </Accordion>
+  <Accordion title="¿Por qué solo veo 30 hallazgos aunque haya más?">
+  Es un tope de visualización, no un límite real. Haz clic en **Carregar mais** para ver el resto.
+  </Accordion>
+  <Accordion title="¿Dónde está la nota de adherencia o de uso del proceso aquí?">
+  No está en el Catálogo. Eso es ejecución, y vive en el diagnóstico del Scout.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Mapea procesos a partir de las conversaciones" href="/es/cerebro/mapeie-processos">Corrige el paso a paso directamente en el origen.</Card>
+  <Card title="Mira la adherencia a los procesos" href="/es/scout/processos-e-aderencia">Haz seguimiento, en el Scout, de lo que Tino resolvió siguiendo cada proceso.</Card>
+</CardGroup>

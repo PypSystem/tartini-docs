@@ -1,0 +1,111 @@
+---
+title: "Set the AI's hours and time zone"
+sidebarTitle: "Availability"
+description: "Set the company's time zone and business hours to guide when Tino is operating."
+---
+
+Setting business hours makes it clear, day by day, when your company is operating, on the correct time base.
+
+<Note>
+  Who sees this: Administrator and Company Manager. Requires the Scale plan.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Set the time zone
+
+By default, the time zone is São Paulo (GMT-3).
+
+Where to find it: **Cérebro > Operações > Disponibilidade** (Brain > Operations > Availability), **Fuso Horário** (Time Zone) card.
+
+<Steps>
+  <Step title="Open the selector">Go to the **Fuso Horário** card.</Step>
+  <Step title="Choose the time zone">Select from the available options, such as São Paulo, Manaus, or New York.</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/disponibilidade-fuso.png | alt: Cartão Fuso Horário com o seletor aberto mostrando as opções de cidade | olhar: o badge com o fuso atual formatado */}
+
+<Note>
+  The time zone change saves as soon as you choose an option; you don't need a separate Save button.
+</Note>
+
+---
+
+## Set hours for each day
+
+By default, no hours are configured.
+
+Where to find it: **Cérebro > Operações > Disponibilidade**, **Horários de Atendimento** (Business Hours) card.
+
+<Steps>
+  <Step title="Choose a day">Click the day of the week you want to configure.</Step>
+  <Step title="Add a time slot">Click **Adicionar horário** (Add time slot) and fill in the start and end times.</Step>
+  <Step title="Repeat if needed">Add as many time slots as you want on the same day, for example morning and afternoon.</Step>
+  <Step title="Save">Click **Salvar** (Save).</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/disponibilidade-horarios-dia.png | alt: Card do dia Segunda-feira expandido com duas faixas de horário preenchidas | olhar: os botões Adicionar horário e Salvar no rodapé do card */}
+
+<Note>
+  Only one day stays open for editing at a time. Switching days with pending changes is blocked until you save or cancel.
+</Note>
+
+---
+
+## Copy hours across days
+
+After configuring one day, you can copy the same hours to the other days without retyping them.
+
+Where to find it: the card for a day that already has hours set, **Seg-Sex** (Mon-Fri) and **Todos** (All) buttons.
+
+<Steps>
+  <Step title="Choose the target">Click **Seg-Sex** to copy Monday through Friday, or **Todos** for all seven days.</Step>
+  <Step title="Wait for the copy to finish">An indicator shows progress while the hours are copied.</Step>
+</Steps>
+
+<Note>
+  Copying replaces all existing hours on the target days with the hours from the source day. There's no way to copy to a single specific day, only Seg-Sex or Todos.
+</Note>
+
+---
+
+## Remove a time slot
+
+Where to find it: inside the expanded day, next to each time slot.
+
+<Steps>
+  <Step title="Open the day">Click the day of the week with the time slot you want to remove.</Step>
+  <Step title="Remove the slot">Click the trash icon next to the slot.</Step>
+  <Step title="Save">Click **Salvar**.</Step>
+</Steps>
+
+<Note>
+  Saving is blocked while any slot for the day has a blank start or end time.
+</Note>
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Can I have more than one time slot on the same day?">
+  Yes, add as many as you want with the Add time slot button.
+  </Accordion>
+  <Accordion title="Does the time zone affect each slot individually?">
+  No. There's a single time zone for the whole account, saved separately from the time slots.
+  </Accordion>
+  <Accordion title="Can I copy one day's hours to just one other specific day?">
+  No. Copying only has two targets: Seg-Sex (all business days) or Todos (all seven days).
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Set up routing" href="/en/cerebro/roteamento">Define when Tino transfers to a person.</Card>
+  <Card title="Log a temporary context" href="/en/cerebro/contexto-situacional">Record situations outside standard hours.</Card>
+</CardGroup>

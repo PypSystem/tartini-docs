@@ -1,0 +1,95 @@
+---
+title: "Best Practices for Writing AI Knowledge"
+sidebarTitle: "Writing for the AI"
+description: "Which source to use for each type of information, how to write so the AI gets it right, and how to keep the knowledge base current without wasting credits."
+---
+
+Tino and Copilot answer with what's in the Cérebro's Properties. A small, well-written knowledge base performs better than a large, confusing one. This guide explains what to register, in what format, and how to check whether the AI understood it.
+
+<Note>
+  Properties are located in **Cérebro > Propriedades** (Cérebro > Properties), and only the Administrator and the Company Manager can edit them. Uploading documents, creating questions and answers, and indexing websites consumes AI credits.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Choose the right source for each type of information
+
+| Information | Source | Why |
+|---|---|---|
+| The exact answer to a question that repeats: delivery time, exchange policy, payment methods | **Questions and Answers** | The AI uses the answer as written. It's the most direct way to train it. |
+| Manuals, catalogs, internal policies, price tables | **Documents** (PDF, DOCX, XLSX, CSV, TXT, or MD) | The AI reads the entire file. Good for long content that already exists. |
+| Pages on your website that change over time: help, products, blog | **Websites** | The AI indexes the pages you choose, and you add or re-index them when the website changes. |
+
+Start with your customers' ten most frequent questions, in Questions and Answers. Then upload the documents your team consults to answer customers. Finally, sync the website pages that are worth it.
+
+---
+
+## Write for the AI, not for the customer
+
+- **One question, one answer.** One pair per question. "What's the delivery time to the South?" works better than a generic question about deliveries.
+- **Answer with the fact, not the promise.** "We deliver within 5 business days to the South and Southeast" instead of "we deliver fast".
+- **Write the question the way the customer writes it.** With the words they use, misspellings included.
+- **Avoid contradictions between sources.** If the PDF says one deadline and the Q&A says another, the AI might pick either one. Update both.
+- **One document per topic.** An 80-page catalog with everything crammed in is harder to consult than four smaller documents.
+
+---
+
+## Public or private
+
+Every source has an audience. **Conhecimento Público** (Public knowledge) is what Tino uses when talking to a customer. **Conhecimento Privado** (Private knowledge) is what only Copilot uses, to support the agent. Internal information, like margins, negotiation scripts, or guidance for the team, stays private.
+
+<Note>
+  The public knowledge option is part of the plans that include Tino. On Essential, every source is available to Copilot.
+</Note>
+
+---
+
+## Websites: map first, index what matters
+
+Mapping a website's pages doesn't cost credits. Indexing does. When syncing a website, map it, look at the list of pages, and select only the ones that answer customer questions. A store doesn't need to index its recruitment page. Above fifty pages at once, the screen asks for confirmation: indexing takes longer and consumes more credits.
+
+When the website changes, use **Adicionar páginas** (Add pages) on the already-indexed website, or **Reindexar** (Re-index) to replace the old content.
+
+---
+
+## Check whether the AI understood
+
+After indexing, the list shows the **Tino aprendeu** (Tino learned) card with a summary of what the AI extracted and the **Testar conhecimentos adquiridos** (Test what it learned) button. Use it: ask what a customer would ask and check whether the answer comes back right. See [Test what the AI learned](/en/cerebro/teste-o-conhecimento).
+
+Tino also generates **Descobertas** (Discoveries) from the sources: suggested guidelines, clarifications, and process candidates. Review them before accepting. See [Use knowledge base intelligence](/en/cerebro/inteligencia-da-base).
+
+---
+
+## Keep the knowledge base current
+
+- When a price, deadline, or policy changes, update the source the same day. The AI doesn't know what hasn't been updated.
+- Delete what has expired. An old promotion left in the base becomes a broken promise.
+- For anything temporary, use **Contexto Situacional** (Situational Context) instead of a source: it has an expiration date and disappears on its own. See [Provide temporary context](/en/cerebro/contexto-situacional).
+- Read Tino's wrong answers in **Por que ela disse isso** (Why it said that) and fix the source it used, not the answer.
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="How many documents can I upload?">
+  Up to ten files per upload, up to 30 MB each. There's no limit on sources in the knowledge base; what exists is the credit cost of each indexing.
+  </Accordion>
+  <Accordion title="Does the AI read spreadsheets?">
+  Yes, XLSX and CSV. Prefer a clean table, with a header in the first row and one piece of information per column.
+  </Accordion>
+  <Accordion title="Do I need to re-upload a document that changed?">
+  Yes. Delete the old one and upload the new one. For websites, use **Reindexar** (Re-index).
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Teach the AI with questions and answers" href="/en/cerebro/perguntas-e-respostas">The most direct way to train it.</Card>
+  <Card title="Teach the AI with your website" href="/en/cerebro/sites">Map, choose, and index pages.</Card>
+</CardGroup>

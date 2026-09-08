@@ -1,0 +1,87 @@
+---
+title: "Connect external tools to the AI"
+sidebarTitle: "Connectors"
+description: "Give Tino access to your calendar, your CRM, or your system so he can look things up and take action during the conversation."
+---
+
+With a connector, Tino stops just replying and starts acting: he checks the calendar and books a time, opens a deal in the CRM, looks up an order in your system. Connectors live under **Configurações > Integrações > Conectores** (Settings > Integrations > Connectors).
+
+<Note>
+  Only Administrator can see this screen. Connectors are part of the Scale and Enterprise plans. For Tino to use a connector's tools, it needs to be linked to a process in the Cérebro (the company's brain).
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Connect a ready-made integration
+
+By default no integration is connected. The **Biblioteca de integrações** (Integration library) section lists the ready-made ones: Google Calendar, RD Station CRM, Calendly, Pipedrive, Notion, Atlassian, Linear, monday.com, ClickUp, Stripe, and Canva.
+
+<Steps>
+  <Step title="Choose the integration">Under **Configurações > Integrações > Conectores**, find the card in the **Biblioteca de integrações**, and click **Conectar** (Connect).</Step>
+  <Step title="Authorize on the service">You're taken to the service's site to authorize access. When you come back, the screen confirms with "Integração conectada com sucesso!" and opens the connector's detail.</Step>
+  <Step title="Check the tools">In the detail view, the **Ferramentas** (Tools) section lists what Tino can do with that integration. Turn each tool on or off.</Step>
+</Steps>
+
+{/* CAPTURA: images/integracoes/conectores-biblioteca.png | alt: Tela Conectores com a seção Conectados e a Biblioteca de integrações | olhar: o card do Google Calendar com o botão Conectar */}
+
+<Note>
+  When authorization expires or is revoked on the service, the card shows **Reconectar** (Reconnect) and Tino stops using the tools until you reconnect.
+</Note>
+
+---
+
+## Connect a server of your own
+
+If your company has its own MCP server, the **Conector próprio (MCP)** (Custom connector) card connects by address.
+
+<Steps>
+  <Step title="Open the form">Click **Configurar** (Set up) on the **Conector próprio (MCP)** card.</Step>
+  <Step title="Fill in the configuration">Provide the **Nome** (Name), the **URL do servidor** (Server URL) (starting with http or https), the **Transporte** (Transport), and the **Autenticação** (Authentication). With an API key or token, paste the value in the field that appears.</Step>
+  <Step title="Create and test">Click **Criar e testar** (Create and test). The second step tests the connection and discovers the tools on its own; use **Testar conexão** (Test connection) and **Descobrir ferramentas** (Discover tools) to repeat it. Click **Concluir** (Finish).</Step>
+</Steps>
+
+<Tip>
+  Ask whoever maintains the server at your company for the address and authentication type. Without it, the connection test fails.
+</Tip>
+
+---
+
+## Adjust the tools
+
+In the connector's detail view, each tool has a switch to enable it and a detail with the description and the **Timeout (ms)**. On a custom connector, the description is editable: it's the text Tino reads to decide when to use the tool, so describe what it does and when it's worth calling. Click **Salvar alterações** (Save changes).
+
+The **Usado pelos processos** (Used by processes) section shows which processes use the connector. While it's empty, Tino doesn't use any of its tools: link the connector to a process. See [Organize processes into groups](/en/cerebro/grupos-de-processos).
+
+---
+
+## Turn off or remove
+
+- Under **Detalhes** (Details), the **Status** switch sets the connector to **Inativo** (Inactive) without deleting anything. Inactive connectors aren't available to Tino.
+- **Desconectar** (Disconnect) (ready-made integration) or **Excluir** (Delete) (custom connector) removes the connector for good, after confirming.
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="I connected the integration and Tino isn't using it.">
+  Check the **Usado pelos processos** section. Tino only uses tools linked to processes. Also check whether the tools are enabled and whether the connector is active.
+  </Accordion>
+  <Accordion title="The card says Reconectar.">
+  Authorization on the service expired or was revoked. Click **Reconectar** and authorize again.
+  </Accordion>
+  <Accordion title="Do connectors consume credits?">
+  Tool usage happens inside Tino's conversations, which consume AI credits. {/* CONFIRMAR: se a chamada de ferramenta tem custo próprio além da conversa */}
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Processes explained" href="/en/cerebro/processos-explicados">Where the tools come into action.</Card>
+  <Card title="Receive events in your system" href="/en/integracoes/webhooks">The reverse path: Tartini notifies your system.</Card>
+</CardGroup>

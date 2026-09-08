@@ -1,0 +1,89 @@
+---
+title: "Processes explained"
+sidebarTitle: "Processes"
+description: "Understand what a mapped process is, how Tino uses this playbook, and how to track whether it's being followed."
+---
+
+A process is the playbook for one type of service: how your company resolves a request for a duplicate boleto, a refund, or a scheduling, step by step. Once mapped, it becomes the script Tino follows in real conversations.
+
+<Note>
+  Who sees this: Administrator and Company Manager. The entire Processes area requires the Scale plan.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## What a process is
+
+Each process brings together:
+
+- **5W2H**: the what, why, who, when, where, and how much (priority) of that service.
+- **Passo a passo** (Step by step): the steps Tino follows, with the text it sends at each one.
+- **Saídas** (Outputs): where the conversation goes when the process ends, for each possible outcome (Concluído (Completed), Parcial (Partial), Falhou (Failed), or Faltou dado (Missing data)).
+- **Cobertura do Tino** (Tino's Coverage): how much of that process Tino resolves on its own, calculated step by step.
+
+A mapped process only takes effect in service once it's active. Processes created through automatic discovery start out inactive, unless you choose to publish them already active.
+
+---
+
+## The Processes submenu, in screen order
+
+Where to find it: **Cérebro > Processos** (Brain > Processes).
+
+1. **Mapeamento** (Mapping): lists every process already mapped and is the entry point for creating a new one, by talking with the mapping agent.
+2. **Descobertas** (Discoveries): queue of process candidates that Tino identified on its own, from real conversations or uploaded documents.
+3. **Grupos** (Groups): sets of processes with their own output path, used by campaigns.
+4. **Catálogo** (Catalog): an audit of the process records, independent of conversations, showing structural problems and how to fix them.
+
+{/* CAPTURA: images/cerebro/processos-submenu.png | alt: Sidebar do Cérebro com a seção Processos expandida mostrando Mapeamento, Descobertas, Grupos e Catálogo | olhar: o badge de contagem em Descobertas */}
+
+---
+
+## How Tino uses a mapped process
+
+During service, Tino follows the step-by-step of the process that matches the customer's request. At each step, it uses the text set in the mapping, or writes the message on its own when the script doesn't define fixed text. At the end, it follows the output set for that outcome, or returns to triage if no output was defined.
+
+The one who puts the process in writing with you is **Quattro**, Tartini's fourth agent. You explain, in your own words, how service happens today; Quattro asks what's missing and builds the process, with steps, transitions, and outputs. A step that checks one of your systems is included too: you authorize it, and the AI performs the check during service. Nothing it builds takes effect without your approval. Once published, the process becomes the playbook Tino follows in real conversations, and the yardstick Scout uses to measure each one.
+
+---
+
+## How Scout tracks adherence
+
+Once a process is live, Scout audits real conversations against what was mapped and shows what Tino resolved on its own, where it needed help, and where the planned process didn't match what actually happened. This execution analysis lives in Scout, outside the Cérebro.
+
+---
+
+## Where each task points to
+
+<CardGroup cols={2}>
+  <Card title="Map processes from conversations" href="/en/cerebro/mapeie-processos">Build a process by talking with Quattro and review the automatic discoveries.</Card>
+  <Card title="Organize processes into groups" href="/en/cerebro/grupos-de-processos">Bring related processes together for use in campaigns.</Card>
+  <Card title="Track the process Catalog" href="/en/cerebro/consistencia-e-insights">See what's broken in the process records.</Card>
+  <Card title="See adherence to the processes" href="/en/scout/processos-e-aderencia">Track, in Scout, what Tino resolved by following each process.</Card>
+</CardGroup>
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Why does 'Quattro' appear sometimes and 'Tino' other times?">
+  Quattro is the one who leads the mapping conversation with you. Tino is the one who actually serves the customer, following the process once it's published.
+  </Accordion>
+  <Accordion title="What does a mapped process with no steps show as?">
+  It shows as "Sem playbook", different from a process with 0% coverage. Finish the mapping so Tino can run it.
+  </Accordion>
+  <Accordion title="Where can I see whether Tino is actually following the mapped processes?">
+  In Scout, on the process adherence screen, outside the Cérebro.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Map processes from conversations" href="/en/cerebro/mapeie-processos">Build the playbook for each type of service.</Card>
+  <Card title="The Cérebro explained" href="/en/cerebro/o-cerebro-explicado">Understand the other parts of the Cérebro.</Card>
+</CardGroup>

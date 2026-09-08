@@ -1,0 +1,139 @@
+---
+title: "Crea reglas de conformidad"
+sidebarTitle: "Conformidad"
+description: "Define las reglas de seguridad y política que Tino respeta en toda conversación, además de las buenas prácticas nativas de Tartini."
+---
+
+Conformidade (Conformidad) reúne las reglas de seguridad y política de tu empresa que Tino sigue siempre, como pedir una confirmación antes de tratar datos sensibles.
+
+<Note>
+  Quién lo ve: Administrador y Gestor de la Empresa. Disponible en todos los planes.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Crea una regla
+
+Por defecto, una regla nueva nace activa y con el modo de cumplimiento más estricto en los dos tipos de conversación.
+
+Dónde está: **Cérebro > Personalidade > Conformidade** (Cérebro > Personalidad > Conformidad).
+
+<Steps>
+  <Step title="Abre el formulario">Haz clic en **Adicionar regra** (Agregar regla).</Step>
+  <Step title="Escribe el título y el texto">Describe la regla como se la explicarías a un agente nuevo, por ejemplo "Verificación de titularidad".</Step>
+  <Step title="Elige los modos">Define cómo se cumple la regla en **Receptivo** y en **Ativo** (Activo).</Step>
+  <Step title="Guarda">Haz clic en **Adicionar** (Agregar).</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/conformidade-criar-regra.png | alt: Formulário de nova regra de conformidade com os dois seletores de modo, Receptivo e Ativo | olhar: os seletores de modo destacados em âmbar quando dispensam verificação */}
+
+<Note>
+  Toda regla vale siempre en los dos tipos de conversación: Receptivo (el cliente buscó a la empresa) y Ativo (Activo; la empresa buscó al cliente). Lo que cambia entre ellos es solo el modo de cumplimiento, nunca si la regla vale o no.
+</Note>
+
+---
+
+## Entiende los cuatro modos de cumplimiento
+
+| Modo | Qué significa |
+|---|---|
+| Cumprir como está escrito (Cumplir tal como está escrito) | Tino sigue el texto de la regla y nada más. Es el modo predeterminado. |
+| Perguntar e confirmar (Preguntar y confirmar) | Antes de tratar el asunto, Tino pide un dato de verificación y espera la respuesta. |
+| Não fornecer (No proporcionar) | Tino nunca proporciona la información por mensaje, bajo ninguna circunstancia. |
+| A origem do contato já identifica (El origen del contacto ya identifica) | Tino omite la verificación porque el contacto llegó desde tu base ya identificado. |
+
+Dónde está: **Cérebro > Personalidade > Conformidade**, enlace **O que significa cada modo de cumprimento** (Qué significa cada modo de cumplimiento), encima de la lista de reglas.
+
+<Note>
+  Solo el modo "A origem do contato já identifica" (El origen del contacto ya identifica) exige tu confirmación explícita, porque es el único que omite una verificación.
+</Note>
+
+---
+
+## Edita una regla vigente
+
+Dónde está: **Cérebro > Personalidade > Conformidade**, haz clic en cualquier fila de la tabla **Regras no ar** (Reglas vigentes).
+
+<Steps>
+  <Step title="Abre la regla">Haz clic en la fila de la regla que quieras modificar.</Step>
+  <Step title="Ajusta el texto o los modos">Modifica el título, el cuerpo, el interruptor Ativo/Inativo (Activo/Inactivo) y los selectores de modo.</Step>
+  <Step title="Guarda">Haz clic en **Salvar** (Guardar).</Step>
+</Steps>
+
+<Note>
+  Si solo cambias el texto, sin tocar los selectores de modo, Tino relee la regla en unos segundos y propone los modos de nuevo, lo que aparece como pendiente hasta que confirmes. Si cambias los modos manualmente, la elección vale de inmediato y no se sobrescribe con una relectura.
+</Note>
+
+---
+
+## Revisa los hallazgos de Tino
+
+Tino lee los documentos del Cérebro y trae aquí las reglas de conformidad que encuentra por su cuenta. Ninguna vale en la atención hasta ser aprobada.
+
+Dónde está: **Cérebro > Personalidade > Conformidade**, bloque de hallazgos, encima de la lista de reglas.
+
+<Steps>
+  <Step title="Lee el hallazgo">Revisa el título, el cuerpo y, cuando exista, el origen en el Cérebro.</Step>
+  <Step title="Decide por elemento">Haz clic en el ícono de aprobar, editar o descartar en cada hallazgo.</Step>
+  <Step title="Aprueba en lote, si quieres">Usa **Aprovar as N de rotina** (Aprobar las N de rutina) para aceptar de una vez los hallazgos que no requieren tu confirmación.</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/conformidade-descobertas.png | alt: Bloco de descobertas de conformidade com colunas Receptivo e Ativo e o botão Aprovar as N de rotina | olhar: o badge "precisa de você" nas descobertas que exigem confirmação */}
+
+<Note>
+  Un hallazgo marcado "precisa de você" (necesita de ti) propone omitir la verificación en algún tipo de conversación. Hasta que confirmes, la regla se cumple al pie de la letra.
+</Note>
+
+---
+
+## Usa una plantilla lista
+
+Dónde está: **Cérebro > Personalidade > Conformidade**, bloque **Modelos que outras empresas costumam adotar** (Plantillas que suelen adoptar otras empresas), con categorías como Geral (General), Indústria (Industria), Comércio (Comercio) y Serviços (Servicios).
+
+<Steps>
+  <Step title="Elige una plantilla">Haz clic en una plantilla sugerida, o en **Ver todos** (Ver todo).</Step>
+  <Step title="Ajusta antes de guardar">El formulario se abre completado con el texto de la plantilla.</Step>
+  <Step title="Guarda">Haz clic en **Adicionar** (Agregar).</Step>
+</Steps>
+
+---
+
+## Elimina una regla
+
+Dónde está: dentro de la edición de la regla, en la tabla **Regras no ar**.
+
+<Steps>
+  <Step title="Abre la regla">Haz clic en la fila de la regla.</Step>
+  <Step title="Haz clic en Excluir (Eliminar)">Confirma en la ventana que se abre.</Step>
+</Steps>
+
+<Note>
+  Dejar una regla inactiva es reversible y conserva la lectura que Tino ya hizo. Eliminar borra las dos cosas: si vuelves a crear la regla después, pasa por una lectura nueva.
+</Note>
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Puedo hacer que una regla valga solo en la atención activa y no en la receptiva?">
+  No. Toda regla vale siempre en los dos tipos de conversación. Lo que controlas es cómo se cumple en cada uno, incluso omitiendo la verificación en uno de ellos.
+  </Accordion>
+  <Accordion title="Si edito el texto de una regla, ¿deja de valer hasta que confirme de nuevo?">
+  No. La regla sigue valiendo según la última lectura aprobada mientras Tino relee en segundo plano. Solo cambia cuando confirmas la nueva lectura.
+  </Accordion>
+  <Accordion title="¿Puedo ver el texto exacto que recibe Tino?">
+  Sí, en el enlace **O que significa cada modo de cumprimento** (Qué significa cada modo de cumplimiento), detrás de **Ver o texto exato que Tino recebe** (Ver el texto exacto que recibe Tino).
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Define el tono de voz" href="/es/cerebro/comunicacao">Registra estilos de comunicación complementarios.</Card>
+  <Card title="Crea directrices para la IA" href="/es/cerebro/diretrizes">Agrega procedimientos y saludos a tu manera.</Card>
+</CardGroup>

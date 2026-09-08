@@ -1,0 +1,126 @@
+---
+title: "Track Customer Satisfaction"
+sidebarTitle: "Satisfaction"
+description: "See the score customers gave in the satisfaction survey, where it varies, and the conversations behind each score."
+---
+
+The Satisfação screen brings together the score the customer gave in the survey with Scout's read on the conversation, so you can quickly see where the experience is dropping.
+
+<Note>
+  Every role sees the screen in their own scope. Turning on the satisfaction survey is Company-level: only Administrator and Company Manager. Available on all plans. The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## See the Overall Score
+
+By default, the screen shows the scope and period chosen in the scope bar, with the current month as the starting period.
+
+Where it is: **Scout > Satisfação** (Scout > Satisfaction).
+
+<Steps>
+  <Step title="Open the screen">Go to **Scout > Satisfação**.</Step>
+  <Step title="Read the overall csat">Check the score from 1 to 5 and the variation against the previous period.</Step>
+  <Step title="See the score frequency">In the histogram below, compare how many responses were positive, neutral, and negative.</Step>
+</Steps>
+
+{/* CAPTURA: images/scout/satisfacao-csat-geral.png | alt: Tela Satisfação com o card csat geral e o histograma de frequência de notas | olhar: a nota em destaque e a régua de 1 a 5 */}
+
+<Note>
+  A reading with fewer than 5 responses shows as sem base (no sample), so as not to state something without enough of a sample.
+</Note>
+
+---
+
+## Compare by Unit and by Service Type
+
+<Steps>
+  <Step title="Compare Units">In the **csat por unidade** (csat by unit) card, see the score for each Unit the contact belongs to, ordered by the ones with the most responses.</Step>
+  <Step title="Compare by service type">In the **csat por tipo de atendimento** (csat by service type) card, compare the score of conversations resolved by AI, by the team, and by handoff.</Step>
+  <Step title="See the distribution">Open the three frequency histograms, one for AI, one for the team, and one for handoff.</Step>
+</Steps>
+
+<Note>
+  The **csat do Tino** (Tino's csat) card counts only the conversations he resolved from start to finish. A conversation with handoff falls under the handoff reading, not Tino's or the team's.
+</Note>
+
+---
+
+## Track Progress Over the Period
+
+<Steps>
+  <Step title="Choose the granularity">Switch between viewing the chart by week or by month.</Step>
+  <Step title="Read the three series">Compare the AI, team, and handoff lines over time.</Step>
+  <Step title="Filter by score">Click a column in the frequency histogram to filter the conversation list by that score.</Step>
+</Steps>
+
+{/* CAPTURA: images/scout/satisfacao-evolucao.png | alt: Gráfico csat ao longo do período com as séries IA, equipe e handoff | olhar: os pontos em anel que indicam período sem base */}
+
+<Note>
+  A ring-shaped point marks a neighboring period without enough of a sample, not an actual decline.
+</Note>
+
+---
+
+## See the Send and Response Rates
+
+The **taxa de solicitação** (request rate) shows how many survey invitations were sent for each finished service. The **taxa de resposta** (response rate) shows how many customers responded among those invited. Both appear by channel.
+
+<Note>
+  Both rates count only WhatsApp and the site chat, the channels where the survey can currently be sent.
+</Note>
+
+---
+
+## Turn On the Satisfaction Survey
+
+By default, the survey stays off until someone turns it on for at least one channel.
+
+Where it is: the warning card on the screen itself, or directly at **Configurações > Atendimento > Pesquisa de Satisfação** (Settings > Service > Satisfaction Survey).
+
+<Steps>
+  <Step title="Open the setting">In the **Nenhum canal está enviando a pesquisa** (No channel is sending the survey) card, click **Ligar a pesquisa de satisfação** (Turn on the satisfaction survey).</Step>
+  <Step title="Configure the survey">Turn on the survey for the channels you want. See the walkthrough in [Configure the satisfaction survey](/en/atendimento/pesquisa-de-satisfacao).</Step>
+  <Step title="Return to the screen">Use the **voltar ao achado** (back to finding) link to return directly to the Satisfação screen.</Step>
+</Steps>
+
+---
+
+## Read the Conversations Behind the Scores
+
+<Steps>
+  <Step title="Filter by score">Click a column in the histogram to filter the table, or switch between **pior nota** (worst score) and **melhor nota** (best score).</Step>
+  <Step title="Read the comment">See what the customer wrote, when there is one.</Step>
+  <Step title="Open the conversation">Click a row to open the conversation in the [Conversation Center](/en/inbox/central-de-conversas), in read-only mode.</Step>
+</Steps>
+
+<Note>
+  In Area or Unit scopes, this list shows the whole company, not just the chosen scope. The screen warns about this above the table.
+</Note>
+
+---
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Why does a Unit show as sem base?">
+  Fewer than 5 survey responses for that Unit, in the chosen period.
+  </Accordion>
+  <Accordion title="Does the conversation list change when I choose a Unit?">
+  No. This list always shows the whole company. Only the cards above follow the scope chosen in the scope bar.
+  </Accordion>
+  <Accordion title="Does Tino's csat count conversations he started and handed off to the team?">
+  No. Only the conversations Tino resolved from start to finish, without handoff, are counted.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related Articles
+
+<CardGroup cols={2}>
+  <Card title="Configure the satisfaction survey" href="/en/atendimento/pesquisa-de-satisfacao">Turn on the survey by channel.</Card>
+  <Card title="The Scout Explained" href="/en/scout/o-scout-explicado">Roles, plans, and the Scout menu.</Card>
+  <Card title="Use the Conversation Center" href="/en/inbox/central-de-conversas">Open any conversation in read-only mode.</Card>
+  <Card title="Read Scout's evaluations" href="/en/scout/avaliacoes">The full analysis of each conversation.</Card>
+</CardGroup>

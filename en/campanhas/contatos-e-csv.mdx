@@ -1,0 +1,108 @@
+---
+title: "Import campaign contacts"
+sidebarTitle: "Contacts and CSV"
+description: "Build the right spreadsheet, upload it, and check the preview before Tino starts reaching out to the list."
+---
+
+A well-formatted list loads into the wizard without errors and reaches Tino with all the context data ready for the conversation.
+
+<Note>
+  Campaigns is a feature of the Scale and Enterprise plans. Who uploads the list: Administrator (Company), Company Manager, Area Manager, and Unit Manager, in the **Público** (Audience) step of the creation wizard.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Build the CSV file
+
+By default, the wizard doesn't accept any other spreadsheet format, only comma-separated CSV.
+
+Where to find it: step 2 of the wizard, **Campanhas > Campanhas > Nova campanha** (Campaigns > Campaigns > New campaign), with the **Tenho uma lista** (I have a list) source.
+
+<Steps>
+  <Step title="Download the template">Click **Baixar modelo de planilha ↓** (Download spreadsheet template ↓) to get a ready-made CSV with the right columns.</Step>
+  <Step title="Fill in name and phone">These are the two required columns. Without them, the whole row is ignored.</Step>
+  <Step title="Add extra columns if you want">Any other column becomes context data for the contact, available for Tino to use in the conversation and for the **valor por conversão** (value per conversion) field.</Step>
+</Steps>
+
+<Note>
+  Recognized columns, case-insensitive: `nome` or `name`; `telefone`, `phone`, `celular` or `whatsapp`; `email` or `e-mail`. Any other header becomes context data under the column's original name, for example `valor_devido`.
+</Note>
+
+---
+
+## Upload the file and check the preview
+
+By default, no contact has been added yet: the upload area is empty.
+
+Where to find it: same step of the wizard, right below the source selection.
+
+<Steps>
+  <Step title="Upload the CSV">Drag the file into the upload area or click to choose it from your computer.</Step>
+  <Step title="Read the preview">The card shows the file name, the total number of rows, the valid contacts, and the rows skipped for missing a name or phone.</Step>
+  <Step title="Check the detected columns">A bar lists the columns the wizard recognized: name, phone, email when present, and the extra columns.</Step>
+  <Step title="Replace the file if needed">Use **trocar arquivo** (change file) to upload a different CSV in place of the current one.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/csv-previa-importacao.png | alt: Cartão de prévia do CSV enviado com contagem de contatos válidos e linhas ignoradas | olhar: os contadores de contatos válidos e linhas ignoradas */}
+
+<Note>
+  The reader doesn't parse commas inside a field, so avoid values with a comma (like "Rua A, 123") directly in the CSV. If you need one, use a semicolon inside the field, not a comma.
+</Note>
+
+---
+
+## Common errors
+
+- **Nenhum contato válido** (No valid contact): the CSV needs recognizable name and phone columns. Check the headers.
+- **Erro ao processar arquivo CSV** (Error processing CSV file): the file format isn't a valid CSV. Reopen and save it again from a spreadsheet.
+- **Linhas ignoradas** (Skipped rows): every row missing a name or a phone is silently dropped from the valid contact count, without blocking the upload of the rest.
+
+---
+
+## Campaigns across multiple Units
+
+If you have access to more than one Unit, you can replicate the same list to other Units at creation time.
+
+<Steps>
+  <Step title="Check the Units">In the **Replicar para outras Unidades** (Replicate to other Units) section, check the Units besides the current one. The Unit you're in stays always checked, with the **atual** (current) badge.</Step>
+  <Step title="Confirm">The wizard creates one campaign per selected Unit, with the same contact list. Each Unit's channel is chosen on its own, except for the current Unit, which uses the channel chosen in step 3.</Step>
+</Steps>
+
+<Note>
+  This option only shows up when creating a list campaign. It's not possible to replicate after creation, or to change the source of an existing campaign.
+</Note>
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="My semicolon-separated CSV doesn't load">
+  The wizard's reader uses a comma as the separator. Use the template under **Baixar modelo de planilha ↓** as a format reference.
+  </Accordion>
+  <Accordion title="Can a column become a conversion's value?">
+  Yes. Any extra CSV column becomes context data for the contact and can be chosen under **valor por conversão › Coluna da lista** (value per conversion › List column), in step 1 of the wizard.
+  </Accordion>
+  <Accordion title="Is there phone format validation?">
+  The wizard doesn't validate the format at upload time. Prefer the international format, with the country code, to reduce delivery errors.
+  </Accordion>
+  <Accordion title="Can I change the list after creating the campaign?">
+  Not through the wizard. Once created, the contact list is tracked execution by execution in the campaign dashboard, with no option to replace the file.
+  </Accordion>
+  <Accordion title="Can I pull contacts directly from another system, without a CSV?">
+  Not today, through the current wizard: it only accepts a list as a CSV. See [Pull contacts from external systems](/en/campanhas/contatos-de-campanha) to understand what the Varejo Online and SAN integration already covers.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Create a campaign" href="/en/campanhas/crie-uma-campanha">The wizard in three steps.</Card>
+  <Card title="Build the structure in Areas and Units" href="/en/equipe/areas-e-unidades">How Units are organized.</Card>
+  <Card title="Track the results" href="/en/campanhas/resultados">Where to see how many contacts entered and converted.</Card>
+  <Card title="Pull contacts from external systems" href="/en/campanhas/contatos-de-campanha">Connect Varejo Online and SAN.</Card>
+</CardGroup>

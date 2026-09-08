@@ -1,0 +1,101 @@
+---
+title: "Define el SLA de atención"
+sidebarTitle: "SLA de atención"
+description: "Dile al equipo cuánto tiempo puede esperar el cliente por la primera respuesta humana y recibe una alerta antes de que se venza."
+---
+
+Con el SLA configurado, tu equipo sabe exactamente cuánto tiempo tiene para la primera respuesta humana, y los gestores reciben una alerta antes de que se venza el plazo.
+
+<Note>
+  Quién lo ve: Administrador, Gestor de la Empresa y Gestor de Área. Disponible en todos los planes.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Activa el SLA en un canal
+
+De forma predeterminada, un canal nunca configurado queda con el SLA apagado.
+
+Dónde está: **Configurações > Atendimento > SLA de Atendimento** (Configuraciones > Atención > SLA de Atención).
+
+<Steps>
+  <Step title="Abre la pantalla">Ve a **Configurações > Atendimento > SLA de Atendimento**.</Step>
+  <Step title="Elige el canal">Haz clic en el canal que quieras medir, en la lista de la izquierda.</Step>
+  <Step title="Activa el SLA">Activa el interruptor de **SLA medindo** (SLA midiendo).</Step>
+</Steps>
+
+{/* CAPTURA: images/atendimento/sla-selecao-canal.png | alt: Tela SLA de Atendimento com um canal selecionado e o toggle SLA medindo ativo | olhar: a lista de canais à esquerda e o toggle no detalhe */}
+
+<Note>
+  El SLA se configura canal por canal. Actívalo solo donde tenga sentido medir el tiempo de respuesta.
+</Note>
+
+---
+
+## Define el tiempo máximo de respuesta
+
+Dónde está: **Configurações > Atendimento > SLA de Atendimento**, en el detalle del canal.
+
+<Steps>
+  <Step title="Elige el tiempo">En **Tempo máximo** (Tiempo máximo), usa uno de los atajos (5 min, 10 min, 15 min, 30 min, 1 h, 2 h) o escribe un valor entre 1 y 1.440 minutos.</Step>
+  <Step title="Guarda">Haz clic en **Salvar**.</Step>
+</Steps>
+
+<Note>
+  Un canal nunca configurado aparece con 15 minutos, apagado. El SLA cuenta desde la entrada de la conversación en la fila hasta la primera respuesta humana, incluso en transferencias de Tino.
+</Note>
+
+---
+
+## Entiende las alertas
+
+Cada canal con SLA activo tiene una regla de tres marcas, visible en la propia pantalla de configuración:
+
+- **Primeiro alerta** (Primera alerta): la conversación se pone ámbar en la fila, antes de que se venza el plazo.
+- **Estourou** (Se venció): la conversación se pone roja, al llegar al tiempo máximo definido.
+- **Crítico**: los gestores reciben un correo electrónico. {/* CONFIRMAR: quem exatamente recebe o e-mail de alerta crítico */}
+
+{/* CAPTURA: images/atendimento/sla-alertas.png | alt: Régua de alertas do SLA com os três marcos | olhar: os pontos de primeiro alerta, estourou e crítico na régua */}
+
+---
+
+## Lo que el equipo ve en la conversación
+
+Una conversación dentro del plazo no muestra ningún aviso. Al acercarse al límite, se pone ámbar en la fila. Después del plazo, roja.
+
+---
+
+## Relación con el horario de atención
+
+El cronómetro del SLA solo cuenta dentro del horario comercial registrado. Fuera del horario, se pausa y retoma en la próxima apertura.
+
+<Note>
+  Sin ningún horario comercial registrado, el SLA cuenta 24 horas al día, todos los días. Configura los horarios en [Disponibilidad](/es/cerebro/disponibilidade).
+</Note>
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿El SLA mide las respuestas de Tino?">
+  No. Mide el tiempo hasta la primera respuesta humana, incluso cuando la conversación llega por una transferencia de Tino.
+  </Accordion>
+  <Accordion title="¿Puedo usar el mismo plazo para todos los canales?">
+  No es automático. Configura el tiempo máximo canal por canal.
+  </Accordion>
+  <Accordion title="¿Qué pasa si cambio de canal sin guardar?">
+  La pantalla avisa que guardes o descartes los cambios antes de cambiar de canal.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Define las reglas de conversación" href="/es/atendimento/regras-de-conversa">Configura el cierre automático, la firma y el Scout.</Card>
+  <Card title="Define horarios y zona horaria de la IA" href="/es/cerebro/disponibilidade">Configura el horario comercial que pausa el SLA.</Card>
+</CardGroup>

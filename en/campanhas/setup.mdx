@@ -1,0 +1,99 @@
+---
+title: "Prepare the Unit for campaigns"
+sidebarTitle: "Prepare the Unit"
+description: "Get the channel, the opening template, and the credits ready so the campaign wizard doesn't get stuck on any step."
+---
+
+A ready Unit keeps the creation wizard from stopping partway through to ask for a channel or a template. Three things need to be in place before you create your first campaign.
+
+<Note>
+  Campaigns is a feature of the Scale and Enterprise plans. Who prepares it: Administrator (Company), Company Manager, Area Manager, and Unit Manager.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Connect a WhatsApp channel on the Unit
+
+By default, a new Unit has no WhatsApp channel connected. Without a channel, the wizard's **Lançamento** (Launch) step shows the warning **Esta unidade não tem canal WhatsApp conectado** (This unit doesn't have a connected WhatsApp channel).
+
+Where to find it: **Configurações > Canais** (Settings > Channels).
+
+<Steps>
+  <Step title="Open the channels screen">Go to **Configurações > Canais**.</Step>
+  <Step title="Connect a number">Connect **WhatsApp Business** by QR Code or pairing code, or connect **WABA** (WhatsApp Business API) if you already have an official Meta account.</Step>
+  <Step title="Confirm the status">The channel needs to show up connected to enter the campaign wizard's list.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/setup-canal-conectado.png | alt: Tela de Configurações > Canais com um canal WhatsApp conectado | olhar: o selo de status do canal */}
+
+<Note>
+  The wizard only lists channels of the current Unit that are connected. A channel from another Unit doesn't show up, even if you have access to it.
+</Note>
+
+---
+
+## Approve the opening template on WABA
+
+This only applies to an official WhatsApp channel (WABA). By default, a new WABA channel has no approved template.
+
+Meta requires a pre-approved template to open a conversation through an official channel. Without an **Aprovado** (Approved) template, the wizard blocks campaign creation with the error **Selecione um template de abertura aprovado, o canal oficial exige** (Select an approved opening template, the official channel requires it).
+
+Where to find it: **Configurações > Canais**, on the WABA channel, under **Templates**.
+
+<Steps>
+  <Step title="Open the channel's templates">Go to **Configurações > Canais**, open the WABA channel, and go to **Templates WhatsApp** (WhatsApp Templates).</Step>
+  <Step title="Sync or create">Click **Sincronizar** (Sync) to bring in templates that already exist on Meta, or **Novo Template** (New Template) to create one.</Step>
+  <Step title="Track the approval">The status changes to **Aprovado** (Approved) when Meta clears the template. This happens in real time on the screen.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/setup-template-aprovado.png | alt: Lista de templates do canal WABA com um template com selo Aprovado | olhar: a coluna Status */}
+
+<Note>
+  A follow-up sent 24 hours or more after the first message also requires an approved template on an official channel. If the campaign has follow-ups in that window, prepare a template for each one. See [Create WhatsApp message templates](/en/canais/templates).
+</Note>
+
+---
+
+## Make sure credits are available
+
+Every message Tino sends in a campaign consumes credits from the company's monthly allowance. By default, this allowance is set by your subscription.
+
+Where to find it: **Configurações > Cobrança > Créditos** (Settings > Billing > Credits).
+
+<Steps>
+  <Step title="Check the balance">Go to **Configurações > Cobrança > Créditos** and see how much is left in the month's allowance.</Step>
+  <Step title="Adjust if needed">If the campaign needs more credits than the current allowance, upgrade the plan or add credits before starting the send.</Step>
+</Steps>
+
+<Note>
+  If the month's credits run out, a yellow bar warns you at the top of the screen. If even the extra credits run out, a red bar warns that the AI will stop responding. Both lead straight to **Configurações > Cobrança > Créditos**. See [What happens when credits run out](/en/creditos/quando-os-creditos-acabam).
+</Note>
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Do I need a template even if my channel isn't WABA?">
+  No. Only official channels (WABA) require an approved template. An unofficial number connected by QR Code doesn't have this requirement.
+  </Accordion>
+  <Accordion title="Can I create the campaign before the template is approved?">
+  No, if the channel is WABA. The wizard blocks the **Lançamento** (Launch) step until you choose a template with the **Aprovado** (Approved) badge.
+  </Accordion>
+  <Accordion title="How much does a campaign cost in credits?">
+  The wizard shows a local estimate in the footer while you build the campaign, calculated from the number of contacts. The final amount depends on how the conversation unfolds, because every message exchanged consumes credits.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Connect WhatsApp Business API (WABA)" href="/en/canais/whatsapp-business-api">Connect an official Meta channel.</Card>
+  <Card title="Create WhatsApp message templates" href="/en/canais/templates">Create, sync, and track approval.</Card>
+  <Card title="Credits explained" href="/en/visao-geral/creditos-explicados">How the monthly allowance works.</Card>
+  <Card title="Create a campaign" href="/en/campanhas/crie-uma-campanha">The wizard in three steps.</Card>
+</CardGroup>

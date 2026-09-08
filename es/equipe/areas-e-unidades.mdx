@@ -1,0 +1,133 @@
+---
+title: "Arma la estructura en Áreas y Unidades"
+sidebarTitle: "Áreas y Unidades"
+description: "Organiza tu empresa en áreas y unidades para gestionar accesos, canales y atención por tienda, sucursal o departamento."
+---
+
+Con la estructura organizada, defines quién accede a cada tienda, sucursal o sector de tu empresa. Cada unidad tiene sus propios canales, usuarios y conversaciones.
+
+<Note>
+  Quién lo ve: solo el Administrador. El límite de unidades varía según el plan: Essential hasta 5, Scale hasta 10, Enterprise negociadas.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Crea un área
+
+Por defecto, una empresa nueva no tiene ninguna área registrada.
+
+Dónde está: **Configurações > Empresa > Áreas & Unidades** (Configuración > Empresa > Áreas y Unidades).
+
+<Steps>
+  <Step title="Abre la pantalla">Ve a **Configurações > Empresa > Áreas & Unidades**.</Step>
+  <Step title="Haz clic en Nova área">Usa el botón **Nova área** (Nueva área) en la parte superior, o la tarjeta punteada **Nova área** (Nueva área) en el diagrama.</Step>
+  <Step title="Ponle un nombre">Escribe el nombre del área y haz clic en **Salvar** (Guardar).</Step>
+</Steps>
+
+{/* CAPTURA: images/equipe/areas-unidades-nova-area.png | alt: Modal Nova Área com o campo de nome preenchido | olhar: o campo Nome da Área e o botão Salvar */}
+
+<Note>
+  Las áreas agrupan unidades. Una cadena de tiendas puede tener el área "Retail" con las unidades "Tienda Centro" y "Tienda Shopping".
+</Note>
+
+---
+
+## Crea una unidad
+
+Toda unidad nace dentro de un área.
+
+Dónde está: **Configurações > Empresa > Áreas & Unidades**, en la tarjeta del área.
+
+<Steps>
+  <Step title="Abre el área">Haz clic en la tarjeta del área donde va a entrar la unidad.</Step>
+  <Step title="Haz clic en Criar Unidade">Usa el botón **Criar Unidade** (Crear Unidad), o la tarjeta punteada **Adicionar unidade** (Agregar unidad).</Step>
+  <Step title="Ponle un nombre">Escribe el nombre de la unidad y haz clic en **Salvar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/equipe/areas-unidades-nova-unidade.png | alt: Modal Nova Unidade com o campo de nome preenchido | olhar: o campo Nome da Unidade e o botão Salvar */}
+
+<Note>
+  El contador en la esquina superior izquierda de la pantalla muestra cuántas unidades ya usaste del límite del plan y se pone rojo al llegar a él. Al alcanzar el límite, el botón de crear muestra el aviso "Limite de unidades atingido" (Límite de unidades alcanzado). Haz un upgrade para registrar más.
+</Note>
+
+---
+
+## Cambia el nombre o elimina un área
+
+Dónde está: abre el área y usa el menú de opciones en la parte superior.
+
+<Steps>
+  <Step title="Abre el área">Haz clic en la tarjeta del área en la pantalla de Áreas y Unidades.</Step>
+  <Step title="Elige la acción">En el menú de opciones, haz clic en **Renomear** (Renombrar) o en **Excluir** (Eliminar).</Step>
+  <Step title="Confirma">Escribe el nuevo nombre y haz clic en **Salvar**, o confirma la eliminación en **Sim** (Sí).</Step>
+</Steps>
+
+<Warning>
+  Eliminar un área borra todas sus unidades junto con ella. {/* CONFIRMAR: o que acontece com os canais, conversas e usuários vinculados às unidades excluídas */}
+</Warning>
+
+---
+
+## Cambia el nombre o elimina una unidad
+
+Dónde está: abre la unidad y usa el menú de opciones en la parte superior.
+
+<Steps>
+  <Step title="Abre la unidad">Haz clic en la tarjeta de la unidad, dentro del área o en el diagrama principal.</Step>
+  <Step title="Elige la acción">En el menú de opciones, haz clic en **Renomear** o en **Excluir**.</Step>
+  <Step title="Confirma">Escribe el nuevo nombre y haz clic en **Salvar**, o confirma la eliminación en **Sim**.</Step>
+</Steps>
+
+{/* CAPTURA: images/equipe/areas-unidades-detalhe-unidade.png | alt: Tela de detalhe de uma unidade com o menu de opções aberto | olhar: as opções Renomear e Excluir */}
+
+---
+
+## Organiza los sectores de una unidad
+
+Los sectores dirigen las conversaciones de una unidad hacia equipos específicos, como Soporte Técnico o Finanzas.
+
+Dónde está: abre la unidad y baja hasta **Setores** (Sectores).
+
+<Steps>
+  <Step title="Abre la unidad">Haz clic en la tarjeta de la unidad y baja hasta la sección **Setores**.</Step>
+  <Step title="Haz clic en Novo Setor">Completa el **Nome** (Nombre) y, si quieres, la **Descrição** (Descripción).</Step>
+  <Step title="Guarda">Haz clic en **Criar** (Crear). El sector aparece en la lista, listo para recibir usuarios.</Step>
+</Steps>
+
+<Note>
+  La descripción del sector la usa el Tino para decidir hacia dónde dirigir cada conversación. Describe la función del sector con claridad.
+</Note>
+
+Para agregar personas a un sector, abre la tarjeta y haz clic en **Adicionar Usuário** (Agregar Usuario). Solo aparecen usuarios que ya tienen acceso a esa unidad.
+
+Para desactivar un sector sin borrar su historial, usa **Desativar** (Desactivar) en el menú de opciones. Un sector inactivo desaparece de las opciones de enrutamiento, pero mantiene las conversaciones ya atendidas.
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Puedo crear una unidad sin colocarla en ninguna área?">
+  No. Toda unidad necesita nacer dentro de un área.
+  </Accordion>
+  <Accordion title="¿Qué pasa con los usuarios cuando elimino una unidad?">
+  {/* CONFIRMAR: comportamento dos vínculos de usuário após excluir uma unidade */}
+  </Accordion>
+  <Accordion title="Alcancé el límite de unidades de mi plan. ¿Qué hago?">
+  Haz un upgrade de plan para desbloquear más unidades. El límite cambia según el plan contratado: Essential hasta 5, Scale hasta 10, Enterprise negociadas.
+  </Accordion>
+  <Accordion title="¿Puedo cambiar una unidad de área después de creada?">
+  {/* CONFIRMAR: se é possível mover uma unidade existente para outra área */}
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Invita y gestiona usuarios" href="/es/equipe/usuarios">Agrega personas a las áreas y unidades que creaste.</Card>
+  <Card title="Roles y accesos explicados" href="/es/visao-geral/papeis-e-acessos">Entiende qué ve cada rol en cada nivel.</Card>
+</CardGroup>

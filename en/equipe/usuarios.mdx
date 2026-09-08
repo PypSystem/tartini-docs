@@ -1,0 +1,134 @@
+---
+title: "Invite and Manage Users"
+sidebarTitle: "Users"
+description: "Invite your team, define what each person can access, and keep access always up to date."
+---
+
+With the user list organized, you know who's active, what each person can access, and who still needs to accept their invite.
+
+<Note>
+  Who can see the list: Administrator, Company Manager, Area Manager, and Unit Manager. Editing, managing access, and deactivating are actions only the Administrator can do.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Understand statuses and access
+
+Where to find it: **Configurações > Empresa > Usuários** (Settings > Company > Users).
+
+Each user appears with a status:
+
+- **Ativo** (Active): accesses the system normally.
+- **Inativo** (Inactive): can no longer sign in, until reactivated.
+- **Pendente** (Pending): received the invite and hasn't created a password yet.
+- **Expirado** (Expired): the invite has gone more than 24 hours without a response.
+
+The **Acessos & permissões** (Access & permissions) column shows the user's main assignment and how many others they have. Click to open all their assignments, with the level of each one: the whole company, an area, or a unit.
+
+{/* CAPTURA: images/equipe/usuarios-lista.png | alt: Tela Usuários com a lista de pessoas e seus status | olhar: as colunas Status e Acessos & permissões */}
+
+---
+
+## Add a user
+
+You can invite someone new or link a person who already exists at the company to more areas and units.
+
+Where to find it: **Configurações > Empresa > Usuários**, **Adicionar Usuário** (Add User) button.
+
+<Steps>
+  <Step title="Open the wizard">Click **Adicionar Usuário**.</Step>
+  <Step title="Fill in the information">For a new person, enter **Nome** (Name) and **E-mail** (Email). To link someone who already exists, choose the user from the list.</Step>
+  <Step title="Define access">Select the company, area, or unit, and choose the role for each one.</Step>
+  <Step title="Confirm">Review the summary and click **Confirmar** (Confirm).</Step>
+</Steps>
+
+{/* CAPTURA: images/equipe/usuarios-assistente-acessos.png | alt: Etapa de acessos e permissões do assistente de adicionar usuário | olhar: a árvore de empresa, áreas e unidades com os cargos selecionados */}
+
+<Note>
+  Access is hierarchical. Assign the role only at the highest level the person needs: everything below is automatically covered. For positions in different areas, assign each branch separately.
+</Note>
+
+A new person receives an email to create their password and appears in the list as **Pendente** until they accept the invite.
+
+---
+
+## Resend the invite
+
+Where to find it: **Configurações > Empresa > Usuários**, the user row's options menu.
+
+<Steps>
+  <Step title="Find the user">Find the row with **Pendente** or **Expirado** status.</Step>
+  <Step title="Resend">Open the row's options menu and click **Reenviar convite** (Resend invite).</Step>
+</Steps>
+
+<Note>
+  The invite is marked as Expired 24 hours after it's sent. Resending it gives the person a new deadline to create their password.
+</Note>
+
+---
+
+## Deactivate or reactivate a user
+
+Deactivating removes system access without deleting the person's history.
+
+Where to find it: **Configurações > Empresa > Usuários**, the user row's options menu.
+
+<Steps>
+  <Step title="Open the menu">Click the user row's options menu.</Step>
+  <Step title="Choose the action">Click **Inativar** (Deactivate, for Ativo status) or **Reativar** (Reactivate, for Inativo status).</Step>
+  <Step title="Confirm">Click **Sim** (Yes) in the confirmation window.</Step>
+</Steps>
+
+<Note>
+  You can't deactivate yourself, the account owner, or an invite that's still pending. To remove someone from the company, deactivate them: there's no way to delete a user.
+</Note>
+
+---
+
+## Manage a user's access
+
+Where to find it: **Configurações > Empresa > Usuários**, options menu > **Gerenciar acessos** (Manage access).
+
+<Steps>
+  <Step title="Open the panel">In the user row's options menu, click **Gerenciar acessos**.</Step>
+  <Step title="Adjust the tree">Check or uncheck company, areas, and units, and choose the role for each new selection.</Step>
+  <Step title="Save">Click **Salvar alterações** (Save changes).</Step>
+</Steps>
+
+<Note>
+  Only the Administrator can grant the Administrator role. An Area Manager or Unit Manager can only grant roles within their own structure. Every user needs at least one access: to block someone, use Inativar.
+</Note>
+
+The account owner appears with the **Admin** badge, and their access can't be changed by anyone.
+
+If the list doesn't show the change right away, refresh the page.
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="How do I remove someone from the company?">
+  Use **Inativar**, in the user row's options menu. There's no way to delete a user in the interface.
+  </Accordion>
+  <Accordion title="Why don't I see the option to resend the invite?">
+  It only appears for users with Pendente or Expirado status.
+  </Accordion>
+  <Accordion title="Who can grant the Administrator role?">
+  Only someone who is already an Administrator. Company Manager, Area Manager, and Unit Manager don't see this option.
+  </Accordion>
+  <Accordion title="Can an Area Manager grant access outside their area?">
+  No. Area Manager and Unit Manager can only grant roles within their own structure.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Build the Structure in Areas and Units" href="/en/equipe/areas-e-unidades">Create the areas and units where users will work.</Card>
+  <Card title="Roles and access explained" href="/en/visao-geral/papeis-e-acessos">See what each role can see at each level.</Card>
+</CardGroup>

@@ -1,0 +1,114 @@
+---
+title: "Fix connection issues"
+sidebarTitle: "Connection issues"
+description: "Common symptoms when connecting WhatsApp by QR Code or WABA, with the likely cause and how to fix it."
+---
+
+This page gathers the most common problems when connecting or keeping a WhatsApp channel active in Tartini.
+
+<Note>
+  Who fixes it: Administrator, Company Manager, Area Manager, and Unit Manager.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## WhatsApp Business (QR Code) disconnected on its own
+
+**Cause:** the WhatsApp session on the phone ended. This is common with this method, since the connection isn't official.
+
+**Fix:**
+
+<Steps>
+  <Step title="Open the number list">Go to **Configurações > Canais > WhatsApp Business** (Settings > Channels > WhatsApp Business).</Step>
+  <Step title="Sync again">Click the ⋮ next to the channel and choose **Sincronizar** (Sync).</Step>
+  <Step title="Scan the QR Code">Open WhatsApp on your phone and scan the new code.</Step>
+</Steps>
+
+---
+
+## The QR Code or pairing code no longer works
+
+**Cause:** the code expired before it was used.
+
+**Fix:** click **Gerar novo QR Code** (Generate new QR Code) or **Gerar novo código** (Generate new code), inside the same modal, and try again.
+
+---
+
+## You see "Já existe um canal para esta entidade"
+
+**Cause:** the Unit you chose already has a channel of that type connected.
+
+**Fix:** use the channel that already exists on that Unit, or connect the number on a different Unit.
+
+---
+
+## The connection drops often, or I'm worried the number will get banned
+
+**Cause:** WhatsApp Business by QR Code uses an unofficial connection. Meta can ban numbers connected this way, and WhatsApp updates can drop the session.
+
+**Fix:** migrate to [WABA](/en/canais/whatsapp-business-api), Meta's official connection.
+
+---
+
+## No number shows up for me to select (WABA)
+
+**Most common causes:**
+- The WABA doesn't have any number provisioned yet.
+- The Meta account used in the authorization doesn't have administrator permission on the WhatsApp Business Account.
+- The number is linked to a different Meta Business account than the one you used to authorize.
+
+**Fix:** check under **Meta Business > WhatsApp Manager > Números** (Meta Business > WhatsApp Manager > Numbers) whether the number is provisioned, and under **Meta Business > Configurações > Contas** (Meta Business > Settings > Accounts) whether your account has administrator permission on it.
+
+---
+
+## The Meta window doesn't open, or authorization fails
+
+**Cause:** the browser blocked the pop-up, or the Meta account used isn't an administrator of the Meta Business account.
+
+**Fix:** allow pop-ups for Tartini in your browser and try again. If the error persists, sign in with an account that's an administrator of the Meta Business account.
+
+---
+
+## The number shows up in the selection, but saving fails
+
+**Possible causes:**
+- The authorization expired during the process. Redo the connection from the start.
+- The number was removed from the WABA between selection and confirmation.
+- The channel is already connected on another Tartini account.
+
+**Fix:** check the number in **WhatsApp Manager** and redo the connection. If the number is already in use on another account, disconnect it from there first.
+
+---
+
+## The two-step verification PIN isn't accepted
+
+**Cause:** the PIN you typed doesn't match the PIN already registered for that number on Meta, or it has fewer than 6 digits.
+
+**Fix:** use exactly the PIN registered previously for that number. If this is the first time, any 6-digit PIN works, but write it down and keep it safe: it can't be recovered later.
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Can I use the same number on personal WhatsApp and Tartini at the same time?">
+  No. A number can only be active in one place at a time: personal WhatsApp, WhatsApp Business on a phone, or WABA.
+  </Accordion>
+  <Accordion title="Can I port my current number to WABA?">
+  Yes. First unlink the number from regular WhatsApp Business, then register it on WABA through Meta or through an authorized partner.
+  </Accordion>
+  <Accordion title="Still not fixed?">
+  Contact Tartini support and provide the Unit name, the exact error message, and which step the problem happened on.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Connect WhatsApp by QR Code" href="/en/canais/whatsapp-qr-code">Step-by-step connection by camera or code.</Card>
+  <Card title="Connect WhatsApp Business API (WABA)" href="/en/canais/whatsapp-business-api">Prerequisites and connection for the official channel.</Card>
+</CardGroup>

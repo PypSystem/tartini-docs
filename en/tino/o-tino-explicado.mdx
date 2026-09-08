@@ -1,0 +1,98 @@
+---
+title: "Tino explained"
+sidebarTitle: "Tino explained"
+description: "The agent that serves the customer on the front line: where it's turned on, how it runs the conversation, and when it hands off to the team."
+---
+
+Tino is the AI agent that talks to the customer. When it's turned on in a channel, it's the one that answers the first message, consults the Cérebro on every reply, collects data in the contact's record, and hands off the conversation to the team when you've told it to or when it can't proceed. It doesn't work alone: it asks the Cérebro what it doesn't know, delivers a summary of what it did to Copilot and the team, and is read by Scout.
+
+<Note>
+  Tino is part of the Scale and Enterprise plans and consumes AI credits. Turning it on and configuring it is done by the Area Manager or above.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Where it's turned on
+
+Each channel has its own Tino. In **Configurações > Atendimento > IA por canal** (Settings > Service > AI by channel), you choose the channel, flip the **Tino ligado** (Tino on) switch, and set three things:
+
+| Setting | What it does |
+|---|---|
+| **Quando Tino atende** (When Tino serves) | Always active, during the company's business hours, or on custom days and periods. Outside those hours, the conversation stays with the team. |
+| **O cliente para de responder** (The customer stops responding) | Tino picks the conversation back up with a follow-up, after a period without a reply and for a number of attempts that you set. |
+| **A conversa fica parada** (The conversation goes idle) | Tino says goodbye and closes the conversation after a period of inactivity. This applies only to conversations Tino is leading. |
+
+With Tino turned off, the channel's messages go straight to the team. See [Turn Tino on in a channel](/en/tino/ia-por-canal).
+
+---
+
+## How it appears in the Inbox
+
+A conversation led by Tino shows the **Tino conversando** (Tino is talking) badge on the avatar and its messages in blue. The reply field is locked with the notice **Tino está conversando...** (Tino is talking...), and the signature line shows **Tino ativo** (Tino active) with the **Interromper** (Interrupt) button.
+
+In the Inbox menu, the **Agentes de IA** (AI Agents) section lists its conversations: **Todas as conversas** (All conversations), **Finalizadas** (Closed), **Transferidas** (Transferred), and **Abandonadas** (Abandoned). Conversations started by a campaign carry the **Campanha** (Campaign) chip.
+
+{/* CAPTURA: images/tino/inbox-tino-conversando.png | alt: conversa aberta no Inbox conduzida pelo Tino, com o selo Tino conversando e o botão Interromper | olhar: o selo no avatar, as bolhas azuis e o botão Interromper na linha de assinatura */}
+
+---
+
+## When it hands off the conversation
+
+Tino hands off the conversation to a person in three situations: when the routing configured in the Cérebro says to, when the customer reaches out outside the hours it serves, or when someone on the team clicks **Interromper** (Interrupt). The conversation arrives with a summary of what's already been said, which the agent reads and Copilot uses to continue from where Tino left off. See [When Tino hands off the conversation to a person](/en/tino/handoff).
+
+---
+
+## Why it said that
+
+Every message from Tino has, in the message menu, the **Por que ela disse isso** (Why it said that) option. It shows the process and step that guided the reply, and the instructions that were involved: compliance, routing, and guidelines, each with a link to edit it. The screen tells you where the correction needs to be made: if the behavior is wrong, that's the instruction where the correction should be written.
+
+<Tip>
+  When Tino replies with something you didn't want, open **Por que ela disse isso** (Why it said that) before touching the Cérebro. The screen points to the instruction that caused the reply.
+</Tip>
+
+---
+
+## Tino returns to the Cérebro what it learned
+
+The conversation between Tino and the Cérebro runs both ways. The Cérebro shows, in each section of Personality and Operations, Tino's suggestions pending review: proposed new guidelines, clarifications, routing criteria, and process candidates it drew from real conversations. You accept or discard them; nothing goes live without your review. See [The Cérebro explained](/en/cerebro/o-cerebro-explicado).
+
+On the other side, Scout reads Tino's conversations with the same standard as the team's and points out, in the Cérebro, where the process or instruction needs to change.
+
+---
+
+## Where to track it
+
+- **Métricas > Tino** (Metrics > Tino): how much it absorbed, what it resolved on its own, outside business hours, and by process. See [Tino's metrics](/en/metricas/tino).
+- **Scout > Satisfação** (Scout > Satisfaction): customer scores on conversations resolved by Tino alone (**csat do tino**, Tino's CSAT), shown separately from the team's conversations and the ones it handed off. See [Track customer satisfaction](/en/scout/satisfacao).
+- **Página Inicial** (Home page): the **Tino em ação** (Tino in action) card, with the share of the day's conversations it resolved.
+- **Configurações > Cobrança > Créditos** (Settings > Billing > Credits): what it consumes.
+
+---
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="I turned Tino on and it doesn't reply.">
+  Check, in this order: the channel is connected; the conversation arrived within the hours set in **Quando Tino atende** (When Tino serves); credits haven't run out (a red banner at the top warns when the AI is paused).
+  </Accordion>
+  <Accordion title="Does Tino serve customers in the website chat?">
+  Yes. The AI by channel screen lists the WhatsApp channels and the Chat Widget, each with its own settings.
+  </Accordion>
+  <Accordion title="Can I hand a conversation back to Tino after interrupting it?">
+  No. After **Interromper** (Interrupt), the conversation stays with the team until it's closed.
+  </Accordion>
+  <Accordion title="How do I turn Tino off in just one channel?">
+  In AI by channel, choose the channel and turn off **Tino ligado** (Tino on). The other channels stay as they were.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Turn Tino on in a channel" href="/en/tino/ia-por-canal">The AI by channel screen, field by field.</Card>
+  <Card title="When Tino hands off the conversation" href="/en/tino/handoff">What the team sees and how to take over.</Card>
+</CardGroup>

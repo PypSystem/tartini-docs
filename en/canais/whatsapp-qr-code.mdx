@@ -1,0 +1,106 @@
+---
+title: "Connect WhatsApp by QR Code"
+sidebarTitle: "WhatsApp by QR Code"
+description: "Connect your WhatsApp number to Tartini in minutes, by scanning a code with your phone."
+---
+
+Once connected, messages from your WhatsApp number start arriving straight in your team's Inbox. You can reconnect or switch numbers whenever you need.
+
+<Note>
+  Who connects: Administrator, Company Manager, Area Manager, and Unit Manager. Available on all plans.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Connect a number by QR Code
+
+By default, no Unit has a WhatsApp Business channel connected.
+
+Where to find it: **Configurações > Canais > WhatsApp Business** (Settings > Channels > WhatsApp Business).
+
+<Steps>
+  <Step title="Open the WhatsApp Business screen">Go to **Configurações > Canais > WhatsApp Business** and click **Conectar** (Connect).</Step>
+  <Step title="Accept the connection risks">In the **Aceitar riscos** (Accept risks) modal, read the warnings and click **Aceito os riscos, continuar** (I accept the risks, continue).</Step>
+  <Step title="Fill in the channel details">Choose the **Entidade** (Entity) and give it a **Nome do canal** (Channel name) that helps your team identify the number later.</Step>
+  <Step title="Create the channel">Click **Criar canal** (Create channel). The **Conectar WhatsApp** (Connect WhatsApp) modal opens on the **QR Code** tab.</Step>
+  <Step title="Scan the code">Open WhatsApp on your phone and scan the QR Code on the screen. The connection closes the modal on its own once it's done.</Step>
+</Steps>
+
+{/* CAPTURA: images/canais/whatsapp-qr-code-conectar.png | alt: modal Conectar WhatsApp com o QR Code em destaque | olhar: o botão Gerar novo QR Code, caso o código expire */}
+
+<Note>
+  WhatsApp Business uses an unofficial connection. Meta can ban numbers connected this way, and WhatsApp updates can cause disconnections. For a more stable operation, consider [WABA](/en/canais/whatsapp-business-api).
+</Note>
+
+---
+
+## Connect by pairing code
+
+If you'd rather not use the camera, connect by typing a code directly into WhatsApp on your phone.
+
+<Steps>
+  <Step title="Open the Número tab">In the **Conectar WhatsApp** modal, click the **Número** (Number) tab.</Step>
+  <Step title="Enter your phone number">Type the number with the area code, without the +55, which is already filled in.</Step>
+  <Step title="Generate the code">Click **Confirmar número** (Confirm number). Tartini shows a pairing code.</Step>
+  <Step title="Type the code into WhatsApp">On your phone, open **WhatsApp**, go to **Aparelhos conectados** (Linked devices), tap **Conectar um aparelho** (Link a device), select **Conectar com número** (Link with phone number), and type the code.</Step>
+</Steps>
+
+<Note>This connection method only works for Brazilian numbers.</Note>
+
+---
+
+## Reconnect a disconnected channel
+
+By default, a disconnected channel stays idle until someone reconnects it.
+
+<Steps>
+  <Step title="Open the number list">Go to **Configurações > Canais > WhatsApp Business**.</Step>
+  <Step title="Open the channel menu">Click the ⋮ next to the disconnected channel and choose **Sincronizar** (Sync).</Step>
+  <Step title="Scan again">Repeat the QR Code scan or the pairing code, as in the first connection.</Step>
+</Steps>
+
+<Note>
+  When WhatsApp disconnects on its own, Tartini alerts your team with a notification that leads straight to this screen.
+</Note>
+
+---
+
+## Disconnect a channel
+
+<Steps>
+  <Step title="Open the channel menu">In the number list, click the ⋮ next to the connected channel.</Step>
+  <Step title="Choose Desconectar">Click **Desconectar** (Disconnect). The channel stops receiving messages, but stays in the list to be reconnected later.</Step>
+</Steps>
+
+<Warning>
+  Deleting a channel, unlike disconnecting, removes the channel from the list. To handle conversations on that number again, you'll need to connect a channel from scratch.
+</Warning>
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="The QR Code expired before I could scan it. Now what?">
+  Click **Gerar novo QR Code** (Generate new QR Code) inside the same modal and scan the new code.
+  </Accordion>
+  <Accordion title="Can I connect two WhatsApp Business numbers to the same Unit?">
+  No. Each Unit has one WhatsApp Business channel at a time. For another number, use another Unit.
+  </Accordion>
+  <Accordion title="Why did my WhatsApp disconnect on its own?">
+  The QR Code connection depends on the WhatsApp session on your phone. Switching devices, internet outages, or WhatsApp updates can end that session. Just sync it again.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Channels explained" href="/en/canais/canais-explicados">The channels available in Tartini and when to use each one.</Card>
+  <Card title="Connect WhatsApp Business API (WABA)" href="/en/canais/whatsapp-business-api">Meta's official connection, more stable.</Card>
+  <Card title="Fix connection issues" href="/en/canais/problemas-de-conexao">Common symptoms and how to fix them.</Card>
+  <Card title="Turn on Tino for a channel" href="/en/tino/ia-por-canal">Set up hours and follow-up for this number.</Card>
+</CardGroup>

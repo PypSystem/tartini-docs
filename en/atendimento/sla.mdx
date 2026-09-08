@@ -1,0 +1,101 @@
+---
+title: "Set the service SLA"
+sidebarTitle: "Service SLA"
+description: "Tell the team how long the customer can wait for the first human response, and get an alert before the deadline is missed."
+---
+
+With the SLA set, your team knows exactly how much time it has for the first human response, and managers get an alert before the deadline is missed.
+
+<Note>
+  Who sees this: Administrator, Company Manager, and Area Manager. Available on all plans.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Turn on the SLA for a channel
+
+By default, a channel that's never been configured has the SLA turned off.
+
+Where to find it: **Configurações > Atendimento > SLA de Atendimento** (Settings > Service > Service SLA).
+
+<Steps>
+  <Step title="Open the screen">Go to **Configurações > Atendimento > SLA de Atendimento**.</Step>
+  <Step title="Choose the channel">Click the channel you want to measure, in the list on the left.</Step>
+  <Step title="Turn on the SLA">Turn on the **SLA medindo** (SLA measuring) toggle.</Step>
+</Steps>
+
+{/* CAPTURA: images/atendimento/sla-selecao-canal.png | alt: Tela SLA de Atendimento com um canal selecionado e o toggle SLA medindo ativo | olhar: a lista de canais à esquerda e o toggle no detalhe */}
+
+<Note>
+  The SLA is set channel by channel. Turn it on only where it makes sense to measure response time.
+</Note>
+
+---
+
+## Set the maximum response time
+
+Where to find it: **Configurações > Atendimento > SLA de Atendimento**, in the channel detail.
+
+<Steps>
+  <Step title="Choose the time">In **Tempo máximo** (Maximum time), use one of the shortcuts (5 min, 10 min, 15 min, 30 min, 1 h, 2 h) or type a value between 1 and 1,440 minutes.</Step>
+  <Step title="Save">Click **Salvar** (Save).</Step>
+</Steps>
+
+<Note>
+  A channel that's never been configured shows 15 minutes, turned off. The SLA counts from the moment the conversation enters the queue until the first human response, even in transfers from Tino.
+</Note>
+
+---
+
+## Understand the alerts
+
+Each channel with an active SLA has a three-milestone timeline, visible right on the settings screen:
+
+- **Primeiro alerta** (First alert): the conversation turns amber in the queue, before the deadline is missed.
+- **Estourou** (Missed): the conversation turns red, at the maximum time set.
+- **Crítico** (Critical): managers get an email. {/* CONFIRMAR: quem exatamente recebe o e-mail de alerta crítico */}
+
+{/* CAPTURA: images/atendimento/sla-alertas.png | alt: Régua de alertas do SLA com os três marcos | olhar: os pontos de primeiro alerta, estourou e crítico na régua */}
+
+---
+
+## What the team sees in the conversation
+
+A conversation within the deadline shows no warning. As it nears the limit, it appears amber in the queue. After the deadline, red.
+
+---
+
+## Relationship with business hours
+
+The SLA clock only counts within the business hours set up. Outside business hours, it pauses and resumes at the next opening.
+
+<Note>
+  With no business hours set up, the SLA counts 24 hours a day, every day. Set the hours in [Availability](/en/cerebro/disponibilidade).
+</Note>
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Does the SLA measure Tino's responses?">
+  No. It measures the time until the first human response, even when the conversation arrives through a transfer from Tino.
+  </Accordion>
+  <Accordion title="Can I use the same deadline for all channels?">
+  It's not automatic. Set the maximum time channel by channel.
+  </Accordion>
+  <Accordion title="What happens if I switch channels without saving?">
+  The screen prompts you to save or discard the changes before switching channels.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Set the conversation rules" href="/en/atendimento/regras-de-conversa">Set up automatic closing, signature, and Scout.</Card>
+  <Card title="Set the AI's hours and time zone" href="/en/cerebro/disponibilidade">Set the business hours that pause the SLA.</Card>
+</CardGroup>

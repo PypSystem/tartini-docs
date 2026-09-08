@@ -1,0 +1,107 @@
+---
+title: "View your subscription and plan"
+sidebarTitle: "Subscription"
+description: "See your plan, your contracted monthly allowance, and your account details in one place."
+---
+
+With this screen, you can check at a glance which plan is active, how much of your monthly allowance is left, and whether your account details are correct.
+
+<Note>
+  Who can see this: only Administrator. {/* CONFIRMAR: divergência entre a documentação interna, que reserva esta tela ao dono da conta, e o comportamento atual da interface, que libera para o Administrador */}
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## See your plan and monthly allowance
+
+Where to find it: **Configurações > Cobrança > Assinatura** (Settings > Billing > Subscription).
+
+<Steps>
+  <Step title="Open the screen">Go to **Configurações > Cobrança > Assinatura**.</Step>
+  <Step title="See the summary">Check the plan name, the monthly price, and the allowance consumption bar.</Step>
+</Steps>
+
+{/* CAPTURA: images/creditos/assinatura-plano.png | alt: Bloco Plano na tela Assinatura com nome, preço e barra de franquia | olhar: o nome do plano e a barra de consumo */}
+
+<Note>
+  A free account has no monthly allowance or billing. In that case the screen only shows the free account notice.
+</Note>
+
+---
+
+## See the account details
+
+Where to find it: **Configurações > Cobrança > Assinatura**, **Dados da conta** (Account details) section.
+
+The screen shows Responsável, E-mail, Contato, CNPJ or CPF, Razão social, Empresa, Status da conta, and the customer-since date.
+
+<Note>
+  Account details can't be edited on this screen. {/* CONFIRMAR: onde e como o Administrador solicita a alteração dos dados cadastrais */}
+</Note>
+
+---
+
+## Understand the subscription statuses
+
+| Status | What it means |
+|---|---|
+| Ativa | Subscription up to date. Full access. |
+| Completa | Subscription up to date. Full access. |
+| Pendente | Waiting for confirmation. Read-only access. |
+| Suspensa | Subscription suspended. Read-only access. |
+| Encerrada | Subscription ended. Read-only access. |
+| Cancelada | Subscription canceled. Read-only access. |
+| Fraude | Subscription blocked. Read-only access. |
+
+---
+
+## What changes in read-only mode
+
+Outside of Ativa and Completa, the entire platform switches to read-only mode.
+
+<Warning>
+  With the subscription outside of Ativa or Completa, a banner warns that the subscription isn't active and that access is in read-only mode. Buttons, fields, and selections are disabled. Navigation keeps working normally.
+</Warning>
+
+---
+
+## Change your plan or your monthly allowance
+
+Where to find it: **Configurações > Cobrança > Assinatura**, **Gerenciar plano e franquia** (Manage plan and allowance) button.
+
+<Steps>
+  <Step title="Open the options">Click **Gerenciar plano e franquia**.</Step>
+  <Step title="Choose what to change">See the available plans, or adjust the contracted monthly allowance.</Step>
+  <Step title="Confirm outside Tartini">The plan or allowance change is completed on an external portal, outside Tartini.</Step>
+</Steps>
+
+<Note>
+  The button only appears on paid accounts. Plan or allowance changes take effect from the next renewal, never immediately.
+</Note>
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Can I edit my account details on this screen?">
+  No. {/* CONFIRMAR: canal correto para solicitar alteração de dados cadastrais */}
+  </Accordion>
+  <Accordion title="Why don't I see this screen?">
+  Only the company's Administrator can access Assinatura. Other roles are redirected to the start of Settings.
+  </Accordion>
+  <Accordion title="Does changing plans charge anything right away?">
+  No. The change only takes effect from the next renewal cycle.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Track your credit balance and statement" href="/en/creditos/creditos-e-extrato">See your daily credit consumption.</Card>
+  <Card title="Plans and what each one unlocks" href="/en/visao-geral/planos-e-recursos">Compare the features of each plan.</Card>
+</CardGroup>

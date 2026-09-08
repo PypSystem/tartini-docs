@@ -1,0 +1,108 @@
+---
+title: "Set the conversation rules"
+sidebarTitle: "Conversation Rules"
+description: "Define how conversations close on their own, how the agent's signature appears, and when Scout and Copilot come into action."
+---
+
+With these rules set, every conversation in your operation follows the same standard for signature, closing, and evaluation, without depending on each agent remembering.
+
+<Note>
+  Who sees this: Administrator, Company Manager, and Area Manager. Unit Manager doesn't have access to this screen.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Set up the agent's signature
+
+Where to find it: **Configurações > Atendimento > Regras de Conversa** (Settings > Service > Conversation Rules), **Assinatura do Atendente** (Agent Signature) section.
+
+<Steps>
+  <Step title="Open the screen">Go to **Configurações > Atendimento > Regras de Conversa**.</Step>
+  <Step title="Choose the rules">Turn on **Assinatura obrigatória** (Required signature) to require the signature on every message, and **Permitir mudança de assinatura** (Allow signature changes) to let the agent edit it.</Step>
+  <Step title="Save">Click **Salvar** (Save).</Step>
+</Steps>
+
+{/* CAPTURA: images/atendimento/regras-conversa-assinatura.png | alt: Seção Assinatura do Atendente com os dois toggles | olhar: os toggles Assinatura obrigatória e Permitir mudança de assinatura */}
+
+<Note>
+  The signature set here appears in messages sent by agents in the Inbox. {/* CONFIRMAR: estado padrão de Assinatura obrigatória e de Permitir mudança de assinatura */}
+</Note>
+
+---
+
+## Turn on automatic closing due to inactivity
+
+By default, it's when the conversation closes that Scout generates the summary and the evaluation.
+
+Where to find it: **Configurações > Atendimento > Regras de Conversa**, **Finalização Automática** (Automatic Closing) section.
+
+<Steps>
+  <Step title="Turn on the rule">Turn on **Encerrar conversa automaticamente** (Close conversation automatically).</Step>
+  <Step title="Adjust the time per channel">In **Tempo por canal** (Time per channel), use the plus and minus buttons to set between 1 and 168 hours of inactivity.</Step>
+  <Step title="Save">Click **Salvar**.</Step>
+</Steps>
+
+<Note>
+  A channel with no time set uses the default of 24 hours. Conversations led by Tino usually close sooner, under their own AI rule per channel.
+</Note>
+
+---
+
+## Turn on Scout when the conversation closes
+
+Where to find it: **Configurações > Atendimento > Regras de Conversa**, **Scout** section.
+
+<Steps>
+  <Step title="Open the screen">Go to **Configurações > Atendimento > Regras de Conversa**.</Step>
+  <Step title="Turn on Scout">Turn on **Ativar Scout ao finalizar conversa** (Activate Scout when conversation closes).</Step>
+  <Step title="Save">Click **Salvar**.</Step>
+</Steps>
+
+<Note>
+  With Scout active, every closed conversation gets a summary, a score, and improvement points, ready for you to review in Scout. Scout uses AI credits for every analysis.
+</Note>
+
+---
+
+## Turn on Copilot by default
+
+Where to find it: **Configurações > Atendimento > Regras de Conversa**, **Copilot** section.
+
+<Steps>
+  <Step title="Open the screen">Go to **Configurações > Atendimento > Regras de Conversa**.</Step>
+  <Step title="Turn on the default">Turn on **Copilot ativo por padrão em novas conversas** (Copilot active by default in new conversations).</Step>
+  <Step title="Save">Click **Salvar**.</Step>
+</Steps>
+
+<Note>
+  By default, this toggle already comes turned on. With Copilot active, it monitors every new conversation in human hands on its own. The agent can turn off Copilot in a specific conversation. Copilot uses AI credits.
+</Note>
+
+If your plan doesn't include active Copilot, the section shows an upgrade notice instead of the toggle. Your plan still has reactive Copilot, which answers the agent's questions on demand.
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Does turning off Finalização Automática affect Scout?">
+  Yes. Scout evaluates the conversation when it closes. Without automatic closing, it only runs when someone closes it manually.
+  </Accordion>
+  <Accordion title="Are Regras de Conversa and SLA the same thing?">
+  No. Regras de Conversa handles signature, closing, and evaluation. The [SLA](/en/atendimento/sla) measures the time until the first human response.
+  </Accordion>
+  <Accordion title="Why don't I see Copilot active by default?">
+  This feature is available starting with the Scale plan. Your current plan shows the upgrade notice instead of the toggle.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Set the service SLA" href="/en/atendimento/sla">Measure the time until the first human response.</Card>
+  <Card title="Use Copilot" href="/en/inbox/copilot">See how Copilot helps the agent during the conversation.</Card>
+</CardGroup>

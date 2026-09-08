@@ -1,0 +1,90 @@
+---
+title: "Trae contactos de sistemas externos"
+sidebarTitle: "Contactos de Campaña"
+description: "Conecta la clave de Varejo Online y mira el estado de la integración con SAN para traer datos de clientes a Tartini."
+---
+
+Conectar Varejo Online guarda la clave de tu cuenta con seguridad y deja a Tartini listo para usar los datos de tu sistema de gestión en campañas.
+
+<Note>
+  Campañas es una función de los planes Scale y Enterprise. Quién configura: solo el Administrador (Empresa) ve esta pantalla.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Configura la clave de Varejo Online
+
+De forma predeterminada, la integración aparece como **Não configurada** (No configurada).
+
+Dónde está: **Configurações > Integrações > Contatos de Campanha** (Configuración > Integraciones > Contactos de Campaña).
+
+<Steps>
+  <Step title="Abre la pantalla">Ve a **Configurações > Integrações > Contatos de Campanha**.</Step>
+  <Step title="Pega la clave">En la tarjeta **Varejo Online**, pega la clave de la API en el campo **Chave API** (Clave API).</Step>
+  <Step title="Guarda">Haz clic en **Salvar Chave** (Guardar Clave).</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/contatos-campanha-varejo-online.png | alt: Cartão Varejo Online com o campo de chave API e o selo de status Ativa | olhar: o selo de status ao lado do nome Varejo Online */}
+
+Después de guardada, la tarjeta muestra el sello **Ativa** (Activa) y la clave enmascarada. Para cambiarla, usa **Alterar Chave** (Cambiar Clave).
+
+<Note>
+  Una clave inválida muestra la alerta **Chave API Inválida** (Clave API Inválida). La clave se cifra y se almacena de forma segura, y se valida por el propio Varejo Online al guardar.
+</Note>
+
+---
+
+## Revisa el estado de la integración con SAN
+
+La tarjeta **SAN Internet** aparece en esta pantalla cuando tu empresa tiene esta integración disponible, con el sello **Ativa** o **Não configurada**.
+
+Esta integración se configura por variables de entorno del servidor, no por un formulario en la pantalla. Si necesitas activarla o revisarla, contacta al administrador del sistema.
+
+<Steps>
+  <Step title="Mira el estado actual">Abre **Configurações > Integrações > Contatos de Campanha** y revisa el sello en la tarjeta **SAN Internet**.</Step>
+  <Step title="Actualiza si lo necesitas">Haz clic en **Atualizar Status** (Actualizar Estado) para buscar el estado más reciente de las dos integraciones.</Step>
+</Steps>
+
+---
+
+## Qué hacen estas integraciones hoy
+
+Conectar Varejo Online y revisar SAN aquí prepara la base para traer clientes de esos sistemas como contactos de campaña. El asistente de creación de campañas actual, sin embargo, solo acepta lista de contactos en archivo CSV: todavía no ofrece un paso de búsqueda dentro de estas integraciones.
+
+<Note>
+  Si configuraste la clave y no encuentras la opción de importar directo por el asistente, es porque esa etapa no está en el asistente predeterminado hoy. Sigue usando el CSV, descrito en [Importa los contactos de la campaña](/es/campanhas/contatos-e-csv), hasta que la búsqueda aparezca ahí.
+</Note>
+
+{/* CONFIRMAR: se e quando a busca de contatos do Varejo Online e da SAN passa a ficar disponível dentro do assistente de criação atual. */}
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Quién puede configurar estas integraciones?">
+  Solo quien tiene el rol Administrador (Empresa). Otros roles no ven el tile **Contatos de Campanha** (Contactos de Campaña) en Configuración.
+  </Accordion>
+  <Accordion title="¿La clave de Varejo Online expira?">
+  La pantalla avisa cuando la clave guardada deja de ser válida, con la alerta **Chave API Inválida**. En ese caso, pega una clave nueva en **Alterar Chave**.
+  </Accordion>
+  <Accordion title="¿Cómo activo la integración con SAN?">
+  Depende de una configuración hecha por el administrador del sistema, fuera de esta pantalla. Habla con el soporte para revisar su disponibilidad en tu cuenta.
+  </Accordion>
+  <Accordion title="Configuré la clave, pero no veo los contactos en mi campaña">
+  Hoy la importación por estas integraciones no alimenta el asistente de creación directamente. Usa el CSV para subir la lista de contactos.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Importa los contactos de la campaña" href="/es/campanhas/contatos-e-csv">El formato de CSV aceptado hoy por el asistente.</Card>
+  <Card title="Conecta herramientas externas a la IA" href="/es/integracoes/conectores">Otras integraciones de Tartini.</Card>
+  <Card title="Campañas explicadas" href="/es/campanhas/campanhas-explicadas">Visión general del área de Campañas.</Card>
+  <Card title="Crea una campaña" href="/es/campanhas/crie-uma-campanha">El asistente en tres pasos.</Card>
+</CardGroup>

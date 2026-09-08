@@ -1,0 +1,110 @@
+---
+title: "Organize processes into groups"
+sidebarTitle: "Groups"
+description: "Bring together the processes a campaign can use and set the specific output path for that set."
+---
+
+A group brings together the processes a campaign can chain, with its own output path, without affecting how each process behaves in any other situation.
+
+<Note>
+  Who sees this: Administrator and Company Manager. Requires the Scale plan.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Create a group
+
+By default, a new group starts marked as **fluxo próprio** (own flow), without inheriting the global path.
+
+Where to find it: **Cérebro > Processos > Grupos** (Brain > Processes > Groups).
+
+<Steps>
+  <Step title="Open the form">Click **Novo grupo** (New group) (or **Criar primeiro grupo** (Create first group), if there isn't one yet).</Step>
+  <Step title="Write the name">Fill in **Nome** (Name), for example "Suporte financeiro".</Step>
+  <Step title="Describe the group (optional)">Fill in **Descrição** (Description) with what the group is for.</Step>
+  <Step title="Add processes">Select a process in the **Adicionar processo ao grupo…** (Add process to group…) field and click **Adicionar** (Add).</Step>
+  <Step title="Save">Click **Criar grupo** (Create group).</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/grupos-criar.png | alt: Formulário de novo grupo com nome, descrição e três processos já adicionados | olhar: a estrela de processo inicial ao lado do primeiro processo */}
+
+<Note>
+  Saving always replaces the group's entire set of processes with the current list on the screen; it doesn't add to what already existed.
+</Note>
+
+---
+
+## Mark the starting process
+
+The star next to a process defines where the group's campaign begins. It's optional.
+
+Where to find it: **Cérebro > Processos > Grupos**, inside the group's settings.
+
+<Steps>
+  <Step title="Find the process">Find the process that should open the campaign.</Step>
+  <Step title="Mark the star">Click the star icon next to the name.</Step>
+</Steps>
+
+---
+
+## Import the global path when adding a process
+
+When you add a process, you choose whether it comes in with its own path inside the group or brings the global path as a starting point.
+
+<Steps>
+  <Step title="Turn on the import, if you want">Turn on **Importar fluxo global ao adicionar** (Import global flow on add) before choosing the process.</Step>
+  <Step title="Add the process">The process comes in marked for import, shown as a preview until you save.</Step>
+  <Step title="Save">When you save the group, the processes the global path points to also come in, nested under the original process.</Step>
+</Steps>
+
+<Note>
+  Removing a process that brought others in by import removes the imported ones too. An imported process can't be removed on its own, separate from the parent that brought it in.
+</Note>
+
+---
+
+## Edit the group's path (the group's flow)
+
+Once saved, each group has its own editable graph, called **Fluxo do grupo** (Group flow), separate from each process's global path.
+
+Where to find it: the group's settings, **Fluxo** (Flow) tab.
+
+<Steps>
+  <Step title="Choose the mode">Select **Herdar fluxo global** (Inherit global flow) (what you set here only overrides this campaign) or **Fluxo próprio do grupo** (Group's own flow) (ignores the global path completely).</Step>
+  <Step title="Focus on a process">In the top bar, click the process you want to edit.</Step>
+  <Step title="Edit an output">Click an outcome chip on the graph and fill in the target: another process, triage, transfer to a department, or closing.</Step>
+  <Step title="Save the output">Click **Salvar saída** (Save output).</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/grupos-fluxo-grupo.png | alt: Grafo do Fluxo do grupo com o switcher de processos no topo e o painel de saúde do fluxo abaixo | olhar: o cartão de alerta de ciclo sem escape, quando existir */}
+
+<Note>
+  Editing an output here doesn't change the process's global path in other campaigns. Only one problem is treated as a real failure in the **Saúde do fluxo** (Flow health) panel: a cycle with no way out.
+</Note>
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="If I remove a process from the group, do the ones I imported with it also leave?">
+  Yes. Removing a process also removes everything it brought in by import.
+  </Accordion>
+  <Accordion title="Does editing the Fluxo do grupo change the process in other campaigns?">
+  No. The edit stays restricted to this campaign; the process's global path remains independent.
+  </Accordion>
+  <Accordion title="Does a process with no output defined break the service?">
+  No. By default, any outcome with no explicit rule falls back to triage.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Map processes from conversations" href="/en/cerebro/mapeie-processos">Build and publish the process before grouping it.</Card>
+  <Card title="Track the process Catalog" href="/en/cerebro/consistencia-e-insights">See structural problems in the process records.</Card>
+</CardGroup>

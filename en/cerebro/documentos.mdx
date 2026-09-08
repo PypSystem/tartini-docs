@@ -1,0 +1,84 @@
+---
+title: "Teach the AI with documents"
+sidebarTitle: "Documents"
+description: "Upload manuals, catalogs, and policies so Tino learns the content automatically."
+---
+
+Uploading a document is the fastest way to put existing content into the knowledge base: Tino reads the file and learns on its own, without you needing to rewrite anything.
+
+<Note>
+  Who can see this: Administrator and Company Manager. Available on all plans. The public audience requires the Scale plan.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Upload one or more documents
+
+By default, a new document waits for the audience choice before uploading.
+
+Where to find it: **Cérebro > Propriedades** (Cérebro > Properties), **Arquivo** (File) button.
+
+<Steps>
+  <Step title="Open the upload">Click **Arquivo** (File), in the Add group (or, with an empty list, the **Enviar documento** (Upload document) card).</Step>
+  <Step title="Choose the audience">Check **Conhecimento Público** (Public Knowledge, used by Tino) or **Conhecimento Privado** (Private Knowledge, used only by Copilot).</Step>
+  <Step title="Select the files">Click **Selecionar arquivos** (Select files) or drag the files to the indicated area.</Step>
+  <Step title="Upload">Click **Enviar** (Upload).</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/documentos-upload.png | alt: Modal Enviar documento com arquivos selecionados e a barra de progresso | olhar: o contador de arquivos e o botão Enviar */}
+
+<Note>
+  Accepted formats: PDF, DOCX, XLSX, CSV, TXT, or MD. The limit is 30 MB per file and up to 10 files per upload. Above that, remove a file or send it in another batch.
+</Note>
+
+---
+
+## Track the processing
+
+After uploading, each document appears in the Properties list with the status Processing or Indexing, updated in real time. When it finishes, the status changes to Indexed.
+
+If a file exceeds the size limit or isn't in an accepted format, it's rejected before uploading, and the rest of the batch's files proceed normally.
+
+<Note>
+  Uploading and indexing documents consumes credits. Track your usage in Settings > Billing > Usage.
+</Note>
+
+---
+
+## What happens after uploading
+
+When indexing finishes, the content can already be used by Tino (if public) or by Copilot (if private or public). A **Tino aprendeu** (Tino learned) card may appear with a summary of what was extracted, and a button to test the knowledge in the Cérebro's side chat.
+
+If the document generates automatic personality suggestions or process candidates, the list shows an icon in the Descobertas (Discoveries) column, and a notice arrives in real time. See how to review these suggestions in [Use the knowledge base intelligence](/en/cerebro/inteligencia-da-base).
+
+To review or correct the extracted text, edit the audience, or delete the document, use the details panel described in [Register the company's properties](/en/cerebro/propriedades-da-empresa).
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="What file types can I upload?">
+  PDF, DOCX, XLSX, CSV, TXT, or MD.
+  </Accordion>
+  <Accordion title="What's the maximum size per file?">
+  30 MB. Larger files are rejected before uploading, with a notice showing the file name.
+  </Accordion>
+  <Accordion title="Can I upload several documents at once?">
+  Yes, up to 10 files in the same upload.
+  </Accordion>
+  <Accordion title="Is the document visible to the end customer?">
+  Only if the chosen audience includes Conhecimento Público. With Conhecimento Privado, the content stays restricted to Copilot and the internal team.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Register the company's properties" href="/en/cerebro/propriedades-da-empresa">See, edit, and manage what's already been registered.</Card>
+  <Card title="Use the knowledge base intelligence" href="/en/cerebro/inteligencia-da-base">Review what Tino discovered from your documents.</Card>
+</CardGroup>

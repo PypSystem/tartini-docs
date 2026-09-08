@@ -1,0 +1,91 @@
+---
+title: "Recibe eventos en tu sistema"
+sidebarTitle: "Webhooks"
+description: "Configura un aviso automático en tu sistema cada vez que se finalice una atención en Tartini."
+---
+
+Con el webhook activado, tu sistema recibe un aviso automático en cuanto termina una conversación, sin necesidad de consultar a Tartini.
+
+<Note>
+  Quién lo configura: solo el Administrador. Disponible en el plan Scale.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Qué es el webhook de finalización de atención
+
+Hoy Tartini envía un evento: la finalización de una atención, en cualquier canal. El aviso llega con los datos del contacto (incluyendo el ID externo, si usas uno), el motivo del cierre y, si quieres, el resumen de Tino, el historial de mensajes y la nota de satisfacción.
+
+Dónde está: **Configurações > Integrações > Webhooks > Finalização de Atendimento** (Configuración > Integraciones > Webhooks > Finalización de Atención).
+
+---
+
+## Registra la URL de tu sistema
+
+De forma predeterminada, el webhook está apagado.
+
+<Steps>
+  <Step title="Abre la pantalla">Ve a **Configurações > Integrações > Webhooks** y haz clic en la tarjeta **Finalização de Atendimento**.</Step>
+  <Step title="Indica la URL">Completa **URL do webhook** (URL del webhook) con la dirección de tu sistema.</Step>
+  <Step title="Genera el secret de firma">Haz clic en **Gerar novo secret** (Generar nuevo secret) y copia el valor generado. Compártelo con quien mantiene tu sistema: le sirve para confirmar que el aviso realmente vino de Tartini.</Step>
+  <Step title="Activa">Activa **Ativar webhook** (Activar webhook) y haz clic en **Salvar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/integracoes/webhooks-finalizacao.png | alt: tela de configuração do webhook de Finalização de Atendimento com o preview do payload | olhar: os toggles de conteúdo do payload e o preview à direita */}
+
+<Note>
+  El secret solo entra en vigor después de hacer clic en **Salvar**. Generar un nuevo secret invalida el anterior.
+</Note>
+
+---
+
+## Elige qué enviar
+
+La conversación y el contacto siempre van en el aviso. Tú decides qué más incluir:
+
+- **Resumo do Tino** (Resumen de Tino): puede demorar algunos minutos, el tiempo que Tino tarda en generar el resumen.
+- **Histórico de mensagens** (Historial de mensajes): todos los mensajes intercambiados en la conversación.
+- **Nota CSAT**: la evaluación de satisfacción del cliente, cuando se recolecta.
+
+Activa también **Registrar apenas atendimentos relevantes** (Registrar solo atenciones relevantes) para no recibir avisos de conversaciones triviales, como un saludo sin continuación.
+
+---
+
+## Prueba el disparo
+
+<Steps>
+  <Step title="Guarda la URL primero">Asegúrate de que **URL do webhook** esté completa y guardada.</Step>
+  <Step title="Dispara la prueba">Haz clic en **Testar webhook** (Probar webhook).</Step>
+  <Step title="Revisa en tu sistema">Comprueba si tu sistema recibió el aviso de prueba.</Step>
+</Steps>
+
+<Note>
+  Los detalles técnicos del payload, como los campos exactos y los encabezados de seguridad, quedan a cargo de quien desarrolla tu sistema.
+</Note>
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Cuándo exactamente se envía el aviso?">
+  Cuando la conversación se finaliza de hecho, ya sea por cierre manual, por la encuesta de satisfacción o por el cierre automático por inactividad.
+  </Accordion>
+  <Accordion title="¿Puedo registrar más de una dirección?">
+  Hoy la pantalla acepta una dirección a la vez para el evento de Finalização de Atendimento.
+  </Accordion>
+  <Accordion title="¿Cambiar el secret afecta lo que ya está funcionando?">
+  Sí. Al generar un nuevo secret, el anterior deja de valer. Actualiza el secret en tu sistema antes de cambiarlo aquí, o los avisos dejan de confirmarse como auténticos.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Usa Tartini como canal de tu sistema" href="/es/integracoes/conexao-via-api">Genera tokens para integrar tus sistemas.</Card>
+  <Card title="Canales explicados" href="/es/canais/canais-explicados">Los canales disponibles en Tartini.</Card>
+</CardGroup>

@@ -1,0 +1,98 @@
+---
+title: "Cierra una conversación y envía la encuesta"
+sidebarTitle: "Cerrar conversación"
+description: "Finaliza la atención con el motivo correcto y entiende cuándo la encuesta de satisfacción sale automáticamente."
+---
+
+Cerrar avisa que la atención terminó y libera la conversación de la cola. Si tu empresa usa encuesta de satisfacción, puede salir automáticamente justo después.
+
+<Note>
+  El cierre automático y la encuesta de satisfacción los configura un Administrador, Gestor de la Empresa o Gestor de Área, en **Configurações > Atendimento** (Configuraciones > Atención).
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Cierra manualmente
+
+De forma predeterminada, la conversación queda abierta hasta que alguien la cierre o actúe el cierre automático.
+
+Dónde está: en la parte superior de la conversación, en el encabezado, el ícono de check (tooltip "Finalizar atendimento", Finalizar atención). En el celular: menú > "Finalizar".
+
+<Steps>
+  <Step title="Haz clic en el ícono de check">Abre el panel Finalizar conversa (Finalizar conversación).</Step>
+  <Step title="Describe el motivo">Escribe cómo terminó la atención, en hasta 500 caracteres.</Step>
+  <Step title="Haz clic en Finalizar">La pantalla confirma: "Conversa finalizada com sucesso" (Conversación finalizada con éxito).</Step>
+</Steps>
+
+{/* CAPTURA: images/inbox/inbox-finalizar-conversa.png | alt: drawer Finalizar conversa com o campo de motivo preenchido | olhar: o contador de caracteres e o botão Finalizar */}
+
+<Note>
+  El motivo es obligatorio. Descríbelo incluso cuando la atención se resolvió fuera del chat.
+</Note>
+
+---
+
+## Entiende qué pasa al cerrar
+
+Si "Ativar Scout ao finalizar conversa" (Activar Scout al finalizar conversación) está activado, el Scout genera un resumen y una nota de la conversación. Si la encuesta de satisfacción está activa para el canal, la conversación pasa a "Aguardando CSAT" (Esperando CSAT) y el cliente recibe la pregunta.
+
+---
+
+## Cierre automático
+
+De forma predeterminada, el cierre automático está desactivado.
+
+Dónde está: **Configurações > Atendimento > Regras de Conversa** (Configuraciones > Atención > Reglas de Conversación), campo "Encerrar conversa automaticamente" (Cerrar conversación automáticamente) con "Tempo por canal" (Tiempo por canal).
+
+Sin un tiempo definido, el canal usa el valor predeterminado de 24 horas. Para las conversaciones conducidas por Tino, la regla está en **Configurações > Atendimento > IA por canal** (Configuraciones > Atención > IA por canal), en "A conversa fica parada" (La conversación queda detenida): Tino se despide y cierra después del tiempo de inactividad configurado.
+
+<Note>
+  Regras de Conversa aplica a conversaciones con el equipo. IA por canal aplica solo a conversaciones que Tino está conduciendo.
+</Note>
+
+---
+
+## La encuesta de satisfacción
+
+Dónde está: **Configurações > Atendimento > Pesquisa de Satisfação** (Configuraciones > Atención > Encuesta de Satisfacción).
+
+Los campos son "Coletar em" (Recolectar en), "Regra de disparo" (Regla de disparo), con las opciones "Todas as conversas" o "Apenas conversas resolvidas" (Todas las conversaciones o Solo conversaciones resueltas), "Canais Habilitados" (Canales Habilitados) y "Tempo limite para resposta (minutos)" (Tiempo límite para respuesta, en minutos), con valor predeterminado de 60 minutos.
+
+<Note>
+  No existe un botón para disparar la encuesta manualmente durante la atención. El envío siempre es automático, según la regla configurada.
+</Note>
+
+---
+
+## Reapertura de una conversación finalizada
+
+{/* CONFIRMAR: se existe reabertura de uma conversa finalizada e como ela acontece */}
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Necesito completar el motivo para finalizar?">
+  Sí, es obligatorio y tiene hasta 500 caracteres.
+  </Accordion>
+  <Accordion title="¿Qué pasa con la conversación después de finalizada?">
+  Desaparece de las colas activas. Si el Scout está activado, gana un resumen y una nota; si la encuesta de satisfacción está activa, el cliente recibe la pregunta.
+  </Accordion>
+  <Accordion title="¿Puedo enviar la encuesta de satisfacción manualmente?">
+  No. Siempre es automática, según la regla en Configurações > Atendimento > Pesquisa de Satisfação.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Configura la encuesta de satisfacción" href="/es/atendimento/pesquisa-de-satisfacao">Reglas de disparo y tiempo límite de respuesta.</Card>
+  <Card title="Define las reglas de conversación" href="/es/atendimento/regras-de-conversa">Firma, cierre automático y Copilot activo.</Card>
+  <Card title="El Scout explicado" href="/es/scout/o-scout-explicado">Cómo nacen el resumen y la nota de la conversación.</Card>
+  <Card title="Atiende una conversación" href="/es/inbox/atenda-uma-conversa">Abrir, responder, adjuntar y retomar de Tino.</Card>
+</CardGroup>

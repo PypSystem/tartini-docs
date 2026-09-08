@@ -1,0 +1,111 @@
+---
+title: "Conecta WhatsApp Business API (WABA)"
+sidebarTitle: "WABA"
+description: "Conecta un número comercial de WhatsApp por la API oficial de Meta y gana más estabilidad en la atención."
+---
+
+WABA conecta tu número comercial por la API oficial de Meta. Es más estable que la conexión por código QR y permite enviar plantillas de mensaje aprobadas.
+
+<Note>
+  Quién conecta: Administrador, Gestor de la Empresa, Gestor de Área y Gestor de Unidad. Disponible en todos los planes, con facturación basada en el uso.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Antes de conectar
+
+Necesitas:
+
+- Una cuenta Meta Business con verificación de empresa completada.
+- Una WhatsApp Business Account (WABA) creada.
+- Un número de teléfono exclusivo, que no esté activo en el WhatsApp normal ni en el WhatsApp Business del celular.
+- Un PIN de verificación en dos pasos de 6 dígitos. Si el número todavía no tiene uno, lo creas durante la conexión. Anótalo y guárdalo: no se puede recuperar después.
+
+<Warning>
+  El número necesita ser exclusivo para la API. Si ya está activo en otro WhatsApp, desvincúlalo antes de continuar.
+</Warning>
+
+---
+
+## Obtén un número comercial
+
+Si ya tienes un número listo en WABA, pasa a la siguiente sección. Si no, elige un camino:
+
+**Registro directo en Meta**: durante la propia conexión en Tartini, Meta ofrece un registro simplificado para dar de alta un número nuevo.
+
+**Socio autorizado (BSP)**: una empresa autorizada por Meta se encarga del aprovisionamiento, la portabilidad y el soporte, generalmente con pago en reales y factura en Brasil. Es el camino habitual para portar un número que ya usas.
+
+<Tip>
+  Meta no vende números directamente. Sin un BSP, el registro directo exige que ya tengas la cuenta Meta Business y la WABA listas.
+</Tip>
+
+---
+
+## Conecta vía Meta, paso a paso
+
+<Steps>
+  <Step title="Abre la pantalla de WABA">Ve a **Configurações > Canais > WABA** (Configuración > Canales > WABA) y haz clic en **Conectar ao WhatsApp** (Conectar a WhatsApp).</Step>
+  <Step title="Confirma los prerrequisitos">En el modal de prerrequisitos, revisa la lista y haz clic en **Já tenho tudo, conectar** (Ya tengo todo, conectar).</Step>
+  <Step title="Completa los datos del canal">Elige la **Entidade** (Entidad) y da un **Nome do canal** (Nombre del canal).</Step>
+  <Step title="Conecta con Meta">Haz clic en **Conectar com Meta** (Conectar con Meta). Se abre una ventana de Meta para que autorices el acceso.</Step>
+  <Step title="Autoriza en la ventana de Meta">Confirma tu cuenta Meta Business y la WABA. Al terminar, la ventana se cierra sola.</Step>
+  <Step title="Selecciona el número">Elige el número en la lista que aparece, con el sello de calidad (Alta, Media o Baja).</Step>
+  <Step title="Ingresa el PIN">Escribe el PIN de verificación en dos pasos de 6 dígitos y haz clic en **Confirmar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/canais/whatsapp-waba-selecionar-numero.png | alt: modal de seleção de número da WABA com o selo de qualidade | olhar: o selo de qualidade de cada número antes de escolher */}
+
+<Note>
+  Si el navegador bloquea la ventana de Meta, habilita las ventanas emergentes para Tartini y haz clic en **Conectar com Meta** de nuevo.
+</Note>
+
+---
+
+## Reconecta un canal WABA
+
+Úsalo cuando la autorización de Meta expire o cuando necesites cambiar de número.
+
+<Steps>
+  <Step title="Abre el menú del canal">En **Configurações > Canais > WABA**, haz clic en el ⋮ junto al canal.</Step>
+  <Step title="Elige Reconectar">Haz clic en **Reconectar** y repite la autorización en la ventana de Meta.</Step>
+</Steps>
+
+---
+
+## Sigue el estado del canal
+
+- **Conectado**: recibiendo y enviando mensajes.
+- **Conectando**: la conexión está en curso.
+- **Desconectado**: el canal se detuvo. Usa **Sincronizar** o **Reconectar** en el menú del canal.
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Cuánto tiempo demora el proceso?">
+  Entre 2 y 5 días hábiles, contando la verificación de la cuenta y el aprovisionamiento del número.
+  </Accordion>
+  <Accordion title="¿Puedo portar mi número actual de WhatsApp Business a WABA?">
+  Sí. Primero desvincula el número del WhatsApp Business normal, después regístralo en WABA por Meta o por un BSP.
+  </Accordion>
+  <Accordion title="¿Cuál es la diferencia con el WhatsApp Business normal?">
+  WABA es la API oficial de Meta: no corre riesgo de baneo por conexión no autorizada y permite enviar plantillas aprobadas. WhatsApp Business por código QR usa una conexión no oficial.
+  </Accordion>
+  <Accordion title="¿El número aparece con el sello verde de verificado?">
+  No automáticamente. El sello de verificación de Meta sigue un proceso aparte, fuera de Tartini.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Canales explicados" href="/es/canais/canais-explicados">Los canales disponibles en Tartini y cuándo usar cada uno.</Card>
+  <Card title="Crea plantillas de mensaje de WhatsApp" href="/es/canais/templates">Mensajes aprobados por Meta para iniciar conversaciones.</Card>
+  <Card title="Resuelve problemas de conexión" href="/es/canais/problemas-de-conexao">Síntomas comunes y cómo corregirlos.</Card>
+  <Card title="Activa Tino en un canal" href="/es/tino/ia-por-canal">Configura horarios y follow-up para este número.</Card>
+</CardGroup>

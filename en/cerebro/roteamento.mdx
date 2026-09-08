@@ -1,0 +1,113 @@
+---
+title: "Set up routing"
+sidebarTitle: "Routing"
+description: "Define the conditions that make Tino transfer the conversation to a human agent."
+---
+
+Routing tells Tino when to stop and hand the conversation to a person, such as an angry customer or a request to speak with an agent.
+
+<Note>
+  Who sees this: Administrator and Company Manager. Requires the Scale plan.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Create a routing criterion
+
+By default, no criteria are set up.
+
+Where to find it: **Cérebro > Operações > Roteamento** (Brain > Operations > Routing).
+
+<Steps>
+  <Step title="Open the form">Click **Adicionar critério** (Add criterion).</Step>
+  <Step title="Write the name">Fill in the title, for example "Transferir cliente irritado".</Step>
+  <Step title="Describe the condition">Explain when and how the routing should happen.</Step>
+  <Step title="Save">Click **Salvar** (Save).</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/roteamento-criar-criterio.png | alt: Formulário de novo critério de roteamento com título e descrição preenchidos | olhar: os modelos sugeridos abaixo dos campos vazios */}
+
+<Note>
+  The title and description can't repeat across criteria that are already set up. There's no limit on the number of criteria.
+</Note>
+
+---
+
+## Turn a criterion on or off
+
+Where to find it: inside the criterion card's edit view.
+
+<Steps>
+  <Step title="Open the card">Click the criterion you want to change.</Step>
+  <Step title="Turn it on or off">Use the **Ativo**/**Inativo** (Active/Inactive) toggle.</Step>
+  <Step title="Save">Click **Salvar**.</Step>
+</Steps>
+
+When an approved criterion came from a Tino suggestion, the card shows an **Origem** (Source) link pointing to the Cérebro (the company's brain) document it was extracted from.
+
+---
+
+## Use a ready-made template
+
+Where to find it: **Cérebro > Operações > Roteamento**, templates block, with suggestions such as "Insatisfação, reclamação ou linguagem agressiva" and "Cliente solicita falar com atendente humano".
+
+<Steps>
+  <Step title="Choose a template">Click one of the suggested templates, or **Explorar modelos** (Explore templates) to see them all.</Step>
+  <Step title="Adjust the text">The form opens pre-filled with the template's title and description.</Step>
+  <Step title="Save">Click **Salvar**.</Step>
+</Steps>
+
+---
+
+## Review Tino's suggestions
+
+Where to find it: **Cérebro > Operações > Roteamento**, **Sugestões do Tino** (Tino's Suggestions) block, when there's one pending.
+
+<Steps>
+  <Step title="Read the suggestion">Check the title, the description, and, if there is one, the source in Cérebro.</Step>
+  <Step title="Decide">Click **Aceitar** (Accept), **Editar** (Edit), or **Negar** (Deny).</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/roteamento-sugestoes-tino.png | alt: Bloco Sugestões do Tino em Roteamento com um card de critério sugerido | olhar: o link de Origem apontando para o documento de onde veio a sugestão */}
+
+<Note>
+  A suggestion doesn't apply to service before it's accepted. Editing and saving already approves the criterion in the same action.
+</Note>
+
+---
+
+## Delete a criterion
+
+Where to find it: inside the criterion card's edit view.
+
+<Steps>
+  <Step title="Open the card">Click the criterion you want to remove.</Step>
+  <Step title="Click Delete">Confirm in the window that opens.</Step>
+</Steps>
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Can I set up routing for an action other than transferring to a person?">
+  No. Every criterion set up here transfers to human service.
+  </Accordion>
+  <Accordion title="Is there a way to simulate a conversation against the routing criteria?">
+  There's no simulation on this screen. To check the behavior, use the Cérebro's test chat.
+  </Accordion>
+  <Accordion title="How many criteria can I set up?">
+  There's no limit on the number.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Set up clarifications" href="/en/cerebro/esclarecimentos">Define when Tino asks for more information.</Card>
+  <Card title="Set the AI's hours and time zone" href="/en/cerebro/disponibilidade">Set when the company is available for service.</Card>
+</CardGroup>

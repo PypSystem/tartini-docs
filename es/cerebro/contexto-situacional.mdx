@@ -1,0 +1,104 @@
+---
+title: "Indica un contexto temporal"
+sidebarTitle: "Contexto Situacional"
+description: "Avisa a Tino sobre mantenimientos, promociones o cambios de horario, con fecha de inicio y fin definidas por ti."
+---
+
+Un contexto situacional avisa a Tino sobre una situación pasajera, como un mantenimiento programado o una promoción, sin necesidad de tocar las reglas permanentes.
+
+<Note>
+  Quién lo ve: Administrador y Gestor de la Empresa. Requiere el plan Scale.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Crea un contexto
+
+De forma predeterminada, un contexto nuevo no tiene fecha de inicio ni de fin, y vale desde ya.
+
+Dónde está: **Cérebro > Operações > Contexto Situacional** (Cerebro > Operaciones > Contexto Situacional).
+
+<Steps>
+  <Step title="Abre el formulario">Haz clic en **Adicionar contexto** (Agregar contexto).</Step>
+  <Step title="Escribe el título">Completa el título, por ejemplo "Manutenção programada".</Step>
+  <Step title="Describe la instrucción">Explica la situación y cómo Tino debe comportarse durante ese período.</Step>
+  <Step title="Define el período (opcional)">Completa **Início** y **Fim** (Inicio y Fin), con fecha y hora, si el contexto tiene un plazo.</Step>
+  <Step title="Guarda">Haz clic en **Adicionar** (Agregar).</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/contexto-situacional-criar.png | alt: Formulário de novo contexto situacional com título, instrução e campos de data Início e Fim preenchidos | olhar: o interruptor Ativo/Inativo ao lado da lixeira */}
+
+<Note>
+  El título y la instrucción son obligatorios. Las fechas son opcionales: sin ellas, el contexto vale por tiempo indeterminado.
+</Note>
+
+---
+
+## Entiende el estado de cada contexto
+
+Cada contexto muestra uno de los cuatro estados a continuación, calculado automáticamente a partir de las fechas y del interruptor Ativo/Inativo:
+
+| Estado | Cuándo aparece |
+|---|---|
+| Ativo (Activo) | Dentro del período definido, o sin fechas, con el contexto encendido. |
+| Agendado (Programado) | La fecha de inicio todavía está en el futuro. |
+| Expirado | La fecha de fin ya pasó. |
+| Inativo (Inactivo) | El interruptor está apagado, sin importar las fechas. |
+
+<Note>
+  Apagar el interruptor siempre muestra Inativo, incluso si el contexto está dentro del período. El estado se recalcula cada vez que se abre la pantalla.
+</Note>
+
+---
+
+## Edita o elimina un contexto
+
+Dónde está: **Cérebro > Operações > Contexto Situacional**, haz clic en cualquier tarjeta de la lista.
+
+<Steps>
+  <Step title="Abre la tarjeta">Haz clic en el contexto que quieras cambiar.</Step>
+  <Step title="Ajusta los campos">Cambia el título, la instrucción, las fechas o el interruptor Ativo/Inativo.</Step>
+  <Step title="Guarda o elimina">Haz clic en **Salvar**, o en el ícono de papelera **Excluir contexto** (Eliminar contexto), con confirmación.</Step>
+</Steps>
+
+---
+
+## Revisa las sugerencias de Tino
+
+Dónde está: **Cérebro > Operações > Contexto Situacional**, bloque **Sugestões do Tino** (Sugerencias de Tino), cuando hay alguna pendiente.
+
+<Steps>
+  <Step title="Lee la sugerencia">Revisa el título y la instrucción.</Step>
+  <Step title="Decide">Haz clic en **Aceitar**, **Editar** o **Negar** (Aceptar, Editar o Rechazar).</Step>
+</Steps>
+
+<Note>
+  Una sugerencia no vale en la atención antes de ser aceptada. Editar y guardar ya aprueba el contexto en el mismo acto.
+</Note>
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Un contexto sin fecha de inicio o fin vale para siempre?">
+  Sí, mientras esté activo. Sin fechas, el estado mostrado es Ativo y el período aparece como "sem período definido".
+  </Accordion>
+  <Accordion title="Si desactivo un contexto que está dentro del período, ¿qué sucede?">
+  El estado mostrado pasa a ser Inativo, incluso si la fecha todavía está vigente. El interruptor siempre tiene prioridad sobre las fechas.
+  </Accordion>
+  <Accordion title="¿Cuántos contextos situacionales puedo tener?">
+  No hay límite de cantidad vigente hoy.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Define horarios y zona horaria de la IA" href="/es/cerebro/disponibilidade">Configura los horarios fijos de atención.</Card>
+  <Card title="Configura el enrutamiento" href="/es/cerebro/roteamento">Define cuándo Tino transfiere a una persona.</Card>
+</CardGroup>

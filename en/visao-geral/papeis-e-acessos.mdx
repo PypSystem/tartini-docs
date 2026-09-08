@@ -1,0 +1,97 @@
+---
+title: "Roles and access explained"
+sidebarTitle: "Roles and access"
+description: "Who sees what in Tartini: account owner, administrator, managers, and agents, and how access flows down the company structure."
+---
+
+Each person on your team enters Tartini with a role at one point in the company structure. The role says what they can do; the point in the structure says how far they see.
+
+<Note>
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## The structure: Company, Areas, and Units
+
+The company is organized into three levels. The **Empresa** (Company) is the whole account. **Áreas** (Areas) group Units together (a region, a brand, a department). **Unidades** (Units) are the front line: the store, the branch, the clinic, the team that provides service.
+
+Access flows down the structure. A role granted at the Company level applies to every Area and Unit. A role granted at an Area level applies to every Unit within it. That's why you don't need to grant access level by level: you choose the highest point the person should see, and that's it.
+
+<Tip>
+  A person can have more than one assignment. A regional manager can be Manager of two separate Areas, and a supervisor can be Manager of one Unit and Agent in another.
+</Tip>
+
+---
+
+## The roles
+
+| Role | Granted at | What it does |
+|---|---|---|
+| **Administrator** | Company | Configures the entire account: Cérebro, channels, users, integrations, and credits. Can grant the Administrator role to other people. |
+| **Company Manager** | Company | Monitors and manages the whole operation (Inbox, Metrics, Scout, Campaigns, Cérebro), without account settings: company information, structure, integrations, and billing. |
+| **Area Manager** | Area | Manages the Units within the Area: users, those Units' channels, conversation rules, and sees their conversations, metrics, and evaluations. |
+| **Unit Manager** | Unit | Manages one Unit and its agents: users, the Unit's channel, quick messages, conversations, metrics, and evaluations for the Unit. |
+| **Agent** | Unit | Provides service in the Inbox, uses Copilot when granted, and sees their own conversations and their own performance in Scout. |
+
+Beyond the roles, there's the **account owner**: the person who signed up for Tartini. Only the owner sees the **Assinatura** (Subscription) screen, with the plan, account details, and credit allowance. The owner is also the Company's Administrator.
+
+<Note>
+  "Proprietário" (Owner), "Gerente" (Manager), and "Backoffice" were roles from earlier versions and no longer exist. If you came from one of them, your access was converted to Administrator or Manager.
+</Note>
+
+---
+
+## What each role sees
+
+Where it says "only their scope," the person sees the screen, but only the Units, conversations, or people they manage.
+
+| Screen | Administrator | Company Manager | Area Manager | Unit Manager | Agent |
+|---|---|---|---|---|---|
+| **Página Inicial** (Home) and Inbox | Everything | Everything | Only their scope | Only their scope | Only their own conversations |
+| **Métricas** (Metrics) | Everything | Everything | Only their scope | Only their scope | No access |
+| **Central de Conversas** (Conversation Center) | Everything | Everything | Only their scope | Only their scope | Only their own conversations |
+| Cérebro | Everything | Everything | No access | No access | No access |
+| Scout | Everything | Everything | Only their scope | Only their scope | Only their own performance |
+| **Campanhas** (Campaigns) | Everything | Everything | Only their scope | Only their scope | No access |
+| **Informações** (Company Information) and **Áreas & Unidades** (Areas & Units) | Everything | No access | No access | No access | No access |
+| **Usuários** (Users) | Everything | Only their scope | Only their scope | Only their scope | No access |
+| **Canais** (Channels: WhatsApp, Chat Widget) | Everything | Everything | Only their scope | Only their scope | No access |
+| **Conexão via API** (API Connection) | Everything | No access | No access | No access | No access |
+| **Regras de Conversa** (Conversation Rules) | Everything | Everything | Everything | No access | No access |
+| **IA por canal** (AI by Channel) and **SLA de Atendimento** (Service SLA) | Everything | Everything | Only their scope | No access | No access |
+| **Pesquisa de Satisfação** (Satisfaction Survey) | Everything | Everything | No access | No access | No access |
+| **Mensagens Rápidas** (Quick Messages) | Everything | Everything | Only their scope | Only their scope | Only their scope |
+| **Créditos** (Credits) and **Mensagens e Conversas** (Messages and Conversations) | Everything | No access | No access | No access | No access |
+| Assinatura | Only the account owner | No access | No access | No access | No access |
+| **Integrações** (Integrations: Connectors, Webhooks, Campaign Contacts) | Everything | No access | No access | No access | No access |
+| **Configurações de usuário** (User Settings) and Security | Their own | Their own | Their own | Their own | Their own |
+
+<Note>
+  Only someone with Administrator can grant Administrator. An Area or Unit Manager invites people only to the Units they manage.
+</Note>
+
+---
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Why doesn't my Unit Manager see the Cérebro?">
+  The Cérebro is the configuration for the entire company: knowledge, tone of voice, processes. A change there applies to every Unit, which is why only the Administrator and the Company Manager can edit it.
+  </Accordion>
+  <Accordion title="Does an agent see their colleagues' conversations?">
+  No. In the Inbox and the Conversation Center, they see only the conversations assigned to them. In Scout, they see only their own evaluations and their own performance.
+  </Accordion>
+  <Accordion title="Who can see the credits and the invoice?">
+  The Administrator sees the **Créditos** (Credits) screen, with the balance and the statement. The **Assinatura** (Subscription) screen, with the plan and billing details, appears only for the account owner.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Invite and manage users" href="/en/equipe/usuarios">Grant a person access at one or more points in the structure.</Card>
+  <Card title="Areas and Units" href="/en/equipe/areas-e-unidades">Set up your company's structure.</Card>
+</CardGroup>

@@ -1,0 +1,134 @@
+---
+title: "Invita y gestiona usuarios"
+sidebarTitle: "Usuarios"
+description: "Invita a tu equipo, define qué accede cada persona y mantén los accesos siempre actualizados."
+---
+
+Con la lista de usuarios organizada, sabes quién está activo, qué accede cada persona y quién todavía necesita aceptar la invitación.
+
+<Note>
+  Quién ve la lista: Administrador, Gestor de la Empresa, Gestor de Área y Gestor de Unidad. Las acciones de editar, gestionar accesos e inactivar son solo del Administrador.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Entiende los estados y los accesos
+
+Dónde está: **Configurações > Empresa > Usuários** (Configuración > Empresa > Usuarios).
+
+Cada usuario aparece con un estado:
+
+- **Ativo** (Activo): accede al sistema normalmente.
+- **Inativo** (Inactivo): ya no puede entrar, hasta ser reactivado.
+- **Pendente** (Pendiente): recibió la invitación y todavía no creó la contraseña.
+- **Expirado**: la invitación pasó de 24 horas sin respuesta.
+
+La columna **Acessos & permissões** (Accesos y permisos) muestra el vínculo principal del usuario y cuántos otros tiene. Haz clic para abrir todos los vínculos, con el nivel de cada uno: toda la empresa, un área o una unidad.
+
+{/* CAPTURA: images/equipe/usuarios-lista.png | alt: Tela Usuários com a lista de pessoas e seus status | olhar: as colunas Status e Acessos & permissões */}
+
+---
+
+## Agrega un usuario
+
+Puedes invitar a alguien nuevo o vincular a una persona que ya existe en la empresa a más áreas y unidades.
+
+Dónde está: **Configurações > Empresa > Usuários**, botón **Adicionar Usuário** (Agregar Usuario).
+
+<Steps>
+  <Step title="Abre el asistente">Haz clic en **Adicionar Usuário**.</Step>
+  <Step title="Completa los datos">Para una persona nueva, ingresa **Nome** (Nombre) y **E-mail** (Correo electrónico). Para vincular a alguien que ya existe, elige el usuario en la lista.</Step>
+  <Step title="Define los accesos">Marca la empresa, el área o la unidad y elige el cargo de cada una.</Step>
+  <Step title="Confirma">Revisa el resumen y haz clic en **Confirmar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/equipe/usuarios-assistente-acessos.png | alt: Etapa de acessos e permissões do assistente de adicionar usuário | olhar: a árvore de empresa, áreas e unidades com os cargos selecionados */}
+
+<Note>
+  El acceso es hereditario. Marca el cargo solo en el nivel más alto que la persona necesita: todo lo de abajo queda cubierto automáticamente. Para posiciones en áreas diferentes, marca cada rama por separado.
+</Note>
+
+Una persona nueva recibe un correo electrónico para crear la contraseña y aparece en la lista como **Pendente** hasta aceptar la invitación.
+
+---
+
+## Reenvía la invitación
+
+Dónde está: **Configurações > Empresa > Usuários**, menú de opciones de la fila del usuario.
+
+<Steps>
+  <Step title="Ubica al usuario">Encuentra la fila con estado **Pendente** o **Expirado**.</Step>
+  <Step title="Reenvía">Abre el menú de opciones de la fila y haz clic en **Reenviar convite** (Reenviar invitación).</Step>
+</Steps>
+
+<Note>
+  La invitación queda marcada como Expirado 24 horas después del envío. Reenviarla genera un nuevo plazo para que la persona cree la contraseña.
+</Note>
+
+---
+
+## Inactiva o reactiva un usuario
+
+Inactivar retira el acceso al sistema sin borrar el historial de la persona.
+
+Dónde está: **Configurações > Empresa > Usuários**, menú de opciones de la fila del usuario.
+
+<Steps>
+  <Step title="Abre el menú">Haz clic en el menú de opciones de la fila del usuario.</Step>
+  <Step title="Elige la acción">Haz clic en **Inativar** (Inactivar) (estado Ativo) o en **Reativar** (Reactivar) (estado Inativo).</Step>
+  <Step title="Confirma">Haz clic en **Sim** (Sí) en la ventana de confirmación.</Step>
+</Steps>
+
+<Note>
+  No es posible inactivarte a ti mismo, al titular de la cuenta o una invitación todavía pendiente. Para sacar a alguien de la empresa, inactívalo: no existe la eliminación de usuario.
+</Note>
+
+---
+
+## Gestiona los accesos de un usuario
+
+Dónde está: **Configurações > Empresa > Usuários**, menú de opciones > **Gerenciar acessos** (Gestionar accesos).
+
+<Steps>
+  <Step title="Abre el panel">En el menú de opciones de la fila del usuario, haz clic en **Gerenciar acessos**.</Step>
+  <Step title="Ajusta el árbol">Marca o desmarca empresa, áreas y unidades, y elige el cargo de cada selección nueva.</Step>
+  <Step title="Guarda">Haz clic en **Salvar alterações** (Guardar cambios).</Step>
+</Steps>
+
+<Note>
+  Solo el Administrador concede el rol Administrador. Un Gestor de Área o de Unidad solo concede cargos dentro de su propia estructura. Todo usuario necesita al menos un acceso: para bloquear a alguien, usa Inactivar.
+</Note>
+
+El titular de la cuenta aparece con el sello **Admin** y sus accesos no pueden ser modificados por nadie.
+
+Si la lista no muestra el cambio de inmediato, actualiza la página.
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Cómo elimino a alguien de la empresa?">
+  Usa **Inativar**, en el menú de opciones de la fila del usuario. No existe la eliminación de usuario en la interfaz.
+  </Accordion>
+  <Accordion title="¿Por qué no veo la opción de reenviar invitación?">
+  Solo aparece para usuarios con estado Pendente o Expirado.
+  </Accordion>
+  <Accordion title="¿Quién puede conceder el rol Administrador?">
+  Solo quien ya es Administrador. El Gestor de la Empresa, el Gestor de Área y el Gestor de Unidad no ven esa opción.
+  </Accordion>
+  <Accordion title="¿Un Gestor de Área puede conceder acceso fuera de su área?">
+  No. El Gestor de Área y el Gestor de Unidad solo conceden cargos dentro de su propia estructura.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Arma la estructura en Áreas y Unidades" href="/es/equipe/areas-e-unidades">Crea las áreas y unidades donde van a actuar los usuarios.</Card>
+  <Card title="Roles y accesos explicados" href="/es/visao-geral/papeis-e-acessos">Consulta qué ve cada rol en cada nivel.</Card>
+</CardGroup>

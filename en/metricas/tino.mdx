@@ -1,0 +1,121 @@
+---
+title: "Tino Metrics"
+sidebarTitle: "Tino"
+description: "See how much of the operation Tino absorbed, the speed of its responses, and how Copilot supports the team."
+---
+
+The Tino screen shows what the AI delivered in the period: how much it resolved on its own, how quickly it responded, and where it performs best across areas and units. A separate section shows how much Copilot helped the team.
+
+<Note>
+  Who sees it: Administrator, Company Manager, Area Manager, and Unit Manager. The sections about Tino in action require the Scale plan. The Copilot section appears on all plans, including Essential. The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+Where it is: **Métricas > Tino** (Metrics > Tino).
+
+---
+
+## Track Tino in Real Time
+
+With the Scale plan and a period that reaches today, a live panel shows three numbers, updated every 30 seconds.
+
+| Indicator | What it means |
+|---|---|
+| **ia atendendo agora** (AI serving now) | Conversations Tino is currently responding to or that are waiting on the customer, right now. |
+| **resolvidas hoje** (resolved today) | Conversations Tino closed today with no person involved. |
+| **passadas p/ humano hoje** (handed to human today) | Conversations Tino transferred to the team today. |
+
+<Note>
+  Outside the configured service hours, a badge warns that Tino keeps running anyway.
+</Note>
+
+---
+
+## See What Tino Delivered
+
+This section's main number is **absorvido pelo Tino** (absorbed by Tino), with four supporting figures next to it.
+
+| Indicator | What it means |
+|---|---|
+| **absorvido pelo Tino** | Percentage of the period's conversations Tino handled from start to finish. |
+| **resolvidas sozinho** (resolved alone) | How many conversations Tino closed with no person involved. |
+| **via processo** (via process) | Percentage of Tino's resolved conversations that followed a registered process, from start to finish. |
+| **fora do horário** (outside business hours) | How many of Tino's conversations happened outside service hours. |
+| **economia estimada** (estimated savings) | Estimate of hours the team didn't have to spend because of Tino. |
+
+Below, the **absorção do Tino** (Tino's absorption) chart shows the same AI participation curve that appears in Panorama.
+
+---
+
+## Compare Speed and Capacity
+
+| Indicator | What it means |
+|---|---|
+| **1ª resposta do Tino** (Tino's 1st response) | Time until the AI's first response. Below half a minute, it earns the **praticamente instantânea** (practically instant) badge. |
+| **pico simultâneo** (simultaneous peak) | Highest number of conversations Tino handled at the same time in the period. |
+| **até resolver** (until resolved) | Compares the AI's time to resolution with the team's. When the team takes much longer, a badge shows how many times faster Tino was. |
+
+The times shown are the median, the middle value across all cases, with the p90 next to it: the time of the ten percent slowest cases.
+
+---
+
+## See Where Tino Performs Best
+
+The comparison appears when there's more than one child at the current level.
+
+<Steps>
+  <Step title="Choose the indicator">Select **Resolvidas** (Resolved), **% absorvido** (% absorbed), **Fora do horário** (Outside hours), or **Aceite Copilot** (Copilot acceptance), when more than one option is available.</Step>
+  <Step title="Drill down a level">Click an area or unit card to see the level below.</Step>
+  <Step title="See Copilot usage per person">At the agent level, click a card to open the panel with that person's Copilot acceptance. There's no per-agent scope in Tino's numbers, because his conversations don't have an agent.</Step>
+</Steps>
+
+<Note>
+  The agent's side panel shows Copilot's decisions: accepted, sent directly, inserted into the draft, dismissed, and knowledge corrections. A button opens that person's conversations in the Conversation Center.
+</Note>
+
+---
+
+## See Copilot's Support to the Team
+
+| Indicator | What it means |
+|---|---|
+| **aceite das sugestões** (suggestion acceptance) | Percentage of Copilot's suggestions the team accepted, either sent directly or inserted into the draft. |
+| **correções de conhecimento** (knowledge corrections) | Knowledge base discrepancies Copilot flagged for the team. |
+| **cobertura** (coverage) | Percentage of agents with Copilot active. |
+
+This section appears on all plans, even without Tino serving on the front line.
+
+---
+
+## Continue on Other Screens
+
+Tino also appears on two other Tartini screens. The processes it follows live in [Processes Explained](/en/cerebro/processos-explicados). The scores it gives to closed conversations live in [Read Scout's evaluations](/en/scout/avaliacoes).
+
+---
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="I only see the Copilot section. Why?">
+  Your plan doesn't include Tino on the front line. To unlock the other sections, you need the Scale plan.
+  </Accordion>
+  <Accordion title="I can't find the agent filter. Where is it?">
+  It doesn't exist here: Tino's conversations don't belong to a person. To see Copilot usage by agent, drill down to the agent level in the comparison.
+  </Accordion>
+  <Accordion title="Why does an indicator show as N/A?">
+  There isn't enough of a sample for that indicator at that level, for example a conversation metric calculated at the agent level.
+  </Accordion>
+  <Accordion title="Why doesn't the estimated savings have a variation arrow?">
+  Because it's an estimate. Tartini avoids suggesting a precision the calculation can't guarantee.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related Articles
+
+<CardGroup cols={2}>
+  <Card title="The Metrics Panorama" href="/en/metricas/panorama">The period's executive snapshot.</Card>
+  <Card title="Operation Metrics" href="/en/metricas/operacao">The team's numbers, section by section.</Card>
+  <Card title="Use Copilot" href="/en/inbox/copilot">How suggestions reach the agent.</Card>
+  <Card title="Plans and what each one unlocks" href="/en/visao-geral/planos-e-recursos">What changes between Essential, Scale, and Enterprise.</Card>
+</CardGroup>

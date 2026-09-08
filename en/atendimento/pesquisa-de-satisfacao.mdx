@@ -1,0 +1,111 @@
+---
+title: "Set up the satisfaction survey"
+sidebarTitle: "Satisfaction Survey"
+description: "Send a satisfaction survey to the customer after service and track the scores in Scout."
+---
+
+With the survey set up, every customer gets an invitation to rate the service, and you track the results without leaving Tartini.
+
+<Note>
+  Who sees this: Administrator and Company Manager. The setting applies to the whole company, with no breakdown by area or unit.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Turn on the survey
+
+Where to find it: **Configurações > Atendimento > Pesquisa de Satisfação** (Settings > Service > Satisfaction Survey).
+
+<Steps>
+  <Step title="Open the screen">Go to **Configurações > Atendimento > Pesquisa de Satisfação**.</Step>
+  <Step title="Turn it on">Turn on **Habilitar Pesquisa de Satisfação** (Enable Satisfaction Survey).</Step>
+  <Step title="Save">Click **Salvar** (Save).</Step>
+</Steps>
+
+{/* CAPTURA: images/atendimento/pesquisa-satisfacao-ativar.png | alt: Tela Pesquisa de Satisfação com o toggle Habilitar Pesquisa de Satisfação ligado | olhar: o card de ativação no topo */}
+
+---
+
+## Choose when the survey is sent
+
+Where to find it: **Configurações > Atendimento > Pesquisa de Satisfação**, **Regras de Coleta** (Collection Rules) section.
+
+<Steps>
+  <Step title="Choose who receives it">In **Coletar em** (Collect on), choose between Todos os atendimentos (All service), Apenas atendimentos do Tino (Only Tino's service), or Apenas atendimentos humanos (Only human service).</Step>
+  <Step title="Choose the trigger">In **Regra de disparo** (Trigger rule), choose between Todas as conversas (All conversations) or Apenas conversas resolvidas (Only resolved conversations).</Step>
+  <Step title="Save">Click **Salvar**.</Step>
+</Steps>
+
+<Note>
+  By default, the survey collects on all service and triggers on all conversations.
+</Note>
+
+---
+
+## Choose the channels
+
+Ratings only come in through the channels marked here.
+
+Where to find it: **Configurações > Atendimento > Pesquisa de Satisfação**, **Canais Habilitados** (Enabled Channels) section.
+
+<Steps>
+  <Step title="Check the channels">Turn on the toggle for each channel that should send the survey.</Step>
+  <Step title="Save">Click **Salvar**.</Step>
+</Steps>
+
+<Note>
+  A channel that isn't marked simply doesn't collect ratings, even with the survey active for the company.
+</Note>
+
+---
+
+## Set the time limit and messages
+
+Where to find it: **Configurações > Atendimento > Pesquisa de Satisfação**, **Tempo Limite** (Time Limit) and **Mensagens Personalizadas** (Custom Messages) sections.
+
+<Steps>
+  <Step title="Set the deadline">In **Tempo limite para resposta** (Response time limit), choose a value between 1 and 1,440 minutes.</Step>
+  <Step title="Customize the messages (optional)">Write your own rating request message and feedback request message, or leave them blank to use the default text.</Step>
+  <Step title="Save">Click **Salvar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/atendimento/pesquisa-satisfacao-mensagens.png | alt: Seção Mensagens Personalizadas com os dois campos de texto | olhar: os campos de mensagem e o contador de caracteres */}
+
+<Note>
+  By default, the deadline is 60 minutes and the suggested response scale goes from 1 to 5. {/* CONFIRMAR: texto exato das mensagens padrão enviadas quando os campos ficam em branco */}
+</Note>
+
+---
+
+## See the results
+
+Ratings appear in [Scout, in the Satisfaction section](/en/scout/satisfacao), with the score history by agent and by period.
+
+{/* CONFIRMAR: se os resultados da pesquisa também aparecem em alguma tela de Métricas */}
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="What counts as a 'conversa resolvida' in the Regra de disparo?">
+  {/* CONFIRMAR: critério exato usado para marcar uma conversa como resolvida */}
+  </Accordion>
+  <Accordion title="Can I send the survey only via WhatsApp?">
+  Yes. Leave only the channel you want marked in Canais Habilitados.
+  </Accordion>
+  <Accordion title="What happens if the customer doesn't respond within the time limit?">
+  {/* CONFIRMAR: comportamento da pesquisa após o tempo limite para resposta */}
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Track customer satisfaction" href="/en/scout/satisfacao">See the scores and comments collected by the survey.</Card>
+  <Card title="Set the conversation rules" href="/en/atendimento/regras-de-conversa">Set up the closing that triggers the survey.</Card>
+</CardGroup>

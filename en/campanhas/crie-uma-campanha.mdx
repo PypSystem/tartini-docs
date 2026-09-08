@@ -1,0 +1,122 @@
+---
+title: "Create a campaign"
+sidebarTitle: "Create a campaign"
+description: "Build the campaign in three steps, from what Tino will do to when the message goes out."
+---
+
+The creation wizard walks you through three steps until the campaign is ready to run, with a preview of how Tino would open the conversation before you confirm.
+
+<Note>
+  Campaigns is a feature of the Scale and Enterprise plans. Who creates it: Administrator (Company), Company Manager, Area Manager, and Unit Manager.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+Where to find it: **Campanhas > Campanhas > Nova campanha** (Campaigns > Campaigns > New campaign), or **Campanhas > Panorama > Nova campanha →** (Campaigns > Overview > New campaign →).
+
+The wizard saves your progress on its own in the browser as you fill it in. If you leave and come back, a notice says **Rascunho recuperado de onde você parou** (Draft recovered from where you left off).
+
+---
+
+## Step 1: what this campaign will do
+
+Start by choosing how Tino will carry each conversation.
+
+<Steps>
+  <Step title="Choose the conduct mode">**Seguir um processo** (Follow a process, recommended) has Tino follow a process mapped out in Cérebro, step by step, adapting if the customer changes the subject. **Missão livre** (Open-ended mission) is just a written goal, for one-off notices and messages.</Step>
+  <Step title="Choose the process (process mode)">Search by name or department and click a card to select it. With no processes mapped, use **Criar com missão livre** (Create with an open-ended mission) or map one under **Mapear processo** (Map process).</Step>
+  <Step title="Describe the context or the goal">In process mode, the **contexto desta campanha** (this campaign's context) field is optional, but it improves the opening: say when the contact happens, what Tino already has on hand, and the immediate action expected. In open-ended mission mode, the **objetivo da campanha** (campaign goal) field is required.</Step>
+  <Step title="Define what counts as a result">Choose between **Processo concluído** (Process completed), **Transferência qualificada** (Qualified transfer, with an optional department), **Dados coletados** (Data collected, choose at least one field), or **Marcação manual** (Manual tagging). In open-ended mission mode, only **Marcação manual** is available.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/criar-passo1-missao.png | alt: Passo 1 do assistente com o modo Seguir um processo selecionado | olhar: os cartões de modo de condução e o campo de contexto */}
+
+<Note>
+  You can also set a value per conversion, optional: a fixed amount in reais or a column from your CSV. This later shows up in the campaign's results dashboard.
+</Note>
+
+With no name typed in the field at the top, the wizard warns **Dê um nome interno para a campanha** (Give the campaign an internal name) and won't let you continue.
+
+---
+
+## Step 2: who Tino will reach out to
+
+Choose where the contacts come from. This choice doesn't change once the campaign is created.
+
+<Steps>
+  <Step title="Choose the source">**Tenho uma lista** (I have a list) uploads a CSV. **Meu sistema envia** (My system sends) generates a webhook URL. **O cliente chega até mim** (The customer comes to me) activates by keyword.</Step>
+  <Step title="Fill in the source details">For a list, upload the CSV (see [Import campaign contacts](/en/campanhas/contatos-e-csv)). For webhook, there's nothing to fill in here: the URL comes after you create it. For keyword, type the words (Enter adds each one), choose the match type, and the tag applied to the contact.</Step>
+  <Step title="Refine the audience profile (optional)">Mark a profile as **Cliente Ativo** (Active Customer) or **Lead** and describe the context for that audience, to adjust Tino's tone.</Step>
+  <Step title="Replicate to other Units (optional)">Only for lists, and only at creation: check other Units to repeat the same list on them, with each one's channel chosen on its own.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/criar-passo2-publico.png | alt: Passo 2 do assistente com a origem Tenho uma lista selecionada e um CSV enviado | olhar: o cartão de contagem de contatos válidos */}
+
+With no CSV with valid contacts, no keyword added, or no tag for the keyword, the wizard won't continue and shows the error under the field.
+
+---
+
+## Step 3: when and where
+
+This step sets the channel, the hours, and what to do when the contact doesn't respond.
+
+<Steps>
+  <Step title="Choose the channel">Select from the Unit's connected WhatsApp channels. With no channel, a warning takes you to **Conectar canal** (Connect channel).</Step>
+  <Step title="Choose the opening template (WABA channel)">On an official channel, choose an **Aprovado** (Approved) template or create a new one in the editor. This is required: without a template, the wizard won't continue.</Step>
+  <Step title="Set when to trigger">For a list, choose the start date and, if you want, the end date. For webhook, choose between reaching out **24 horas por dia** (24 hours a day) or only within a time window. Keyword doesn't ask for anything here: Tino responds as soon as the customer writes in.</Step>
+  <Step title="Adjust the time window">When applicable, mark the days of the week and the start and end times. By default, the window comes pre-filled from the Unit's registered business hours.</Step>
+  <Step title="Set up the follow-ups (optional)">Add up to 4 attempts for when the contact doesn't respond: 4 hours, 1, 2, 3, or 7 days after the opening. On a WABA channel, attempts 24 hours or later require an approved template for each one.</Step>
+  <Step title="Generate the preview">Give the agent a name and click **Gerar exemplo** (Generate example) to see how Tino would open the conversation with the first contact on the list.</Step>
+  <Step title="Create the campaign">Click **Criar campanha** (Create campaign).</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/criar-passo3-lancamento.png | alt: Passo 3 do assistente com canal, janela de horários e a prévia da abordagem no celular | olhar: o botão Gerar exemplo e a mensagem de abertura */}
+
+<Note>
+  As soon as the contact replies, Tino cancels the following follow-up attempts and takes over the conversation.
+</Note>
+
+---
+
+## What happens when you create it
+
+The result changes depending on the source you chose:
+
+- **Lista** (List): the campaign starts as **Rascunho** (Draft). The notice reads **Campanha criada! Inicie o disparo quando quiser** (Campaign created! Start the send whenever you want). You start the send later, from the list or the campaign dashboard.
+- **Webhook**: the campaign starts **Ativa** (Active). A modal shows the webhook URL and the secret token for you to set up in your system. See [Trigger campaigns by webhook or by incoming message](/en/campanhas/webhook-e-inbound).
+- **Palavra-chave** (Keyword): the campaign starts **Ativa** (Active), already listening for the configured words.
+
+Either way, you're taken back to the Unit's campaign list.
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="No channel shows up for me to choose">
+  Only connected WhatsApp channels of the current Unit show up. Connect one under **Configurações > Canais** and go back to the wizard.
+  </Accordion>
+  <Accordion title="My semicolon-separated CSV didn't load">
+  The CSV reader uses a comma as the separator. Download the spreadsheet template on the same screen and use it as a base.
+  </Accordion>
+  <Accordion title="I lost what I was filling in">
+  During creation, the draft is saved in the browser with every change, per Unit, with no need to save it yourself. When you reopen the wizard on the same Unit, it recovers from where you left off. To start from scratch, use **Descartar rascunho** (Discard draft) when leaving.
+  </Accordion>
+  <Accordion title="Can I edit the contact list after creating it?">
+  Not through the wizard. The contact list of an already-created campaign is tracked in the campaign dashboard, execution by execution.
+  </Accordion>
+  <Accordion title="Do I need to choose a template for every follow-up?">
+  Only on a WABA channel, and only for attempts 24 hours or later. Shorter attempts and unofficial channels don't require a template.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Prepare the Unit for campaigns" href="/en/campanhas/setup">Channel, template, and credits before you create one.</Card>
+  <Card title="Import campaign contacts" href="/en/campanhas/contatos-e-csv">The CSV format and the import preview.</Card>
+  <Card title="Schedule the send and follow-ups" href="/en/campanhas/agendamento-e-follow-ups">Hours, attempts, pause and resume.</Card>
+  <Card title="Map processes from conversations" href="/en/cerebro/mapeie-processos">The playbook Tino follows.</Card>
+</CardGroup>

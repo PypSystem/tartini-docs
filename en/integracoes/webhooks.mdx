@@ -1,0 +1,91 @@
+---
+title: "Receive events in your system"
+sidebarTitle: "Webhooks"
+description: "Set up an automatic notification to your system whenever a conversation is closed in Tartini."
+---
+
+With the webhook turned on, your system receives an automatic notification as soon as a conversation ends, without needing to query Tartini.
+
+<Note>
+  Who can configure this: only Administrator. Available on the Scale plan.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## What the Finalização de Atendimento webhook is
+
+Today Tartini sends one event: the closing of a conversation, on any channel. The notification arrives with the contact's data (including the external ID, if you use one), the reason for closing, and, if you want, Tino's summary, the message history, and the satisfaction score.
+
+Where to find it: **Configurações > Integrações > Webhooks > Finalização de Atendimento** (Settings > Integrations > Webhooks > Conversation Closing).
+
+---
+
+## Register your system's URL
+
+By default the webhook is turned off.
+
+<Steps>
+  <Step title="Open the screen">Go to **Configurações > Integrações > Webhooks** and click the **Finalização de Atendimento** card.</Step>
+  <Step title="Enter the URL">Fill in **URL do webhook** (Webhook URL) with your system's address.</Step>
+  <Step title="Generate the signing secret">Click **Gerar novo secret** (Generate new secret) and copy the generated value. Share it with whoever maintains your system: it confirms the notification really came from Tartini.</Step>
+  <Step title="Turn it on">Turn on **Ativar webhook** (Enable webhook) and click **Salvar** (Save).</Step>
+</Steps>
+
+{/* CAPTURA: images/integracoes/webhooks-finalizacao.png | alt: tela de configuração do webhook de Finalização de Atendimento com o preview do payload | olhar: os toggles de conteúdo do payload e o preview à direita */}
+
+<Note>
+  The secret only takes effect after you click **Salvar**. Generating a new secret invalidates the previous one.
+</Note>
+
+---
+
+## Choose what to send
+
+Conversation and contact data always go in the notification. You decide what else to include:
+
+- **Resumo do Tino** (Tino's summary): may be delayed a few minutes, the time it takes Tino to generate the summary.
+- **Histórico de mensagens** (Message history): all messages exchanged in the conversation.
+- **Nota CSAT** (CSAT score): the customer's satisfaction rating, when collected.
+
+Also turn on **Registrar apenas atendimentos relevantes** (Log only relevant conversations) to avoid receiving notifications for trivial conversations, like a greeting with no follow-up.
+
+---
+
+## Test the trigger
+
+<Steps>
+  <Step title="Save the URL first">Make sure **URL do webhook** is filled in and saved.</Step>
+  <Step title="Trigger the test">Click **Testar webhook** (Test webhook).</Step>
+  <Step title="Check your system">See whether your system received the test notification.</Step>
+</Steps>
+
+<Note>
+  The technical details of the payload, such as the exact fields and security headers, are for whoever develops your system.
+</Note>
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="When exactly is the notification sent?">
+  When the conversation is actually closed, whether by manual closing, the satisfaction survey, or automatic closing due to inactivity.
+  </Accordion>
+  <Accordion title="Can I register more than one address?">
+  Today the screen accepts one address at a time for the Finalização de Atendimento event.
+  </Accordion>
+  <Accordion title="Does changing the secret affect what's already working?">
+  Yes. When you generate a new secret, the previous one stops working. Update the secret in your system before changing it here, or notifications will stop being confirmed as authentic.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Use Tartini as your system's channel" href="/en/integracoes/conexao-via-api">Generate tokens to integrate your systems.</Card>
+  <Card title="Channels explained" href="/en/canais/canais-explicados">The channels available in Tartini.</Card>
+</CardGroup>

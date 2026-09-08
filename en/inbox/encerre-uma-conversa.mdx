@@ -1,0 +1,98 @@
+---
+title: "Close a conversation and send the survey"
+sidebarTitle: "Close a conversation"
+description: "Close the conversation with the right reason and understand when the satisfaction survey goes out automatically."
+---
+
+Closing signals that the support has ended and frees the conversation from the queue. If your company uses a satisfaction survey, it can go out automatically right after.
+
+<Note>
+  Automatic closing and the satisfaction survey are configured by an Administrator, Company Manager, or Area Manager, under **Configurações > Atendimento** (Settings > Support).
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Close manually
+
+By default the conversation stays open until someone closes it or automatic closing kicks in.
+
+Where to find it: at the top of the conversation, in the header, the check icon (tooltip "Finalizar atendimento"). On mobile: menu > "Finalizar".
+
+<Steps>
+  <Step title="Click the check icon">Opens the Finalizar conversa (Close conversation) drawer.</Step>
+  <Step title="Describe the reason">Write how the support ended, up to 500 characters.</Step>
+  <Step title="Click Finalizar (Close)">The screen confirms: "Conversa finalizada com sucesso".</Step>
+</Steps>
+
+{/* CAPTURA: images/inbox/inbox-finalizar-conversa.png | alt: drawer Finalizar conversa com o campo de motivo preenchido | olhar: o contador de caracteres e o botão Finalizar */}
+
+<Note>
+  The reason is required. Describe it even when the support was resolved outside the chat.
+</Note>
+
+---
+
+## Understand what happens when you close a conversation
+
+If "Ativar Scout ao finalizar conversa" is turned on, Scout generates a summary and a score for the conversation. If the satisfaction survey is active for the channel, the conversation moves to "Aguardando CSAT" and the customer receives the question.
+
+---
+
+## Automatic closing
+
+By default automatic closing is turned off.
+
+Where to find it: **Configurações > Atendimento > Regras de Conversa** (Settings > Support > Conversation Rules), "Encerrar conversa automaticamente" field with "Tempo por canal".
+
+Without a set time, the channel uses the 24-hour default. For conversations handled by Tino, the rule is under **Configurações > Atendimento > IA por canal** (Settings > Support > AI by channel), under "A conversa fica parada": Tino says goodbye and closes the conversation after the configured inactivity time.
+
+<Note>
+  Regras de Conversa applies to conversations with the team. IA por canal applies only to conversations Tino is handling.
+</Note>
+
+---
+
+## The satisfaction survey
+
+Where to find it: **Configurações > Atendimento > Pesquisa de Satisfação** (Settings > Support > Satisfaction Survey).
+
+The fields are "Coletar em", "Regra de disparo" (Todas as conversas or Apenas conversas resolvidas), "Canais Habilitados", and "Tempo limite para resposta (minutos)" (default 60 minutes).
+
+<Note>
+  There's no button to trigger the survey manually during support. It's always sent automatically, based on the configured rule.
+</Note>
+
+---
+
+## Reopening a closed conversation
+
+{/* CONFIRMAR: se existe reabertura de uma conversa finalizada e como ela acontece */}
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Do I need to fill in a reason to close a conversation?">
+  Yes, it's required and can be up to 500 characters.
+  </Accordion>
+  <Accordion title="What happens to the conversation after it's closed?">
+  It disappears from the active queues. If Scout is turned on, it gets a summary and a score; if the satisfaction survey is active, the customer receives the question.
+  </Accordion>
+  <Accordion title="Can I send the satisfaction survey manually?">
+  No. It's always automatic, based on the rule under Configurações > Atendimento > Pesquisa de Satisfação.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Set up the satisfaction survey" href="/en/atendimento/pesquisa-de-satisfacao">Trigger rules and response time limit.</Card>
+  <Card title="Set the conversation rules" href="/en/atendimento/regras-de-conversa">Signature, automatic closing, and active Copilot.</Card>
+  <Card title="Scout explained" href="/en/scout/o-scout-explicado">How the conversation's summary and score come about.</Card>
+  <Card title="Handle a conversation" href="/en/inbox/atenda-uma-conversa">Open, reply, attach files, and take over from Tino.</Card>
+</CardGroup>

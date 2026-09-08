@@ -1,0 +1,134 @@
+---
+title: "Errors"
+description: "Error codes and how to handle them in the Tartini API."
+---
+## Error Format
+
+All errors follow the same JSON format:
+
+```json
+{
+  "statusCode": 401,
+  "error": "Unauthorized",
+  "message": "Invalid or expired API key"
+}
+```
+
+---
+
+## HTTP Codes
+
+| Code | Meaning | When it occurs |
+|--------|-------------|---------------|
+| `200` | Success | Request processed correctly |
+| `401` | Unauthorized | Missing, invalid, or expired API key |
+| `403` | Forbidden | Inactive company subscription |
+| `422` | Unprocessable Entity | Invalid request body |
+| `500` | Internal Error | Unexpected server error |
+
+---
+
+## Authentication Errors (401)
+
+```json
+// API key ausente
+{ "statusCode": 401, "error": "Unauthorized", "message": "Missing API key" }
+
+// Formato inválido
+{ "statusCode": 401, "error": "Unauthorized", "message": "Invalid API key format. Expected: Bearer <api_key>" }
+
+// Chave inválida ou expirada
+{ "statusCode": 401, "error": "Unauthorized", "message": "Invalid or expired API key" }
+```
+
+---
+
+## Subscription Error (403)
+
+```json
+{
+  "statusCode": 403,
+  "error": "SubscriptionInactive",
+  "message": "Sua assinatura não está ativa",
+  "subscriptionStatus": "CANCELLED"
+}
+```
+
+---
+
+## Validation Errors (422)
+
+```json
+{
+  "statusCode": 422,
+  "error": "Unprocessable Entity",
+  "message": [
+    "queryText must be a string",
+    "scoreThreshold must not be greater than 1"
+  ]
+}
+```
+
+---
+
+## Error Handling
+
+<CodeGroup>
+```javascript Node.js
+async function ragRetrieve(query) {
+  const response = await fetch('https://api-talk.saninternet.com/v1/api/rag/retrieve', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${process.env.SANTALK_API_KEY}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      queryText: query,
+      filters: { sourceTypes: ['document'], audience: 'ai_agent' },
+      scoreThreshold: 0.7,
+      returnMode: 'ai_generated_answer'
+    })
+  });
+
+  if (!response.ok) {
+    const error = await response.json();
+    switch (response.status) {
+      case 401: throw new Error(`Autenticação falhou: ${error.message}`);
+      case 403: throw new Error(`Assinatura inativa: ${error.subscriptionStatus}`);
+      case 422: throw new Error(`Validação: ${error.message}`);
+      default: throw new Error(`Erro ${response.status}: ${error.message}`);
+    }
+  }
+
+  return response.json();
+}
+```
+
+```python Python
+import os
+import requests
+
+def rag_retrieve(query: str) -> dict:
+    response = requests.post(
+        'https://api-talk.saninternet.com/v1/api/rag/retrieve',
+        headers={
+            'Authorization': f'Bearer {os.environ["SANTALK_API_KEY"]}',
+            'Content-Type': 'application/json'
+        },
+        json={
+            'queryText': query,
+            'filters': {'sourceTypes': ['document'], 'audience': 'ai_agent'},
+            'scoreThreshold': 0.7,
+            'returnMode': 'ai_generated_answer'
+        }
+    )
+
+    if response.status_code == 401:
+        raise Exception(f"Autenticação falhou: {response.json()['message']}")
+    elif response.status_code == 403:
+        raise Exception(f"Assinatura inativa: {response.json()['subscriptionStatus']}")
+
+    response.raise_for_status()
+    return response.json()
+```
+</CodeGroup>

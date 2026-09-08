@@ -1,0 +1,99 @@
+---
+title: "Prepara la Unidad para campañas"
+sidebarTitle: "Prepara la Unidad"
+description: "Deja el canal, la plantilla de apertura y los créditos listos para que el asistente de campañas no se trabe en ningún paso."
+---
+
+Una Unidad lista evita que el asistente de creación se detenga a mitad de camino pidiendo canal o plantilla. Tres cosas necesitan estar correctas antes de crear la primera campaña.
+
+<Note>
+  Campañas es una función de los planes Scale y Enterprise. Quién prepara: Administrador (Empresa), Gestor de la Empresa, Gestor de Área y Gestor de Unidad.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Conecta un canal de WhatsApp en la Unidad
+
+De forma predeterminada, una Unidad nueva no tiene canal de WhatsApp conectado. Sin canal, el paso **Lançamento** (Lanzamiento) del asistente muestra el aviso **Esta unidade não tem canal WhatsApp conectado** (Esta unidad no tiene canal de WhatsApp conectado).
+
+Dónde está: **Configurações > Canais** (Configuración > Canales).
+
+<Steps>
+  <Step title="Abre la pantalla de canales">Ve a **Configurações > Canais**.</Step>
+  <Step title="Conecta un número">Conecta **WhatsApp Business** por código QR o código de vinculación, o conecta **WABA** (WhatsApp Business API) si ya tienes una cuenta oficial en Meta.</Step>
+  <Step title="Confirma el estado">El canal necesita aparecer conectado para entrar en la lista del asistente de campañas.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/setup-canal-conectado.png | alt: Tela de Configurações > Canais com um canal WhatsApp conectado | olhar: o selo de status do canal */}
+
+<Note>
+  El asistente solo lista canales de la Unidad actual que estén conectados. Un canal de otra Unidad no aparece, aunque tengas acceso a ella.
+</Note>
+
+---
+
+## Aprueba la plantilla de apertura en WABA
+
+Esto solo se aplica a canal WhatsApp oficial (WABA). De forma predeterminada, un canal WABA nuevo no tiene ninguna plantilla aprobada.
+
+Meta exige una plantilla preaprobada para abrir una conversación por un canal oficial. Sin una plantilla **Aprovado** (Aprobado), el asistente bloquea la creación de la campaña con el error **Selecione um template de abertura aprovado, o canal oficial exige** (Selecciona una plantilla de apertura aprobada, el canal oficial lo exige).
+
+Dónde está: **Configurações > Canais**, en el canal WABA, en **Templates** (Plantillas).
+
+<Steps>
+  <Step title="Abre las plantillas del canal">Ve a **Configurações > Canais**, abre el canal WABA y entra en **Templates WhatsApp** (Plantillas de WhatsApp).</Step>
+  <Step title="Sincroniza o crea">Haz clic en **Sincronizar** para traer plantillas ya existentes en Meta, o en **Novo Template** (Nueva Plantilla) para crear una.</Step>
+  <Step title="Sigue la aprobación">El estado cambia a **Aprovado** cuando Meta libera la plantilla. Esto pasa en tiempo real en la pantalla.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/setup-template-aprovado.png | alt: Lista de templates do canal WABA com um template com selo Aprovado | olhar: a coluna Status */}
+
+<Note>
+  Un follow-up enviado 24 horas o más después del primer mensaje también exige plantilla aprobada en canal oficial. Si la campaña tiene follow-ups en ese intervalo, prepara una plantilla para cada uno. Mira [Crea plantillas de mensaje de WhatsApp](/es/canais/templates).
+</Note>
+
+---
+
+## Garantiza créditos disponibles
+
+Cada mensaje que Tino envía en una campaña consume créditos de la franquicia mensual de la empresa. De forma predeterminada, esa franquicia está definida por tu suscripción.
+
+Dónde está: **Configurações > Cobrança > Créditos** (Configuración > Facturación > Créditos).
+
+<Steps>
+  <Step title="Revisa el saldo">Ve a **Configurações > Cobrança > Créditos** y mira cuánto resta en la franquicia del mes.</Step>
+  <Step title="Ajusta si es necesario">Si la campaña exige más créditos que la franquicia actual, aumenta el plan o agrega créditos antes de iniciar el envío.</Step>
+</Steps>
+
+<Note>
+  Si los créditos del mes se agotan, una franja amarilla avisa en la parte superior de la pantalla. Si se agotan incluso los créditos extra, una franja roja avisa que la IA deja de responder. Las dos llevan directo a **Configurações > Cobrança > Créditos**. Mira [Qué pasa cuando se acaban los créditos](/es/creditos/quando-os-creditos-acabam).
+</Note>
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Necesito plantilla aunque mi canal no sea WABA?">
+  No. Solo los canales oficiales (WABA) exigen plantilla aprobada. Un número no oficial conectado por código QR no tiene esa exigencia.
+  </Accordion>
+  <Accordion title="¿Puedo crear la campaña antes de que la plantilla sea aprobada?">
+  No, si el canal es WABA. El asistente bloquea el paso **Lançamento** hasta que elijas una plantilla con el sello **Aprovado**.
+  </Accordion>
+  <Accordion title="¿Cuánto cuesta una campaña en créditos?">
+  El asistente muestra una estimación local en el pie mientras armas la campaña, calculada por el número de contactos. El valor final depende de cómo evolucione la conversación, porque cada mensaje intercambiado consume créditos.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Conecta WhatsApp Business API (WABA)" href="/es/canais/whatsapp-business-api">Conecta un canal oficial de Meta.</Card>
+  <Card title="Crea plantillas de mensaje de WhatsApp" href="/es/canais/templates">Crea, sincroniza y sigue la aprobación.</Card>
+  <Card title="Créditos explicados" href="/es/visao-geral/creditos-explicados">Cómo funciona la franquicia mensual.</Card>
+  <Card title="Crea una campaña" href="/es/campanhas/crie-uma-campanha">El asistente en tres pasos.</Card>
+</CardGroup>

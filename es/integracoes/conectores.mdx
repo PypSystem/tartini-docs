@@ -1,0 +1,87 @@
+---
+title: "Conecta herramientas externas a la IA"
+sidebarTitle: "Conectores"
+description: "Dale a Tino acceso a tu agenda, tu CRM o tu sistema para que consulte y actúe durante la conversación."
+---
+
+Con un conector, Tino deja de solo responder y pasa a actuar: consulta la agenda y agenda un horario, abre una negociación en el CRM, busca un pedido en tu sistema. Los conectores están en **Configurações > Integrações > Conectores** (Configuración > Integraciones > Conectores).
+
+<Note>
+  Solo el Administrador ve esta pantalla. Los conectores forman parte de los planes Scale y Enterprise. Para que Tino use las herramientas de un conector, este debe estar vinculado a un proceso en el Cérebro.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Conecta una integración lista
+
+De forma predeterminada, ninguna integración está conectada. La sección **Biblioteca de integrações** (Biblioteca de integraciones) lista las que ya están listas: Google Calendar, RD Station CRM, Calendly, Pipedrive, Notion, Atlassian, Linear, monday.com, ClickUp, Stripe y Canva.
+
+<Steps>
+  <Step title="Elige la integración">En **Configurações > Integrações > Conectores**, busca la tarjeta en **Biblioteca de integrações** y haz clic en **Conectar**.</Step>
+  <Step title="Autoriza en el servicio">Se te lleva al sitio del servicio para autorizar el acceso. Al volver, la pantalla confirma con "Integração conectada com sucesso!" y abre el detalle del conector.</Step>
+  <Step title="Revisa las herramientas">En el detalle, la sección **Ferramentas** (Herramientas) lista lo que Tino puede hacer con esa integración. Activa o desactiva cada herramienta.</Step>
+</Steps>
+
+{/* CAPTURA: images/integracoes/conectores-biblioteca.png | alt: Tela Conectores com a seção Conectados e a Biblioteca de integrações | olhar: o card do Google Calendar com o botão Conectar */}
+
+<Note>
+  Cuando la autorización expira o es revocada en el servicio, la tarjeta muestra **Reconectar** y Tino deja de usar las herramientas hasta que vuelvas a conectar.
+</Note>
+
+---
+
+## Conecta un servidor de tu empresa
+
+Si tu empresa tiene un servidor MCP propio, la tarjeta **Conector próprio (MCP)** (Conector propio) conecta por dirección.
+
+<Steps>
+  <Step title="Abre el formulario">Haz clic en **Configurar** en la tarjeta **Conector próprio (MCP)**.</Step>
+  <Step title="Completa la configuración">Indica el **Nome** (Nombre), la **URL do servidor** (URL del servidor, que empieza con http o https), el **Transporte** y la **Autenticação** (Autenticación). Con clave de API o token, pega el valor en el campo que aparece.</Step>
+  <Step title="Crea y prueba">Haz clic en **Criar e testar** (Crear y probar). El segundo paso prueba la conexión y descubre las herramientas por sí solo; usa **Testar conexão** y **Descobrir ferramentas** (Probar conexión y Descubrir herramientas) para repetirlo. Haz clic en **Concluir**.</Step>
+</Steps>
+
+<Tip>
+  Pide la dirección y el tipo de autenticación a quien mantiene el servidor en tu empresa. Sin eso, la prueba de conexión falla.
+</Tip>
+
+---
+
+## Ajusta las herramientas
+
+En el detalle del conector, cada herramienta tiene un interruptor para habilitarla y un detalle con la descripción y el **Timeout (ms)**. En conector propio, la descripción es editable: es el texto que Tino lee para decidir cuándo usar la herramienta, así que describe qué hace y cuándo vale la pena llamarla. Haz clic en **Salvar alterações** (Guardar cambios).
+
+La sección **Usado pelos processos** (Usado por los procesos) muestra qué procesos usan el conector. Mientras esté vacía, Tino no usa ninguna herramienta de ese conector: vincula el conector a un proceso. Consulta [Organiza los procesos en grupos](/es/cerebro/grupos-de-processos).
+
+---
+
+## Desactiva o elimina
+
+- En **Detalhes** (Detalles), el interruptor **Status** deja el conector **Inativo** (Inactivo) sin borrar nada. Los conectores inactivos no están disponibles para Tino.
+- **Desconectar** (integración lista) o **Excluir** (conector propio) elimina el conector de forma definitiva, después de confirmar.
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="Conecté la integración y Tino no la usa.">
+  Revisa la sección **Usado pelos processos**. Tino solo usa herramientas vinculadas a procesos. Revisa también si las herramientas están habilitadas y si el conector está activo.
+  </Accordion>
+  <Accordion title="La tarjeta dice Reconectar.">
+  La autorización en el servicio expiró o fue revocada. Haz clic en **Reconectar** y autoriza de nuevo.
+  </Accordion>
+  <Accordion title="¿Los conectores consumen créditos?">
+  El uso de las herramientas ocurre dentro de las conversaciones de Tino, que consumen créditos de IA. {/* CONFIRMAR: se a chamada de ferramenta tem custo próprio além da conversa */}
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Procesos explicados" href="/es/cerebro/processos-explicados">Dónde entran en acción las herramientas.</Card>
+  <Card title="Recibe eventos en tu sistema" href="/es/integracoes/webhooks">El camino inverso: Tartini avisa a tu sistema.</Card>
+</CardGroup>

@@ -1,0 +1,111 @@
+---
+title: "Define horarios y zona horaria de la IA"
+sidebarTitle: "Disponibilidad"
+description: "Configura la zona horaria y los horarios de atención de la empresa para indicar cuándo Tino está en funcionamiento."
+---
+
+Definir los horarios de atención deja claro, día por día, cuándo tu empresa está operando, en la zona horaria correcta.
+
+<Note>
+  Quién lo ve: Administrador y Gestor de la Empresa. Requiere el plan Scale.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Define la zona horaria
+
+De forma predeterminada, la zona horaria es São Paulo (GMT-3).
+
+Dónde está: **Cérebro > Operações > Disponibilidade** (Cerebro > Operaciones > Disponibilidad), tarjeta **Fuso Horário** (Zona horaria).
+
+<Steps>
+  <Step title="Abre el selector">Ve a la tarjeta **Fuso Horário**.</Step>
+  <Step title="Elige la zona horaria">Selecciona entre las opciones disponibles, como São Paulo, Manaus o New York.</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/disponibilidade-fuso.png | alt: Cartão Fuso Horário com o seletor aberto mostrando as opções de cidade | olhar: o badge com o fuso atual formatado */}
+
+<Note>
+  El cambio de zona horaria se guarda apenas eliges una opción, sin necesidad de un botón Guardar aparte.
+</Note>
+
+---
+
+## Configura los horarios de cada día
+
+De forma predeterminada, no hay ningún horario configurado.
+
+Dónde está: **Cérebro > Operações > Disponibilidade**, tarjeta **Horários de Atendimento** (Horarios de Atención).
+
+<Steps>
+  <Step title="Elige un día">Haz clic en el día de la semana que quieras configurar.</Step>
+  <Step title="Agrega un tramo">Haz clic en **Adicionar horário** (Agregar horario) y completa el inicio y el fin.</Step>
+  <Step title="Repite si es necesario">Agrega tantos tramos como quieras en el mismo día, por ejemplo mañana y tarde.</Step>
+  <Step title="Guarda">Haz clic en **Salvar** (Guardar).</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/disponibilidade-horarios-dia.png | alt: Card do dia Segunda-feira expandido com duas faixas de horário preenchidas | olhar: os botões Adicionar horário e Salvar no rodapé do card */}
+
+<Note>
+  Solo un día queda abierto para edición a la vez. Cambiar de día con cambios pendientes está bloqueado hasta que guardes o canceles.
+</Note>
+
+---
+
+## Replica horarios entre días
+
+Después de configurar un día, puedes copiar los mismos horarios a los demás días, sin repetir la escritura.
+
+Dónde está: tarjeta de un día que ya tiene horarios registrados, botones **Seg-Sex** (Lun-Vie) y **Todos**.
+
+<Steps>
+  <Step title="Elige el destino">Haz clic en **Seg-Sex** para replicar de lunes a viernes, o en **Todos** para los siete días.</Step>
+  <Step title="Espera la réplica">Un indicador muestra el progreso mientras se copian los horarios.</Step>
+</Steps>
+
+<Note>
+  Replicar reemplaza todos los horarios ya existentes en los días de destino por los horarios del día de origen. No hay réplica para un día específico, solo Seg-Sex o Todos.
+</Note>
+
+---
+
+## Elimina un horario
+
+Dónde está: dentro del día expandido, junto a cada tramo de horario.
+
+<Steps>
+  <Step title="Abre el día">Haz clic en el día de la semana con el horario que quieras eliminar.</Step>
+  <Step title="Elimina el tramo">Haz clic en el ícono de papelera junto al tramo.</Step>
+  <Step title="Guarda">Haz clic en **Salvar**.</Step>
+</Steps>
+
+<Note>
+  Guardar queda bloqueado mientras algún tramo del día tenga el inicio o el fin en blanco.
+</Note>
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Puedo tener más de un tramo de horario en el mismo día?">
+  Sí, agrega tantos como quieras con el botón Adicionar horário.
+  </Accordion>
+  <Accordion title="¿La zona horaria afecta a cada tramo de forma individual?">
+  No. Es una única zona horaria para toda la cuenta, guardada por separado de los tramos de horario.
+  </Accordion>
+  <Accordion title="¿Se puede copiar el horario de un día solo a otro día específico?">
+  No. La réplica solo tiene dos destinos: Seg-Sex (todos los días hábiles) o Todos (los siete días).
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Configura el enrutamiento" href="/es/cerebro/roteamento">Define cuándo Tino transfiere a una persona.</Card>
+  <Card title="Indica un contexto temporal" href="/es/cerebro/contexto-situacional">Registra situaciones fuera del horario estándar.</Card>
+</CardGroup>

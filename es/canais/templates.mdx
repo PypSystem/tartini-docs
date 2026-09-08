@@ -1,0 +1,101 @@
+---
+title: "Crea plantillas de mensaje de WhatsApp"
+sidebarTitle: "Plantillas"
+description: "Prepara mensajes aprobados por Meta para iniciar conversaciones con clientes fuera de la ventana normal de WhatsApp."
+---
+
+Una plantilla aprobada permite llamar al cliente primero, fuera de la ventana normal de atención de WhatsApp. Alimentan las campañas de Tartini y cualquier contacto iniciado por tu empresa.
+
+<Note>
+  Disponible para canales WABA. Quién gestiona: Administrador, Gestor de la Empresa, Gestor de Área y Gestor de Unidad. {/* CONFIRMAR: quem exatamente pode criar, editar e excluir templates no backend */}
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Crea una plantilla
+
+De forma predeterminada, un canal WABA nuevo no tiene ninguna plantilla registrada.
+
+Dónde está: **Configurações > Canais > WABA > Gerenciar Templates** (Configuración > Canales > WABA > Administrar Plantillas).
+
+<Steps>
+  <Step title="Abre la pantalla de plantillas">En el canal WABA, haz clic en **Gerenciar Templates**.</Step>
+  <Step title="Comienza una nueva plantilla">Haz clic en **Novo Template** (Nueva Plantilla).</Step>
+  <Step title="Dale un nombre y elige la categoría">Completa **Nome do Template** (Nombre de la Plantilla) y elige entre **Marketing** y **Utilidade** (Utilidad).</Step>
+  <Step title="Escribe el cuerpo del mensaje">Escribe el texto en **Corpo da Mensagem** (Cuerpo del Mensaje). Para incluir un dato que cambia en cada envío, haz clic en uno de los **Campos Disponíveis** (Campos Disponibles) para insertar la variable, como `{{nome}}`.</Step>
+  <Step title="Completa lo que haga falta">Agrega **Cabeçalho** (Encabezado), **Rodapé** (Pie) o hasta tres **Botões** (Botones), si la plantilla lo necesita.</Step>
+  <Step title="Envía para aprobación">Haz clic en **Criar Template** (Crear Plantilla).</Step>
+</Steps>
+
+{/* CAPTURA: images/canais/templates-editor.png | alt: editor de template com corpo, campos disponíveis e preview | olhar: o preview à direita conforme o texto é digitado */}
+
+<Note>
+  Límites: nombre hasta 512 caracteres, cuerpo hasta 1024, encabezado y pie hasta 60 cada uno, hasta 3 botones. Las variables usan letras minúsculas y `_`, sin espacios, y nunca van al inicio ni al final del cuerpo.
+</Note>
+
+---
+
+## Sigue el estado
+
+Toda plantilla enviada pasa por la aprobación de Meta:
+
+- **Em revisão** (En revisión): esperando que Meta la analice.
+- **Aprovado** (Aprobado): lista para usar en campañas y conversaciones.
+- **Rejeitado** (Rechazado): Meta rechazó la plantilla.
+
+Recibes un aviso en el momento en que el estado cambia, sin necesidad de actualizar la página.
+
+{/* CONFIRMAR: prazo médio de aprovação da Meta para exibir na central */}
+
+---
+
+## Edita o elimina una plantilla
+
+<Steps>
+  <Step title="Abre la plantilla">En la lista de plantillas, haz clic en **Editar**.</Step>
+  <Step title="Cambia lo que haga falta">Ajusta texto, encabezado, pie o botones.</Step>
+  <Step title="Guarda">Haz clic en **Salvar Alterações** (Guardar Cambios) y confirma.</Step>
+</Steps>
+
+<Warning>
+  Editar una plantilla la manda de vuelta a la aprobación de Meta, y no puedes editarla de nuevo en las siguientes 24 horas.
+</Warning>
+
+Para eliminar, haz clic en **Excluir** (Eliminar) en la fila de la plantilla y confirma.
+
+<Warning>
+  Eliminar una plantilla la quita de Meta y no se puede deshacer. Una plantilla usada en una campaña activa no puede editarse ni eliminarse: desactiva la campaña primero.
+</Warning>
+
+---
+
+## Dónde se usan las plantillas
+
+Las plantillas aprobadas aparecen al crear una campaña, para empezar la conversación con el cliente.
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Por qué no puedo editar mi plantilla?">
+  Está en uso por una campaña activa, o todavía está dentro del bloqueo de 24 horas después de la última edición.
+  </Accordion>
+  <Accordion title="¿Puedo escribir la plantilla en otro idioma?">
+  No por la pantalla actual: las plantillas creadas en Tartini salen en el idioma portugués de Brasil.
+  </Accordion>
+  <Accordion title="¿Qué pasa si Meta rechaza la plantilla?">
+  Queda marcada como **Rejeitado** (Rechazado) en la lista. Edita el texto y envíala de nuevo para un nuevo análisis.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Conecta WhatsApp Business API (WABA)" href="/es/canais/whatsapp-business-api">Prerrequisitos y conexión del canal oficial.</Card>
+  <Card title="Canales explicados" href="/es/canais/canais-explicados">Los canales disponibles en Tartini.</Card>
+</CardGroup>

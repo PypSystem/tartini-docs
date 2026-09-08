@@ -1,0 +1,131 @@
+---
+title: "Schedule the send and follow-ups"
+sidebarTitle: "Scheduling and follow-ups"
+description: "Choose when Tino reaches out to each contact, how many times it follows up, and when to pause the send."
+---
+
+Setting the right hours and follow-up attempts keeps Tino from writing outside business hours and makes sure a contact who didn't respond gets reached out to again, without your team having to remember.
+
+<Note>
+  Campaigns is a feature of the Scale and Enterprise plans. Who configures it: Administrator (Company), Company Manager, Area Manager, and Unit Manager.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Set the time window
+
+By default, the window comes pre-filled from the Unit's business hours registered in Cérebro, or Monday through Friday, from 9:00 AM to 6:00 PM, if the Unit has no availability registered.
+
+Where to find it: step 3 of the wizard, **Campanhas > Campanhas > Nova campanha** (Campaigns > Campaigns > New campaign), **Quando disparar** (When to trigger) section.
+
+<Steps>
+  <Step title="Check the days">Select the days of the week the campaign can act on, between **Seg** (Mon) and **Dom** (Sun).</Step>
+  <Step title="Adjust the hours">Set the start time and the end time. The start needs to come before the end.</Step>
+  <Step title="Save">Move on to the next field or click **Criar campanha** (Create campaign) at the end of the wizard.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/agendamento-janela-horarios.png | alt: Seção de janela de horários com os dias da semana marcados e o horário de início e fim | olhar: os chips de dias da semana e os dois campos de horário */}
+
+<Note>
+  The time window applies to list campaigns and to webhook campaigns set to **Somente dentro da janela de horários** (Only within the time window). Keyword doesn't use a window: Tino responds the instant the customer writes in.
+</Note>
+
+---
+
+## Spread the send over time
+
+A list campaign has a start date and, if you want, an end date.
+
+Where to find it: same step 3, **Quando disparar** section.
+
+<Steps>
+  <Step title="Choose the start date">Today's date is the default. You can't choose an earlier date.</Step>
+  <Step title="Choose the end date (optional)">With no end date, the campaign stays active and you can come back later to add more contacts to the list. With an end date, the campaign becomes a project with a deadline.</Step>
+</Steps>
+
+<Note>
+  The wizard's footer estimates the send's expected duration, based on roughly 300 contacts reached per day. It's a local estimate, not a delivery guarantee.
+</Note>
+
+---
+
+## Set up the follow-ups
+
+By default, a new campaign already comes with two attempts: 24 hours and 72 hours after the first message.
+
+Where to find it: step 3 of the wizard, **Se o contato não responder** (If the contact doesn't respond) section.
+
+<Steps>
+  <Step title="Review the default attempts">Each attempt shows how long after the opening it triggers: 4 hours, 1, 2, 3, or 7 days.</Step>
+  <Step title="Add an attempt">Click one of the available intervals to add it. The limit is 4 attempts.</Step>
+  <Step title="Remove an attempt">Use the remove button next to the attempt you no longer want.</Step>
+  <Step title="Choose the template, if it's a WABA channel">Attempts 24 hours or later on an official channel require an approved template for each one.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/agendamento-follow-ups.png | alt: Lista de tentativas de follow-up com os intervalos de 24h e 72h configurados | olhar: os selos de que tentativa exige template */}
+
+<Note>
+  As soon as the contact responds, Tino cancels all the following attempts and takes over the conversation from there, without repeating the approach.
+</Note>
+
+---
+
+## Pause and resume a campaign
+
+By default, an active campaign keeps reaching out to new contacts and sending follow-ups until you pause it.
+
+Where to find it: **Campanhas > Campanhas** (Campaigns > Campaigns, the list) or the campaign dashboard's header.
+
+<Steps>
+  <Step title="Pause">Click **Pausar** (Pause) on the campaign's row or in the dashboard's header. The campaign stops acting and the status changes to **Pausada** (Paused).</Step>
+  <Step title="Resume">Click **Retomar** (Resume) when you want the campaign to start acting again. The status goes back to **Ativa** (Active).</Step>
+</Steps>
+
+<Note>
+  While paused, contacts who already received the first message don't receive pending follow-ups. No new contact enters the campaign until you resume it.
+</Note>
+
+---
+
+## Track the send queue
+
+A list campaign shows the scheduling queue in the dashboard, on the **Execuções** (Executions) tab.
+
+Where to find it: campaign dashboard, **Execuções** tab.
+
+There you see how many jobs are **Agendados** (Scheduled), **Ativos** (Active), **Completados** (Completed), and **Falhados** (Failed), along with the date and time of the next execution. You can search by contact and filter by status.
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Can I change the time window after the campaign is active?">
+  Yes, by editing the campaign. The change applies to the next sends and to conversation turns already in progress.
+  </Accordion>
+  <Accordion title="Does a paused campaign keep counting the follow-ups?">
+  No. No attempt is sent while the campaign is paused.
+  </Accordion>
+  <Accordion title="What happens if the contact responds in the middle of the attempts?">
+  The following attempts are canceled right away. Tino continues the conversation from the contact's response.
+  </Accordion>
+  <Accordion title="Can I add more contacts to a list campaign that's already in progress?">
+  The screen notes that this is possible when the campaign has no end date, but there's no dedicated button for it in the wizard today.
+  </Accordion>
+  <Accordion title="Is there a limit on follow-up attempts?">
+  Yes, 4 per campaign, at intervals of 4 hours, 1, 2, 3, or 7 days.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Create a campaign" href="/en/campanhas/crie-uma-campanha">The wizard in three steps.</Card>
+  <Card title="Set hours and the AI's time zone" href="/en/cerebro/disponibilidade">The availability that feeds the default window.</Card>
+  <Card title="Track the results" href="/en/campanhas/resultados">Conversations, conversions, and drop-offs.</Card>
+  <Card title="Create WhatsApp message templates" href="/en/canais/templates">Templates required for WABA follow-ups.</Card>
+</CardGroup>

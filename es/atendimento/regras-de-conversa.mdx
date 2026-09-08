@@ -1,0 +1,108 @@
+---
+title: "Define las reglas de conversación"
+sidebarTitle: "Reglas de Conversación"
+description: "Define cómo se cierran las conversaciones solas, cómo aparece la firma del agente y cuándo entran en acción el Scout y el Copilot."
+---
+
+Con estas reglas configuradas, toda conversación de tu operación sigue el mismo patrón de firma, cierre y evaluación, sin depender de que cada agente lo recuerde.
+
+<Note>
+  Quién lo ve: Administrador, Gestor de la Empresa y Gestor de Área. Gestor de Unidad no accede a esta pantalla.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Configura la firma del agente
+
+Dónde está: **Configurações > Atendimento > Regras de Conversa** (Configuraciones > Atención > Reglas de Conversación), sección **Assinatura do Atendente** (Firma del Agente).
+
+<Steps>
+  <Step title="Abre la pantalla">Ve a **Configurações > Atendimento > Regras de Conversa**.</Step>
+  <Step title="Elige las reglas">Activa **Assinatura obrigatória** (Firma obligatoria) para exigir la firma en todo mensaje, y **Permitir mudança de assinatura** (Permitir cambio de firma) para dejar que el agente la edite.</Step>
+  <Step title="Guarda">Haz clic en **Salvar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/atendimento/regras-conversa-assinatura.png | alt: Seção Assinatura do Atendente com os dois toggles | olhar: os toggles Assinatura obrigatória e Permitir mudança de assinatura */}
+
+<Note>
+  La firma configurada aquí aparece en los mensajes enviados por los agentes en el Inbox. {/* CONFIRMAR: estado padrão de Assinatura obrigatória e de Permitir mudança de assinatura */}
+</Note>
+
+---
+
+## Activa el cierre automático por inactividad
+
+De forma predeterminada, es al cerrar la conversación que el Scout genera el resumen y la evaluación.
+
+Dónde está: **Configurações > Atendimento > Regras de Conversa**, sección **Finalização Automática** (Finalización Automática).
+
+<Steps>
+  <Step title="Activa la regla">Enciende **Encerrar conversa automaticamente** (Cerrar conversación automáticamente).</Step>
+  <Step title="Ajusta el tiempo por canal">En **Tempo por canal** (Tiempo por canal), usa los botones de más y menos para definir de 1 a 168 horas de inactividad.</Step>
+  <Step title="Guarda">Haz clic en **Salvar**.</Step>
+</Steps>
+
+<Note>
+  Un canal sin tiempo definido usa el valor predeterminado de 24 horas. Las conversaciones conducidas por Tino suelen cerrarse antes, por la regla propia de IA por canal.
+</Note>
+
+---
+
+## Activa el Scout al finalizar la conversación
+
+Dónde está: **Configurações > Atendimento > Regras de Conversa**, sección **Scout**.
+
+<Steps>
+  <Step title="Abre la pantalla">Ve a **Configurações > Atendimento > Regras de Conversa**.</Step>
+  <Step title="Activa el Scout">Enciende **Ativar Scout ao finalizar conversa** (Activar Scout al finalizar conversación).</Step>
+  <Step title="Guarda">Haz clic en **Salvar**.</Step>
+</Steps>
+
+<Note>
+  Con el Scout activo, cada conversación cerrada recibe un resumen, una nota y puntos de mejora, listos para que los valides en Scout. El Scout consume créditos de IA en cada análisis.
+</Note>
+
+---
+
+## Activa el Copilot por defecto
+
+Dónde está: **Configurações > Atendimento > Regras de Conversa**, sección **Copilot**.
+
+<Steps>
+  <Step title="Abre la pantalla">Ve a **Configurações > Atendimento > Regras de Conversa**.</Step>
+  <Step title="Activa el valor predeterminado">Enciende **Copilot ativo por padrão em novas conversas** (Copilot activo por defecto en nuevas conversaciones).</Step>
+  <Step title="Guarda">Haz clic en **Salvar**.</Step>
+</Steps>
+
+<Note>
+  De forma predeterminada, este interruptor ya viene encendido. Con el Copilot activo, monitorea solo cada conversación nueva en manos humanas. El propio agente puede apagar el Copilot en una conversación específica. El Copilot consume créditos de IA.
+</Note>
+
+Si tu plan no incluye el Copilot activo, la sección muestra un aviso de mejora de plan en lugar del interruptor. Tu plan sigue con el Copilot reactivo, que responde preguntas del agente a demanda.
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Apagar la Finalización Automática afecta al Scout?">
+  Sí. El Scout evalúa la conversación al cerrarla. Sin cierre automático, solo se ejecuta cuando alguien cierra manualmente.
+  </Accordion>
+  <Accordion title="¿Regras de Conversa y SLA son lo mismo?">
+  No. Regras de Conversa se ocupa de firma, cierre y evaluación. El [SLA](/es/atendimento/sla) mide el tiempo hasta la primera respuesta humana.
+  </Accordion>
+  <Accordion title="¿Por qué no veo el Copilot activo por defecto?">
+  Esta función está disponible a partir del plan Scale. Tu plan actual muestra el aviso de mejora de plan en lugar del interruptor.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Define el SLA de atención" href="/es/atendimento/sla">Mide el tiempo hasta la primera respuesta humana.</Card>
+  <Card title="Usa el Copilot" href="/es/inbox/copilot">Mira cómo el Copilot ayuda al agente durante la conversación.</Card>
+</CardGroup>

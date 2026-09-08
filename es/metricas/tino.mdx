@@ -1,0 +1,123 @@
+---
+title: "Métricas del Tino"
+sidebarTitle: "Tino"
+description: "Consulta cuánto de la operación absorbió el Tino, la velocidad de las respuestas y el apoyo del Copilot al equipo."
+---
+
+La pantalla Tino muestra lo que la IA entregó en el período: cuánto resolvió sola, con qué rapidez respondió y dónde rinde más entre áreas y unidades. Una sección aparte muestra cuánto ayudó el Copilot al equipo.
+
+<Note>
+  Quién ve: Administrador, Gestor de la Empresa, Gestor de Área y Gestor de Unidad. Las secciones sobre el Tino en acción requieren el plan Scale. La sección del Copilot aparece en todos los planes, incluido el Essential.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+Dónde está: **Métricas > Tino**.
+
+---
+
+## Sigue al Tino en tiempo real
+
+Con el plan Scale y un período que alcanza hoy, un panel en vivo muestra tres números, actualizados cada 30 segundos.
+
+| Indicador | Qué significa |
+|---|---|
+| **ia atendendo agora** (IA atendiendo ahora) | Conversaciones que el Tino está respondiendo o que esperan al cliente, en este instante. |
+| **resolvidas hoje** (resueltas hoy) | Conversaciones que el Tino cerró hoy sin ninguna persona involucrada. |
+| **passadas p/ humano hoje** (pasadas a humano hoy) | Conversaciones que el Tino transfirió al equipo hoy. |
+
+<Note>
+  Fuera del horario de atendimiento configurado, un sello avisa que el Tino sigue activo de todos modos.
+</Note>
+
+---
+
+## Consulta lo que entregó el Tino
+
+El número principal de esta sección es **absorvido pelo Tino** (absorbido por el Tino), con cuatro apoyos al lado.
+
+| Indicador | Qué significa |
+|---|---|
+| **absorvido pelo Tino** | Porcentaje de las conversaciones del período conducidas por la IA, de principio a fin. |
+| **resolvidas sozinho** (resueltas solo) | Cuántas conversaciones cerró el Tino sin ninguna persona involucrada. |
+| **via processo** (vía proceso) | Porcentaje de las resueltas por el Tino que siguieron un proceso registrado, de principio a fin. |
+| **fora do horário** (fuera del horario) | Cuántas conversaciones del Tino ocurrieron fuera del horario de atendimiento. |
+| **economia estimada** (ahorro estimado) | Estimación de horas que el equipo dejó de gastar gracias al Tino. |
+
+Debajo, el gráfico **absorção do Tino** (absorción del Tino) muestra la misma curva de participación de la IA que aparece en el Panorama.
+
+---
+
+## Compara la velocidad y la capacidad
+
+| Indicador | Qué significa |
+|---|---|
+| **1ª resposta do Tino** (1ª respuesta del Tino) | Tiempo hasta la primera respuesta de la IA. Por debajo de medio minuto, gana el sello **praticamente instantânea** (prácticamente instantánea). |
+| **pico simultâneo** (pico simultáneo) | Mayor número de conversaciones que el Tino condujo al mismo tiempo en el período. |
+| **até resolver** (hasta resolver) | Compara el tiempo hasta la resolución de la IA con el del equipo. Cuando el equipo tarda bastante más, aparece un sello de cuántas veces el Tino fue más rápido. |
+
+Los tiempos mostrados son la mediana, el valor del medio entre todos los casos, con el p90 al lado: el tiempo del diez por ciento de casos más demorados.
+
+---
+
+## Consulta dónde rinde más el Tino
+
+El comparativo aparece cuando hay más de un hijo en el nivel actual.
+
+<Steps>
+  <Step title="Elige el indicador">Selecciona **Resolvidas** (Resueltas), **% absorvido** (% absorbido), **Fora do horário** (Fuera del horario) o **Aceite Copilot** (Aceptación Copilot), cuando haya más de una opción disponible.</Step>
+  <Step title="Baja el nivel">Haz clic en una tarjeta de área o de unidad para ver el nivel de abajo.</Step>
+  <Step title="Consulta el uso del Copilot por persona">En el nivel agente, haz clic en una tarjeta para abrir el panel con la aceptación del Copilot de esa persona. No existe alcance por agente en los números del Tino, porque sus conversaciones no tienen agente.</Step>
+</Steps>
+
+<Note>
+  El panel lateral del agente muestra las decisiones del Copilot: aceptadas, enviadas directamente, insertadas en el borrador, descartadas y correcciones de conocimiento. Un botón abre las conversaciones de esa persona en la Central de Conversas.
+</Note>
+
+---
+
+## Consulta el apoyo del Copilot al equipo
+
+| Indicador | Qué significa |
+|---|---|
+| **aceite das sugestões** (aceptación de las sugerencias) | Porcentaje de las sugerencias del Copilot que el equipo aceptó, enviadas directamente o insertadas en el borrador. |
+| **correções de conhecimento** (correcciones de conocimiento) | Divergencias de la base de conocimiento que el Copilot señaló al equipo. |
+| **cobertura** | Porcentaje de los agentes con el Copilot activo. |
+
+Esta sección aparece en todos los planes, incluso sin el Tino atendiendo en la línea de frente.
+
+---
+
+## Continúa en otras pantallas
+
+El Tino también aparece en otras dos pantallas de Tartini. Los procesos que sigue están en [Procesos explicados](/es/cerebro/processos-explicados). Las notas que da a las conversaciones cerradas están en [Lee las evaluaciones del Scout](/es/scout/avaliacoes).
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="Solo veo la sección del Copilot. ¿Por qué?">
+  Tu plan no incluye al Tino en la línea de frente. Para liberar las demás secciones, se necesita el plan Scale.
+  </Accordion>
+  <Accordion title="No encuentro el filtro de agente. ¿Dónde está?">
+  No existe aquí: las conversaciones del Tino no pertenecen a una persona. Para ver el uso del Copilot por agente, baja hasta el nivel agente en el comparativo.
+  </Accordion>
+  <Accordion title="¿Por qué un indicador aparece como N/A?">
+  No hay muestra suficiente para ese indicador en ese nivel, por ejemplo una métrica de conversación calculada en el nivel agente.
+  </Accordion>
+  <Accordion title="¿Por qué el ahorro estimado no tiene flecha de variación?">
+  Porque es una estimación. Tartini evita sugerir una precisión que el cálculo no garantiza.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="El Panorama de las métricas" href="/es/metricas/panorama">El retrato ejecutivo del período.</Card>
+  <Card title="Métricas de la operación" href="/es/metricas/operacao">Los números del equipo, sección por sección.</Card>
+  <Card title="Usa el Copilot" href="/es/inbox/copilot">Cómo llegan las sugerencias al agente.</Card>
+  <Card title="Planes y qué habilita cada uno" href="/es/visao-geral/planos-e-recursos">Qué cambia entre Essential, Scale y Enterprise.</Card>
+</CardGroup>

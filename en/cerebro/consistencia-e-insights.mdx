@@ -1,0 +1,102 @@
+---
+title: "Track the process Catalog"
+sidebarTitle: "Catalog"
+description: "See what's broken in your process records, independent of conversations, and fix it with one click."
+---
+
+The Catálogo (Catalog) audits the structure of your mapped processes, outputs with no destination, duplicate triggers, processes with no step-by-step, and shows the next step for each problem found.
+
+<Note>
+  Who sees this: Administrator and Company Manager. Requires the Scale plan.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## See the Catalog's findings
+
+By default, the screen loads with the most recent report, recalculated every time it opens.
+
+Where to find it: **Cérebro > Processos > Catálogo** (Brain > Processes > Catalog).
+
+Findings appear grouped by severity, from most severe to least. Each one shows the type of problem, the related process, an explanation of what's wrong, and how to fix it.
+
+{/* CAPTURA: images/cerebro/catalogo-lista-achados.png | alt: Tela Catálogo com achados agrupados por gravidade Alta, Média e Baixa | olhar: os badges de gravidade e o botão de conserto de cada achado */}
+
+<Note>
+  The screen shows up to 30 findings at a time, even if there are more. Use **Carregar mais** (Load more) to see the rest.
+</Note>
+
+---
+
+## Filter and search for a finding
+
+Where to find it: **Cérebro > Processos > Catálogo**, filter bar at the top.
+
+<Steps>
+  <Step title="Filter by severity">Check **Alta** (High), **Média** (Medium), or **Baixa** (Low), one or more at a time.</Step>
+  <Step title="Filter by type">Choose a specific type, such as "saída sem destino" or "avaliação desatualizada".</Step>
+  <Step title="Search by process">Type in the **Buscar processo...** (Search process...) field.</Step>
+</Steps>
+
+---
+
+## Fix a finding
+
+Each finding has a fix button that takes you straight to the right screen to resolve the problem.
+
+Where to find it: **Cérebro > Processos > Catálogo**, inside each finding card.
+
+<Steps>
+  <Step title="Read the problem">Check the problem's text and the explanation of how to fix it.</Step>
+  <Step title="Click the fix button">The label changes depending on the type, for example "Definir o próximo passo em Fluxo" or "Reescrever o passo a passo em Mapeamento".</Step>
+  <Step title="Fix it on the destination screen">You land on the right screen, with a notice explaining why you ended up there and a link to go back.</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/catalogo-botao-conserto.png | alt: Cartão de achado com o texto "como resolver" e o botão de conserto | olhar: o link "ver no diagnóstico" ao lado do botão de conserto */}
+
+<Note>
+  The "ver no diagnóstico" link is only evidence: it shows the problem's impact on real conversations, in Scout. The fix button is always what actually resolves the problem.
+</Note>
+
+---
+
+## Re-evaluate the Catalog
+
+The report is always recalculated when you open the screen. The **Reavaliar** (Re-evaluate) button just redoes that same query.
+
+<Steps>
+  <Step title="Click Re-evaluate">The icon spins while the report is being redone.</Step>
+</Steps>
+
+---
+
+## The bridge to the diagnosis in Scout
+
+The Catálogo only looks at the records, independent of real conversations. To see how each process actually performed in service, the diagnosis lives in Scout, accessible through the "ver no diagnóstico" link on any finding with an associated process.
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Does 'Reavaliar' use credits?">
+  {/* CONFIRMAR: o inventário não encontrou indicação de custo de IA nesta tela; o relatório parece ser um cálculo determinístico sobre o cadastro, sem chamada de modelo. */}
+  </Accordion>
+  <Accordion title="Why do I only see 30 findings even though there are more?">
+  It's a display cap, not a real limit. Click **Carregar mais** to see the rest.
+  </Accordion>
+  <Accordion title="Where's the adherence or usage score for the process here?">
+  It's not in the Catálogo. That's execution, and it lives in Scout's diagnosis.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Map processes from conversations" href="/en/cerebro/mapeie-processos">Fix the step-by-step directly at the source.</Card>
+  <Card title="See adherence to the processes" href="/en/scout/processos-e-aderencia">Track, in Scout, what Tino resolved by following each process.</Card>
+</CardGroup>

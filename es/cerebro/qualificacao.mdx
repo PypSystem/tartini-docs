@@ -1,0 +1,94 @@
+---
+title: "Configura los campos del contacto"
+sidebarTitle: "Campos del Contacto"
+description: "Define los datos que Tino recopila durante la conversación y que el equipo también puede completar en la ficha del contacto."
+---
+
+Cada campo del contacto guarda una información sobre la persona, como el nombre de la empresa, el correo electrónico o el presupuesto, y la pregunta exacta que Tino hace para conseguirla.
+
+<Note>
+  Quién lo ve: Administrador y Gestor de la Empresa. Requiere el plan Scale.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+<Note>
+  "Campos do Contato" ya se llamó "Qualificação" internamente. Ese nombre antiguo ya no aparece en ninguna pantalla de Tartini.
+</Note>
+
+---
+
+## Crea un campo
+
+De forma predeterminada, no hay ningún campo registrado.
+
+Dónde está: **Cérebro > Operações > Campos do Contato** (Cerebro > Operaciones > Campos del Contacto).
+
+<Steps>
+  <Step title="Abre el formulario">Haz clic en **Adicionar campo** (Agregar campo).</Step>
+  <Step title="Define la clave">Completa **Chave (identificador único)** (Clave, identificador único), por ejemplo `budget`, sin espacios ni caracteres especiales.</Step>
+  <Step title="Define el nombre mostrado">Completa **Label (nome exibido)** (Label, nombre mostrado), por ejemplo "Orçamento disponível".</Step>
+  <Step title="Elige el tipo">Selecciona el formato esperado en **Tipo do campo** (Tipo de campo): Texto, Número, Moeda, Data, Sim/Não, E-mail, Telefone o URL.</Step>
+  <Step title="Escribe la pregunta">Completa **Pergunta para coleta** (Pregunta para recopilar) con la pregunta exacta que Tino va a hacer.</Step>
+  <Step title="Marca si es obligatorio">Activa **Obrigatório** (Obligatorio) si Tino debe insistir en recopilar esa información antes de continuar.</Step>
+  <Step title="Guarda">Haz clic en **Adicionar** (Agregar).</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/campos-contato-criar.png | alt: Formulário de novo campo do contato com chave, label, tipo e pergunta preenchidos, ao lado do painel de exemplo de conversa | olhar: o preview da conversa reagindo ao formulário em tempo real */}
+
+<Note>
+  La clave, el label y la pregunta no pueden repetirse entre los campos ya registrados. Los tres son obligatorios para guardar.
+</Note>
+
+---
+
+## Mira el ejemplo de conversación en tiempo real
+
+Al lado del formulario, un panel simula cómo Tino conduciría la recopilación de esos campos en una conversación real, y reacciona a cada campo que agregas o editas, incluso antes de guardar.
+
+Dónde está: **Cérebro > Operações > Campos do Contato**, panel **Exemplo de conversa** (Ejemplo de conversación).
+
+<Note>
+  Sin ningún campo registrado, el panel muestra un estado vacío pidiendo que agregues campos primero.
+</Note>
+
+---
+
+## Edita o elimina un campo
+
+Dónde está: **Cérebro > Operações > Campos do Contato**, haz clic en cualquier tarjeta de la lista.
+
+<Steps>
+  <Step title="Abre la tarjeta">Haz clic en el campo que quieras cambiar.</Step>
+  <Step title="Ajusta los datos">Cambia la clave, el label, el tipo, la pregunta o si es obligatorio.</Step>
+  <Step title="Guarda o elimina">Haz clic en **Salvar**, o en **Excluir** (Eliminar) para quitar el campo, con confirmación.</Step>
+</Steps>
+
+<Note>
+  El orden de los campos es el orden de creación. No hay reordenamiento manual en esta pantalla.
+</Note>
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Por qué a veces veo 'Qualificação' en lugar de 'Campos do Contato'?">
+  En la interfaz solo existe "Campos do Contato". "Qualificação" es un nombre interno antiguo que ya no aparece para el usuario.
+  </Accordion>
+  <Accordion title="¿Se pueden reordenar los campos en la pantalla?">
+  No hay control de reordenamiento. El orden es el de creación.
+  </Accordion>
+  <Accordion title="¿El campo aparece en la ficha del contacto incluso si el cliente no conversa con Tino?">
+  Sí. El equipo también puede completar los campos manualmente en la ficha del contacto.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Configura los esclarecimientos" href="/es/cerebro/esclarecimentos">Define cuándo Tino pide más información.</Card>
+  <Card title="Configura los estados de contacto" href="/es/cerebro/status-de-contato">Organiza en qué punto de la relación está cada contacto.</Card>
+</CardGroup>

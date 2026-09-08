@@ -1,0 +1,131 @@
+---
+title: "Programa el envío y los follow-ups"
+sidebarTitle: "Programación y follow-ups"
+description: "Elige cuándo Tino aborda a cada contacto, cuántas veces insiste y cuándo pausar el envío."
+---
+
+Definir los horarios correctos y los intentos de follow-up evita que Tino escriba fuera del horario de atención y garantiza que un contacto que no respondió sea abordado de nuevo, sin que tu equipo tenga que acordarse.
+
+<Note>
+  Campañas es una función de los planes Scale y Enterprise. Quién configura: Administrador (Empresa), Gestor de la Empresa, Gestor de Área y Gestor de Unidad.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Define la ventana de horarios
+
+De forma predeterminada, la ventana viene precargada del funcionamiento registrado de la Unidad en Cérebro, o de lunes a viernes, de 09:00 a 18:00, si la Unidad no tiene disponibilidad registrada.
+
+Dónde está: paso 3 del asistente, **Campanhas > Campanhas > Nova campanha** (Campañas > Campañas > Nueva campaña), sección **Quando disparar** (Cuándo disparar).
+
+<Steps>
+  <Step title="Marca los días">Selecciona los días de la semana en que la campaña puede actuar, entre **Seg** (Lun) y **Dom**.</Step>
+  <Step title="Ajusta el horario">Define el horario de inicio y el de fin. El inicio necesita ser antes del fin.</Step>
+  <Step title="Guarda"> Continúa al próximo campo o haz clic en **Criar campanha** (Crear campaña) al final del asistente.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/agendamento-janela-horarios.png | alt: Seção de janela de horários com os dias da semana marcados e o horário de início e fim | olhar: os chips de dias da semana e os dois campos de horário */}
+
+<Note>
+  La ventana de horarios vale para campañas de lista y para campañas de webhook configuradas con **Somente dentro da janela de horários** (Solo dentro de la ventana de horarios). Palabra clave no usa ventana: Tino responde en el instante en que el cliente escribe.
+</Note>
+
+---
+
+## Distribuye el envío en el tiempo
+
+Una campaña de lista tiene fecha de inicio y, si quieres, fecha de fin.
+
+Dónde está: mismo paso 3, sección **Quando disparar**.
+
+<Steps>
+  <Step title="Elige la fecha de inicio">De forma predeterminada viene la fecha de hoy. No es posible elegir una fecha anterior.</Step>
+  <Step title="Elige la fecha de fin (opcional)">Sin fecha de fin, la campaña continúa activa y puedes volver después para agregar más contactos a la lista. Con fecha de fin, la campaña se convierte en un proyecto con plazo.</Step>
+</Steps>
+
+<Note>
+  El pie del asistente estima la duración prevista del envío, considerando cerca de 300 contactos abordados por día. Es una estimación local, no una garantía de plazo.
+</Note>
+
+---
+
+## Configura los follow-ups
+
+De forma predeterminada, una campaña nueva ya viene con dos intentos: 24 horas y 72 horas después del primer mensaje.
+
+Dónde está: paso 3 del asistente, sección **Se o contato não responder** (Si el contacto no responde).
+
+<Steps>
+  <Step title="Revisa los intentos predeterminados">Cada intento muestra cuánto tiempo después de la apertura se dispara: 4 horas, 1, 2, 3 o 7 días.</Step>
+  <Step title="Agrega un intento">Haz clic en uno de los intervalos disponibles para agregar. El límite es 4 intentos.</Step>
+  <Step title="Elimina un intento">Usa el botón de eliminar junto al intento que ya no quieres.</Step>
+  <Step title="Elige la plantilla, si es canal WABA">Los intentos de 24 horas o más en canal oficial exigen una plantilla aprobada para cada uno.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/agendamento-follow-ups.png | alt: Lista de tentativas de follow-up com os intervalos de 24h e 72h configurados | olhar: os selos de que tentativa exige template */}
+
+<Note>
+  En cuanto el contacto responde, Tino cancela todos los intentos siguientes y asume la conversación a partir de ahí, sin repetir el abordaje.
+</Note>
+
+---
+
+## Pausa y reanuda una campaña
+
+De forma predeterminada, una campaña activa continúa abordando contactos nuevos y enviando follow-ups hasta que la pauses.
+
+Dónde está: **Campanhas > Campanhas** (Campañas > Campañas, lista) o en el encabezado del panel de la campaña.
+
+<Steps>
+  <Step title="Pausa">Haz clic en **Pausar** en la fila de la campaña o en el encabezado del panel. La campaña deja de actuar y el estado cambia a **Pausada**.</Step>
+  <Step title="Reanuda">Haz clic en **Retomar** (Reanudar) cuando quieras que la campaña vuelva a actuar. El estado vuelve a **Ativa** (Activa).</Step>
+</Steps>
+
+<Note>
+  Mientras está pausada, los contactos que ya recibieron el primer mensaje no reciben follow-ups pendientes. Ningún contacto nuevo entra en la campaña hasta que la reanudes.
+</Note>
+
+---
+
+## Sigue la cola de envío
+
+Una campaña de lista muestra la cola de programación en el panel, en la pestaña **Execuções** (Ejecuciones).
+
+Dónde está: panel de la campaña, pestaña **Execuções**.
+
+Allí ves cuántos jobs están **Agendados** (Programados), **Ativos** (Activos), **Completados** y **Falhados** (Fallidos), además de la fecha y hora de la próxima ejecución. Puedes buscar por contacto y filtrar por estado.
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Puedo cambiar la ventana de horarios después de que la campaña esté activa?">
+  Sí, por la edición de la campaña. El cambio vale para los próximos disparos y para los turnos de conversaciones en curso.
+  </Accordion>
+  <Accordion title="¿Una campaña pausada sigue contando los follow-ups?">
+  No. Ningún intento se envía mientras la campaña está pausada.
+  </Accordion>
+  <Accordion title="¿Qué pasa si el contacto responde en medio de los intentos?">
+  Los intentos siguientes se cancelan en el momento. Tino sigue la conversación a partir de la respuesta del contacto.
+  </Accordion>
+  <Accordion title="¿Puedo agregar más contactos en una campaña de lista ya en curso?">
+  La pantalla avisa que esto es posible cuando la campaña no tiene fecha de fin, pero no hay un botón dedicado a esto en el asistente hoy.
+  </Accordion>
+  <Accordion title="¿Existe un límite de intentos de follow-up?">
+  Sí, 4 por campaña, en los intervalos de 4 horas, 1, 2, 3 o 7 días.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Crea una campaña" href="/es/campanhas/crie-uma-campanha">El asistente en tres pasos.</Card>
+  <Card title="Define horarios y zona horaria de la IA" href="/es/cerebro/disponibilidade">La disponibilidad que alimenta la ventana predeterminada.</Card>
+  <Card title="Sigue los resultados" href="/es/campanhas/resultados">Conversaciones, conversiones y abandonos.</Card>
+  <Card title="Crea plantillas de mensaje de WhatsApp" href="/es/canais/templates">Plantillas exigidas en los follow-ups de WABA.</Card>
+</CardGroup>

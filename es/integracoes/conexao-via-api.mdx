@@ -1,0 +1,101 @@
+---
+title: "Usa Tartini como canal de tu sistema"
+sidebarTitle: "Conexión vía API"
+description: "Genera tokens de acceso para integrar tus propios sistemas directamente con Tartini."
+---
+
+Con un token de API, tu sistema se comunica directamente con Tartini, sin que nadie tenga que abrir la pantalla.
+
+<Note>
+  Quién genera y revoca tokens: solo el Administrador. Disponible en el plan Scale.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Para qué sirve
+
+Un token de API le da a tu sistema acceso a la API de Tartini, para integrar datos de conversaciones, contactos y atenciones con tu ERP, CRM o cualquier otro sistema. Los detalles técnicos de uso de la API quedan a cargo de quien desarrolla tu sistema.
+
+Dónde está: **Configurações > Canais > Conexão via API** (Configuración > Canales > Conexión vía API).
+
+<Note>
+  Mantén tus tokens en un lugar seguro y nunca los compartas. Quien tenga el token puede acceder a tu cuenta por la API, igual que tú.
+</Note>
+
+---
+
+## Crea un token por sistema
+
+Si integras más de un sistema, crea un token separado para cada uno, con un nombre que identifique dónde se usa, como "Integración ERP" o "Portal del cliente".
+
+Así, si necesitas cortar el acceso de un sistema específico, revocas solo su token, sin afectar las demás integraciones.
+
+---
+
+## Genera un token
+
+De forma predeterminada, una cuenta nueva no tiene ningún token creado.
+
+<Steps>
+  <Step title="Abre la pantalla">Ve a **Configurações > Canais > Conexão via API**.</Step>
+  <Step title="Empieza un token nuevo">Haz clic en **Criar Token** (Crear Token).</Step>
+  <Step title="Nombra el token">Completa **Nome do Token** (Nombre del Token), para identificar después dónde se usa, y opcionalmente una **Descrição** (Descripción).</Step>
+  <Step title="Crea">Haz clic en **Criar Token**.</Step>
+  <Step title="Copia y guarda">Haz clic en **Copiar** y guarda el token en un lugar seguro.</Step>
+</Steps>
+
+{/* CAPTURA: images/integracoes/conexao-via-api-token-criado.png | alt: modal com o token de API gerado e o botão de copiar | olhar: o aviso de que o token só aparece essa vez */}
+
+<Warning>
+  El token solo se muestra una vez, en el momento de la creación. Si lo pierdes, no hay forma de recuperarlo: crea uno nuevo y revoca el anterior.
+</Warning>
+
+---
+
+## Consulta tus tokens
+
+Cada token registrado muestra el nombre, la descripción, cuándo fue creado y la última vez que se usó, o **Nunca**, si todavía no se usó.
+
+---
+
+## Revoca un token
+
+<Steps>
+  <Step title="Abre la pantalla">Ve a **Configurações > Canais > Conexão via API**.</Step>
+  <Step title="Elimina el token">Haz clic en el ícono de papelera en la tarjeta del token.</Step>
+  <Step title="Confirma">Haz clic en **Excluir**.</Step>
+</Steps>
+
+<Warning>
+  Revocar un token es inmediato: cualquier sistema que todavía esté usando ese token pierde el acceso de inmediato.
+</Warning>
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Quién puede crear o revocar tokens?">
+  Solo el Administrador.
+  </Accordion>
+  <Accordion title="Perdí el token antes de copiarlo. ¿Cómo lo recupero?">
+  No es posible recuperar un token después de cerrar la ventana modal. Crea uno nuevo y revoca el anterior, si no está en uso.
+  </Accordion>
+  <Accordion title="¿Los tokens expiran solos?">
+  {/* CONFIRMAR: se os tokens de API têm expiração automática */}
+  </Accordion>
+  <Accordion title="¿Necesito un token diferente para cada sistema que integre?">
+  No es obligatorio, pero se recomienda. Un token por sistema facilita saber quién usa qué y permite revocar un acceso sin afectar los demás.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Recibe eventos en tu sistema" href="/es/integracoes/webhooks">Avisos automáticos de atención finalizada.</Card>
+  <Card title="Canales explicados" href="/es/canais/canais-explicados">Los canales disponibles en Tartini.</Card>
+</CardGroup>

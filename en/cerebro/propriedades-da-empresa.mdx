@@ -1,0 +1,133 @@
+---
+title: "Register the company's properties"
+sidebarTitle: "Properties"
+description: "See, filter, and manage in one place everything Tino and Copilot have already been taught."
+---
+
+Propriedades e Fontes (Properties and Sources) is the central list of everything that makes up your company's knowledge: documents, questions and answers, and website pages. It's where you check what's indexed, edit the content, and decide who uses each item.
+
+<Note>
+  Who can see this: Administrator and Company Manager. Available on all plans. The public audience option requires the Scale plan.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## View the content list
+
+By default, the list shows all registered items, most recent first.
+
+Where to find it: **Cérebro > Propriedades** (Cérebro > Properties).
+
+Each row shows the item's title, the source-type icon, the indexing status, who created it, and the audience. Clicking the row opens the details panel.
+
+{/* CAPTURA: images/cerebro/propriedades-lista.png | alt: Tela Propriedades e Fontes com a lista de conteúdo e as colunas de status, criado por e audiência | olhar: os status coloridos por linha */}
+
+<Note>
+  A site synced with multiple pages appears as a single item in the list, with a badge showing how many subpages it includes.
+</Note>
+
+---
+
+## Filter by audience and search for an item
+
+By default, the list shows public and private content together.
+
+Where to find it: **Cérebro > Propriedades**, filters at the top of the list.
+
+<Steps>
+  <Step title="Choose the knowledge type">Check **Conhecimento Público** (Public Knowledge) to see what Tino uses in conversations, or **Conhecimento Privado** (Private Knowledge) for what only Copilot uses. With nothing checked, the list shows everything.</Step>
+  <Step title="Search by title">Type in the **Pesquisar...** (Search...) field to filter by the item's name.</Step>
+</Steps>
+
+<Note>
+  Without the Scale plan, the **Conhecimento Público** option doesn't appear in the filter, and a fixed notice explains that public content isn't used by Tino on your plan.
+</Note>
+
+---
+
+## Track the indexing status
+
+Each item shows one of the following statuses, updated in real time: Extracting content, Indexing, Processing, Syncing pages, Failed, Complete, or Indexed. With no active status, the item shows **Indexado** (Indexed).
+
+An item stuck processing for 5 minutes or more is considered stalled. In that case, it becomes eligible for deletion even without finishing processing.
+
+---
+
+## Delete an item
+
+Where to find it: **Cérebro > Propriedades**, three-dot menu on the item's row.
+
+<Steps>
+  <Step title="Open the menu">Click the three-dot icon on the item's row.</Step>
+  <Step title="Choose delete">Click **Excluir** (Delete).</Step>
+  <Step title="Confirm">Confirm the deletion in the window that opens.</Step>
+</Steps>
+
+<Note>
+  If the item is still processing, the confirmation warns that the deletion is forced and permanent, even if indexing hasn't finished.
+</Note>
+
+To delete several items at once, click **Selecionar** (Select), check the desired rows, and click **Excluir (N)** (Delete (N)).
+
+---
+
+## View details and edit content
+
+Where to find it: **Cérebro > Propriedades**, click any row in the list (or **Ver detalhes** (View details) in the three-dot menu).
+
+<Steps>
+  <Step title="Open the panel">Click the row of the item you want to review.</Step>
+  <Step title="Click edit">Click the pencil icon at the top of the panel.</Step>
+  <Step title="Change the content">Edit the text, the audience, or, for questions and answers, the question and answer fields.</Step>
+  <Step title="Save">Click **Salvar** (Save).</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/propriedades-detalhe-edicao.png | alt: Painel de detalhes de um documento em modo de edição, com o editor de conteúdo aberto | olhar: os botões Cancelar e Salvar no rodapé do painel */}
+
+<Note>
+  Saving a content edit reprocesses and reindexes the item, which returns to the Processing status for a few moments. Sites registered as a domain root only allow editing the audience, not the content. The editable text limit is 500,000 characters.
+</Note>
+
+---
+
+## Understand the "Tino aprendeu" card
+
+After an item finishes indexing, a card may appear with a summary of what Tino learned from that content, written in the first person.
+
+Where to find it: right below the newly indexed item in the list, and also inside the details panel.
+
+<Steps>
+  <Step title="Read the summary">Check what Tino recorded from that content.</Step>
+  <Step title="Test it, if you'd like">Click **Testar conhecimentos adquiridos** (Test acquired knowledge) to open Copilot with a sample question ready to send.</Step>
+</Steps>
+
+<Note>
+  The card can be dismissed with the X and won't appear again after that.
+</Note>
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="What's the difference between public and private?">
+  Public content is used by Tino when handling customers and requires the Scale plan. Private content is used only by Copilot, to support the team internally, and is available on any plan.
+  </Accordion>
+  <Accordion title="Can I delete an item that's still processing?">
+  Yes, with a forced-deletion confirmation. It's also automatically released for deletion after 5 minutes stalled in processing.
+  </Accordion>
+  <Accordion title="Does registering a document consume credits?">
+  Yes. Processing and indexing any content consumes credits. Track your usage in Settings > Billing > Usage.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Teach the AI with documents" href="/en/cerebro/documentos">Upload files to the knowledge base.</Card>
+  <Card title="Teach the AI with your website" href="/en/cerebro/sites">Sync and index pages from your website.</Card>
+</CardGroup>

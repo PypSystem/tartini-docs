@@ -1,0 +1,133 @@
+---
+title: "Build the Structure in Areas and Units"
+sidebarTitle: "Areas & Units"
+description: "Organize your company into areas and units to manage access, channels, and support by store, branch, or department."
+---
+
+With the structure organized, you define who can access each store, branch, or department of your company. Each unit has its own channels, users, and conversations.
+
+<Note>
+  Who can see this: Administrator only. The unit limit varies by plan: Essential up to 5, Scale up to 10, Enterprise negotiated.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Create an area
+
+By default, a new company has no areas registered.
+
+Where to find it: **Configurações > Empresa > Áreas & Unidades** (Settings > Company > Areas & Units).
+
+<Steps>
+  <Step title="Open the screen">Go to **Configurações > Empresa > Áreas & Unidades**.</Step>
+  <Step title="Click New area">Use the **Nova área** (New area) button at the top, or the dashed **Nova área** card in the diagram.</Step>
+  <Step title="Give it a name">Type the area's name and click **Salvar** (Save).</Step>
+</Steps>
+
+{/* CAPTURA: images/equipe/areas-unidades-nova-area.png | alt: Modal Nova Área com o campo de nome preenchido | olhar: o campo Nome da Área e o botão Salvar */}
+
+<Note>
+  Areas group units together. A chain of stores might have the "Retail" area with the "Downtown Store" and "Mall Store" units.
+</Note>
+
+---
+
+## Create a unit
+
+Every unit is created inside an area.
+
+Where to find it: **Configurações > Empresa > Áreas & Unidades**, on the area's card.
+
+<Steps>
+  <Step title="Open the area">Click the card of the area where the unit will go.</Step>
+  <Step title="Click Create Unit">Use the **Criar Unidade** (Create Unit) button, or the dashed **Adicionar unidade** (Add unit) card.</Step>
+  <Step title="Give it a name">Type the unit's name and click **Salvar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/equipe/areas-unidades-nova-unidade.png | alt: Modal Nova Unidade com o campo de nome preenchido | olhar: o campo Nome da Unidade e o botão Salvar */}
+
+<Note>
+  The counter in the top-left corner of the screen shows how many units you've already used from your plan's limit, and it turns red when you reach it. Once you hit the limit, the create button shows the Limite de unidades atingido (Unit limit reached) warning. Upgrade to register more.
+</Note>
+
+---
+
+## Rename or delete an area
+
+Where to find it: open the area and use the options menu at the top.
+
+<Steps>
+  <Step title="Open the area">Click the area's card on the Areas & Units screen.</Step>
+  <Step title="Choose the action">In the options menu, click **Renomear** (Rename) or **Excluir** (Delete).</Step>
+  <Step title="Confirm">Type the new name and click **Salvar**, or confirm the deletion with **Sim** (Yes).</Step>
+</Steps>
+
+<Warning>
+  Deleting an area also deletes all of its units. {/* CONFIRMAR: o que acontece com os canais, conversas e usuários vinculados às unidades excluídas */}
+</Warning>
+
+---
+
+## Rename or delete a unit
+
+Where to find it: open the unit and use the options menu at the top.
+
+<Steps>
+  <Step title="Open the unit">Click the unit's card, either inside the area or in the main diagram.</Step>
+  <Step title="Choose the action">In the options menu, click **Renomear** or **Excluir**.</Step>
+  <Step title="Confirm">Type the new name and click **Salvar**, or confirm the deletion with **Sim**.</Step>
+</Steps>
+
+{/* CAPTURA: images/equipe/areas-unidades-detalhe-unidade.png | alt: Tela de detalhe de uma unidade com o menu de opções aberto | olhar: as opções Renomear e Excluir */}
+
+---
+
+## Organize a unit's departments
+
+Departments route a unit's conversations to specific teams, like Technical Support or Finance.
+
+Where to find it: open the unit and scroll to **Setores** (Departments).
+
+<Steps>
+  <Step title="Open the unit">Click the unit's card and scroll to the **Setores** section.</Step>
+  <Step title="Click New Department">Fill in the **Nome** (Name) and, if you want, the **Descrição** (Description).</Step>
+  <Step title="Save">Click **Criar** (Create). The department appears in the list, ready to receive users.</Step>
+</Steps>
+
+<Note>
+  The department's description is used by Tino to decide where to route each conversation. Describe the department's function clearly.
+</Note>
+
+To add people to a department, open the card and click **Adicionar Usuário** (Add User). Only users who already have access to that unit show up.
+
+To deactivate a department without deleting its history, use **Desativar** (Deactivate) in the options menu. An inactive department disappears from the routing options, but keeps the conversations it already handled.
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Can I create a unit without putting it in an area?">
+  No. Every unit needs to be created inside an area.
+  </Accordion>
+  <Accordion title="What happens to users when I delete a unit?">
+  {/* CONFIRMAR: comportamento dos vínculos de usuário após excluir uma unidade */}
+  </Accordion>
+  <Accordion title="I've hit my plan's unit limit. What do I do?">
+  Upgrade your plan to unlock more units. The limit changes based on your contracted plan: Essential up to 5, Scale up to 10, Enterprise negotiated.
+  </Accordion>
+  <Accordion title="Can I move a unit to a different area after it's created?">
+  {/* CONFIRMAR: se é possível mover uma unidade existente para outra área */}
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Invite and manage users" href="/en/equipe/usuarios">Add people to the areas and units you created.</Card>
+  <Card title="Roles and access explained" href="/en/visao-geral/papeis-e-acessos">Understand what each role can see at each level.</Card>
+</CardGroup>

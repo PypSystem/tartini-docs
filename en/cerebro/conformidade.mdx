@@ -1,0 +1,139 @@
+---
+title: "Create compliance rules"
+sidebarTitle: "Compliance"
+description: "Define the security and policy rules Tino respects in every conversation, in addition to Tartini's native best practices."
+---
+
+Conformidade (Compliance) brings together your company's security and policy rules that Tino always follows, like asking for confirmation before handling sensitive data.
+
+<Note>
+  Who can see this: Administrator and Company Manager. Available on all plans.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Create a rule
+
+By default, a new rule starts out active and with the strictest compliance mode in both conversation types.
+
+Where to find it: **Cérebro > Personalidade > Conformidade** (Cérebro > Personality > Compliance).
+
+<Steps>
+  <Step title="Open the form">Click **Adicionar regra** (Add rule).</Step>
+  <Step title="Write the title and text">Describe the rule the way you'd explain it to a new agent, for example "Ownership verification".</Step>
+  <Step title="Choose the modes">Set how the rule is followed for **Receptivo** (Receptive) and **Ativo** (Active).</Step>
+  <Step title="Save">Click **Adicionar** (Add).</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/conformidade-criar-regra.png | alt: Formulário de nova regra de conformidade com os dois seletores de modo, Receptivo e Ativo | olhar: os seletores de modo destacados em âmbar quando dispensam verificação */}
+
+<Note>
+  Every rule always applies to both conversation types: Receptivo (the customer reached out to the company) and Ativo (the company reached out to the customer). What changes between them is only the compliance mode, never whether the rule applies.
+</Note>
+
+---
+
+## Understand the four compliance modes
+
+| Mode | What it means |
+|---|---|
+| Cumprir como está escrito (Comply as written) | Tino follows the rule's text and nothing beyond it. It's the default. |
+| Perguntar e confirmar (Ask and confirm) | Before handling the matter, Tino asks for a verification detail and waits for the answer. |
+| Não fornecer (Do not provide) | Tino never provides the information by message, under any circumstance. |
+| A origem do contato já identifica (The contact's origin already identifies them) | Tino skips the check because the contact came from your base already identified. |
+
+Where to find it: **Cérebro > Personalidade > Conformidade**, **O que significa cada modo de cumprimento** (What each compliance mode means) link, above the rules list.
+
+<Note>
+  Only the "A origem do contato já identifica" mode requires your explicit confirmation, because it's the only one that skips a check.
+</Note>
+
+---
+
+## Edit a live rule
+
+Where to find it: **Cérebro > Personalidade > Conformidade**, click any row in the **Regras no ar** (Live rules) table.
+
+<Steps>
+  <Step title="Open the rule">Click the row of the rule you want to change.</Step>
+  <Step title="Adjust the text or the modes">Change the title, the body, the Active/Inactive toggle, and the mode selectors.</Step>
+  <Step title="Save">Click **Salvar** (Save).</Step>
+</Steps>
+
+<Note>
+  If you only change the text, without touching the mode selectors, Tino rereads the rule within a few seconds and proposes the modes again, which shows up as pending until you confirm. If you change the modes manually, the choice applies right away and isn't overwritten by a reread.
+</Note>
+
+---
+
+## Review Tino's discoveries
+
+Tino reads the Cérebro's documents and brings here the compliance rules it finds on its own. None of them apply to conversations until approved.
+
+Where to find it: **Cérebro > Personalidade > Conformidade**, discoveries block, above the rules list.
+
+<Steps>
+  <Step title="Read the discovery">Check the title, the body, and, when available, the source in the Cérebro.</Step>
+  <Step title="Decide item by item">Click the approve, edit, or discard icon on each discovery.</Step>
+  <Step title="Approve in bulk, if you'd like">Use **Aprovar as N de rotina** (Approve the N routine items) to accept at once the discoveries that don't require your confirmation.</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/conformidade-descobertas.png | alt: Bloco de descobertas de conformidade com colunas Receptivo e Ativo e o botão Aprovar as N de rotina | olhar: o badge "precisa de você" nas descobertas que exigem confirmação */}
+
+<Note>
+  A discovery marked "precisa de você" proposes skipping the check for some type of conversation. Until you confirm, the rule is followed to the letter.
+</Note>
+
+---
+
+## Use a ready-made template
+
+Where to find it: **Cérebro > Personalidade > Conformidade**, **Modelos que outras empresas costumam adotar** (Templates other companies often adopt) block, with categories like General, Industry, Commerce, and Services.
+
+<Steps>
+  <Step title="Choose a template">Click a suggested template, or **Ver todos** (View all).</Step>
+  <Step title="Adjust before saving">The form opens filled in with the template's text.</Step>
+  <Step title="Save">Click **Adicionar** (Add).</Step>
+</Steps>
+
+---
+
+## Delete a rule
+
+Where to find it: inside the rule's edit view, in the **Regras no ar** table.
+
+<Steps>
+  <Step title="Open the rule">Click the rule's row.</Step>
+  <Step title="Click Excluir (Delete)">Confirm in the window that opens.</Step>
+</Steps>
+
+<Note>
+  Leaving a rule inactive is reversible and keeps the reading Tino already did. Deleting erases both: if you recreate the rule later, it goes through a new reading.
+</Note>
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Can I make a rule apply only to outbound conversations and not inbound ones?">
+  No. Every rule always applies to both conversation types. What you control is how it's followed in each one, including skipping the check in one of them.
+  </Accordion>
+  <Accordion title="If I edit a rule's text, does it stop applying until I confirm again?">
+  No. The rule keeps applying based on the last approved reading while Tino rereads it in the background. It only changes once you confirm the new reading.
+  </Accordion>
+  <Accordion title="Can I see the exact text that goes to Tino?">
+  Yes, in the **O que significa cada modo de cumprimento** link, behind **Ver o texto exato que Tino recebe** (See the exact text Tino receives).
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Set the tone of voice" href="/en/cerebro/comunicacao">Register complementary communication styles.</Card>
+  <Card title="Create guidelines for the AI" href="/en/cerebro/diretrizes">Add procedures and greetings your way.</Card>
+</CardGroup>

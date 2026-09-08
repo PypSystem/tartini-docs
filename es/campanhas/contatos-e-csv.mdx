@@ -1,0 +1,108 @@
+---
+title: "Importa los contactos de la campaña"
+sidebarTitle: "Contactos y CSV"
+description: "Arma la planilla correcta, envíala y revisa la vista previa antes de que Tino empiece a abordar la lista."
+---
+
+Una lista bien formateada entra sin error en el asistente y llega a Tino con todos los datos de contexto listos para la conversación.
+
+<Note>
+  Campañas es una función de los planes Scale y Enterprise. Quién envía la lista: Administrador (Empresa), Gestor de la Empresa, Gestor de Área y Gestor de Unidad, en el paso **Público** del asistente de creación.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Arma el archivo CSV
+
+De forma predeterminada, el asistente no acepta ningún otro formato de planilla, solo CSV separado por comas.
+
+Dónde está: paso 2 del asistente, **Campanhas > Campanhas > Nova campanha** (Campañas > Campañas > Nueva campaña), con el origen **Tenho uma lista** (Tengo una lista).
+
+<Steps>
+  <Step title="Descarga el modelo">Haz clic en **Baixar modelo de planilha ↓** (Descargar modelo de planilla ↓) para obtener un CSV listo con las columnas correctas.</Step>
+  <Step title="Completa nombre y teléfono">Son las dos columnas obligatorias. Sin ellas, la fila entera se ignora.</Step>
+  <Step title="Agrega columnas extra si quieres">Cualquier otra columna se convierte en dato de contexto del contacto, disponible para que Tino lo use en la conversación y para el campo **valor por conversão** (valor por conversión).</Step>
+</Steps>
+
+<Note>
+  Columnas reconocidas sin diferenciar mayúsculas: `nome` o `name`; `telefone`, `phone`, `celular` o `whatsapp`; `email` o `e-mail`. Cualquier otro encabezado se convierte en dato de contexto con el nombre original de la columna, por ejemplo `valor_devido`.
+</Note>
+
+---
+
+## Envía el archivo y revisa la vista previa
+
+De forma predeterminada, todavía no entró ningún contacto: el área de envío está vacía.
+
+Dónde está: mismo paso del asistente, justo debajo de la elección de origen.
+
+<Steps>
+  <Step title="Envía el CSV">Arrastra el archivo al área de envío o haz clic para elegirlo en tu computadora.</Step>
+  <Step title="Lee la vista previa">La tarjeta muestra el nombre del archivo, el total de filas, los contactos válidos y las filas ignoradas por falta de nombre o teléfono.</Step>
+  <Step title="Revisa las columnas detectadas">Una franja lista las columnas que el asistente reconoció: nombre, teléfono, email cuando lo haya, y las columnas extra.</Step>
+  <Step title="Cambia el archivo si lo necesitas">Usa **trocar arquivo** (cambiar archivo) para enviar otro CSV en lugar del actual.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/csv-previa-importacao.png | alt: Cartão de prévia do CSV enviado com contagem de contatos válidos e linhas ignoradas | olhar: os contadores de contatos válidos e linhas ignoradas */}
+
+<Note>
+  El lector no interpreta comas dentro de un campo, así que evita valores con coma (como "Calle A, 123") directo en el CSV. Si lo necesitas, usa punto y coma dentro del campo, no coma.
+</Note>
+
+---
+
+## Errores comunes
+
+- **Nenhum contato válido** (Ningún contacto válido): el CSV necesita las columnas nombre y teléfono reconocibles. Revisa los encabezados.
+- **Erro ao processar arquivo CSV** (Error al procesar archivo CSV): el formato del archivo no es un CSV válido. Reábrelo y guárdalo de nuevo desde una planilla.
+- **Linhas ignoradas** (Filas ignoradas): toda fila sin nombre o sin teléfono se descarta silenciosamente del conteo de contactos válidos, sin trabar el envío de las demás.
+
+---
+
+## Campañas en varias Unidades
+
+Si tienes acceso a más de una Unidad, puedes replicar la misma lista a otras Unidades en el momento de la creación.
+
+<Steps>
+  <Step title="Marca las Unidades">En la sección **Replicar para outras Unidades** (Replicar a otras Unidades), marca las Unidades además de la actual. La Unidad en la que estás siempre queda marcada, con el sello **atual** (actual).</Step>
+  <Step title="Confirma">El asistente crea una campaña por Unidad seleccionada, con la misma lista de contactos. El canal de cada Unidad se elige solo, excepto el de la Unidad actual, que usa el canal elegido en el paso 3.</Step>
+</Steps>
+
+<Note>
+  Esta opción solo aparece en la creación de una campaña de lista. No es posible replicar después de creada, ni cambiar el origen de una campaña existente.
+</Note>
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="Mi CSV con punto y coma no carga">
+  El lector del asistente usa coma como separador. Usa el modelo en **Baixar modelo de planilha ↓** (Descargar modelo de planilla ↓) como referencia de formato.
+  </Accordion>
+  <Accordion title="¿Una columna puede convertirse en el valor de una conversión?">
+  Sí. Cualquier columna extra del CSV se convierte en dato de contexto del contacto y puede elegirse en **valor por conversão › Coluna da lista** (valor por conversión › Columna de la lista), en el paso 1 del asistente.
+  </Accordion>
+  <Accordion title="¿Existe validación de formato de teléfono?">
+  El asistente no valida el formato al momento del envío. Prefiere el formato internacional, con código de país, para reducir el error de entrega.
+  </Accordion>
+  <Accordion title="¿Puedo cambiar la lista después de crear la campaña?">
+  No por el asistente. Después de creada, la lista de contactos se sigue ejecución por ejecución en el panel de la campaña, sin opción de sustituir el archivo.
+  </Accordion>
+  <Accordion title="¿Puedo traer contactos directo de otro sistema, sin CSV?">
+  Hoy no, por el asistente actual: solo acepta lista en CSV. Mira [Trae contactos de sistemas externos](/es/campanhas/contatos-de-campanha) para entender qué cubre hoy la integración con Varejo Online y SAN.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Crea una campaña" href="/es/campanhas/crie-uma-campanha">El asistente en tres pasos.</Card>
+  <Card title="Arma la estructura en Áreas y Unidades" href="/es/equipe/areas-e-unidades">Cómo se organizan las Unidades.</Card>
+  <Card title="Sigue los resultados" href="/es/campanhas/resultados">Dónde ver cuántos contactos entraron y convirtieron.</Card>
+  <Card title="Trae contactos de sistemas externos" href="/es/campanhas/contatos-de-campanha">Conecta Varejo Online y SAN.</Card>
+</CardGroup>

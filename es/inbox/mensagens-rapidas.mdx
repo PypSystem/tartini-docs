@@ -1,0 +1,110 @@
+---
+title: "Crea y usa mensajes rápidos"
+sidebarTitle: "Mensajes rápidos"
+description: "Registra atajos de texto para responder más rápido y mantén un conjunto estándar para todo el equipo."
+---
+
+Los mensajes rápidos insertan un texto listo en el campo de mensaje con solo escribir una barra y el atajo. Ahorras tiempo en respuestas que se repiten.
+
+<Note>
+  Quién ve esto: todos los usuarios. Solo el Administrador, el Gestor de la Empresa, el Gestor de Área o el Gestor de Unidad pueden crear, editar, eliminar y reordenar los mensajes "Da empresa" (De la empresa). Para los demás, quedan de solo lectura.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Crea un mensaje rápido
+
+De forma predeterminada, la lista de mensajes rápidos aparece vacía.
+
+Dónde está: **Configurações > Atendimento > Mensagens Rápidas** (Configuración > Atención > Mensajes Rápidos).
+
+<Steps>
+  <Step title="Abre la pantalla">Ve a **Configurações > Atendimento > Mensagens Rápidas**.</Step>
+  <Step title="Haz clic en Nova mensagem (Nuevo mensaje)">Se abre el modal Nova Mensagem Rápida (Nuevo Mensaje Rápido).</Step>
+  <Step title="Elige la visibilidad">Los gestores eligen entre **Pessoal** (Personal) (solo tú) y **Da empresa** (De la empresa) (todo el equipo); los demás solo crean mensajes personales.</Step>
+  <Step title="Completa el atajo">Escribe en **Atalho** (Atajo), sin la barra. Usa solo letras, números, guion y guion bajo.</Step>
+  <Step title="Escribe el contenido">Completa **Conteúdo** (Contenido). Usa `{{nome_cliente}}` o `{{nome_atendente}}` para insertar el nombre automáticamente.</Step>
+  <Step title="Guarda">Haz clic en **Criar** (Crear).</Step>
+</Steps>
+
+{/* CAPTURA: images/atendimento/mensagens-rapidas-novo-modal.png | alt: modal Nova Mensagem Rápida com atalho, conteúdo e variáveis disponíveis | olhar: os campos Atalho e Conteúdo e a lista de variáveis */}
+
+<Note>
+  La visibilidad no cambia después de creada. Para cambiarla, elimina el mensaje y créalo de nuevo con la visibilidad correcta.
+</Note>
+
+---
+
+## Edita o elimina un mensaje
+
+Dónde está: **Configurações > Atendimento > Mensagens Rápidas**, columna **Ações** (Acciones).
+
+<Steps>
+  <Step title="Haz clic en Editar">Se abre el mismo modal, con los datos completados.</Step>
+  <Step title="Ajusta y guarda">Cambia el atajo o el contenido y haz clic en **Salvar** (Guardar).</Step>
+  <Step title="O haz clic en Deletar (Eliminar)">Confirma en **Confirmar** para eliminar, o en **Cancelar** para desistir.</Step>
+</Steps>
+
+<Note>
+  Solo el Administrador, el Gestor de la Empresa, el Gestor de Área o el Gestor de Unidad editan o eliminan los mensajes "Da empresa". Tus mensajes personales siempre puedes editarlos.
+</Note>
+
+---
+
+## Reordena los mensajes
+
+Dónde está: la misma pantalla, dentro de cada grupo (Mis mensajes o De la empresa).
+
+<Steps>
+  <Step title="Arrastra la fila">Haz clic y mantén presionada la fila del mensaje que quieres mover.</Step>
+  <Step title="Suelta en la posición deseada">El nuevo orden aplica para todos los que usan ese mensaje.</Step>
+</Steps>
+
+---
+
+## Usa un mensaje rápido en la conversación
+
+De forma predeterminada, el menú de mensajes rápidos permanece cerrado hasta que empieces a escribir.
+
+Dónde está: campo de mensaje, dentro de una conversación abierta.
+
+<Steps>
+  <Step title="Escribe la barra">Escribe "/" al inicio del campo de mensaje.</Step>
+  <Step title="Escribe el comienzo del atajo">La lista filtra por los atajos que coinciden.</Step>
+  <Step title="Elige el mensaje">Usa las flechas y Enter, o haz clic en la opción.</Step>
+</Steps>
+
+{/* CAPTURA: images/inbox/inbox-menu-mensagens-rapidas.png | alt: menu de mensagens rápidas aberto no campo de mensagem, com a lista de atalhos filtrada | olhar: a prévia com as variáveis já resolvidas */}
+
+<Note>
+  Las variables `{{nome_cliente}}` y `{{nome_atendente}}` ya llegan completadas en la vista previa del menú.
+</Note>
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Por qué no puedo editar un mensaje 'Da empresa'?">
+  Solo los gestores crean, editan y eliminan esos mensajes. Para ti, quedan de solo lectura.
+  </Accordion>
+  <Accordion title="¿Puedo cambiar la visibilidad de un mensaje después de creado?">
+  No. Elimínalo y créalo de nuevo con la visibilidad correcta.
+  </Accordion>
+  <Accordion title="¿El atajo distingue mayúsculas de minúsculas?">
+  No. El menú del Inbox filtra sin distinguir.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Atiende una conversación" href="/es/inbox/atenda-uma-conversa">Abrir, responder, adjuntar y asumir el control de Tino.</Card>
+  <Card title="Conoce el Inbox" href="/es/inbox/conheca-o-inbox">La pantalla, las listas y los estados de conversación.</Card>
+  <Card title="Define las reglas de conversación" href="/es/atendimento/regras-de-conversa">Firma, cierre automático y Copilot activo.</Card>
+  <Card title="Roles y accesos explicados" href="/es/visao-geral/papeis-e-acessos">Quién es gestor y qué habilita cada rol.</Card>
+</CardGroup>

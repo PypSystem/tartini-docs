@@ -1,0 +1,94 @@
+---
+title: "Set up contact fields"
+sidebarTitle: "Contact Fields"
+description: "Define the data Tino collects during the conversation, which the team can also fill in on the contact record."
+---
+
+Each contact field stores one piece of information about the person, such as company name, email, or budget, along with the exact question Tino asks to get it.
+
+<Note>
+  Who sees this: Administrator and Company Manager. Requires the Scale plan.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+<Note>
+  "Campos do contato" (Contact Fields) was previously called "Qualificação" (Qualification) internally. That old name no longer appears on any Tartini screen.
+</Note>
+
+---
+
+## Create a field
+
+By default, no fields are set up.
+
+Where to find it: **Cérebro > Operações > Campos do Contato** (Brain > Operations > Contact Fields).
+
+<Steps>
+  <Step title="Open the form">Click **Adicionar campo** (Add field).</Step>
+  <Step title="Define the key">Fill in **Chave (identificador único)** (Key (unique identifier)), for example `budget`, with no spaces or special characters.</Step>
+  <Step title="Define the display name">Fill in **Label (nome exibido)** (Label (displayed name)), for example "Orçamento disponível".</Step>
+  <Step title="Choose the type">Select the expected format in **Tipo do campo** (Field Type): Texto (Text), Número (Number), Moeda (Currency), Data (Date), Sim/Não (Yes/No), E-mail, Telefone (Phone), or URL.</Step>
+  <Step title="Write the question">Fill in **Pergunta para coleta** (Question to ask) with the exact question Tino will ask.</Step>
+  <Step title="Mark whether it's required">Turn on **Obrigatório** (Required) if Tino should keep asking for this information before moving on.</Step>
+  <Step title="Save">Click **Adicionar** (Add).</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/campos-contato-criar.png | alt: Formulário de novo campo do contato com chave, label, tipo e pergunta preenchidos, ao lado do painel de exemplo de conversa | olhar: o preview da conversa reagindo ao formulário em tempo real */}
+
+<Note>
+  Key, label, and question can't repeat across fields that are already set up. All three are required to save.
+</Note>
+
+---
+
+## See the live conversation example
+
+Next to the form, a panel simulates how Tino would collect these fields in a real conversation, and reacts to every field you add or edit, even before you save.
+
+Where to find it: **Cérebro > Operações > Campos do Contato**, **Exemplo de conversa** (Conversation Example) panel.
+
+<Note>
+  With no fields set up, the panel shows an empty state asking you to add fields first.
+</Note>
+
+---
+
+## Edit or delete a field
+
+Where to find it: **Cérebro > Operações > Campos do Contato**, click any card in the list.
+
+<Steps>
+  <Step title="Open the card">Click the field you want to change.</Step>
+  <Step title="Adjust the data">Change the key, the label, the type, the question, or whether it's required.</Step>
+  <Step title="Save or delete">Click **Salvar** (Save), or **Excluir** (Delete) to remove the field, with confirmation.</Step>
+</Steps>
+
+<Note>
+  The order of the fields is the order they were created in. There's no manual reordering on this screen.
+</Note>
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Why do I sometimes see 'Qualificação' instead of 'Campos do contato'?">
+  The interface only has "Campos do contato" (Contact Fields). "Qualificação" is an old internal name that no longer appears for users.
+  </Accordion>
+  <Accordion title="Can I reorder the fields on the screen?">
+  There's no reordering control. The order is the order of creation.
+  </Accordion>
+  <Accordion title="Does the field appear on the contact record even if the customer never talks to Tino?">
+  Yes. The team can also fill in the fields manually on the contact record.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Set up clarifications" href="/en/cerebro/esclarecimentos">Define when Tino asks for more information.</Card>
+  <Card title="Set up contact statuses" href="/en/cerebro/status-de-contato">Organize where each contact stands in the relationship.</Card>
+</CardGroup>

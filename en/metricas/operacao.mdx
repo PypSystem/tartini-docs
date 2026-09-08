@@ -1,0 +1,127 @@
+---
+title: "Operation Metrics"
+sidebarTitle: "Operation"
+description: "Track what's happening right now, the quality of service, and each team member's performance."
+---
+
+The Operação screen shows the health of service during the period: who's online right now, whether the SLA is on track, where conversations come from, and how each agent is doing. Everything compared with the previous period.
+
+<Note>
+  Who sees it: Administrator, Company Manager, Area Manager, and Unit Manager, each in their own scope. Available on all plans. The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+Where it is: **Métricas > Operação** (Metrics > Operation).
+
+---
+
+## Track Right Now
+
+When the chosen period reaches today, a live panel appears at the top of the screen and updates every 30 seconds.
+
+| Indicator | What it means |
+|---|---|
+| **em andamento** (in progress) | Open conversations being handled right now, split between team and Tino. |
+| **na fila** (in queue) | Conversations waiting for the first response. Goes into alert above five. |
+| **ia ativa** (AI active) | Conversations Tino is handling right now, with no person involved. |
+| **equipe online** (team online) | How many agents are online, out of the whole team. |
+
+<Note>
+  When an SLA has already been missed, a **crítico** (critical) badge appears in the panel's header. The live panel disappears when the chosen period doesn't reach today.
+</Note>
+
+---
+
+## Measure Service Quality
+
+This section brings the SLA adherence chart and a grid with six time and rate indicators.
+
+For times, the value shown is the median: half the services were faster than that number, half were slower. Next to it, the p90 shows the time of the ten percent slowest cases, so you can see the extremes without them getting lost in the average.
+
+| Indicator | What it means |
+|---|---|
+| **1ª resposta** (1st response) | Time until the team's first response. It's the only one with a configured deadline: the SLA pill shows the channel's limit. |
+| **espera / fila** (wait / queue) | Time the customer waits before being served. |
+| **até resolução** (until resolution) | Time until the conversation is resolved. |
+| **aderência a SLA** (SLA adherence) | Percentage of deadlines met. |
+| **transferências ia→humano** (AI→human transfers) | Percentage of conversations Tino handed off to the team. |
+| **reaberturas** (reopenings) | Percentage of closed conversations that were responded to again. |
+
+<Note>
+  Only the 1ª resposta has a configured deadline, the channel's SLA. The other five indicators only compare against the previous period.
+</Note>
+
+---
+
+## See Conversation Volume and Origin
+
+The **quem conduziu** (who handled it) chart shows the period's total conversations split between team and Tino. Next to it, three blocks complete the picture:
+
+- **canais** (channels): the volume by WhatsApp, WhatsApp Business, and Chat Widget.
+- **quem começou** (who started it): splits conversations into **recebidas** (received) (the customer reached out), **iniciadas** (initiated) (the team reached out), and **iniciadas pela ia** (initiated by AI), with the proactivity percentage.
+- **transferências** (transfers): how many conversations changed department in the period, and which department they went to.
+
+<Note>
+  Conversations from before origin tracking began are counted as "sem origem registrada" and are left out of the proactivity percentage.
+</Note>
+
+---
+
+## Compare Areas, Units, and Agents
+
+The comparison appears when there's more than one child at the current level and no agent is in focus. You choose the comparison indicator: **SLA**, **1ª resposta**, **Atendimento** (Service), **Volume**, **Iniciadas** (Initiated), **Reaberturas**, or **Transferências**.
+
+<Steps>
+  <Step title="Choose the indicator">Click one of the pills above the comparison, for example **SLA**.</Step>
+  <Step title="Drill down a level">Click an area card to see its units, or a unit card to see the agents.</Step>
+  <Step title="Go back whenever you want">Use **Voltar um nível** (Go back one level) or choose another area or unit in the trail.</Step>
+</Steps>
+
+<Note>
+  Clicking an agent card doesn't drill down a level: it opens a side panel with that person's numbers.
+</Note>
+
+---
+
+## See the Agents Table
+
+Below the comparison, the table lists every agent with activity in the period: **atendente** (agent), **resolvidas** (resolved), **em andamento**, **1ª resposta**, **atendimento**, and **csat**. Click a column header to sort. Use the search to find someone by name.
+
+<Steps>
+  <Step title="Click a row">The whole screen switches to showing only that person's numbers.</Step>
+  <Step title="Open their conversations">Click the row's action button, or **Ver as conversas deste atendente** (See this agent's conversations) in the side panel. This opens the Conversation Center in a new tab, already filtered.</Step>
+  <Step title="Go back to everyone">Click **ver todos** (see all), at the bottom of the table.</Step>
+</Steps>
+
+<Note>
+  The agents table never applies the agent filter. It's on purpose: with someone in focus, it keeps showing everyone, to serve as a way back.
+</Note>
+
+---
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Where do I see the SLA right now, in real time?">
+  In the header of the live panel, which shows how many SLAs are in alert or missed. The adherence rate for the whole period is in the service quality section.
+  </Accordion>
+  <Accordion title="Why did the comparison between areas or units disappear?">
+  Because there's an agent in focus, or because the current level only has one child to compare.
+  </Accordion>
+  <Accordion title="Why does the table show everyone even with an agent filtered?">
+  On purpose. The footer warns about it, and the **ver todos** button clears the focus whenever you want.
+  </Accordion>
+  <Accordion title="How do I compare two months?">
+  Choose a specific month in the period pill. The variation shown is already against the previous month.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related Articles
+
+<CardGroup cols={2}>
+  <Card title="The Metrics Panorama" href="/en/metricas/panorama">The period's executive snapshot.</Card>
+  <Card title="Tino Metrics" href="/en/metricas/tino">What the AI delivered and how fast.</Card>
+  <Card title="Service SLA" href="/en/atendimento/sla">The deadline that appears in 1ª resposta.</Card>
+  <Card title="Use the Conversation Center" href="/en/inbox/central-de-conversas">See the conversations behind each number.</Card>
+</CardGroup>

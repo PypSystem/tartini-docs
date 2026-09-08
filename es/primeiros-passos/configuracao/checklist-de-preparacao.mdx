@@ -1,0 +1,83 @@
+---
+title: "Prepara tu operación con la lista de verificación"
+sidebarTitle: "Lista de verificación de preparación"
+description: "Las etapas de la Página Inicial que dejan al Tino listo para atender: Identidad, Procesos, canal y equipo."
+---
+
+En las primeras semanas la Página Inicial funciona como una lista de verificación. Muestra lo que falta para que la IA empiece a trabajar y libera las etapas en el orden correcto.
+
+<Note>
+  Solo el Administrador completa la lista de verificación. Los demás roles ven la pantalla **sua empresa está sendo configurada** (tu empresa se está configurando), con el progreso, hasta que la preparación termine.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Las etapas
+
+| Etapa | Qué pide | Dónde ocurre |
+|---|---|---|
+| **Identidade da Empresa** (Identidad de la Empresa) | Enseñarle al Tino sobre el negocio: propiedades, personalidad y operaciones | **Cérebro** |
+| **Processos** (Procesos) | Mapear al menos un proceso de la operación. Solo aparece en los planes Scale y Enterprise | **Cérebro > Processos** (Cérebro > Procesos) |
+| **Canal de atendimento** (Canal de atención) | Conectar un canal para que el Tino reciba y responda mensajes | **Configurações > Canais** (Configuración > Canales) |
+| **Equipe** (Equipo) | Invitar a quienes forman parte de la operación | **Configurações > Empresa > Usuários** (Configuración > Empresa > Usuarios) |
+
+Las etapas Procesos, Canal y Equipo quedan bloqueadas hasta que la Identidad esté completa. Al hacer clic en una etapa bloqueada, el modal **Conclua a Identidade da Empresa** (Completa la Identidad de la Empresa) lista lo que falta, con un botón **Cadastrar** (Registrar) para cada elemento.
+
+{/* CAPTURA: images/primeiros-passos/checklist-pagina-inicial.png | Página Inicial do Administrador com o bloco Preparando sua operação e as quatro etapas | A barra de progresso e a etapa Identidade da Empresa aberta */}
+
+---
+
+## Qué completa la Identidad
+
+La etapa Identidad de la Empresa se considera completa cuando el Cérebro tiene:
+
+- Tres propiedades (documentos, preguntas y respuestas, sitios web o políticas).
+- Un estilo de comunicación (tono de voz).
+- Una directriz de comportamiento.
+- Una regla de cumplimiento.
+- En los planes con operaciones de la IA: una aclaración, un criterio de enrutamiento y un horario de disponibilidad.
+
+La etapa muestra el porcentaje mientras está incompleta. Consulta [Entrenando el Cérebro](/es/primeiros-passos/guias/treinando-o-cerebro) para hacerlo en el orden correcto.
+
+---
+
+## El widget flotante
+
+En cualquier pantalla, un círculo en la esquina inferior izquierda muestra el porcentaje completado y la etapa actual. Haz clic para abrir la tarjeta **Preparando sua operação** (Preparando tu operación), con las etapas y los botones **Conectar canal**, **Convidar equipe** (Invitar equipo) y **Mapear processos** (Mapear procesos). Al entrar al Cérebro, a Canales o a Usuarios, el widget se abre solo en la etapa correspondiente.
+
+---
+
+## Cuando todo está listo
+
+Con las cuatro etapas completadas, el widget muestra **Tudo pronto!** (¡Todo listo!) y el botón **Iniciar trabalho** (Iniciar trabajo), que lleva al Inbox. A partir de ahí la Página Inicial pasa a mostrar el panel de la operación. Consulta [La Página Inicial explicada](/es/metricas/pagina-inicial).
+
+<Tip>
+  Borrar un elemento obligatorio del Cérebro hace que la etapa vuelva a estar pendiente. Mantén al menos el mínimo de cada tipo.
+</Tip>
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="Soy gestor y la Página Inicial dice que la empresa se está configurando.">
+  Solo el Administrador completa la lista de verificación. Mientras no termina, los demás roles ven el progreso, sin los botones.
+  </Accordion>
+  <Accordion title="La etapa Procesos no me aparece.">
+  Solo existe en los planes que incluyen Procesos (Scale y Enterprise). Consulta [Planes y qué desbloquea cada uno](/es/visao-geral/planos-e-recursos).
+  </Accordion>
+  <Accordion title="Completé todo y el widget sigue apareciendo.">
+  Haz clic en **Iniciar trabalho** (Iniciar trabajo). El widget desaparece para esta sesión.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Comenzando con Tartini" href="/es/primeiros-passos/guias/comecando-com-o-tartini">La guía completa, paso a paso.</Card>
+  <Card title="Conecta el WhatsApp por código QR" href="/es/canais/whatsapp-qr-code">El camino más rápido para el primer canal.</Card>
+</CardGroup>

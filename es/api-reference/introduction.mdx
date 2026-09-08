@@ -1,0 +1,69 @@
+---
+title: "Referencia de la API"
+sidebarTitle: "Descripción general"
+description: "Documentación completa de la API pública de Tartini."
+---
+
+La API pública de Tartini permite integrar funcionalidades de inteligencia artificial y base de conocimiento a sistemas externos: chatbots, CRMs, aplicaciones web y más.
+
+---
+
+## URL base
+
+Todas las solicitudes deben hacerse a:
+
+```
+https://api-talk.saninternet.com/v1
+```
+
+---
+
+## Autenticación
+
+Todas las solicitudes requieren una API key válida enviada en el header `Authorization`:
+
+```
+Authorization: Bearer pyp_live_SUA_API_KEY
+```
+
+<Note>
+  Las API keys se generan en el [Dashboard](https://talk.saninternet.com) en **Configurações > API Keys** (Configuraciones > API Keys). Consulta la guía completa en [Autenticación](/es/concepts/authentication).
+</Note>
+
+---
+
+## Endpoints disponibles
+
+<CardGroup cols={2}>
+  <Card title="GET /api/status" icon="signal" href="/es/api-reference/endpoint/status">
+    Verifica si la API está operativa y valida tu API key.
+  </Card>
+  <Card title="POST /api/rag/retrieve" icon="magnifying-glass" href="/es/api-reference/endpoint/rag-retrieve">
+    Busca chunks relevantes y genera respuestas con IA.
+  </Card>
+</CardGroup>
+
+---
+
+## Formato de respuesta
+
+Todas las respuestas se devuelven en JSON. En caso de error:
+
+```json
+{
+  "statusCode": 401,
+  "error": "Unauthorized",
+  "message": "Invalid or expired API key"
+}
+```
+
+---
+
+## Códigos de estado
+
+| Código | Descripción |
+|--------|-----------|
+| `200` | Éxito |
+| `401` | API key ausente, inválida o expirada |
+| `403` | Suscripción inactiva (`SubscriptionInactive`) |
+| `422` | Error de validación en el cuerpo de la solicitud |

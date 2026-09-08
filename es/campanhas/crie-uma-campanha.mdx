@@ -1,0 +1,122 @@
+---
+title: "Crea una campaña"
+sidebarTitle: "Crea una campaña"
+description: "Arma la campaña en tres pasos, desde lo que Tino va a hacer hasta cuándo sale el mensaje."
+---
+
+El asistente de creación te lleva por tres pasos hasta que la campaña esté lista para funcionar, con una vista previa de cómo Tino abriría la conversación antes de que confirmes.
+
+<Note>
+  Campañas es una función de los planes Scale y Enterprise. Quién crea: Administrador (Empresa), Gestor de la Empresa, Gestor de Área y Gestor de Unidad.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+Dónde está: **Campanhas > Campanhas > Nova campanha** (Campañas > Campañas > Nueva campaña), o **Campanhas > Panorama > Nova campanha →** (Campañas > Panorama > Nueva campaña →).
+
+El asistente guarda el progreso solo en el navegador mientras completas los datos. Si sales y vuelves, un aviso dice **Rascunho recuperado de onde você parou** (Borrador recuperado desde donde te quedaste).
+
+---
+
+## Paso 1: qué va a hacer esta campaña
+
+Empieza eligiendo cómo Tino va a conducir cada conversación.
+
+<Steps>
+  <Step title="Elige el modo de conducción">**Seguir um processo** (Seguir un proceso, recomendado) hace que Tino siga un proceso mapeado en Cérebro, paso a paso, adaptándose si el cliente cambia de tema. **Missão livre** (Misión libre) es solo un objetivo en texto, para avisos y recados puntuales.</Step>
+  <Step title="Elige el proceso (modo proceso)">Busca por nombre o sector y haz clic en una tarjeta para seleccionar. Sin procesos mapeados, usa **Criar com missão livre** (Crear con misión libre) o mapea uno en **Mapear processo** (Mapear proceso).</Step>
+  <Step title="Describe el contexto o el objetivo">En el modo proceso, el campo **contexto desta campanha** (contexto de esta campaña) es opcional, pero mejora la apertura: indica cuándo ocurre el contacto, qué tiene Tino en mano y la acción inmediata esperada. En la misión libre, el campo **objetivo da campanha** (objetivo de la campaña) es obligatorio.</Step>
+  <Step title="Define qué cuenta como resultado">Elige entre **Processo concluído** (Proceso concluido), **Transferência qualificada** (Transferencia calificada, con sector opcional), **Dados coletados** (Datos recolectados, elige al menos un campo) o **Marcação manual** (Marcación manual). En la misión libre, solo **Marcação manual** queda disponible.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/criar-passo1-missao.png | alt: Passo 1 do assistente com o modo Seguir um processo selecionado | olhar: os cartões de modo de condução e o campo de contexto */}
+
+<Note>
+  También puedes definir un valor por conversión, opcional: un valor fijo en reales o una columna de tu CSV. Esto aparece después en el panel de resultados de la campaña.
+</Note>
+
+Sin un nombre escrito en el campo superior, el asistente avisa **Dê um nome interno para a campanha** (Dale un nombre interno a la campaña) y no deja avanzar.
+
+---
+
+## Paso 2: a quién va a abordar Tino
+
+Elige de dónde vienen los contactos. Esta elección no cambia después de que la campaña se crea.
+
+<Steps>
+  <Step title="Elige el origen">**Tenho uma lista** (Tengo una lista) sube un CSV. **Meu sistema envia** (Mi sistema envía) genera una URL de webhook. **O cliente chega até mim** (El cliente llega hasta mí) activa por palabra clave.</Step>
+  <Step title="Completa los datos del origen">En lista, envía el CSV (mira [Importa los contactos de la campaña](/es/campanhas/contatos-e-csv)). En webhook, no hay nada para completar aquí: la URL sale después de crear. En palabra clave, escribe las palabras (Enter agrega cada una), elige el tipo de correspondencia y la tag aplicada al contacto.</Step>
+  <Step title="Refina el perfil del público (opcional)">Marca un perfil como **Cliente Ativo** (Cliente Activo) o **Lead** y describe el contexto de ese público, para ajustar el tono de Tino.</Step>
+  <Step title="Replica para otras Unidades (opcional)">Solo para lista, y solo en la creación: marca otras Unidades para repetir la misma lista en ellas, con el canal de cada una elegido solo.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/criar-passo2-publico.png | alt: Passo 2 do assistente com a origem Tenho uma lista selecionada e um CSV enviado | olhar: o cartão de contagem de contatos válidos */}
+
+Sin un CSV con contactos válidos, sin palabra clave agregada, o sin tag para la palabra clave, el asistente no avanza y muestra el error debajo del campo.
+
+---
+
+## Paso 3: cuándo y por dónde
+
+Este paso define el canal, los horarios y qué hacer cuando el contacto no responde.
+
+<Steps>
+  <Step title="Elige el canal">Selecciona entre los canales de WhatsApp conectados de la Unidad. Sin canal, un aviso te lleva a **Conectar canal**.</Step>
+  <Step title="Elige la plantilla de apertura (canal WABA)">En canal oficial, elige una plantilla **Aprovado** (Aprobado) o crea una nueva por el editor. Esto es obligatorio: sin plantilla, el asistente no avanza.</Step>
+  <Step title="Define cuándo disparar">En lista, elige la fecha de inicio y, si quieres, la fecha de fin. En webhook, elige entre abordar **24 horas por dia** (24 horas al día) o solo dentro de una ventana de horarios. Palabra clave no pide nada aquí: Tino responde en cuanto el cliente escribe.</Step>
+  <Step title="Ajusta la ventana de horarios">Cuando aplique, marca los días de la semana y el horario de inicio y fin. De forma predeterminada, la ventana viene precargada del funcionamiento registrado de la Unidad.</Step>
+  <Step title="Configura los follow-ups (opcional)">Agrega hasta 4 intentos para cuando el contacto no responda: 4 horas, 1, 2, 3 o 7 días después de la apertura. En canal WABA, los intentos de 24 horas o más exigen una plantilla aprobada para cada uno.</Step>
+  <Step title="Genera la vista previa">Dale un nombre al agente y haz clic en **Gerar exemplo** (Generar ejemplo) para ver cómo Tino abriría la conversación con el primer contacto de la lista.</Step>
+  <Step title="Crea la campaña">Haz clic en **Criar campanha** (Crear campaña).</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/criar-passo3-lancamento.png | alt: Passo 3 do assistente com canal, janela de horários e a prévia da abordagem no celular | olhar: o botão Gerar exemplo e a mensagem de abertura */}
+
+<Note>
+  En cuanto el contacto responde, Tino cancela los intentos de follow-up siguientes y asume la conversación.
+</Note>
+
+---
+
+## Qué pasa al crear
+
+El resultado cambia según el origen elegido:
+
+- **Lista**: la campaña nace como **Rascunho** (Borrador). El aviso es **Campanha criada! Inicie o disparo quando quiser** (¡Campaña creada! Inicia el disparo cuando quieras). Inicias el envío después, en la lista o en el panel de la campaña.
+- **Webhook**: la campaña nace **Ativa** (Activa). Un modal muestra la URL del webhook y el token secreto para que lo configures en tu sistema. Mira [Dispara campañas por webhook o por mensaje recibido](/es/campanhas/webhook-e-inbound).
+- **Palabra clave**: la campaña nace **Ativa**, ya escuchando las palabras configuradas.
+
+En cualquier caso, vuelves a la lista de campañas de la Unidad.
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="No aparece ningún canal para elegir">
+  Solo aparecen canales de WhatsApp conectados de la Unidad actual. Conecta uno en **Configurações > Canais** (Configuración > Canales) y vuelve al asistente.
+  </Accordion>
+  <Accordion title="Mi CSV con punto y coma no cargó">
+  El lector de CSV usa coma como separador. Descarga el modelo de planilla en la propia pantalla y úsalo como base.
+  </Accordion>
+  <Accordion title="Perdí lo que estaba completando">
+  En la creación, el borrador queda guardado en el navegador con cada cambio, por Unidad, sin que necesites guardar. Al reabrir el asistente en la misma Unidad, recupera desde donde te quedaste. Si quieres empezar de cero, usa **Descartar rascunho** (Descartar borrador) al salir.
+  </Accordion>
+  <Accordion title="¿Puedo editar la lista de contactos después de crear?">
+  No por el asistente. La lista de contactos de una campaña ya creada se sigue en el panel de la campaña, ejecución por ejecución.
+  </Accordion>
+  <Accordion title="¿Tengo que elegir una plantilla para cada follow-up?">
+  Solo en canal WABA, y solo para intentos de 24 horas o más. Los intentos más cortos y los canales no oficiales no exigen plantilla.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Prepara la Unidad para campañas" href="/es/campanhas/setup">Canal, plantilla y créditos antes de crear.</Card>
+  <Card title="Importa los contactos de la campaña" href="/es/campanhas/contatos-e-csv">El formato del CSV y la vista previa de importación.</Card>
+  <Card title="Programa el envío y los follow-ups" href="/es/campanhas/agendamento-e-follow-ups">Horarios, intentos, pausar y reanudar.</Card>
+  <Card title="Mapea procesos a partir de las conversaciones" href="/es/cerebro/mapeie-processos">El playbook que sigue Tino.</Card>
+</CardGroup>

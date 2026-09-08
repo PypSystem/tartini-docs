@@ -1,0 +1,110 @@
+---
+title: "Organiza procesos en grupos"
+sidebarTitle: "Grupos"
+description: "Reúne los procesos que una campaña puede usar y define el camino de salidas específico de ese conjunto."
+---
+
+Un grupo reúne los procesos que una campaña puede encadenar, con su propio camino de salidas, sin afectar cómo se comporta cada proceso en cualquier otra situación.
+
+<Note>
+  Quién lo ve: Administrador y Gestor de la Empresa. Requiere el plan Scale.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Crea un grupo
+
+De forma predeterminada, un grupo nuevo nace marcado como **fluxo próprio** (flujo propio), sin heredar el camino global.
+
+Dónde está: **Cérebro > Processos > Grupos** (Cerebro > Procesos > Grupos).
+
+<Steps>
+  <Step title="Abre el formulario">Haz clic en **Novo grupo** (Nuevo grupo) (o **Criar primeiro grupo**, Crear primer grupo, si todavía no hay ninguno).</Step>
+  <Step title="Escribe el nombre">Completa **Nome** (Nombre), por ejemplo "Suporte financeiro".</Step>
+  <Step title="Describe el grupo (opcional)">Completa **Descrição** (Descripción) con para qué sirve el grupo.</Step>
+  <Step title="Agrega procesos">Selecciona un proceso en el campo **Adicionar processo ao grupo…** (Agregar proceso al grupo) y haz clic en **Adicionar** (Agregar).</Step>
+  <Step title="Guarda">Haz clic en **Criar grupo** (Crear grupo).</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/grupos-criar.png | alt: Formulário de novo grupo com nome, descrição e três processos já adicionados | olhar: a estrela de processo inicial ao lado do primeiro processo */}
+
+<Note>
+  Guardar siempre reemplaza el conjunto entero de procesos del grupo por la lista actual de la pantalla, no se suma a lo que ya existía.
+</Note>
+
+---
+
+## Marca el proceso inicial
+
+La estrella junto a un proceso define por dónde comienza la campaña del grupo. Es opcional.
+
+Dónde está: **Cérebro > Processos > Grupos**, dentro de la configuración del grupo.
+
+<Steps>
+  <Step title="Localiza el proceso">Encuentra el proceso que debe abrir la campaña.</Step>
+  <Step title="Marca la estrella">Haz clic en el ícono de estrella junto al nombre.</Step>
+</Steps>
+
+---
+
+## Importa el camino global al agregar un proceso
+
+Al agregar un proceso, eliges si entra con un camino propio dentro del grupo o si trae el camino global como punto de partida.
+
+<Steps>
+  <Step title="Activa la importación, si quieres">Activa **Importar fluxo global ao adicionar** (Importar flujo global al agregar) antes de elegir el proceso.</Step>
+  <Step title="Agrega el proceso">El proceso entra marcado para importación, mostrado como vista previa hasta que guardes.</Step>
+  <Step title="Guarda">Al guardar el grupo, los procesos a los que apunta el camino global también entran, anidados bajo el proceso original.</Step>
+</Steps>
+
+<Note>
+  Quitar un proceso que trajo otros por importación quita también los importados. Un proceso importado no puede quitarse por separado del padre que lo trajo.
+</Note>
+
+---
+
+## Edita el camino del grupo (el flujo del grupo)
+
+Después de guardado, cada grupo tiene su propio grafo editable, llamado **Fluxo do grupo** (Flujo del grupo), separado del camino global de cada proceso.
+
+Dónde está: configuración del grupo, pestaña **Fluxo** (Flujo).
+
+<Steps>
+  <Step title="Elige el modo">Selecciona **Herdar fluxo global** (Heredar flujo global) (lo que definas aquí se sobrescribe solo en esta campaña) o **Fluxo próprio do grupo** (Flujo propio del grupo) (ignora el global por completo).</Step>
+  <Step title="Enfoca un proceso">En la barra de arriba, haz clic en el proceso que quieras editar.</Step>
+  <Step title="Edita una salida">Haz clic en un chip de desenlace en el grafo y completa el destino: otro proceso, clasificación, transferencia a un sector o cierre.</Step>
+  <Step title="Guarda la salida">Haz clic en **Salvar saída** (Guardar salida).</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/grupos-fluxo-grupo.png | alt: Grafo do Fluxo do grupo com o switcher de processos no topo e o painel de saúde do fluxo abaixo | olhar: o cartão de alerta de ciclo sem escape, quando existir */}
+
+<Note>
+  Editar una salida aquí no cambia el camino global del proceso en otras campañas. Solo un problema se trata como falla real en el panel de **Saúde do fluxo** (Salud del flujo): un ciclo sin salida hacia afuera.
+</Note>
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="Si saco un proceso del grupo, ¿los que importé con él también salen?">
+  Sí. Quitar un proceso quita también todos los que trajo por importación.
+  </Accordion>
+  <Accordion title="¿Editar el Flujo del grupo cambia el proceso en otras campañas?">
+  No. La edición queda restringida a esta campaña; el camino global del proceso sigue siendo independiente.
+  </Accordion>
+  <Accordion title="¿Un proceso sin salida definida rompe la atención?">
+  No. De forma predeterminada, cualquier desenlace sin regla explícita cae en la clasificación.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Mapea procesos a partir de las conversaciones" href="/es/cerebro/mapeie-processos">Construye y publica el proceso antes de agruparlo.</Card>
+  <Card title="Haz seguimiento del Catálogo de procesos" href="/es/cerebro/consistencia-e-insights">Mira problemas estructurales en el registro de procesos.</Card>
+</CardGroup>

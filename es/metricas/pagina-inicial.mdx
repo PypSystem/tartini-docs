@@ -1,0 +1,89 @@
+---
+title: "La página de inicio explicada"
+sidebarTitle: "Página de inicio"
+description: "El panel del día: la cola en tiempo real, lo que necesita de ti, los números de hoy y el equipo, o tus conversaciones si tú atiendes."
+---
+
+Después del checklist de preparación, la Página Inicial (Página de inicio) se convierte en el panel del día. Los gestores ven toda la operación; los agentes ven sus propias conversaciones y su propio desempeño.
+
+<Note>
+  Mientras el checklist no termina, la Página Inicial muestra las etapas de preparación. Consulta [Prepara tu operación con el checklist](/es/primeiros-passos/configuracao/checklist-de-preparacao).
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## El panel del gestor
+
+{/* CAPTURA: images/metricas/pagina-inicial-gestor.png | Página Inicial do gestor com o bloco agora em tempo real e o painel precisa de você | Os quatro cards do bloco agora e a lista de alertas ao lado */}
+
+### Elige las Unidades
+
+En la parte superior, la línea **equipe/…** (equipo/…) muestra el alcance de los números: la Unidad actual o todas las Unidades a las que tienes acceso. Haz clic en ella para filtrar una Unidad. El filtro cambia solo los números de esta pantalla; para cambiar de Unidad en todo Tartini, usa el botón debajo del logotipo, en la esquina superior izquierda. En la esquina superior derecha, el botón **Abrir atendimento →** (Abrir atendimiento →) lleva al Inbox.
+
+### Ahora, en tiempo real
+
+| Tarjeta | Qué muestra | Al hacer clic |
+|---|---|---|
+| **na fila** (en la cola) | Conversaciones esperando atendimiento y la espera promedio. Se pone naranja por encima de cinco | El Inbox filtrado en esperando |
+| **em andamento** (en curso) | Conversaciones siendo atendidas ahora | El Inbox filtrado en curso |
+| **resolvidas por ia** (resueltas por IA) | Conversaciones que el Tino cerró hoy sin transferir | El Inbox filtrado en finalizadas |
+| **equipe online** (equipo en línea) | Cuántos agentes están en línea, del total | |
+
+### Necesita de ti
+
+La lista muestra lo que pide acción: canal offline, conversación abierta con SLA vencido, tiempo promedio de espera por encima de quince minutos o más de diez clientes en la cola. Cada fila tiene un enlace a la pantalla correcta. Sin pendientes, aparece **Tudo em dia ✓** (Todo al día ✓).
+
+### Hoy
+
+Cuatro números comparados con ayer hasta la misma hora: **conversas** (conversaciones), **resolvidas pela ia** (resueltas por la IA), **concluídas** (concluidas) y **satisfação** (satisfacción). La flecha de variación solo aparece cuando hay al menos cinco ocurrencias en uno de los días. La satisfacción lleva a la pantalla de satisfacción del Scout.
+
+### Operación
+
+- **Pico de atendimento** (Pico de atendimiento): las conversaciones de hoy hora a hora, con el pico marcado y la división entre IA y equipo. El enlace **ver detalhes por hora →** (ver detalles por hora →) abre las métricas de atendimiento.
+- **Tino em ação** (Tino en acción): cuánto de las conversaciones de hoy el Tino resolvió sin el equipo, y la parte de las campañas. Si el Tino todavía no atiende, la tarjeta ofrece **Ativar agente** (Activar agente). Debajo, el consumo de créditos de IA del mes, con el enlace **ver consumo →**.
+- **Equipe hoje** (Equipo hoy): una línea por agente con estado, total, en curso, concluidas y tiempo de primera respuesta. Haz clic en la línea para ver los atendimientos de esa persona en la Central de Conversas.
+
+<Note>
+  El enlace **ver consumo →** abre la pantalla de Créditos, a la que solo el Administrador accede. Los gestores vuelven a la Página Inicial al hacer clic.
+</Note>
+
+---
+
+## El panel del agente
+
+{/* CAPTURA: images/metricas/pagina-inicial-atendente.png | Página Inicial do atendente com Minhas conversas e Meu desempenho | Os cards Pendentes e Em andamento e o gráfico de evolução diária */}
+
+### Mis conversaciones
+
+Tres tarjetas: la nota promedio de satisfacción de tus atendimientos (de cero a diez, con el sello Excelente, Bom (Bueno), Regular o Precisa melhorar (Necesita mejorar)), **Pendentes** (conversaciones esperando tu respuesta) y **Em andamento** (En curso). Las dos últimas tienen el botón **Abrir inbox**.
+
+### Mi desempeño
+
+Los últimos catorce días: **Clientes atendidos**, **Tempo médio** (Tiempo promedio) de atendimiento, **Primeira resposta** (Primera respuesta) y el gráfico **Evolução diária** (Evolución diaria).
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Los números consideran qué Unidad?">
+  De forma predeterminada, todas las Unidades a las que tienes acceso. La línea **equipe/…** en la parte superior filtra una Unidad sin cambiar el contexto de Tartini.
+  </Accordion>
+  <Accordion title="¿Por qué no aparece la flecha de variación?">
+  Solo aparece cuando uno de los días tiene al menos cinco ocurrencias. Con menos, la comparación no dice nada.
+  </Accordion>
+  <Accordion title="La tarjeta Tino em ação dice que él todavía no conduce conversaciones.">
+  El Tino está apagado en tus canales. Consulta [Activa el Tino en un canal](/es/tino/ia-por-canal).
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Métricas de la operación" href="/es/metricas/operacao">Los números por período, Unidad y agente.</Card>
+  <Card title="Métricas del Tino" href="/es/metricas/tino">Qué resuelve el Tino y cuánto consume.</Card>
+</CardGroup>

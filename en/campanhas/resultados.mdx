@@ -1,0 +1,113 @@
+---
+title: "Track the results"
+sidebarTitle: "Results"
+description: "See how many contacts responded, how many converted, and where a campaign's conversations show up in the Inbox."
+---
+
+A campaign's dashboard shows what happened with every contact it reached out to, from the first contact through conversion, without you having to open conversation after conversation.
+
+<Note>
+  Campaigns is a feature of the Scale and Enterprise plans. Who sees it: Administrator (Company), Company Manager, Area Manager, and Unit Manager. Agent doesn't have access to the campaign dashboard.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+Where to find it: click a campaign under **Campanhas > Campanhas** (Campaigns > Campaigns), or open **Abrir campanha** (Open campaign) on a contact's card in the Inbox.
+
+---
+
+## Read the overview
+
+By default, the **Métricas** (Metrics) tab opens on the **Visão Geral** (Overview) sub-tab.
+
+<Steps>
+  <Step title="Open the dashboard">Click the campaign in the list, then the **Métricas** tab.</Step>
+  <Step title="Read the main numbers">**Conversas Iniciadas** (Conversations Started), **Taxa de Resposta** (Response Rate), **Taxa de Escalação** (Escalation Rate), **Mensagens Totais** (Total Messages), and **Taxa de Abandono** (Drop-off Rate) sum up performance so far.</Step>
+  <Step title="Check the status distribution">The bar shows how many conversations are **Ativo** (Active), **Concluído** (Completed), **Aguardando Resposta** (Awaiting Response), **Transferido** (Transferred), or **Falhou** (Failed).</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/resultados-visao-geral.png | alt: Sub-aba Visão Geral com os cartões de conversas iniciadas, taxa de resposta e distribuição por status | olhar: os cartões de taxa de resposta e taxa de escalação */}
+
+---
+
+## See each conversation
+
+By default, the **Conversas** (Conversations) sub-tab lists every conversation from the campaign, most recent first.
+
+Where to find it: **Métricas** tab, **Conversas** sub-tab.
+
+<Steps>
+  <Step title="Open the sub-tab">Click **Conversas**, inside **Métricas**.</Step>
+  <Step title="Filter by agent">Use the filter to see only conversations with no agent (AI only) or those from a specific person.</Step>
+  <Step title="Read the table">Each row shows the contact, how many interactions there were (from the AI and from the contact), the status, and whether the conversation was transferred.</Step>
+</Steps>
+
+<Note>
+  The table shows 20 conversations per page. With no conversation yet, the dashboard notes that conversations show up as soon as contacts interact with the campaign.
+</Note>
+
+---
+
+## Track the conversions
+
+By default, the **Conversões** (Conversions) sub-tab shows only the contacts who already converted.
+
+Where to find it: **Métricas** tab, **Conversões** sub-tab.
+
+<Steps>
+  <Step title="See the summary">The total conversions, the rate over conversations started, and the summed value, if the campaign has a value per conversion set up.</Step>
+  <Step title="Switch the filter">Check **Todos os contatos** (All contacts) to see who hasn't converted yet.</Step>
+  <Step title="Mark a conversion manually">In the execution list, use **Marcar conversão** (Mark conversion) to record a conversion the success definition didn't capture on its own.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/resultados-conversoes.png | alt: Sub-aba Conversões com os cartões de total, taxa de conversão e valor somado | olhar: o botão Marcar conversão na lista de execuções */}
+
+<Note>
+  A manually marked conversion shows up with the **Manual** source. The others show the real source: **Processo concluído** (Process completed), **Transferência qualificada** (Qualified transfer), **Dados coletados** (Data collected), or **Sinal externo** (External signal).
+</Note>
+
+---
+
+## See the drop-offs
+
+By default, the **Abandonos** (Drop-offs) sub-tab shows conversations that were transferred to the team and then went unanswered.
+
+Where to find it: **Métricas** tab, **Abandonos** sub-tab.
+
+The drop-off rate shows in green below 30%, in yellow between 30% and 49%, and in red at 50% or above. The table shows when each conversation was transferred, when the alert was sent, and the last interaction recorded.
+
+---
+
+## Where conversations show up in the Inbox
+
+Every conversation opened by a campaign shows up in the Inbox with a **Campanha** (Campaign) chip, which helps tell it apart from a conversation the customer started on their own. On the contact's card, the campaign name shows up for any agent; only managers get the **Abrir campanha** link to jump straight to the dashboard.
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Where do I see a campaign's conversations?">
+  On the **Métricas › Conversas** tab of the campaign dashboard, or in the Inbox, by looking for the **Campanha** chip on conversations.
+  </Accordion>
+  <Accordion title="How do I mark a sale manually?">
+  On the **Métricas › Conversões** tab, use **Marcar conversão** on the contact's row. The source is recorded as **Manual**.
+  </Accordion>
+  <Accordion title="Does the drop-off rate count every stalled conversation?">
+  No. It counts only conversations that were transferred to the team and then had no interaction, not conversations Tino is still handling.
+  </Accordion>
+  <Accordion title="Does a campaign with no success definition show conversions?">
+  Only manually marked ones. Without a success definition set up, the dashboard notes that the campaign predates this model, but still accepts manual marking.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Create a campaign" href="/en/campanhas/crie-uma-campanha">Where the success definition is chosen.</Card>
+  <Card title="Schedule the send and follow-ups" href="/en/campanhas/agendamento-e-follow-ups">Pause, resume, and track the queue.</Card>
+  <Card title="The contact card" href="/en/inbox/ficha-do-contato">Where the Abrir campanha link shows up.</Card>
+  <Card title="Use the Conversation Center" href="/en/inbox/central-de-conversas">Another way to track conversations in progress.</Card>
+</CardGroup>

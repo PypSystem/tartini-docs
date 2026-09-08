@@ -1,0 +1,109 @@
+---
+title: "Manage contacts"
+sidebarTitle: "Contacts"
+description: "Search, edit, and merge duplicate contacts in a single list, organized by unit."
+---
+
+The Contatos list brings together everyone who has ever talked to your company. Search, filter, and open each person's full record.
+
+<Note>
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Search for a contact
+
+By default the list is sorted by the most recent message.
+
+Where to find it: **Inbox > Contatos** (Contacts).
+
+<Steps>
+  <Step title="Open Contatos">In the Inbox menu, click **Contatos**.</Step>
+  <Step title="Search">Type a name, phone number, or email in the search field.</Step>
+  <Step title="Filter if needed">Use **Status** or **Tag** to narrow the list.</Step>
+</Steps>
+
+{/* CAPTURA: images/inbox/inbox-contatos-lista.png | alt: tela Contatos com a busca, os filtros Status e Tag e a lista de contatos | olhar: a pílula de status e as tags em cada linha */}
+
+<Note>
+  Search also finds contacts by their external ID and by phone digits.
+</Note>
+
+---
+
+## Sync WhatsApp contacts
+
+Where to find it: **Inbox > Contatos**, sync button in the header.
+
+<Steps>
+  <Step title="Click the sync button">The tooltip shows "Sincronizar contatos do WhatsApp".</Step>
+  <Step title="Wait">Tartini pulls the contacts from the connected address book.</Step>
+</Steps>
+
+---
+
+## Open and edit a contact
+
+Where to find it: click the contact in the list.
+
+<Steps>
+  <Step title="Click the contact">Opens the contact record.</Step>
+  <Step title="Edit the name">Click the pencil next to the name, type the new name, and save.</Step>
+</Steps>
+
+---
+
+## Merge duplicate contacts
+
+By default, contacts with the same phone number on different channels don't merge on their own.
+
+Where to find it: contact card, in the conversation's details panel or in the record, **Mesclar** (Merge) button.
+
+<Steps>
+  <Step title="Click Mesclar">In the contact card.</Step>
+  <Step title="Choose the primary contact">This is who receives the history after the merge.</Step>
+  <Step title="Search for duplicates">Type at least two letters. The screen suggests candidates with a matching phone number, IP, or name.</Step>
+  <Step title="Confirm">Click **Mesclar N contato(s)** (Merge N contact(s)) and then **Confirmar** (Confirm).</Step>
+</Steps>
+
+{/* CAPTURA: images/inbox/inbox-mesclar-contatos.png | alt: modal Mesclar contatos com o contato principal e a lista de sugestões | olhar: os motivos da sugestão, como Mesmo telefone ou Mesmo IP */}
+
+<Warning>
+  Merging can't be undone. The messages from the chosen contacts move to the primary contact and disappear from the separate list.
+</Warning>
+
+---
+
+## Understand the empty list
+
+With no contacts yet, the screen shows "Nenhum contato ainda". With filters that find nothing, it shows "Nenhum contato para esta busca" and the **Limpar filtros** (Clear filters) button.
+
+The list loads 30 contacts per page, with infinite scroll. If you open a contact's record and go back, the list appears the way you left it, including the same scroll position.
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Why doesn't a contact show up in the list?">
+  WhatsApp contacts only appear once they exist in Tartini. Sync to bring in the ones that are only in the address book.
+  </Accordion>
+  <Accordion title="What actually counts as a duplicate contact?">
+  The same phone number, on another channel, in the same unit. The same person in another unit isn't a duplicate, it's just another record.
+  </Accordion>
+  <Accordion title="Can merging contacts be undone?">
+  No. Check the primary contact before confirming.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="The contact record" href="/en/inbox/ficha-do-contato">Data, status, fields, notes, and conversations.</Card>
+  <Card title="Get to know the Inbox" href="/en/inbox/conheca-o-inbox">The screen, the lists, and conversation statuses.</Card>
+  <Card title="Track site visitors" href="/en/inbox/visitantes">Who is browsing through the Chat Widget right now.</Card>
+  <Card title="Transfer, note, and tag conversations" href="/en/inbox/transfira-notas-e-tags">Pass the conversation along and record what matters.</Card>
+</CardGroup>

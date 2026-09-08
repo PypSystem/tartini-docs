@@ -1,0 +1,101 @@
+---
+title: "Create WhatsApp message templates"
+sidebarTitle: "Templates"
+description: "Prepare messages approved by Meta to start conversations with customers outside WhatsApp's normal window."
+---
+
+An approved template lets you reach out to the customer first, outside WhatsApp's normal support window. They power Tartini's campaigns and any contact your company initiates.
+
+<Note>
+  Available for WABA channels. Who manages: Administrator, Company Manager, Area Manager, and Unit Manager. {/* CONFIRMAR: quem exatamente pode criar, editar e excluir templates no backend */}
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Create a template
+
+By default, a new WABA channel has no templates registered.
+
+Where to find it: **Configurações > Canais > WABA > Gerenciar Templates** (Settings > Channels > WABA > Manage Templates).
+
+<Steps>
+  <Step title="Open the templates screen">In the WABA channel, click **Gerenciar Templates** (Manage Templates).</Step>
+  <Step title="Start a new template">Click **Novo Template** (New Template).</Step>
+  <Step title="Give it a name and choose the category">Fill in **Nome do Template** (Template name) and choose between **Marketing** and **Utilidade** (Utility).</Step>
+  <Step title="Write the message body">Type the text in **Corpo da Mensagem** (Message body). To include a piece of data that changes on every send, click one of the **Campos Disponíveis** (Available fields) to insert the variable, such as `{{nome}}`.</Step>
+  <Step title="Complete anything else needed">Add a **Cabeçalho** (Header), **Rodapé** (Footer), or up to three **Botões** (Buttons), if the template needs them.</Step>
+  <Step title="Send for approval">Click **Criar Template** (Create Template).</Step>
+</Steps>
+
+{/* CAPTURA: images/canais/templates-editor.png | alt: editor de template com corpo, campos disponíveis e preview | olhar: o preview à direita conforme o texto é digitado */}
+
+<Note>
+  Limits: name up to 512 characters, body up to 1024, header and footer up to 60 each, up to 3 buttons. Variables use lowercase letters and `_`, no spaces, and never sit at the start or end of the body.
+</Note>
+
+---
+
+## Track the status
+
+Every template you submit goes through Meta's approval:
+
+- **Em revisão** (Under review): waiting for Meta to review it.
+- **Aprovado** (Approved): ready for use in campaigns and conversations.
+- **Rejeitado** (Rejected): Meta declined the template.
+
+You get a notification the moment the status changes, with no need to refresh the page.
+
+{/* CONFIRMAR: prazo médio de aprovação da Meta para exibir na central */}
+
+---
+
+## Edit or delete a template
+
+<Steps>
+  <Step title="Open the template">In the template list, click **Editar** (Edit).</Step>
+  <Step title="Change what's needed">Adjust the text, header, footer, or buttons.</Step>
+  <Step title="Save">Click **Salvar Alterações** (Save changes) and confirm.</Step>
+</Steps>
+
+<Warning>
+  Editing a template sends it back to Meta for approval, and you can't edit it again for the next 24 hours.
+</Warning>
+
+To delete, click **Excluir** (Delete) on the template's row and confirm.
+
+<Warning>
+  Deleting a template removes it from Meta and can't be undone. A template used in an active campaign can't be edited or deleted: deactivate the campaign first.
+</Warning>
+
+---
+
+## Where templates are used
+
+Approved templates appear when you create a campaign, to start the conversation with the customer.
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Why can't I edit my template?">
+  It's in use by an active campaign, or it's still within the 24-hour lock after the last edit.
+  </Accordion>
+  <Accordion title="Can I write the template in another language?">
+  Not from the current screen: templates created in Tartini come out in Brazilian Portuguese.
+  </Accordion>
+  <Accordion title="What happens if Meta rejects the template?">
+  It's marked **Rejeitado** (Rejected) in the list. Edit the text and submit it again for a new review.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Connect WhatsApp Business API (WABA)" href="/en/canais/whatsapp-business-api">Prerequisites and connection for the official channel.</Card>
+  <Card title="Channels explained" href="/en/canais/canais-explicados">The channels available in Tartini.</Card>
+</CardGroup>

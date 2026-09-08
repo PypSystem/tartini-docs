@@ -1,0 +1,125 @@
+---
+title: "Usa la Central de Conversaciones"
+sidebarTitle: "Central de Conversaciones"
+description: "Busca, audita y exporta cualquier conversación que ya haya pasado por tu empresa, con filtros y finalización masiva."
+---
+
+La Central de Conversas (Central de Conversaciones) guarda el historial completo, con filtros para encontrar exactamente lo que necesitas. Exporta en CSV o finaliza varias conversaciones a la vez.
+
+<Note>
+  Quién lo ve: todos. Cada rol ve un recorte diferente: el titular de la cuenta, el Administrador y el Gestor de la Empresa ven toda la empresa; el Gestor de Área y el Gestor de Unidad ven el subárbol correspondiente; el Agente ve solo las conversaciones en las que es el agente.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Filtra y busca una conversación
+
+Dónde está: menú principal > **Central de Conversas** > **Conversas** (Conversaciones).
+
+<Steps>
+  <Step title="Abre la Central de Conversas">En el menú principal.</Step>
+  <Step title="Busca">Escribe nombre, teléfono o un fragmento del mensaje en "Buscar por nome, telefone ou mensagem…" (Buscar por nombre, teléfono o mensaje…).</Step>
+  <Step title="Afina con los filtros">Usa fechas, **Canal**, **Entidade** (Entidad), **Atendente** (Agente), **Status** (Estado), **Responsável** (Responsable) y **SLA**.</Step>
+</Steps>
+
+{/* CAPTURA: images/atendimento/central-conversas-filtros.png | alt: tela Central de conversas com a barra de filtros preenchida e a tabela de resultados | olhar: os chips de filtro ativos e o total de conversas */}
+
+<Note>
+  El filtro "Status" incluye la opción "Em aberto" (En abierto), que agrupa Aguardando (En espera) y Em andamento (En curso).
+</Note>
+
+---
+
+## Lee las columnas de la tabla
+
+| Columna | Qué muestra |
+|---|---|
+| ID | Los primeros 8 caracteres del id de la conversación, el protocolo. |
+| Contato (Contacto) | Nombre y teléfono. |
+| Canal | WhatsApp, WA Business o Chat Widget. |
+| Status | Aguardando, Em andamento, Aguardando CSAT, Finalizada o Importada. |
+| Responsável | El agente, "IA passiva" (IA pasiva) o "IA de campanha" (IA de campaña). |
+| SLA | Estourado (Vencido), No prazo (En plazo), Ativo (Activo) o sin SLA. |
+
+---
+
+## Abre el detalle de una conversación
+
+Dónde está: haz clic en una fila de la tabla.
+
+<Steps>
+  <Step title="Haz clic en la fila">Abre el panel de detalle, en modo auditoría, de solo lectura.</Step>
+  <Step title="Navega por las pestañas">"Conversa" (Conversación) muestra la transcripción; "Resumo & auditoria" (Resumen y auditoría) trae el resumen de Scout, el CSAT y el consumo de créditos; "Metadados" (Metadatos) trae SLA, tiempos y responsable.</Step>
+  <Step title="Ve al Inbox si necesitas responder">Haz clic en "abrir no inbox →" (abrir en el inbox →).</Step>
+</Steps>
+
+{/* CAPTURA: images/atendimento/central-conversas-drawer.png | alt: drawer de detalhe da conversa na aba Resumo e auditoria | olhar: o resumo do Scout e o consumo de créditos por categoria */}
+
+<Note>
+  Una conversación importada muestra el aviso "Conversa importada" (Conversación importada): proviene del historial de WhatsApp, sin mensajes, agente, métricas ni SLA en Tartini.
+</Note>
+
+---
+
+## Exporta en CSV
+
+Dónde está: botón **Exportar CSV**, en la parte superior de la pantalla.
+
+<Steps>
+  <Step title="Ajusta los filtros">El CSV sale con los filtros que están aplicados en la pantalla.</Step>
+  <Step title="Haz clic en Exportar CSV">El archivo se descarga como conversas-AAAA-MM-DD.csv.</Step>
+</Steps>
+
+---
+
+## Finaliza varias conversaciones a la vez
+
+Dónde está: casillas de selección en la tabla.
+
+<Steps>
+  <Step title="Marca las conversaciones">Usa la casilla del encabezado para marcar todas las conversaciones de la página.</Step>
+  <Step title="Haz clic en Finalizar selecionadas (Finalizar seleccionadas)">Abre el modal "Finalizar conversas" (Finalizar conversaciones).</Step>
+  <Step title="Describe el motivo, si quieres">Hasta 500 caracteres, campo opcional.</Step>
+  <Step title="Haz clic en Finalizar">La pantalla confirma cuántas conversaciones se finalizaron.</Step>
+</Steps>
+
+<Warning>
+  La finalización masiva cierra todas las conversaciones abiertas de los contactos seleccionados, incluidas conversaciones antiguas olvidadas. No se puede deshacer.
+</Warning>
+
+---
+
+## El Panorama, antes de filtrar
+
+Dónde está: **Central de Conversas > Panorama**.
+
+El Panorama muestra el retrato del momento: cuánto hay en abierto, qué se venció de SLA y hace cuánto tiempo las conversaciones más antiguas están detenidas. Haz clic en cualquier número para abrir la Central ya filtrada por él.
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Cuál es la diferencia entre la Central y el Inbox?">
+  El Inbox es para atender ahora. La Central es para buscar, auditar y exportar cualquier conversación que ya haya pasado por la empresa.
+  </Accordion>
+  <Accordion title="¿Un agente puede exportar el CSV o finalizar en masa?">
+  Sí, pero solo dentro de su propio recorte: el backend aplica el mismo filtro de rol a esas acciones.
+  </Accordion>
+  <Accordion title="¿Qué contiene el CSV exportado?">
+  {/* CONFIRMAR: as colunas exatas do CSV exportado pela Central de Conversas */}
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Conoce el Inbox" href="/es/inbox/conheca-o-inbox">La pantalla, las listas y los estados de la conversación.</Card>
+  <Card title="Cierra una conversación y envía la encuesta" href="/es/inbox/encerre-uma-conversa">Finaliza una conversación a la vez, con el motivo correcto.</Card>
+  <Card title="Define el SLA de atención" href="/es/atendimento/sla">El tiempo máximo de respuesta por canal.</Card>
+  <Card title="Scout explicado" href="/es/scout/o-scout-explicado">Cómo nacen el resumen y la nota de la conversación.</Card>
+</CardGroup>

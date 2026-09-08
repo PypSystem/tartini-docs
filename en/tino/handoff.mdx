@@ -1,0 +1,92 @@
+---
+title: "When Tino hands off the conversation to a person"
+sidebarTitle: "Tino hands off the conversation"
+description: "How a conversation leaves Tino and reaches the team, what the person sees on receiving it, and how to take over at any moment."
+---
+
+A conversation starts with Tino and ends with a person when you want it to, when it can't proceed, or when someone on the team decides to take over. In every case, the person receives the conversation with the history and a summary of what Tino has already done.
+
+<Note>
+  Applies to the Scale and Enterprise plans, with Tino turned on in at least one channel. Anyone with access to the conversation can take over.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## The three paths
+
+| Path | What happens |
+|---|---|
+| **Tino hands it off** | A routing criterion from the Cérebro or a process step sends the conversation to the team. The conversation appears in the queue as pending. |
+| **Outside business hours** | The customer reaches out outside the hours set in **Quando Tino atende** (When Tino serves). Tino sends the configured notice, if there is one, and the conversation stays with the team. |
+| **Someone interrupts** | A person opens the conversation and clicks **Interromper** (Interrupt). The conversation goes to them right away. |
+
+---
+
+## What the person sees
+
+In the conversation, the moment of the handoff appears as an event in the middle of the messages, followed by the **Tino · resumo do atendimento** (Tino · service summary) card, with the customer and the summary. The **ver atendimento completo →** (see full service →) link opens the Copilot tab with the detail.
+
+In the details panel, the **Conversa** (Conversation) section shows **Transferido pelo Tino: Sim** (Transferred by Tino: Yes) or **Interrompido por** (Interrupted by) and the name of whoever took over. When the conversation went through a process, the **Processo** (Process) section shows the **Chegou até você pelo Tino** (Reached you through Tino) notice with the reason, the step it stopped at, and a link to the process diagnosis in Scout.
+
+On mobile, the conversation carries the **Transferida pelo Tino** (Transferred by Tino) or **Interrompida** (Interrupted) label.
+
+{/* CAPTURA: images/tino/handoff-resumo.png | alt: conversa no Inbox com o evento de transferência e o cartão Tino resumo do atendimento | olhar: a pílula de transferência e o cartão com o resumo logo abaixo */}
+
+<Tip>
+  Read the summary before replying. It tells you what the customer asked for and what Tino has already done, so you don't have to ask again.
+</Tip>
+
+---
+
+## Take over a conversation from Tino
+
+By default, while Tino is leading, the reply field stays locked.
+
+<Steps>
+  <Step title="Open the conversation">In the Inbox, open the conversation with the **Tino conversando** (Tino is talking) badge.</Step>
+  <Step title="Interrupt">On the line above the message field, click **Interromper** (Interrupt). The screen confirms with "Conversa interrompida e transferida ao atendente." (Conversation interrupted and transferred to the agent.)</Step>
+  <Step title="Reply">The field unlocks and the conversation becomes yours. Tino won't reply in it again.</Step>
+</Steps>
+
+<Note>
+  There's no way to hand the conversation back to Tino after interrupting it. If the idea was just to read it, use the details panel and the summary, without interrupting.
+</Note>
+
+---
+
+## Who receives the conversation
+
+The conversation Tino hands off appears in the Inbox with the **Pendente** (Pending) chip until someone takes over; with a department or an agent already set, it enters that department's queue or the person's **Sua caixa** (Your inbox), and they get the notice "Nova conversa atribuída a você" (New conversation assigned to you). {/* CONFIRMAR: se o roteamento do Cérebro escolhe setor ou atendente, ou só devolve à fila da Unidade */} The criteria are in **Cérebro > Operações > Roteamento** (Cérebro > Operations > Routing). See [Set up routing](/en/cerebro/roteamento).
+
+---
+
+## After the handoff
+
+The conversation follows the team's rules: the automatic closing from Conversation Rules, the channel's SLA, and the satisfaction survey. In Scout, it counts as a **handoff**: the AI started and the team took over. The score for these conversations appears separately in **Scout > Satisfação** (Scout > Satisfaction).
+
+---
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="I can't type in the conversation.">
+  Tino is leading it. Click **Interromper** (Interrupt) to take over. The screen shows the notice "Para enviar mensagens, primeiro interrompa a conversa do Tino utilizando o botão abaixo." (To send messages, first interrupt Tino's conversation using the button below.)
+  </Accordion>
+  <Accordion title="Tino handed the conversation to the wrong department.">
+  Adjust the criteria in **Cérebro > Operações > Roteamento** (Cérebro > Operations > Routing). To understand what led to the decision, open **Por que ela disse isso** (Why it said that) on Tino's last message.
+  </Accordion>
+  <Accordion title="Tino handed off the conversation for no apparent reason.">
+  Open the details panel: the **Processo** (Process) section shows the reason and the step. If there's no process, the reason is in the instructions listed under **Por que ela disse isso** (Why it said that).
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Handle a conversation" href="/en/inbox/atenda-uma-conversa">The message field, the signature, and attachments.</Card>
+  <Card title="Set up routing" href="/en/cerebro/roteamento">When the AI transfers and to whom.</Card>
+</CardGroup>
