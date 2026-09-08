@@ -59,6 +59,14 @@
                     ]
                   },
                   {
+                    "group": "Boas práticas",
+                    "icon": "lightbulb",
+                    "pages": [
+                      "primeiros-passos/boas-praticas/entrar-no-ar",
+                      "primeiros-passos/boas-praticas/escrever-para-a-ia"
+                    ]
+                  },
+                  {
                     "group": "Perguntas frequentes",
                     "icon": "circle-question",
                     "pages": [

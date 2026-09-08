@@ -23,7 +23,7 @@ Duas abas no `docs.json`: **Central de ajuda** (padrão) e **Para desenvolvedore
 na ordem da jornada:
 
 ```
-visao-geral · primeiros-passos (guias, configuracao, perguntas-frequentes)
+visao-geral · primeiros-passos (guias, configuracao, boas-praticas, perguntas-frequentes)
 cerebro · tino · inbox · canais · campanhas · scout · metricas
 equipe · atendimento · creditos · integracoes · conta
 ```
@@ -76,6 +76,7 @@ marcada no texto como `{/* CONFIRMAR: ... */}`.
 | Visão geral ("X explicado") | "O Scout explicado" | O que é, para que serve, o submenu, quem vê, e links para as tarefas |
 | Recurso e tarefas | Imperativo: "Defina o SLA de atendimento" | Abertura com o resultado → `<Note>` de papel e plano → por tarefa, separada por `---`: `## verbo`, estado padrão, onde fica (caminho em negrito), `<Steps>` com o botão em negrito, captura, `<Note>` com os detalhes → `## Perguntas frequentes` em `<AccordionGroup>` → `## Artigos relacionados` |
 | Guia de início rápido | Gerúndio: "Configurando o Inbox" | Abertura → lista numerada dos passos com âncoras → `## Passo N: verbo`, vídeo, porquê, `###` subtarefas com links, `<Info>` Saiba mais → `## Próximos passos` |
+| Boas práticas | "Boas práticas para entrar no ar" | Para quem é → `## Opção N` com a favor, contra e como fazer → a recomendação |
 | Perguntas frequentes | "Perguntas frequentes para iniciantes" | Grupos em `##`; cada pergunta é um `<Accordion title="…">` dentro de `<AccordionGroup>`, com a resposta começando respondendo |
 | Solução de problemas | "Resolva problemas de conexão" | Sintoma em `##`, causa, correção em passos |
 
