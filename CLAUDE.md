@@ -90,6 +90,9 @@ Tamanhos: tarefa entre 500 e 1.200 palavras; guia entre 500 e 1.000; visão gera
 - O primeiro parágrafo mostra o resultado, nunca descreve o produto.
 - Estado padrão antes da ação. Onde fica em negrito com ">" e os rótulos exatos do
   menu. Elemento de interface em negrito, com o texto exato da tela.
+- Sempre que a tela deixar claro, diga onde o botão fica: "no canto superior direito",
+  "na barra acima do campo de mensagem", "na ponta direita do cabeçalho". A posição
+  vem do inventário; sem certeza, não invente.
 - Exemplos do mundo de quem lê: loja, clínica, franquia, rede; nomes fictícios.
 - O texto do link diz o que a pessoa vai encontrar. Nunca "clique aqui".
 - Termos que a interface mostra em inglês ficam em inglês: Copilot, Scout, widget,
