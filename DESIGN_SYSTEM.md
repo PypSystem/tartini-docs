@@ -12,7 +12,7 @@
 
 ## 1. O que é e por quê
 
-O Talk AI é uma plataforma onde **equipe (humano) e IA se revezam na mesma conversa**. A
+O Tartini é uma plataforma onde **equipe (humano) e IA se revezam na mesma conversa**. A
 documentação segue a mesma linguagem do produto: **papel e tinta** — superfícies neutras e
 quentes, tipografia forte, e **cor só quando carrega significado, nunca decoração**.
 
@@ -68,7 +68,7 @@ ponto **terracota** (equipe) e nó em **gradiente** terracota→cobalto (IA; o n
 raros usos legítimos do gradiente). Os dois pontos têm cores fixas nos dois temas; balão e wordmark
 seguem o tema.
 
-- `logo/light.svg` — balão + wordmark **"talk ai"** (Schibsted 800, minúsculo, em paths) em
+- `logo/light.svg` — balão + wordmark **"tartini"** (Schibsted 800, minúsculo, em paths) em
   **tinta** `#14120F`.
 - `logo/dark.svg` — idem em **papel** `#FAF7F0`.
 - `favicon.svg` — só o símbolo (balão tinta + pontos da marca).
