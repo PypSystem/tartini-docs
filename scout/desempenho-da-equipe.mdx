@@ -1,0 +1,111 @@
+---
+title: "Acompanhe o desempenho da equipe"
+sidebarTitle: "Desempenho"
+description: "Compare a nota da equipe e do Tino por Área, Unidade e atendente, e gere a análise mensal que cada pessoa recebe."
+---
+
+A tela Desempenho mostra a nota da sua equipe e do Tino lado a lado, no recorte que você escolher, e reúne o feedback mensal que cada atendente recebe.
+
+<Note>
+  Todos os papéis veem o desempenho do próprio recorte. Gerar, revisar e aprovar a análise mensal é para Administrador, Gestor da Empresa, de Área e de Unidade. Disponível em todos os planos.
+</Note>
+
+## Veja os números do período
+
+Por padrão a tela mostra o recorte e o mês escolhidos na barra de escopo.
+
+Onde fica: **Scout > Desempenho**.
+
+<Steps>
+  <Step title="Abra a tela">Vá em **Scout > Desempenho**.</Step>
+  <Step title="Leia os sinais">Confira atendimentos, tempo médio de primeira resposta e duração média do atendimento.</Step>
+  <Step title="Filtre pelo gráfico">Clique numa barra de **Atendimentos** para estreitar o período: um dia, se o gráfico é diário, ou um mês inteiro, se é mensal.</Step>
+</Steps>
+
+{/* CAPTURA: images/scout/desempenho-sinais.png | alt: Tela Desempenho com os sinais do período e o gráfico de atendimentos | olhar: os três sinais no topo e o gráfico de barras abaixo */}
+
+<Note>
+  Um número sem base suficiente aparece com um traço no lugar do valor.
+</Note>
+
+## Desça por Área, Unidade e atendente
+
+A tabela de desempenho por nível só aparece nos recortes de equipe: Empresa, Área ou Unidade. No recorte de um atendente, ela some e dá lugar só à análise dele.
+
+Onde fica: tabela abaixo do gráfico de atendimentos.
+
+<Steps>
+  <Step title="Escolha um recorte de equipe">Selecione a Área ou a Unidade na barra de escopo.</Step>
+  <Step title="Leia a linha">Compare a nota da **equipe** e a do **Tino** lado a lado, com o volume de conversas avaliadas e a tendência frente ao período anterior.</Step>
+  <Step title="Desça um nível">Clique numa linha para levar a barra de escopo até aquela Área, Unidade ou atendente.</Step>
+</Steps>
+
+<Note>
+  Os selos **ação urgente**, **em queda** e **destaque** chamam atenção para linhas fora da curva. Uma variação menor que 0,1 aparece como manteve.
+</Note>
+
+## Gere a análise mensal do Scout
+
+Por padrão, a análise de um mês só existe depois que alguém a gera.
+
+Onde fica: seção **Análise da equipe** (ou **Análise de** seguido do nome do atendente), abaixo da tabela de nível.
+
+<Steps>
+  <Step title="Escolha o mês">Se o período filtrado abrange mais de um mês, escolha qual analisar no seletor **Mês**.</Step>
+  <Step title="Gere a análise">Clique em **Gerar análise**.</Step>
+  <Step title="Confirme">No aviso que abre, confirme que a geração consome créditos de IA.</Step>
+</Steps>
+
+<Note>
+  É preciso pelo menos 5 conversas avaliadas no recorte para gerar sem aviso. Abaixo disso, o botão **Gerar mesmo assim** libera a geração com poucos dados.
+</Note>
+
+## Revise e aprove a análise
+
+<Steps>
+  <Step title="Leia o rascunho">Confira os pontos fortes, os pontos a melhorar e o plano de ação sugerido.</Step>
+  <Step title="Escolha o caminho">Clique em **Aprovar como está** para aceitar direto, ou em **Revisar e editar** para ajustar o texto.</Step>
+  <Step title="Ajuste a nota se precisar">Em edição, preencha a nota ajustada da equipe ou do atendente e a justificativa do ajuste. Deixar em branco mantém a nota do Scout.</Step>
+  <Step title="Salve">Clique em **Salvar e aprovar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/scout/analise-mensal-aprovar.png | alt: Análise mensal do Scout em modo de edição com pontos fortes, a melhorar e o plano de ação | olhar: os botões Aprovar como está e Revisar e editar */}
+
+<Note>
+  Depois de aprovada, você pode clicar em **Reabrir para editar**. **Regerar com a IA** substitui o rascunho por uma nova análise e também consome créditos.
+</Note>
+
+## Veja o que o atendente recebe
+
+O próprio atendente abre **Scout > Desempenho** e vê os mesmos números e a própria análise mensal, em modo leitura, sem os botões de geração ou aprovação. Isso inclui os pontos fortes, os pontos a melhorar e o plano de ação escritos para ele.
+
+## Baixe o relatório anual
+
+Numa Área, Unidade ou atendente, clique em **Relatório anual** para baixar um PDF com um bloco por mês analisado e um resumo do ano.
+
+<Note>
+  No recorte da Empresa inteira, escolha uma Área, Unidade ou atendente antes de gerar o relatório.
+</Note>
+
+## Perguntas frequentes
+
+### Por que a tabela de desempenho por nível não aparece?
+
+Ela só existe nos recortes de equipe: Empresa, Área ou Unidade. No recorte de um atendente, a tela mostra a análise dele, não uma tabela.
+
+### Por que não consigo gerar a análise deste mês?
+
+O recorte pode ter menos de 5 conversas avaliadas. Use **Gerar mesmo assim** ou amplie o período.
+
+### O atendente pode gerar a própria análise?
+
+{/* CONFIRMAR: se o Atendente também tem acesso ao botão Gerar análise na própria tela, ou se isso é restrito a gestores */}
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Leia as avaliações do Scout" href="/scout/avaliacoes">As conversas que formam a nota do período.</Card>
+  <Card title="Concorde com o Scout ou corrija a nota" href="/scout/concorde-ou-corrija">Como a correção entra na nota efetiva.</Card>
+  <Card title="O Scout explicado" href="/scout/o-scout-explicado">Papéis, planos e o menu do Scout.</Card>
+  <Card title="Acompanhe o saldo e o extrato de créditos" href="/creditos/creditos-e-extrato">O consumo de gerar e regerar a análise.</Card>
+</CardGroup>

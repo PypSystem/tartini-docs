@@ -1,0 +1,110 @@
+---
+title: "Métricas do Tino"
+sidebarTitle: "Tino"
+description: "Veja quanto da operação o Tino absorveu, a velocidade das respostas e o apoio do Copilot à equipe."
+---
+
+A tela Tino mostra o que a IA entregou no período: quanto resolveu sozinha, com que rapidez respondeu e onde rende mais entre áreas e unidades. Uma seção à parte mostra quanto o Copilot ajudou a equipe.
+
+<Note>
+  Quem vê: Administrador, Gestor da Empresa, Gestor de Área e Gestor de Unidade. As seções sobre o Tino em ação exigem o plano Scale. A seção do Copilot aparece em todos os planos, incluindo o Essential.
+</Note>
+
+Onde fica: **Métricas > Tino**.
+
+## Acompanhe o Tino em tempo real
+
+Com o plano Scale e um período que alcança hoje, um painel ao vivo mostra três números, atualizados a cada 30 segundos.
+
+| Indicador | O que significa |
+|---|---|
+| **ia atendendo agora** | Conversas que o Tino está respondendo ou que aguardam o cliente, neste instante. |
+| **resolvidas hoje** | Conversas que o Tino encerrou hoje sem nenhuma pessoa envolvida. |
+| **passadas p/ humano hoje** | Conversas que o Tino transferiu para a equipe hoje. |
+
+<Note>
+  Fora do horário de atendimento configurado, um selo avisa que o Tino segue no ar mesmo assim.
+</Note>
+
+## Veja o que o Tino entregou
+
+O número principal desta seção é **absorvido pelo Tino**, com quatro apoios ao lado.
+
+| Indicador | O que significa |
+|---|---|
+| **absorvido pelo Tino** | Percentual das conversas do período conduzidas pela IA, do início ao fim. |
+| **resolvidas sozinho** | Quantas conversas o Tino encerrou sem nenhuma pessoa envolvida. |
+| **via processo** | Percentual das resolvidas pelo Tino que seguiram um processo cadastrado, do início ao fim. |
+| **fora do horário** | Quantas conversas do Tino aconteceram fora do horário de atendimento. |
+| **economia estimada** | Estimativa de horas que a equipe deixou de gastar por causa do Tino. |
+
+Abaixo, o gráfico **absorção do Tino** mostra a mesma curva de participação da IA que aparece no Panorama.
+
+<Note>
+  A economia estimada não mostra variação. É uma estimativa, e uma seta sugeriria uma precisão que o número não tem.
+</Note>
+
+## Compare a velocidade e a capacidade
+
+| Indicador | O que significa |
+|---|---|
+| **1ª resposta do Tino** | Tempo até a primeira resposta da IA. Abaixo de meio minuto, ganha o selo **praticamente instantânea**. |
+| **pico simultâneo** | Maior número de conversas que o Tino conduziu ao mesmo tempo no período. |
+| **até resolver** | Compara o tempo até a resolução da IA com o da equipe. Quando a equipe leva bem mais tempo, aparece um selo de quantas vezes o Tino foi mais rápido. |
+
+Os tempos mostrados são a mediana, o valor do meio entre todos os casos, com o p90 ao lado: o tempo dos dez por cento de casos mais demorados.
+
+## Veja onde o Tino rende mais
+
+O comparativo aparece quando há mais de um filho no nível atual.
+
+<Steps>
+  <Step title="Escolha o indicador">Selecione **Resolvidas**, **% absorvido**, **Fora do horário** ou **Aceite Copilot**, quando houver mais de uma opção disponível.</Step>
+  <Step title="Desça o nível">Clique num card de área ou de unidade para ver o nível abaixo.</Step>
+  <Step title="Veja o uso do Copilot por pessoa">No nível atendente, clique num card para abrir o painel com o aceite do Copilot dessa pessoa. Não existe recorte por atendente nos números do Tino, porque as conversas dele não têm atendente.</Step>
+</Steps>
+
+<Note>
+  O painel lateral do atendente mostra as decisões do Copilot: aceitas, enviadas direto, inseridas no rascunho, dispensadas e correções de conhecimento. Um botão abre as conversas dessa pessoa na Central de Conversas.
+</Note>
+
+## Veja o apoio do Copilot à equipe
+
+| Indicador | O que significa |
+|---|---|
+| **aceite das sugestões** | Percentual das sugestões do Copilot que a equipe aceitou, enviadas direto ou inseridas no rascunho. |
+| **correções de conhecimento** | Divergências da base de conhecimento que o Copilot sinalizou para a equipe. |
+| **cobertura** | Percentual dos atendentes com o Copilot ativo. |
+
+Esta seção aparece em todos os planos, mesmo sem o Tino atendendo na linha de frente.
+
+## Continue em outras telas
+
+O Tino também aparece em outras duas telas do Tartini. Os processos que ele segue ficam em [Processos explicados](/cerebro/processos-explicados). As notas que ele dá às conversas encerradas ficam em [Leia as avaliações do Scout](/scout/avaliacoes).
+
+## Perguntas frequentes
+
+### Só vejo a seção do Copilot. Por quê?
+
+Seu plano não inclui o Tino na linha de frente. Para liberar as demais seções, é preciso o plano Scale.
+
+### Não encontro o filtro de atendente. Onde está?
+
+Não existe aqui: as conversas do Tino não pertencem a uma pessoa. Para ver o uso do Copilot por atendente, desça até o nível atendente no comparativo.
+
+### Por que um indicador aparece como N/A?
+
+Não há amostra suficiente para aquele indicador naquele nível, por exemplo uma métrica de conversa calculada no nível atendente.
+
+### Por que a economia estimada não tem seta de variação?
+
+Porque é uma estimativa. O Tartini evita sugerir uma precisão que o cálculo não garante.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="O Panorama das métricas" href="/metricas/panorama">O retrato executivo do período.</Card>
+  <Card title="Métricas da operação" href="/metricas/operacao">Os números da equipe, seção por seção.</Card>
+  <Card title="Use o Copilot" href="/inbox/copilot">Como as sugestões chegam para o atendente.</Card>
+  <Card title="Planos e o que cada um libera" href="/visao-geral/planos-e-recursos">O que muda entre Essential, Scale e Enterprise.</Card>
+</CardGroup>

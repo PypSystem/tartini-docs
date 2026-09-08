@@ -1,0 +1,82 @@
+---
+title: "Encerre uma conversa e envie a pesquisa"
+sidebarTitle: "Encerrar conversa"
+description: "Finalize o atendimento com o motivo certo e entenda quando a pesquisa de satisfação sai automaticamente."
+---
+
+Encerrar avisa que o atendimento terminou e libera a conversa da fila. Se sua empresa usa pesquisa de satisfação, ela pode sair automaticamente logo em seguida.
+
+<Note>
+  O encerramento automático e a pesquisa de satisfação são configurados por um Administrador, Gestor da Empresa ou Gestor de Área, em **Configurações > Atendimento**.
+</Note>
+
+## Encerre manualmente
+
+Por padrão a conversa fica aberta até alguém encerrar ou o encerramento automático agir.
+
+Onde fica: cabeçalho da conversa, ícone de check (tooltip "Finalizar atendimento"). No celular: menu > "Finalizar".
+
+<Steps>
+  <Step title="Clique no ícone de check">Abre o drawer Finalizar conversa.</Step>
+  <Step title="Descreva o motivo">Escreva como o atendimento terminou, em até 500 caracteres.</Step>
+  <Step title="Clique em Finalizar">A tela confirma: "Conversa finalizada com sucesso".</Step>
+</Steps>
+
+{/* CAPTURA: images/inbox/inbox-finalizar-conversa.png | alt: drawer Finalizar conversa com o campo de motivo preenchido | olhar: o contador de caracteres e o botão Finalizar */}
+
+<Note>
+  O motivo é obrigatório. Descreva mesmo quando o atendimento foi resolvido fora do chat.
+</Note>
+
+## Entenda o que acontece ao encerrar
+
+Se "Ativar Scout ao finalizar conversa" estiver ligado, o Scout gera um resumo e uma nota da conversa. Se a pesquisa de satisfação estiver ativa para o canal, a conversa passa para "Aguardando CSAT" e o cliente recebe a pergunta.
+
+## Encerramento automático
+
+Por padrão o encerramento automático fica desligado.
+
+Onde fica: **Configurações > Atendimento > Regras de Conversa**, campo "Encerrar conversa automaticamente" com "Tempo por canal".
+
+Sem um tempo definido, o canal usa o padrão de 24 horas. Para conversas conduzidas pelo Tino, a regra fica em **Configurações > Atendimento > IA por canal**, em "A conversa fica parada": o Tino se despede e encerra depois do tempo de inatividade configurado.
+
+<Note>
+  Regras de Conversa vale para conversas com a equipe. IA por canal vale só para conversas que o Tino está conduzindo.
+</Note>
+
+## A pesquisa de satisfação
+
+Onde fica: **Configurações > Atendimento > Pesquisa de Satisfação**.
+
+Os campos são "Coletar em", "Regra de disparo" (Todas as conversas ou Apenas conversas resolvidas), "Canais Habilitados" e "Tempo limite para resposta (minutos)" (padrão 60 minutos).
+
+<Note>
+  Não existe um botão para disparar a pesquisa manualmente durante o atendimento. O envio é sempre automático, conforme a regra configurada.
+</Note>
+
+## Reabertura de uma conversa finalizada
+
+{/* CONFIRMAR: se existe reabertura de uma conversa finalizada e como ela acontece */}
+
+## Perguntas frequentes
+
+### Preciso preencher o motivo para finalizar?
+
+Sim, é obrigatório e tem até 500 caracteres.
+
+### O que acontece com a conversa depois de finalizada?
+
+Ela some das filas ativas. Se o Scout estiver ligado, ganha um resumo e uma nota; se a pesquisa de satisfação estiver ativa, o cliente recebe a pergunta.
+
+### Consigo enviar a pesquisa de satisfação na mão?
+
+Não. Ela é sempre automática, conforme a regra em Configurações > Atendimento > Pesquisa de Satisfação.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Configure a pesquisa de satisfação" href="/atendimento/pesquisa-de-satisfacao">Regras de disparo e tempo limite de resposta.</Card>
+  <Card title="Defina as regras de conversa" href="/atendimento/regras-de-conversa">Assinatura, encerramento automático e Copilot ativo.</Card>
+  <Card title="O Scout explicado" href="/scout/o-scout-explicado">Como o resumo e a nota da conversa nascem.</Card>
+  <Card title="Atenda uma conversa" href="/inbox/atenda-uma-conversa">Abrir, responder, anexar e assumir do Tino.</Card>
+</CardGroup>

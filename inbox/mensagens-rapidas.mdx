@@ -1,0 +1,96 @@
+---
+title: "Crie e use mensagens rápidas"
+sidebarTitle: "Mensagens rápidas"
+description: "Cadastre atalhos de texto para responder mais rápido e mantenha um conjunto padrão para toda a equipe."
+---
+
+Mensagens rápidas inserem um texto pronto no campo de mensagem só de digitar uma barra e o atalho. Você economiza tempo em respostas que se repetem.
+
+<Note>
+  Quem vê: todos os usuários. Só Administrador, Gestor da Empresa, Gestor de Área ou Gestor de Unidade podem criar, editar, excluir e reordenar as mensagens "Da empresa". Para os demais, elas ficam somente leitura.
+</Note>
+
+## Crie uma mensagem rápida
+
+Por padrão a lista de mensagens rápidas vem vazia.
+
+Onde fica: **Configurações > Atendimento > Mensagens Rápidas**.
+
+<Steps>
+  <Step title="Abra a tela">Vá em **Configurações > Atendimento > Mensagens Rápidas**.</Step>
+  <Step title="Clique em Nova mensagem">Abre o modal Nova Mensagem Rápida.</Step>
+  <Step title="Escolha a visibilidade">Gestores escolhem entre **Pessoal** (só você) e **Da empresa** (toda a equipe); os demais criam só mensagens pessoais.</Step>
+  <Step title="Preencha o atalho">Digite em **Atalho**, sem a barra. Use só letras, números, hífen e underscore.</Step>
+  <Step title="Escreva o conteúdo">Preencha **Conteúdo**. Use `{{nome_cliente}}` ou `{{nome_atendente}}` para inserir o nome automaticamente.</Step>
+  <Step title="Salve">Clique em **Criar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/atendimento/mensagens-rapidas-novo-modal.png | alt: modal Nova Mensagem Rápida com atalho, conteúdo e variáveis disponíveis | olhar: os campos Atalho e Conteúdo e a lista de variáveis */}
+
+<Note>
+  A visibilidade não muda depois de criada. Para trocar, exclua a mensagem e crie de novo com a visibilidade certa.
+</Note>
+
+## Edite ou exclua uma mensagem
+
+Onde fica: **Configurações > Atendimento > Mensagens Rápidas**, coluna **Ações**.
+
+<Steps>
+  <Step title="Clique em Editar">Abre o mesmo modal, com os dados preenchidos.</Step>
+  <Step title="Ajuste e salve">Altere o atalho ou o conteúdo e clique em **Salvar**.</Step>
+  <Step title="Ou clique em Deletar">Confirme em **Confirmar** para excluir, ou em **Cancelar** para desistir.</Step>
+</Steps>
+
+<Note>
+  Só Administrador, Gestor da Empresa, Gestor de Área ou Gestor de Unidade editam ou excluem as mensagens "Da empresa". Suas mensagens pessoais você sempre edita.
+</Note>
+
+## Reordene as mensagens
+
+Onde fica: mesma tela, dentro de cada grupo (Minhas mensagens ou Da empresa).
+
+<Steps>
+  <Step title="Arraste a linha">Clique e segure a linha da mensagem que quer mover.</Step>
+  <Step title="Solte na posição desejada">A nova ordem vale para todos que usam essa mensagem.</Step>
+</Steps>
+
+## Use uma mensagem rápida na conversa
+
+Por padrão o menu de mensagens rápidas fica fechado até você digitar.
+
+Onde fica: campo de mensagem, dentro de uma conversa aberta.
+
+<Steps>
+  <Step title="Digite a barra">Digite "/" no início do campo de mensagem.</Step>
+  <Step title="Digite o começo do atalho">A lista filtra pelos atalhos que combinam.</Step>
+  <Step title="Escolha a mensagem">Use as setas e Enter, ou clique na opção.</Step>
+</Steps>
+
+{/* CAPTURA: images/inbox/inbox-menu-mensagens-rapidas.png | alt: menu de mensagens rápidas aberto no campo de mensagem, com a lista de atalhos filtrada | olhar: a prévia com as variáveis já resolvidas */}
+
+<Note>
+  As variáveis `{{nome_cliente}}` e `{{nome_atendente}}` já chegam preenchidas na prévia do menu.
+</Note>
+
+## Perguntas frequentes
+
+### Por que não consigo editar uma mensagem "Da empresa"?
+
+Só gestores criam, editam e excluem essas mensagens. Para você, elas ficam somente leitura.
+
+### Posso trocar a visibilidade de uma mensagem depois de criada?
+
+Não. Exclua e crie de novo com a visibilidade certa.
+
+### O atalho diferencia maiúsculas de minúsculas?
+
+Não. O menu no Inbox filtra sem diferenciar.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Atenda uma conversa" href="/inbox/atenda-uma-conversa">Abrir, responder, anexar e assumir do Tino.</Card>
+  <Card title="Conheça o Inbox" href="/inbox/conheca-o-inbox">A tela, as listas e os status de conversa.</Card>
+  <Card title="Defina as regras de conversa" href="/atendimento/regras-de-conversa">Assinatura, encerramento automático e Copilot ativo.</Card>
+  <Card title="Papéis e acessos explicados" href="/visao-geral/papeis-e-acessos">Quem é gestor e o que cada papel libera.</Card>
+</CardGroup>

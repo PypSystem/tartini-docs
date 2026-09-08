@@ -1,0 +1,94 @@
+---
+title: "Ligue o Tino em um canal"
+sidebarTitle: "IA por canal"
+description: "Defina em quais canais o Tino atende sozinho, com que horário, follow-up e encerramento."
+---
+
+Com o Tino ligado num canal, ele responde ao cliente automaticamente dentro do horário que você definir, e passa a conversa para a equipe quando for preciso.
+
+<Note>Quem configura: Administrador, Gestor da Empresa e Gestor de Área. Disponível no plano Scale.</Note>
+
+## Ligue o Tino em um canal
+
+Por padrão o Tino fica desligado em todos os canais.
+
+Onde fica: **Configurações > Atendimento > IA por canal**.
+
+<Steps>
+  <Step title="Abra a tela">Vá em **Configurações > Atendimento > IA por canal**.</Step>
+  <Step title="Escolha o canal">Na lista à esquerda, clique no canal que quer configurar.</Step>
+  <Step title="Ligue o Tino">Ative o botão **Tino ligado**.</Step>
+</Steps>
+
+{/* CAPTURA: images/tino/ia-por-canal-lista.png | alt: tela IA por canal com a lista de canais e o detalhe do canal selecionado | olhar: o selo Tino nos canais já ligados */}
+
+<Note>
+  Um canal ligado pela primeira vez nasce com horário **Sempre ativo**. Ajuste o horário antes ou depois de ligar, como preferir.
+</Note>
+
+---
+
+## Defina quando o Tino atende
+
+Escolha uma das três opções:
+
+- **Sempre ativo**: o Tino responde a qualquer hora.
+- **Horário do expediente**: copia o horário comercial já cadastrado na sua empresa.
+- **Personalizado**: dias e períodos só para este canal.
+
+<Steps>
+  <Step title="Abra a agenda do canal">No detalhe do canal, vá até **Quando Tino atende**.</Step>
+  <Step title="Escolha o tipo de horário">Marque **Sempre ativo**, **Horário do expediente** ou **Personalizado**.</Step>
+  <Step title="Monte os períodos, se for Personalizado">Marque os dias da semana e defina o horário de início e fim de cada período. Clique em **+ Adicionar período** para incluir mais de um.</Step>
+  <Step title="Salve">Clique em **Salvar**.</Step>
+</Steps>
+
+<Note>
+  O horário copiado de **Horário do expediente** não acompanha mudanças futuras. Se você alterar o expediente da empresa depois, volte aqui e escolha de novo.
+</Note>
+
+---
+
+## Configure o que o Tino faz fora do horário e no follow-up
+
+Três situações, cada uma com sua mensagem:
+
+- **Alguém chama fora do horário**: o Tino avisa que a equipe responde depois. Só aparece quando o canal não está em **Sempre ativo**.
+- **O cliente para de responder**: o Tino tenta retomar a conversa. Defina quanto tempo esperar (1 a 60 minutos) e quantas tentativas fazer (1 a 5).
+- **A conversa fica parada**: o Tino se despede e encerra depois de um tempo de inatividade (5 a 120 minutos). Essa regra vale só para conversas conduzidas pelo Tino; conversas com a equipe seguem a Finalização Automática, em [Regras de Conversa](/atendimento/regras-de-conversa).
+
+<Steps>
+  <Step title="Ative o follow-up">Na seção **O que ele faz**, ative **O cliente para de responder** e defina o tempo de espera e o número de tentativas.</Step>
+  <Step title="Ative o encerramento">Ative **A conversa fica parada** e defina o tempo de inatividade.</Step>
+  <Step title="Escreva as mensagens, se quiser personalizar">Preencha o campo de mensagem em cada card, ou deixe em branco para usar o texto padrão.</Step>
+  <Step title="Salve">Clique em **Salvar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/tino/ia-por-canal-follow-up.png | alt: cards de follow-up e encerramento com os campos de tempo e mensagem | olhar: os limites de minutos e tentativas em cada card */}
+
+## O que muda quando o Tino está ligado
+
+Com o Tino ligado e dentro do horário, ele atende a conversa assim que ela chega, sem esperar um atendente. Fora do horário, ou quando o cliente precisa de uma pessoa, a conversa passa para a equipe.
+
+{/* CONFIRMAR: como a transferência aparece exatamente no Inbox para o atendente que recebe a conversa */}
+
+## Perguntas frequentes
+
+### Posso desligar o Tino só em alguns horários?
+
+Sim. Escolha **Personalizado** e monte os dias e períodos em que ele deve atender. Fora desses períodos, a conversa vai direto para a equipe.
+
+### O follow-up funciona em qualquer horário?
+
+Não. Ele só roda dentro do horário em que o Tino está atendendo o canal.
+
+### Cada canal tem sua própria configuração?
+
+Sim. Horário, follow-up e encerramento são definidos canal por canal.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Canais explicados" href="/canais/canais-explicados">Os canais disponíveis no Tartini.</Card>
+  <Card title="Defina as regras de conversa" href="/atendimento/regras-de-conversa">Encerramento automático das conversas com a equipe.</Card>
+</CardGroup>

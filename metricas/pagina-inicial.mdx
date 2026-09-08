@@ -1,0 +1,79 @@
+---
+title: "A Página Inicial explicada"
+sidebarTitle: "Página Inicial"
+description: "O painel do dia: a fila em tempo real, o que precisa de você, os números de hoje e a equipe, ou as suas conversas se você atende."
+---
+
+Depois do checklist de preparação, a Página Inicial vira o painel do dia. Gestores veem a operação inteira; atendentes veem as próprias conversas e o próprio desempenho.
+
+<Note>
+  Enquanto o checklist não termina, a Página Inicial mostra as etapas de preparação. Veja [Prepare sua operação com o checklist](/primeiros-passos/configuracao/checklist-de-preparacao).
+</Note>
+
+## O painel do gestor
+
+{/* CAPTURA: images/metricas/pagina-inicial-gestor.png | Página Inicial do gestor com o bloco agora em tempo real e o painel precisa de você | Os quatro cards do bloco agora e a lista de alertas ao lado */}
+
+### Escolha as Unidades
+
+No alto, a linha **equipe/…** mostra o escopo dos números: a Unidade atual ou todas as Unidades a que você tem acesso. Clique nela para filtrar uma Unidade. O filtro muda só os números desta tela; para trocar de Unidade no Tartini inteiro, use o botão abaixo do logotipo.
+
+### Agora, em tempo real
+
+| Card | O que mostra | Ao clicar |
+|---|---|---|
+| **na fila** | Conversas esperando atendimento e a espera média. Fica laranja acima de cinco | O Inbox filtrado em aguardando |
+| **em andamento** | Conversas sendo atendidas agora | O Inbox filtrado em andamento |
+| **resolvidas por ia** | Conversas que o Tino encerrou hoje sem transferir | O Inbox filtrado em finalizadas |
+| **equipe online** | Quantos atendentes estão online, do total | |
+
+### Precisa de você
+
+A lista mostra o que pede ação: canal offline, conversa em aberto com SLA estourado, tempo médio de espera acima de quinze minutos ou mais de dez clientes na fila. Cada linha tem um link para a tela certa. Sem pendências, aparece **Tudo em dia ✓**.
+
+### Hoje
+
+Quatro números comparados com ontem até o mesmo horário: **conversas**, **resolvidas pela ia**, **concluídas** e **satisfação**. A seta de variação só aparece quando há ao menos cinco ocorrências num dos dias. A satisfação leva à tela de satisfação do Scout.
+
+### Operação
+
+- **Pico de atendimento**: as conversas de hoje hora a hora, com o pico marcado e a divisão entre IA e equipe. O link **ver detalhes por hora →** abre as métricas de atendimento.
+- **Tino em ação**: quanto das conversas de hoje o Tino resolveu sem a equipe, e a parte das campanhas. Se o Tino ainda não atende, o card oferece **Ativar agente**. Abaixo, o consumo de créditos de IA do mês, com o link **ver consumo →**.
+- **Equipe hoje**: uma linha por atendente com status, total, em andamento, concluídas e tempo de primeira resposta. Clique na linha para ver os atendimentos dela na Central de Conversas.
+
+<Note>
+  O link **ver consumo →** abre a tela de Créditos, que só o Administrador acessa. Gestores voltam à Página Inicial ao clicar.
+</Note>
+
+## O painel do atendente
+
+{/* CAPTURA: images/metricas/pagina-inicial-atendente.png | Página Inicial do atendente com Minhas conversas e Meu desempenho | Os cards Pendentes e Em andamento e o gráfico de evolução diária */}
+
+### Minhas conversas
+
+Três cards: a nota média de satisfação dos seus atendimentos (de zero a dez, com o selo Excelente, Bom, Regular ou Precisa melhorar), **Pendentes** (conversas aguardando a sua resposta) e **Em andamento**. Os dois últimos têm o botão **Abrir inbox**.
+
+### Meu desempenho
+
+Os últimos catorze dias: **Clientes atendidos**, **Tempo médio** de atendimento, **Primeira resposta** e o gráfico **Evolução diária**.
+
+## Perguntas frequentes
+
+### Os números consideram qual Unidade?
+
+Por padrão, todas as Unidades a que você tem acesso. A linha **equipe/…** no alto filtra uma Unidade sem trocar o contexto do Tartini.
+
+### Por que a seta de variação não aparece?
+
+Ela só aparece quando um dos dias tem ao menos cinco ocorrências. Com menos, a comparação não diz nada.
+
+### O card Tino em ação diz que ele ainda não conduz conversas.
+
+O Tino está desligado nos seus canais. Veja [Ligue o Tino em um canal](/tino/ia-por-canal).
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Métricas da operação" href="/metricas/operacao">Os números por período, Unidade e atendente.</Card>
+  <Card title="Métricas do Tino" href="/metricas/tino">O que o Tino resolve e quanto consome.</Card>
+</CardGroup>

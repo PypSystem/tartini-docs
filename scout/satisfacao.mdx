@@ -1,0 +1,110 @@
+---
+title: "Acompanhe a satisfação dos clientes"
+sidebarTitle: "Satisfação"
+description: "Veja a nota que os clientes deram na pesquisa de satisfação, onde ela varia e as conversas por trás de cada nota."
+---
+
+A tela Satisfação junta a nota que o cliente deu na pesquisa com a leitura do Scout sobre a conversa, para você ver rápido onde a experiência está caindo.
+
+<Note>
+  Todos os papéis veem a tela no próprio recorte. Ligar a pesquisa de satisfação é da Empresa: só Administrador e Gestor da Empresa. Disponível em todos os planos.
+</Note>
+
+## Veja a nota geral
+
+Por padrão a tela mostra o recorte e o período escolhidos na barra de escopo, com o mês corrente como período inicial.
+
+Onde fica: **Scout > Satisfação**.
+
+<Steps>
+  <Step title="Abra a tela">Vá em **Scout > Satisfação**.</Step>
+  <Step title="Leia o csat geral">Confira a nota de 1 a 5 e a variação frente ao período anterior.</Step>
+  <Step title="Veja a frequência de notas">No histograma abaixo, compare quantas respostas foram positivas, neutras e negativas.</Step>
+</Steps>
+
+{/* CAPTURA: images/scout/satisfacao-csat-geral.png | alt: Tela Satisfação com o card csat geral e o histograma de frequência de notas | olhar: a nota em destaque e a régua de 1 a 5 */}
+
+<Note>
+  Uma leitura com menos de 5 respostas aparece como sem base, para não afirmar algo sem base suficiente.
+</Note>
+
+## Compare por Unidade e por tipo de atendimento
+
+<Steps>
+  <Step title="Compare Unidades">No card **csat por unidade**, veja a nota de cada Unidade do contato, ordenada pelas que têm mais respostas.</Step>
+  <Step title="Compare por tipo de atendimento">No card **csat por tipo de atendimento**, compare a nota de conversas resolvidas pela IA, pela equipe e por handoff.</Step>
+  <Step title="Veja a distribuição">Abra os três histogramas de frequência, um para IA, um para equipe e um para handoff.</Step>
+</Steps>
+
+<Note>
+  O card **csat do Tino** conta só as conversas que ele resolveu do início ao fim. Uma conversa com handoff entra na leitura de handoff, não na do Tino nem na da equipe.
+</Note>
+
+## Acompanhe a evolução no período
+
+<Steps>
+  <Step title="Escolha a granularidade">Alterne entre ver o gráfico por semana ou por mês.</Step>
+  <Step title="Leia as três séries">Compare as linhas de IA, equipe e handoff ao longo do tempo.</Step>
+  <Step title="Filtre pela nota">Clique numa coluna do histograma de frequência para filtrar a lista de conversas por aquela nota.</Step>
+</Steps>
+
+{/* CAPTURA: images/scout/satisfacao-evolucao.png | alt: Gráfico csat ao longo do período com as séries IA, equipe e handoff | olhar: os pontos em anel que indicam período sem base */}
+
+<Note>
+  Um ponto em anel é um período vizinho sem base suficiente, não uma queda de fato.
+</Note>
+
+## Veja as taxas de envio e resposta
+
+A **taxa de solicitação** mostra quantos convites de pesquisa foram enviados para cada atendimento finalizado. A **taxa de resposta** mostra quantos clientes responderam entre os convidados. As duas aparecem por canal.
+
+<Note>
+  As duas taxas contam só WhatsApp e chat do site, os canais em que a pesquisa pode ser enviada hoje.
+</Note>
+
+## Ligue a pesquisa de satisfação
+
+Por padrão a pesquisa fica desligada até alguém ativar em pelo menos um canal.
+
+Onde fica: card de aviso na própria tela, ou direto em **Configurações > Atendimento > Pesquisa de Satisfação**.
+
+<Steps>
+  <Step title="Abra a configuração">No card **Nenhum canal está enviando a pesquisa**, clique em **Ligar a pesquisa de satisfação**.</Step>
+  <Step title="Configure a pesquisa">Ligue a pesquisa nos canais desejados. Veja o passo a passo em [Configure a pesquisa de satisfação](/atendimento/pesquisa-de-satisfacao).</Step>
+  <Step title="Volte para a tela">Use o link **voltar ao achado** para retornar direto à tela Satisfação.</Step>
+</Steps>
+
+## Leia as conversas por trás das notas
+
+<Steps>
+  <Step title="Filtre pela nota">Clique numa coluna do histograma para filtrar a tabela, ou alterne entre **pior nota** e **melhor nota**.</Step>
+  <Step title="Leia o comentário">Veja o que o cliente escreveu, quando houver.</Step>
+  <Step title="Abra a conversa">Clique numa linha para abrir a conversa na [Central de Conversas](/inbox/central-de-conversas), em modo leitura.</Step>
+</Steps>
+
+<Note>
+  Em recortes de Área ou Unidade, essa lista mostra a empresa inteira, não só o recorte escolhido. A tela avisa isso acima da tabela.
+</Note>
+
+## Perguntas frequentes
+
+### Por que uma Unidade aparece sem base?
+
+Menos de 5 respostas da pesquisa naquela Unidade, no período escolhido.
+
+### A lista de conversas muda quando eu escolho uma Unidade?
+
+Não. Essa lista sempre mostra a empresa inteira. Só os cards de cima seguem o recorte escolhido na barra de escopo.
+
+### O csat do Tino conta as conversas que ele começou e passou para a equipe?
+
+Não. Só entram as conversas que o Tino resolveu do início ao fim, sem handoff.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Configure a pesquisa de satisfação" href="/atendimento/pesquisa-de-satisfacao">Ligue a pesquisa por canal.</Card>
+  <Card title="O Scout explicado" href="/scout/o-scout-explicado">Papéis, planos e o menu do Scout.</Card>
+  <Card title="Use a Central de Conversas" href="/inbox/central-de-conversas">Abra qualquer conversa em modo leitura.</Card>
+  <Card title="Leia as avaliações do Scout" href="/scout/avaliacoes">A análise completa de cada conversa.</Card>
+</CardGroup>

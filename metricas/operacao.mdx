@@ -1,0 +1,114 @@
+---
+title: "Métricas da operação"
+sidebarTitle: "Operação"
+description: "Acompanhe o que está acontecendo agora, a qualidade do atendimento e o desempenho de cada pessoa da equipe."
+---
+
+A tela Operação mostra a saúde do atendimento no período: quem está online agora, se o SLA está em dia, de onde vêm as conversas e como cada atendente está indo. Tudo comparado com o período anterior.
+
+<Note>
+  Quem vê: Administrador, Gestor da Empresa, Gestor de Área e Gestor de Unidade, cada um no seu escopo. Disponível em todos os planos.
+</Note>
+
+Onde fica: **Métricas > Operação**.
+
+## Acompanhe o agora
+
+Quando o período escolhido alcança hoje, um painel ao vivo aparece no topo da tela e se atualiza a cada 30 segundos.
+
+| Indicador | O que significa |
+|---|---|
+| **em andamento** | Conversas abertas sendo atendidas neste momento, com a divisão entre equipe e Tino. |
+| **na fila** | Conversas esperando a primeira resposta. Fica em alerta acima de cinco. |
+| **ia ativa** | Conversas que o Tino conduz agora, sem nenhuma pessoa envolvida. |
+| **equipe online** | Quantos atendentes estão online, do total da equipe. |
+
+<Note>
+  Quando algum SLA já estourou, um selo **crítico** aparece no cabeçalho do painel. O painel ao vivo some quando o período escolhido não alcança hoje.
+</Note>
+
+## Meça a qualidade do atendimento
+
+Esta seção traz o gráfico de aderência a SLA e uma grade com seis indicadores de tempo e taxa.
+
+Para tempos, o valor mostrado é a mediana: metade dos atendimentos foi mais rápida que esse número, metade foi mais lenta. Ao lado, o p90 mostra o tempo dos dez por cento de casos mais demorados, para você enxergar os extremos sem que eles se percam na média.
+
+| Indicador | O que significa |
+|---|---|
+| **1ª resposta** | Tempo até a primeira resposta da equipe. É o único com prazo configurado: a pílula de SLA mostra o limite do canal. |
+| **espera / fila** | Tempo que o cliente aguarda antes de ser atendido. |
+| **até resolução** | Tempo até a conversa ser resolvida. |
+| **aderência a SLA** | Percentual dos prazos cumpridos. |
+| **transferências ia→humano** | Percentual de conversas que o Tino passou para a equipe. |
+| **reaberturas** | Percentual de conversas encerradas que voltaram a ser respondidas. |
+
+<Note>
+  Só a 1ª resposta tem um prazo configurado, o SLA do canal. Os outros cinco indicadores comparam apenas com o período anterior.
+</Note>
+
+## Veja o volume e a origem das conversas
+
+O gráfico **quem conduziu** mostra o total de conversas do período dividido entre equipe e Tino. Ao lado, três blocos completam o quadro:
+
+- **canais**: o volume por WhatsApp, WhatsApp Business e Chat Widget.
+- **quem começou**: separa conversas **recebidas** (o cliente procurou), **iniciadas** (a equipe procurou) e **iniciadas pela ia**, com o percentual de proatividade.
+- **transferências**: quantas conversas mudaram de setor no período, e para qual setor foram.
+
+<Note>
+  Conversas de antes do rastreio de origem entram como "sem origem registrada" e ficam fora do percentual de proatividade.
+</Note>
+
+## Compare áreas, unidades e atendentes
+
+O comparativo aparece quando há mais de um filho no nível atual e nenhum atendente está em foco. Você escolhe o indicador de comparação: **SLA**, **1ª resposta**, **Atendimento**, **Volume**, **Iniciadas**, **Reaberturas** ou **Transferências**.
+
+<Steps>
+  <Step title="Escolha o indicador">Clique numa das pílulas acima do comparativo, por exemplo **SLA**.</Step>
+  <Step title="Desça o nível">Clique num card de área para ver as unidades dela, ou num card de unidade para ver os atendentes.</Step>
+  <Step title="Volte quando quiser">Use **Voltar um nível** ou escolha outra área ou unidade na trilha.</Step>
+</Steps>
+
+<Note>
+  Clicar num card de atendente não desce o nível: abre um painel lateral com os números dessa pessoa.
+</Note>
+
+## Veja a tabela de atendentes
+
+Abaixo do comparativo, a tabela lista todos os atendentes com atividade no período: **atendente**, **resolvidas**, **em andamento**, **1ª resposta**, **atendimento** e **csat**. Clique no cabeçalho de uma coluna para ordenar. Use a busca para encontrar alguém pelo nome.
+
+<Steps>
+  <Step title="Clique numa linha">A tela inteira passa a mostrar só os números dessa pessoa.</Step>
+  <Step title="Abra as conversas dela">Clique no botão de ação da linha, ou em **Ver as conversas deste atendente** no painel lateral. Isso abre a Central de Conversas numa aba nova, já filtrada.</Step>
+  <Step title="Volte para todos">Clique em **ver todos**, no rodapé da tabela.</Step>
+</Steps>
+
+<Note>
+  A tabela de atendentes nunca aplica o filtro de atendente. É de propósito: com alguém em foco, ela continua mostrando todo mundo, para servir de caminho de volta.
+</Note>
+
+## Perguntas frequentes
+
+### Onde vejo o SLA de agora, em tempo real?
+
+No cabeçalho do painel ao vivo, que mostra quantos SLAs estão em alerta ou estourados. A taxa de aderência do período inteiro fica na seção de qualidade do atendimento.
+
+### Por que o comparativo entre áreas ou unidades sumiu?
+
+Porque há um atendente em foco, ou porque o nível atual só tem um filho para comparar.
+
+### Por que a tabela mostra todo mundo mesmo com um atendente filtrado?
+
+De propósito. O rodapé avisa, e o botão **ver todos** limpa o foco quando você quiser.
+
+### Como comparo dois meses?
+
+Escolha um mês específico na pílula de período. A variação mostrada já é contra o mês anterior.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="O Panorama das métricas" href="/metricas/panorama">O retrato executivo do período.</Card>
+  <Card title="Métricas do Tino" href="/metricas/tino">O que a IA entregou e a que velocidade.</Card>
+  <Card title="SLA de atendimento" href="/atendimento/sla">O prazo que aparece na 1ª resposta.</Card>
+  <Card title="Use a Central de Conversas" href="/inbox/central-de-conversas">Veja as conversas por trás de cada número.</Card>
+</CardGroup>

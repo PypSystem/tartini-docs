@@ -1,0 +1,118 @@
+---
+title: "Monte a estrutura em Áreas e Unidades"
+sidebarTitle: "Áreas & Unidades"
+description: "Organize sua empresa em áreas e unidades para gerenciar acessos, canais e atendimento por loja, filial ou departamento."
+---
+
+Com a estrutura organizada, você define quem acessa cada loja, filial ou setor da sua empresa. Cada unidade tem seus próprios canais, usuários e conversas.
+
+<Note>
+  Quem vê: só Administrador. O limite de unidades varia por plano: Essential até 5, Scale até 10, Enterprise negociadas.
+</Note>
+
+## Crie uma área
+
+Por padrão, uma empresa nova não tem nenhuma área cadastrada.
+
+Onde fica: **Configurações > Empresa > Áreas & Unidades**.
+
+<Steps>
+  <Step title="Abra a tela">Vá em **Configurações > Empresa > Áreas & Unidades**.</Step>
+  <Step title="Clique em Nova área">Use o botão **Nova área** no topo, ou o card tracejado **Nova área** no diagrama.</Step>
+  <Step title="Dê um nome">Digite o nome da área e clique em **Salvar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/equipe/areas-unidades-nova-area.png | alt: Modal Nova Área com o campo de nome preenchido | olhar: o campo Nome da Área e o botão Salvar */}
+
+<Note>
+  Áreas agrupam unidades. Uma rede de lojas pode ter a área "Varejo" com as unidades "Loja Centro" e "Loja Shopping".
+</Note>
+
+## Crie uma unidade
+
+Toda unidade nasce dentro de uma área.
+
+Onde fica: **Configurações > Empresa > Áreas & Unidades**, no card da área.
+
+<Steps>
+  <Step title="Abra a área">Clique no card da área onde a unidade vai entrar.</Step>
+  <Step title="Clique em Criar Unidade">Use o botão **Criar Unidade**, ou o card tracejado **Adicionar unidade**.</Step>
+  <Step title="Dê um nome">Digite o nome da unidade e clique em **Salvar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/equipe/areas-unidades-nova-unidade.png | alt: Modal Nova Unidade com o campo de nome preenchido | olhar: o campo Nome da Unidade e o botão Salvar */}
+
+<Note>
+  Ao atingir o limite de unidades do seu plano, o botão de criar mostra o aviso Limite de unidades atingido. Faça upgrade para cadastrar mais.
+</Note>
+
+## Renomeie ou exclua uma área
+
+Onde fica: abra a área e use o menu de opções no topo.
+
+<Steps>
+  <Step title="Abra a área">Clique no card da área na tela de Áreas & Unidades.</Step>
+  <Step title="Escolha a ação">No menu de opções, clique em **Renomear** ou em **Excluir**.</Step>
+  <Step title="Confirme">Digite o novo nome e clique em **Salvar**, ou confirme a exclusão em **Sim**.</Step>
+</Steps>
+
+<Warning>
+  Excluir uma área apaga todas as suas unidades junto. {/* CONFIRMAR: o que acontece com os canais, conversas e usuários vinculados às unidades excluídas */}
+</Warning>
+
+## Renomeie ou exclua uma unidade
+
+Onde fica: abra a unidade e use o menu de opções no topo.
+
+<Steps>
+  <Step title="Abra a unidade">Clique no card da unidade, dentro da área ou no diagrama principal.</Step>
+  <Step title="Escolha a ação">No menu de opções, clique em **Renomear** ou em **Excluir**.</Step>
+  <Step title="Confirme">Digite o novo nome e clique em **Salvar**, ou confirme a exclusão em **Sim**.</Step>
+</Steps>
+
+{/* CAPTURA: images/equipe/areas-unidades-detalhe-unidade.png | alt: Tela de detalhe de uma unidade com o menu de opções aberto | olhar: as opções Renomear e Excluir */}
+
+## Organize os setores de uma unidade
+
+Setores direcionam as conversas de uma unidade para equipes específicas, como Suporte Técnico ou Financeiro.
+
+Onde fica: abra a unidade e role até **Setores**.
+
+<Steps>
+  <Step title="Abra a unidade">Clique no card da unidade e role até a seção **Setores**.</Step>
+  <Step title="Clique em Novo Setor">Preencha o **Nome** e, se quiser, a **Descrição**.</Step>
+  <Step title="Salve">Clique em **Criar**. O setor aparece na lista, pronto para receber usuários.</Step>
+</Steps>
+
+<Note>
+  A descrição do setor é usada pelo Tino para decidir para onde direcionar cada conversa. Descreva a função do setor com clareza.
+</Note>
+
+Para adicionar pessoas a um setor, abra o card e clique em **Adicionar Usuário**. Só aparecem usuários que já têm acesso àquela unidade.
+
+Para desativar um setor sem apagar seu histórico, use **Desativar** no menu de opções. Um setor inativo some das opções de direcionamento, mas mantém as conversas já atendidas.
+
+## Perguntas frequentes
+
+### Posso criar uma unidade sem colocar em nenhuma área?
+
+Não. Toda unidade precisa nascer dentro de uma área.
+
+### O que acontece com os usuários quando eu excluo uma unidade?
+
+{/* CONFIRMAR: comportamento dos vínculos de usuário após excluir uma unidade */}
+
+### Atingi o limite de unidades do meu plano. O que eu faço?
+
+Faça upgrade de plano para liberar mais unidades. O limite muda conforme o plano contratado: Essential até 5, Scale até 10, Enterprise negociadas.
+
+### Posso mudar uma unidade de área depois de criada?
+
+{/* CONFIRMAR: se é possível mover uma unidade existente para outra área */}
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Convide e gerencie usuários" href="/equipe/usuarios">Adicione pessoas às áreas e unidades que você criou.</Card>
+  <Card title="Papéis e acessos explicados" href="/visao-geral/papeis-e-acessos">Entenda o que cada papel enxerga em cada nível.</Card>
+</CardGroup>

@@ -1,0 +1,96 @@
+---
+title: "Organize processos em grupos"
+sidebarTitle: "Grupos"
+description: "Reúna os processos que uma campanha pode usar e defina o caminho de saídas específico daquele conjunto."
+---
+
+Um grupo reúne os processos que uma campanha pode encadear, com seu próprio caminho de saídas, sem afetar como cada processo se comporta em qualquer outra situação.
+
+<Note>
+  Quem vê: Administrador e Gestor da Empresa. Exige o plano Scale.
+</Note>
+
+## Crie um grupo
+
+Por padrão, um grupo novo nasce marcado como **fluxo próprio**, sem herdar o caminho global.
+
+Onde fica: **Cérebro > Processos > Grupos**.
+
+<Steps>
+  <Step title="Abra o formulário">Clique em **Novo grupo** (ou **Criar primeiro grupo**, se ainda não houver nenhum).</Step>
+  <Step title="Escreva o nome">Preencha **Nome**, por exemplo "Suporte financeiro".</Step>
+  <Step title="Descreva o grupo (opcional)">Preencha **Descrição** com para que serve o grupo.</Step>
+  <Step title="Adicione processos">Selecione um processo no campo **Adicionar processo ao grupo…** e clique em **Adicionar**.</Step>
+  <Step title="Salve">Clique em **Criar grupo**.</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/grupos-criar.png | alt: Formulário de novo grupo com nome, descrição e três processos já adicionados | olhar: a estrela de processo inicial ao lado do primeiro processo */}
+
+<Note>
+  Salvar sempre substitui o conjunto inteiro de processos do grupo pela lista atual da tela, não soma ao que já existia.
+</Note>
+
+## Marque o processo inicial
+
+A estrela ao lado de um processo define por onde a campanha do grupo começa. É opcional.
+
+Onde fica: **Cérebro > Processos > Grupos**, dentro da configuração do grupo.
+
+<Steps>
+  <Step title="Localize o processo">Encontre o processo que deve abrir a campanha.</Step>
+  <Step title="Marque a estrela">Clique no ícone de estrela ao lado do nome.</Step>
+</Steps>
+
+## Importe o caminho global ao adicionar um processo
+
+Ao adicionar um processo, você escolhe se ele entra com um caminho próprio dentro do grupo ou se traz o caminho global como ponto de partida.
+
+<Steps>
+  <Step title="Ligue a importação, se quiser">Ative **Importar fluxo global ao adicionar** antes de escolher o processo.</Step>
+  <Step title="Adicione o processo">O processo entra marcado para importação, mostrado como prévia até você salvar.</Step>
+  <Step title="Salve">Ao salvar o grupo, os processos que o caminho global aponta também entram, aninhados sob o processo original.</Step>
+</Steps>
+
+<Note>
+  Remover um processo que trouxe outros por importação remove os importados junto. Um processo importado não pode ser removido isoladamente do pai que o trouxe.
+</Note>
+
+## Edite o caminho do grupo (o fluxo do grupo)
+
+Depois de salvo, cada grupo tem seu próprio grafo editável, chamado **Fluxo do grupo**, separado do caminho global de cada processo.
+
+Onde fica: configuração do grupo, aba **Fluxo**.
+
+<Steps>
+  <Step title="Escolha o modo">Selecione **Herdar fluxo global** (o que você definir aqui sobrescreve só nesta campanha) ou **Fluxo próprio do grupo** (ignora o global por completo).</Step>
+  <Step title="Foque um processo">Na barra de cima, clique no processo que quer editar.</Step>
+  <Step title="Edite uma saída">Clique num chip de desfecho no grafo e preencha o alvo: outro processo, triagem, transferência para setor ou encerramento.</Step>
+  <Step title="Salve a saída">Clique em **Salvar saída**.</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/grupos-fluxo-grupo.png | alt: Grafo do Fluxo do grupo com o switcher de processos no topo e o painel de saúde do fluxo abaixo | olhar: o cartão de alerta de ciclo sem escape, quando existir */}
+
+<Note>
+  Editar uma saída aqui não muda o caminho global do processo em outras campanhas. Só um problema é tratado como falha real no painel de **Saúde do fluxo**: um ciclo sem saída para fora.
+</Note>
+
+## Perguntas frequentes
+
+### Se eu tirar um processo do grupo, os que eu importei com ele também saem?
+
+Sim. Remover um processo remove junto todos os que ele trouxe por importação.
+
+### Editar o Fluxo do grupo muda o processo em outras campanhas?
+
+Não. A edição fica restrita a esta campanha; o caminho global do processo continua independente.
+
+### Um processo sem saída definida quebra o atendimento?
+
+Não. Por padrão, qualquer desfecho sem regra explícita cai na triagem.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Mapeie processos a partir das conversas" href="/cerebro/mapeie-processos">Construa e publique o processo antes de agrupá-lo.</Card>
+  <Card title="Acompanhe o Catálogo de processos" href="/cerebro/consistencia-e-insights">Veja problemas estruturais no cadastro de processos.</Card>
+</CardGroup>

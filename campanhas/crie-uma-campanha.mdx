@@ -1,0 +1,114 @@
+---
+title: "Crie uma campanha"
+sidebarTitle: "Crie uma campanha"
+description: "Monte a campanha em três passos, do que o Tino vai fazer a quando a mensagem sai."
+---
+
+O assistente de criação leva você por três passos até a campanha estar pronta para rodar, com uma prévia de como o Tino abriria a conversa antes de você confirmar.
+
+<Note>
+  Campanhas é um recurso dos planos Scale e Enterprise. Quem cria: Administrador (Empresa), Gestor da Empresa, Gestor de Área e Gestor de Unidade.
+</Note>
+
+Onde fica: **Campanhas > Campanhas > Nova campanha**, ou **Campanhas > Panorama > Nova campanha →**.
+
+O assistente salva o progresso sozinho no navegador enquanto você preenche. Se você sair e voltar, um aviso diz **Rascunho recuperado de onde você parou**.
+
+## Passo 1: o que essa campanha vai fazer
+
+Comece escolhendo como o Tino vai conduzir cada conversa.
+
+<Steps>
+  <Step title="Escolha o modo de condução">**Seguir um processo** (recomendado) faz o Tino seguir um processo mapeado em Cérebro, etapa por etapa, adaptando se o cliente mudar de assunto. **Missão livre** é só um objetivo em texto, para avisos e recados pontuais.</Step>
+  <Step title="Escolha o processo (modo processo)">Busque por nome ou setor e clique num cartão para selecionar. Sem processos mapeados, use **Criar com missão livre** ou mapeie um em **Mapear processo**.</Step>
+  <Step title="Descreva o contexto ou o objetivo">No modo processo, o campo **contexto desta campanha** é opcional, mas melhora a abertura: diga quando o contato acontece, o que o Tino já tem em mãos e a ação imediata esperada. Na missão livre, o campo **objetivo da campanha** é obrigatório.</Step>
+  <Step title="Defina o que conta como resultado">Escolha entre **Processo concluído**, **Transferência qualificada** (com setor opcional), **Dados coletados** (escolha ao menos um campo) ou **Marcação manual**. Na missão livre, só **Marcação manual** fica disponível.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/criar-passo1-missao.png | alt: Passo 1 do assistente com o modo Seguir um processo selecionado | olhar: os cartões de modo de condução e o campo de contexto */}
+
+<Note>
+  Você também pode definir um valor por conversão, opcional: um valor fixo em reais ou uma coluna do seu CSV. Isso aparece depois no painel de resultados da campanha.
+</Note>
+
+Sem nome digitado no campo do topo, o assistente avisa **Dê um nome interno para a campanha** e não deixa avançar.
+
+---
+
+## Passo 2: quem o Tino vai abordar
+
+Escolha de onde vêm os contatos. Essa escolha não muda depois que a campanha é criada.
+
+<Steps>
+  <Step title="Escolha a origem">**Tenho uma lista** sobe um CSV. **Meu sistema envia** gera uma URL de webhook. **O cliente chega até mim** ativa por palavra-chave.</Step>
+  <Step title="Preencha os dados da origem">Em lista, envie o CSV (veja [Importe os contatos da campanha](/campanhas/contatos-e-csv)). Em webhook, não há nada para preencher aqui: a URL sai depois de criar. Em palavra-chave, digite as palavras (Enter adiciona cada uma), escolha o tipo de correspondência e a tag aplicada ao contato.</Step>
+  <Step title="Refine o perfil do público (opcional)">Marque um perfil como **Cliente Ativo** ou **Lead** e descreva o contexto desse público, para ajustar o tom do Tino.</Step>
+  <Step title="Replique para outras Unidades (opcional)">Só para lista, e só na criação: marque outras Unidades para repetir a mesma lista nelas, com o canal de cada uma escolhido sozinho.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/criar-passo2-publico.png | alt: Passo 2 do assistente com a origem Tenho uma lista selecionada e um CSV enviado | olhar: o cartão de contagem de contatos válidos */}
+
+Sem um CSV com contatos válidos, sem palavra-chave adicionada, ou sem tag para a palavra-chave, o assistente não avança e mostra o erro sob o campo.
+
+---
+
+## Passo 3: quando e por onde
+
+Este passo define o canal, os horários e o que fazer quando o contato não responde.
+
+<Steps>
+  <Step title="Escolha o canal">Selecione entre os canais WhatsApp conectados da Unidade. Sem canal, um aviso leva você a **Conectar canal**.</Step>
+  <Step title="Escolha o template de abertura (canal WABA)">Em canal oficial, escolha um template **Aprovado** ou crie um novo pelo editor. Isso é obrigatório: sem template, o assistente não avança.</Step>
+  <Step title="Defina quando disparar">Em lista, escolha a data de início e, se quiser, a data de fim. Em webhook, escolha entre abordar **24 horas por dia** ou só dentro de uma janela de horários. Palavra-chave não pede nada aqui: o Tino responde assim que o cliente escreve.</Step>
+  <Step title="Ajuste a janela de horários">Quando aplicável, marque os dias da semana e o horário de início e fim. Por padrão, a janela vem pré-carregada do funcionamento cadastrado da Unidade.</Step>
+  <Step title="Configure os follow-ups (opcional)">Adicione até 4 tentativas para quando o contato não responder: 4 horas, 1, 2, 3 ou 7 dias depois da abertura. Em canal WABA, tentativas de 24 horas ou mais exigem um template aprovado para cada uma.</Step>
+  <Step title="Gere a prévia">Dê um nome ao agente e clique em **Gerar exemplo** para ver como o Tino abriria a conversa com o primeiro contato da lista.</Step>
+  <Step title="Crie a campanha">Clique em **Criar campanha**.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/criar-passo3-lancamento.png | alt: Passo 3 do assistente com canal, janela de horários e a prévia da abordagem no celular | olhar: o botão Gerar exemplo e a mensagem de abertura */}
+
+<Note>
+  Assim que o contato responde, o Tino cancela as tentativas de follow-up seguintes e assume a conversa.
+</Note>
+
+## O que acontece ao criar
+
+O resultado muda conforme a origem escolhida:
+
+- **Lista**: a campanha nasce como **Rascunho**. O aviso é **Campanha criada! Inicie o disparo quando quiser**. Você inicia o envio depois, na lista ou no painel da campanha.
+- **Webhook**: a campanha nasce **Ativa**. Um modal mostra a URL do webhook e o token secreto para você configurar no seu sistema. Veja [Dispare campanhas por webhook ou por mensagem recebida](/campanhas/webhook-e-inbound).
+- **Palavra-chave**: a campanha nasce **Ativa**, já escutando as palavras configuradas.
+
+Em qualquer caso, você volta para a lista de campanhas da Unidade.
+
+## Perguntas frequentes
+
+### Não aparece nenhum canal para escolher
+
+Só aparecem canais WhatsApp conectados da Unidade atual. Conecte um em **Configurações > Canais** e volte ao assistente.
+
+### Meu CSV com ponto e vírgula não carregou
+
+O leitor de CSV usa vírgula como separador. Baixe o modelo de planilha na própria tela e use como base.
+
+### Perdi o que estava preenchendo
+
+Na criação, o rascunho fica salvo no navegador a cada alteração, por Unidade, sem você precisar salvar. Ao reabrir o assistente na mesma Unidade, ele recupera de onde você parou. Se quiser começar do zero, use **Descartar rascunho** ao sair.
+
+### Posso editar a lista de contatos depois de criar?
+
+Não pelo assistente. A lista de contatos de uma campanha já criada é acompanhada no painel da campanha, execução por execução.
+
+### Preciso escolher um template para cada follow-up?
+
+Só em canal WABA, e só para tentativas de 24 horas ou mais. Tentativas mais curtas e canais não-oficiais não exigem template.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Prepare a Unidade para campanhas" href="/campanhas/setup">Canal, template e créditos antes de criar.</Card>
+  <Card title="Importe os contatos da campanha" href="/campanhas/contatos-e-csv">O formato do CSV e a prévia de importação.</Card>
+  <Card title="Agende o envio e os follow-ups" href="/campanhas/agendamento-e-follow-ups">Horários, tentativas, pausar e retomar.</Card>
+  <Card title="Mapeie processos a partir das conversas" href="/cerebro/mapeie-processos">O playbook que o Tino segue.</Card>
+</CardGroup>

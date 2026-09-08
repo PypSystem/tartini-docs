@@ -1,0 +1,86 @@
+---
+title: "Use o Tartini como canal do seu sistema"
+sidebarTitle: "Conexão via API"
+description: "Gere tokens de acesso para integrar seus próprios sistemas diretamente com o Tartini."
+---
+
+Com um token de API, o seu sistema conversa diretamente com o Tartini, sem precisar de ninguém abrindo a tela.
+
+<Note>Quem gera e revoga tokens: só o Administrador. Disponível no plano Scale.</Note>
+
+## Para que serve
+
+Um token de API dá ao seu sistema acesso à API do Tartini, para integrar dados de conversas, contatos e atendimentos com o seu ERP, CRM ou qualquer outro sistema. Os detalhes técnicos de uso da API ficam com quem desenvolve o seu sistema.
+
+Onde fica: **Configurações > Canais > Conexão via API**.
+
+<Note>
+  Mantenha seus tokens em segurança e nunca os compartilhe. Quem tiver o token consegue acessar sua conta pela API, do mesmo jeito que você.
+</Note>
+
+## Crie um token por sistema
+
+Se você integra mais de um sistema, crie um token separado para cada um, com um nome que identifique onde ele é usado, como "Integração ERP" ou "Portal do cliente".
+
+Assim, se precisar cortar o acesso de um sistema específico, você revoga só o token dele, sem afetar as outras integrações.
+
+## Gere um token
+
+Por padrão, uma conta nova não tem nenhum token criado.
+
+<Steps>
+  <Step title="Abra a tela">Vá em **Configurações > Canais > Conexão via API**.</Step>
+  <Step title="Comece um novo token">Clique em **Criar Token**.</Step>
+  <Step title="Nomeie o token">Preencha **Nome do Token**, para identificar depois onde ele é usado, e opcionalmente uma **Descrição**.</Step>
+  <Step title="Crie">Clique em **Criar Token**.</Step>
+  <Step title="Copie e guarde">Clique em **Copiar** e guarde o token em local seguro.</Step>
+</Steps>
+
+{/* CAPTURA: images/integracoes/conexao-via-api-token-criado.png | alt: modal com o token de API gerado e o botão de copiar | olhar: o aviso de que o token só aparece essa vez */}
+
+<Warning>
+  O token só é exibido uma vez, no momento da criação. Se perder, não tem como recuperar: crie um novo e revogue o antigo.
+</Warning>
+
+---
+
+## Acompanhe seus tokens
+
+Cada token cadastrado mostra o nome, a descrição, quando foi criado e a última vez que foi usado, ou **Nunca**, se ainda não foi usado.
+
+## Revogue um token
+
+<Steps>
+  <Step title="Abra a tela">Vá em **Configurações > Canais > Conexão via API**.</Step>
+  <Step title="Exclua o token">Clique no ícone de lixeira no card do token.</Step>
+  <Step title="Confirme">Clique em **Excluir**.</Step>
+</Steps>
+
+<Warning>
+  Revogar um token é imediato: qualquer sistema que ainda estiver usando esse token perde o acesso na hora.
+</Warning>
+
+## Perguntas frequentes
+
+### Quem pode criar ou revogar tokens?
+
+Só o Administrador.
+
+### Perdi o token antes de copiar. Como recupero?
+
+Não é possível recuperar um token depois de fechar o modal. Crie um novo e revogue o antigo, se ele não estiver em uso.
+
+### Os tokens expiram sozinhos?
+
+{/* CONFIRMAR: se os tokens de API têm expiração automática */}
+
+### Preciso de um token diferente para cada sistema que eu integrar?
+
+Não é obrigatório, mas é recomendado. Um token por sistema facilita saber quem usa o quê e permite revogar um acesso sem mexer nos outros.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Receba eventos no seu sistema" href="/integracoes/webhooks">Avisos automáticos de atendimento finalizado.</Card>
+  <Card title="Canais explicados" href="/canais/canais-explicados">Os canais disponíveis no Tartini.</Card>
+</CardGroup>

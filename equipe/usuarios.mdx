@@ -1,0 +1,119 @@
+---
+title: "Convide e gerencie usuários"
+sidebarTitle: "Usuários"
+description: "Convide sua equipe, defina o que cada pessoa acessa e mantenha os acessos sempre atualizados."
+---
+
+Com a lista de usuários organizada, você sabe quem está ativo, o que cada pessoa acessa e quem ainda precisa aceitar o convite.
+
+<Note>
+  Quem vê a lista: Administrador, Gestor da Empresa, Gestor de Área e Gestor de Unidade. As ações de editar, gerenciar acessos e inativar são só do Administrador.
+</Note>
+
+## Entenda os status e os acessos
+
+Onde fica: **Configurações > Empresa > Usuários**.
+
+Cada usuário aparece com um status:
+
+- **Ativo**: acessa o sistema normalmente.
+- **Inativo**: não consegue mais entrar, até ser reativado.
+- **Pendente**: recebeu o convite e ainda não criou a senha.
+- **Expirado**: o convite passou de 24 horas sem resposta.
+
+A coluna **Acessos & permissões** mostra o vínculo principal do usuário e quantos outros ele tem. Clique para abrir todos os vínculos, com o nível de cada um: empresa inteira, uma área ou uma unidade.
+
+{/* CAPTURA: images/equipe/usuarios-lista.png | alt: Tela Usuários com a lista de pessoas e seus status | olhar: as colunas Status e Acessos & permissões */}
+
+## Adicione um usuário
+
+Você pode convidar alguém novo ou vincular uma pessoa que já existe na empresa a mais áreas e unidades.
+
+Onde fica: **Configurações > Empresa > Usuários**, botão **Adicionar Usuário**.
+
+<Steps>
+  <Step title="Abra o assistente">Clique em **Adicionar Usuário**.</Step>
+  <Step title="Preencha os dados">Para uma pessoa nova, informe **Nome** e **E-mail**. Para vincular alguém que já existe, escolha o usuário na lista.</Step>
+  <Step title="Defina os acessos">Marque a empresa, a área ou a unidade e escolha o cargo de cada uma.</Step>
+  <Step title="Confirme">Revise o resumo e clique em **Confirmar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/equipe/usuarios-assistente-acessos.png | alt: Etapa de acessos e permissões do assistente de adicionar usuário | olhar: a árvore de empresa, áreas e unidades com os cargos selecionados */}
+
+<Note>
+  O acesso é hereditário. Marque o cargo só no nível mais alto que a pessoa precisa: tudo abaixo fica coberto automaticamente. Para posições em áreas diferentes, marque cada ramo separadamente.
+</Note>
+
+Uma pessoa nova recebe um e-mail para criar a senha e aparece na lista como **Pendente** até aceitar o convite.
+
+## Reenvie o convite
+
+Onde fica: **Configurações > Empresa > Usuários**, menu de opções da linha do usuário.
+
+<Steps>
+  <Step title="Localize o usuário">Encontre a linha com status **Pendente** ou **Expirado**.</Step>
+  <Step title="Reenvie">Abra o menu de opções da linha e clique em **Reenviar convite**.</Step>
+</Steps>
+
+<Note>
+  O convite fica marcado como Expirado 24 horas depois do envio. Reenviar gera um novo prazo para a pessoa criar a senha.
+</Note>
+
+## Inative ou reative um usuário
+
+Inativar tira o acesso ao sistema sem apagar o histórico da pessoa.
+
+Onde fica: **Configurações > Empresa > Usuários**, menu de opções da linha do usuário.
+
+<Steps>
+  <Step title="Abra o menu">Clique no menu de opções da linha do usuário.</Step>
+  <Step title="Escolha a ação">Clique em **Inativar** (status Ativo) ou em **Reativar** (status Inativo).</Step>
+  <Step title="Confirme">Clique em **Sim** na janela de confirmação.</Step>
+</Steps>
+
+<Note>
+  Não é possível inativar você mesmo, o dono da conta ou um convite ainda pendente. Para tirar alguém da empresa, inative: não existe exclusão de usuário.
+</Note>
+
+## Gerencie os acessos de um usuário
+
+Onde fica: **Configurações > Empresa > Usuários**, menu de opções > **Gerenciar acessos**.
+
+<Steps>
+  <Step title="Abra o painel">No menu de opções da linha do usuário, clique em **Gerenciar acessos**.</Step>
+  <Step title="Ajuste a árvore">Marque ou desmarque empresa, áreas e unidades, e escolha o cargo de cada seleção nova.</Step>
+  <Step title="Salve">Clique em **Salvar alterações**.</Step>
+</Steps>
+
+<Note>
+  Só o Administrador concede o papel Administrador. Um Gestor de Área ou de Unidade só concede cargos dentro da própria estrutura. Todo usuário precisa de ao menos um acesso: para bloquear alguém, use Inativar.
+</Note>
+
+O dono da conta aparece com o selo **Admin** e seus acessos não podem ser alterados por ninguém.
+
+Se a lista não mostrar a mudança na hora, atualize a página.
+
+## Perguntas frequentes
+
+### Como eu removo alguém da empresa?
+
+Use **Inativar**, no menu de opções da linha do usuário. Não existe exclusão de usuário na interface.
+
+### Por que não vejo a opção de reenviar convite?
+
+Ela só aparece para usuários com status Pendente ou Expirado.
+
+### Quem pode conceder o papel Administrador?
+
+Só quem já é Administrador. Gestor da Empresa, Gestor de Área e Gestor de Unidade não veem essa opção.
+
+### Um Gestor de Área pode conceder acesso fora da sua área?
+
+Não. Gestor de Área e Gestor de Unidade só concedem cargos dentro da própria estrutura.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Monte a estrutura em Áreas e Unidades" href="/equipe/areas-e-unidades">Crie as áreas e unidades onde os usuários vão atuar.</Card>
+  <Card title="Papéis e acessos explicados" href="/visao-geral/papeis-e-acessos">Veja o que cada papel enxerga em cada nível.</Card>
+</CardGroup>

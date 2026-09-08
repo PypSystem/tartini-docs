@@ -1,98 +1,151 @@
-# SAN Talk Docs - CLAUDE.md
+# CLAUDE.md
 
-## Overview
-Product documentation for **Tartini** (product formerly named "SAN Talk AI" / "Talk AI") — the first tool of our **Plataforma de IA para Empresas**. Tartini = **comunicação omnichannel + gestão de equipe com IA**; it **has** atendimento tools but is **not** positioned as a customer-service/helpdesk product (atendimento is one capability, not the identity). Built with Mintlify. NOTE: the public docs have been rebranded to **Tartini** (docs lead the product UI, which still says "SAN Talk AI"/"Talk"/"atendimento" and hasn't rebranded) — keep new pages on the **Tartini** name and the platform/communication positioning, and never rename URLs/domains (`talk.saninternet.com`) or API keys (`pyp_live_`).
+Central de ajuda do Tartini, publicada com Mintlify. Conteúdo em MDX, em português do
+Brasil, escrito para o usuário final: dono da conta, Administrador, gestores e
+atendentes. `docs.json` é a navegação. Push na `main` publica: commit local sempre, push
+só quando o dono pedir.
 
-## Stack
-- **Framework**: Mintlify (documentation site generator)
-- **Content Format**: Markdown (`.md`) and MDX (`.mdx`) for interactive components
-- **Configuration**: `docs.json` for site structure and navigation
-- **API Docs**: OpenAPI spec at `/api-reference/openapi.json`
-- **Styling**: Mint theme com o DS **papel/tinta** (accent tinta `#14120F`, fundo papel `#FAF7F0`; fonte da verdade: `DESIGN_SYSTEM.md` — atalhos `/ds` e subagente `design-system`)
+Comandos: `npx mint dev` (preview local), `npx mint broken-links` (links quebrados),
+`python3 scripts/lint-central.py` (travessão, vocabulário banido, armadilhas de MDX,
+links para páginas inexistentes).
 
-## Quick Start
-```bash
-# Install dependencies
-npm install
+## O modelo
 
-# Start local dev server (runs on localhost:3000)
-mintlify dev
+A central da Intercom (https://www.intercom.com/help/pt-BR/) é a referência de
+estrutura, tom e mídia. Em uma linha: a central não vende, cada artigo cobre um recurso
+e cada seção resolve uma tarefa na mesma ordem, os guias só apontam, toda mudança de
+tela tem imagem, e os blocos de destaque são poucos e têm papel fixo.
 
-# Build for production
-mintlify build
+## Estrutura
+
+Duas abas no `docs.json`: **Central de ajuda** (padrão) e **Para desenvolvedores**
+(`api-reference/`, `concepts/`, `desenvolvedores/`). Na central, uma pasta por coleção,
+na ordem da jornada:
+
+```
+visao-geral · primeiros-passos (guias, configuracao, boas-praticas, perguntas-frequentes)
+cerebro · tino · inbox · canais · campanhas · scout · metricas
+equipe · atendimento · creditos · integracoes · conta
 ```
 
-## Folder Structure
+A home (`index.mdx`) é uma frase, a busca e os cartões das coleções. Sem pitch.
 
-### Content Organization
-- **`administracao/`** - Admin console features (companies, users, permissions)
-- **`api-reference/`** - API documentation and OpenAPI spec
-- **`atendimento/`** - Communication / inbox features (conversations, copilot, widget) — *a use case, not the product's identity*
-- **`avaliacao/`** - Evaluation and feedback system
-- **`base-de-conhecimento/`** - Knowledge base (documents, Q&A, websites)
-- **`campanhas/`** - Campaign creation and metrics
-- **`canais/`** - Communication channels (WhatsApp, templates)
-- **`concepts/`** - API concepts (authentication, RAG, error handling)
-- **`contatos/`** - Contact management
-- **`ia-e-personalidade/`** - AI personality and compliance settings
-- **`operacoes/`** - Operations features (hours, routing, qualification fields)
+Fonte da verdade do conteúdo: a interface do produto, lida no repositório
+`PypSystem/tartini-web`. Nada que a tela não mostre entra na central. Dúvida fica
+marcada no texto como `{/* CONFIRMAR: ... */}`.
 
-### Core Files
-- **`index.mdx`** - Homepage
-- **`introduction.mdx`** - Getting started guide
-- **`quickstart.mdx`** - Quick setup instructions
-- **`docs.json`** - Site navigation and configuration
-- **`README.md`** - Repo information
-- **`CONTRIBUTING.md`** - Contribution guidelines
+## O produto, o mínimo para escrever
 
-## Configuration (docs.json)
-The `docs.json` file defines:
-- **Navigation structure**: Two main tabs ("Documentação" and "API Reference")
-- **Page groupings**: Logical organization of content by feature area
-- **Theme colors**: papel/tinta — accent tinta `#14120F`, fundo papel `#FAF7F0` (claro) / tinta (escuro); fontes Schibsted + Hanken (regras em `DESIGN_SYSTEM.md`)
-- **API settings**: Base URL (`https://api-talk.saninternet.com/v1`), Bearer token auth
-- **Links**: Dashboard button, website footer link
-- **Context options**: Copy, view, ChatGPT, Claude sharing from docs
+- **Nome:** Tartini. Dashboard em https://talk.saninternet.com. Nunca "Talk", "Talk AI"
+  ou "SAN Talk".
+- **Os agentes de IA:** o **Tino** (atende o cliente; ligado em Configurações >
+  Atendimento > IA por canal), o **Copilot** (apoia o atendente dentro da conversa;
+  modo de consulta em todos os planos, modo ativo no Scale), o **Scout** (avalia as
+  conversas encerradas; ligado nas Regras de Conversa) e o **Cérebro** (o menu Cérebro:
+  Panorama, Propriedades, Personalidade, Processos, Operações). Em texto genérico, "os
+  agentes" no plural.
+- **Menu principal:** Página Inicial · Inbox · Métricas · Central de Conversas · Cérebro
+  · Scout · Campanhas. Configurações no rodapé do menu.
+- **Configurações:** Empresa (Informações, Áreas & Unidades, Usuários) · Canais
+  (WhatsApp Business, Chat Widget, WABA, Conexão via API) · Atendimento (Regras de
+  Conversa, IA por canal, Mensagens Rápidas, SLA de Atendimento, Pesquisa de
+  Satisfação) · Cobrança (Assinatura, Créditos) · Análises (Mensagens e Conversas) ·
+  Integrações (Conectores, Contatos de Campanha, Webhooks) · Pessoal (Configurações de
+  usuário, Segurança).
+- **Estrutura e papéis:** Empresa > Área > Unidade, com herança de acesso. Dono da
+  conta, Administrador, Gestor da Empresa, Gestor de Área, Gestor de Unidade,
+  Atendente. "Proprietário", "Gerente", "OWNER" e "BACKOFFICE" não existem mais.
+- **Planos:** Essential (a IA trabalha para dentro), Scale (a IA fala com o cliente:
+  Tino, IA por canal, Operações e Processos do Cérebro, Copilot ativo, Campanhas,
+  Conectores, API e Webhooks) e Enterprise (sob consulta). Recurso do Scale leva uma
+  `<Note>` de disponibilidade.
+- **Créditos:** a IA e as mensagens consomem créditos de uma franquia mensal. Sempre
+  créditos, nunca tokens, dólar ou reais.
 
-## Adding New Pages
+## Tipos de artigo
 
-1. **Create the markdown file** in the appropriate folder:
-   ```
-   mkdir -p <feature-folder>
-   echo "# Page Title\n\nContent here" > <feature-folder>/page-slug.mdx
-   ```
+| Tipo | Título | Esqueleto |
+|---|---|---|
+| Visão geral ("X explicado") | "O Scout explicado" | O que é, para que serve, o submenu, quem vê, e links para as tarefas |
+| Recurso e tarefas | Imperativo: "Defina o SLA de atendimento" | Abertura com o resultado → `<Note>` de papel e plano → por tarefa, separada por `---`: `## verbo`, estado padrão, onde fica (caminho em negrito), `<Steps>` com o botão em negrito, captura, `<Note>` com os detalhes → `## Perguntas frequentes` → `## Artigos relacionados` |
+| Guia de início rápido | Gerúndio: "Configurando o Inbox" | Abertura → lista numerada dos passos com âncoras → `## Passo N: verbo`, vídeo, porquê, `###` subtarefas com links, `<Info>` Saiba mais → `## Próximos passos` |
+| Boas práticas | "Boas práticas para entrar no ar" | Para quem é → `## Opção N` com a favor, contra e como fazer → a recomendação |
+| Perguntas frequentes | "Perguntas frequentes para iniciantes" | Grupos em `##`, perguntas em `###`, resposta que começa respondendo |
+| Solução de problemas | "Resolva problemas de conexão" | Sintoma em `##`, causa, correção em passos |
 
-2. **Register in `docs.json`** under the appropriate group:
-   ```json
-   {
-     "group": "Feature Name",
-     "pages": ["feature-folder/page-slug"]
-   }
-   ```
+Tamanhos: tarefa entre 500 e 1.200 palavras; guia entre 500 e 1.000; visão geral até
+1.500; FAQ sem limite.
 
-3. **Use MDX for interactive content** (callouts, tabs, code snippets):
-   ```mdx
-   <Note>This is a note callout</Note>
-   <CodeBlock>code example</CodeBlock>
-   ```
+## Como escrever
 
-## Writing Conventions
-- **Language**: Portuguese (pt-BR)
-- **Tone**: Professional, clear, user-friendly
-- **Structure**: H1 for page title, H2/H3 for sections
-- **Code blocks**: Include language identifier (json, bash, python)
-- **Links**: Use relative paths for internal docs, full URLs for external
-- **Images**: Place in `logo/` or subdirectories, reference with `/path/`
-- **API examples**: Include curl and code examples when relevant
+- Segunda pessoa (você, sua equipe); o produto e os agentes na terceira; "nós" só
+  quando a SAN age.
+- Frases de até 20 palavras. Parágrafos de até duas frases. Enumeração com mais de dois
+  itens vira lista.
+- `description`: uma frase com o benefício, até 25 palavras.
+- O primeiro parágrafo mostra o resultado, nunca descreve o produto.
+- Estado padrão antes da ação. Onde fica em negrito com ">" e os rótulos exatos do
+  menu. Elemento de interface em negrito, com o texto exato da tela.
+- Exemplos do mundo de quem lê: loja, clínica, franquia, rede; nomes fictícios.
+- O texto do link diz o que a pessoa vai encontrar. Nunca "clique aqui".
+- Termos que a interface mostra em inglês ficam em inglês: Copilot, Scout, widget,
+  webhook, WABA, handoff, CSAT, SLA.
 
-## Important Files to Know
-- **`.mintignore`** - Files/folders to exclude from build
-- **`.github/`** - Git configuration and workflows
-- **`favicon.svg`** - Site icon
-- **`logo/light.svg` and `logo/dark.svg`** - Branding assets
+Vocabulário: pessoas (não gente); processos e etapas (não fluxos); o Tino atende, a IA
+responde (não automação, bot, chatbot); créditos (não tokens); vírgula, dois pontos ou
+frase nova (nunca travessão); afirmativa direta (nunca "é X, não Y", "nova era",
+"potencialize", "transforme", "piloto automático"); o que a tela mostra (nunca
+números-estatística ou promessa de resultado).
 
-## Common Tasks
-- **Update navigation**: Edit `docs.json` groups and pages array
-- **Change colors**: Modify `colors` section in `docs.json`
-- **Add API endpoint**: Create new file in `api-reference/endpoint/` and reference in docs.json
-- **Update branding**: Replace files in `logo/` directory
+## Blocos (Mintlify)
+
+| Papel | Componente |
+|---|---|
+| Limite, permissão, plano, comportamento padrão | `<Note>` |
+| Atalho, combinação útil | `<Tip>` |
+| Leituras no fim de um passo do guia | `<Info>` com **Saiba mais** e lista de links |
+| Ação irreversível, custo em créditos, risco | `<Warning>` |
+| Sequência de ações | `<Steps>` com `<Step title="verbo">` |
+| Artigos relacionados | `## Artigos relacionados` com `<CardGroup cols={2}>` |
+| Referência longa | tabela; `<Accordion>` só para listas de referência, nunca para esconder passos |
+
+Um destaque a cada 150 a 250 palavras, nunca dois seguidos. Sumário automático a
+partir de `##` e `###`; nunca `#` no corpo.
+
+## Capturas e vídeos
+
+As capturas ainda não foram feitas. Cada artigo marca o lugar exato com
+`{/* CAPTURA: images/<colecao>/<tela>-<acao>.png | alt: estado da tela | olhar: o que
+a pessoa deve olhar */}`, e os guias marcam `{/* VÍDEO: tema (duração) */}`. A lista
+completa sai com `grep -rn "CAPTURA:" --include=*.mdx .`.
+
+Quando a captura existir, troque o marcador por
+`<Frame caption="o que olhar"><img src="/images/..." alt="estado da tela" /></Frame>`.
+Especificação: PNG em 2x, largura útil mínima de 1.600 px, recorte no painel
+relevante, janela com cantos arredondados e sombra suave sobre fundo branco, alvo
+contornado por um retângulo fino (2 px, cantos arredondados, tinta #14120F). Sem setas,
+sem texto sobre a imagem, sem cursor. Dados sempre de uma conta de demonstração com
+nomes fictícios; nunca cliente real. Vídeo: 45 a 120 s, 16:9, no YouTube não listado,
+embutido com `<iframe>` abaixo do título do passo. Quando a tela muda, a captura muda no
+mesmo commit.
+
+## Cuidados do MDX
+
+- Nunca chaves `{` `}` nem `<` em texto corrido. Comentário só como `{/* ... */}`;
+  comentário HTML quebra o build. Variáveis de template como `{{nome}}` só dentro de
+  crase.
+- Frontmatter só com `title`, `sidebarTitle` e `description`, entre aspas duplas.
+- Links internos absolutos a partir da raiz, sem extensão. Ao renomear uma página,
+  registre um `redirect` no `docs.json`. Toda página nova entra no `docs.json` no mesmo
+  commit.
+
+## Antes de publicar
+
+- [ ] Um tipo de artigo, um recurso, título com o verbo certo.
+- [ ] `description` de uma frase com o benefício.
+- [ ] Caminho da tela com os rótulos exatos.
+- [ ] Marcador de captura em cada mudança de estado.
+- [ ] Nota de plano e de papel quando restringem.
+- [ ] Nada que a tela não mostre hoje; dúvida marcada com `CONFIRMAR`.
+- [ ] `python3 scripts/lint-central.py` e `npx mint broken-links` limpos.
+- [ ] Página no `docs.json`.

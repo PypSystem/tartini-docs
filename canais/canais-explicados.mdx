@@ -1,0 +1,77 @@
+---
+title: "Canais explicados"
+sidebarTitle: "Canais"
+description: "Veja as formas de falar com seus clientes dentro do Tartini e escolha o canal certo para cada situação."
+---
+
+Todo canal conectado vira uma porta de entrada para as conversas dos seus clientes, que chegam direto no Inbox da sua equipe. Você pode conectar mais de um ao mesmo tempo e decidir, canal por canal, se o Tino atende sozinho.
+
+<Note>Quem conecta canais: Administrador, Gestor da Empresa, Gestor de Área e Gestor de Unidade. A Conexão via API é só do Administrador.</Note>
+
+## Os canais disponíveis
+
+O Tartini conecta quatro tipos de canal:
+
+- **WhatsApp Business**: conexão por QR Code ou código de pareamento, o mesmo processo que você já usa no aplicativo do celular.
+- **WABA**: WhatsApp Business API, a conexão oficial da Meta.
+- **Chat Widget**: um chat de atendimento embutido no seu site.
+- **Conexão via API**: um jeito de o seu próprio sistema falar com o Tartini como se fosse mais um canal.
+
+## WhatsApp por QR Code ou WABA: qual escolher
+
+Os dois conectam seu número de WhatsApp ao Tartini, mas por caminhos diferentes.
+
+O WhatsApp Business por QR Code usa uma conexão não oficial: você escaneia um código com o celular, como faria em qualquer aplicativo espelhado do WhatsApp. É rápido para começar, mas a Meta pode banir números que usam esse tipo de conexão, e atualizações do WhatsApp podem causar desconexões.
+
+O WABA usa a API oficial da Meta. Exige um número exclusivo e uma conta Meta Business verificada, mas não corre o mesmo risco de banimento e permite enviar templates de mensagem aprovados. O faturamento do WABA é baseado no uso.
+
+<Tip>
+  Comece pelo QR Code se quiser testar rápido. Para uma operação estável, migre para o WABA assim que puder.
+</Tip>
+
+## O Chat Widget
+
+O Chat Widget coloca um chat de atendimento no seu site. Você personaliza cores, mensagem de boas-vindas e posição, e cada Unidade pode ter o seu próprio widget.
+
+## A Conexão via API
+
+A Conexão via API integra o seu sistema diretamente com o Tartini, usando tokens de acesso. É o caminho de quem tem uma equipe técnica e quer enviar ou receber dados por conta própria.
+
+## Limite de canais por Unidade
+
+Cada Unidade pode ter um canal de WhatsApp Business (QR Code), um canal WABA e um Chat Widget, cada um conectado uma única vez. Para conectar outro número do mesmo tipo, use outra Unidade.
+
+## Status de um canal
+
+Todo canal mostra um status:
+
+- **Conectado**: recebendo e enviando mensagens normalmente.
+- **Conectando**: a conexão ainda está em andamento.
+- **Desconectado**: o canal parou de funcionar e precisa ser reconectado.
+
+<Note>
+  O WhatsApp Business por QR Code pode se desconectar sozinho quando a sessão do celular termina. É só reconectar escaneando um novo código.
+</Note>
+
+## Perguntas frequentes
+
+### Posso conectar mais de um número de WhatsApp?
+
+Sim, um por Unidade, seja pelo QR Code ou pelo WABA.
+
+### O que muda para o cliente que fala pelo widget em vez do WhatsApp?
+
+Nada na experiência de atendimento: a conversa chega da mesma forma no Inbox da sua equipe, com o canal identificado.
+
+### Preciso escolher entre QR Code e WABA para sempre?
+
+Não. Você pode manter os dois conectados ou trocar quando quiser, seguindo os passos de cada canal.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Conecte o WhatsApp por QR Code" href="/canais/whatsapp-qr-code">Escaneie um código e comece a atender pelo WhatsApp.</Card>
+  <Card title="Conecte o WhatsApp Business API (WABA)" href="/canais/whatsapp-business-api">A conexão oficial da Meta, passo a passo.</Card>
+  <Card title="Instale o Chat Widget no seu site" href="/canais/chat-widget">Um chat de atendimento direto no seu site.</Card>
+  <Card title="Resolva problemas de conexão" href="/canais/problemas-de-conexao">Sintomas comuns e como corrigir.</Card>
+</CardGroup>

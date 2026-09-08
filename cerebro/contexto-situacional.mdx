@@ -1,0 +1,90 @@
+---
+title: "Informe um contexto temporário"
+sidebarTitle: "Contexto Situacional"
+description: "Avise o Tino sobre manutenções, promoções ou mudanças de horário, com data de início e fim definidas por você."
+---
+
+Um contexto situacional avisa o Tino sobre uma situação passageira, como uma manutenção programada ou uma promoção, sem precisar mexer nas regras permanentes.
+
+<Note>
+  Quem vê: Administrador e Gestor da Empresa. Exige o plano Scale.
+</Note>
+
+## Crie um contexto
+
+Por padrão, um contexto novo não tem data de início nem de fim, e vale desde já.
+
+Onde fica: **Cérebro > Operações > Contexto Situacional**.
+
+<Steps>
+  <Step title="Abra o formulário">Clique em **Adicionar contexto**.</Step>
+  <Step title="Escreva o título">Preencha o título, por exemplo "Manutenção programada".</Step>
+  <Step title="Descreva a instrução">Explique a situação e como o Tino deve se comportar durante esse período.</Step>
+  <Step title="Defina o período (opcional)">Preencha **Início** e **Fim**, com data e hora, se o contexto tiver prazo.</Step>
+  <Step title="Salve">Clique em **Adicionar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/contexto-situacional-criar.png | alt: Formulário de novo contexto situacional com título, instrução e campos de data Início e Fim preenchidos | olhar: o interruptor Ativo/Inativo ao lado da lixeira */}
+
+<Note>
+  Título e instrução são obrigatórios. As datas são opcionais: sem elas, o contexto vale por tempo indeterminado.
+</Note>
+
+## Entenda o status de cada contexto
+
+Cada contexto mostra um dos quatro status a seguir, calculado automaticamente a partir das datas e do interruptor Ativo/Inativo:
+
+| Status | Quando aparece |
+|---|---|
+| Ativo | Dentro do período definido, ou sem datas, com o contexto ligado. |
+| Agendado | A data de início ainda está no futuro. |
+| Expirado | A data de fim já passou. |
+| Inativo | O interruptor está desligado, independente das datas. |
+
+<Note>
+  Desligar o interruptor sempre mostra Inativo, mesmo que o contexto esteja dentro do período. O status é recalculado toda vez que a tela é aberta.
+</Note>
+
+## Edite ou exclua um contexto
+
+Onde fica: **Cérebro > Operações > Contexto Situacional**, clique em qualquer card da lista.
+
+<Steps>
+  <Step title="Abra o card">Clique no contexto que quer alterar.</Step>
+  <Step title="Ajuste os campos">Altere o título, a instrução, as datas ou o interruptor Ativo/Inativo.</Step>
+  <Step title="Salve ou exclua">Clique em **Salvar**, ou no ícone de lixeira **Excluir contexto**, com confirmação.</Step>
+</Steps>
+
+## Revise as sugestões do Tino
+
+Onde fica: **Cérebro > Operações > Contexto Situacional**, bloco **Sugestões do Tino**, quando há alguma pendente.
+
+<Steps>
+  <Step title="Leia a sugestão">Confira o título e a instrução.</Step>
+  <Step title="Decida">Clique em **Aceitar**, **Editar** ou **Negar**.</Step>
+</Steps>
+
+<Note>
+  Uma sugestão não vale no atendimento antes de ser aceita. Editar e salvar já aprova o contexto no mesmo ato.
+</Note>
+
+## Perguntas frequentes
+
+### Um contexto sem data de início ou fim vale para sempre?
+
+Sim, desde que esteja ativo. Sem datas, o status mostrado é Ativo e o período aparece como "sem período definido".
+
+### Se eu desativar um contexto que está dentro do período, o que acontece?
+
+O status mostrado passa a ser Inativo, mesmo que a data ainda esteja em vigor. O interruptor sempre tem prioridade sobre as datas.
+
+### Quantos contextos situacionais posso ter?
+
+Não há limite de quantidade em vigor hoje.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Defina horários e fuso da IA" href="/cerebro/disponibilidade">Configure os horários fixos de atendimento.</Card>
+  <Card title="Configure o roteamento" href="/cerebro/roteamento">Defina quando o Tino transfere para uma pessoa.</Card>
+</CardGroup>

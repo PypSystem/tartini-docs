@@ -1,0 +1,81 @@
+---
+title: "Puxe contatos de sistemas externos"
+sidebarTitle: "Contatos de Campanha"
+description: "Conecte a chave do Varejo Online e veja o status da integração com a SAN para trazer dados de clientes para o Tartini."
+---
+
+Conectar o Varejo Online guarda a chave da sua conta com segurança e deixa o Tartini pronto para usar os dados do seu sistema de gestão em campanhas.
+
+<Note>
+  Campanhas é um recurso dos planos Scale e Enterprise. Quem configura: só o Administrador (Empresa) vê esta tela.
+</Note>
+
+## Configure a chave do Varejo Online
+
+Por padrão, a integração aparece como **Não configurada**.
+
+Onde fica: **Configurações > Integrações > Contatos de Campanha**.
+
+<Steps>
+  <Step title="Abra a tela">Vá em **Configurações > Integrações > Contatos de Campanha**.</Step>
+  <Step title="Cole a chave">No cartão **Varejo Online**, cole a chave da API no campo **Chave API**.</Step>
+  <Step title="Salve">Clique em **Salvar Chave**.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/contatos-campanha-varejo-online.png | alt: Cartão Varejo Online com o campo de chave API e o selo de status Ativa | olhar: o selo de status ao lado do nome Varejo Online */}
+
+Depois de salva, o cartão mostra o selo **Ativa** e a chave mascarada. Para trocar, use **Alterar Chave**.
+
+<Note>
+  Uma chave inválida mostra o alerta **Chave API Inválida**. A chave é criptografada e armazenada de forma segura, e é validada pelo próprio Varejo Online ao salvar.
+</Note>
+
+---
+
+## Confira o status da integração com a SAN
+
+O cartão **SAN Internet** aparece nesta tela quando a sua empresa tem essa integração disponível, com o selo **Ativa** ou **Não configurada**.
+
+Essa integração é configurada por variáveis de ambiente do servidor, não por um formulário na tela. Se precisar ativá-la ou revisá-la, entre em contato com o administrador do sistema.
+
+<Steps>
+  <Step title="Veja o status atual">Abra **Configurações > Integrações > Contatos de Campanha** e confira o selo no cartão **SAN Internet**.</Step>
+  <Step title="Atualize se precisar">Clique em **Atualizar Status** para buscar o status mais recente das duas integrações.</Step>
+</Steps>
+
+## O que essas integrações fazem hoje
+
+Conectar o Varejo Online e conferir a SAN aqui prepara a base para trazer clientes desses sistemas como contatos de campanha. O assistente de criação de campanhas atual, porém, só aceita lista de contatos em arquivo CSV: ele ainda não oferece um passo de busca dentro dessas integrações.
+
+<Note>
+  Se você configurou a chave e não encontra a opção de importar direto pelo assistente, é porque essa etapa não está no assistente padrão hoje. Continue usando o CSV, descrito em [Importe os contatos da campanha](/campanhas/contatos-e-csv), até que a busca apareça ali.
+</Note>
+
+{/* CONFIRMAR: se e quando a busca de contatos do Varejo Online e da SAN passa a ficar disponível dentro do assistente de criação atual. */}
+
+## Perguntas frequentes
+
+### Quem pode configurar essas integrações?
+
+Só quem tem o papel Administrador (Empresa). Outros papéis não veem o tile **Contatos de Campanha** em Configurações.
+
+### A chave do Varejo Online expira?
+
+A tela avisa quando a chave salva deixa de ser válida, com o alerta **Chave API Inválida**. Nesse caso, cole uma chave nova em **Alterar Chave**.
+
+### Como ativo a integração com a SAN?
+
+Ela depende de uma configuração feita pelo administrador do sistema, fora desta tela. Fale com o suporte para revisar a disponibilidade dela na sua conta.
+
+### Configurei a chave, mas não vejo os contatos na minha campanha
+
+Hoje a importação por essas integrações não alimenta o assistente de criação diretamente. Use o CSV para subir a lista de contatos.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Importe os contatos da campanha" href="/campanhas/contatos-e-csv">O formato de CSV aceito hoje pelo assistente.</Card>
+  <Card title="Conecte ferramentas externas à IA" href="/integracoes/conectores">Outras integrações do Tartini.</Card>
+  <Card title="Campanhas explicadas" href="/campanhas/campanhas-explicadas">Visão geral da área de Campanhas.</Card>
+  <Card title="Crie uma campanha" href="/campanhas/crie-uma-campanha">O assistente em três passos.</Card>
+</CardGroup>

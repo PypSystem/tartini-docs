@@ -1,0 +1,98 @@
+---
+title: "Importe os contatos da campanha"
+sidebarTitle: "Contatos e CSV"
+description: "Monte a planilha certa, envie e confira a prévia antes de o Tino começar a abordar a lista."
+---
+
+Uma lista bem formatada entra sem erro no assistente e chega ao Tino com todos os dados de contexto prontos para a conversa.
+
+<Note>
+  Campanhas é um recurso dos planos Scale e Enterprise. Quem envia a lista: Administrador (Empresa), Gestor da Empresa, Gestor de Área e Gestor de Unidade, no passo **Público** do assistente de criação.
+</Note>
+
+## Monte o arquivo CSV
+
+Por padrão, o assistente não aceita nenhum outro formato de planilha, só CSV separado por vírgula.
+
+Onde fica: passo 2 do assistente, **Campanhas > Campanhas > Nova campanha**, com a origem **Tenho uma lista**.
+
+<Steps>
+  <Step title="Baixe o modelo">Clique em **Baixar modelo de planilha ↓** para pegar um CSV pronto com as colunas certas.</Step>
+  <Step title="Preencha nome e telefone">São as duas colunas obrigatórias. Sem elas, a linha inteira é ignorada.</Step>
+  <Step title="Adicione colunas extras se quiser">Qualquer outra coluna vira dado de contexto do contato, disponível para o Tino usar na conversa e para o campo **valor por conversão**.</Step>
+</Steps>
+
+<Note>
+  Colunas reconhecidas sem diferenciar maiúsculas: `nome` ou `name`; `telefone`, `phone`, `celular` ou `whatsapp`; `email` ou `e-mail`. Qualquer outro cabeçalho vira dado de contexto com o nome original da coluna, por exemplo `valor_devido`.
+</Note>
+
+---
+
+## Envie o arquivo e confira a prévia
+
+Por padrão, nenhum contato entrou ainda: a área de envio está vazia.
+
+Onde fica: mesmo passo do assistente, logo abaixo da escolha de origem.
+
+<Steps>
+  <Step title="Envie o CSV">Arraste o arquivo para a área de envio ou clique para escolher no seu computador.</Step>
+  <Step title="Leia a prévia">O cartão mostra o nome do arquivo, o total de linhas, os contatos válidos e as linhas ignoradas por falta de nome ou telefone.</Step>
+  <Step title="Confira as colunas detectadas">Uma faixa lista as colunas que o assistente reconheceu: nome, telefone, email quando houver, e as colunas extras.</Step>
+  <Step title="Troque o arquivo se precisar">Use **trocar arquivo** para enviar outro CSV no lugar do atual.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/csv-previa-importacao.png | alt: Cartão de prévia do CSV enviado com contagem de contatos válidos e linhas ignoradas | olhar: os contadores de contatos válidos e linhas ignoradas */}
+
+<Note>
+  O leitor não interpreta vírgulas dentro de um campo, então evite valores com vírgula (como "Rua A, 123") direto no CSV. Se precisar, use ponto e vírgula dentro do campo, não vírgula.
+</Note>
+
+## Erros comuns
+
+- **Nenhum contato válido**: o CSV precisa das colunas nome e telefone reconhecíveis. Confira os cabeçalhos.
+- **Erro ao processar arquivo CSV**: o formato do arquivo não é um CSV válido. Reabra e salve de novo a partir de uma planilha.
+- **Linhas ignoradas**: toda linha sem nome ou sem telefone é descartada silenciosamente da contagem de contatos válidos, sem travar o envio das demais.
+
+## Campanhas em várias Unidades
+
+Se você tem acesso a mais de uma Unidade, pode replicar a mesma lista para outras Unidades no momento da criação.
+
+<Steps>
+  <Step title="Marque as Unidades">Na seção **Replicar para outras Unidades**, marque as Unidades além da atual. A Unidade em que você está fica sempre marcada, com o selo **atual**.</Step>
+  <Step title="Confirme">O assistente cria uma campanha por Unidade selecionada, com a mesma lista de contatos. O canal de cada Unidade é escolhido sozinho, exceto o da Unidade atual, que usa o canal escolhido no passo 3.</Step>
+</Steps>
+
+<Note>
+  Essa opção só aparece na criação de uma campanha de lista. Não é possível replicar depois de criada, nem trocar a origem de uma campanha existente.
+</Note>
+
+## Perguntas frequentes
+
+### Meu CSV com ponto e vírgula não carrega
+
+O leitor do assistente usa vírgula como separador. Use o modelo em **Baixar modelo de planilha ↓** como referência de formato.
+
+### Uma coluna pode virar o valor de uma conversão?
+
+Sim. Qualquer coluna extra do CSV vira dado de contexto do contato e pode ser escolhida em **valor por conversão › Coluna da lista**, no passo 1 do assistente.
+
+### Existe validação de formato de telefone?
+
+O assistente não valida o formato na hora do envio. Prefira o formato internacional, com código do país, para reduzir erro de entrega.
+
+### Posso trocar a lista depois de criar a campanha?
+
+Não pelo assistente. Depois de criada, a lista de contatos é acompanhada execução por execução no painel da campanha, sem opção de substituir o arquivo.
+
+### Consigo puxar contatos direto de outro sistema, sem CSV?
+
+Hoje não, pelo assistente atual: ele só aceita lista em CSV. Veja [Puxe contatos de sistemas externos](/campanhas/contatos-de-campanha) para entender o que a integração com Varejo Online e SAN já cobre.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Crie uma campanha" href="/campanhas/crie-uma-campanha">O assistente em três passos.</Card>
+  <Card title="Monte a estrutura em Áreas e Unidades" href="/equipe/areas-e-unidades">Como as Unidades se organizam.</Card>
+  <Card title="Acompanhe os resultados" href="/campanhas/resultados">Onde ver quantos contatos entraram e converteram.</Card>
+  <Card title="Puxe contatos de sistemas externos" href="/campanhas/contatos-de-campanha">Conecte Varejo Online e SAN.</Card>
+</CardGroup>

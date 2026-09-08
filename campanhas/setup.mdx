@@ -1,0 +1,91 @@
+---
+title: "Prepare a Unidade para campanhas"
+sidebarTitle: "Prepare a Unidade"
+description: "Deixe o canal, o template de abertura e os créditos prontos para que o assistente de campanhas não trave em nenhum passo."
+---
+
+Uma Unidade pronta evita que o assistente de criação pare no meio do caminho pedindo canal ou template. Três coisas precisam estar certas antes de criar a primeira campanha.
+
+<Note>
+  Campanhas é um recurso dos planos Scale e Enterprise. Quem prepara: Administrador (Empresa), Gestor da Empresa, Gestor de Área e Gestor de Unidade.
+</Note>
+
+## Conecte um canal de WhatsApp na Unidade
+
+Por padrão, uma Unidade nova não tem canal de WhatsApp conectado. Sem canal, o passo **Lançamento** do assistente mostra o aviso **Esta unidade não tem canal WhatsApp conectado**.
+
+Onde fica: **Configurações > Canais**.
+
+<Steps>
+  <Step title="Abra a tela de canais">Vá em **Configurações > Canais**.</Step>
+  <Step title="Conecte um número">Conecte o **WhatsApp Business** por QR Code ou código de pareamento, ou conecte o **WABA** (WhatsApp Business API) se já tiver uma conta oficial na Meta.</Step>
+  <Step title="Confirme o status">O canal precisa aparecer conectado para entrar na lista do assistente de campanhas.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/setup-canal-conectado.png | alt: Tela de Configurações > Canais com um canal WhatsApp conectado | olhar: o selo de status do canal */}
+
+<Note>
+  O assistente só lista canais da Unidade atual que estejam conectados. Um canal de outra Unidade não aparece, mesmo que você tenha acesso a ela.
+</Note>
+
+---
+
+## Aprove o template de abertura no WABA
+
+Isso só se aplica a canal WhatsApp oficial (WABA). Por padrão, um canal WABA novo não tem nenhum template aprovado.
+
+A Meta exige um template pré-aprovado para abrir uma conversa por um canal oficial. Sem um template **Aprovado**, o assistente barra a criação da campanha com o erro **Selecione um template de abertura aprovado, o canal oficial exige**.
+
+Onde fica: **Configurações > Canais**, no canal WABA, em **Templates**.
+
+<Steps>
+  <Step title="Abra os templates do canal">Vá em **Configurações > Canais**, abra o canal WABA e entre em **Templates WhatsApp**.</Step>
+  <Step title="Sincronize ou crie">Clique em **Sincronizar** para trazer templates já existentes na Meta, ou em **Novo Template** para criar um.</Step>
+  <Step title="Acompanhe a aprovação">O status muda para **Aprovado** quando a Meta libera o template. Isso acontece em tempo real na tela.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/setup-template-aprovado.png | alt: Lista de templates do canal WABA com um template com selo Aprovado | olhar: a coluna Status */}
+
+<Note>
+  Um follow-up enviado 24 horas ou mais depois da primeira mensagem também exige template aprovado em canal oficial. Se a campanha tiver follow-ups nesse intervalo, prepare um template para cada um. Veja [Crie templates de mensagem do WhatsApp](/canais/templates).
+</Note>
+
+---
+
+## Garanta créditos disponíveis
+
+Cada mensagem que o Tino envia numa campanha consome créditos da franquia mensal da empresa. Por padrão, essa franquia é definida pela sua assinatura.
+
+Onde fica: **Configurações > Cobrança > Créditos**.
+
+<Steps>
+  <Step title="Confira o saldo">Vá em **Configurações > Cobrança > Créditos** e veja quanto resta na franquia do mês.</Step>
+  <Step title="Ajuste se precisar">Se a campanha exigir mais créditos do que a franquia atual, aumente o plano ou adicione créditos antes de iniciar o envio.</Step>
+</Steps>
+
+<Note>
+  Se os créditos do mês acabarem, uma faixa amarela avisa no topo da tela. Se acabarem inclusive os créditos extras, uma faixa vermelha avisa que a IA para de responder. As duas levam direto para **Configurações > Cobrança > Créditos**. Veja [O que acontece quando os créditos acabam](/creditos/quando-os-creditos-acabam).
+</Note>
+
+## Perguntas frequentes
+
+### Preciso de template mesmo se meu canal não é o WABA?
+
+Não. Só canais oficiais (WABA) exigem template aprovado. Um número não-oficial conectado por QR Code não tem essa exigência.
+
+### Posso criar a campanha antes de o template ser aprovado?
+
+Não, se o canal for WABA. O assistente bloqueia o passo **Lançamento** até você escolher um template com o selo **Aprovado**.
+
+### Quanto custa uma campanha em créditos?
+
+O assistente mostra uma estimativa local no rodapé enquanto você monta a campanha, calculada pelo número de contatos. O valor final depende de como a conversa evolui, porque cada mensagem trocada consome créditos.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Conecte o WhatsApp Business API (WABA)" href="/canais/whatsapp-business-api">Conecte um canal oficial da Meta.</Card>
+  <Card title="Crie templates de mensagem do WhatsApp" href="/canais/templates">Crie, sincronize e acompanhe a aprovação.</Card>
+  <Card title="Créditos explicados" href="/visao-geral/creditos-explicados">Como a franquia mensal funciona.</Card>
+  <Card title="Crie uma campanha" href="/campanhas/crie-uma-campanha">O assistente em três passos.</Card>
+</CardGroup>

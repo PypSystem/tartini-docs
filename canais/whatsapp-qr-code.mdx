@@ -1,0 +1,96 @@
+---
+title: "Conecte o WhatsApp por QR Code"
+sidebarTitle: "WhatsApp por QR Code"
+description: "Ligue seu número de WhatsApp ao Tartini em minutos, escaneando um código com o celular."
+---
+
+Depois de conectado, as mensagens do seu número de WhatsApp passam a chegar direto no Inbox da sua equipe. Você pode reconectar ou trocar de número sempre que precisar.
+
+<Note>Quem conecta: Administrador, Gestor da Empresa, Gestor de Área e Gestor de Unidade. Disponível em todos os planos.</Note>
+
+## Conecte um número por QR Code
+
+Por padrão, nenhuma Unidade tem um canal de WhatsApp Business conectado.
+
+Onde fica: **Configurações > Canais > WhatsApp Business**.
+
+<Steps>
+  <Step title="Abra a tela de WhatsApp Business">Vá em **Configurações > Canais > WhatsApp Business** e clique em **Conectar**.</Step>
+  <Step title="Aceite os riscos da conexão">No modal **Aceitar riscos**, leia os avisos e clique em **Aceito os riscos, continuar**.</Step>
+  <Step title="Preencha os dados do canal">Escolha a **Entidade** e dê um **Nome do canal** que ajude sua equipe a identificar o número depois.</Step>
+  <Step title="Crie o canal">Clique em **Criar canal**. O modal **Conectar WhatsApp** abre na aba **QR Code**.</Step>
+  <Step title="Escaneie o código">Abra o WhatsApp no celular e escaneie o QR Code na tela. A conexão fecha o modal sozinha assim que terminar.</Step>
+</Steps>
+
+{/* CAPTURA: images/canais/whatsapp-qr-code-conectar.png | alt: modal Conectar WhatsApp com o QR Code em destaque | olhar: o botão Gerar novo QR Code, caso o código expire */}
+
+<Note>
+  O WhatsApp Business usa uma conexão não oficial. A Meta pode banir números conectados dessa forma, e atualizações do WhatsApp podem causar desconexões. Para uma operação mais estável, considere o [WABA](/canais/whatsapp-business-api).
+</Note>
+
+---
+
+## Conecte por código de pareamento
+
+Se preferir não usar a câmera, conecte digitando um código direto no WhatsApp do celular.
+
+<Steps>
+  <Step title="Abra a aba Número">No modal **Conectar WhatsApp**, clique na aba **Número**.</Step>
+  <Step title="Informe o celular">Digite o número com DDD, sem o +55, que já vem preenchido.</Step>
+  <Step title="Gere o código">Clique em **Confirmar número**. O Tartini mostra um código de pareamento.</Step>
+  <Step title="Digite o código no WhatsApp">No celular, abra o **WhatsApp**, entre em **Aparelhos conectados**, toque em **Conectar um aparelho**, selecione **Conectar com número** e digite o código.</Step>
+</Steps>
+
+<Note>Essa forma de conexão vale só para números brasileiros.</Note>
+
+---
+
+## Reconecte um canal desconectado
+
+Por padrão, um canal desconectado fica parado até alguém reconectar.
+
+<Steps>
+  <Step title="Abra a lista de números">Vá em **Configurações > Canais > WhatsApp Business**.</Step>
+  <Step title="Abra o menu do canal">Clique no ⋮ ao lado do canal desconectado e escolha **Sincronizar**.</Step>
+  <Step title="Escaneie de novo">Repita a leitura do QR Code ou o código de pareamento, como na primeira conexão.</Step>
+</Steps>
+
+<Note>
+  Quando o WhatsApp desconecta sozinho, o Tartini avisa sua equipe com uma notificação que leva direto para essa tela.
+</Note>
+
+---
+
+## Desconecte um canal
+
+<Steps>
+  <Step title="Abra o menu do canal">Na lista de números, clique no ⋮ ao lado do canal conectado.</Step>
+  <Step title="Escolha Desconectar">Clique em **Desconectar**. O canal para de receber mensagens, mas continua na lista para ser reconectado depois.</Step>
+</Steps>
+
+<Warning>
+  Excluir um canal, diferente de desconectar, remove o canal da lista. Para atender por esse número de novo, é preciso conectar um canal do zero.
+</Warning>
+
+## Perguntas frequentes
+
+### O QR Code expirou antes de eu escanear. E agora?
+
+Clique em **Gerar novo QR Code** dentro do mesmo modal e escaneie o novo código.
+
+### Posso conectar dois números de WhatsApp Business na mesma Unidade?
+
+Não. Cada Unidade tem um canal de WhatsApp Business por vez. Para outro número, use outra Unidade.
+
+### Por que meu WhatsApp caiu sozinho?
+
+A conexão por QR Code depende da sessão do WhatsApp no celular. Trocas de aparelho, quedas de internet ou atualizações do WhatsApp podem encerrar essa sessão. É só sincronizar de novo.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Canais explicados" href="/canais/canais-explicados">Os canais disponíveis no Tartini e quando usar cada um.</Card>
+  <Card title="Conecte o WhatsApp Business API (WABA)" href="/canais/whatsapp-business-api">A conexão oficial da Meta, mais estável.</Card>
+  <Card title="Resolva problemas de conexão" href="/canais/problemas-de-conexao">Sintomas comuns e como corrigir.</Card>
+  <Card title="Ligue o Tino em um canal" href="/tino/ia-por-canal">Configure horários e follow-up para este número.</Card>
+</CardGroup>

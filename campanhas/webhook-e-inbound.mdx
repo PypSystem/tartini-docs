@@ -1,0 +1,109 @@
+---
+title: "Dispare campanhas por webhook ou por mensagem recebida"
+sidebarTitle: "Webhook e inbound"
+description: "Conecte seu sistema para que cada novo contato entre na campanha sozinho, ou ative o Tino quando alguém escrever uma palavra-chave."
+---
+
+Nem toda campanha começa com uma lista pronta. Duas outras origens colocam o Tino para agir sem que você precise subir um arquivo: seu próprio sistema avisando cada novo contato, ou uma palavra que o cliente escreve primeiro.
+
+<Note>
+  Campanhas é um recurso dos planos Scale e Enterprise. Quem configura: Administrador (Empresa), Gestor da Empresa, Gestor de Área e Gestor de Unidade.
+</Note>
+
+## Campanha por webhook
+
+Uma campanha de webhook deixa seu sistema, como o CRM, o e-commerce ou a cobrança, avisar o Tartini toda vez que existir um novo contato para abordar, por exemplo um carrinho abandonado. Cada contato enviado já entra na campanha, sem mais nenhum passo seu.
+
+Onde fica: passo 2 do assistente, origem **Meu sistema envia**.
+
+<Steps>
+  <Step title="Escolha a origem">No passo **Público**, marque **Meu sistema envia**.</Step>
+  <Step title="Continue o assistente">Não há nada para preencher nessa origem além do restante da campanha (missão, canal, horários). A URL só existe depois de criar.</Step>
+  <Step title="Crie a campanha">Ao clicar em **Criar campanha**, um modal **Conecte seu sistema** aparece com a URL do webhook e o token secreto.</Step>
+  <Step title="Copie a URL e o token">Use os botões **copiar** ao lado de cada um. O token fica oculto por padrão; clique em **revelar** para vê-lo.</Step>
+  <Step title="Entregue ao seu time técnico">Envie a URL e o token para quem configura o seu sistema. Ele precisa enviar um POST para essa URL a cada novo contato, com o nome e o telefone no corpo da mensagem.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/webhook-conecte-seu-sistema.png | alt: Modal Conecte seu sistema com a URL do webhook, o token oculto e o exemplo de payload | olhar: os botões copiar da URL e do token */}
+
+<Note>
+  A URL e o token também ficam disponíveis depois, a qualquer momento, na aba **Detalhes** do painel da campanha. Você não precisa guardar o modal da criação.
+</Note>
+
+O exemplo de payload que aparece no modal e na aba **Detalhes** mostra o formato esperado: o nome e o telefone do contato num bloco, e qualquer outro dado (como o valor do carrinho) num segundo bloco, que vira dado de contexto disponível para o Tino usar na conversa. Os detalhes técnicos de assinatura e formato completo do payload ficam na aba de desenvolvedores.
+
+### Escolha quando o Tino aborda
+
+<Steps>
+  <Step title="Imediato">**Disparar imediatamente ao receber** aborda cada contato assim que ele chega, 24 horas por dia.</Step>
+  <Step title="Dentro da janela">**Somente dentro da janela de horários** espera o próximo horário configurado se o contato chegar fora dele.</Step>
+</Steps>
+
+<Note>
+  Um contato que chega fora da janela de horários fica na **Fila de Eventos**, na aba de mesmo nome no painel da campanha, e é processado no próximo horário disponível, sem ação sua.
+</Note>
+
+### Troque o token se precisar
+
+Se o token vazar ou se você quiser invalidar a URL antiga, regenere o token na aba **Detalhes** do painel da campanha.
+
+<Warning>
+  Regenerar o token derruba a URL antiga na hora. Atualize a URL em todos os sistemas que usam esse webhook antes de regenerar, para não perder contatos novos.
+</Warning>
+
+---
+
+## Campanha por palavra-chave (inbound)
+
+Uma campanha de palavra-chave ativa o Tino quando um contato escreve algo que combina com um padrão que você define, por exemplo uma palavra de uma promoção.
+
+Onde fica: passo 2 do assistente, origem **O cliente chega até mim**.
+
+<Steps>
+  <Step title="Escolha a origem">No passo **Público**, marque **O cliente chega até mim**.</Step>
+  <Step title="Adicione as palavras-chave">Digite cada palavra e pressione Enter. Remova uma com o **X** ao lado dela.</Step>
+  <Step title="Escolha o tipo de correspondência">**Contém** (padrão), **Igual a**, **Começa com**, **Termina com** ou **Regex**, para quem precisa de um padrão mais avançado.</Step>
+  <Step title="Defina a tag aplicada ao contato">Escolha uma cor e escreva o texto da tag, por exemplo `BF25`. Ela marca o contato assim que ele escreve a palavra-chave.</Step>
+  <Step title="Ajuste as opções finas">Marque **Diferenciar maiúsculas** se quiser que a correspondência seja sensível a caixa. **Aplicar somente na primeira mensagem** vem marcada por padrão, para o gatilho não repetir a cada mensagem do contato.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/inbound-palavras-chave.png | alt: Passo Público com os chips de palavras-chave, o tipo de correspondência e a tag colorida | olhar: os chips de palavras-chave e o seletor de cor da tag */}
+
+Ao criar, a campanha já nasce **Ativa**, escutando as palavras configuradas. Não há passo de conexão externa nessa origem: tudo acontece dentro do Tartini.
+
+## Onde acompanhar depois de criada
+
+- Painel da campanha, aba **Detalhes**: URL e token do webhook, ou o padrão e a tag da palavra-chave.
+- Painel da campanha, aba **Fila de Eventos** (webhook) ou **Execuções** (palavra-chave): um registro por contato que entrou.
+- Inbox: as conversas abertas por uma campanha mostram um chip **Campanha**.
+
+## Perguntas frequentes
+
+### Perdi a URL do webhook, como recupero?
+
+Abra o painel da campanha, aba **Detalhes**. A URL e o botão de copiar continuam lá.
+
+### O que acontece com um contato que chega fora da janela de horários?
+
+Ele entra na **Fila de Eventos** e é processado assim que a janela abrir de novo, sem ação sua.
+
+### Posso cancelar um evento que está esperando na fila?
+
+Não pela interface hoje. Ele aguarda o próximo horário disponível.
+
+### A campanha de palavra-chave repete a cada mensagem do mesmo contato?
+
+Só se você desmarcar **Aplicar somente na primeira mensagem**, que vem marcada por padrão.
+
+### Posso trocar de webhook para lista depois de criar?
+
+Não. A origem dos contatos é fixada na criação e não muda na edição.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Crie uma campanha" href="/campanhas/crie-uma-campanha">O assistente em três passos.</Card>
+  <Card title="Receba eventos no seu sistema" href="/integracoes/webhooks">Outros webhooks do Tartini.</Card>
+  <Card title="Acompanhe os resultados" href="/campanhas/resultados">Onde ver as conversas de cada origem.</Card>
+  <Card title="Gerencie os contatos" href="/inbox/contatos">A tag aplicada por uma campanha de palavra-chave.</Card>
+</CardGroup>

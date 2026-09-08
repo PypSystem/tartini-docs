@@ -1,0 +1,91 @@
+---
+title: "Instale o Chat Widget no seu site"
+sidebarTitle: "Chat Widget"
+description: "Adicione um chat de atendimento ao seu site e receba as conversas direto no Inbox da sua equipe."
+---
+
+Com o Chat Widget instalado, qualquer visitante do seu site pode abrir uma conversa que chega direto no Inbox, junto com os outros canais.
+
+<Note>Quem ativa e configura: Administrador, Gestor da Empresa, Gestor de Área e Gestor de Unidade. Disponível em todos os planos; ligar o Tino no widget é do plano Scale.</Note>
+
+## Ative o Chat Widget numa Unidade
+
+Por padrão, nenhuma Unidade tem um widget ativo.
+
+Onde fica: **Configurações > Canais > Chat Widget**.
+
+<Steps>
+  <Step title="Comece um novo widget">Clique em **Novo widget** e escolha a Unidade, ou clique em **Ativar** direto na linha da Unidade desejada.</Step>
+  <Step title="Escolha onde as conversas aparecem">Marque **Usar entidade atual** para juntar as conversas do widget aos outros canais, ou **Criar entidade dedicada** para deixá-las num Inbox separado.</Step>
+  <Step title="Dê um nome ao agente">Preencha **Nome do agente**, o nome que aparece para o visitante no cabeçalho do chat.</Step>
+  <Step title="Ative">Clique em **Ativar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/canais/chat-widget-ativar.png | alt: tela de ativação do Chat Widget com as opções de entidade | olhar: a diferença entre entidade atual e entidade dedicada */}
+
+---
+
+## Instale o código no seu site
+
+Onde fica: dentro do widget da Unidade, seção **Chave pública & Integração**.
+
+<Steps>
+  <Step title="Abra o widget da Unidade">Na lista, clique em **Gerenciar** ao lado da Unidade.</Step>
+  <Step title="Copie o snippet">Na seção **Chave pública & Integração**, copie o código em **Snippet de integração**.</Step>
+  <Step title="Cole no seu site">Peça para quem cuida do seu site colar esse código antes do fechamento da tag `</body>`, em todas as páginas onde o chat deve aparecer.</Step>
+</Steps>
+
+<Note>
+  Se o seu site já tem login de usuário, existe uma configuração avançada para identificar quem está conversando. Quem cuida do seu sistema encontra os detalhes junto do snippet, no bloco **Sistema com login**.
+</Note>
+
+---
+
+## Personalize a aparência
+
+<Steps>
+  <Step title="Abra a Configuração">No widget da Unidade, vá até a seção **Configuração**.</Step>
+  <Step title="Ajuste cor, mensagem e posição">Defina **Cor primária**, **Mensagem de boas-vindas** e **Posição no site**.</Step>
+  <Step title="Escolha o estilo do botão">Em **Estilo do botão**, escolha entre **Bolinha**, **Expandido** ou **Ícone da marca**.</Step>
+  <Step title="Salve">Clique em **Salvar alterações**.</Step>
+</Steps>
+
+{/* CAPTURA: images/canais/chat-widget-preview.png | alt: tela de personalização do widget com o preview ao lado | olhar: como cada ajuste aparece no preview em tempo real */}
+
+<Note>
+  O preview ao lado mostra o widget como o visitante vai ver, incluindo o nome do agente e a mensagem de boas-vindas.
+</Note>
+
+---
+
+## Ligue o Tino no widget
+
+Por padrão, o Tino fica desligado em todo widget novo.
+
+<Steps>
+  <Step title="Escolha os setores de transferência">Na seção **Configurações do chat**, marque em **Setores disponíveis para transferência** quais equipes podem receber uma conversa do Tino.</Step>
+  <Step title="Ligue o Tino">Clique em **Inteligência Artificial deste canal** e siga os passos em IA por canal.</Step>
+</Steps>
+
+<Note>Disponível a partir do plano Scale. Veja como configurar horários e follow-up em [Ligue o Tino em um canal](/tino/ia-por-canal).</Note>
+
+## Perguntas frequentes
+
+### Onde colo o código no meu site?
+
+Antes do fechamento da tag `</body>`, em todas as páginas onde o chat deve aparecer. Copie o snippet na seção **Chave pública & Integração**.
+
+### Mudei a cor do widget e o site não mudou. Por quê?
+
+O código copiado antes carrega a configuração antiga. Copie o snippet de novo depois de salvar as mudanças.
+
+### Os visitantes aparecem como "Visitante" em vez do nome do cliente. Por quê?
+
+Isso acontece quando o site não envia a identificação do usuário logado. Gere um secret de identidade na seção **Chave pública & Integração** e configure com quem cuida do seu sistema.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Canais explicados" href="/canais/canais-explicados">Os canais disponíveis no Tartini.</Card>
+  <Card title="Ligue o Tino em um canal" href="/tino/ia-por-canal">Horários, follow-up e encerramento para este canal.</Card>
+</CardGroup>

@@ -1,0 +1,107 @@
+---
+title: "Use a Central de Conversas"
+sidebarTitle: "Central de Conversas"
+description: "Busque, audite e exporte qualquer conversa que já passou pela sua empresa, com filtros e finalização em massa."
+---
+
+A Central de Conversas guarda o histórico completo, com filtros para achar exatamente o que precisa. Exporte em CSV ou finalize várias conversas de uma vez.
+
+<Note>
+  Quem vê: todos. Cada papel enxerga um recorte diferente: Dono da conta, Administrador e Gestor da Empresa veem a empresa inteira; Gestor de Área e Gestor de Unidade veem a subárvore; Atendente vê só as conversas em que é o atendente.
+</Note>
+
+## Filtre e busque uma conversa
+
+Onde fica: menu principal > **Central de Conversas** > **Conversas**.
+
+<Steps>
+  <Step title="Abra a Central de Conversas">No menu principal.</Step>
+  <Step title="Busque">Digite nome, telefone ou trecho da mensagem em "Buscar por nome, telefone ou mensagem…".</Step>
+  <Step title="Refine com os filtros">Use datas, **Canal**, **Entidade**, **Atendente**, **Status**, **Responsável** e **SLA**.</Step>
+</Steps>
+
+{/* CAPTURA: images/atendimento/central-conversas-filtros.png | alt: tela Central de conversas com a barra de filtros preenchida e a tabela de resultados | olhar: os chips de filtro ativos e o total de conversas */}
+
+<Note>
+  O filtro "Status" traz a opção "Em aberto", que junta Aguardando e Em andamento.
+</Note>
+
+## Leia as colunas da tabela
+
+| Coluna | O que mostra |
+|---|---|
+| ID | Os 8 primeiros caracteres do id da conversa, o protocolo. |
+| Contato | Nome e telefone. |
+| Canal | WhatsApp, WA Business ou Chat Widget. |
+| Status | Aguardando, Em andamento, Aguardando CSAT, Finalizada ou Importada. |
+| Responsável | O atendente, "IA passiva" ou "IA de campanha". |
+| SLA | Estourado, No prazo, Ativo ou sem SLA. |
+
+## Abra o detalhe de uma conversa
+
+Onde fica: clique numa linha da tabela.
+
+<Steps>
+  <Step title="Clique na linha">Abre o drawer de detalhe, em modo auditoria, somente leitura.</Step>
+  <Step title="Navegue pelas abas">"Conversa" mostra a transcrição; "Resumo & auditoria" traz o resumo do Scout, o CSAT e o consumo de créditos; "Metadados" traz SLA, tempos e responsável.</Step>
+  <Step title="Vá até o Inbox se precisar responder">Clique em "abrir no inbox →".</Step>
+</Steps>
+
+{/* CAPTURA: images/atendimento/central-conversas-drawer.png | alt: drawer de detalhe da conversa na aba Resumo e auditoria | olhar: o resumo do Scout e o consumo de créditos por categoria */}
+
+<Note>
+  Uma conversa importada mostra o aviso "Conversa importada": ela veio do histórico do WhatsApp, sem mensagens, atendente, métricas ou SLA no Tartini.
+</Note>
+
+## Exporte em CSV
+
+Onde fica: botão **Exportar CSV**, no topo da tela.
+
+<Steps>
+  <Step title="Ajuste os filtros">O CSV sai com os filtros que estão aplicados na tela.</Step>
+  <Step title="Clique em Exportar CSV">O arquivo baixa como conversas-AAAA-MM-DD.csv.</Step>
+</Steps>
+
+## Finalize várias conversas de uma vez
+
+Onde fica: caixas de seleção na tabela.
+
+<Steps>
+  <Step title="Marque as conversas">Use a caixa no cabeçalho para marcar todas as conversas da página.</Step>
+  <Step title="Clique em Finalizar selecionadas">Abre o modal Finalizar conversas.</Step>
+  <Step title="Descreva o motivo, se quiser">Até 500 caracteres, campo opcional.</Step>
+  <Step title="Clique em Finalizar">A tela confirma quantas conversas foram finalizadas.</Step>
+</Steps>
+
+<Warning>
+  A finalização em massa encerra todas as conversas em aberto dos contatos selecionados, inclusive conversas antigas esquecidas. Não pode ser desfeita.
+</Warning>
+
+## O Panorama, antes de filtrar
+
+Onde fica: **Central de Conversas > Panorama**.
+
+O Panorama mostra o retrato do momento: quanto está em aberto, o que estourou o SLA e há quanto tempo as conversas mais antigas estão paradas. Clique em qualquer número para abrir a Central já filtrada por ele.
+
+## Perguntas frequentes
+
+### Qual a diferença entre a Central e o Inbox?
+
+O Inbox é para atender agora. A Central é para buscar, auditar e exportar qualquer conversa que já passou pela empresa.
+
+### Um atendente pode exportar o CSV ou finalizar em massa?
+
+Sim, mas só dentro do próprio recorte: o backend aplica o mesmo filtro de papel a essas ações.
+
+### O que tem no CSV exportado?
+
+{/* CONFIRMAR: as colunas exatas do CSV exportado pela Central de Conversas */}
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Conheça o Inbox" href="/inbox/conheca-o-inbox">A tela, as listas e os status de conversa.</Card>
+  <Card title="Encerre uma conversa e envie a pesquisa" href="/inbox/encerre-uma-conversa">Finalize uma conversa por vez, com o motivo certo.</Card>
+  <Card title="Defina o SLA de atendimento" href="/atendimento/sla">O tempo máximo de resposta por canal.</Card>
+  <Card title="O Scout explicado" href="/scout/o-scout-explicado">Como o resumo e a nota da conversa nascem.</Card>
+</CardGroup>

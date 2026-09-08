@@ -1,0 +1,82 @@
+---
+title: "Configure os status de contato"
+sidebarTitle: "Status de Contato"
+description: "Monte a lista de status que a equipe usa na ficha do contato para dizer em que ponto do relacionamento cada pessoa está."
+---
+
+Os status de contato dizem, de forma padronizada, em que ponto do relacionamento cada pessoa está, como "Lead", "Cliente ativo" ou "Inativo". A ordem definida aqui é a mesma que aparece no seletor da ficha do contato.
+
+<Note>
+  Quem vê: qualquer papel que acesse o Cérebro pode consultar a lista. Só Administrador e Gestor da Empresa podem criar, editar, reordenar ou excluir status. Exige o plano Scale.
+</Note>
+
+## Crie um status
+
+Por padrão, nenhum status está cadastrado além dos que já vieram com a conta.
+
+Onde fica: **Cérebro > Operações > Status de Contato**.
+
+<Steps>
+  <Step title="Abra o formulário">Clique em **Adicionar status**.</Step>
+  <Step title="Escolha a cor">Selecione uma cor para identificar o status.</Step>
+  <Step title="Escreva o nome">Preencha o nome, por exemplo "Cliente ativo", com até 40 caracteres.</Step>
+  <Step title="Marque como padrão, se for o caso">Ative **Atribuir por padrão a contatos sem status**.</Step>
+  <Step title="Salve">Clique em **Salvar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/status-contato-criar.png | alt: Formulário de novo status de contato com cor e nome preenchidos | olhar: o checkbox de status padrão e o nome do status padrão atual ao lado */}
+
+<Note>
+  Só um status pode ser o padrão por vez. Marcar um novo como padrão substitui o anterior automaticamente.
+</Note>
+
+## Reordene os status
+
+A ordem da lista é a ordem que aparece no seletor da ficha do contato.
+
+Onde fica: **Cérebro > Operações > Status de Contato**, setas ao lado de cada status.
+
+<Steps>
+  <Step title="Escolha o status">Localize o status que quer mover.</Step>
+  <Step title="Mova">Clique na seta para cima ou para baixo.</Step>
+</Steps>
+
+<Note>
+  As setas ficam desabilitadas nas duas extremidades da lista.
+</Note>
+
+## Edite ou exclua um status
+
+Onde fica: **Cérebro > Operações > Status de Contato**, botões de ação em cada card.
+
+<Steps>
+  <Step title="Edite">Clique em **Editar**, ajuste a cor ou o nome, e confirme.</Step>
+  <Step title="Exclua">Clique em **Excluir** e confirme.</Step>
+</Steps>
+
+<Note>
+  Se o status já estiver em uso por contatos, a tela mostra a contagem de contatos afetados antes de confirmar. Excluir mesmo assim não apaga nem move os contatos: eles apenas ficam sem status.
+</Note>
+
+{/* CAPTURA: images/cerebro/status-contato-exclusao-em-uso.png | alt: Card de status com o aviso de contatos afetados e os botões Excluir mesmo assim e Cancelar | olhar: a contagem de contatos exibida antes da confirmação */}
+
+## Perguntas frequentes
+
+### Quem pode criar ou editar status de contato?
+
+Só Administrador ou Gestor da Empresa. Outros papéis que acessem a tela só conseguem ler a lista.
+
+### Se eu excluir um status em uso, o que acontece com os contatos?
+
+Eles não são apagados nem movidos para outro status. Simplesmente ficam sem status atribuído.
+
+### A ordem dos status importa?
+
+Sim, é a ordem exibida no seletor da ficha do contato.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Configure os campos do contato" href="/cerebro/qualificacao">Defina os dados que o Tino coleta na conversa.</Card>
+  <Card title="Configure os esclarecimentos" href="/cerebro/esclarecimentos">Defina quando o Tino pede mais informação.</Card>
+</CardGroup>

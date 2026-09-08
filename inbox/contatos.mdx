@@ -1,0 +1,91 @@
+---
+title: "Gerencie os contatos"
+sidebarTitle: "Contatos"
+description: "Busque, edite e junte contatos duplicados numa lista só, organizada por unidade."
+---
+
+A lista de Contatos reúne todo mundo que já falou com a sua empresa. Busque, filtre e abra a ficha completa de cada um.
+
+## Busque um contato
+
+Por padrão a lista aparece ordenada pela última mensagem.
+
+Onde fica: **Inbox > Contatos**.
+
+<Steps>
+  <Step title="Abra Contatos">No menu do Inbox, clique em **Contatos**.</Step>
+  <Step title="Busque">Digite nome, telefone ou e-mail no campo de busca.</Step>
+  <Step title="Filtre se precisar">Use **Status** ou **Tag** para refinar a lista.</Step>
+</Steps>
+
+{/* CAPTURA: images/inbox/inbox-contatos-lista.png | alt: tela Contatos com a busca, os filtros Status e Tag e a lista de contatos | olhar: a pílula de status e as tags em cada linha */}
+
+<Note>
+  A busca também encontra pelo ID externo do contato e pelos dígitos do telefone.
+</Note>
+
+## Sincronize contatos do WhatsApp
+
+Onde fica: **Inbox > Contatos**, botão de sincronizar no cabeçalho.
+
+<Steps>
+  <Step title="Clique no botão de sincronizar">O tooltip mostra "Sincronizar contatos do WhatsApp".</Step>
+  <Step title="Aguarde">O Tartini traz os contatos da agenda conectada.</Step>
+</Steps>
+
+## Abra e edite um contato
+
+Onde fica: clique no contato na lista.
+
+<Steps>
+  <Step title="Clique no contato">Abre a ficha do contato.</Step>
+  <Step title="Edite o nome">Clique no lápis ao lado do nome, digite o novo nome e salve.</Step>
+</Steps>
+
+## Junte contatos duplicados
+
+Por padrão, contatos com o mesmo telefone em canais diferentes não se juntam sozinhos.
+
+Onde fica: cartão do contato, no painel de detalhes da conversa ou na ficha, botão **Mesclar**.
+
+<Steps>
+  <Step title="Clique em Mesclar">No cartão do contato.</Step>
+  <Step title="Escolha o contato principal">É quem recebe o histórico depois da mesclagem.</Step>
+  <Step title="Busque os duplicados">Digite pelo menos duas letras. A tela sugere candidatos por telefone, IP ou nome iguais.</Step>
+  <Step title="Confirme">Clique em **Mesclar N contato(s)** e depois em **Confirmar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/inbox/inbox-mesclar-contatos.png | alt: modal Mesclar contatos com o contato principal e a lista de sugestões | olhar: os motivos da sugestão, como Mesmo telefone ou Mesmo IP */}
+
+<Warning>
+  Mesclar não pode ser desfeito. As mensagens dos contatos escolhidos passam para o contato principal e somem da lista separada.
+</Warning>
+
+## Entenda a lista vazia
+
+Sem nenhum contato ainda, a tela mostra "Nenhum contato ainda". Com filtros que não encontram nada, mostra "Nenhum contato para esta busca" e o botão **Limpar filtros**.
+
+A lista carrega 30 contatos por página, com rolagem infinita. Se você abrir a ficha de um contato e voltar, a lista aparece do mesmo jeito que você deixou, inclusive na mesma posição de rolagem.
+
+## Perguntas frequentes
+
+### Por que um contato não aparece na lista?
+
+Contatos de WhatsApp só entram depois de existirem no Tartini. Sincronize para trazer os que estão só na agenda.
+
+### O que é um contato duplicado de verdade?
+
+Mesmo telefone, em outro canal, na mesma unidade. A mesma pessoa em outra unidade não é duplicata, é só outra ficha.
+
+### Mesclar contatos pode ser desfeito?
+
+Não. Confira o contato principal antes de confirmar.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="A ficha do contato" href="/inbox/ficha-do-contato">Dados, status, campos, notas e conversas.</Card>
+  <Card title="Conheça o Inbox" href="/inbox/conheca-o-inbox">A tela, as listas e os status de conversa.</Card>
+  <Card title="Acompanhe os visitantes do site" href="/inbox/visitantes">Quem está navegando pelo Chat Widget agora.</Card>
+  <Card title="Transfira, anote e marque conversas" href="/inbox/transfira-notas-e-tags">Passe a conversa adiante e registre o que importa.</Card>
+</CardGroup>

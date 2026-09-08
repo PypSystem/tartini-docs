@@ -1,0 +1,123 @@
+---
+title: "Agende o envio e os follow-ups"
+sidebarTitle: "Agendamento e follow-ups"
+description: "Escolha quando o Tino aborda cada contato, quantas vezes ele insiste e quando pausar o envio."
+---
+
+Definir os horários certos e as tentativas de follow-up evita que o Tino escreva fora do expediente e garante que um contato que não respondeu seja abordado de novo, sem sua equipe ter que lembrar.
+
+<Note>
+  Campanhas é um recurso dos planos Scale e Enterprise. Quem configura: Administrador (Empresa), Gestor da Empresa, Gestor de Área e Gestor de Unidade.
+</Note>
+
+## Defina a janela de horários
+
+Por padrão, a janela vem pré-carregada do funcionamento cadastrado da Unidade em Cérebro, ou de segunda a sexta, das 09:00 às 18:00, se a Unidade não tiver disponibilidade cadastrada.
+
+Onde fica: passo 3 do assistente, **Campanhas > Campanhas > Nova campanha**, seção **Quando disparar**.
+
+<Steps>
+  <Step title="Marque os dias">Selecione os dias da semana em que a campanha pode agir, entre **Seg** e **Dom**.</Step>
+  <Step title="Ajuste o horário">Defina o horário de início e o de fim. O início precisa vir antes do fim.</Step>
+  <Step title="Salve"> Continue para o próximo campo ou clique em **Criar campanha** ao final do assistente.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/agendamento-janela-horarios.png | alt: Seção de janela de horários com os dias da semana marcados e o horário de início e fim | olhar: os chips de dias da semana e os dois campos de horário */}
+
+<Note>
+  A janela de horários vale para campanhas de lista e para campanhas de webhook configuradas com **Somente dentro da janela de horários**. Palavra-chave não usa janela: o Tino responde no instante em que o cliente escreve.
+</Note>
+
+---
+
+## Distribua o envio no tempo
+
+Uma campanha de lista tem data de início e, se quiser, data de fim.
+
+Onde fica: mesmo passo 3, seção **Quando disparar**.
+
+<Steps>
+  <Step title="Escolha a data de início">Por padrão vem a data de hoje. Não é possível escolher uma data anterior.</Step>
+  <Step title="Escolha a data de fim (opcional)">Sem data de fim, a campanha continua ativa e você pode voltar depois para acrescentar mais contatos à lista. Com data de fim, a campanha vira um projeto com prazo.</Step>
+</Steps>
+
+<Note>
+  O rodapé do assistente estima a duração prevista do envio, considerando cerca de 300 contatos abordados por dia. É uma estimativa local, não uma garantia de prazo.
+</Note>
+
+---
+
+## Configure os follow-ups
+
+Por padrão, uma campanha nova já vem com duas tentativas: 24 horas e 72 horas depois da primeira mensagem.
+
+Onde fica: passo 3 do assistente, seção **Se o contato não responder**.
+
+<Steps>
+  <Step title="Revise as tentativas padrão">Cada tentativa mostra quanto tempo depois da abertura ela dispara: 4 horas, 1, 2, 3 ou 7 dias.</Step>
+  <Step title="Adicione uma tentativa">Clique num dos intervalos disponíveis para acrescentar. O limite é 4 tentativas.</Step>
+  <Step title="Remova uma tentativa">Use o botão de remover ao lado da tentativa que não quer mais.</Step>
+  <Step title="Escolha o template, se for canal WABA">Tentativas de 24 horas ou mais em canal oficial exigem um template aprovado para cada uma.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/agendamento-follow-ups.png | alt: Lista de tentativas de follow-up com os intervalos de 24h e 72h configurados | olhar: os selos de que tentativa exige template */}
+
+<Note>
+  Assim que o contato responde, o Tino cancela todas as tentativas seguintes e assume a conversa a partir dali, sem repetir a abordagem.
+</Note>
+
+---
+
+## Pause e retome uma campanha
+
+Por padrão, uma campanha ativa continua abordando contatos novos e enviando follow-ups até você pausar.
+
+Onde fica: **Campanhas > Campanhas** (lista) ou no cabeçalho do painel da campanha.
+
+<Steps>
+  <Step title="Pause">Clique em **Pausar** na linha da campanha ou no cabeçalho do painel. A campanha para de agir e o status muda para **Pausada**.</Step>
+  <Step title="Retome">Clique em **Retomar** quando quiser que a campanha volte a agir. O status volta para **Ativa**.</Step>
+</Steps>
+
+<Note>
+  Enquanto pausada, contatos que já receberam a primeira mensagem não recebem follow-ups pendentes. Nenhum contato novo entra na campanha até você retomar.
+</Note>
+
+## Acompanhe a fila de envio
+
+Uma campanha de lista mostra a fila de agendamento no painel, na aba **Execuções**.
+
+Onde fica: painel da campanha, aba **Execuções**.
+
+Lá você vê quantos jobs estão **Agendados**, **Ativos**, **Completados** e **Falhados**, além da data e hora da próxima execução. É possível buscar por contato e filtrar por status.
+
+## Perguntas frequentes
+
+### Posso mudar a janela de horários depois de a campanha estar ativa?
+
+Sim, pela edição da campanha. A mudança vale para os próximos disparos e para os turnos de conversas em andamento.
+
+### Uma campanha pausada continua contando os follow-ups?
+
+Não. Nenhuma tentativa é enviada enquanto a campanha está pausada.
+
+### O que acontece se o contato responder no meio das tentativas?
+
+As tentativas seguintes são canceladas na hora. O Tino segue a conversa a partir da resposta do contato.
+
+### Posso adicionar mais contatos numa campanha de lista já em andamento?
+
+A tela avisa que isso é possível quando a campanha não tem data de fim, mas não há um botão dedicado a isso no assistente hoje.
+
+### Existe um limite de tentativas de follow-up?
+
+Sim, 4 por campanha, nos intervalos de 4 horas, 1, 2, 3 ou 7 dias.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Crie uma campanha" href="/campanhas/crie-uma-campanha">O assistente em três passos.</Card>
+  <Card title="Defina horários e fuso da IA" href="/cerebro/disponibilidade">A disponibilidade que alimenta a janela padrão.</Card>
+  <Card title="Acompanhe os resultados" href="/campanhas/resultados">Conversas, conversões e abandonos.</Card>
+  <Card title="Crie templates de mensagem do WhatsApp" href="/canais/templates">Templates exigidos nos follow-ups WABA.</Card>
+</CardGroup>

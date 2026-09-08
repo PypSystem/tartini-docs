@@ -1,0 +1,151 @@
+---
+title: "Atenda uma conversa"
+sidebarTitle: "Atenda uma conversa"
+description: "Responda pelo texto certo, com mídia, áudio ou assinatura, e saiba quando assumir o atendimento do Tino."
+---
+
+Cada conversa do Inbox tem tudo que você precisa para responder rápido: texto, mídia, áudio e assinatura. Quando o Tino está atendendo, você assume o controle a qualquer momento.
+
+## Abra e assuma uma conversa
+
+Por padrão, uma conversa nova aparece sem atendente, em "Não atribuído".
+
+Onde fica: **Inbox**.
+
+<Steps>
+  <Step title="Abra a conversa">Clique na conversa na lista. Ela abre ao lado, mantendo os filtros na URL.</Step>
+  <Step title="Veja quem está atendendo">O avatar no cabeçalho mostra as iniciais do atendente ou o selo do Tino.</Step>
+  <Step title="Responda para assumir">Escreva e envie uma mensagem para virar o atendente da conversa. Se o Tino ainda estiver conduzindo, veja "Interrompa o Tino e assuma" abaixo.</Step>
+</Steps>
+
+{/* CAPTURA: images/inbox/inbox-conversa-aberta.png | alt: conversa aberta com o cabeçalho, mensagens e o compositor | olhar: o avatar do atendente, o protocolo e o campo de mensagem */}
+
+## Responda ao cliente
+
+Por padrão o campo de mensagem fica vazio, com o texto "Digite sua mensagem...".
+
+Onde fica: rodapé da conversa aberta.
+
+<Steps>
+  <Step title="Escreva a mensagem">Digite no campo. O limite é de 4096 caracteres por mensagem; o contador aparece a partir de 80% do limite.</Step>
+  <Step title="Envie">Pressione Enter ou clique em **Enviar**. Shift+Enter quebra a linha sem enviar.</Step>
+</Steps>
+
+<Note>
+  A bolha aparece na hora com um relógio e vira check quando o servidor confirma o envio. Se falhar, o ícone fica vermelho: toque para reenviar.
+</Note>
+
+## Assine a mensagem
+
+Por padrão o toggle **Assinar como** fica desligado, a menos que sua empresa exija assinatura.
+
+Onde fica: rodapé da conversa, ao lado do campo de mensagem.
+
+<Steps>
+  <Step title="Ligue Assinar como">Ative o toggle acima do campo de mensagem.</Step>
+  <Step title="Confira o nome">O nome padrão é o seu nome de atendimento. Se a empresa permitir, edite em **Nome na assinatura**.</Step>
+  <Step title="Envie normalmente">A mensagem sai com o seu nome em destaque na primeira linha.</Step>
+</Steps>
+
+<Note>
+  Se a empresa marcou assinatura obrigatória, o toggle fica travado ligado e você não consegue desligar.
+</Note>
+
+## Anexe mídia e documentos
+
+Por padrão a conversa não tem nenhum anexo pendente.
+
+Onde fica: ícone de clipe no rodapé da conversa.
+
+<Steps>
+  <Step title="Abra o menu de anexo">Clique no clipe e escolha **Arquivo Individual** ou **Múltiplos Arquivos**.</Step>
+  <Step title="Selecione os arquivos">Aceita PDF, Word, imagem, áudio e vídeo. Você também pode colar com Ctrl+V.</Step>
+  <Step title="Escreva a legenda, se quiser">O texto do campo de mensagem vira a legenda da primeira mídia.</Step>
+  <Step title="Envie">Clique em **Enviar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/inbox/inbox-anexar-arquivos.png | alt: modal Enviar Múltiplos Arquivos com miniaturas numeradas | olhar: o limite de arquivos e o tamanho de cada um */}
+
+<Note>
+  Limites pelo clipe ou por colar: até 4 arquivos por envio, um vídeo por vez, vídeo de até 15 MB. No modal de múltiplos arquivos, até 10 arquivos de 10 MB cada no computador, ou 8 imagens de 8 MB no celular.
+</Note>
+
+## Grave e envie um áudio
+
+Por padrão não há gravação em andamento.
+
+Onde fica: ícone de microfone no rodapé (não aparece no Chat Widget).
+
+<Steps>
+  <Step title="Clique no microfone">Na primeira vez, permita o uso do microfone quando o navegador pedir.</Step>
+  <Step title="Grave">Fale. Um cronômetro mostra a duração.</Step>
+  <Step title="Ouça antes de enviar">Toque em play para conferir. A lixeira descarta a gravação.</Step>
+  <Step title="Envie">Clique no botão de enviar.</Step>
+</Steps>
+
+<Note>
+  Quem recebe o áudio pode pedir a transcrição clicando em **Transcrever**, no player da mensagem.
+</Note>
+
+## Entenda os ícones de entrega
+
+| Ícone | Quer dizer |
+|---|---|
+| Relógio | Enviando. |
+| Um check | Enviada. |
+| Dois checks cinza | Entregue. |
+| Dois checks azuis | Visualizada pelo cliente. |
+| Ícone vermelho | Falhou. Toque para reenviar. |
+
+<Note>
+  Para um visitante do Chat Widget fora do site, a mensagem fica com relógio até ele voltar a abrir a página. Não é falha, é entrega pendente.
+</Note>
+
+## Interrompa o Tino e assuma
+
+Enquanto o Tino conduz a conversa, o campo de mensagem fica desabilitado, com o texto "Tino está conversando...".
+
+Onde fica: barra de assinatura, botão **Interromper**.
+
+<Steps>
+  <Step title="Clique em Interromper">O botão aparece ao lado de "Tino ativo", acima do campo de mensagem.</Step>
+  <Step title="Confira a confirmação">A tela mostra "Conversa interrompida e transferida ao atendente." e o campo libera.</Step>
+  <Step title="Responda normalmente">A partir daqui, você conduz a conversa.</Step>
+</Steps>
+
+<Note>
+  Depois de interromper, não existe um botão para devolver a conversa ao Tino nesta tela.
+</Note>
+
+## A janela de 24 horas do WhatsApp
+
+No WhatsApp Business API (WABA), a Meta exige um template aprovado para você falar com quem ainda não escreveu recentemente. Esse controle aparece só ao iniciar uma conversa nova, no modal "Iniciar conversa". Dentro de uma conversa já aberta, a tela não mostra um aviso sobre esse prazo.
+
+{/* CONFIRMAR: o que acontece ao enviar uma mensagem livre depois de 24 horas dentro de uma conversa já aberta no canal WABA */}
+
+## Perguntas frequentes
+
+### Por que não consigo digitar na conversa?
+
+O Tino está conduzindo. Clique em **Interromper** para assumir.
+
+### Por que o microfone sumiu do rodapé?
+
+O Chat Widget não envia áudio.
+
+### Por que não consigo editar ou excluir uma mensagem?
+
+O prazo passou (10 minutos para editar, 2 horas e 12 minutos para excluir) ou a mensagem não é sua.
+
+### Minha mensagem ficou parada com o ícone de relógio, é erro?
+
+Não necessariamente. Pode estar enviando, ou o canal reconectando. Se virar vermelho, toque para reenviar.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Conheça o Inbox" href="/inbox/conheca-o-inbox">A tela, as listas e os status de conversa.</Card>
+  <Card title="Use o Copilot" href="/inbox/copilot">Peça sugestões de resposta durante o atendimento.</Card>
+  <Card title="Transfira, anote e marque conversas" href="/inbox/transfira-notas-e-tags">Passe a conversa adiante e registre o que importa.</Card>
+  <Card title="Encerre uma conversa e envie a pesquisa" href="/inbox/encerre-uma-conversa">Finalize com o motivo certo.</Card>
+</CardGroup>

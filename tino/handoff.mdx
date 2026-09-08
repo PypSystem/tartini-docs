@@ -1,0 +1,76 @@
+---
+title: "Quando o Tino passa a conversa para uma pessoa"
+sidebarTitle: "Tino passa a conversa"
+description: "Como uma conversa sai do Tino e chega à equipe, o que a pessoa vê ao recebê-la e como assumir a qualquer momento."
+---
+
+Uma conversa começa com o Tino e termina com uma pessoa quando você quer, quando ele não consegue seguir ou quando alguém da equipe decide assumir. Em todos os casos a pessoa recebe a conversa com o histórico e um resumo do que o Tino já fez.
+
+<Note>
+  Vale para os planos Scale e Enterprise, com o Tino ligado em ao menos um canal. Qualquer pessoa com acesso à conversa pode assumir.
+</Note>
+
+## Os três caminhos
+
+| Caminho | O que acontece |
+|---|---|
+| **O Tino passa** | Um critério de roteamento do Cérebro ou uma etapa de processo manda a conversa para a equipe. A conversa aparece na fila como pendente. |
+| **Fora do horário** | O cliente chama fora do horário definido em **Quando Tino atende**. O Tino envia o aviso configurado, se houver, e a conversa fica com a equipe. |
+| **Alguém interrompe** | Uma pessoa abre a conversa e clica em **Interromper**. A conversa passa para ela na hora. |
+
+## O que a pessoa vê
+
+Na conversa, o momento da passagem aparece como um evento no meio das mensagens, seguido do cartão **Tino · resumo do atendimento**, com o cliente e o resumo. O link **ver atendimento completo →** abre a aba Copilot com o detalhe.
+
+No painel de detalhes, a seção **Conversa** mostra **Transferido pelo Tino: Sim** ou **Interrompido por** e o nome de quem assumiu. Quando a conversa passou por um processo, a seção **Processo** mostra o aviso **Chegou até você pelo Tino** com o motivo, a etapa em que parou e o link para o diagnóstico do processo no Scout.
+
+No celular, a conversa leva a etiqueta **Transferida pelo Tino** ou **Interrompida**.
+
+{/* CAPTURA: images/tino/handoff-resumo.png | alt: conversa no Inbox com o evento de transferência e o cartão Tino resumo do atendimento | olhar: a pílula de transferência e o cartão com o resumo logo abaixo */}
+
+<Tip>
+  Leia o resumo antes de responder. Ele diz o que o cliente pediu e o que o Tino já fez, para você não perguntar de novo.
+</Tip>
+
+## Assuma uma conversa do Tino
+
+Por padrão, enquanto o Tino conduz, o campo de resposta fica bloqueado.
+
+<Steps>
+  <Step title="Abra a conversa">No Inbox, abra a conversa com o selo **Tino conversando**.</Step>
+  <Step title="Interrompa">Na linha acima do campo de mensagem, clique em **Interromper**. A tela confirma com "Conversa interrompida e transferida ao atendente."</Step>
+  <Step title="Responda">O campo libera e a conversa passa a ser sua. O Tino não volta a responder nela.</Step>
+</Steps>
+
+<Note>
+  Não há como devolver a conversa ao Tino depois de interromper. Se a ideia era só ler, use o painel de detalhes e o resumo, sem interromper.
+</Note>
+
+## Quem recebe a conversa
+
+A conversa que o Tino passa aparece no Inbox com o chip **Pendente** até alguém assumir; com um setor ou um atendente definidos, ela entra na fila do setor ou em **Sua caixa** da pessoa, que recebe o aviso "Nova conversa atribuída a você". {/* CONFIRMAR: se o roteamento do Cérebro escolhe setor ou atendente, ou só devolve à fila da Unidade */} Os critérios ficam em **Cérebro > Operações > Roteamento**. Veja [Configure o roteamento](/cerebro/roteamento).
+
+## Depois da passagem
+
+A conversa segue as regras da equipe: o encerramento automático das Regras de Conversa, o SLA do canal e a pesquisa de satisfação. No Scout, ela conta como **handoff**: a IA começou e a equipe assumiu. A nota dessas conversas aparece separada em **Scout > Satisfação**.
+
+## Perguntas frequentes
+
+### Não consigo digitar na conversa.
+
+O Tino está conduzindo. Clique em **Interromper** para assumir. A tela mostra o aviso "Para enviar mensagens, primeiro interrompa a conversa do Tino utilizando o botão abaixo."
+
+### O Tino passou a conversa para o setor errado.
+
+Ajuste os critérios em **Cérebro > Operações > Roteamento**. Para entender o que levou à decisão, abra **Por que ela disse isso** na última mensagem do Tino.
+
+### O Tino passou a conversa sem motivo aparente.
+
+Abra o painel de detalhes: a seção **Processo** mostra o motivo e a etapa. Se não houver processo, o motivo está nas instruções listadas em **Por que ela disse isso**.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Atenda uma conversa" href="/inbox/atenda-uma-conversa">O campo de mensagem, a assinatura e os anexos.</Card>
+  <Card title="Configure o roteamento" href="/cerebro/roteamento">Quando a IA transfere e para quem.</Card>
+</CardGroup>

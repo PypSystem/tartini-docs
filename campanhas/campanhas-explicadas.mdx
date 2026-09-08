@@ -1,0 +1,118 @@
+---
+title: "Campanhas explicadas"
+sidebarTitle: "Campanhas explicadas"
+description: "Entenda como o Tino aborda contatos por conta própria, os tipos de campanha, os status e o que preparar antes de criar uma."
+---
+
+Uma campanha faz o Tino abordar os contatos primeiro e conduzir a conversa inteira, do início ao fim. Você decide quem entra, o que ele segue e por onde a mensagem sai.
+
+<Note>
+  Campanhas é um recurso dos planos Scale e Enterprise. Quem vê o menu: Dono da conta, Administrador (Empresa), Gestor da Empresa, Gestor de Área e Gestor de Unidade, cada um dentro do seu escopo. Atendente não vê o menu **Campanhas**.
+</Note>
+
+## O que uma campanha faz
+
+Ao criar uma campanha, você escolhe se o Tino segue um processo mapeado em Cérebro, etapa por etapa, ou se ele trabalha com uma missão livre, só com um objetivo em texto. Depois disso ele conduz a conversa sozinho: aborda o contato, responde, insiste com follow-ups quando ninguém responde e passa a conversa para a equipe quando o processo pede.
+
+Cada contato que entra numa campanha gera uma execução. É por ela que você acompanha o que aconteceu com aquele contato específico.
+
+## Os tipos de campanha
+
+O que muda entre os três tipos é a origem dos contatos, ou seja, o que faz o Tino começar a falar com alguém.
+
+| Tipo | O assistente chama de | O que dispara |
+|---|---|---|
+| Lista | **Tenho uma lista** | Você sobe um arquivo CSV com os contatos |
+| Webhook | **Meu sistema envia** | Seu sistema (CRM, e-commerce, cobrança) envia cada contato por uma URL |
+| Palavra-chave | **O cliente chega até mim** | Alguém escreve uma palavra-chave configurada |
+
+Campanhas de lista com data de fim aparecem na lista como **Projetos**. As demais, sem data de fim, junto com webhook e palavra-chave, aparecem como **Contínuas**: ficam sempre prontas para receber novos contatos.
+
+Veja como montar cada uma em [Crie uma campanha](/campanhas/crie-uma-campanha), [Importe os contatos da campanha](/campanhas/contatos-e-csv) e [Dispare campanhas por webhook ou por mensagem recebida](/campanhas/webhook-e-inbound).
+
+## As categorias
+
+Uma campanha pode ser classificada como Vendas, Cobrança, Qualificação de Leads, Reativação, Nutrição ou Pós-venda. O assistente de criação atual não pergunta a categoria: toda campanha nova entra com a categoria geral, exibida como **GENERAL** na aba **Detalhes** do painel da campanha.
+
+## Os status
+
+A lista e o painel da campanha usam nomes diferentes para o mesmo status.
+
+| Status | Na lista de campanhas | No painel da campanha | O que significa |
+|---|---|---|---|
+| `DRAFT` | **Rascunho** | **Não Iniciada** | Criada, ainda não começou a abordar ninguém |
+| `ACTIVE` | **Ativa** | **Ativa** | Em execução |
+| `PAUSED` | **Pausada** | **Pausada** | Pausada, sem abordar contatos novos |
+| `COMPLETED` | **Concluída** | **Finalizada** | Terminou |
+| `ARCHIVED` | **Arquivada** | **Arquivada** | Encerrada, sem ação disponível na tela |
+
+Campanhas de webhook e de palavra-chave já nascem ativas: assim que você cria, o Tino já está escutando. Campanhas de lista nascem como rascunho; você inicia o envio quando quiser, na lista ou no painel da campanha.
+
+<Note>
+  Hoje não existe botão para excluir, duplicar ou arquivar uma campanha pela interface.
+</Note>
+
+## O que precisa estar pronto antes de criar
+
+- Um canal de WhatsApp conectado na Unidade (WhatsApp Business ou WABA).
+- Em canal oficial (WABA), um template de abertura aprovado pela Meta.
+- Créditos disponíveis na franquia do mês, porque cada mensagem da campanha consome créditos.
+
+Veja como deixar isso pronto em [Prepare a Unidade para campanhas](/campanhas/setup).
+
+## O submenu de Campanhas
+
+Ao abrir **Campanhas** no menu principal, você cai numa área com duas telas:
+
+- **Panorama**: um retrato do período (7 ou 30 dias) com um veredito em uma frase, os principais sinais e uma fila do que precisa da sua atenção, com sugestão de ação para cada item.
+- **Campanhas**: a lista de todas as campanhas que você acessa, com filtro por unidade, status e origem.
+
+## Quem vê o quê
+
+| Papel | Acesso |
+|---|---|
+| Dono da conta | Todas as campanhas |
+| Administrador (Empresa) | Todas as campanhas |
+| Gestor da Empresa | Todas as campanhas |
+| Gestor de Área | Campanhas das unidades da sua área |
+| Gestor de Unidade | Campanhas da sua unidade |
+| Atendente | Não vê o menu Campanhas; no Inbox, vê o nome da campanha na ficha do contato, sem link para abrir |
+
+A tela **Configurações > Integrações > Contatos de Campanha** é mais restrita: só o Administrador (Empresa) a vê.
+
+## Para onde cada tarefa aponta
+
+- Preparar canal, template e créditos: [Prepare a Unidade para campanhas](/campanhas/setup)
+- Montar a campanha do zero: [Crie uma campanha](/campanhas/crie-uma-campanha)
+- Formatar e subir a lista de contatos: [Importe os contatos da campanha](/campanhas/contatos-e-csv)
+- Definir horários, follow-ups, pausar e retomar: [Agende o envio e os follow-ups](/campanhas/agendamento-e-follow-ups)
+- Conectar seu sistema por webhook ou reagir a uma palavra-chave: [Dispare campanhas por webhook ou por mensagem recebida](/campanhas/webhook-e-inbound)
+- Ler conversas, conversões e abandonos: [Acompanhe os resultados](/campanhas/resultados)
+- Conectar Varejo Online e SAN: [Puxe contatos de sistemas externos](/campanhas/contatos-de-campanha)
+
+## Perguntas frequentes
+
+### Por que não vejo o menu Campanhas?
+
+Ou o seu plano não inclui o recurso (é dos planos Scale e Enterprise), ou o seu papel é Atendente, que não tem acesso a essa área.
+
+### Não vejo a campanha de outra unidade, é normal?
+
+Sim. Você só vê as campanhas do seu escopo: Gestor de Unidade vê a própria unidade, Gestor de Área vê as unidades da área. Use o filtro de unidade na lista para conferir o que está acessível a você.
+
+### Posso excluir uma campanha?
+
+Não pela interface hoje. Uma campanha pausada ou arquivada fica registrada, sem ação de exclusão disponível.
+
+### Uma campanha pausada continua contando follow-ups?
+
+Não. Enquanto pausada, o Tino não aborda contatos novos nem envia follow-ups pendentes. Retome a campanha para que ela volte a agir.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Prepare a Unidade para campanhas" href="/campanhas/setup">Canal, template e créditos antes de criar.</Card>
+  <Card title="Crie uma campanha" href="/campanhas/crie-uma-campanha">O assistente em três passos.</Card>
+  <Card title="Agende o envio e os follow-ups" href="/campanhas/agendamento-e-follow-ups">Horários, tentativas, pausar e retomar.</Card>
+  <Card title="Acompanhe os resultados" href="/campanhas/resultados">Conversas, conversões e abandonos.</Card>
+</CardGroup>

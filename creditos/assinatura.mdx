@@ -1,0 +1,91 @@
+---
+title: "Veja a assinatura e o plano"
+sidebarTitle: "Assinatura"
+description: "Veja seu plano, a franquia contratada e os dados cadastrais da sua conta em um só lugar."
+---
+
+Com esta tela, você confirma de olhada qual plano está ativo, quanto ainda tem de franquia e se os dados da sua conta estão corretos.
+
+<Note>
+  Quem vê: só Administrador. {/* CONFIRMAR: divergência entre a documentação interna, que reserva esta tela ao dono da conta, e o comportamento atual da interface, que libera para o Administrador */}
+</Note>
+
+## Veja seu plano e sua franquia
+
+Onde fica: **Configurações > Cobrança > Assinatura**.
+
+<Steps>
+  <Step title="Abra a tela">Vá em **Configurações > Cobrança > Assinatura**.</Step>
+  <Step title="Veja o resumo">Confira o nome do plano, o preço mensal e a barra de consumo da franquia.</Step>
+</Steps>
+
+{/* CAPTURA: images/creditos/assinatura-plano.png | alt: Bloco Plano na tela Assinatura com nome, preço e barra de franquia | olhar: o nome do plano e a barra de consumo */}
+
+<Note>
+  Uma conta gratuita não tem franquia nem cobrança. Nesse caso a tela mostra só o aviso de conta gratuita.
+</Note>
+
+## Veja os dados cadastrais da conta
+
+Onde fica: **Configurações > Cobrança > Assinatura**, seção **Dados da conta**.
+
+A tela mostra Responsável, E-mail, Contato, CNPJ ou CPF, Razão social, Empresa, Status da conta e a data de cliente desde.
+
+<Note>
+  Os dados cadastrais não são editados nesta tela. {/* CONFIRMAR: onde e como o Administrador solicita a alteração dos dados cadastrais */}
+</Note>
+
+## Entenda os status da assinatura
+
+| Status | O que significa |
+|---|---|
+| Ativa | Assinatura em dia. Acesso completo. |
+| Completa | Assinatura em dia. Acesso completo. |
+| Pendente | Aguardando confirmação. Acesso em modo somente leitura. |
+| Suspensa | Assinatura suspensa. Acesso em modo somente leitura. |
+| Encerrada | Assinatura encerrada. Acesso em modo somente leitura. |
+| Cancelada | Assinatura cancelada. Acesso em modo somente leitura. |
+| Fraude | Assinatura bloqueada. Acesso em modo somente leitura. |
+
+## O que muda no modo somente leitura
+
+Fora de Ativa e Completa, a plataforma inteira entra em modo somente leitura.
+
+<Warning>
+  Com a assinatura fora de Ativa ou Completa, uma faixa avisa que a assinatura não está ativa e que o acesso está em modo somente leitura. Botões, campos e seleções ficam desabilitados. A navegação continua funcionando normalmente.
+</Warning>
+
+## Altere seu plano ou sua franquia
+
+Onde fica: **Configurações > Cobrança > Assinatura**, botão **Gerenciar plano e franquia**.
+
+<Steps>
+  <Step title="Abra as opções">Clique em **Gerenciar plano e franquia**.</Step>
+  <Step title="Escolha o que mudar">Veja os planos disponíveis, ou ajuste a franquia mensal contratada.</Step>
+  <Step title="Confirme fora do Tartini">A mudança de plano ou de franquia é concluída num portal externo, fora do Tartini.</Step>
+</Steps>
+
+<Note>
+  O botão só aparece em contas pagas. A mudança de plano ou de franquia vale a partir da próxima renovação, nunca imediatamente.
+</Note>
+
+## Perguntas frequentes
+
+### Posso editar meus dados cadastrais nesta tela?
+
+Não. {/* CONFIRMAR: canal correto para solicitar alteração de dados cadastrais */}
+
+### Por que não vejo esta tela?
+
+Só o Administrador da empresa acessa Assinatura. Outros papéis são redirecionados para o início das Configurações.
+
+### Mudar de plano cobra algo na hora?
+
+Não. A troca só vale a partir do próximo ciclo de renovação.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Acompanhe o saldo e o extrato de créditos" href="/creditos/creditos-e-extrato">Veja o consumo diário de créditos.</Card>
+  <Card title="Planos e o que cada um libera" href="/visao-geral/planos-e-recursos">Compare os recursos de cada plano.</Card>
+</CardGroup>

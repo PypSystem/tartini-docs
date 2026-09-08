@@ -1,121 +1,73 @@
 ---
-title: "Conectores (MCP)"
+title: "Conecte ferramentas externas à IA"
 sidebarTitle: "Conectores"
-description: "Conecte ferramentas externas via MCP (Model Context Protocol) e expanda as capacidades do agente de IA — Google Calendar, sistemas internos e qualquer servidor MCP customizado."
+description: "Dê ao Tino acesso à sua agenda, ao seu CRM ou ao seu sistema para ele consultar e agir durante a conversa."
 ---
 
-Os **Conectores** ampliam o que o agente de IA do Talk consegue fazer: consultar a agenda do cliente, criar eventos, buscar dados num sistema interno, abrir tickets em outra ferramenta etc. Tudo isso acontece sobre o **MCP (Model Context Protocol)** — um padrão aberto que descreve "ferramentas" que a IA pode chamar durante uma conversa.
+Com um conector, o Tino deixa de só responder e passa a agir: consulta a agenda e marca um horário, abre uma negociação no CRM, busca um pedido no seu sistema. Os conectores ficam em **Configurações > Integrações > Conectores**.
 
-A página fica em **Configurações &rarr; Conectores** ([talk.saninternet.com/settings/connectors](https://talk.saninternet.com/settings/connectors)).
+<Note>
+  Só o Administrador vê a tela. Conectores fazem parte dos planos Scale e Enterprise. Para o Tino usar as ferramentas de um conector, ele precisa estar vinculado a um processo no Cérebro.
+</Note>
 
-<Warning>
-  Em alguns planos a funcionalidade de Conectores fica indisponível. Quando esse for o caso, a página exibe um bloqueio e os conectores não podem ser configurados.
-</Warning>
+## Conecte uma integração pronta
 
----
-
-## Como funciona o MCP
-
-O MCP permite que o agente de IA do Talk **descubra** quais ferramentas um servidor externo oferece e **as use** durante uma conversa, quando faz sentido. Cada ferramenta é uma função com nome, descrição e parâmetros — exatamente como uma API REST, mas descrita no formato MCP.
-
-**Exemplo de fluxo:**
-
-1. O cliente pergunta no WhatsApp: *"Qual horário tenho livre amanhã?"*
-2. O agente de IA percebe que precisa consultar uma agenda.
-3. Ele chama a ferramenta `list_events` exposta pelo conector **Google Calendar**.
-4. Com o resultado em mãos, formata uma resposta natural para o cliente.
-
-Tudo isso fica registrado nas mensagens da conversa (você consegue ver no Inbox quais ferramentas foram chamadas).
-
----
-
-## Integrações populares
-
-A página abre com cards das integrações pré-configuradas. Hoje:
-
-### Google Calendar
-
-Conecta a agenda do Google Workspace ou conta pessoal do Google. Permite ao agente listar eventos, criar agendamentos, verificar disponibilidade e cancelar reuniões.
-
-**Conectar:**
-
-1. Clique em **Conectar via OAuth**.
-2. Você é redirecionado para o login do Google.
-3. Após autorizar, o sistema volta para `/settings/connectors` mostrando o status **Conectado** com selo verde.
-
-**Depois de conectado:**
-
-- **Gerenciar ferramentas**: ativa/desativa as ferramentas individuais que o Google Calendar oferece (você pode, por exemplo, permitir só leitura e bloquear criação).
-- **Desconectar**: revoga o acesso e remove o conector.
-
-### MCP Customizado
-
-Para conectar **qualquer outro servidor MCP** — seja um sistema interno da sua empresa, um SaaS de terceiros ou uma ferramenta open-source — use o cartão **MCP Customizado** e clique em **Configurar**.
-
----
-
-## Criar um conector customizado
-
-O modal de criação tem **2 etapas**.
+Por padrão nenhuma integração está conectada. A seção **Biblioteca de integrações** lista as prontas: Google Calendar, RD Station CRM, Calendly, Pipedrive, Notion, Atlassian, Linear, monday.com, ClickUp, Stripe e Canva.
 
 <Steps>
-  <Step title="Dados do servidor">
-    Informe:
+  <Step title="Escolha a integração">Em **Configurações > Integrações > Conectores**, encontre o card na **Biblioteca de integrações** e clique em **Conectar**.</Step>
+  <Step title="Autorize no serviço">Você é levado ao site do serviço para autorizar o acesso. Ao voltar, a tela confirma com "Integração conectada com sucesso!" e abre o detalhe do conector.</Step>
+  <Step title="Confira as ferramentas">No detalhe, a seção **Ferramentas** lista o que o Tino pode fazer com aquela integração. Ligue ou desligue cada ferramenta.</Step>
+</Steps>
 
-    - **Nome** — como o conector aparecerá no painel.
-    - **URL do servidor** — endpoint do MCP (ex.: `https://meu-mcp.empresa.com/mcp`).
-    - **Tipo de transporte** — `streamable_http` (recomendado e padrão), `sse` ou outros, conforme suportado pelo seu servidor.
-    - **Tipo de autenticação** — `Nenhuma`, `API Key` (header) ou outro mecanismo suportado.
-    - **API Key** — quando aplicável; o campo aceita exibir/ocultar o valor para conferência.
+{/* CAPTURA: images/integracoes/conectores-biblioteca.png | alt: Tela Conectores com a seção Conectados e a Biblioteca de integrações | olhar: o card do Google Calendar com o botão Conectar */}
 
-    Ao avançar, o servidor é criado no Talk e você passa para a etapa 2.
-  </Step>
+<Note>
+  Quando a autorização expira ou é revogada no serviço, o card mostra **Reconectar** e o Tino para de usar as ferramentas até você reconectar.
+</Note>
 
-  <Step title="Testar e descobrir ferramentas">
-    Nesta etapa você pode:
+## Conecte um servidor da sua empresa
 
-    - **Testar conexão** — verifica se o Talk consegue se comunicar com o servidor MCP. Mostra status de sucesso ou mensagem de erro.
-    - **Descobrir ferramentas** — pede ao servidor a lista de tools que ele expõe. Cada ferramenta vem com nome, descrição e parâmetros.
+Se a sua empresa tem um servidor MCP próprio, o card **Conector próprio (MCP)** conecta por endereço.
 
-    Depois de descobrir, salve. O conector aparece na seção **Meus conectores** com a contagem de ferramentas detectadas.
-  </Step>
+<Steps>
+  <Step title="Abra o formulário">Clique em **Configurar** no card **Conector próprio (MCP)**.</Step>
+  <Step title="Preencha a configuração">Informe o **Nome**, a **URL do servidor** (começando com http ou https), o **Transporte** e a **Autenticação**. Com chave de API ou token, cole o valor no campo que aparece.</Step>
+  <Step title="Crie e teste">Clique em **Criar e testar**. A segunda etapa testa a conexão e descobre as ferramentas sozinha; use **Testar conexão** e **Descobrir ferramentas** para repetir. Clique em **Concluir**.</Step>
 </Steps>
 
 <Tip>
-  Recomendamos sempre rodar **Testar conexão** antes de salvar. Um conector ativo com servidor offline gera erros nas conversas do cliente.
+  Peça o endereço e o tipo de autenticação a quem mantém o servidor na sua empresa. Sem isso o teste de conexão falha.
 </Tip>
 
----
+## Ajuste as ferramentas
 
-## Meus conectores
+No detalhe do conector, cada ferramenta tem um interruptor para habilitar e um detalhe com a descrição e o **Timeout (ms)**. Em conector próprio, a descrição é editável: é o texto que o Tino lê para decidir quando usar a ferramenta, então descreva o que ela faz e quando vale a pena chamá-la. Clique em **Salvar alterações**.
 
-Lista todos os conectores customizados criados pela Empresa, em formato de tabela:
+A seção **Usado pelos processos** mostra quais processos usam o conector. Enquanto estiver vazia, o Tino não usa nenhuma ferramenta dele: vincule o conector a um processo. Veja [Organize processos em grupos](/cerebro/grupos-de-processos).
 
-| Coluna | Descrição |
-|--------|-----------|
-| **Nome** | Nome do conector e URL do servidor (truncado). |
-| **Status** | `Ativo` (verde) ou `Inativo` (cinza), conforme o estado configurado. |
-| **Ferramentas** | Quantidade de tools descobertas e disponíveis para uso. |
-| **Ações** | Ícones para **Gerenciar ferramentas**, **Editar** e **Excluir**. |
+## Desligue ou remova
 
-### Gerenciar ferramentas
+- Em **Detalhes**, o interruptor **Status** deixa o conector **Inativo** sem apagar nada. Conectores inativos não ficam disponíveis para o Tino.
+- **Desconectar** (integração pronta) ou **Excluir** (conector próprio) remove o conector de vez, depois de confirmar.
 
-Abre um painel listando todas as ferramentas que o servidor MCP descobriu. Cada uma pode ser **habilitada ou desabilitada individualmente** — útil quando o servidor expõe muitas tools e você quer que o agente use só algumas.
+## Perguntas frequentes
 
-### Editar
+### Conectei a integração e o Tino não usa.
 
-Reabre o modal de criação preenchido para alterar URL, autenticação, transporte ou nome. Após salvar, é recomendável re-testar a conexão e re-descobrir ferramentas.
+Confira a seção **Usado pelos processos**. O Tino só usa ferramentas vinculadas a processos. Confira também se as ferramentas estão habilitadas e se o conector está ativo.
 
-### Excluir
+### O card diz Reconectar.
 
-Remove o conector. Conversas em andamento que estavam chamando ferramentas dele param de funcionar imediatamente — confirme antes.
+A autorização no serviço expirou ou foi revogada. Clique em **Reconectar** e autorize de novo.
 
----
+### Conectores consomem créditos?
 
-## Quem pode gerenciar
+O uso das ferramentas acontece dentro das conversas do Tino, que consomem créditos de IA. {/* CONFIRMAR: se a chamada de ferramenta tem custo próprio além da conversa */}
 
-Apenas usuários **Proprietário** ou **Gestor da empresa** veem a página de Conectores. A configuração vale para toda a Empresa: uma vez criado e ativado, o conector está disponível para o agente de IA em todas as Unidades.
+## Artigos relacionados
 
-<Note>
-  As chamadas a ferramentas MCP consomem créditos de IA, pois cada chamada conta como uso do modelo. Acompanhe em **Configurações &rarr; Faturamento &rarr; Consumo**.
-</Note>
+<CardGroup cols={2}>
+  <Card title="Processos explicados" href="/cerebro/processos-explicados">Onde as ferramentas entram em ação.</Card>
+  <Card title="Receba eventos no seu sistema" href="/integracoes/webhooks">O caminho inverso: o Tartini avisa o seu sistema.</Card>
+</CardGroup>

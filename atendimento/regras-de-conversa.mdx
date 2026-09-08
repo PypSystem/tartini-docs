@@ -1,0 +1,94 @@
+---
+title: "Defina as regras de conversa"
+sidebarTitle: "Regras de Conversa"
+description: "Defina como as conversas encerram sozinhas, como a assinatura do atendente aparece e quando o Scout e o Copilot entram em ação."
+---
+
+Com essas regras configuradas, toda conversa da sua operação segue o mesmo padrão de assinatura, encerramento e avaliação, sem depender de cada atendente lembrar.
+
+<Note>
+  Quem vê: Administrador, Gestor da Empresa e Gestor de Área. Gestor de Unidade não acessa esta tela.
+</Note>
+
+## Configure a assinatura do atendente
+
+Onde fica: **Configurações > Atendimento > Regras de Conversa**, seção **Assinatura do Atendente**.
+
+<Steps>
+  <Step title="Abra a tela">Vá em **Configurações > Atendimento > Regras de Conversa**.</Step>
+  <Step title="Escolha as regras">Ative **Assinatura obrigatória** para exigir a assinatura em toda mensagem, e **Permitir mudança de assinatura** para deixar o atendente editá-la.</Step>
+  <Step title="Salve">Clique em **Salvar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/atendimento/regras-conversa-assinatura.png | alt: Seção Assinatura do Atendente com os dois toggles | olhar: os toggles Assinatura obrigatória e Permitir mudança de assinatura */}
+
+<Note>
+  A assinatura configurada aqui aparece nas mensagens enviadas pelos atendentes no Inbox. {/* CONFIRMAR: estado padrão de Assinatura obrigatória e de Permitir mudança de assinatura */}
+</Note>
+
+## Ative o encerramento automático por inatividade
+
+Por padrão, é ao encerrar a conversa que o Scout gera o resumo e a avaliação.
+
+Onde fica: **Configurações > Atendimento > Regras de Conversa**, seção **Finalização Automática**.
+
+<Steps>
+  <Step title="Ative a regra">Ligue **Encerrar conversa automaticamente**.</Step>
+  <Step title="Ajuste o tempo por canal">Em **Tempo por canal**, use os botões de mais e menos para definir de 1 a 168 horas de inatividade.</Step>
+  <Step title="Salve">Clique em **Salvar**.</Step>
+</Steps>
+
+<Note>
+  Um canal sem tempo definido usa o padrão de 24 horas. Conversas conduzidas pelo Tino costumam encerrar antes, pela regra própria de IA por canal.
+</Note>
+
+## Ative o Scout ao finalizar a conversa
+
+Onde fica: **Configurações > Atendimento > Regras de Conversa**, seção **Scout**.
+
+<Steps>
+  <Step title="Abra a tela">Vá em **Configurações > Atendimento > Regras de Conversa**.</Step>
+  <Step title="Ative o Scout">Ligue **Ativar Scout ao finalizar conversa**.</Step>
+  <Step title="Salve">Clique em **Salvar**.</Step>
+</Steps>
+
+<Note>
+  Com o Scout ativo, cada conversa encerrada recebe um resumo, uma nota e pontos de melhoria, prontos para você validar em Scout. O Scout consome créditos de IA a cada análise.
+</Note>
+
+## Ative o Copilot por padrão
+
+Onde fica: **Configurações > Atendimento > Regras de Conversa**, seção **Copilot**.
+
+<Steps>
+  <Step title="Abra a tela">Vá em **Configurações > Atendimento > Regras de Conversa**.</Step>
+  <Step title="Ative o padrão">Ligue **Copilot ativo por padrão em novas conversas**.</Step>
+  <Step title="Salve">Clique em **Salvar**.</Step>
+</Steps>
+
+<Note>
+  Por padrão, esse toggle já vem ligado. Com o Copilot ativo, ele monitora sozinho cada conversa nova em mãos humanas. O próprio atendente pode desligar o Copilot numa conversa específica. O Copilot consome créditos de IA.
+</Note>
+
+Se o seu plano não inclui o Copilot ativo, a seção mostra um aviso de upgrade no lugar do toggle. Seu plano continua com o Copilot reativo, que responde perguntas do atendente sob demanda.
+
+## Perguntas frequentes
+
+### Desligar a Finalização Automática afeta o Scout?
+
+Sim. O Scout avalia a conversa ao encerrar. Sem encerramento automático, ele só roda quando alguém encerra manualmente.
+
+### Regras de Conversa e SLA são a mesma coisa?
+
+Não. Regras de Conversa cuida de assinatura, encerramento e avaliação. O [SLA](/atendimento/sla) mede o tempo até a primeira resposta humana.
+
+### Por que não vejo o Copilot ativo por padrão?
+
+Esse recurso está disponível a partir do plano Scale. Seu plano atual mostra o aviso de upgrade no lugar do toggle.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Defina o SLA de atendimento" href="/atendimento/sla">Meça o tempo até a primeira resposta humana.</Card>
+  <Card title="Use o Copilot" href="/inbox/copilot">Veja como o Copilot ajuda o atendente durante a conversa.</Card>
+</CardGroup>

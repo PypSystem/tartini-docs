@@ -1,0 +1,83 @@
+---
+title: "Papéis e acessos explicados"
+sidebarTitle: "Papéis e acessos"
+description: "Quem vê o quê no Tartini: dono da conta, administrador, gestores e atendentes, e como o acesso desce pela estrutura da empresa."
+---
+
+Cada pessoa da sua equipe entra no Tartini com um papel num ponto da estrutura da empresa. O papel diz o que ela pode fazer; o ponto da estrutura diz até onde ela enxerga.
+
+## A estrutura: Empresa, Áreas e Unidades
+
+A empresa se organiza em três níveis. A **Empresa** é a conta inteira. As **Áreas** agrupam unidades (uma regional, uma marca, um departamento). As **Unidades** são a ponta: a loja, a filial, a clínica, o time que atende.
+
+O acesso desce pela estrutura. Um papel dado na Empresa vale para todas as Áreas e Unidades. Um papel dado numa Área vale para todas as Unidades dela. Por isso você não precisa dar acesso nível por nível: escolhe o ponto mais alto que a pessoa deve enxergar e pronto.
+
+<Tip>
+  Uma pessoa pode ter mais de um vínculo. Um gerente regional pode ser Gestor de duas Áreas separadas, e um supervisor pode ser Gestor de uma Unidade e Atendente em outra.
+</Tip>
+
+## Os papéis
+
+| Papel | Onde é dado | O que faz |
+|---|---|---|
+| **Administrador** | Empresa | Configura a conta inteira: Cérebro, canais, usuários, integrações e créditos. Pode conceder o papel de Administrador a outras pessoas. |
+| **Gestor da Empresa** | Empresa | Acompanha e gerencia toda a operação (Inbox, Métricas, Scout, Campanhas, Cérebro), sem as configurações de conta: informações da empresa, estrutura, integrações e cobrança. |
+| **Gestor de Área** | Área | Gerencia as Unidades da Área: usuários, canais dessas Unidades, regras de conversa, e vê as conversas, métricas e avaliações delas. |
+| **Gestor de Unidade** | Unidade | Gerencia uma Unidade e os atendentes dela: usuários, o canal da Unidade, mensagens rápidas, conversas, métricas e avaliações da Unidade. |
+| **Atendente** | Unidade | Atende no Inbox, usa o Copilot quando liberado e vê as próprias conversas e o próprio desempenho no Scout. |
+
+Além dos papéis, existe o **dono da conta**: a pessoa que assinou o Tartini. Só o dono vê a tela **Assinatura**, com o plano, os dados da conta e a franquia de créditos. O dono é também Administrador da Empresa.
+
+<Note>
+  "Proprietário", "Gerente" e "Backoffice" eram papéis de versões anteriores e não existem mais. Se você vinha de um deles, seu acesso foi convertido para Administrador ou Gestor.
+</Note>
+
+## O que cada papel vê
+
+Onde está "só o seu escopo", a pessoa vê a tela, mas apenas as Unidades, conversas ou pessoas que gerencia.
+
+| Tela | Administrador | Gestor da Empresa | Gestor de Área | Gestor de Unidade | Atendente |
+|---|---|---|---|---|---|
+| Página Inicial e Inbox | Tudo | Tudo | Só o seu escopo | Só o seu escopo | Só as próprias conversas |
+| Métricas | Tudo | Tudo | Só o seu escopo | Só o seu escopo | Não vê |
+| Central de Conversas | Tudo | Tudo | Só o seu escopo | Só o seu escopo | Só as próprias conversas |
+| Cérebro | Tudo | Tudo | Não vê | Não vê | Não vê |
+| Scout | Tudo | Tudo | Só o seu escopo | Só o seu escopo | Só o próprio desempenho |
+| Campanhas | Tudo | Tudo | Só o seu escopo | Só o seu escopo | Não vê |
+| Informações e Áreas & Unidades | Tudo | Não vê | Não vê | Não vê | Não vê |
+| Usuários | Tudo | Só o seu escopo | Só o seu escopo | Só o seu escopo | Não vê |
+| Canais (WhatsApp, Chat Widget) | Tudo | Tudo | Só o seu escopo | Só o seu escopo | Não vê |
+| Conexão via API | Tudo | Não vê | Não vê | Não vê | Não vê |
+| Regras de Conversa | Tudo | Tudo | Tudo | Não vê | Não vê |
+| IA por canal e SLA de Atendimento | Tudo | Tudo | Só o seu escopo | Não vê | Não vê |
+| Pesquisa de Satisfação | Tudo | Tudo | Não vê | Não vê | Não vê |
+| Mensagens Rápidas | Tudo | Tudo | Só o seu escopo | Só o seu escopo | Só o seu escopo |
+| Créditos e Mensagens e Conversas | Tudo | Não vê | Não vê | Não vê | Não vê |
+| Assinatura | Só o dono da conta | Não vê | Não vê | Não vê | Não vê |
+| Integrações (Conectores, Webhooks, Contatos de Campanha) | Tudo | Não vê | Não vê | Não vê | Não vê |
+| Configurações de usuário e Segurança | As próprias | As próprias | As próprias | As próprias | As próprias |
+
+<Note>
+  Só quem tem Administrador pode conceder Administrador. Um Gestor de Área ou de Unidade convida pessoas apenas para as Unidades que gerencia.
+</Note>
+
+## Perguntas frequentes
+
+### Por que meu Gestor de Unidade não vê o Cérebro?
+
+O Cérebro é a configuração da empresa inteira: conhecimento, tom de voz, processos. Uma mudança ali vale para todas as Unidades, por isso só o Administrador e o Gestor da Empresa editam.
+
+### O atendente vê as conversas dos colegas?
+
+Não. No Inbox e na Central de Conversas ele vê as conversas atribuídas a ele. No Scout, vê as próprias avaliações e o próprio desempenho.
+
+### Quem pode ver os créditos e a fatura?
+
+O Administrador vê a tela **Créditos**, com o saldo e o extrato. A tela **Assinatura**, com o plano e os dados de cobrança, só aparece para o dono da conta.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Convide e gerencie usuários" href="/equipe/usuarios">Dê acesso a uma pessoa em um ou mais pontos da estrutura.</Card>
+  <Card title="Áreas e Unidades" href="/equipe/areas-e-unidades">Monte a estrutura da sua empresa.</Card>
+</CardGroup>

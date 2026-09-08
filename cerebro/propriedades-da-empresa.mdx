@@ -1,0 +1,115 @@
+---
+title: "Cadastre as propriedades da empresa"
+sidebarTitle: "Propriedades"
+description: "Veja, filtre e gerencie em um só lugar tudo que já foi ensinado ao Tino e ao Copilot."
+---
+
+Propriedades e Fontes é a lista central de tudo que compõe o conhecimento da sua empresa: documentos, perguntas e respostas e páginas de site. É onde você confere o que está indexado, edita o conteúdo e decide quem usa cada item.
+
+<Note>
+  Quem vê: Administrador e Gestor da Empresa. Disponível em todos os planos. A opção de audiência pública exige o plano Scale.
+</Note>
+
+## Veja a lista de conteúdo
+
+Por padrão, a lista mostra todos os itens cadastrados, mais recentes primeiro.
+
+Onde fica: **Cérebro > Propriedades**.
+
+Cada linha mostra o título do item, o ícone do tipo de fonte, o status de indexação, quem criou e a audiência. Um clique na linha abre o painel de detalhes.
+
+{/* CAPTURA: images/cerebro/propriedades-lista.png | alt: Tela Propriedades e Fontes com a lista de conteúdo e as colunas de status, criado por e audiência | olhar: os status coloridos por linha */}
+
+<Note>
+  Um site sincronizado com várias páginas aparece como um único item na lista, com um selo indicando quantas subpáginas ele reúne.
+</Note>
+
+## Filtre por audiência e busque um item
+
+Por padrão, a lista mostra conteúdo público e privado juntos.
+
+Onde fica: **Cérebro > Propriedades**, filtros no topo da lista.
+
+<Steps>
+  <Step title="Escolha o tipo de conhecimento">Marque **Conhecimento Público** para ver o que o Tino usa em atendimento, ou **Conhecimento Privado** para o que só o Copilot usa. Sem nenhuma marcação, a lista mostra tudo.</Step>
+  <Step title="Busque por título">Digite no campo **Pesquisar...** para filtrar pelo nome do item.</Step>
+</Steps>
+
+<Note>
+  Sem o plano Scale, a opção **Conhecimento Público** não aparece no filtro, e um aviso fixo explica que o conteúdo público não é usado pelo Tino no seu plano.
+</Note>
+
+## Acompanhe o status de indexação
+
+Cada item mostra um dos seguintes status, atualizado em tempo real: Extraindo conteúdo, Indexando, Processando, Sincronizando páginas, Falhou, Completo ou Indexado. Sem nenhum status ativo, o item mostra **Indexado**.
+
+Um item preso em processamento por 5 minutos ou mais é considerado travado. Nesse caso, ele passa a poder ser excluído mesmo sem terminar de processar.
+
+## Exclua um item
+
+Onde fica: **Cérebro > Propriedades**, menu de três pontos na linha do item.
+
+<Steps>
+  <Step title="Abra o menu">Clique no ícone de três pontos na linha do item.</Step>
+  <Step title="Escolha excluir">Clique em **Excluir**.</Step>
+  <Step title="Confirme">Confirme a exclusão na janela que abre.</Step>
+</Steps>
+
+<Note>
+  Se o item ainda está processando, a confirmação avisa que a exclusão é forçada e permanente, mesmo sem a indexação ter terminado.
+</Note>
+
+Para excluir vários itens de uma vez, clique em **Selecionar**, marque as linhas desejadas e clique em **Excluir (N)**.
+
+## Veja os detalhes e edite o conteúdo
+
+Onde fica: **Cérebro > Propriedades**, clique em qualquer linha da lista (ou **Ver detalhes** no menu de três pontos).
+
+<Steps>
+  <Step title="Abra o painel">Clique na linha do item que quer revisar.</Step>
+  <Step title="Clique em editar">Clique no ícone de lápis, no topo do painel.</Step>
+  <Step title="Altere o conteúdo">Edite o texto, a audiência ou, no caso de perguntas e respostas, os campos de pergunta e resposta.</Step>
+  <Step title="Salve">Clique em **Salvar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/propriedades-detalhe-edicao.png | alt: Painel de detalhes de um documento em modo de edição, com o editor de conteúdo aberto | olhar: os botões Cancelar e Salvar no rodapé do painel */}
+
+<Note>
+  Salvar uma edição de conteúdo reprocessa e reindexa o item, que volta ao status Processando por alguns instantes. Sites cadastrados como raiz de um domínio só permitem editar a audiência, não o conteúdo. O limite de texto editável é de 500.000 caracteres.
+</Note>
+
+## Entenda o card "Tino aprendeu"
+
+Depois que um item termina de indexar, pode aparecer um card com um resumo do que o Tino aprendeu com aquele conteúdo, escrito em primeira pessoa.
+
+Onde fica: logo abaixo do item recém-indexado, na lista, e também dentro do painel de detalhes.
+
+<Steps>
+  <Step title="Leia o resumo">Confira o que o Tino registrou daquele conteúdo.</Step>
+  <Step title="Teste, se quiser">Clique em **Testar conhecimentos adquiridos** para abrir o Copilot com uma pergunta de exemplo pronta para enviar.</Step>
+</Steps>
+
+<Note>
+  O card pode ser dispensado com o X e não volta a aparecer depois disso.
+</Note>
+
+## Perguntas frequentes
+
+### Qual a diferença entre público e privado?
+
+Conteúdo público é usado pelo Tino ao atender os clientes e exige o plano Scale. Conteúdo privado é usado só pelo Copilot, para apoiar a equipe internamente, e está disponível em qualquer plano.
+
+### Posso excluir um item que ainda está processando?
+
+Sim, com confirmação de exclusão forçada. Também é liberado automaticamente para exclusão depois de 5 minutos travado em processamento.
+
+### Cadastrar um documento consome créditos?
+
+Sim. O processamento e a indexação de qualquer conteúdo consomem créditos. Acompanhe o consumo em Configurações > Faturamento > Consumo.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Ensine a IA com documentos" href="/cerebro/documentos">Envie arquivos para a base de conhecimento.</Card>
+  <Card title="Ensine a IA com o seu site" href="/cerebro/sites">Sincronize e indexe páginas do seu site.</Card>
+</CardGroup>

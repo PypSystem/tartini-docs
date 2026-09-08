@@ -1,0 +1,82 @@
+---
+title: "Configure os campos do contato"
+sidebarTitle: "Campos do Contato"
+description: "Defina os dados que o Tino coleta durante a conversa e que a equipe também pode preencher na ficha do contato."
+---
+
+Cada campo do contato guarda uma informação sobre a pessoa, como nome da empresa, e-mail ou orçamento, e a pergunta exata que o Tino faz para consegui-la.
+
+<Note>
+  Quem vê: Administrador e Gestor da Empresa. Exige o plano Scale.
+</Note>
+
+<Note>
+  "Campos do contato" já se chamou "Qualificação" internamente. Esse nome antigo não aparece mais em nenhuma tela do Tartini.
+</Note>
+
+## Crie um campo
+
+Por padrão, nenhum campo está cadastrado.
+
+Onde fica: **Cérebro > Operações > Campos do Contato**.
+
+<Steps>
+  <Step title="Abra o formulário">Clique em **Adicionar campo**.</Step>
+  <Step title="Defina a chave">Preencha **Chave (identificador único)**, por exemplo `budget`, sem espaços ou caracteres especiais.</Step>
+  <Step title="Defina o nome exibido">Preencha **Label (nome exibido)**, por exemplo "Orçamento disponível".</Step>
+  <Step title="Escolha o tipo">Selecione o formato esperado em **Tipo do campo**: Texto, Número, Moeda, Data, Sim/Não, E-mail, Telefone ou URL.</Step>
+  <Step title="Escreva a pergunta">Preencha **Pergunta para coleta** com a pergunta exata que o Tino vai fazer.</Step>
+  <Step title="Marque se é obrigatório">Ative **Obrigatório** se o Tino deve insistir em coletar essa informação antes de seguir.</Step>
+  <Step title="Salve">Clique em **Adicionar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/campos-contato-criar.png | alt: Formulário de novo campo do contato com chave, label, tipo e pergunta preenchidos, ao lado do painel de exemplo de conversa | olhar: o preview da conversa reagindo ao formulário em tempo real */}
+
+<Note>
+  Chave, label e pergunta não podem se repetir entre os campos já cadastrados. Os três são obrigatórios para salvar.
+</Note>
+
+## Veja o exemplo de conversa em tempo real
+
+Ao lado do formulário, um painel simula como o Tino conduziria a coleta desses campos numa conversa real, e reage a cada campo que você adiciona ou edita, antes mesmo de salvar.
+
+Onde fica: **Cérebro > Operações > Campos do Contato**, painel **Exemplo de conversa**.
+
+<Note>
+  Sem nenhum campo cadastrado, o painel mostra um estado vazio pedindo para adicionar campos primeiro.
+</Note>
+
+## Edite ou exclua um campo
+
+Onde fica: **Cérebro > Operações > Campos do Contato**, clique em qualquer card da lista.
+
+<Steps>
+  <Step title="Abra o card">Clique no campo que quer alterar.</Step>
+  <Step title="Ajuste os dados">Altere a chave, o label, o tipo, a pergunta ou se é obrigatório.</Step>
+  <Step title="Salve ou exclua">Clique em **Salvar**, ou em **Excluir** para remover o campo, com confirmação.</Step>
+</Steps>
+
+<Note>
+  A ordem dos campos é a ordem de criação. Não há reordenação manual nesta tela.
+</Note>
+
+## Perguntas frequentes
+
+### Por que às vezes vejo "Qualificação" em vez de "Campos do contato"?
+
+Na interface só existe "Campos do contato". "Qualificação" é um nome interno antigo que não aparece mais para o usuário.
+
+### Dá para reordenar os campos na tela?
+
+Não há controle de reordenação. A ordem é a de criação.
+
+### O campo aparece na ficha do contato mesmo sem o cliente conversar com o Tino?
+
+Sim. A equipe também pode preencher os campos manualmente na ficha do contato.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Configure os esclarecimentos" href="/cerebro/esclarecimentos">Defina quando o Tino pede mais informação.</Card>
+  <Card title="Configure os status de contato" href="/cerebro/status-de-contato">Organize em que ponto do relacionamento cada contato está.</Card>
+</CardGroup>

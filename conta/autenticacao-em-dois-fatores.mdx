@@ -1,0 +1,75 @@
+---
+title: "Ative a autenticação em dois fatores"
+sidebarTitle: "Dois fatores"
+description: "Um código do celular a cada entrada. Mesmo que alguém descubra sua senha, não entra sem ele."
+---
+
+Com a autenticação em dois fatores, a tela de entrada pede a senha e, em seguida, um código de seis dígitos gerado por um app autenticador no seu celular. Tudo fica em **Configurações > Pessoal > Segurança**, no card **Autenticação em dois fatores**.
+
+<Note>
+  Quando a empresa exige o recurso, o Tartini pede a configuração logo na entrada, na tela **Proteja sua conta**, e o botão **Desativar** não aparece.
+</Note>
+
+## Ative
+
+Por padrão o recurso vem inativo. Você precisa de um app autenticador instalado no celular, como Google Authenticator, Authy ou 1Password.
+
+<Steps>
+  <Step title="Confirme a senha">
+    No card, clique em **Ativar**. Digite a **Senha atual** e clique em **Continuar**.
+  </Step>
+  <Step title="Escaneie o código">
+    Abra o app autenticador e escaneie o código da tela. Se não conseguir escanear, clique em copiar ao lado da chave em **Digite esta chave manualmente no app** e cole no app.
+  </Step>
+  <Step title="Confirme com o primeiro código">
+    Digite em **Código de 6 dígitos do app** o número que o app mostra e clique em **Ativar**.
+  </Step>
+  <Step title="Guarde os códigos de recuperação">
+    A tela mostra os códigos uma única vez. Use **Copiar** ou **Baixar .txt**, guarde em lugar seguro, marque **Guardei meus códigos de recuperação em um lugar seguro.** e clique em **Concluir**.
+  </Step>
+</Steps>
+
+{/* CAPTURA: images/conta/dois-fatores-qr.png | Passo App do assistente com o QR code e a chave manual | O QR code e o campo Código de 6 dígitos do app */}
+
+Pronto: o card mostra **Ativa** e a data. Na próxima entrada, depois da senha, a tela pede o código.
+
+<Warning>
+  Cada código de recuperação entra no lugar do código do app uma única vez. Sem o celular e sem os códigos, você não entra na conta.
+</Warning>
+
+## Troque de app ou de celular
+
+Clique em **Trocar app**. O assistente pede a senha e um código do app atual (ou um de recuperação), mostra um novo código para escanear no app novo e gera códigos de recuperação novos. Os antigos deixam de valer. O app antigo continua funcionando até você clicar em **Confirmar troca**.
+
+## Gere novos códigos de recuperação
+
+Clique em **Novos códigos**, confirme a senha e um código do app, e clique em **Gerar**. Os códigos anteriores deixam de valer. O card mostra quantos códigos ainda restam.
+
+## Desative
+
+Clique em **Desativar**, confirme com a **Senha atual** e um **Código** do app (ou de recuperação) e clique em **Desativar**. A conta volta a ser protegida só pela senha.
+
+<Note>
+  O botão **Desativar** não aparece quando a empresa exige o recurso. Neste caso o card mostra "Sua empresa exige autenticação em dois fatores."
+</Note>
+
+## Perguntas frequentes
+
+### Perdi o celular.
+
+Na entrada, clique em **Usar um código de recuperação** e digite um dos códigos guardados. Depois, em Segurança, use **Trocar app** para cadastrar o celular novo.
+
+### Fechei a tela sem guardar os códigos.
+
+Eles não são mostrados de novo. Gere outros em **Novos códigos**.
+
+### O código do app é recusado.
+
+Confira a hora do celular: o app gera o código a partir do relógio. Um relógio atrasado invalida os códigos.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Encerre sessões em outros dispositivos" href="/conta/sessoes-e-dispositivos">Veja onde a sua conta está aberta.</Card>
+  <Card title="Entre no Tartini e recupere sua senha" href="/conta/entrar-e-recuperar-senha">A tela de entrada com o código.</Card>
+</CardGroup>

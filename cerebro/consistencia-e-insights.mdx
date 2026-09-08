@@ -1,0 +1,86 @@
+---
+title: "Acompanhe o Catálogo de processos"
+sidebarTitle: "Catálogo"
+description: "Veja o que está quebrado no cadastro dos seus processos, sem depender de conversas, e corrija com um clique."
+---
+
+O Catálogo audita a estrutura dos seus processos mapeados, saídas sem destino, gatilhos repetidos, processos sem passo a passo, e mostra o próximo passo para cada problema encontrado.
+
+<Note>
+  Quem vê: Administrador e Gestor da Empresa. Exige o plano Scale.
+</Note>
+
+## Veja os achados do Catálogo
+
+Por padrão, a tela já carrega com o relatório mais recente, recalculado a cada abertura.
+
+Onde fica: **Cérebro > Processos > Catálogo**.
+
+Os achados aparecem agrupados por gravidade, dos mais graves para os mais leves. Cada um mostra o tipo do problema, o processo relacionado, uma explicação do que está errado e como resolver.
+
+{/* CAPTURA: images/cerebro/catalogo-lista-achados.png | alt: Tela Catálogo com achados agrupados por gravidade Alta, Média e Baixa | olhar: os badges de gravidade e o botão de conserto de cada achado */}
+
+<Note>
+  A tela mostra até 30 achados por vez, mesmo havendo mais. Use **Carregar mais** para ver o restante.
+</Note>
+
+## Filtre e busque um achado
+
+Onde fica: **Cérebro > Processos > Catálogo**, barra de filtros no topo.
+
+<Steps>
+  <Step title="Filtre por gravidade">Marque **Alta**, **Média** ou **Baixa**, uma ou mais ao mesmo tempo.</Step>
+  <Step title="Filtre por tipo">Escolha um tipo específico, como "saída sem destino" ou "avaliação desatualizada".</Step>
+  <Step title="Busque por processo">Digite no campo **Buscar processo...**.</Step>
+</Steps>
+
+## Corrija um achado
+
+Cada achado tem um botão de conserto que já leva à tela certa para resolver o problema.
+
+Onde fica: **Cérebro > Processos > Catálogo**, dentro de cada cartão de achado.
+
+<Steps>
+  <Step title="Leia o problema">Confira o texto do problema e a explicação de como resolver.</Step>
+  <Step title="Clique no botão de conserto">O rótulo muda conforme o tipo, por exemplo "Definir o próximo passo em Fluxo" ou "Reescrever o passo a passo em Mapeamento".</Step>
+  <Step title="Corrija na tela de destino">Você chega à tela certa, com um aviso explicando por que veio parar ali e um link para voltar.</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/catalogo-botao-conserto.png | alt: Cartão de achado com o texto "como resolver" e o botão de conserto | olhar: o link "ver no diagnóstico" ao lado do botão de conserto */}
+
+<Note>
+  O link "ver no diagnóstico" é só evidência: mostra o impacto do problema em conversas reais, no Scout. Quem resolve o problema é sempre o botão de conserto.
+</Note>
+
+## Reavalie o Catálogo
+
+O relatório é sempre recalculado ao abrir a tela. O botão **Reavaliar** apenas refaz essa mesma consulta.
+
+<Steps>
+  <Step title="Clique em Reavaliar">O ícone gira enquanto o relatório é refeito.</Step>
+</Steps>
+
+## A ponte para o diagnóstico no Scout
+
+O Catálogo olha só o cadastro, sem depender de conversas reais. Para ver como cada processo se saiu de fato no atendimento, o diagnóstico fica no Scout, acessível pelo link "ver no diagnóstico" de qualquer achado com processo associado.
+
+## Perguntas frequentes
+
+### "Reavaliar" consome créditos?
+
+{/* CONFIRMAR: o inventário não encontrou indicação de custo de IA nesta tela; o relatório parece ser um cálculo determinístico sobre o cadastro, sem chamada de modelo. */}
+
+### Por que só vejo 30 achados mesmo tendo mais?
+
+É um teto de exibição, não um limite real. Clique em **Carregar mais** para ver o restante.
+
+### Cadê a nota de aderência ou de uso do processo aqui?
+
+Não fica no Catálogo. Isso é execução, e vive no diagnóstico do Scout.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Mapeie processos a partir das conversas" href="/cerebro/mapeie-processos">Corrija o passo a passo direto na origem.</Card>
+  <Card title="Veja a aderência aos processos" href="/scout/processos-e-aderencia">Acompanhe, no Scout, o que o Tino resolveu seguindo cada processo.</Card>
+</CardGroup>

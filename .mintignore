@@ -10,3 +10,9 @@ drafts/
 DESIGN_SYSTEM.md
 CLAUDE.md
 AGENTS.md
+
+# Ferramentas
+scripts/
+
+# Inventário de telas (fonte interna)
+inventario/

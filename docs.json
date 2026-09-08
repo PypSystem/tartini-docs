@@ -14,130 +14,248 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Documentação",
+        "tab": "Central de ajuda",
         "groups": [
           {
+            "group": "Visão geral",
+            "icon": "book-open",
+            "pages": [
+              "visao-geral/o-que-e-o-tartini",
+              "visao-geral/os-agentes-de-ia",
+              "visao-geral/conheca-a-navegacao",
+              "visao-geral/papeis-e-acessos",
+              "visao-geral/planos-e-recursos",
+              "visao-geral/creditos-explicados",
+              "visao-geral/glossario"
+            ]
+          },
+          {
             "group": "Primeiros passos",
+            "icon": "rocket",
             "pages": [
-              "introduction",
-              "quickstart"
+              {
+                "group": "Guias de início rápido",
+                "icon": "map",
+                "pages": [
+                  "primeiros-passos/guias/comecando-com-o-tartini",
+                  "primeiros-passos/guias/configurando-o-inbox",
+                  "primeiros-passos/guias/treinando-o-cerebro",
+                  "primeiros-passos/guias/ligando-o-tino",
+                  "primeiros-passos/guias/acompanhando-a-equipe"
+                ]
+              },
+              {
+                "group": "Configuração da conta",
+                "icon": "key",
+                "pages": [
+                  "primeiros-passos/configuracao/crie-sua-conta",
+                  "primeiros-passos/configuracao/primeiro-acesso",
+                  "primeiros-passos/configuracao/aceite-um-convite",
+                  "primeiros-passos/configuracao/checklist-de-preparacao"
+                ]
+              },
+              {
+                "group": "Boas práticas",
+                "icon": "lightbulb",
+                "pages": [
+                  "primeiros-passos/boas-praticas/entrar-no-ar",
+                  "primeiros-passos/boas-praticas/escrever-para-a-ia"
+                ]
+              },
+              {
+                "group": "Perguntas frequentes",
+                "icon": "circle-question",
+                "pages": [
+                  "primeiros-passos/perguntas-frequentes/iniciantes"
+                ]
+              }
             ]
           },
           {
-            "group": "Atendimento",
+            "group": "Cérebro",
+            "icon": "brain",
             "pages": [
-              "atendimento/visao-geral",
-              "atendimento/conversas",
-              "atendimento/central-de-conversas",
-              "atendimento/copilot",
-              "atendimento/atendente-passivo",
-              "atendimento/anotacoes-da-ia",
-              "atendimento/widget-de-chat",
-              "atendimento/widget-de-chat"
+              "cerebro/o-cerebro-explicado",
+              {
+                "group": "Propriedades",
+                "icon": "cube",
+                "pages": [
+                  "cerebro/propriedades-da-empresa",
+                  "cerebro/documentos",
+                  "cerebro/perguntas-e-respostas",
+                  "cerebro/sites",
+                  "cerebro/inteligencia-da-base",
+                  "cerebro/teste-o-conhecimento"
+                ]
+              },
+              {
+                "group": "Personalidade",
+                "icon": "masks-theater",
+                "pages": [
+                  "cerebro/comunicacao",
+                  "cerebro/diretrizes",
+                  "cerebro/conformidade"
+                ]
+              },
+              {
+                "group": "Operações",
+                "icon": "gears",
+                "pages": [
+                  "cerebro/disponibilidade",
+                  "cerebro/roteamento",
+                  "cerebro/qualificacao",
+                  "cerebro/esclarecimentos",
+                  "cerebro/contexto-situacional",
+                  "cerebro/status-de-contato"
+                ]
+              },
+              {
+                "group": "Processos",
+                "icon": "diagram-project",
+                "pages": [
+                  "cerebro/processos-explicados",
+                  "cerebro/mapeie-processos",
+                  "cerebro/grupos-de-processos",
+                  "cerebro/consistencia-e-insights"
+                ]
+              }
             ]
           },
           {
-            "group": "Identidade",
+            "group": "Tino, o agente de atendimento",
+            "icon": "robot",
             "pages": [
-              "ia-e-personalidade/comunicacao",
-              "ia-e-personalidade/diretrizes",
-              "ia-e-personalidade/compliance",
-              "ia-e-personalidade/esclarecimentos",
-              "operacoes/campos-de-qualificacao",
-              "operacoes/roteamento",
-              "operacoes/horarios-de-atendimento",
-              "ia-e-personalidade/contexto-situacional"
+              "tino/o-tino-explicado",
+              "tino/ia-por-canal",
+              "tino/handoff"
             ]
           },
           {
-            "group": "Base de conhecimento",
+            "group": "Inbox",
+            "icon": "inbox",
             "pages": [
-              "base-de-conhecimento/visao-geral",
-              "base-de-conhecimento/documentos",
-              "base-de-conhecimento/perguntas-e-respostas",
-              "base-de-conhecimento/sites"
+              "inbox/conheca-o-inbox",
+              "inbox/atenda-uma-conversa",
+              "inbox/copilot",
+              "inbox/mensagens-rapidas",
+              "inbox/transfira-notas-e-tags",
+              "inbox/encerre-uma-conversa",
+              "inbox/contatos",
+              "inbox/ficha-do-contato",
+              "inbox/visitantes",
+              "inbox/central-de-conversas"
             ]
           },
           {
             "group": "Canais",
+            "icon": "tower-broadcast",
             "pages": [
-              "canais/whatsapp",
-              "canais/waba-onboarding",
-              "canais/whatsapp-business",
-              "canais/waba-bsp",
-              "canais/waba-troubleshooting",
-              "canais/templates"
+              "canais/canais-explicados",
+              "canais/whatsapp-qr-code",
+              "canais/whatsapp-business-api",
+              "canais/templates",
+              "canais/chat-widget",
+              "canais/problemas-de-conexao"
             ]
           },
           {
-            "group": "Campanhas e contatos",
+            "group": "Campanhas",
+            "icon": "bullhorn",
             "pages": [
-              "contatos/gerenciar-contatos",
-              "contatos/ficha-do-contato"
-              "campanhas/criar-e-gerenciar",
-              "campanhas/metricas"
+              "campanhas/campanhas-explicadas",
+              "campanhas/setup",
+              "campanhas/crie-uma-campanha",
+              "campanhas/contatos-e-csv",
+              "campanhas/agendamento-e-follow-ups",
+              "campanhas/webhook-e-inbound",
+              "campanhas/resultados",
+              "campanhas/contatos-de-campanha"
             ]
           },
           {
-            "group": "Configurações",
+            "group": "Scout",
+            "icon": "compass",
             "pages": [
-              "configuracoes/regras-de-conversa",
-              "configuracoes/pesquisa-de-satisfacao",
-              "operacoes/sla"
+              "scout/o-scout-explicado",
+              "scout/avaliacoes",
+              "scout/concorde-ou-corrija",
+              "scout/desempenho-da-equipe",
+              "scout/processos-e-aderencia",
+              "scout/satisfacao"
+            ]
+          },
+          {
+            "group": "Métricas",
+            "icon": "chart-bar",
+            "pages": [
+              "metricas/pagina-inicial",
+              "metricas/panorama",
+              "metricas/operacao",
+              "metricas/tino",
+              "metricas/mensagens-e-conversas"
+            ]
+          },
+          {
+            "group": "Equipe e permissões",
+            "icon": "users",
+            "pages": [
+              "equipe/areas-e-unidades",
+              "equipe/usuarios",
+              "equipe/informacoes-da-empresa"
+            ]
+          },
+          {
+            "group": "Regras do atendimento",
+            "icon": "sliders",
+            "pages": [
+              "atendimento/regras-de-conversa",
+              "atendimento/sla",
+              "atendimento/pesquisa-de-satisfacao"
+            ]
+          },
+          {
+            "group": "Créditos e assinatura",
+            "icon": "credit-card",
+            "pages": [
+              "creditos/creditos-e-extrato",
+              "creditos/assinatura",
+              "creditos/quando-os-creditos-acabam"
             ]
           },
           {
             "group": "Integrações",
+            "icon": "plug",
             "pages": [
-              "operacoes/horarios-de-atendimento",
-              "operacoes/sla",
-              "operacoes/roteamento",
-              "operacoes/campos-de-qualificacao",
-              "operacoes/status-de-contato"
               "integracoes/conectores",
-              "integracoes/contatos-de-campanha",
-              "integracoes/webhook-de-atendimento",
-              "canais/conexao-via-api"
+              "integracoes/webhooks",
+              "integracoes/conexao-via-api"
             ]
           },
           {
-            "group": "Faturamento",
+            "group": "Conta e segurança",
+            "icon": "user-shield",
             "pages": [
-              "faturamento/assinatura",
-              "faturamento/consumo-de-ia",
-              "faturamento/mensagens-e-conversas"
-            ]
-          },
-          {
-            "group": "Gestão",
-            "pages": [
-              "administracao/informacoes",
-              "administracao/empresas-e-unidades",
-              "administracao/usuarios-e-permissoes",
-              "avaliacao/conversas",
-              "avaliacao/atendentes"
-            ]
-          },
-          {
-            "group": "Conta",
-            "pages": [
-              "conta/configuracoes-de-usuario",
-              "conta/sessoes-ativas"
+              "conta/entrar-e-recuperar-senha",
+              "conta/perfil-e-notificacoes",
+              "conta/autenticacao-em-dois-fatores",
+              "conta/sessoes-e-dispositivos"
             ]
           }
         ]
       },
       {
-        "tab": "API Reference",
+        "tab": "Para desenvolvedores",
         "groups": [
           {
             "group": "Visão geral",
+            "icon": "code",
             "pages": [
               "api-reference/introduction"
             ]
           },
           {
             "group": "Conceitos",
+            "icon": "book",
             "pages": [
               "concepts/authentication",
               "concepts/rag",
@@ -146,23 +264,23 @@
           },
           {
             "group": "Endpoints",
+            "icon": "terminal",
             "pages": [
               "api-reference/endpoint/status",
               "api-reference/endpoint/rag-retrieve"
             ]
+          },
+          {
+            "group": "Webhooks e API",
+            "icon": "webhook",
+            "pages": [
+              "desenvolvedores/webhook-de-atendimento",
+              "desenvolvedores/conexao-via-api"
+            ]
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "API Reference",
-          "href": "/api-reference/introduction",
-          "icon": "code"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
@@ -174,6 +292,9 @@
       "label": "Acessar",
       "href": "https://talk.saninternet.com/login"
     }
+  },
+  "search": {
+    "prompt": "Pesquisar na central de ajuda…"
   },
   "api": {
     "baseUrl": "https://api-talk.saninternet.com/v1",
@@ -216,5 +337,203 @@
     "body": {
       "family": "Hanken Grotesk"
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/introduction",
+      "destination": "/visao-geral/o-que-e-o-tartini"
+    },
+    {
+      "source": "/quickstart",
+      "destination": "/primeiros-passos/guias/comecando-com-o-tartini"
+    },
+    {
+      "source": "/atendimento/visao-geral",
+      "destination": "/inbox/conheca-o-inbox"
+    },
+    {
+      "source": "/atendimento/conversas",
+      "destination": "/inbox/atenda-uma-conversa"
+    },
+    {
+      "source": "/atendimento/central-de-conversas",
+      "destination": "/inbox/central-de-conversas"
+    },
+    {
+      "source": "/atendimento/copilot",
+      "destination": "/inbox/copilot"
+    },
+    {
+      "source": "/atendimento/atendente-passivo",
+      "destination": "/tino/o-tino-explicado"
+    },
+    {
+      "source": "/atendimento/mensagens-rapidas",
+      "destination": "/inbox/mensagens-rapidas"
+    },
+    {
+      "source": "/atendimento/widget-de-chat",
+      "destination": "/canais/chat-widget"
+    },
+    {
+      "source": "/atendimento/anotacoes-da-ia",
+      "destination": "/inbox/ficha-do-contato"
+    },
+    {
+      "source": "/ia-e-personalidade/comunicacao",
+      "destination": "/cerebro/comunicacao"
+    },
+    {
+      "source": "/ia-e-personalidade/diretrizes",
+      "destination": "/cerebro/diretrizes"
+    },
+    {
+      "source": "/ia-e-personalidade/compliance",
+      "destination": "/cerebro/conformidade"
+    },
+    {
+      "source": "/ia-e-personalidade/esclarecimentos",
+      "destination": "/cerebro/esclarecimentos"
+    },
+    {
+      "source": "/ia-e-personalidade/contexto-situacional",
+      "destination": "/cerebro/contexto-situacional"
+    },
+    {
+      "source": "/ia-e-personalidade/personalidade",
+      "destination": "/cerebro/comunicacao"
+    },
+    {
+      "source": "/operacoes/campos-de-qualificacao",
+      "destination": "/cerebro/qualificacao"
+    },
+    {
+      "source": "/operacoes/roteamento",
+      "destination": "/cerebro/roteamento"
+    },
+    {
+      "source": "/operacoes/horarios-de-atendimento",
+      "destination": "/cerebro/disponibilidade"
+    },
+    {
+      "source": "/operacoes/status-de-contato",
+      "destination": "/cerebro/status-de-contato"
+    },
+    {
+      "source": "/operacoes/sla",
+      "destination": "/atendimento/sla"
+    },
+    {
+      "source": "/base-de-conhecimento/visao-geral",
+      "destination": "/cerebro/propriedades-da-empresa"
+    },
+    {
+      "source": "/base-de-conhecimento/documentos",
+      "destination": "/cerebro/documentos"
+    },
+    {
+      "source": "/base-de-conhecimento/perguntas-e-respostas",
+      "destination": "/cerebro/perguntas-e-respostas"
+    },
+    {
+      "source": "/base-de-conhecimento/sites",
+      "destination": "/cerebro/sites"
+    },
+    {
+      "source": "/canais/whatsapp",
+      "destination": "/canais/whatsapp-qr-code"
+    },
+    {
+      "source": "/canais/waba-onboarding",
+      "destination": "/canais/whatsapp-business-api"
+    },
+    {
+      "source": "/canais/whatsapp-business",
+      "destination": "/canais/whatsapp-business-api"
+    },
+    {
+      "source": "/canais/waba-bsp",
+      "destination": "/canais/whatsapp-business-api"
+    },
+    {
+      "source": "/canais/waba-troubleshooting",
+      "destination": "/canais/problemas-de-conexao"
+    },
+    {
+      "source": "/canais/conexao-via-api",
+      "destination": "/integracoes/conexao-via-api"
+    },
+    {
+      "source": "/campanhas/criar-e-gerenciar",
+      "destination": "/campanhas/crie-uma-campanha"
+    },
+    {
+      "source": "/campanhas/metricas",
+      "destination": "/campanhas/resultados"
+    },
+    {
+      "source": "/contatos/gerenciar-contatos",
+      "destination": "/inbox/contatos"
+    },
+    {
+      "source": "/contatos/ficha-do-contato",
+      "destination": "/inbox/ficha-do-contato"
+    },
+    {
+      "source": "/configuracoes/regras-de-conversa",
+      "destination": "/atendimento/regras-de-conversa"
+    },
+    {
+      "source": "/configuracoes/pesquisa-de-satisfacao",
+      "destination": "/atendimento/pesquisa-de-satisfacao"
+    },
+    {
+      "source": "/integracoes/contatos-de-campanha",
+      "destination": "/campanhas/contatos-de-campanha"
+    },
+    {
+      "source": "/integracoes/webhook-de-atendimento",
+      "destination": "/integracoes/webhooks"
+    },
+    {
+      "source": "/faturamento/assinatura",
+      "destination": "/creditos/assinatura"
+    },
+    {
+      "source": "/faturamento/consumo-de-ia",
+      "destination": "/creditos/creditos-e-extrato"
+    },
+    {
+      "source": "/faturamento/mensagens-e-conversas",
+      "destination": "/metricas/mensagens-e-conversas"
+    },
+    {
+      "source": "/administracao/informacoes",
+      "destination": "/equipe/informacoes-da-empresa"
+    },
+    {
+      "source": "/administracao/empresas-e-unidades",
+      "destination": "/equipe/areas-e-unidades"
+    },
+    {
+      "source": "/administracao/usuarios-e-permissoes",
+      "destination": "/equipe/usuarios"
+    },
+    {
+      "source": "/avaliacao/conversas",
+      "destination": "/scout/avaliacoes"
+    },
+    {
+      "source": "/avaliacao/atendentes",
+      "destination": "/scout/desempenho-da-equipe"
+    },
+    {
+      "source": "/conta/configuracoes-de-usuario",
+      "destination": "/conta/perfil-e-notificacoes"
+    },
+    {
+      "source": "/conta/sessoes-ativas",
+      "destination": "/conta/sessoes-e-dispositivos"
+    }
+  ]
 }

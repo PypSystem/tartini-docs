@@ -1,51 +1,89 @@
 ---
-title: "Templates de WhatsApp"
+title: "Crie templates de mensagem do WhatsApp"
 sidebarTitle: "Templates"
-description: "Crie e gerencie templates de mensagem aprovados pela Meta."
+description: "Prepare mensagens aprovadas pela Meta para iniciar conversas com clientes fora da janela normal do WhatsApp."
 ---
 
-Templates são modelos de mensagem que precisam ser aprovados pela Meta antes de serem usados para iniciar conversas ou enviar campanhas via WABA.
+Um template aprovado permite chamar o cliente primeiro, fora da janela normal de atendimento do WhatsApp. Eles alimentam as campanhas do Tartini e qualquer contato iniciado pela sua empresa.
 
-## Por que usar templates?
+<Note>Disponível para canais WABA. Quem gerencia: Administrador, Gestor da Empresa, Gestor de Área e Gestor de Unidade. {/* CONFIRMAR: quem exatamente pode criar, editar e excluir templates no backend */}</Note>
 
-A Meta exige que toda conversa iniciada por uma empresa (sem que o cliente tenha enviado mensagem antes) use um template aprovado. Isso inclui:
+## Crie um template
 
-- Campanhas de marketing
-- Notificações e alertas
-- Mensagens de follow-up após 24h
+Por padrão, um canal WABA novo não tem nenhum template cadastrado.
 
-## Criando um template
+Onde fica: **Configurações > Canais > WABA > Gerenciar Templates**.
 
 <Steps>
-  <Step title="Acesse Templates no Dashboard">
-    Vá em **Canais > Templates** e clique em **Criar template**.
-  </Step>
-  <Step title="Defina o conteúdo">
-    Escreva o texto do template. Use variáveis como `{{1}}`, `{{2}}` para campos dinâmicos (nome do cliente, número do pedido, etc.).
-  </Step>
-  <Step title="Configure botões (opcional)">
-    Adicione botões de resposta rápida ou links.
-  </Step>
-  <Step title="Selecione o idioma">
-    Defina o idioma principal do template.
-  </Step>
-  <Step title="Envie para aprovação">
-    O template é enviado à Meta para revisão. A aprovação geralmente leva de minutos a poucas horas.
-  </Step>
+  <Step title="Abra a tela de templates">No canal WABA, clique em **Gerenciar Templates**.</Step>
+  <Step title="Comece um novo template">Clique em **Novo Template**.</Step>
+  <Step title="Dê um nome e escolha a categoria">Preencha **Nome do Template** e escolha entre **Marketing** e **Utilidade**.</Step>
+  <Step title="Escreva o corpo da mensagem">Digite o texto em **Corpo da Mensagem**. Para incluir um dado que muda a cada envio, clique num dos **Campos Disponíveis** para inserir a variável, como `{{nome}}`.</Step>
+  <Step title="Complete o que for preciso">Adicione **Cabeçalho**, **Rodapé** ou até três **Botões**, se o template precisar.</Step>
+  <Step title="Envie para aprovação">Clique em **Criar Template**.</Step>
 </Steps>
 
-## Status do template
+{/* CAPTURA: images/canais/templates-editor.png | alt: editor de template com corpo, campos disponíveis e preview | olhar: o preview à direita conforme o texto é digitado */}
 
-| Status | Descrição |
-|--------|-----------|
-| **Pendente** | Aguardando aprovação da Meta |
-| **Aprovado** | Pronto para uso |
-| **Rejeitado** | Não aprovado, revise e reenvie |
+<Note>
+  Limites: nome até 512 caracteres, corpo até 1024, cabeçalho e rodapé até 60 cada, até 3 botões. Variáveis usam letras minúsculas e `_`, sem espaços, e nunca ficam no início ou no fim do corpo.
+</Note>
 
-## Sincronização
+---
 
-Se você já tem templates criados no Meta Business Manager, o Tartini sincroniza automaticamente. Clique em **Sincronizar templates** para atualizar a lista.
+## Acompanhe o status
+
+Todo template enviado passa pela aprovação da Meta:
+
+- **Em revisão**: aguardando a Meta analisar.
+- **Aprovado**: pronto para uso em campanhas e conversas.
+- **Rejeitado**: a Meta recusou o template.
+
+Você recebe um aviso na hora em que o status muda, sem precisar atualizar a página.
+
+{/* CONFIRMAR: prazo médio de aprovação da Meta para exibir na central */}
+
+---
+
+## Edite ou exclua um template
+
+<Steps>
+  <Step title="Abra o template">Na lista de templates, clique em **Editar**.</Step>
+  <Step title="Altere o que for preciso">Ajuste texto, cabeçalho, rodapé ou botões.</Step>
+  <Step title="Salve">Clique em **Salvar Alterações** e confirme.</Step>
+</Steps>
 
 <Warning>
-  Templates rejeitados pela Meta geralmente violam políticas de conteúdo. Evite linguagem promocional excessiva, informações enganosas ou conteúdo sensível.
+  Editar um template manda ele de volta para aprovação da Meta, e você não pode editar de novo nas 24 horas seguintes.
 </Warning>
+
+Para excluir, clique em **Excluir** na linha do template e confirme.
+
+<Warning>
+  Excluir um template remove ele do Meta e não pode ser desfeito. Um template usado em campanha ativa não pode ser editado nem excluído: desative a campanha primeiro.
+</Warning>
+
+## Onde os templates são usados
+
+Templates aprovados aparecem na hora de criar uma campanha, para começar a conversa com o cliente.
+
+## Perguntas frequentes
+
+### Por que não consigo editar meu template?
+
+Ele está em uso por uma campanha ativa, ou ainda está dentro do bloqueio de 24 horas depois da última edição.
+
+### Posso escrever o template em outro idioma?
+
+Não pela tela atual: os templates criados no Tartini saem no idioma português do Brasil.
+
+### O que acontece se a Meta rejeitar o template?
+
+Ele fica marcado como **Rejeitado** na lista. Edite o texto e envie de novo para uma nova análise.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Conecte o WhatsApp Business API (WABA)" href="/canais/whatsapp-business-api">Pré-requisitos e conexão do canal oficial.</Card>
+  <Card title="Canais explicados" href="/canais/canais-explicados">Os canais disponíveis no Tartini.</Card>
+</CardGroup>

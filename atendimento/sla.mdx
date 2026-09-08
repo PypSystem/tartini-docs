@@ -1,0 +1,85 @@
+---
+title: "Defina o SLA de atendimento"
+sidebarTitle: "SLA de atendimento"
+description: "Diga à equipe quanto tempo o cliente pode esperar pela primeira resposta humana e receba alerta antes de estourar."
+---
+
+Com o SLA configurado, sua equipe sabe exatamente quanto tempo tem para a primeira resposta humana, e os gestores recebem alerta antes do prazo estourar.
+
+<Note>
+  Quem vê: Administrador, Gestor da Empresa e Gestor de Área. Disponível em todos os planos.
+</Note>
+
+## Ligue o SLA em um canal
+
+Por padrão, um canal nunca configurado fica com o SLA desligado.
+
+Onde fica: **Configurações > Atendimento > SLA de Atendimento**.
+
+<Steps>
+  <Step title="Abra a tela">Vá em **Configurações > Atendimento > SLA de Atendimento**.</Step>
+  <Step title="Escolha o canal">Clique no canal que você quer medir, na lista à esquerda.</Step>
+  <Step title="Ligue o SLA">Ative o toggle de **SLA medindo**.</Step>
+</Steps>
+
+{/* CAPTURA: images/atendimento/sla-selecao-canal.png | alt: Tela SLA de Atendimento com um canal selecionado e o toggle SLA medindo ativo | olhar: a lista de canais à esquerda e o toggle no detalhe */}
+
+<Note>
+  O SLA é configurado canal por canal. Ative só onde faz sentido medir o tempo de resposta.
+</Note>
+
+## Defina o tempo máximo de resposta
+
+Onde fica: **Configurações > Atendimento > SLA de Atendimento**, no detalhe do canal.
+
+<Steps>
+  <Step title="Escolha o tempo">Em **Tempo máximo**, use um dos atalhos (5 min, 10 min, 15 min, 30 min, 1 h, 2 h) ou digite um valor entre 1 e 1.440 minutos.</Step>
+  <Step title="Salve">Clique em **Salvar**.</Step>
+</Steps>
+
+<Note>
+  Um canal nunca configurado aparece com 15 minutos, desligado. O SLA conta da entrada da conversa na fila até a primeira resposta humana, mesmo em transferências do Tino.
+</Note>
+
+## Entenda os alertas
+
+Cada canal com SLA ativo tem uma régua de três marcos, visível na própria tela de configuração:
+
+- **Primeiro alerta**: a conversa fica âmbar na fila, antes do prazo estourar.
+- **Estourou**: a conversa fica vermelha, no tempo máximo definido.
+- **Crítico**: os gestores recebem um e-mail. {/* CONFIRMAR: quem exatamente recebe o e-mail de alerta crítico */}
+
+{/* CAPTURA: images/atendimento/sla-alertas.png | alt: Régua de alertas do SLA com os três marcos | olhar: os pontos de primeiro alerta, estourou e crítico na régua */}
+
+## O que a equipe vê na conversa
+
+Uma conversa dentro do prazo não mostra nenhum aviso. Ao chegar perto do limite, ela aparece âmbar na fila. Depois do prazo, vermelha.
+
+## Relação com o horário de atendimento
+
+O cronômetro do SLA só conta dentro do horário comercial cadastrado. Fora do expediente, ele pausa e retoma na próxima abertura.
+
+<Note>
+  Sem nenhum horário comercial cadastrado, o SLA conta 24 horas por dia, todos os dias. Configure os horários em [Disponibilidade](/cerebro/disponibilidade).
+</Note>
+
+## Perguntas frequentes
+
+### O SLA mede as respostas do Tino?
+
+Não. Ele mede o tempo até a primeira resposta humana, mesmo quando a conversa chega por uma transferência do Tino.
+
+### Posso usar o mesmo prazo para todos os canais?
+
+Não é automático. Configure o tempo máximo canal por canal.
+
+### O que acontece se eu trocar de canal sem salvar?
+
+A tela avisa para salvar ou descartar as alterações antes de trocar de canal.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Defina as regras de conversa" href="/atendimento/regras-de-conversa">Configure encerramento automático, assinatura e Scout.</Card>
+  <Card title="Defina horários e fuso da IA" href="/cerebro/disponibilidade">Configure o horário comercial que pausa o SLA.</Card>
+</CardGroup>

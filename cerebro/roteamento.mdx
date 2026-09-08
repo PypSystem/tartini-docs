@@ -1,0 +1,97 @@
+---
+title: "Configure o roteamento"
+sidebarTitle: "Roteamento"
+description: "Defina as condições que fazem o Tino transferir a conversa para um atendente humano."
+---
+
+O roteamento diz ao Tino quando parar e passar a conversa para uma pessoa, como um cliente irritado ou um pedido para falar com um atendente.
+
+<Note>
+  Quem vê: Administrador e Gestor da Empresa. Exige o plano Scale.
+</Note>
+
+## Crie um critério de roteamento
+
+Por padrão, nenhum critério está cadastrado.
+
+Onde fica: **Cérebro > Operações > Roteamento**.
+
+<Steps>
+  <Step title="Abra o formulário">Clique em **Adicionar critério**.</Step>
+  <Step title="Escreva o nome">Preencha o título, por exemplo "Transferir cliente irritado".</Step>
+  <Step title="Descreva a condição">Explique quando e como o roteamento deve ocorrer.</Step>
+  <Step title="Salve">Clique em **Salvar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/roteamento-criar-criterio.png | alt: Formulário de novo critério de roteamento com título e descrição preenchidos | olhar: os modelos sugeridos abaixo dos campos vazios */}
+
+<Note>
+  Título e descrição não podem se repetir entre os critérios já cadastrados. Não há limite de quantidade de critérios.
+</Note>
+
+## Ative ou desative um critério
+
+Onde fica: dentro da edição do card do critério.
+
+<Steps>
+  <Step title="Abra o card">Clique no critério que quer alterar.</Step>
+  <Step title="Ligue ou desligue">Use o interruptor **Ativo**/**Inativo**.</Step>
+  <Step title="Salve">Clique em **Salvar**.</Step>
+</Steps>
+
+Quando um critério aprovado veio de uma sugestão do Tino, o card mostra um link **Origem** apontando para o documento do Cérebro de onde ele foi extraído.
+
+## Use um modelo pronto
+
+Onde fica: **Cérebro > Operações > Roteamento**, bloco de modelos, com sugestões como "Insatisfação, reclamação ou linguagem agressiva" e "Cliente solicita falar com atendente humano".
+
+<Steps>
+  <Step title="Escolha um modelo">Clique em um dos modelos sugeridos, ou em **Explorar modelos** para ver todos.</Step>
+  <Step title="Ajuste o texto">O formulário abre preenchido com o título e a descrição do modelo.</Step>
+  <Step title="Salve">Clique em **Salvar**.</Step>
+</Steps>
+
+## Revise as sugestões do Tino
+
+Onde fica: **Cérebro > Operações > Roteamento**, bloco **Sugestões do Tino**, quando há alguma pendente.
+
+<Steps>
+  <Step title="Leia a sugestão">Confira o título, a descrição e, se houver, a origem no Cérebro.</Step>
+  <Step title="Decida">Clique em **Aceitar**, **Editar** ou **Negar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/roteamento-sugestoes-tino.png | alt: Bloco Sugestões do Tino em Roteamento com um card de critério sugerido | olhar: o link de Origem apontando para o documento de onde veio a sugestão */}
+
+<Note>
+  Uma sugestão não vale no atendimento antes de ser aceita. Editar e salvar já aprova o critério no mesmo ato.
+</Note>
+
+## Exclua um critério
+
+Onde fica: dentro da edição do card do critério.
+
+<Steps>
+  <Step title="Abra o card">Clique no critério que quer remover.</Step>
+  <Step title="Clique em Excluir">Confirme na janela que abre.</Step>
+</Steps>
+
+## Perguntas frequentes
+
+### Posso configurar o roteamento para outra ação além de transferir para uma pessoa?
+
+Não. Todo critério cadastrado por aqui transfere para atendimento humano.
+
+### Existe um jeito de simular uma conversa contra os critérios de roteamento?
+
+Não há simulação nesta tela. Para conferir o comportamento, use o chat de teste do Cérebro.
+
+### Quantos critérios posso cadastrar?
+
+Não há limite de quantidade.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Configure os esclarecimentos" href="/cerebro/esclarecimentos">Defina quando o Tino pede mais informação.</Card>
+  <Card title="Defina horários e fuso da IA" href="/cerebro/disponibilidade">Configure quando a empresa está em atendimento.</Card>
+</CardGroup>

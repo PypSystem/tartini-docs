@@ -1,0 +1,97 @@
+---
+title: "Defina horários e fuso da IA"
+sidebarTitle: "Disponibilidade"
+description: "Configure o fuso horário e os horários de atendimento da empresa para orientar quando o Tino está em operação."
+---
+
+Definir os horários de atendimento deixa claro, dia por dia, quando a sua empresa está operando, na base de tempo certa.
+
+<Note>
+  Quem vê: Administrador e Gestor da Empresa. Exige o plano Scale.
+</Note>
+
+## Defina o fuso horário
+
+Por padrão, o fuso horário é São Paulo (GMT-3).
+
+Onde fica: **Cérebro > Operações > Disponibilidade**, cartão **Fuso Horário**.
+
+<Steps>
+  <Step title="Abra o seletor">Vá até o cartão **Fuso Horário**.</Step>
+  <Step title="Escolha o fuso">Selecione entre as opções disponíveis, como São Paulo, Manaus ou New York.</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/disponibilidade-fuso.png | alt: Cartão Fuso Horário com o seletor aberto mostrando as opções de cidade | olhar: o badge com o fuso atual formatado */}
+
+<Note>
+  A mudança de fuso é salva assim que você escolhe uma opção, sem precisar de um botão Salvar separado.
+</Note>
+
+## Configure os horários de cada dia
+
+Por padrão, nenhum horário está configurado.
+
+Onde fica: **Cérebro > Operações > Disponibilidade**, cartão **Horários de Atendimento**.
+
+<Steps>
+  <Step title="Escolha um dia">Clique no dia da semana que quer configurar.</Step>
+  <Step title="Adicione uma faixa">Clique em **Adicionar horário** e preencha o início e o fim.</Step>
+  <Step title="Repita, se precisar">Adicione quantas faixas quiser no mesmo dia, por exemplo manhã e tarde.</Step>
+  <Step title="Salve">Clique em **Salvar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/disponibilidade-horarios-dia.png | alt: Card do dia Segunda-feira expandido com duas faixas de horário preenchidas | olhar: os botões Adicionar horário e Salvar no rodapé do card */}
+
+<Note>
+  Só um dia fica aberto para edição por vez. Trocar de dia com alterações pendentes é bloqueado até você salvar ou cancelar.
+</Note>
+
+## Replique horários entre dias
+
+Depois de configurar um dia, você pode copiar os mesmos horários para os outros dias, sem repetir a digitação.
+
+Onde fica: card de um dia que já tem horários cadastrados, botões **Seg-Sex** e **Todos**.
+
+<Steps>
+  <Step title="Escolha o alvo">Clique em **Seg-Sex** para replicar de segunda a sexta, ou em **Todos** para os sete dias.</Step>
+  <Step title="Aguarde a réplica">Um indicador mostra o andamento enquanto os horários são copiados.</Step>
+</Steps>
+
+<Note>
+  Replicar substitui todos os horários já existentes nos dias de destino pelos horários do dia de origem. Não há réplica para um único dia específico, só Seg-Sex ou Todos.
+</Note>
+
+## Remova um horário
+
+Onde fica: dentro do dia expandido, ao lado de cada faixa de horário.
+
+<Steps>
+  <Step title="Abra o dia">Clique no dia da semana com o horário que quer remover.</Step>
+  <Step title="Remova a faixa">Clique no ícone de lixeira ao lado da faixa.</Step>
+  <Step title="Salve">Clique em **Salvar**.</Step>
+</Steps>
+
+<Note>
+  Salvar fica bloqueado enquanto alguma faixa do dia tiver o início ou o fim em branco.
+</Note>
+
+## Perguntas frequentes
+
+### Posso ter mais de uma faixa de horário no mesmo dia?
+
+Sim, adicione quantas quiser com o botão Adicionar horário.
+
+### O fuso horário afeta cada faixa individualmente?
+
+Não. É um único fuso para a conta inteira, salvo separadamente das faixas de horário.
+
+### Dá para copiar o horário de um dia só para outro dia específico?
+
+Não. A réplica só tem dois alvos: Seg-Sex (todos os dias úteis) ou Todos (os sete dias).
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Configure o roteamento" href="/cerebro/roteamento">Defina quando o Tino transfere para uma pessoa.</Card>
+  <Card title="Informe um contexto temporário" href="/cerebro/contexto-situacional">Registre situações fora do horário padrão.</Card>
+</CardGroup>

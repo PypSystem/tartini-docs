@@ -1,0 +1,73 @@
+---
+title: "Ensine a IA com documentos"
+sidebarTitle: "Documentos"
+description: "Envie manuais, catálogos e políticas para que o Tino aprenda o conteúdo automaticamente."
+---
+
+Enviar um documento é a forma mais rápida de colocar conteúdo já existente na base de conhecimento: o Tino lê o arquivo e aprende sozinho, sem que você precise reescrever nada.
+
+<Note>
+  Quem vê: Administrador e Gestor da Empresa. Disponível em todos os planos. A audiência pública exige o plano Scale.
+</Note>
+
+## Envie um ou mais documentos
+
+Por padrão, um documento novo aguarda a escolha de audiência antes do envio.
+
+Onde fica: **Cérebro > Propriedades**, botão **Arquivo**.
+
+<Steps>
+  <Step title="Abra o envio">Clique em **Arquivo**, no grupo Adicionar (ou, com a lista vazia, no card **Enviar documento**).</Step>
+  <Step title="Escolha a audiência">Marque **Conhecimento Público** (uso pelo Tino) ou **Conhecimento Privado** (uso só pelo Copilot).</Step>
+  <Step title="Selecione os arquivos">Clique em **Selecionar arquivos** ou arraste os arquivos até a área indicada.</Step>
+  <Step title="Envie">Clique em **Enviar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/documentos-upload.png | alt: Modal Enviar documento com arquivos selecionados e a barra de progresso | olhar: o contador de arquivos e o botão Enviar */}
+
+<Note>
+  Formatos aceitos: PDF, DOCX, XLSX, CSV, TXT ou MD. O limite é de 30 MB por arquivo e até 10 arquivos por envio. Acima disso, remova algum arquivo ou envie em outro lote.
+</Note>
+
+## Acompanhe o processamento
+
+Depois do envio, cada documento aparece na lista de Propriedades com o status Processando ou Indexando, atualizado em tempo real. Quando termina, o status muda para Indexado.
+
+Se um arquivo ultrapassar o limite de tamanho ou não estiver num formato aceito, ele é rejeitado antes do envio, e os demais arquivos do lote seguem normalmente.
+
+<Note>
+  Enviar e indexar documentos consome créditos. Acompanhe o consumo em Configurações > Faturamento > Consumo.
+</Note>
+
+## O que acontece depois do envio
+
+Quando a indexação termina, o conteúdo já pode ser usado pelo Tino (se público) ou pelo Copilot (se privado ou público). Um card **Tino aprendeu** pode aparecer com um resumo do que foi extraído, e um botão para testar o conhecimento no chat lateral do Cérebro.
+
+Se o documento gerar sugestões automáticas de personalidade ou candidatos a processo, a lista mostra um ícone na coluna Descobertas, e um aviso chega em tempo real. Veja como revisar essas sugestões em [Use a inteligência da base de conhecimento](/cerebro/inteligencia-da-base).
+
+Para revisar ou corrigir o texto extraído, editar a audiência ou excluir o documento, use o painel de detalhes descrito em [Cadastre as propriedades da empresa](/cerebro/propriedades-da-empresa).
+
+## Perguntas frequentes
+
+### Que tipos de arquivo posso enviar?
+
+PDF, DOCX, XLSX, CSV, TXT ou MD.
+
+### Qual o tamanho máximo por arquivo?
+
+30 MB. Arquivos maiores são rejeitados antes do envio, com aviso do nome do arquivo.
+
+### Posso enviar vários documentos de uma vez?
+
+Sim, até 10 arquivos no mesmo envio.
+
+### O documento fica visível para o cliente final?
+
+Só se a audiência escolhida incluir Conhecimento Público. Com Conhecimento Privado, o conteúdo fica restrito ao Copilot e à equipe interna.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Cadastre as propriedades da empresa" href="/cerebro/propriedades-da-empresa">Veja, edite e gerencie o que já foi cadastrado.</Card>
+  <Card title="Use a inteligência da base de conhecimento" href="/cerebro/inteligencia-da-base">Revise o que o Tino descobriu a partir dos seus documentos.</Card>
+</CardGroup>

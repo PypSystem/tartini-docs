@@ -1,0 +1,126 @@
+---
+title: "O Panorama das métricas"
+sidebarTitle: "Panorama"
+description: "Veja em uma tela só o que mudou no período: quanto o Tino absorveu, como está o SLA e para onde olhar primeiro."
+---
+
+O Panorama junta os números da equipe e do Tino num retrato só, já comparado com o período anterior. Em poucos segundos você sabe o que melhorou, o que perdeu força e para qual tela ir em seguida.
+
+<Note>
+  Quem vê: Administrador, Gestor da Empresa, Gestor de Área e Gestor de Unidade, cada um limitado ao próprio escopo. Disponível em todos os planos.
+</Note>
+
+Onde fica: **Métricas > Panorama**.
+
+## Leia o veredito do período
+
+A frase no topo resume o período: quanto o Tino absorveu, quantas conversas resolveu sozinho e como a equipe se saiu no SLA. Um selo mostra a direção geral: **melhorou**, **em queda** ou **estável**. Abaixo, dois destaques comparam com o período anterior: o ponto forte, que mais subiu, e o ponto de atenção, que mais caiu.
+
+O veredito considera absorção do Tino, conclusão via processo, aderência a SLA, 1ª resposta, tempo de atendimento, reaberturas e transferências. O volume de conversas fica de fora, porque não indica qualidade por si só.
+
+<Note>
+  Sem período anterior para comparar, por exemplo numa Unidade nova, o selo e os destaques não aparecem.
+</Note>
+
+## Indicadores em destaque
+
+Logo abaixo do veredito, uma faixa resume quatro números do período.
+
+| Indicador | O que significa |
+|---|---|
+| **conversas** | Quantas conversas o período teve. É só volume, sem indicar melhora ou piora. |
+| **absorvido pela ia** | Percentual das conversas conduzidas pelo Tino do início ao fim. |
+| **1ª resposta** | Tempo até a primeira resposta ao cliente. Quanto menor, melhor. |
+| **aderência a sla** | Percentual dos prazos de SLA cumpridos no período. |
+
+Abaixo dela, dois cards levam para as telas de detalhe, cada um com um número grande e alguns apoios.
+
+### O card Operação
+
+| Indicador | O que significa |
+|---|---|
+| **contatos únicos** | Quantas pessoas diferentes a equipe atendeu. |
+| **espera / fila** | Tempo que o cliente aguarda antes da primeira resposta. |
+| **atendimento** | Tempo até a conversa ser resolvida. |
+| **reaberturas** | Percentual de conversas encerradas que voltaram a ser respondidas. |
+| **transferências** | Percentual de conversas que mudaram de setor ou de atendente. |
+
+### O card Tino
+
+| Indicador | O que significa |
+|---|---|
+| **resolvidas sozinho** | Conversas que o Tino encerrou sem nenhuma pessoa envolvida. |
+| **via processo** | Percentual das resolvidas pelo Tino que seguiram um processo do início ao fim. |
+| **economia estimada** | Estimativa de horas que a equipe deixou de gastar. |
+| **1ª resposta do Tino** | Tempo até o Tino responder pela primeira vez. |
+| **pico simultâneo** | Maior número de conversas que o Tino conduziu ao mesmo tempo. |
+
+Clique em **acessar →** em qualquer um dos dois cards para abrir a tela completa, com o mesmo período e escopo já aplicados.
+
+## Os quatro gráficos
+
+- **absorção do Tino**: a curva da participação da IA ao longo do período, o gráfico principal da tela.
+- **canais**: o volume de conversas por WhatsApp, WhatsApp Business e Chat Widget.
+- **aderência a sla**: a taxa de cumprimento do prazo, com uma linha marcando o período anterior como referência.
+- **quem conduziu**: barras mostrando quanto do volume foi da equipe e quanto foi do Tino.
+
+<Note>
+  Num gráfico por período, um intervalo sem nenhuma conversa aparece como um buraco na linha, não como zero.
+</Note>
+
+## Filtre por Empresa, Área, Unidade ou atendente
+
+A trilha no alto da barra de escopo mostra o nível atual: **empresa**, **área**, **unidade** e **atendente**. O primeiro degrau que aparece depende do seu papel. Um Gestor de Área, por exemplo, já começa na própria área.
+
+<Steps>
+  <Step title="Abra um degrau da trilha">Clique em **área**, **unidade** ou **atendente**, na barra de escopo.</Step>
+  <Step title="Escolha ou busque">Escolha uma opção da lista ou digite para buscar. Escolher uma área ou unidade limpa o atendente selecionado.</Step>
+  <Step title="Volte quando quiser">Escolha **Todas as áreas**, **Todas as unidades** ou remova o chip do filtro para subir de novo.</Step>
+</Steps>
+
+<Note>
+  Ao focar um atendente, os números da equipe passam a ser dele, mas a participação do Tino continua no escopo do nível acima. O Tino não tem atendente.
+</Note>
+
+## Escolha o período e refine por canal ou setor
+
+Por padrão a tela mostra **Esta semana**. Toda comparação é sempre contra o período anterior de mesma duração.
+
+<Steps>
+  <Step title="Abra a pílula período">Clique em **período**, no canto direito da barra de escopo.</Step>
+  <Step title="Escolha o intervalo">Use um atalho (**Hoje**, **Esta semana**, **Este mês**), navegue por mês ou ano, ou escolha **Personalizado** e preencha as duas datas.</Step>
+  <Step title="Aplique">Nos atalhos e no mês ou ano a tela atualiza na hora. No personalizado, clique em **Aplicar**.</Step>
+</Steps>
+
+Use **refinar** para restringir a um ou mais canais (**WhatsApp**, **WhatsApp Business**, **Chat Widget**) ou a um setor. Sem nada marcado, a tela conta todos os canais.
+
+<Note>
+  Período, canais e setor ficam guardados no seu navegador e valem para as três telas de Métricas. Área, Unidade e atendente não são guardados: voltam ao padrão ao recarregar a página.
+</Note>
+
+## Perguntas frequentes
+
+### Por que o selo diz "em queda" se o volume de conversas subiu?
+
+O volume não entra no veredito. Só contam os sinais de qualidade: absorção do Tino, processo, SLA, tempos, reaberturas e transferências.
+
+### Por que não vejo nenhuma comparação?
+
+Falta um período anterior para comparar, ou a variação de todos os sinais ficou pequena demais para significar algo.
+
+### Filtrei por atendente e a porcentagem do Tino não mudou. Por quê?
+
+O Tino não tem atendente. O recorte por pessoa vale só para os números da equipe.
+
+### Onde vejo a meta de cada indicador?
+
+Não existe meta cadastrada no Tartini. A única referência é o prazo de SLA do canal, que aparece na Operação, e o período anterior, usado em toda comparação.
+
+## Artigos relacionados
+
+<CardGroup cols={2}>
+  <Card title="Métricas da operação" href="/metricas/operacao">Os números da equipe, seção por seção.</Card>
+  <Card title="Métricas do Tino" href="/metricas/tino">O que o Tino resolveu e a que velocidade.</Card>
+  <Card title="SLA de atendimento" href="/atendimento/sla">Como o prazo de primeira resposta é configurado.</Card>
+  <Card title="Papéis e acessos explicados" href="/visao-geral/papeis-e-acessos">Quem enxerga cada nível da estrutura.</Card>
+</CardGroup>
