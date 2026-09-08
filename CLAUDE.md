@@ -38,12 +38,19 @@ marcada no texto como `{/* CONFIRMAR: ... */}`.
 
 - **Nome:** Tartini. Dashboard em https://talk.saninternet.com. Nunca "Talk", "Talk AI"
   ou "SAN Talk".
-- **Os agentes de IA:** o **Tino** (atende o cliente; ligado em Configurações >
-  Atendimento > IA por canal), o **Copilot** (apoia o atendente dentro da conversa;
-  modo de consulta em todos os planos, modo ativo no Scale), o **Scout** (avalia as
-  conversas encerradas; ligado nas Regras de Conversa) e o **Cérebro** (o menu Cérebro:
-  Panorama, Propriedades, Personalidade, Processos, Operações). Em texto genérico, "os
-  agentes" no plural.
+- **O Cérebro e os agentes.** O Cérebro (menu Cérebro: Panorama, Propriedades,
+  Personalidade, Processos, Operações) não é um agente: é o centro. "Tudo parte do
+  Cérebro: você entrega o material, ele aprende o seu padrão e coordena o time de
+  agentes." Os agentes são quatro, cada um com o seu posto e todos com a mesma fonte:
+  o **Tino** fala com o cliente (ligado em Configurações > Atendimento > IA por canal),
+  o **Copilot** fica ao lado de quem atende (consulta em todos os planos, modo ativo no
+  Scale), o **Scout** lê a conversa depois que fecha (ligado nas Regras de Conversa) e
+  o **Quattro** põe a operação por escrito (Cérebro > Processos > Mapeamento, Scale).
+  A referência de copy sobre eles é a landing https://www.tartini.com.br/tartini
+  (frase canônica: "O Cérebro orquestra os agentes, e eles conversam entre si";
+  "Ensinou uma vez, vale para todo o atendimento"; "As habilidades vêm prontas. A
+  identidade é sua"; neuroplasticidade: o Cérebro evolui a cada interação). Em texto
+  genérico, "os agentes" no plural.
 - **Menu principal:** Página Inicial · Inbox · Métricas · Central de Conversas · Cérebro
   · Scout · Campanhas. Configurações no rodapé do menu.
 - **Configurações:** Empresa (Informações, Áreas & Unidades, Usuários) · Canais

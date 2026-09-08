@@ -1,28 +1,30 @@
 ---
 title: "Os agentes de IA explicados"
 sidebarTitle: "Os agentes de IA"
-description: "Tino, Copilot, Scout e o Cérebro: o que cada um faz, onde aparece e como conversam entre si para fechar um atendimento."
+description: "Tudo parte do Cérebro: o que ele é, o que cada um dos quatro agentes faz, onde aparece e como conversam entre si."
 ---
 
-O Tartini tem quatro agentes que trabalham juntos. Cada um tem a sua responsabilidade, e nenhum trabalha sozinho: quando falta uma informação, um pergunta ao outro. O Cérebro guarda o que a empresa sabe. O Tino atende o cliente. O Copilot apoia o atendente. O Scout avalia o que aconteceu e devolve o que aprendeu. Você decide quais deles trabalham e até onde.
+Tudo parte do Cérebro. Você entrega o material da sua empresa, ele aprende o seu padrão e coordena o time de agentes que trabalha por você. São quatro agentes, cada um com o seu posto e todos com a mesma fonte: o Tino fala com o cliente, o Copilot fica ao lado de quem atende, o Scout lê a conversa depois que fecha e o Quattro põe a operação por escrito. O Cérebro orquestra os agentes, e eles conversam entre si: quando um precisa do que o outro sabe, pergunta, e a resposta vem antes de a mensagem chegar ao cliente.
 
 ## O Cérebro
 
-O Cérebro é o menu **Cérebro**: a memória e o padrão da empresa. Ali você cadastra as **Propriedades** (documentos, perguntas e respostas, sites), a **Personalidade** (comunicação, diretrizes e conformidade), as **Operações** (esclarecimentos, campos do contato, status de contato, roteamento, disponibilidade e contexto situacional) e os **Processos**.
+O Cérebro é o menu **Cérebro**: a memória e o padrão da empresa. Você o treina com a identidade da sua empresa, do jeito que ela é ou do jeito que você quer que ela seja: as **Propriedades** (o site, documentos, perguntas e respostas), a **Personalidade** (comunicação, diretrizes e conformidade), as **Operações** (esclarecimentos, campos do contato, status de contato, roteamento, disponibilidade e contexto situacional) e os **Processos**, como cada atendimento deve correr do início ao fim.
 
-É a ele que os outros agentes perguntam. Antes de responder ao cliente, o Tino consulta o Cérebro. Antes de sugerir ao atendente, o Copilot consulta o Cérebro. Para avaliar uma conversa, o Scout pede ao Cérebro a régua: a personalidade e os processos cadastrados. E a conversa é de mão dupla: o que o Tino aprende nas conversas volta ao Cérebro como sugestão, e o que o Scout encontra volta com o caminho da correção.
+Ensinou uma vez, vale para todo o atendimento. É dele que os agentes tiram o que respondem na linha de frente, o que sugerem ao lado do time e a régua que avalia cada conversa. As habilidades dos agentes vêm prontas; a identidade é sua.
+
+Cada fonte entra no Cérebro com uma de duas etiquetas, **Conhecimento Público** ou **Conhecimento Privado**, marcada item por item. O público é o que o Tino pode dizer ao cliente; o privado só a sua equipe vê, pelo Copilot. Nem tudo que a empresa sabe deve chegar ao cliente, e onde passa essa linha quem decide é você.
 
 <Note>
-  Só o Administrador e o Gestor da Empresa abrem o Cérebro. Operações e Processos pedem o plano Scale.
+  Só o Administrador e o Gestor da Empresa abrem o Cérebro. Operações e Processos pedem o plano Scale. Cada empresa tem o seu Cérebro, e um nunca encosta no outro.
 </Note>
 
 Veja [O Cérebro explicado](/cerebro/o-cerebro-explicado).
 
 ## O Tino
 
-O Tino é o agente que fala com o cliente. Você o liga canal por canal em **Configurações > Atendimento > IA por canal**, e define quando ele atende, se ele retoma a conversa quando o cliente para de responder e se ele encerra a conversa parada.
+O Tino é o agente que fala com o cliente. Você o liga canal por canal em **Configurações > Atendimento > IA por canal**, e define quando ele atende, a mensagem de fora do horário, quantas vezes ele volta a chamar e quando encerra a conversa.
 
-A cada resposta, o Tino consulta o Cérebro: o conhecimento, o tom de voz, as regras e o processo que se aplica ao pedido. Quando não encontra o que precisa, pede um esclarecimento ao cliente ou passa a conversa para a equipe. E não passa em silêncio: entrega o resumo do que já foi dito, que o atendente lê e o Copilot usa para continuar de onde o Tino parou.
+Ele responde a partir do que você marcou como visível ao cliente, e nada além disso. A cada resposta consulta o Cérebro: o conhecimento, o tom de voz, as regras e o processo que se aplica ao pedido. Quando o assunto passa do que ele resolve, a conversa vai para uma pessoa com o histórico junto e um resumo do que já foi dito, que o atendente lê e o Copilot usa para continuar de onde o Tino parou.
 
 No Inbox, uma conversa conduzida pelo Tino mostra o selo **Tino conversando** e o campo de mensagem bloqueado. Para assumir, a pessoa clica em **Interromper**. O Tino também aborda contatos em **Campanhas**, e cada mensagem dele tem um **Por que ela disse isso**, que mostra qual processo, diretriz ou regra do Cérebro guiou a resposta.
 
@@ -34,7 +36,7 @@ Veja [O Tino explicado](/tino/o-tino-explicado).
 
 ## O Copilot
 
-O Copilot trabalha dentro da conversa, ao lado do atendente, na aba **Copilot** do painel de detalhes. Ele leu o histórico da conversa, inclusive o resumo que o Tino deixou quando passou a conversa, e pergunta ao Cérebro o que a empresa sabe sobre o assunto.
+O Copilot fica ao lado de quem atende, na aba **Copilot** do painel de detalhes. Ele leu o histórico da conversa, inclusive o resumo que o Tino deixou quando passou a conversa, e pergunta ao Cérebro o que a empresa sabe sobre o assunto, inclusive o conhecimento privado, que o cliente nunca vê.
 
 - **No modo de consulta**, o atendente pergunta e o Copilot responde, mostrando as fontes que consultou. O botão **Sugerir com Copilot** pede uma resposta pronta para enviar.
 - **No modo ativo**, o Copilot acompanha a conversa por conta própria: sugere a próxima resposta e avisa quando o que o atendente escreveu contradiz o que está no Cérebro.
@@ -49,9 +51,9 @@ Veja [Use o Copilot](/inbox/copilot).
 
 ## O Scout
 
-O Scout entra quando a conversa termina. Com **Ativar Scout ao finalizar conversa** ligado nas Regras de Conversa, cada conversa encerrada, pela equipe ou pelo Tino, recebe um resumo, uma nota e a avaliação por critério. Para avaliar, o Scout pergunta ao Cérebro qual é o padrão da empresa e, quando a conversa passou por um processo, confere etapa por etapa o que o Tino fez.
+O Scout lê a conversa depois que fecha. Com **Ativar Scout ao finalizar conversa** ligado nas Regras de Conversa, cada conversa encerrada, pela equipe ou pelo Tino, recebe um resumo, uma nota e a avaliação por critério. Para avaliar, o Scout pede ao Cérebro a régua da empresa e, quando a conversa passou por um processo, confere etapa por etapa o que foi feito.
 
-O gestor concorda ou corrige, e a correção passa a valer nas próximas avaliações. O que o Scout encontra não fica só na tela dele: cada achado aponta a tela do Cérebro onde a correção se escreve, e a devolutiva chega ao atendente. Com o tempo, essas correções e esses achados ensinam ao Cérebro o jeito como a sua empresa atende e quer atender. Você também escolhe o que chega até você: só as notas baixas, só um critério, como conformidade abaixo de cinco.
+O que sair do seu critério chega a você como ponto de atenção. Você concorda ou corrige, e a correção vira treino: o Cérebro reaprende com o que você decidiu. Cada achado do Scout aponta a tela do Cérebro onde a correção se escreve, e a devolutiva chega ao atendente.
 
 O Scout mostra o desempenho por atendente, Unidade, Área e Empresa, a aderência aos processos e a satisfação dos clientes. O atendente vê o próprio desempenho e a devolutiva.
 
@@ -61,31 +63,45 @@ O Scout mostra o desempenho por atendente, Unidade, Área e Empresa, a aderênci
 
 Veja [O Scout explicado](/scout/o-scout-explicado).
 
+## O Quattro
+
+O Quattro põe a operação por escrito. Em **Cérebro > Processos > Mapeamento**, você conta, com as suas palavras, como um atendimento acontece hoje: uma segunda via de boleto, um agendamento, uma troca. O Quattro pergunta o que faltou e monta o processo, com etapas, transições e saídas. Uma etapa que consulta um sistema seu também entra: você autoriza, e a IA faz a verificação durante o atendimento.
+
+Nada do que ele monta entra em vigor sem a sua aprovação. O processo publicado vira o playbook que o Tino segue em cada conversa e a régua com que o Scout mede se o processo foi cumprido. O Quattro também prepara a documentação: os candidatos a processo descobertos nas conversas e nos documentos chegam a você em **Descobertas**, para aprovar ou descartar.
+
+<Note>
+  Processos fazem parte dos planos Scale e Enterprise. Quem mapeia é o Administrador ou o Gestor da Empresa.
+</Note>
+
+Veja [Processos explicados](/cerebro/processos-explicados) e [Mapeie processos a partir das conversas](/cerebro/mapeie-processos).
+
 ## Como eles conversam entre si
 
-Uma conversa com o cliente passa pelos quatro, e cada um recorre ao outro no ponto em que a própria responsabilidade termina:
+Cada agente recorre ao outro no ponto em que a própria responsabilidade termina, e o Cérebro orquestra:
 
 | Quem | Pergunta a quem | O quê |
 |---|---|---|
 | **Tino** | Cérebro | O que responder, em que tom, seguindo qual processo, e quando transferir |
-| **Tino** | Equipe e Copilot | Entrega o resumo do atendimento ao passar a conversa |
-| **Copilot** | Cérebro | O que a empresa sabe sobre o assunto, para sugerir ao atendente |
+| **Tino** | Equipe e Copilot | Entrega o histórico e o resumo do atendimento ao passar a conversa |
+| **Copilot** | Cérebro | O que a empresa sabe sobre o assunto, inclusive o conhecimento privado |
 | **Copilot** | Tino | O que já foi dito e feito antes de a conversa chegar à equipe |
 | **Scout** | Cérebro | A régua: personalidade, regras e processos para avaliar a conversa |
 | **Scout** | Tino e equipe | O que cada um fez na conversa encerrada |
-| **Tino** | Cérebro | Devolve sugestões de diretrizes, esclarecimentos, roteamento e processos que percebeu nas conversas |
-| **Scout** | Cérebro | Devolve os achados, com o caminho da correção em cada tela |
+| **Quattro** | Você | O que faltou para o processo ficar completo |
+| **Quattro** | Cérebro | Publica o processo, que vira playbook para o Tino e régua para o Scout |
+| **Tino e Scout** | Cérebro | Devolvem sugestões, achados e o caminho da correção; você aprova, e o Cérebro reaprende |
 
-1. Você alimenta o Cérebro.
-2. O Tino atende consultando o Cérebro; o Copilot sugere ao atendente consultando o Cérebro e o que o Tino deixou.
-3. O Scout lê a conversa encerrada, pede a régua ao Cérebro e avalia pessoas e Tino do mesmo jeito.
-4. O Tino e o Scout devolvem ao Cérebro o que aprenderam; você aceita, corrige ou nega. A próxima conversa já sai diferente.
+1. Você ensina o Cérebro com o que a empresa já tem escrito.
+2. O Quattro põe os processos por escrito com você, e o Cérebro passa a saber como cada atendimento deve correr.
+3. O Tino atende consultando o Cérebro; o Copilot sugere ao atendente consultando o Cérebro e o que o Tino deixou.
+4. O Scout lê a conversa encerrada, pede a régua ao Cérebro e avalia pessoas e Tino do mesmo jeito.
+5. O Tino e o Scout devolvem ao Cérebro o que aprenderam; você aceita, corrige ou nega, e o Cérebro reaprende. A próxima conversa já sai diferente.
 
 ## Quem pode o quê
 
 | Ação | Quem |
 |---|---|
-| Editar o Cérebro | Administrador e Gestor da Empresa |
+| Editar o Cérebro e mapear processos com o Quattro | Administrador e Gestor da Empresa |
 | Ligar o Tino num canal | Gestor de Área ou acima |
 | Liberar o Copilot para uma pessoa | Quem gerencia usuários |
 | Usar o Copilot | Quem recebeu acesso |
@@ -94,6 +110,6 @@ Uma conversa com o cliente passa pelos quatro, e cada um recorre ao outro no pon
 ## Artigos relacionados
 
 <CardGroup cols={2}>
-  <Card title="Planos e o que cada um libera" href="/visao-geral/planos-e-recursos">Onde o Tino e o Copilot ativo entram.</Card>
-  <Card title="Créditos explicados" href="/visao-geral/creditos-explicados">O que cada agente consome.</Card>
+  <Card title="O Cérebro explicado" href="/cerebro/o-cerebro-explicado">Tudo parte dele.</Card>
+  <Card title="Planos e o que cada um libera" href="/visao-geral/planos-e-recursos">Onde o Tino, o Quattro e o Copilot ativo entram.</Card>
 </CardGroup>
