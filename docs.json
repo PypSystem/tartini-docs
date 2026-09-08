@@ -285,6 +285,52 @@
             ]
           }
         ]
+      },
+      {
+        "language": "en",
+        "tabs": [
+          {
+            "tab": "Help center",
+            "groups": [
+              {
+                "group": "Getting started",
+                "icon": "rocket",
+                "pages": [
+                  {
+                    "group": "Best practices",
+                    "icon": "lightbulb",
+                    "pages": [
+                      "en/getting-started/best-practices/going-live"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "es",
+        "tabs": [
+          {
+            "tab": "Centro de ayuda",
+            "groups": [
+              {
+                "group": "Primeros pasos",
+                "icon": "rocket",
+                "pages": [
+                  {
+                    "group": "Buenas prácticas",
+                    "icon": "lightbulb",
+                    "pages": [
+                      "es/primeros-pasos/buenas-practicas/salir-al-aire"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },

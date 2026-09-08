@@ -3,7 +3,7 @@
 Uso: python3 scripts/lint-central.py"""
 import re, os, sys, glob
 D=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-NOVAS=["visao-geral","primeiros-passos","cerebro","tino","inbox","canais","campanhas","scout","metricas","equipe","atendimento","creditos","integracoes","conta","desenvolvedores"]
+NOVAS=["visao-geral","primeiros-passos","cerebro","tino","inbox","canais","campanhas","scout","metricas","equipe","atendimento","creditos","integracoes","conta","desenvolvedores","en","es"]
 # slugs do mapa (do guia) + arquivos existentes
 slugs=set()
 try:
