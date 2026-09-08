@@ -155,6 +155,10 @@ mesmo commit.
   registre um `redirect` no `docs.json`. Toda página nova entra no `docs.json` no mesmo
   commit.
 
+## Aba Marca
+
+A terceira aba da navegação, **Marca**, é o manual da marca do Tartini em `marca/` (oito capítulos), com traduções em `en/marca` e `es/marca`. A fonte da verdade é o site: `app/src/app/(ai)/tartini/marca/*/page.tsx`, `marca/_marca/capitulos.ts` e `_sections/marcaSimbolos.tsx` no repositório san-site-js (branch `site-tartini`). Para alterar um capítulo, releia o código do site e reflita o texto aqui; nada de regra inventada. As pranchas em `images/marca/*.svg` são geradas a partir da geometria canônica do símbolo, não desenhadas à mão. `marca/voz.mdx` lista as palavras banidas de propósito e fica fora do lint de vocabulário.
+
 ## Antes de publicar
 
 - [ ] Um tipo de artigo, um recurso, título com o verbo certo.

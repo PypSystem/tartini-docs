@@ -1,0 +1,56 @@
+---
+title: "A aplicação"
+sidebarTitle: "A aplicação"
+description: "Grade, espaço, cantos, bordas, sombras, foco, botões, densidade e movimento."
+---
+
+Espaçamento, raio, borda, sombra e movimento. São essas medidas que fazem uma tela desenhada hoje reconhecer a tela desenhada há seis meses.
+
+---
+
+## Espécimes
+
+Três medidas que se enxergam antes de se ler:
+
+- **Mensagem.** Raio 16, com um canto de 4 do lado de quem fala. A mensagem de quem atende vai em tinta com texto em papel; a do cliente, em apoio com borda de linha.
+- **Escada de ênfase.** Um primário em tinta sólida por contexto, depois contorno, depois só texto. Raio 12.
+- **Foco.** Anel grafite em tudo; anel cobalto só quando o campo é uma afordância de IA, que também leva borda cobalto de 1,5 pixel.
+
+---
+
+## Regras
+
+**Grade e respiro.** Container de 80rem, com 20 pixels de margem no celular, 40 no tablet e 60 no desktop largo. A faixa de seção traz 64 pixels de respiro vertical, 96 a partir do tablet, e já compõe as duas coisas: recriar espaçamento à mão é como o sistema começa a divergir.
+
+**Espaço.** Cresce de quatro em quatro: 4, 8, 12, 16, 20, 24, 32, 40, 48, 64. Qualquer valor fora dessa lista precisa de justificativa.
+
+**Cantos.** 12 em botões e campos, 16 em cards internos e mensagens, 22 nos cards de página. Pílula em chip e selo. Uma mensagem de conversa tem um canto de 4 do lado de quem fala.
+
+**Bordas.** 1 pixel em quase tudo, na cor de linha. A exceção é a IA: 1,5 pixel em cobalto, sólido ou tracejado, marcando o que a máquina produziu ou o campo em que ela é acionada. Ali a borda funciona como etiqueta.
+
+**Sombras.** Derivadas da tinta, com transparência, e nunca do cinza-azulado. Grandes, macias e deslocadas para baixo, como papel apoiado em papel.
+
+**Foco.** Anel neutro em grafite em tudo; anel cobalto quando o campo é afordância de IA. O foco é requisito de acessibilidade e nunca é removido.
+
+**Botões.** Escada de ênfase: primário em tinta sólida, um por contexto; depois contorno; depois só texto; perigo em vermelho, com parcimônia; e o gradiente por último, no máximo um por página. O botão de demo é um componente só, com destino e texto fixos.
+
+**Densidade.** Dois modos: confortável para quem visita e compacta para quem passa o dia dentro da caixa de entrada. Mesma marca, altura de controle diferente: 44 pixels contra 36.
+
+**Movimento.** Transições de 200 a 300 milissegundos. A revelação ao rolar é dirigida pela própria rolagem, sem JavaScript, e desaparece inteira quando o sistema pede menos movimento. Toda animação precisa ser desligável.
+
+**Iconografia.** Tipografia faz o papel de ícone: ● para equipe, ▪ para IA, → ⇄ ✓ ✕ para o resto. Emoji não sinaliza estado, categoria nem ação. Quando um ícone de interface for inevitável, ele é de linha, com traço de 1,75.
+
+---
+
+## Medidas
+
+| | Referência rápida |
+|---|---|
+| Espaço | 4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64 |
+| Cantos | 4 · 12 · 16 · 22 · pílula |
+| Borda | 1px #E4E4E0 · 1,5px cobalto só em bloco de IA |
+| Sombra | 0 18px 40px −24px rgba(20,18,15,.25) |
+| Densidade | Confortável 44px · compacta 36px |
+| Foco | Anel grafite em tudo · anel cobalto só em afordância de IA |
+| Movimento | 200 a 300ms · desligável por `prefers-reduced-motion` |
+| Tipos | 10 · 11 · 12,5 · 14 · 15,5 · 18 · 22 · 28 · 38 · 56 |

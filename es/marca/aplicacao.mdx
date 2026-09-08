@@ -1,0 +1,56 @@
+---
+title: "La aplicación"
+sidebarTitle: "La aplicación"
+description: "Cuadrícula, espacio, esquinas, bordes, sombras, foco, botones, densidad y movimiento."
+---
+
+Espaciado, radio, borde, sombra y movimiento. Son estas medidas las que hacen que una pantalla diseñada hoy reconozca la pantalla diseñada hace seis meses.
+
+---
+
+## Especímenes
+
+Tres medidas que se ven antes de leerse:
+
+- **Mensaje.** Radio 16, con una esquina de 4 del lado de quien habla. El mensaje de quien atiende va en tinta con texto en papel; el del cliente, en apoyo con borde de línea.
+- **Escalera de énfasis.** Un primario en tinta sólida por contexto, después contorno, después solo texto. Radio 12.
+- **Foco.** Anillo grafito en todo; anillo cobalto solo cuando el campo es una affordance de IA, que también lleva borde cobalto de 1,5 píxel.
+
+---
+
+## Reglas
+
+**Cuadrícula y respiro.** Contenedor de 80rem, con 20 píxeles de margen en el celular, 40 en la tablet y 60 en el escritorio ancho. La franja de sección trae 64 píxeles de respiro vertical, 96 a partir de la tablet, y ya compone las dos cosas: recrear el espaciado a mano es como el sistema empieza a divergir.
+
+**Espacio.** Crece de cuatro en cuatro: 4, 8, 12, 16, 20, 24, 32, 40, 48, 64. Cualquier valor fuera de esa lista necesita justificación.
+
+**Esquinas.** 12 en botones y campos, 16 en cards internos y mensajes, 22 en los cards de página. Píldora en chip y sello. Un mensaje de conversación tiene una esquina de 4 del lado de quien habla.
+
+**Bordes.** 1 píxel en casi todo, en el color de línea. La excepción es la IA: 1,5 píxel en cobalto, sólido o discontinuo, marcando lo que la máquina produjo o el campo en que se activa. Ahí el borde funciona como etiqueta.
+
+**Sombras.** Derivadas de la tinta, con transparencia, y nunca del gris azulado. Grandes, suaves y desplazadas hacia abajo, como papel apoyado sobre papel.
+
+**Foco.** Anillo neutro en grafito en todo; anillo cobalto cuando el campo es affordance de IA. El foco es requisito de accesibilidad y nunca se elimina.
+
+**Botones.** Escalera de énfasis: primario en tinta sólida, uno por contexto; después contorno; después solo texto; peligro en rojo, con moderación; y el gradiente al final, como máximo uno por página. El botón de demo es un componente único, con destino y texto fijos.
+
+**Densidad.** Dos modos: cómoda para quien visita y compacta para quien pasa el día dentro de la bandeja de entrada. Misma marca, altura de control diferente: 44 píxeles contra 36.
+
+**Movimiento.** Transiciones de 200 a 300 milisegundos. La revelación al desplazarse está dirigida por el propio desplazamiento, sin JavaScript, y desaparece por completo cuando el sistema pide menos movimiento. Toda animación debe poder desactivarse.
+
+**Iconografía.** La tipografía hace el papel de ícono: ● para equipo, ▪ para IA, → ⇄ ✓ ✕ para el resto. El emoji no señala estado, categoría ni acción. Cuando un ícono de interfaz sea inevitable, es de línea, con trazo de 1,75.
+
+---
+
+## Medidas
+
+| | Referencia rápida |
+|---|---|
+| Espacio | 4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64 |
+| Esquinas | 4 · 12 · 16 · 22 · píldora |
+| Borde | 1px #E4E4E0 · 1,5px cobalto solo en bloque de IA |
+| Sombra | 0 18px 40px −24px rgba(20,18,15,.25) |
+| Densidad | Cómoda 44px · compacta 36px |
+| Foco | Anillo grafito en todo · anillo cobalto solo en affordance de IA |
+| Movimiento | 200 a 300ms · desactivable por `prefers-reduced-motion` |
+| Tipos | 10 · 11 · 12,5 · 14 · 15,5 · 18 · 22 · 28 · 38 · 56 |

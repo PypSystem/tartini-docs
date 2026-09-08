@@ -3,7 +3,7 @@
 Idempotente. Uso: python3 scripts/separadores.py"""
 import glob, os, re
 D=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PASTAS=["visao-geral","primeiros-passos","cerebro","tino","inbox","canais","campanhas","scout","metricas","equipe","atendimento","creditos","integracoes","conta","desenvolvedores","en","es"]
+PASTAS=["visao-geral","primeiros-passos","cerebro","tino","inbox","canais","campanhas","scout","metricas","equipe","atendimento","creditos","integracoes","conta","desenvolvedores","marca","en","es"]
 n=0
 for pasta in PASTAS:
     for f in glob.glob(os.path.join(D,pasta,"**","*.mdx"),recursive=True):

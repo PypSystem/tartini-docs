@@ -1,0 +1,56 @@
+---
+title: "The application"
+sidebarTitle: "The application"
+description: "Grid, spacing, corners, borders, shadows, focus, buttons, density, and motion."
+---
+
+Spacing, radius, border, shadow, and motion. These are the measures that make a screen designed today recognizable next to one designed six months ago.
+
+---
+
+## Specimens
+
+Three measures that can be seen before they're read:
+
+- **Message.** Radius 16, with a 4-pixel corner on the speaker's side. The agent's message goes in ink with text in paper; the customer's goes in support with a line border.
+- **Emphasis ladder.** One solid-ink primary per context, then outline, then text only. Radius 12.
+- **Focus.** A graphite ring everywhere; a cobalt ring only when the field is an AI affordance, which also carries a 1.5-pixel cobalt border.
+
+---
+
+## Rules
+
+**Grid and breathing room.** An 80rem container, with 20 pixels of margin on mobile, 40 on tablet, and 60 on wide desktop. The section band carries 64 pixels of vertical breathing room, 96 from tablet up, and already composes both: recreating spacing by hand is how the system starts to drift.
+
+**Spacing.** Grows in steps of four: 4, 8, 12, 16, 20, 24, 32, 40, 48, 64. Any value outside this list needs a justification.
+
+**Corners.** 12 on buttons and fields, 16 on inner cards and messages, 22 on page cards. Pill on chips and badges. A conversation message has a 4-pixel corner on the speaker's side.
+
+**Borders.** 1 pixel on almost everything, in the line color. The exception is AI: 1.5 pixel in cobalt, solid or dashed, marking what the machine produced or the field where it is triggered. There, the border works as a label.
+
+**Shadows.** Derived from ink, with transparency, and never from blue-gray. Large, soft, and offset downward, like paper resting on paper.
+
+**Focus.** A neutral graphite ring everywhere; a cobalt ring when the field is an AI affordance. Focus is an accessibility requirement and is never removed.
+
+**Buttons.** Emphasis ladder: solid-ink primary, one per context; then outline; then text only; danger in red, used sparingly; and the gradient last, at most one per page. The demo button is a single component, with a fixed destination and text.
+
+**Density.** Two modes: comfortable for visitors and compact for those who spend the day inside the inbox. Same brand, different control height: 44 pixels versus 36.
+
+**Motion.** Transitions of 200 to 300 milliseconds. Scroll reveals are driven by scrolling itself, with no JavaScript, and disappear entirely when the system asks for reduced motion. Every animation must be possible to turn off.
+
+**Iconography.** Typography plays the role of icons: ● for team, ▪ for AI, → ⇄ ✓ ✕ for everything else. Emoji never signals state, category, or action. When an interface icon is unavoidable, it is a line icon, with a 1.75 stroke.
+
+---
+
+## Measures
+
+| | Quick reference |
+|---|---|
+| Spacing | 4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64 |
+| Corners | 4 · 12 · 16 · 22 · pill |
+| Border | 1px #E4E4E0 · 1.5px cobalt only on AI blocks |
+| Shadow | 0 18px 40px −24px rgba(20,18,15,.25) |
+| Density | Comfortable 44px · compact 36px |
+| Focus | Graphite ring everywhere · cobalt ring only on AI affordances |
+| Motion | 200 to 300ms · turned off by `prefers-reduced-motion` |
+| Sizes | 10 · 11 · 12.5 · 14 · 15.5 · 18 · 22 · 28 · 38 · 56 |

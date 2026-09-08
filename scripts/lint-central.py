@@ -3,7 +3,7 @@
 Uso: python3 scripts/lint-central.py"""
 import re, os, sys, glob
 D=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-NOVAS=["visao-geral","primeiros-passos","cerebro","tino","inbox","canais","campanhas","scout","metricas","equipe","atendimento","creditos","integracoes","conta","desenvolvedores","en","es"]
+NOVAS=["visao-geral","primeiros-passos","cerebro","tino","inbox","canais","campanhas","scout","metricas","equipe","atendimento","creditos","integracoes","conta","desenvolvedores","marca","en","es"]
 # slugs do mapa (do guia) + arquivos existentes
 slugs=set()
 try:
@@ -36,6 +36,7 @@ for f in sorted(files):
     nocom=re.sub(r"\{/\*.*?\*/\}","",body,flags=re.S)
     nocode=re.sub(r"```.*?```","",nocom,flags=re.S); nocode=re.sub(r"`[^`\n]*`","",nocode)
     for pat,name in BAN:
+        if rel.endswith("marca/voz.mdx") and name not in ("travessão","comentário HTML"): continue  # a página lista as palavras banidas de propósito
         for m in re.finditer(pat,nocode,re.I|re.M):
             ln=body[:body.find(m.group(0))].count("\n")+1 if m.group(0) in body else "?"
             issues.append(f"{name}: '{m.group(0)}'")

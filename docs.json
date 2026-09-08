@@ -283,6 +283,37 @@
                 ]
               }
             ]
+          },
+          {
+            "tab": "Marca",
+            "groups": [
+              {
+                "group": "Fundamentos",
+                "icon": "music",
+                "pages": [
+                  "marca/a-terceira-nota",
+                  "marca/simbolo",
+                  "marca/cores",
+                  "marca/gradiente"
+                ]
+              },
+              {
+                "group": "Linguagem",
+                "icon": "font",
+                "pages": [
+                  "marca/letras",
+                  "marca/voz"
+                ]
+              },
+              {
+                "group": "Aplicação",
+                "icon": "ruler-combined",
+                "pages": [
+                  "marca/aplicacao",
+                  "marca/o-que-nunca"
+                ]
+              }
+            ]
           }
         ]
       },
@@ -555,6 +586,37 @@
                 ]
               }
             ]
+          },
+          {
+            "tab": "Brand",
+            "groups": [
+              {
+                "group": "Foundations",
+                "icon": "music",
+                "pages": [
+                  "en/marca/a-terceira-nota",
+                  "en/marca/simbolo",
+                  "en/marca/cores",
+                  "en/marca/gradiente"
+                ]
+              },
+              {
+                "group": "Language",
+                "icon": "font",
+                "pages": [
+                  "en/marca/letras",
+                  "en/marca/voz"
+                ]
+              },
+              {
+                "group": "Application",
+                "icon": "ruler-combined",
+                "pages": [
+                  "en/marca/aplicacao",
+                  "en/marca/o-que-nunca"
+                ]
+              }
+            ]
           }
         ]
       },
@@ -824,6 +886,37 @@
                 "pages": [
                   "es/desenvolvedores/webhook-de-atendimento",
                   "es/desenvolvedores/conexao-via-api"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Marca",
+            "groups": [
+              {
+                "group": "Fundamentos",
+                "icon": "music",
+                "pages": [
+                  "es/marca/a-terceira-nota",
+                  "es/marca/simbolo",
+                  "es/marca/cores",
+                  "es/marca/gradiente"
+                ]
+              },
+              {
+                "group": "Lenguaje",
+                "icon": "font",
+                "pages": [
+                  "es/marca/letras",
+                  "es/marca/voz"
+                ]
+              },
+              {
+                "group": "Aplicación",
+                "icon": "ruler-combined",
+                "pages": [
+                  "es/marca/aplicacao",
+                  "es/marca/o-que-nunca"
                 ]
               }
             ]
