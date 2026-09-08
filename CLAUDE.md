@@ -119,6 +119,7 @@ números-estatística ou promessa de resultado).
 | Atalho, combinação útil | `<Tip>` |
 | Leituras no fim de um passo do guia | `<Info>` com **Saiba mais** e lista de links |
 | Ação irreversível, custo em créditos, risco | `<Warning>` |
+| Separação entre seções | `---` antes de cada `##` (`python3 scripts/separadores.py` garante em todos os artigos) |
 | Sequência de ações | `<Steps>` com `<Step title="verbo">` |
 | Artigos relacionados | `## Artigos relacionados` com `<CardGroup cols={2}>` |
 | Perguntas frequentes | `<AccordionGroup>` com um `<Accordion title="a pergunta">` por pergunta (`python3 scripts/faq-em-sanfona.py` converte `###` em sanfona) |

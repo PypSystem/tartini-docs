@@ -8,11 +8,15 @@ Com o webhook ativado, seu sistema recebe um aviso automático assim que uma con
 
 <Note>Quem configura: só o Administrador. Disponível no plano Scale.</Note>
 
+---
+
 ## O que é o webhook de Finalização de Atendimento
 
 Hoje o Tartini envia um evento: a finalização de um atendimento, em qualquer canal. O aviso chega com os dados do contato (incluindo o ID externo, se você usa um), o motivo do encerramento e, se você quiser, o resumo do Tino, o histórico de mensagens e a nota de satisfação.
 
 Onde fica: **Configurações > Integrações > Webhooks > Finalização de Atendimento**.
+
+---
 
 ## Cadastre a URL do seu sistema
 
@@ -43,6 +47,8 @@ Conversa e contato sempre vão no aviso. Você decide o que mais incluir:
 
 Ative também **Registrar apenas atendimentos relevantes** para não receber avisos de conversas triviais, como um cumprimento sem continuação.
 
+---
+
 ## Teste o disparo
 
 <Steps>
@@ -54,6 +60,8 @@ Ative também **Registrar apenas atendimentos relevantes** para não receber avi
 <Note>
   Os detalhes técnicos do payload, como os campos exatos e os cabeçalhos de segurança, ficam com quem desenvolve o seu sistema.
 </Note>
+
+---
 
 ## Perguntas frequentes
 
@@ -68,6 +76,8 @@ Ative também **Registrar apenas atendimentos relevantes** para não receber avi
   Sim. Ao gerar um novo secret, o anterior deixa de valer. Atualize o secret no seu sistema antes de trocar por aqui, ou os avisos deixam de ser confirmados como autênticos.
   </Accordion>
 </AccordionGroup>
+
+---
 
 ## Artigos relacionados
 

@@ -12,6 +12,8 @@ A configuração fica em **Configurações > Integrações > Webhooks > Finaliza
   O disparo acontece quando a conversa é finalizada de fato. Isso inclui a finalização manual pelo atendente, o encerramento automático por inatividade e a finalização após a avaliação CSAT (com ou sem resposta do cliente).
 </Info>
 
+---
+
 ## Configuração
 
 <Steps>
@@ -35,6 +37,8 @@ A configuração fica em **Configurações > Integrações > Webhooks > Finaliza
   </Step>
 </Steps>
 
+---
+
 ## Identificando o cliente: o ID externo
 
 Para o seu sistema saber a qual cliente o atendimento pertence, cada contato do Tartini possui um campo **ID externo**: um código livre que referencia o cliente no seu sistema (por exemplo, o ID dele no seu ERP ou CRM).
@@ -44,6 +48,8 @@ O atendente define esse valor no painel de detalhes do contato, dentro do Inbox 
 <Tip>
   Quando o ID externo não estiver preenchido, `contact.externalId` chega como `null`. Nesse caso, use `contact.phoneNumber` como alternativa de vínculo.
 </Tip>
+
+---
 
 ## Formato do payload
 
@@ -100,11 +106,15 @@ O atendente define esse valor no painel de detalhes do contato, dentro do Inbox 
   Quando o resumo da IA está habilitado, a entrega aguarda a geração do resumo e pode atrasar alguns minutos em relação ao encerramento da conversa.
 </Note>
 
+---
+
 ## Entrega e resposta
 
 - O `POST` é enviado com `Content-Type: application/json`.
 - Seu endpoint deve responder com status `2xx` em até **30 segundos**.
 - Recomendação: receba, salve e responda. Deixe processamentos demorados para depois da resposta.
+
+---
 
 ## Headers enviados
 
@@ -113,6 +123,8 @@ O atendente define esse valor no painel de detalhes do contato, dentro do Inbox 
 | `X-Webhook-Event` | Nome do evento (`conversation.finished`). |
 | `X-Webhook-Signature` | Assinatura do corpo: `sha256=<HMAC-SHA256(corpo bruto, secret)>`. |
 | `X-Request-Id` | Identificador único da entrega. |
+
+---
 
 ## Validando a assinatura
 
