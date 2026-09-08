@@ -67,10 +67,10 @@ marcada no texto como `{/* CONFIRMAR: ... */}`.
 | Tipo | Título | Esqueleto |
 |---|---|---|
 | Visão geral ("X explicado") | "O Scout explicado" | O que é, para que serve, o submenu, quem vê, e links para as tarefas |
-| Recurso e tarefas | Imperativo: "Defina o SLA de atendimento" | Abertura com o resultado → `<Note>` de papel e plano → por tarefa, separada por `---`: `## verbo`, estado padrão, onde fica (caminho em negrito), `<Steps>` com o botão em negrito, captura, `<Note>` com os detalhes → `## Perguntas frequentes` → `## Artigos relacionados` |
+| Recurso e tarefas | Imperativo: "Defina o SLA de atendimento" | Abertura com o resultado → `<Note>` de papel e plano → por tarefa, separada por `---`: `## verbo`, estado padrão, onde fica (caminho em negrito), `<Steps>` com o botão em negrito, captura, `<Note>` com os detalhes → `## Perguntas frequentes` em `<AccordionGroup>` → `## Artigos relacionados` |
 | Guia de início rápido | Gerúndio: "Configurando o Inbox" | Abertura → lista numerada dos passos com âncoras → `## Passo N: verbo`, vídeo, porquê, `###` subtarefas com links, `<Info>` Saiba mais → `## Próximos passos` |
 | Boas práticas | "Boas práticas para entrar no ar" | Para quem é → `## Opção N` com a favor, contra e como fazer → a recomendação |
-| Perguntas frequentes | "Perguntas frequentes para iniciantes" | Grupos em `##`, perguntas em `###`, resposta que começa respondendo |
+| Perguntas frequentes | "Perguntas frequentes para iniciantes" | Grupos em `##`; cada pergunta é um `<Accordion title="…">` dentro de `<AccordionGroup>`, com a resposta começando respondendo |
 | Solução de problemas | "Resolva problemas de conexão" | Sintoma em `##`, causa, correção em passos |
 
 Tamanhos: tarefa entre 500 e 1.200 palavras; guia entre 500 e 1.000; visão geral até
@@ -111,7 +111,8 @@ números-estatística ou promessa de resultado).
 | Ação irreversível, custo em créditos, risco | `<Warning>` |
 | Sequência de ações | `<Steps>` com `<Step title="verbo">` |
 | Artigos relacionados | `## Artigos relacionados` com `<CardGroup cols={2}>` |
-| Referência longa | tabela; `<Accordion>` só para listas de referência, nunca para esconder passos |
+| Perguntas frequentes | `<AccordionGroup>` com um `<Accordion title="a pergunta">` por pergunta (`python3 scripts/faq-em-sanfona.py` converte `###` em sanfona) |
+| Referência longa | tabela; `<Accordion>` fora das perguntas só para listas de referência, nunca para esconder passos |
 
 Um destaque a cada 150 a 250 palavras, nunca dois seguidos. Sumário automático a
 partir de `##` e `###`; nunca `#` no corpo.
