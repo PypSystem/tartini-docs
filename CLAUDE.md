@@ -80,6 +80,10 @@ Tamanhos: tarefa entre 500 e 1.200 palavras; guia entre 500 e 1.000; visão gera
 
 - Segunda pessoa (você, sua equipe); o produto e os agentes na terceira; "nós" só
   quando a SAN age.
+- Os agentes conversam entre si. Cada um tem a sua responsabilidade e, quando falta
+  uma informação, pergunta ao outro: o Tino e o Copilot consultam o Cérebro, o Scout
+  pede ao Cérebro a régua, o Tino entrega o resumo ao Copilot e à equipe, e o Tino e o
+  Scout devolvem ao Cérebro o que aprenderam. Nunca descrever um agente como isolado.
 - Frases de até 20 palavras. Parágrafos de até duas frases. Enumeração com mais de dois
   itens vira lista.
 - `description`: uma frase com o benefício, até 25 palavras.

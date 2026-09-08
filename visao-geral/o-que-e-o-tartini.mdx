@@ -10,7 +10,7 @@ O Tartini reúne num lugar só os canais por onde seus clientes falam com a empr
 
 | Parte | Onde fica | O que faz |
 |---|---|---|
-| **Cérebro** | Menu **Cérebro** | Onde você ensina a IA sobre a sua empresa: conhecimento, tom de voz, regras, horários e processos. Tudo o que os agentes fazem parte daqui. |
+| **Cérebro** | Menu **Cérebro** | Onde você ensina a IA sobre a sua empresa: conhecimento, tom de voz, regras, horários e processos. É a quem os outros agentes perguntam antes de agir. |
 | **Inbox** | Menu **Inbox** | Onde a equipe e a IA atendem. Todas as conversas, de todos os canais, na mesma tela, com a ficha do contato ao lado. |
 | **Tino** | **Configurações > Atendimento > IA por canal** | O agente que atende o cliente na linha de frente, canal por canal, e passa a conversa para uma pessoa quando você mandar. |
 | **Copilot** | Dentro da conversa, no Inbox | O agente que sugere respostas ao atendente com base no Cérebro. |
@@ -19,12 +19,15 @@ O Tartini reúne num lugar só os canais por onde seus clientes falam com a empr
 | **Métricas** e **Central de Conversas** | Menus **Métricas** e **Central de Conversas** | Os números da operação e o histórico completo de conversas, com filtros e exportação. |
 | **Configurações** | Menu do perfil | Empresa, Áreas e Unidades, usuários, canais, regras do atendimento, cobrança e integrações. |
 
-## Como as partes se ligam
+## Como os agentes trabalham juntos
+
+Cada agente tem a sua responsabilidade, e nenhum trabalha isolado: quando falta uma informação, um pergunta ao outro.
 
 1. Você ensina o **Cérebro**: documentos, perguntas e respostas, o site, o tom de voz e as regras.
-2. O **Tino** e o **Copilot** usam esse Cérebro nas conversas do **Inbox**, cada um do seu jeito: o Tino responde ao cliente, o Copilot sugere ao atendente.
-3. O **Scout** lê as conversas encerradas, de pessoas e da IA, e avalia contra o mesmo padrão.
-4. Você concorda ou corrige a avaliação. A correção volta para o padrão, e a próxima conversa já sai diferente.
+2. O **Tino** consulta o Cérebro a cada resposta ao cliente. Quando passa a conversa para a equipe, entrega o resumo do que já fez.
+3. O **Copilot** lê a conversa, inclusive o que o Tino deixou, e pergunta ao Cérebro o que a empresa sabe, para sugerir ao atendente.
+4. O **Scout** pede ao Cérebro a régua e avalia as conversas encerradas, de pessoas e do Tino, do mesmo jeito.
+5. O Tino e o Scout devolvem ao Cérebro o que aprenderam. Você aceita ou corrige, e a próxima conversa já sai diferente.
 
 ## Os canais
 
@@ -38,7 +41,7 @@ O Administrador configura a conta. Os gestores acompanham a equipe no Inbox, no 
 
 <CardGroup cols={2}>
   <Card title="Começando com o Tartini" href="/primeiros-passos/guias/comecando-com-o-tartini">Os passos para colocar a operação no ar, na ordem certa.</Card>
-  <Card title="Os agentes de IA explicados" href="/visao-geral/os-agentes-de-ia">Tino, Copilot, Scout e o Cérebro, cada um no seu papel.</Card>
+  <Card title="Os agentes de IA explicados" href="/visao-geral/os-agentes-de-ia">Tino, Copilot, Scout e o Cérebro, e como conversam entre si.</Card>
   <Card title="Planos e o que cada um libera" href="/visao-geral/planos-e-recursos">Essential, Scale e Enterprise.</Card>
   <Card title="Créditos explicados" href="/visao-geral/creditos-explicados">Como a IA e as mensagens consomem a franquia.</Card>
 </CardGroup>
