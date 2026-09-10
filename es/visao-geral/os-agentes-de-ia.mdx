@@ -6,7 +6,7 @@ description: "Todo parte del Cérebro: qué es, qué hace cada uno de los cuatro
 
 import { Lista, Artigo } from "/components/lista-artigos.jsx";
 
-Todo parte del Cérebro. Le entregas el material de tu empresa, él aprende tu estándar y coordina el equipo de agentes que trabaja por ti. Son cuatro agentes, cada uno con su puesto y todos con la misma fuente: Tino habla con el cliente, Copilot está al lado de quien atiende, Scout lee la conversación después de que se cierra y Quattro pone la operación por escrito. El Cérebro orquesta a los agentes, y ellos conversan entre sí: cuando uno necesita lo que el otro sabe, pregunta, y la respuesta llega antes de que el mensaje alcance al cliente.
+Todo parte del Cérebro. Le entregas el material de tu empresa, él aprende tu estándar y coordina el equipo de agentes que trabaja por ti. Son cuatro agentes, cada uno con su puesto y todos con la misma fuente: Tino habla con el cliente, Sotto está al lado de quien atiende, Scout lee la conversación después de que se cierra y Quattro pone la operación por escrito. El Cérebro orquesta a los agentes, y ellos conversan entre sí: cuando uno necesita lo que el otro sabe, pregunta, y la respuesta llega antes de que el mensaje alcance al cliente.
 
 <Note>
   La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
@@ -20,7 +20,7 @@ El Cérebro es el menú **Cérebro** (Cerebro): la memoria y el estándar de la 
 
 Lo enseñaste una vez, y vale para toda la atención. De él es de donde los agentes sacan lo que responden en primera línea, lo que sugieren al lado del equipo y la vara con la que evalúan cada conversación. Las habilidades de los agentes vienen listas; la identidad es tuya.
 
-Cada fuente entra al Cérebro con una de dos etiquetas, **Conhecimento Público** (Conocimiento Público) o **Conhecimento Privado** (Conocimiento Privado), marcada elemento por elemento. Lo público es lo que Tino puede decirle al cliente; lo privado solo lo ve tu equipo, a través de Copilot. No todo lo que la empresa sabe debe llegar al cliente, y dónde pasa esa línea lo decides tú.
+Cada fuente entra al Cérebro con una de dos etiquetas, **Conhecimento Público** (Conocimiento Público) o **Conhecimento Privado** (Conocimiento Privado), marcada elemento por elemento. Lo público es lo que Tino puede decirle al cliente; lo privado solo lo ve tu equipo, a través de Sotto. No todo lo que la empresa sabe debe llegar al cliente, y dónde pasa esa línea lo decides tú.
 
 <Note>
   Solo el Administrador y el Gestor de la Empresa abren el Cérebro. Operaciones y Procesos requieren el plan Scale. Cada empresa tiene su propio Cérebro, y uno nunca toca al otro.
@@ -34,7 +34,7 @@ Consulta [El Cérebro explicado](/es/cerebro/o-cerebro-explicado).
 
 Tino es el agente que habla con el cliente. Lo activas canal por canal en **Configurações > Atendimento > IA por canal** (Configuración > Atención > IA por canal), y defines cuándo atiende, el mensaje fuera de horario, cuántas veces vuelve a llamar y cuándo cierra la conversación.
 
-Responde a partir de lo que marcaste como visible para el cliente, y nada más que eso. En cada respuesta consulta al Cérebro: el conocimiento, el tono de voz, las reglas y el proceso que aplica a la solicitud. Cuando el tema supera lo que puede resolver, la conversación pasa a una persona junto con el historial y un resumen de lo que ya se dijo, que el agente lee y Copilot usa para continuar donde Tino se quedó.
+Responde a partir de lo que marcaste como visible para el cliente, y nada más que eso. En cada respuesta consulta al Cérebro: el conocimiento, el tono de voz, las reglas y el proceso que aplica a la solicitud. Cuando el tema supera lo que puede resolver, la conversación pasa a una persona junto con el historial y un resumen de lo que ya se dijo, que el agente lee y Sotto usa para continuar donde Tino se quedó.
 
 En el Inbox, una conversación conducida por Tino muestra el sello **Tino conversando** y el campo de mensaje bloqueado. Para tomar el control, la persona hace clic en **Interromper** (Interrumpir). Tino también aborda contactos en **Campanhas** (Campañas), y cada mensaje suyo tiene un **Por que ela disse isso** (Por qué dijo eso), que muestra qué proceso, directriz o regla del Cérebro guio la respuesta.
 
@@ -46,20 +46,20 @@ Consulta [Tino explicado](/es/tino/o-tino-explicado).
 
 ---
 
-## Copilot
+## Sotto
 
-Copilot está al lado de quien atiende, en la pestaña **Copilot** del panel de detalles. Leyó el historial de la conversación, incluido el resumen que Tino dejó al pasar la conversación, y le pregunta al Cérebro lo que la empresa sabe sobre el tema, incluido el conocimiento privado, que el cliente nunca ve.
+Sotto está al lado de quien atiende, en la pestaña **Sotto** del panel de detalles. Leyó el historial de la conversación, incluido el resumen que Tino dejó al pasar la conversación, y le pregunta al Cérebro lo que la empresa sabe sobre el tema, incluido el conocimiento privado, que el cliente nunca ve.
 
-- **En el modo de consulta**, el agente pregunta y Copilot responde, mostrando las fuentes que consultó. El botón **Sugerir com Copilot** (Sugerir con Copilot) pide una respuesta lista para enviar.
-- **En el modo activo**, Copilot sigue la conversación por su cuenta: sugiere la próxima respuesta y avisa cuando lo que el agente escribió contradice lo que está en el Cérebro.
+- **En el modo de consulta**, el agente pregunta y Sotto responde, mostrando las fuentes que consultó. El botón **Sugerir com Sotto** (Sugerir con Sotto) pide una respuesta lista para enviar.
+- **En el modo activo**, Sotto sigue la conversación por su cuenta: sugiere la próxima respuesta y avisa cuando lo que el agente escribió contradice lo que está en el Cérebro.
 
-El acceso a Copilot se habilita por persona, en la pantalla de Usuarios. El modo activo requiere el plan Scale y puede activarse por defecto en las Reglas de Conversación o conversación por conversación.
+El acceso a Sotto se habilita por persona, en la pantalla de Usuarios. El modo activo requiere el plan Scale y puede activarse por defecto en las Reglas de Conversación o conversación por conversación.
 
 <Note>
-  Cada pregunta a Copilot y cada sugerencia del modo activo consumen créditos de IA.
+  Cada pregunta a Sotto y cada sugerencia del modo activo consumen créditos de IA.
 </Note>
 
-Consulta [Usa el Copilot](/es/inbox/copilot).
+Consulta [Usa el Sotto](/es/inbox/sotto).
 
 ---
 
@@ -100,9 +100,9 @@ Cada agente recurre al otro en el punto donde termina su propia responsabilidad,
 | Quién | Le pregunta a quién | Qué |
 |---|---|---|
 | **Tino** | Cérebro | Qué responder, en qué tono, siguiendo qué proceso, y cuándo transferir |
-| **Tino** | Equipo y Copilot | Entrega el historial y el resumen de la atención al pasar la conversación |
-| **Copilot** | Cérebro | Lo que la empresa sabe sobre el tema, incluido el conocimiento privado |
-| **Copilot** | Tino | Lo que ya se dijo e hizo antes de que la conversación llegara al equipo |
+| **Tino** | Equipo y Sotto | Entrega el historial y el resumen de la atención al pasar la conversación |
+| **Sotto** | Cérebro | Lo que la empresa sabe sobre el tema, incluido el conocimiento privado |
+| **Sotto** | Tino | Lo que ya se dijo e hizo antes de que la conversación llegara al equipo |
 | **Scout** | Cérebro | La vara de medición: personalidad, reglas y procesos para evaluar la conversación |
 | **Scout** | Tino y equipo | Qué hizo cada uno en la conversación cerrada |
 | **Quattro** | Tú | Qué faltó para que el proceso quedara completo |
@@ -111,7 +111,7 @@ Cada agente recurre al otro en el punto donde termina su propia responsabilidad,
 
 1. Enseñas al Cérebro con lo que la empresa ya tiene escrito.
 2. Quattro pone los procesos por escrito contigo, y el Cérebro pasa a saber cómo debe transcurrir cada atención.
-3. Tino atiende consultando al Cérebro; Copilot sugiere al agente consultando al Cérebro y lo que dejó Tino.
+3. Tino atiende consultando al Cérebro; Sotto sugiere al agente consultando al Cérebro y lo que dejó Tino.
 4. Scout lee la conversación cerrada, le pide la vara de medición al Cérebro y evalúa a las personas y a Tino de la misma manera.
 5. Tino y Scout le devuelven al Cérebro lo que aprendieron; tú aceptas, corriges o niegas, y el Cérebro reaprende. La próxima conversación ya sale distinta.
 
@@ -123,8 +123,8 @@ Cada agente recurre al otro en el punto donde termina su propia responsabilidad,
 |---|---|
 | Editar el Cérebro y mapear procesos con Quattro | Administrador y Gestor de la Empresa |
 | Activar a Tino en un canal | Gestor de Área o superior |
-| Habilitar Copilot para una persona | Quien gestiona usuarios |
-| Usar Copilot | Quien recibió acceso |
+| Habilitar Sotto para una persona | Quien gestiona usuarios |
+| Usar Sotto | Quien recibió acceso |
 | Validar las evaluaciones de Scout | Gestores y Administrador |
 
 ---
@@ -133,5 +133,5 @@ Cada agente recurre al otro en el punto donde termina su propia responsabilidad,
 
 <Lista>
   <Artigo titulo="El Cérebro explicado" href="/es/cerebro/o-cerebro-explicado">Todo parte de él.</Artigo>
-  <Artigo titulo="Planes y qué desbloquea cada uno" href="/es/visao-geral/planos-e-recursos">Dónde entran Tino, Quattro y el Copilot activo.</Artigo>
+  <Artigo titulo="Planes y qué desbloquea cada uno" href="/es/visao-geral/planos-e-recursos">Dónde entran Tino, Quattro y el Sotto activo.</Artigo>
 </Lista>

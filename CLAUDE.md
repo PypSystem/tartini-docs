@@ -43,7 +43,7 @@ marcada no texto como `{/* CONFIRMAR: ... */}`.
   Cérebro: você entrega o material, ele aprende o seu padrão e coordena o time de
   agentes." Os agentes são quatro, cada um com o seu posto e todos com a mesma fonte:
   o **Tino** fala com o cliente (ligado em Configurações > Atendimento > IA por canal),
-  o **Copilot** fica ao lado de quem atende (consulta em todos os planos, modo ativo no
+  o **Sotto** fica ao lado de quem atende (consulta em todos os planos, modo ativo no
   Scale), o **Scout** lê a conversa depois que fecha (ligado nas Regras de Conversa) e
   o **Quattro** põe a operação por escrito (Cérebro > Processos > Mapeamento, Scale).
   A referência de copy sobre eles é a landing https://www.tartini.com.br/tartini
@@ -63,7 +63,7 @@ marcada no texto como `{/* CONFIRMAR: ... */}`.
   conta, Administrador, Gestor da Empresa, Gestor de Área, Gestor de Unidade,
   Atendente. "Proprietário", "Gerente", "OWNER" e "BACKOFFICE" não existem mais.
 - **Planos:** Essential (a IA trabalha para dentro), Scale (a IA fala com o cliente:
-  Tino, IA por canal, Operações e Processos do Cérebro, Copilot ativo, Campanhas,
+  Tino, IA por canal, Operações e Processos do Cérebro, Sotto ativo, Campanhas,
   Conectores, API e Webhooks) e Enterprise (sob consulta). Recurso do Scale leva uma
   `<Note>` de disponibilidade.
 - **Créditos:** a IA e as mensagens consomem créditos de uma franquia mensal. Sempre
@@ -88,8 +88,8 @@ Tamanhos: tarefa entre 500 e 1.200 palavras; guia entre 500 e 1.000; visão gera
 - Segunda pessoa (você, sua equipe); o produto e os agentes na terceira; "nós" só
   quando a SAN age.
 - Os agentes conversam entre si. Cada um tem a sua responsabilidade e, quando falta
-  uma informação, pergunta ao outro: o Tino e o Copilot consultam o Cérebro, o Scout
-  pede ao Cérebro a régua, o Tino entrega o resumo ao Copilot e à equipe, e o Tino e o
+  uma informação, pergunta ao outro: o Tino e o Sotto consultam o Cérebro, o Scout
+  pede ao Cérebro a régua, o Tino entrega o resumo ao Sotto e à equipe, e o Tino e o
   Scout devolvem ao Cérebro o que aprenderam. Nunca descrever um agente como isolado.
 - Frases de até 20 palavras. Parágrafos de até duas frases. Enumeração com mais de dois
   itens vira lista.
@@ -102,7 +102,7 @@ Tamanhos: tarefa entre 500 e 1.200 palavras; guia entre 500 e 1.000; visão gera
   vem do inventário; sem certeza, não invente.
 - Exemplos do mundo de quem lê: loja, clínica, franquia, rede; nomes fictícios.
 - O texto do link diz o que a pessoa vai encontrar. Nunca "clique aqui".
-- Termos que a interface mostra em inglês ficam em inglês: Copilot, Scout, widget,
+- Termos que a interface mostra em inglês ficam em inglês: Sotto, Scout, widget,
   webhook, WABA, handoff, CSAT, SLA.
 
 Vocabulário: pessoas (não gente); processos e etapas (não fluxos); o Tino atende, a IA

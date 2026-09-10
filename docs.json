@@ -140,7 +140,7 @@
                 "pages": [
                   "inbox/conheca-o-inbox",
                   "inbox/atenda-uma-conversa",
-                  "inbox/copilot",
+                  "inbox/sotto",
                   "inbox/mensagens-rapidas",
                   "inbox/transfira-notas-e-tags",
                   "inbox/encerre-uma-conversa",
@@ -443,7 +443,7 @@
                 "pages": [
                   "en/inbox/conheca-o-inbox",
                   "en/inbox/atenda-uma-conversa",
-                  "en/inbox/copilot",
+                  "en/inbox/sotto",
                   "en/inbox/mensagens-rapidas",
                   "en/inbox/transfira-notas-e-tags",
                   "en/inbox/encerre-uma-conversa",
@@ -746,7 +746,7 @@
                 "pages": [
                   "es/inbox/conheca-o-inbox",
                   "es/inbox/atenda-uma-conversa",
-                  "es/inbox/copilot",
+                  "es/inbox/sotto",
                   "es/inbox/mensagens-rapidas",
                   "es/inbox/transfira-notas-e-tags",
                   "es/inbox/encerre-uma-conversa",
@@ -1004,7 +1004,7 @@
     },
     {
       "source": "/atendimento/copilot",
-      "destination": "/inbox/copilot"
+      "destination": "/inbox/sotto"
     },
     {
       "source": "/atendimento/atendente-passivo",
@@ -1177,6 +1177,18 @@
     {
       "source": "/conta/sessoes-ativas",
       "destination": "/conta/sessoes-e-dispositivos"
+    },
+    {
+      "source": "/inbox/copilot",
+      "destination": "/inbox/sotto"
+    },
+    {
+      "source": "/en/inbox/copilot",
+      "destination": "/en/inbox/sotto"
+    },
+    {
+      "source": "/es/inbox/copilot",
+      "destination": "/es/inbox/sotto"
     }
   ]
 }
