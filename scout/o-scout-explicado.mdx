@@ -1,0 +1,124 @@
+---
+title: "O Scout explicado"
+sidebarTitle: "Scout"
+description: "Veja como o Scout avalia cada conversa encerrada e onde encontrar cada parte do diagnóstico da sua operação."
+---
+
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
+O Scout lê cada conversa encerrada, pela sua equipe ou pelo Tino, pergunta ao Cérebro qual é o padrão da empresa e devolve um resumo, uma nota e o que ajustar. Você abre um só lugar e sabe onde a operação precisa da sua atenção. E, com o tempo, as suas correções e os achados do Scout vão ensinando ao Cérebro o jeito como a sua empresa atende e quer atender.
+
+<Note>
+  O Scout aparece no menu para todos os papéis. Cada pessoa vê os dados do próprio recorte: a Empresa inteira, uma Área, uma Unidade ou só o próprio atendimento. Processos e aderência exige o plano Scale.
+</Note>
+
+{/* CAPTURA: images/scout/submenu-scout.png | alt: Menu principal com o item Scout aberto, mostrando o submenu Panorama, Satisfação, Processos, Conversas e Desempenho | olhar: a ordem dos cinco itens do submenu */}
+
+---
+
+## O que o Scout avalia
+
+Em cada conversa encerrada, o Scout dá uma nota de 0 a 10 para até seis critérios:
+
+| Critério | Quem recebe a nota |
+|---|---|
+| Aderência ao Tom de Voz | Tino e atendentes |
+| Cumprimento das Diretrizes | Tino e atendentes |
+| Compliance | Tino e atendentes |
+| Resolução do Problema | Tino e atendentes |
+| Uso de Processo | Só o Tino |
+| Aderência ao Processo | Só atendentes |
+
+A nota final de cada responsável é a combinação desses critérios. Um critério sem régua cadastrada no Cérebro, como tom de voz ou compliance, aparece marcado como não avaliado nesta empresa.
+
+---
+
+## Quando uma conversa entra na fila
+
+O Scout passa a avaliar assim que alguém liga **Ativar Scout ao finalizar conversa**, em [Defina as regras de conversa](/atendimento/regras-de-conversa). A partir daí, toda conversa encerrada (pelo atendente, pelo Tino ou por inatividade) entra na fila e recebe uma análise automática.
+{/* CONFIRMAR: se o toggle "Ativar Scout ao finalizar conversa" vem desligado por padrão */}
+
+<Note>
+  Cada análise consome créditos de IA, e a geração da análise mensal de desempenho também. Acompanhe o consumo em [Acompanhe o saldo e o extrato de créditos](/creditos/creditos-e-extrato).
+</Note>
+
+---
+
+## O ciclo do Scout
+
+<Steps>
+  <Step title="O Scout avalia">Ao encerrar, o Scout pede ao Cérebro a régua (personalidade, regras e processos) e a conversa recebe um resumo, uma nota geral e notas por critério, com recomendações de melhoria.</Step>
+  <Step title="Você valida">Um gestor abre a análise e concorda com a nota ou corrige os critérios que julgar errados, com uma justificativa.</Step>
+  <Step title="O Scout aprende e devolve">A correção passa a valer como a nota efetiva do atendimento nos números da equipe e ajuda o Scout a calibrar as próximas análises. O que ele encontra volta ao Cérebro: cada achado aponta a tela onde a correção se escreve.</Step>
+</Steps>
+
+Esse ciclo é o que faz o padrão amadurecer. No começo, o Cérebro sabe o que você cadastrou. A cada correção sua e a cada achado do Scout, ele passa a saber também como a empresa atende de verdade e o que você considera um bom atendimento. Com o tempo, a régua deixa de ser genérica e vira a régua da sua empresa.
+
+---
+
+## Escolha o que chega até você
+
+Você não precisa revisar tudo. Na tela **Conversas**, os filtros definem o que aparece na sua fila: só as pendentes, só as notas baixas, só um critério numa faixa de nota. Quem quer olhar apenas as conversas com compliance abaixo de cinco marca **Compliance** em **Critério** e a faixa **0–4**, e a lista passa a mostrar só isso. O Scout guarda os filtros entre uma visita e outra, então a fila abre do jeito que você deixou.
+
+No Panorama, a seção **o que precisa de você** faz a triagem inversa: o próprio Scout escolhe as prioridades do recorte, por severidade, e cada uma leva à tela certa. Veja [Leia as avaliações do Scout](/scout/avaliacoes).
+
+Veja o passo a passo completo em [Leia as avaliações do Scout](/scout/avaliacoes) e em [Concorde com o Scout ou corrija a nota](/scout/concorde-ou-corrija).
+
+---
+
+## O que cada papel vê
+
+| Papel | O que enxerga |
+|---|---|
+| Dono da conta, Administrador, Gestor da Empresa | A empresa inteira: todas as áreas, unidades e atendentes |
+| Gestor de Área | A própria área, as unidades dela e os atendentes |
+| Gestor de Unidade | A própria unidade e os atendentes dela |
+| Atendente | Só o próprio atendimento |
+
+Concordar, corrigir, descartar uma avaliação e aprovar a análise mensal são ações de gestor: Administrador, Gestor da Empresa, de Área ou de Unidade. O Atendente lê tudo sobre si mesmo, mas não edita.
+
+---
+
+## O submenu do Scout
+
+| Item | O que mostra | Artigo |
+|---|---|---|
+| **Panorama** | O retrato pronto do recorte: um veredito, os sinais de saúde, as prioridades que precisam de você e a nota média por critério | Tela de entrada, sem artigo próprio |
+| **Satisfação** | A nota da pesquisa de satisfação e a leitura do Scout sobre o cliente | [Acompanhe a satisfação dos clientes](/scout/satisfacao) |
+| **Processos** | Onde os processos cadastrados no Cérebro não estão entrando, não evoluem ou pioram a experiência | [Veja a aderência aos processos](/scout/processos-e-aderencia) |
+| **Conversas** | A lista de avaliações e a análise completa de cada uma | [Leia as avaliações do Scout](/scout/avaliacoes) |
+| **Desempenho** | A nota da equipe e do Tino por nível, e a análise mensal de cada atendente | [Acompanhe o desempenho da equipe](/scout/desempenho-da-equipe) |
+
+Em todas as telas, a barra de escopo fica no topo: o nível (Empresa, Área, Unidade ou atendente) à esquerda e o período à direita. O Panorama é o ponto de partida: ele resume o recorte escolhido e aponta, com um botão, para qual das outras telas você deve ir primeiro.
+
+---
+
+## Perguntas frequentes
+
+<AccordionGroup>
+  <Accordion title="Preciso ligar alguma coisa para o Scout começar a avaliar?">
+  Sim. Ative **Ativar Scout ao finalizar conversa** em [Defina as regras de conversa](/atendimento/regras-de-conversa). Sem isso, nenhuma conversa entra na fila.
+  </Accordion>
+  <Accordion title="O Scout usa créditos?">
+  Sim, em dois momentos: a análise automática de cada conversa encerrada e a geração ou regeração da análise mensal em Desempenho.
+  </Accordion>
+  <Accordion title="Por que um critério aparece como não avaliado nesta empresa?">
+  Porque a empresa ainda não cadastrou a régua correspondente no Cérebro, como tom de voz, diretrizes ou compliance.
+  </Accordion>
+  <Accordion title="O Atendente vê as avaliações dos colegas?">
+  Não. O Atendente vê só as próprias conversas e o próprio desempenho.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artigos relacionados
+
+<Lista>
+  <Artigo titulo="Leia as avaliações do Scout" href="/scout/avaliacoes">A lista de conversas avaliadas e a análise completa de cada uma.</Artigo>
+  <Artigo titulo="Concorde com o Scout ou corrija a nota" href="/scout/concorde-ou-corrija">Como validar a nota e o que muda depois.</Artigo>
+  <Artigo titulo="Acompanhe o desempenho da equipe" href="/scout/desempenho-da-equipe">A nota por Área, Unidade e atendente, e a análise mensal.</Artigo>
+  <Artigo titulo="Acompanhe a satisfação dos clientes" href="/scout/satisfacao">A nota da pesquisa e onde ela varia.</Artigo>
+  <Artigo titulo="Veja a aderência aos processos" href="/scout/processos-e-aderencia">Onde os processos do Cérebro estão falhando.</Artigo>
+  <Artigo titulo="Defina as regras de conversa" href="/atendimento/regras-de-conversa">Ligue o Scout ao encerrar conversas.</Artigo>
+</Lista>

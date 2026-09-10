@@ -1,12 +1,12 @@
 ---
-title: "Agree with Sotto or Correct the Score"
+title: "Agree with Scout or Correct the Score"
 sidebarTitle: "Agree or Correct"
-description: "Confirm Sotto's score when it's right, or correct the criteria and help Sotto get it right more often in future conversations."
+description: "Confirm Scout's score when it's right, or correct the criteria and help Scout get it right more often in future conversations."
 ---
 
 import { Lista, Artigo } from "/components/lista-artigos.jsx";
 
-After reading a conversation's analysis, you decide whether Sotto's score is right or needs to change. That decision becomes the real score for that service.
+After reading a conversation's analysis, you decide whether Scout's score is right or needs to change. That decision becomes the real score for that service.
 
 <Note>
   Agreeing, correcting, and dismissing an evaluation is for Administrator, Company Manager, Area Manager, and Unit Manager. The Agent sees the evaluation and the correction, but doesn't edit. Available on all plans. The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
@@ -18,7 +18,7 @@ After reading a conversation's analysis, you decide whether Sotto's score is rig
 
 By default, the conversation stays pending until you agree with or correct the score.
 
-Where it is: inside the **Análise do Sotto** (Sotto Analysis) of each conversation, in the **Avaliação da conversa** (Conversation evaluation) section.
+Where it is: inside the **Análise do Scout** (Scout Analysis) of each conversation, in the **Avaliação da conversa** (Conversation evaluation) section.
 
 <Steps>
   <Step title="Choose Concordo">Click the **Concordo** (I agree) card.</Step>
@@ -26,7 +26,7 @@ Where it is: inside the **Análise do Sotto** (Sotto Analysis) of each conversat
   <Step title="Confirm">Click **Confirmar avaliação** (Confirm evaluation). The conversation leaves the Pendentes list.</Step>
 </Steps>
 
-{/* CAPTURA: images/sotto/avaliacao-concordo.png | alt: Seção Avaliação da conversa com o cartão Concordo selecionado e o campo de comentário | olhar: o botão Confirmar avaliação */}
+{/* CAPTURA: images/scout/avaliacao-concordo.png | alt: Seção Avaliação da conversa com o cartão Concordo selecionado e o campo de comentário | olhar: o botão Confirmar avaliação */}
 
 ---
 
@@ -38,21 +38,21 @@ Where it is: same section, **Discordo** (I disagree) card.
 
 <Steps>
   <Step title="Choose Discordo">Click the **Discordo** card.</Step>
-  <Step title="Choose who to correct">Click **Corrigir este responsável** (Correct this responsible party) on the agent or on Tino you want to adjust. Whoever you don't touch keeps Sotto's score.</Step>
-  <Step title="Correct the wrong criteria">Fill in a score from 1 to 10 only for the criteria you disagree with. The ones left blank keep Sotto's score.</Step>
-  <Step title="Justify each corrected criterion">Write why Sotto's score is wrong, up to 200 characters per criterion.</Step>
+  <Step title="Choose who to correct">Click **Corrigir este responsável** (Correct this responsible party) on the agent or on Tino you want to adjust. Whoever you don't touch keeps Scout's score.</Step>
+  <Step title="Correct the wrong criteria">Fill in a score from 1 to 10 only for the criteria you disagree with. The ones left blank keep Scout's score.</Step>
+  <Step title="Justify each corrected criterion">Write why Scout's score is wrong, up to 200 characters per criterion.</Step>
   <Step title="Save">Click **Salvar avaliação** (Save evaluation).</Step>
 </Steps>
 
 <Note>
-  There's no single score for the entire conversation: each responsible party carries their own score. It's recalculated with the same weight Sotto uses: 1 for tone of voice, guidelines, compliance, resolution, and process use, and 0.5 for an agent's process adherence.
+  There's no single score for the entire conversation: each responsible party carries their own score. It's recalculated with the same weight Scout uses: 1 for tone of voice, guidelines, compliance, resolution, and process use, and 0.5 for an agent's process adherence.
 </Note>
 
 ---
 
 ## Explain the Overall Reason
 
-In the **Por que o Sotto errou** (Why Sotto got it wrong) field, you can write the conversation's context and mention an agent with `@name`. This text complements each criterion's justification, it doesn't replace it.
+In the **Por que o Scout errou** (Why Scout got it wrong) field, you can write the conversation's context and mention an agent with `@name`. This text complements each criterion's justification, it doesn't replace it.
 
 <Note>
   In older conversations, without a split by responsible party, this field is required and asks for at least 20 characters.
@@ -75,11 +75,11 @@ An already-reviewed evaluation appears in read-only mode, with the **Editar** (E
 <Steps>
   <Step title="Reopen to edit">Click **Editar** to change the saved score, criterion, or comment.</Step>
   <Step title="Dismiss if needed">Click **Descartar** to delete your review. The conversation goes back to Pendentes.</Step>
-  <Step title="Restore if needed">If you dismissed Sotto's evaluation (not your review), use **Repor nas médias** (Restore to averages) to bring it back.</Step>
+  <Step title="Restore if needed">If you dismissed Scout's evaluation (not your review), use **Repor nas médias** (Restore to averages) to bring it back.</Step>
 </Steps>
 
 <Note>
-  There are two dismiss buttons. At the top of the analysis, it removes Sotto's evaluation from the averages, because the conversation wasn't a service that could be evaluated. Inside your review, it deletes only your correction and returns the conversation to Pendentes.
+  There are two dismiss buttons. At the top of the analysis, it removes Scout's evaluation from the averages, because the conversation wasn't a service that could be evaluated. Inside your review, it deletes only your correction and returns the conversation to Pendentes.
 </Note>
 
 ---
@@ -94,7 +94,7 @@ An already-reviewed evaluation appears in read-only mode, with the **Editar** (E
   Either it doesn't apply to that responsible party, like Process Use, which is only for Tino, or the company hasn't yet registered the standard in the Cérebro.
   </Accordion>
   <Accordion title="There are two dismiss buttons. What's the difference?">
-  The one in the header removes Sotto's evaluation from the averages, coverage, and calibration. The one in your review deletes only your correction and returns the conversation to the Pendentes queue.
+  The one in the header removes Scout's evaluation from the averages, coverage, and calibration. The one in your review deletes only your correction and returns the conversation to the Pendentes queue.
   </Accordion>
 </AccordionGroup>
 
@@ -103,8 +103,8 @@ An already-reviewed evaluation appears in read-only mode, with the **Editar** (E
 ## Related Articles
 
 <Lista>
-  <Artigo titulo="Read Sotto's evaluations" href="/en/sotto/avaliacoes">The list of conversations and what the analysis shows.</Artigo>
-  <Artigo titulo="Track team performance" href="/en/sotto/desempenho-da-equipe">How the correction factors into the team's score.</Artigo>
-  <Artigo titulo="The Sotto Explained" href="/en/sotto/o-sotto-explicado">The evaluate, validate, and learn cycle.</Artigo>
+  <Artigo titulo="Read Scout's evaluations" href="/en/scout/avaliacoes">The list of conversations and what the analysis shows.</Artigo>
+  <Artigo titulo="Track team performance" href="/en/scout/desempenho-da-equipe">How the correction factors into the team's score.</Artigo>
+  <Artigo titulo="The Scout Explained" href="/en/scout/o-scout-explicado">The evaluate, validate, and learn cycle.</Artigo>
   <Artigo titulo="The Cérebro Explained" href="/en/cerebro/o-cerebro-explicado">Where the tone of voice, guideline, and compliance standards live.</Artigo>
 </Lista>

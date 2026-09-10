@@ -1,6 +1,6 @@
 # tartini-docs
 
-Documentação do **Tartini** para o cliente final, publicada com [Mintlify](https://mintlify.com). Cobre canais, inbox, campanhas, base de conhecimento, avaliação (Sotto), configurações, conta e faturamento, além da referência da API pública.
+Documentação do **Tartini** para o cliente final, publicada com [Mintlify](https://mintlify.com). Cobre canais, inbox, campanhas, base de conhecimento, avaliação (Scout), configurações, conta e faturamento, além da referência da API pública.
 
 ## Como rodar
 
