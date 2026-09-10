@@ -167,6 +167,10 @@ Os "Artigos relacionados" e "Próximos passos" usam a lista em linhas, uma embai
 
 Os quatro agentes têm coleção própria, `agentes/`, com uma seção por agente: `agentes/tino/`, `agentes/sotto/` (o antigo Copilot), `agentes/scout/` e `agentes/quattro/`, mais a abertura `agentes/os-agentes-explicados`. Cada seção começa por "O <agente> explicado" e segue com os artigos de uso. Artigo novo sobre um agente entra na seção dele, não em Inbox ou Cérebro. A aba "Para desenvolvedores" tem uma única página, `api-reference/introduction`: a API é liberada sob solicitação ao time, sem rotas nem exemplos de código na central. Caminhos antigos (`tino/`, `scout/`, `inbox/copilot`, `concepts/`, `desenvolvedores/`) redirecionam pelo gerador do `docs.json`.
 
+## Vocabulário
+
+- **Transferir, nunca passar.** O Tino transfere a conversa para uma pessoa; a conversa é transferida para a equipe. "Passar a conversa", "passou o atendimento" e "passe adiante" não entram (Artur: palavreado chulo).
+
 ## Antes de publicar
 
 - [ ] Um tipo de artigo, um recurso, título com o verbo certo.
