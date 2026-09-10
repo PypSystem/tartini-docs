@@ -116,3 +116,10 @@ samp {
 .dark .lista-artigos-seta {
   color: #b9b2a2;
 }
+
+/* Assistente de IA do Mintlify: desligado no dashboard (Assistant > status).
+   A barra flutuante "Fazer uma pergunta" fica escondida também por CSS, para
+   não reaparecer se o tema a renderizar num build antigo. */
+.chat-assistant-floating-input {
+  display: none !important;
+}
