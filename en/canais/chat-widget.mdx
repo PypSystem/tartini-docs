@@ -68,8 +68,6 @@ Where to find it: inside the Unit's widget, **Chave pública & Integração** (P
 
 ## Turn on Tino in the widget
 
-By default, Tino is off on every new widget.
-
 <Steps>
   <Step title="Choose the transfer departments">In the **Configurações do chat** (Chat settings) section, check under **Setores disponíveis para transferência** (Departments available for transfer) which teams can receive a conversation from Tino.</Step>
   <Step title="Turn on Tino">Click **Inteligência Artificial deste canal** (Artificial intelligence for this channel) and follow the steps in AI by channel.</Step>
@@ -86,7 +84,7 @@ By default, Tino is off on every new widget.
   Before the closing `</body>` tag, on every page where the chat should appear. Copy the snippet in the **Chave pública & Integração** section.
   </Accordion>
   <Accordion title="I changed the widget's color and the website didn't update. Why?">
-  The code copied earlier loads the old configuration. Copy the snippet again after saving your changes.
+  Copy the snippet again from **Chave pública & Integração** (Public key & Integration) after saving your changes, and replace the old code on your website. {/* CONFIRMAR: se o widget lê a configuração pela chave pública em tempo real ou só usa o que está gravado no snippet copiado */}
   </Accordion>
   <Accordion title="Visitors show up as 'Visitante' instead of the customer's name. Why?">
   This happens when the website doesn't send the logged-in user's identification. Generate an identity secret in the **Chave pública & Integração** section and set it up with whoever manages your system.

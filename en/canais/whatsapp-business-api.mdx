@@ -6,7 +6,7 @@ description: "Connect a business WhatsApp number through Meta's official API and
 
 import { Lista, Artigo } from "/components/lista-artigos.jsx";
 
-WABA connects your business number through Meta's official API. It's more stable than the QR Code connection and lets you send approved message templates.
+WABA connects your business number through Meta's official API and lets you send approved message templates.
 
 <Note>
   Who connects: Administrator, Company Manager, Area Manager, and Unit Manager. Available on all plans, with usage-based billing.
@@ -33,14 +33,10 @@ You need:
 
 ## Get a business number
 
-If you already have a number ready on WABA, skip to the next section. If not, choose a path:
-
-**Direct registration with Meta**: during the connection itself in Tartini, Meta offers a simplified registration to sign up a new number.
-
-**Authorized partner (BSP)**: a company authorized by Meta handles provisioning, porting, and support, usually with payment in reais and an invoice in Brazil. It's the common path for porting a number you already use.
+If you already have a number ready on WABA, skip to the next section. If not, Meta doesn't sell numbers directly: you need a partner authorized by Meta, called a BSP (Business Solution Provider), who handles provisioning, porting, and support. The WABA screen lists Zenvia and 360Dialog as partners, each with its own steps and required documents, plus a link to Meta's full partner list.
 
 <Tip>
-  Meta doesn't sell numbers directly. Without a BSP, direct registration requires you to already have the Meta Business account and the WABA ready.
+  To hire a BSP you'll need an active CNPJ (Brazilian company ID), a verified Meta Business account, and company documentation, plus a decision between registering a new number or porting one you already use.
 </Tip>
 
 ---
@@ -91,10 +87,10 @@ Use this when Meta's authorization expires or when you need to switch numbers.
   Between 2 and 5 business days, counting account verification and number provisioning.
   </Accordion>
   <Accordion title="Can I port my current WhatsApp Business number to WABA?">
-  Yes. First unlink the number from regular WhatsApp Business, then register it on WABA through Meta or through a BSP.
+  Yes. First unlink the number from regular WhatsApp Business, then register it on WABA through an authorized partner (BSP).
   </Accordion>
   <Accordion title="What's the difference from regular WhatsApp Business?">
-  WABA is Meta's official API: it doesn't carry ban risk from an unauthorized connection and lets you send approved templates. WhatsApp Business by QR Code uses an unofficial connection.
+  WABA is Meta's official API and lets you send approved templates. WhatsApp Business by QR Code uses an unofficial connection, which the screen itself flags as subject to ban risk and instability.
   </Accordion>
   <Accordion title="Does the number show up with the green verified badge?">
   Not automatically. Meta's verification badge follows a separate process, outside Tartini.

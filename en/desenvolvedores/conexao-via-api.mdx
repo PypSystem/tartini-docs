@@ -4,7 +4,9 @@ sidebarTitle: "API Connection"
 description: "Generate API tokens to integrate your own systems directly with Tartini and use the platform as a programmatic channel."
 ---
 
-The **API Connection** turns Tartini into a channel accessible by your own systems: you can send and receive messages, create contacts, start conversations, and query data via REST. The page manages the **API tokens** that authenticate these calls.
+The **API Connection** integrates your systems directly with the Tartini platform. The page manages the **API tokens** that authenticate these calls.
+
+{/* CONFIRMAR: which operations the public API exposes today (messages, contacts, conversations, data queries): not covered by the screen inventory or the current API Reference. */}
 
 The page is at **Configurações > Canais > Conexão via API** (Settings > Channels > API Connection) ([talk.saninternet.com/settings/channels/api](https://talk.saninternet.com/settings/channels/api)).
 
@@ -34,16 +36,16 @@ Authorization: Bearer <seu-token>
 
 <Steps>
   <Step title="Open the creation modal">
-    Click **Criar Token** (Create Token) in the top-right corner of the page (or the center button, in the empty state).
+    Click **Criar Token** (Create Token), in the page header (or the empty-state button, before any token exists).
   </Step>
 
   <Step title="Fill in the details">
-    - **Nome** (Name) (required): a short identifier, e.g.: `Integração ERP`, `Webhook Site`.
-    - **Descrição** (Description) (optional): free text to help you remember the token's purpose.
+    - **Nome** (Name) (required): a short identifier, e.g.: `Integração ERP`.
+    - **Descrição** (Description) (optional): free text describing the token's purpose.
   </Step>
 
   <Step title="Copy the token">
-    After creation, a modal displays the **full token**. Copy it and store it somewhere secure (a password vault, a server environment variable, a secrets manager).
+    After creation, a modal displays the **full token**. Copy it and store it somewhere secure: for security reasons, Tartini won't show that value again.
 
     <Warning>
       This is the only moment the full value is visible. Once you close the modal, Tartini only shows the masked version from then on.
@@ -68,28 +70,30 @@ The page lists all tokens created by the Company in cards, with:
 
 ### Delete a Token
 
-Each card has a red trash-can button. Clicking it opens a confirmation. Once confirmed, the token is **revoked immediately**, and any request that tries to use it starts receiving `401 Unauthorized`.
+Each card has a trash-can button (tooltip **Excluir token** / Delete token). Clicking it opens a confirmation. Once confirmed, the token is revoked and stops authenticating API calls.
+
+{/* CONFIRMAR: HTTP response code for calls made with an already-revoked token, and whether revocation has any propagation delay. */}
 
 <Warning>
-  There's no "deactivation," only deletion. Before removing one, make sure no critical system is still using that token.
+  On this screen, the only action available for an existing token is deletion, which can't be undone. Before removing one, make sure no critical system is still using that token.
 </Warning>
+
+{/* CONFIRMAR: the cards show an active/inactive status icon per token: it isn't confirmed whether a token can be inactive for a reason other than deletion (e.g., expiration). */}
 
 ---
 
 ## Best Practices
 
-- **One token per integration**: if three systems talk to Tartini, create three tokens. That way, when you deactivate a system, you only revoke its token.
-- **Descriptive name**: use prefixes like `prod-`, `staging-`, `webhook-` to tell them apart quickly.
-- **Periodic rotation**: generate a new token, update the integration, validate that it works, and only then revoke the old one. Rotating every 90 days is recommended.
-- **Don't commit tokens**: never leave a token in open code, a git repository, or a support ticket. Use environment variables or a secrets manager.
-- **Watch "Último uso"**: tokens unused for more than 30 days can probably be revoked.
+- **Tokens per integration**: since each token can be deleted independently, different integrations can use different tokens, without affecting the others when you remove one.
+- **Token security**: keep the value secure and never share it, as the screen's own warning states.
+- **"Último uso" (Last used) field**: helps identify tokens with no recent use when reviewing which ones are still needed.
 
 ---
 
 ## Who Can Generate Tokens
 
-Only **Proprietário** (Owner) users of the Company can create and revoke API tokens. Managers and Agents don't see the API Connection page.
+Only the **Administrador da Empresa** (Company Administrator) has permission to create and revoke API tokens. Managers and Agents don't see the API Connection page.
 
 <Tip>
-  To start integrating, begin with the [authentication](/en/concepts/authentication) endpoint and the API's [standardized errors](/en/concepts/errors) guide.
+  For authentication details and the API's [standardized errors](/en/concepts/errors) guide, see [Authentication](/en/concepts/authentication).
 </Tip>

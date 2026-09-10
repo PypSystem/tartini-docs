@@ -4,7 +4,7 @@ sidebarTitle: "Webhook de Atendimiento"
 description: "Recibe en tu sistema (ERP, CRM o cualquier aplicación) un POST con los datos de cada atendimiento finalizado en Tartini, con payload firmado vía HMAC-SHA256."
 ---
 
-El **Webhook de Atendimiento** notifica a tu sistema externo cada vez que una conversación se finaliza en Tartini. En cada cierre, Tartini envía un `POST` en JSON a la URL configurada, con los datos de la conversación y del contacto. Opcionalmente, el payload puede incluir el resumen generado por IA, el historial de mensajes y la nota CSAT.
+El **Webhook de Atendimiento** notifica a tu sistema externo cada vez que una conversación se finaliza en Tartini. En cada cierre, Tartini envía un `POST` en JSON a la URL configurada, con los datos de la conversación y del contacto. Opcionalmente, el payload puede incluir el resumen generado por Tino, el historial de mensajes y la nota CSAT.
 
 La configuración está en **Configurações > Integrações > Webhooks > Finalização de Atendimento** (Configuraciones > Integraciones > Webhooks > Finalización de Atendimiento) ([talk.saninternet.com/settings/webhooks](https://talk.saninternet.com/settings/webhooks)).
 
@@ -21,21 +21,23 @@ La configuración está en **Configurações > Integrações > Webhooks > Finali
     En **Configurações > Integrações > Webhooks > Finalização de Atendimento**, activa la llave **Ativar webhook** (Activar webhook).
   </Step>
   <Step title="Indica la URL de destino">
-    El endpoint de tu sistema que recibirá el `POST`. Usa siempre `https://` en producción.
+    El endpoint de tu sistema que recibirá el `POST`. Indica la URL completa, incluyendo el protocolo (`http://` o `https://`).
   </Step>
   <Step title="Genera el secret de firma">
-    Haz clic en **Gerar novo** (Generar nuevo) y guarda el valor con seguridad. Se usará para validar la autenticidad de cada entrega.
+    Haz clic en **Gerar novo secret** (Generar nuevo secret) y guarda el valor con seguridad. Se usará para validar la autenticidad de cada entrega.
   </Step>
   <Step title="Elige el contenido del payload">
-    Conversación y contacto siempre se envían. También puedes incluir el resumen de la IA, el historial de mensajes y la nota CSAT.
+    Conversación y contacto siempre se envían. También puedes incluir el resumen de Tino, el historial de mensajes y la nota CSAT.
   </Step>
   <Step title="Define el filtro de relevancia (opcional)">
     Con **Registrar apenas atendimentos relevantes** (Registrar solo atendimientos relevantes) activo, las conversaciones triviales (como un saludo sin continuación) no se envían a tu sistema.
   </Step>
   <Step title="Prueba la entrega">
-    El botón **Testar webhook** (Probar webhook) envía un payload de ejemplo (con `test: true`) para validar la integración antes de activarla.
+    El botón **Testar webhook** (Probar webhook) envía una entrega de prueba a la URL configurada, para validar la integración antes de activarla.
   </Step>
 </Steps>
+
+{/* CONFIRMAR: si el payload de prueba incluye un campo identificador (ej.: `test: true`) para diferenciarlo de una entrega real: no cubierto por el inventario. */}
 
 ---
 
@@ -43,10 +45,12 @@ La configuración está en **Configurações > Integrações > Webhooks > Finali
 
 Para que tu sistema sepa a qué cliente pertenece el atendimiento, cada contacto de Tartini tiene un campo **ID externo**: un código libre que hace referencia al cliente en tu sistema (por ejemplo, su ID en tu ERP o CRM).
 
-El agente define ese valor en el panel de detalles del contacto, dentro del Inbox (sección **Conversa** (Conversación), campo **ID externo**). Una vez completado, acompaña al contacto en todas las finalizaciones futuras y llega en el payload como `contact.externalId`.
+El agente define ese valor en el panel de detalles del contacto, dentro del Inbox. Una vez completado, acompaña al contacto en todas las finalizaciones futuras y llega en el payload como `contact.externalId`.
+
+{/* CONFIRMAR: ubicación exacta en la pantalla del Inbox donde está el campo "ID externo" (sección/etiqueta): fuera del inventario de pantallas de Configuraciones usado en esta revisión. */}
 
 <Tip>
-  Cuando el ID externo no esté completado, `contact.externalId` llega como `null`. En ese caso, usa `contact.phoneNumber` como alternativa de vínculo.
+  Cuando el ID externo no esté completado, `contact.externalId` llega como `null`. El payload también trae `contact.phoneNumber`.
 </Tip>
 
 ---
@@ -92,18 +96,21 @@ El agente define ese valor en el panel de detalles del contacto, dentro del Inbo
 }
 ```
 
+{/* CONFIRMAR: las claves de nivel superior (event, version, requestId, sentAt, data.conversation, data.contact, summary, csat, messages) están en el inventario de pantallas; los subcampos de attendant, sector, channel, summary, csat y messages son ilustrativos y necesitan confirmación contra el contrato real del webhook. En especial, `summary.score` puede estar confundiendo el resumen de Tino con la nota del Scout, que es una función separada. */}
+
 ### Campos especiales
 
 | Campo | Significado |
 | --- | --- |
-| `summary: null` | Resumen desactivado en la configuración. Si viene acompañado de `summaryPending: true`, el resumen fue solicitado pero no quedó listo a tiempo. |
+| `summary: null` | Resumen desactivado en la configuración. |
 | `csat: { rating: null }` | El cliente no respondió la evaluación antes del tiempo límite. |
 | `contact.externalId: null` | Ningún ID externo definido para el contacto. |
 | `messages: null` | Historial de mensajes desactivado en la configuración. |
-| `test: true` | Entrega generada por el botón **Testar webhook** (Probar webhook), con datos ficticios. No la registres como atendimiento real. |
+
+{/* CONFIRMAR: si la entrega de prueba del botón "Testar webhook" lleva un campo identificador (ej.: `test: true`): eliminado de la tabla por falta de base en el inventario. */}
 
 <Note>
-  Cuando el resumen de la IA está habilitado, la entrega espera la generación del resumen y puede demorar algunos minutos respecto al cierre de la conversación.
+  Cuando el resumen generado por Tino está habilitado, la entrega espera la generación del resumen y puede demorar algunos minutos respecto al cierre de la conversación.
 </Note>
 
 ---
@@ -111,8 +118,9 @@ El agente define ese valor en el panel de detalles del contacto, dentro del Inbo
 ## Entrega y respuesta
 
 - El `POST` se envía con `Content-Type: application/json`.
-- Tu endpoint debe responder con estado `2xx` en hasta **30 segundos**.
-- Recomendación: recibe, guarda y responde. Deja los procesamientos demorados para después de la respuesta.
+- Tu endpoint debe responder con estado `2xx` para confirmar la recepción.
+
+{/* CONFIRMAR: plazo de timeout para la respuesta del endpoint, política de reintentos y deduplicación: el inventario marca estos detalles como no cubiertos por la pantalla y remitidos a la documentación externa. */}
 
 ---
 
@@ -128,7 +136,9 @@ El agente define ese valor en el panel de detalles del contacto, dentro del Inbo
 
 ## Validando la firma
 
-Toda entrega se firma con **HMAC-SHA256** usando el secret configurado. Recalcula el HMAC sobre el **cuerpo bruto de la solicitud** (antes del parse del JSON) y compáralo con el valor del header `X-Webhook-Signature` usando comparación de tiempo constante. Las solicitudes con firma inválida deben rechazarse.
+Toda entrega se firma con **HMAC-SHA256** usando el secret configurado, enviado en el header `X-Webhook-Signature`. Las solicitudes con firma inválida deben rechazarse.
+
+{/* CONFIRMAR: formato exacto de la firma (prefijo "sha256=", HMAC sobre el cuerpo bruto antes del parse del JSON), citado también en la tabla de Headers arriba: el inventario confirma el uso de HMAC-SHA256 en el header X-Webhook-Signature, pero no este detalle de codificación; los ejemplos de código abajo asumen ese formato. */}
 
 <CodeGroup>
 

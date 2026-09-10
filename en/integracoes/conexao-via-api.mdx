@@ -18,7 +18,7 @@ With an API token, your system talks directly to Tartini, without needing anyone
 
 ## What it's for
 
-An API token gives your system access to the Tartini API, to integrate conversation, contact, and support data with your ERP, CRM, or any other system. The technical details of using the API are for whoever develops your system.
+An API token gives your system access to the Tartini public API, with AI features and knowledge base search. The technical details of using the API are for whoever develops your system.
 
 Where to find it: **Configurações > Canais > Conexão via API** (Settings > Channels > API Connection).
 
@@ -28,11 +28,11 @@ Where to find it: **Configurações > Canais > Conexão via API** (Settings > Ch
 
 ---
 
-## Create a token per system
+## One token per system
 
-If you integrate more than one system, create a separate token for each one, with a name that identifies where it's used, like "Integração ERP" or "Portal do cliente".
+You can create more than one token, one for each system you integrate, with a name that identifies where each is used, like "Integração ERP".
 
-That way, if you need to cut off access for a specific system, you revoke only its token, without affecting the other integrations.
+Each token is revoked independently: revoking one system's token doesn't affect the others.
 
 ---
 
@@ -71,7 +71,8 @@ Each registered token shows the name, the description, when it was created, and 
 </Steps>
 
 <Warning>
-  Revoking a token is immediate: any system still using that token loses access right away.
+  Once revoked, the token stops working and any system that was using it loses access.
+  {/* CONFIRMAR: se a revogação tem efeito imediato ou pode haver atraso de propagação/cache */}
 </Warning>
 
 ---
@@ -89,7 +90,7 @@ Each registered token shows the name, the description, when it was created, and 
   {/* CONFIRMAR: se os tokens de API têm expiração automática */}
   </Accordion>
   <Accordion title="Do I need a different token for each system I integrate?">
-  It's not required, but it's recommended. One token per system makes it easier to know who's using what and lets you revoke one access without touching the others.
+  No. You can use a single token across several systems or create one for each. Separate tokens make it easier to identify where each one is used and let you revoke one system's access without affecting the others.
   </Accordion>
 </AccordionGroup>
 

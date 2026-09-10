@@ -34,7 +34,7 @@ A mapped process only takes effect in service once it's active. Processes create
 Where to find it: **Cérebro > Processos** (Brain > Processes).
 
 1. **Mapeamento** (Mapping): lists every process already mapped and is the entry point for creating a new one, by talking with the mapping agent.
-2. **Descobertas** (Discoveries): queue of process candidates that Tino identified on its own, from real conversations or uploaded documents.
+2. **Descobertas** (Discoveries): queue of process candidates that Tino identified on its own, from content already indexed in Cérebro or from documents uploaded specifically for that analysis.
 3. **Grupos** (Groups): sets of processes with their own output path, used by campaigns.
 4. **Catálogo** (Catalog): an audit of the process records, independent of conversations, showing structural problems and how to fix them.
 
@@ -46,7 +46,7 @@ Where to find it: **Cérebro > Processos** (Brain > Processes).
 
 During service, Tino follows the step-by-step of the process that matches the customer's request. At each step, it uses the text set in the mapping, or writes the message on its own when the script doesn't define fixed text. At the end, it follows the output set for that outcome, or returns to triage if no output was defined.
 
-The one who puts the process in writing with you is **Quattro**, Tartini's fourth agent. You explain, in your own words, how service happens today; Quattro asks what's missing and builds the process, with steps, transitions, and outputs. A step that checks one of your systems is included too: you authorize it, and the AI performs the check during service. Nothing it builds takes effect without your approval. Once published, the process becomes the playbook Tino follows in real conversations, and the yardstick Scout uses to measure each one.
+The one who puts the process in writing with you is **Quattro**, Tartini's fourth agent. You explain, in your own words, how service happens today; Quattro asks what's missing and builds the process, with steps, transitions, and outputs. A step that uses one of your connectors, for example to check a system, is included too: you choose which tools are available for that process. Nothing it builds takes effect without your approval. Once published, the process becomes the playbook Tino follows in real conversations, and the yardstick Scout uses to measure each one.
 
 ---
 

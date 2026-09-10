@@ -14,7 +14,7 @@ Com um token de API, o seu sistema conversa diretamente com o Tartini, sem preci
 
 ## Para que serve
 
-Um token de API dá ao seu sistema acesso à API do Tartini, para integrar dados de conversas, contatos e atendimentos com o seu ERP, CRM ou qualquer outro sistema. Os detalhes técnicos de uso da API ficam com quem desenvolve o seu sistema.
+Um token de API dá ao seu sistema acesso à API pública do Tartini, com funcionalidades de inteligência artificial e busca na base de conhecimento. Os detalhes técnicos de uso da API ficam com quem desenvolve o seu sistema.
 
 Onde fica: **Configurações > Canais > Conexão via API**.
 
@@ -24,11 +24,11 @@ Onde fica: **Configurações > Canais > Conexão via API**.
 
 ---
 
-## Crie um token por sistema
+## Um token por sistema
 
-Se você integra mais de um sistema, crie um token separado para cada um, com um nome que identifique onde ele é usado, como "Integração ERP" ou "Portal do cliente".
+É possível criar mais de um token, um para cada sistema integrado, com um nome que identifica onde cada um é usado, como "Integração ERP".
 
-Assim, se precisar cortar o acesso de um sistema específico, você revoga só o token dele, sem afetar as outras integrações.
+Cada token é revogado de forma independente: revogar o de um sistema não afeta os demais.
 
 ---
 
@@ -67,7 +67,8 @@ Cada token cadastrado mostra o nome, a descrição, quando foi criado e a últim
 </Steps>
 
 <Warning>
-  Revogar um token é imediato: qualquer sistema que ainda estiver usando esse token perde o acesso na hora.
+  Depois de revogado, o token deixa de funcionar e qualquer sistema que o usava perde o acesso.
+  {/* CONFIRMAR: se a revogação tem efeito imediato ou pode haver atraso de propagação/cache */}
 </Warning>
 
 ---
@@ -85,7 +86,7 @@ Cada token cadastrado mostra o nome, a descrição, quando foi criado e a últim
   {/* CONFIRMAR: se os tokens de API têm expiração automática */}
   </Accordion>
   <Accordion title="Preciso de um token diferente para cada sistema que eu integrar?">
-  Não é obrigatório, mas é recomendado. Um token por sistema facilita saber quem usa o quê e permite revogar um acesso sem mexer nos outros.
+  Não. Você pode usar um único token em vários sistemas ou criar um para cada um. Tokens separados facilitam identificar onde cada um é usado e permitem revogar o acesso de um sistema sem afetar os outros.
   </Accordion>
 </AccordionGroup>
 

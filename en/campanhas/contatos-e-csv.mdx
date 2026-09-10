@@ -50,7 +50,7 @@ Where to find it: same step of the wizard, right below the source selection.
 {/* CAPTURA: images/campanhas/csv-previa-importacao.png | alt: Cartão de prévia do CSV enviado com contagem de contatos válidos e linhas ignoradas | olhar: os contadores de contatos válidos e linhas ignoradas */}
 
 <Note>
-  The reader doesn't parse commas inside a field, so avoid values with a comma (like "Rua A, 123") directly in the CSV. If you need one, use a semicolon inside the field, not a comma.
+  The reader doesn't parse commas inside a field, so avoid values with a comma (like "Rua A, 123") directly in the CSV.
 </Note>
 
 ---
@@ -88,7 +88,7 @@ If you have access to more than one Unit, you can replicate the same list to oth
   Yes. Any extra CSV column becomes context data for the contact and can be chosen under **valor por conversão › Coluna da lista** (value per conversion › List column), in step 1 of the wizard.
   </Accordion>
   <Accordion title="Is there phone format validation?">
-  The wizard doesn't validate the format at upload time. Prefer the international format, with the country code, to reduce delivery errors.
+  The wizard doesn't validate the phone format when you upload the CSV. {/* CONFIRMAR: qual formato de telefone o backend espera e o que acontece com um contato malformatado */}
   </Accordion>
   <Accordion title="Can I change the list after creating the campaign?">
   Not through the wizard. Once created, the contact list is tracked execution by execution in the campaign dashboard, with no option to replace the file.

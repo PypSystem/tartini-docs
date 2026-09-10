@@ -18,7 +18,7 @@ This page gathers the most common problems when connecting or keeping a WhatsApp
 
 ## WhatsApp Business (QR Code) disconnected on its own
 
-**Cause:** the WhatsApp session on the phone ended. This is common with this method, since the connection isn't official.
+**Cause:** the WhatsApp session on the phone ended.
 
 **Fix:**
 
@@ -32,7 +32,7 @@ This page gathers the most common problems when connecting or keeping a WhatsApp
 
 ## The QR Code or pairing code no longer works
 
-**Cause:** the code expired before it was used.
+**Likely cause:** the code wasn't scanned in time. {/* CONFIRMAR: tempo de validade real do QR Code e do código de pareamento; a tela não mostra uma contagem */}
 
 **Fix:** click **Gerar novo QR Code** (Generate new QR Code) or **Gerar novo código** (Generate new code), inside the same modal, and try again.
 
@@ -46,7 +46,7 @@ This page gathers the most common problems when connecting or keeping a WhatsApp
 
 ---
 
-## The connection drops often, or I'm worried the number will get banned
+## The connection drops on its own, or I'm worried the number will get banned
 
 **Cause:** WhatsApp Business by QR Code uses an unofficial connection. Meta can ban numbers connected this way, and WhatsApp updates can drop the session.
 
@@ -56,31 +56,29 @@ This page gathers the most common problems when connecting or keeping a WhatsApp
 
 ## No number shows up for me to select (WABA)
 
-**Most common causes:**
-- The WABA doesn't have any number provisioned yet.
-- The Meta account used in the authorization doesn't have administrator permission on the WhatsApp Business Account.
-- The number is linked to a different Meta Business account than the one you used to authorize.
+**Cause:** the WABA doesn't have any number provisioned yet. That's what the screen itself points to: "Certifique-se de que você tem números registrados na sua WhatsApp Business Account" (Make sure you have numbers registered in your WhatsApp Business Account).
 
-**Fix:** check under **Meta Business > WhatsApp Manager > Números** (Meta Business > WhatsApp Manager > Numbers) whether the number is provisioned, and under **Meta Business > Configurações > Contas** (Meta Business > Settings > Accounts) whether your account has administrator permission on it.
+{/* CONFIRMAR: se permissões da conta Meta usada na autorização, ou um número vinculado a outra conta Meta Business, também deixam a lista vazia */}
+
+**Fix:** check under **Meta Business > WhatsApp Manager > Números** (Meta Business > WhatsApp Manager > Numbers) whether the number is provisioned in the WhatsApp Business Account you authorized.
 
 ---
 
 ## The Meta window doesn't open, or authorization fails
 
-**Cause:** the browser blocked the pop-up, or the Meta account used isn't an administrator of the Meta Business account.
+**Cause:** the browser blocked the pop-up. The screen shows the warning "Popup bloqueado pelo navegador. Por favor, permita popups para este site" (Pop-up blocked by the browser. Please allow pop-ups for this site).
 
-**Fix:** allow pop-ups for Tartini in your browser and try again. If the error persists, sign in with an account that's an administrator of the Meta Business account.
+{/* CONFIRMAR: se a falta de permissão de administrador na conta Meta Business também causa erro na autorização, e qual mensagem aparece nesse caso */}
+
+**Fix:** allow pop-ups for Tartini in your browser and click **Conectar com Meta** (Connect with Meta) again.
 
 ---
 
 ## The number shows up in the selection, but saving fails
 
-**Possible causes:**
-- The authorization expired during the process. Redo the connection from the start.
-- The number was removed from the WABA between selection and confirmation.
-- The channel is already connected on another Tartini account.
+**Cause:** the screen shows the generic warning "Erro ao configurar número. Tente novamente" (Error configuring number. Try again). {/* CONFIRMAR: as causas específicas desse erro (autorização expirada, número removido da WABA, canal já conectado em outra conta) */}
 
-**Fix:** check the number in **WhatsApp Manager** and redo the connection. If the number is already in use on another account, disconnect it from there first.
+**Fix:** try selecting the number again. If the error continues, redo the connection from the start.
 
 ---
 

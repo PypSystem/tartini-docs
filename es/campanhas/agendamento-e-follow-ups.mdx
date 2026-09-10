@@ -6,7 +6,7 @@ description: "Elige cuándo Tino aborda a cada contacto, cuántas veces insiste 
 
 import { Lista, Artigo } from "/components/lista-artigos.jsx";
 
-Definir los horarios correctos y los intentos de follow-up evita que Tino escriba fuera del horario de atención y garantiza que un contacto que no respondió sea abordado de nuevo, sin que tu equipo tenga que acordarse.
+La ventana de horarios define cuándo Tino puede actuar en una campaña, y los intentos de follow-up definen cuántas veces insiste con un contacto que no respondió.
 
 <Note>
   Campañas es una función de los planes Scale y Enterprise. Quién configura: Administrador (Empresa), Gestor de la Empresa, Gestor de Área y Gestor de Unidad.
@@ -86,7 +86,7 @@ Dónde está: **Campanhas > Campanhas** (Campañas > Campañas, lista) o en el e
 </Steps>
 
 <Note>
-  Mientras está pausada, los contactos que ya recibieron el primer mensaje no reciben follow-ups pendientes. Ningún contacto nuevo entra en la campaña hasta que la reanudes.
+  Mientras está pausada, ningún contacto nuevo entra en la campaña hasta que la reanudes. {/* CONFIRMAR: se follow-ups já agendados para contatos que entraram antes da pausa continuam disparando ou ficam suspensos */}
 </Note>
 
 ---
@@ -108,7 +108,7 @@ Allí ves cuántos jobs están **Agendados** (Programados), **Ativos** (Activos)
   Sí, por la edición de la campaña. El cambio vale para los próximos disparos y para los turnos de conversaciones en curso.
   </Accordion>
   <Accordion title="¿Una campaña pausada sigue contando los follow-ups?">
-  No. Ningún intento se envía mientras la campaña está pausada.
+  Los contactos nuevos no entran en la campaña mientras está pausada. {/* CONFIRMAR: se as tentativas de follow-up já agendadas para contatos anteriores continuam sendo enviadas durante a pausa */}
   </Accordion>
   <Accordion title="¿Qué pasa si el contacto responde en medio de los intentos?">
   Los intentos siguientes se cancelan en el momento. Tino sigue la conversación a partir de la respuesta del contacto.

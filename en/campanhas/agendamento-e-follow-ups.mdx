@@ -6,7 +6,7 @@ description: "Choose when Tino reaches out to each contact, how many times it fo
 
 import { Lista, Artigo } from "/components/lista-artigos.jsx";
 
-Setting the right hours and follow-up attempts keeps Tino from writing outside business hours and makes sure a contact who didn't respond gets reached out to again, without your team having to remember.
+The time window sets when Tino can act on a campaign, and the follow-up attempts set how many times it follows up with a contact who didn't respond.
 
 <Note>
   Campaigns is a feature of the Scale and Enterprise plans. Who configures it: Administrator (Company), Company Manager, Area Manager, and Unit Manager.
@@ -86,7 +86,7 @@ Where to find it: **Campanhas > Campanhas** (Campaigns > Campaigns, the list) or
 </Steps>
 
 <Note>
-  While paused, contacts who already received the first message don't receive pending follow-ups. No new contact enters the campaign until you resume it.
+  While paused, no new contact enters the campaign until you resume it. {/* CONFIRMAR: se follow-ups já agendados para contatos que entraram antes da pausa continuam disparando ou ficam suspensos */}
 </Note>
 
 ---
@@ -108,7 +108,7 @@ There you see how many jobs are **Agendados** (Scheduled), **Ativos** (Active), 
   Yes, by editing the campaign. The change applies to the next sends and to conversation turns already in progress.
   </Accordion>
   <Accordion title="Does a paused campaign keep counting the follow-ups?">
-  No. No attempt is sent while the campaign is paused.
+  New contacts don't enter the campaign while it's paused. {/* CONFIRMAR: se as tentativas de follow-up já agendadas para contatos anteriores continuam sendo enviadas durante a pausa */}
   </Accordion>
   <Accordion title="What happens if the contact responds in the middle of the attempts?">
   The following attempts are canceled right away. Tino continues the conversation from the contact's response.

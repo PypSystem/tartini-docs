@@ -6,7 +6,7 @@ description: "Upload manuals, catalogs, and policies so Tino learns the content 
 
 import { Lista, Artigo } from "/components/lista-artigos.jsx";
 
-Uploading a document is the fastest way to put existing content into the knowledge base: Tino reads the file and learns on its own, without you needing to rewrite anything.
+Uploading a document puts existing content into the knowledge base: Tino reads the file and learns the content automatically, without you needing to rewrite anything.
 
 <Note>
   Who can see this: Administrator and Company Manager. Available on all plans. The public audience requires the Scale plan.
@@ -41,7 +41,9 @@ Where to find it: **Cérebro > Propriedades** (Cérebro > Properties), **Arquivo
 
 After uploading, each document appears in the Properties list with the status Processing or Indexing, updated in real time. When it finishes, the status changes to Indexed.
 
-If a file exceeds the size limit or isn't in an accepted format, it's rejected before uploading, and the rest of the batch's files proceed normally.
+If a file exceeds the size limit, it's rejected before uploading, with a warning naming the file, and the rest of the batch's files proceed normally.
+
+{/* CONFIRMAR: confirmar se um arquivo em formato não aceito também é bloqueado no envio com aviso, ou só é filtrado na seleção de arquivos. */}
 
 <Note>
   Uploading and indexing documents consumes credits. Track your usage in Settings > Billing > Usage.

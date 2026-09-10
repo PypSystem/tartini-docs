@@ -14,7 +14,7 @@ Esta página reúne os problemas mais comuns ao conectar ou manter um canal de W
 
 ## O WhatsApp Business (QR Code) desconectou sozinho
 
-**Causa:** a sessão do WhatsApp no celular terminou. Isso é comum nessa modalidade, já que a conexão não é oficial.
+**Causa:** a sessão do WhatsApp no celular terminou.
 
 **Correção:**
 
@@ -28,7 +28,7 @@ Esta página reúne os problemas mais comuns ao conectar ou manter um canal de W
 
 ## O QR Code ou o código de pareamento não funcionam mais
 
-**Causa:** o código expirou antes de ser usado.
+**Causa provável:** o código não foi lido a tempo. {/* CONFIRMAR: tempo de validade real do QR Code e do código de pareamento; a tela não mostra uma contagem */}
 
 **Correção:** clique em **Gerar novo QR Code** ou **Gerar novo código**, dentro do mesmo modal, e tente de novo.
 
@@ -42,7 +42,7 @@ Esta página reúne os problemas mais comuns ao conectar ou manter um canal de W
 
 ---
 
-## A conexão cai com frequência, ou tenho medo de o número ser banido
+## A conexão cai sozinha, ou tenho medo de o número ser banido
 
 **Causa:** o WhatsApp Business por QR Code usa uma conexão não oficial. A Meta pode banir números conectados assim, e atualizações do WhatsApp podem derrubar a sessão.
 
@@ -52,31 +52,29 @@ Esta página reúne os problemas mais comuns ao conectar ou manter um canal de W
 
 ## Nenhum número aparece para eu selecionar (WABA)
 
-**Causas mais comuns:**
-- A WABA ainda não tem nenhum número provisionado.
-- A conta Meta usada na autorização não tem permissão de administrador sobre a WhatsApp Business Account.
-- O número está vinculado a outra conta Meta Business, diferente da que você usou para autorizar.
+**Causa:** a WABA ainda não tem nenhum número provisionado. É o que a própria tela indica: "Certifique-se de que você tem números registrados na sua WhatsApp Business Account."
 
-**Correção:** confira em **Meta Business > WhatsApp Manager > Números** se o número está provisionado, e em **Meta Business > Configurações > Contas** se a sua conta tem permissão de administrador sobre ele.
+{/* CONFIRMAR: se permissões da conta Meta usada na autorização, ou um número vinculado a outra conta Meta Business, também deixam a lista vazia */}
+
+**Correção:** confira em **Meta Business > WhatsApp Manager > Números** se o número está provisionado na WhatsApp Business Account que você autorizou.
 
 ---
 
 ## A janela da Meta não abre, ou dá erro na autorização
 
-**Causa:** o navegador bloqueou o pop-up, ou a conta Meta usada não é administradora da conta Meta Business.
+**Causa:** o navegador bloqueou o pop-up. A tela mostra o aviso "Popup bloqueado pelo navegador. Por favor, permita popups para este site."
 
-**Correção:** libere pop-ups para o Tartini no navegador e tente de novo. Se o erro persistir, entre com uma conta que seja administradora da Meta Business.
+{/* CONFIRMAR: se a falta de permissão de administrador na conta Meta Business também causa erro na autorização, e qual mensagem aparece nesse caso */}
+
+**Correção:** libere pop-ups para o Tartini no navegador e clique em **Conectar com Meta** de novo.
 
 ---
 
 ## O número aparece na seleção, mas dá erro ao salvar
 
-**Causas possíveis:**
-- A autorização expirou durante o processo. Refaça a conexão desde o início.
-- O número foi removido da WABA entre a seleção e a confirmação.
-- O canal já está conectado em outra conta do Tartini.
+**Causa:** a tela mostra o aviso genérico "Erro ao configurar número. Tente novamente." {/* CONFIRMAR: as causas específicas desse erro (autorização expirada, número removido da WABA, canal já conectado em outra conta) */}
 
-**Correção:** confira o número em **WhatsApp Manager** e refaça a conexão. Se o número já estiver em uso em outra conta, desconecte de lá primeiro.
+**Correção:** tente selecionar o número de novo. Se o erro continuar, refaça a conexão desde o início.
 
 ---
 

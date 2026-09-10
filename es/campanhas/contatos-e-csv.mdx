@@ -50,7 +50,7 @@ Dónde está: mismo paso del asistente, justo debajo de la elección de origen.
 {/* CAPTURA: images/campanhas/csv-previa-importacao.png | alt: Cartão de prévia do CSV enviado com contagem de contatos válidos e linhas ignoradas | olhar: os contadores de contatos válidos e linhas ignoradas */}
 
 <Note>
-  El lector no interpreta comas dentro de un campo, así que evita valores con coma (como "Calle A, 123") directo en el CSV. Si lo necesitas, usa punto y coma dentro del campo, no coma.
+  El lector no interpreta comas dentro de un campo, así que evita valores con coma (como "Calle A, 123") directo en el CSV.
 </Note>
 
 ---
@@ -88,7 +88,7 @@ Si tienes acceso a más de una Unidad, puedes replicar la misma lista a otras Un
   Sí. Cualquier columna extra del CSV se convierte en dato de contexto del contacto y puede elegirse en **valor por conversão › Coluna da lista** (valor por conversión › Columna de la lista), en el paso 1 del asistente.
   </Accordion>
   <Accordion title="¿Existe validación de formato de teléfono?">
-  El asistente no valida el formato al momento del envío. Prefiere el formato internacional, con código de país, para reducir el error de entrega.
+  El asistente no valida el formato del teléfono al momento del envío del CSV. {/* CONFIRMAR: qual formato de telefone o backend espera e o que acontece com um contato malformatado */}
   </Accordion>
   <Accordion title="¿Puedo cambiar la lista después de crear la campaña?">
   No por el asistente. Después de creada, la lista de contactos se sigue ejecución por ejecución en el panel de la campaña, sin opción de sustituir el archivo.

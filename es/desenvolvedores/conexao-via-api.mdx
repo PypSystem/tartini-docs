@@ -4,7 +4,9 @@ sidebarTitle: "Conexión vía API"
 description: "Genera tokens de API para integrar tus propios sistemas directamente con Tartini y usar la plataforma como un canal programático."
 ---
 
-La **Conexión vía API** transforma a Tartini en un canal accesible por tus propios sistemas: puedes enviar y recibir mensajes, crear contactos, iniciar conversaciones y consultar datos vía REST. La página gestiona los **tokens de API** que autentican esas llamadas.
+La **Conexión vía API** integra tus sistemas directamente con la plataforma de Tartini. La página gestiona los **tokens de API** que autentican esas llamadas.
+
+{/* CONFIRMAR: qué operaciones expone hoy la API pública (mensajes, contactos, conversaciones, consulta de datos): no cubierto por el inventario de pantallas ni por la API Reference actual. */}
 
 La página está en **Configurações > Canais > Conexão via API** (Configuraciones > Canales > Conexión vía API) ([talk.saninternet.com/settings/channels/api](https://talk.saninternet.com/settings/channels/api)).
 
@@ -34,16 +36,16 @@ Authorization: Bearer <seu-token>
 
 <Steps>
   <Step title="Abre el modal de creación">
-    Haz clic en **Criar Token** (Crear Token) en la esquina superior derecha de la página (o en el botón central, en el estado vacío).
+    Haz clic en **Criar Token** (Crear Token), en el encabezado de la página (o en el botón del estado vacío, antes de que exista algún token).
   </Step>
 
   <Step title="Completa los datos">
-    - **Nome** (Nombre) (obligatorio): identificador corto, ej.: `Integração ERP`, `Webhook Site`.
-    - **Descrição** (Descripción) (opcional): texto libre para que recuerdes el propósito del token.
+    - **Nome** (Nombre) (obligatorio): identificador corto, ej.: `Integração ERP`.
+    - **Descrição** (Descripción) (opcional): texto libre para describir el propósito del token.
   </Step>
 
   <Step title="Copia el token">
-    Después de la creación, un modal muestra el **token completo**. Cópialo y guárdalo en un lugar seguro (gestor de contraseñas, variable de entorno del servidor, gestor de secretos).
+    Después de la creación, un modal muestra el **token completo**. Cópialo y guárdalo en un lugar seguro: por motivos de seguridad, Tartini no volverá a mostrar ese valor.
 
     <Warning>
       Este es el único momento en que el valor completo queda visible. Al cerrar el modal, Tartini pasa a mostrar solo la versión enmascarada.
@@ -68,28 +70,30 @@ La página lista todos los tokens creados por la Empresa en tarjetas, con:
 
 ### Eliminar un token
 
-Cada tarjeta tiene un botón rojo de papelera. Al hacer clic se abre una confirmación. Al confirmar, el token se **revoca de inmediato** y cualquier solicitud que intente usarlo pasa a recibir `401 Unauthorized`.
+Cada tarjeta tiene un botón de papelera (tooltip **Excluir token** / Eliminar token). Al hacer clic se abre una confirmación. Al confirmar, el token se revoca y deja de autenticar llamadas a la API.
+
+{/* CONFIRMAR: código de respuesta HTTP para llamadas hechas con un token ya revocado, y si hay algún tiempo de propagación hasta que la revocación tenga efecto. */}
 
 <Warning>
-  No existe "desactivación", solo eliminación. Antes de eliminar, asegúrate de que ningún sistema crítico siga usando ese token.
+  En la pantalla, la única acción disponible para un token existente es la eliminación, que no se puede deshacer. Antes de eliminar, asegúrate de que ningún sistema crítico siga usando ese token.
 </Warning>
+
+{/* CONFIRMAR: las tarjetas muestran un ícono de estado activo/inactivo por token: no está confirmado si un token puede quedar inactivo por otro motivo además de la eliminación (ej.: expiración). */}
 
 ---
 
 ## Buenas prácticas
 
-- **Un token por integración**: si tres sistemas conversan con Tartini, crea tres tokens. Así, al desactivar un sistema, revocas solo el token de ese sistema.
-- **Nombre descriptivo**: usa prefijos como `prod-`, `staging-`, `webhook-` para distinguir rápidamente.
-- **Rotación periódica**: genera un token nuevo, actualiza la integración, valida el funcionamiento y solo entonces revoca el antiguo. Se recomienda rotar cada 90 días.
-- **No subas tokens a repositorios**: nunca dejes un token en código abierto, repositorio git o ticket de soporte. Usa variables de entorno o un gestor de secretos.
-- **Sigue el "Último uso"**: los tokens con más de 30 días sin uso probablemente puedan revocarse.
+- **Tokens por integración**: como la eliminación de cada token es independiente, integraciones distintas pueden usar tokens distintos, sin afectar a las demás al eliminar una de ellas.
+- **Seguridad del token**: mantén el valor en un lugar seguro y nunca lo compartas, tal como indica el propio aviso de la pantalla.
+- **Campo "Último uso"**: ayuda a identificar tokens sin uso reciente al revisar cuáles siguen siendo necesarios.
 
 ---
 
 ## Quién puede generar tokens
 
-Solo los usuarios **Titular** de la Empresa tienen permiso para crear y revocar tokens de API. Gestores, Gerentes y Agentes no ven la página de Conexión vía API.
+Solo el **Administrador de la Empresa** tiene permiso para crear y revocar tokens de API. Gestores y Agentes no ven la página de Conexión vía API.
 
 <Tip>
-  Para empezar a integrar, comienza por el endpoint de [autenticación](/es/concepts/authentication) y por la guía de [errores estandarizados](/es/concepts/errors) de la API.
+  Para los detalles de autenticación y la guía de [errores estandarizados](/es/concepts/errors) de la API, consulta [Autenticación](/es/concepts/authentication).
 </Tip>

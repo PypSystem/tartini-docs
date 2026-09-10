@@ -48,7 +48,7 @@ Onde fica: mesmo passo do assistente, logo abaixo da escolha de origem.
 {/* CAPTURA: images/campanhas/csv-previa-importacao.png | alt: Cartão de prévia do CSV enviado com contagem de contatos válidos e linhas ignoradas | olhar: os contadores de contatos válidos e linhas ignoradas */}
 
 <Note>
-  O leitor não interpreta vírgulas dentro de um campo, então evite valores com vírgula (como "Rua A, 123") direto no CSV. Se precisar, use ponto e vírgula dentro do campo, não vírgula.
+  O leitor não interpreta vírgulas dentro de um campo, então evite valores com vírgula (como "Rua A, 123") direto no CSV.
 </Note>
 
 ---
@@ -86,7 +86,7 @@ Se você tem acesso a mais de uma Unidade, pode replicar a mesma lista para outr
   Sim. Qualquer coluna extra do CSV vira dado de contexto do contato e pode ser escolhida em **valor por conversão › Coluna da lista**, no passo 1 do assistente.
   </Accordion>
   <Accordion title="Existe validação de formato de telefone?">
-  O assistente não valida o formato na hora do envio. Prefira o formato internacional, com código do país, para reduzir erro de entrega.
+  O assistente não valida o formato do telefone na hora do envio do CSV. {/* CONFIRMAR: qual formato de telefone o backend espera e o que acontece com um contato malformatado */}
   </Accordion>
   <Accordion title="Posso trocar a lista depois de criar a campanha?">
   Não pelo assistente. Depois de criada, a lista de contatos é acompanhada execução por execução no painel da campanha, sem opção de substituir o arquivo.

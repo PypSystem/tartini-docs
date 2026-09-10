@@ -6,7 +6,7 @@ description: "Sube manuales, catálogos y políticas para que Tino aprenda el co
 
 import { Lista, Artigo } from "/components/lista-artigos.jsx";
 
-Subir un documento es la forma más rápida de incorporar contenido ya existente a la base de conocimiento: Tino lee el archivo y aprende solo, sin que tengas que reescribir nada.
+Subir un documento incorpora contenido ya existente a la base de conocimiento: Tino lee el archivo y aprende el contenido automáticamente, sin que tengas que reescribir nada.
 
 <Note>
   Quién lo ve: Administrador y Gestor de la Empresa. Disponible en todos los planes. La audiencia pública requiere el plan Scale.
@@ -41,7 +41,9 @@ Dónde está: **Cérebro > Propriedades** (Cérebro > Propiedades), botón **Arq
 
 Después del envío, cada documento aparece en la lista de Propiedades con el estado Processando (Procesando) o Indexando, actualizado en tiempo real. Cuando termina, el estado cambia a Indexado.
 
-Si un archivo supera el límite de tamaño o no tiene un formato aceptado, se rechaza antes del envío, y los demás archivos del lote continúan normalmente.
+Si un archivo supera el límite de tamaño, se rechaza antes del envío, con un aviso con el nombre del archivo, y los demás archivos del lote continúan normalmente.
+
+{/* CONFIRMAR: confirmar se um arquivo em formato não aceito também é bloqueado no envio com aviso, ou só é filtrado na seleção de arquivos. */}
 
 <Note>
   Subir e indexar documentos consume créditos. Sigue el consumo en Configurações > Faturamento > Consumo (Configuración > Facturación > Consumo).

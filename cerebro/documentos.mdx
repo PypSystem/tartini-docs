@@ -6,7 +6,7 @@ description: "Envie manuais, catálogos e políticas para que o Tino aprenda o c
 
 import { Lista, Artigo } from "/components/lista-artigos.jsx";
 
-Enviar um documento é a forma mais rápida de colocar conteúdo já existente na base de conhecimento: o Tino lê o arquivo e aprende sozinho, sem que você precise reescrever nada.
+Enviar um documento coloca conteúdo já existente na base de conhecimento: o Tino lê o arquivo e aprende o conteúdo automaticamente, sem que você precise reescrever nada.
 
 <Note>
   Quem vê: Administrador e Gestor da Empresa. Disponível em todos os planos. A audiência pública exige o plano Scale.
@@ -39,7 +39,9 @@ Onde fica: **Cérebro > Propriedades**, botão **Arquivo**.
 
 Depois do envio, cada documento aparece na lista de Propriedades com o status Processando ou Indexando, atualizado em tempo real. Quando termina, o status muda para Indexado.
 
-Se um arquivo ultrapassar o limite de tamanho ou não estiver num formato aceito, ele é rejeitado antes do envio, e os demais arquivos do lote seguem normalmente.
+Se um arquivo ultrapassar o limite de tamanho, ele é rejeitado antes do envio, com aviso do nome do arquivo, e os demais arquivos do lote seguem normalmente.
+
+{/* CONFIRMAR: confirmar se um arquivo em formato não aceito também é bloqueado no envio com aviso, ou só é filtrado na seleção de arquivos. */}
 
 <Note>
   Enviar e indexar documentos consome créditos. Acompanhe o consumo em Configurações > Faturamento > Consumo.

@@ -18,7 +18,7 @@ Con un token de API, tu sistema se comunica directamente con Tartini, sin que na
 
 ## Para qué sirve
 
-Un token de API le da a tu sistema acceso a la API de Tartini, para integrar datos de conversaciones, contactos y atenciones con tu ERP, CRM o cualquier otro sistema. Los detalles técnicos de uso de la API quedan a cargo de quien desarrolla tu sistema.
+Un token de API le da a tu sistema acceso a la API pública de Tartini, con funcionalidades de inteligencia artificial y búsqueda en la base de conocimiento. Los detalles técnicos de uso de la API quedan a cargo de quien desarrolla tu sistema.
 
 Dónde está: **Configurações > Canais > Conexão via API** (Configuración > Canales > Conexión vía API).
 
@@ -28,11 +28,11 @@ Dónde está: **Configurações > Canais > Conexão via API** (Configuración > 
 
 ---
 
-## Crea un token por sistema
+## Un token por sistema
 
-Si integras más de un sistema, crea un token separado para cada uno, con un nombre que identifique dónde se usa, como "Integración ERP" o "Portal del cliente".
+Puedes crear más de un token, uno para cada sistema integrado, con un nombre que identifique dónde se usa cada uno, como "Integración ERP".
 
-Así, si necesitas cortar el acceso de un sistema específico, revocas solo su token, sin afectar las demás integraciones.
+Cada token se revoca de forma independiente: revocar el de un sistema no afecta a los demás.
 
 ---
 
@@ -71,7 +71,8 @@ Cada token registrado muestra el nombre, la descripción, cuándo fue creado y l
 </Steps>
 
 <Warning>
-  Revocar un token es inmediato: cualquier sistema que todavía esté usando ese token pierde el acceso de inmediato.
+  Una vez revocado, el token deja de funcionar y cualquier sistema que lo estuviera usando pierde el acceso.
+  {/* CONFIRMAR: se a revogação tem efeito imediato ou pode haver atraso de propagação/cache */}
 </Warning>
 
 ---
@@ -89,7 +90,7 @@ Cada token registrado muestra el nombre, la descripción, cuándo fue creado y l
   {/* CONFIRMAR: se os tokens de API têm expiração automática */}
   </Accordion>
   <Accordion title="¿Necesito un token diferente para cada sistema que integre?">
-  No es obligatorio, pero se recomienda. Un token por sistema facilita saber quién usa qué y permite revocar un acceso sin afectar los demás.
+  No. Puedes usar un mismo token en varios sistemas o crear uno para cada uno. Tokens separados facilitan identificar dónde se usa cada uno y permiten revocar el acceso de un sistema sin afectar a los demás.
   </Accordion>
 </AccordionGroup>
 
