@@ -924,14 +924,6 @@
   "search": {
     "prompt": "Pesquisar na central de ajuda…"
   },
-  "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude"
-    ]
-  },
   "feedback": {
     "thumbsRating": true,
     "suggestEdit": true,
