@@ -1,0 +1,109 @@
+---
+title: "Consulta la adherencia a los procesos"
+sidebarTitle: "Procesos y adherencia"
+description: "Descubre qué procesos registrados en el Cérebro no están entrando, no evolucionan o empeoran la experiencia del cliente."
+---
+
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
+La pantalla Processos (Procesos) cruza los procesos registrados en el Cérebro con las conversaciones reales y muestra dónde cada uno está fallando, sin que tengas que releer evaluación por evaluación.
+
+<Note>
+  Disponible a partir del plan Scale. Todos los roles ven esta pantalla, en su propio alcance.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Consulta cuántos atendimientos tuvo cada proceso
+
+De forma predeterminada, el gráfico ordena los procesos por el número de atendimientos, de mayor a menor.
+
+Dónde está: **Scout > Processos**.
+
+<Steps>
+  <Step title="Abre la pantalla">Ve a **Scout > Processos**.</Step>
+  <Step title="Elige el criterio">Haz clic en **ordenar por** para alternar entre atendimientos, tasa de conclusión y tasa de no conclusión.</Step>
+  <Step title="Invierte si quieres">Haz clic en el ícono de orden para cambiar entre mayor primero y menor primero.</Step>
+  <Step title="Consulta el desglose">Pasa el mouse sobre una barra para leer cuántas conversaciones concluyeron, concluyeron en parte, no concluyeron o quedaron sin una información obligatoria.</Step>
+</Steps>
+
+{/* CAPTURA: images/scout/processos-grafico.png | alt: Gráfico Atendimentos por processo com barras empilhadas por desfecho | olhar: a legenda de cores concluiu, concluiu em parte e não concluiu */}
+
+<Note>
+  Un proceso que no entró ninguna vez en el alcance aparece así, aunque exista en el Cérebro.
+</Note>
+
+---
+
+## Consulta la cobertura del proceso
+
+Dos tarjetas muestran el porcentaje de conversaciones con proceso disponible que de hecho entraron en un proceso: una para **em campanha** (en campaña) y otra para **no atendimento do dia a dia** (en el atendimiento del día a día).
+
+<Note>
+  Sin registro de qué procesos estaban disponibles fuera de campaña, la tarjeta del día a día aparece como no medido, aunque el proceso esté funcionando normalmente.
+</Note>
+
+---
+
+## Consulta el desempeño por proceso
+
+De forma predeterminada, la tabla sigue el mismo orden del gráfico de arriba.
+
+Dónde está: tabla **Desempenho por processo** (Desempeño por proceso), debajo del gráfico.
+
+<Steps>
+  <Step title="Filtra por las fallas">Marca **só processos com falha** (solo procesos con falla) para ver solo quién necesita atención.</Step>
+  <Step title="Elige el orden">Alterna entre el mismo orden del gráfico y **pior leitura** (peor lectura) primero.</Step>
+  <Step title="Lee las tres columnas">Compara **uso correto** (uso correcto), **conclusão** (conclusión) y **nota das conversas** (nota de las conversaciones) de cada proceso.</Step>
+</Steps>
+
+{/* CAPTURA: images/scout/processos-tabela.png | alt: Tabela Desempenho por processo com as colunas uso correto, conclusão e nota das conversas | olhar: o ponto de saúde à esquerda de cada linha */}
+
+<Note>
+  **Uso correto** mide si, en las conversaciones evaluadas, el Tino acertó la decisión de usar o no usar ese proceso. **Conclusão** mide si las conversaciones que entraron en el proceso llegaron al final de este. **Nota das conversas** es la nota de 0 a 10 de las conversaciones en que el proceso apareció, con un piso de 10 conversaciones evaluadas.
+</Note>
+
+---
+
+## Abre el diagnóstico de un proceso
+
+Al hacer clic en una barra del gráfico o en una fila de la tabla se abre el diagnóstico de ese proceso: el motivo exacto de la falla, ya sea en la entrada, en la evolución o en el efecto sobre el cliente, y un botón que lleva directo a la pantalla del Cérebro donde eso se corrige.
+
+<Steps>
+  <Step title="Abre el proceso">Haz clic en la barra o en la fila del proceso.</Step>
+  <Step title="Lee el diagnóstico">Consulta la frase que explica qué está fallando en ese proceso.</Step>
+  <Step title="Corrige">Haz clic en el botón de corrección. Te lleva a la pantalla correcta del Cérebro, ya en el contexto de ese proceso.</Step>
+</Steps>
+
+<Note>
+  Por debajo de 10 conversaciones evaluadas con el proceso, la pantalla todavía no indica una solución. Amplía el período o espera más atendimientos.
+</Note>
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Por qué la nota de un proceso aparece con un guion?">
+  Menos de 10 conversaciones evaluadas con ese proceso en el alcance elegido.
+  </Accordion>
+  <Accordion title="¿Por qué la cobertura del día a día aparece como no medido?">
+  La base solo registra qué procesos estaban disponibles durante campañas. Fuera de ellas, ese registro todavía no existe.
+  </Accordion>
+  <Accordion title="¿Un Gestor de Área puede usar el botón de corrección?">
+  {/* CONFIRMAR: o botão de correção leva ao Cérebro, que pede nível Empresa; não está claro se um Gestor de Área ou de Unidade consegue usá-lo */}
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<Lista>
+  <Artigo titulo="Scout explicado" href="/es/agentes/scout/o-scout-explicado">Roles, planes y el menú del Scout.</Artigo>
+  <Artigo titulo="El Cérebro explicado" href="/es/cerebro/o-cerebro-explicado">Dónde se registran los procesos.</Artigo>
+  <Artigo titulo="Mapea procesos a partir de las conversaciones" href="/es/agentes/quattro/mapeie-processos">Cómo se crea y se mantiene un proceso.</Artigo>
+  <Artigo titulo="Planes y qué habilita cada uno" href="/es/visao-geral/planos-e-recursos">Qué habilita el plan Scale además de Processos.</Artigo>
+</Lista>

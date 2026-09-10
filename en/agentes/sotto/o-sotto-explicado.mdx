@@ -1,0 +1,93 @@
+---
+title: "Sotto explained"
+sidebarTitle: "Sotto explained"
+description: "The agent that stays alongside whoever is serving: what it consults, the two modes it works in, who has access, and where to track it."
+---
+
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
+Sotto is the AI agent that stays alongside whoever is serving. It reads the conversation history, including the summary Tino leaves when handing off the conversation, and asks the Cérebro (the company's brain) what the company knows about the subject, including private knowledge, which the customer never sees. With that, it suggests the next reply to the agent. The person always decides what reaches the customer.
+
+<Note>
+  Access to Sotto is granted per person, under **Configurações > Empresa > Usuários** (Settings > Company > Users). Query mode is available on every plan; active Sotto requires the Scale plan. Every question and every suggestion consumes AI credits.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Where it appears
+
+Sotto lives inside the conversation, in the Inbox, in three places:
+
+| Where | What it does |
+|---|---|
+| **Sugerir com Sotto** (Suggest with Sotto) button, in the footer of the conversation | Asks for a ready-to-send reply. |
+| **Sotto** tab, in the details panel | The chat with Sotto: you ask, and it answers, showing the sources it consulted. |
+| Box at the end of the conversation | With active Sotto turned on, suggestions appear on their own, without you asking. |
+
+---
+
+## The two modes
+
+| Mode | How it works | Plan |
+|---|---|---|
+| **Query** | The agent asks and Sotto answers. The **Sugerir com Sotto** button asks for a ready-to-send reply. Each reply shows the sources used. | All |
+| **Active** | Sotto follows the conversation on its own: it suggests the next reply and warns when what the agent wrote contradicts what's in the Cérebro. | Scale |
+
+Active Sotto can be turned on by default for every new conversation, under **Configurações > Atendimento > Regras de Conversa** (Settings > Service > Conversation Rules), or conversation by conversation, using the switch next to the **Sotto** tab. The switch only appears on conversations handled by an agent and assigned to whoever is looking.
+
+---
+
+## What it consults
+
+Before suggesting, Sotto gathers three things:
+
+1. **The conversation history**, including the summary Tino left when handing off the conversation, to continue from where Tino left off.
+2. **The Cérebro**: the company's knowledge, public and private, the tone of voice, and the rules.
+3. **Your question**, when you ask something specific in the Sotto tab. You can attach up to 5 images of 8 MB.
+
+Private knowledge is the difference between Sotto and Tino. Tino only tells the customer what's marked as **Conhecimento Público** (Public Knowledge). Sotto sees everything, because it's the team who reads the suggestion. See [The Cérebro explained](/en/cerebro/o-cerebro-explicado).
+
+---
+
+## Who has access
+
+Access is granted person by person, in the **Sotto** column of **Configurações > Empresa > Usuários**, by whoever manages users. Without access granted, the Sotto tab doesn't appear and the **Sugerir com Sotto** button stays blocked, with a tooltip explaining why. See [Invite and Manage Users](/en/equipe/usuarios).
+
+---
+
+## Where to track it
+
+- **Métricas > Tino** (Metrics > Tino), **apoio do Sotto ao time** (Sotto's support to the team) section: when the AI suggested and what the team decided, with each agent's panel showing suggestions accepted, sent directly, inserted into the draft, and discarded. See [Tino Metrics](/en/metricas/tino).
+- **Configurações > Cobrança > Créditos** (Settings > Billing > Credits): what Sotto consumes, in the AI category. See [Credits explained](/en/visao-geral/creditos-explicados).
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Does Sotto reply to the customer?">
+  No. It suggests to the agent, and the person decides whether to send it, edit it, or ignore it. Tino is the only one who talks to the customer on its own.
+  </Accordion>
+  <Accordion title="Why don't I see the Sotto tab?">
+  You don't have access enabled yet. Ask a manager to turn it on under **Configurações > Empresa > Usuários**.
+  </Accordion>
+  <Accordion title="Is active Sotto mandatory?">
+  No. The default comes from Regras de Conversa (Conversation Rules), and the agent can turn it off for a specific conversation using the switch next to the tab.
+  </Accordion>
+  <Accordion title="Do the suggestions disappear when the conversation is transferred?">
+  Yes. Transferring clears the previous agent's pending suggestions.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<Lista>
+  <Artigo titulo="Use Sotto" href="/en/agentes/sotto/use-o-sotto">Ask for suggestions, chat with Sotto, and turn on active mode.</Artigo>
+  <Artigo titulo="Invite and Manage Users" href="/en/equipe/usuarios">Grant Sotto access to each person.</Artigo>
+  <Artigo titulo="Set the conversation rules" href="/en/atendimento/regras-de-conversa">Active Sotto by default for new conversations.</Artigo>
+  <Artigo titulo="The agents explained" href="/en/agentes/os-agentes-explicados">How Sotto talks to Tino, Scout, and the Cérebro.</Artigo>
+</Lista>

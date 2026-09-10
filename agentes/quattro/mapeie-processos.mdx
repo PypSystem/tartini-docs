@@ -1,0 +1,118 @@
+---
+title: "Mapeie processos a partir das conversas"
+sidebarTitle: "Mapeie processos"
+description: "Construa o playbook de um atendimento conversando com o Quattro, ou aprove os processos que o Tino já identificou sozinho."
+---
+
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
+Mapear um processo não é preencher formulário: você conversa com o Quattro, que monta o playbook enquanto entende como o atendimento realmente acontece na sua empresa.
+
+<Note>
+  Quem vê: Administrador e Gestor da Empresa. Exige o plano Scale. A conversa com o Quattro consome créditos.
+</Note>
+
+---
+
+## Comece um processo novo
+
+Por padrão, a lista de Mapeamento mostra os processos já mapeados, com um atalho para começar um novo.
+
+Onde fica: **Cérebro > Processos > Mapeamento**.
+
+<Steps>
+  <Step title="Escolha um ponto de partida">Clique em **Novo processo** para começar do zero, ou em um dos cartões de exemplo, como "2ª via de boleto" ou "Reset de senha", para já começar com uma mensagem pronta.</Step>
+  <Step title="Converse com o Quattro">Descreva com suas palavras como o atendimento acontece. O Quattro pergunta o que faltar.</Step>
+  <Step title="Acompanhe a prévia">Ao lado da conversa, um painel mostra os campos do processo se preenchendo em tempo real.</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/mapeamento-nova-sessao.png | alt: Tela de mapeamento com o chat do Quattro à esquerda e a prévia do processo à direita | olhar: os cartões 5W2H sendo preenchidos na prévia */}
+
+---
+
+## Avalie e publique o processo
+
+Por padrão, o mapeamento só é considerado completo depois da etapa Saídas.
+
+<Steps>
+  <Step title="Avalie a capacidade, se disponível">Quando já existe passo a passo, clique em **Avaliar capacidade** para o Quattro medir o que o Tino resolve em cada etapa, ou **Pular por ora**.</Step>
+  <Step title="Revise">Clique em **Revisar** (ou **Revisar e publicar**) para conferir o 5W2H, a cobertura e o passo a passo completos.</Step>
+  <Step title="Ajuste as saídas">Para cada desfecho, aceite, edite ou descarte o destino sugerido pelo Quattro.</Step>
+  <Step title="Publique">Clique em **Publicar processo**.</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/mapeamento-revisao-final.png | alt: Tela de revisão final do processo com o passo a passo e a seção Revisar saídas | olhar: o botão Publicar processo no rodapé */}
+
+<Note>
+  Salvar sem publicar cria ou atualiza o processo, mas desativado, e não grava as saídas. As saídas só são gravadas ao publicar.
+</Note>
+
+---
+
+## Veja e edite um processo já mapeado
+
+Onde fica: **Cérebro > Processos > Mapeamento**, clique em qualquer cartão da lista.
+
+<Steps>
+  <Step title="Abra o processo">Clique no cartão do processo.</Step>
+  <Step title="Escolha o tipo de edição">Use **Editar conteúdo** para mudar só textos e códigos de etapa, ou **Editar com o Quattro** para mudar a estrutura, adicionar, remover ou reordenar etapas.</Step>
+  <Step title="Salve">Confirme a edição.</Step>
+</Steps>
+
+<Note>
+  Adicionar, remover ou reordenar etapas, e mexer em portões e condições, só é possível pela conversa com o Quattro. O editor de conteúdo é só para o texto que já existe.
+</Note>
+
+---
+
+## Veja o caminho de saídas do processo
+
+Onde fica: cartão do processo, ícone **Ver fluxo**, ou dentro do detalhe do processo.
+
+Um grafo mostra para onde a conversa segue em cada desfecho daquele processo. É só leitura: para mudar as saídas, use **Editar com o Quattro**.
+
+{/* CAPTURA: images/cerebro/mapeamento-fluxo-processo.png | alt: Grafo de saídas de um processo com os nós de desfecho e as arestas coloridas | olhar: a legenda de cores no topo do grafo */}
+
+---
+
+## Revise as Descobertas de processo
+
+O Tino também identifica candidatos a processo sozinho, a partir de conteúdo já indexado no Cérebro ou de documentos enviados especificamente para essa análise.
+
+Onde fica: **Cérebro > Processos > Descobertas**.
+
+<Steps>
+  <Step title="Envie documentos, se quiser">Arraste ou selecione até 10 arquivos para descobrir processos a partir deles.</Step>
+  <Step title="Revise um candidato">Clique em **Abrir mapeamento** para revisar em detalhe, sem descartar nem publicar nada ainda.</Step>
+  <Step title="Aprove">Clique em **Aprovar** para criar o processo inativo, ou **Aprovar e publicar ativo** para já colocá-lo em operação.</Step>
+  <Step title="Ou descarte">Clique em **Descartar** e confirme.</Step>
+</Steps>
+
+<Note>
+  Enviar um documento nesta tela serve só para descobrir processos: o conteúdo não é indexado no Cérebro como conhecimento.
+</Note>
+
+---
+
+## Perguntas frequentes
+
+<AccordionGroup>
+  <Accordion title="Salvar sem publicar deixa o Tino usando o processo?">
+  Não. O processo fica desativado até ser ativado manualmente ou publicado pela revisão.
+  </Accordion>
+  <Accordion title="Se eu abrir o mapeamento de um candidato e não terminar, ele some da fila de Descobertas?">
+  Não. Abrir o mapeamento não descarta nem materializa o candidato. Ele continua pendente até o processo ser publicado.
+  </Accordion>
+  <Accordion title="As saídas sugeridas pelo Quattro são salvas junto quando eu salvo o processo?">
+  Não. Só ao publicar, na etapa de revisão, as saídas são de fato gravadas.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artigos relacionados
+
+<Lista>
+  <Artigo titulo="Processos explicados" href="/cerebro/processos-explicados">Entenda o que é um processo e como o Tino o usa.</Artigo>
+  <Artigo titulo="Organize processos em grupos" href="/cerebro/grupos-de-processos">Reúna processos relacionados para uso em campanhas.</Artigo>
+</Lista>

@@ -1,0 +1,87 @@
+---
+title: "O Quattro explicado"
+sidebarTitle: "O Quattro explicado"
+description: "O agente que põe a operação por escrito: como ele monta um processo com você, o que acontece depois de publicar e onde ele fica."
+---
+
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
+O Quattro é o agente de IA que põe a operação por escrito. Você conta, com as suas palavras, como um atendimento acontece hoje: uma segunda via de boleto, um agendamento, uma troca. O Quattro pergunta o que faltou e monta o processo, com etapas, transições e saídas. Nada do que ele monta entra em vigor sem a sua aprovação.
+
+<Note>
+  O Quattro fica em **Cérebro > Processos > Mapeamento**. Quem mapeia é o Administrador ou o Gestor da Empresa. Processos fazem parte dos planos Scale e Enterprise, e a conversa com o Quattro consome créditos de IA.
+</Note>
+
+---
+
+## Como ele trabalha
+
+Mapear um processo não é preencher formulário: é uma conversa.
+
+<Steps>
+  <Step title="Você descreve">Em **Cérebro > Processos > Mapeamento**, clique em **Novo processo** ou num dos cartões de exemplo e conte como o atendimento acontece.</Step>
+  <Step title="O Quattro pergunta">Ele pede o que faltou: quem faz, quando, o que acontece em cada desfecho. Ao lado da conversa, um painel mostra o processo se preenchendo em tempo real.</Step>
+  <Step title="Ele mede a capacidade">Com o passo a passo pronto, **Avaliar capacidade** mede o que o Tino resolve sozinho em cada etapa.</Step>
+  <Step title="Você revisa e publica">Em **Revisar e publicar**, você confere o 5W2H, a cobertura e as etapas, ajusta as saídas sugeridas e clica em **Publicar processo**.</Step>
+</Steps>
+
+Veja o passo a passo completo em [Mapeie processos com o Quattro](/agentes/quattro/mapeie-processos).
+
+---
+
+## O que ele monta
+
+Cada processo reúne:
+
+- **5W2H**: o quê, por quê, quem, quando, onde e quanto daquele atendimento.
+- **Passo a passo**: as etapas que o Tino segue, com o texto que ele envia em cada uma.
+- **Saídas**: para onde a conversa vai em cada desfecho, como Concluído, Parcial, Falhou ou Faltou dado.
+- **Cobertura do Tino**: quanto do processo o Tino resolve sozinho, etapa por etapa.
+- **Ferramentas**: uma etapa que usa um conector da empresa, por exemplo para consultar um sistema, também entra. Você escolhe quais ferramentas ficam disponíveis para aquele processo. Veja [Conecte ferramentas externas à IA](/integracoes/conectores).
+
+---
+
+## O que acontece depois de publicar
+
+O processo publicado passa a valer nos dois lados do atendimento:
+
+- **O Tino segue.** Durante a conversa, ele usa o processo que corresponde ao pedido do cliente, etapa por etapa, e segue a saída definida para o desfecho.
+- **O Scout cobra.** Ele audita as conversas reais contra o que foi mapeado e mostra o que o Tino resolveu sozinho, onde precisou de ajuda e onde o previsto não bateu com o que aconteceu. Veja [Veja a aderência aos processos](/agentes/scout/processos-e-aderencia).
+
+Para mudar um processo publicado, use **Editar conteúdo** para ajustar só os textos, ou **Editar com o Quattro** para mudar a estrutura: adicionar, remover ou reordenar etapas.
+
+---
+
+## As Descobertas
+
+O Quattro também prepara a documentação a partir do que a empresa já tem. Os candidatos a processo identificados em conteúdo indexado no Cérebro, ou em documentos enviados só para essa análise, chegam em **Cérebro > Processos > Descobertas**. Você abre o mapeamento para revisar, aprova, aprova e publica já ativo, ou descarta. Um processo criado por descoberta nasce inativo, a não ser que você escolha publicá-lo ativo.
+
+---
+
+## Perguntas frequentes
+
+<AccordionGroup>
+  <Accordion title="Qual a diferença entre o Quattro e o Tino?">
+  O Quattro conduz a conversa de mapeamento com você. O Tino atende o cliente de verdade, seguindo o processo já publicado.
+  </Accordion>
+  <Accordion title="Salvar sem publicar deixa o Tino usando o processo?">
+  Não. Salvar sem publicar cria ou atualiza o processo desativado e não grava as saídas. Só ao publicar o processo entra em operação.
+  </Accordion>
+  <Accordion title="Posso mudar as etapas sem conversar com o Quattro?">
+  Não. Adicionar, remover ou reordenar etapas, e mexer em portões e condições, só é possível pela conversa com o Quattro. O editor de conteúdo é só para o texto que já existe.
+  </Accordion>
+  <Accordion title="O Quattro consome créditos?">
+  Sim. A conversa de mapeamento consome créditos de IA, como as demais interações com os agentes.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artigos relacionados
+
+<Lista>
+  <Artigo titulo="Mapeie processos com o Quattro" href="/agentes/quattro/mapeie-processos">O passo a passo da conversa, da revisão e da publicação.</Artigo>
+  <Artigo titulo="Processos explicados" href="/cerebro/processos-explicados">O que é um processo e como o Tino o usa.</Artigo>
+  <Artigo titulo="Organize processos em grupos" href="/cerebro/grupos-de-processos">Conjuntos de processos com saídas próprias, usados por campanhas.</Artigo>
+  <Artigo titulo="Os agentes explicados" href="/agentes/os-agentes-explicados">Como o Quattro conversa com o Tino, o Scout e o Cérebro.</Artigo>
+</Lista>

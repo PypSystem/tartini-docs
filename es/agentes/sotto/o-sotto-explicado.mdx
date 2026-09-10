@@ -1,0 +1,93 @@
+---
+title: "Sotto explicado"
+sidebarTitle: "Sotto explicado"
+description: "El agente que está al lado de quien atiende: qué consulta, los dos modos en que trabaja, quién tiene acceso y dónde hacerle seguimiento."
+---
+
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
+El Sotto es el agente de IA que está al lado de quien atiende. Lee el historial de la conversación, incluido el resumen que Tino dejó al pasar la atención, y le pregunta al Cérebro (el cerebro de la empresa) lo que la empresa sabe sobre el asunto, incluido el conocimiento privado, que el cliente nunca ve. Con eso, le sugiere al agente la próxima respuesta. Quien decide qué va al cliente sigue siendo la persona.
+
+<Note>
+  El acceso al Sotto se habilita por persona, en **Configurações > Empresa > Usuários** (Configuración > Empresa > Usuarios). El modo de consulta está en todos los planes; el Sotto activo requiere el plan Scale. Cada pregunta y cada sugerencia consumen créditos de IA.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Dónde aparece
+
+El Sotto vive dentro de la conversación, en el Inbox, en tres lugares:
+
+| Dónde | Qué hace |
+|---|---|
+| Botón **Sugerir com Sotto** (Sugerir con Sotto), en el pie de la conversación | Pide una respuesta lista para enviar. |
+| Pestaña **Sotto**, en el panel de detalles | El chat con el Sotto: tú preguntas y él responde, mostrando las fuentes que consultó. |
+| Cuadro al final de la conversación | Con el Sotto activo encendido, las sugerencias aparecen solas, sin que tengas que pedirlas. |
+
+---
+
+## Los dos modos
+
+| Modo | Cómo funciona | Plan |
+|---|---|---|
+| **Consulta** | El agente pregunta y el Sotto responde. El botón **Sugerir com Sotto** pide una respuesta lista. Cada respuesta muestra las fuentes usadas. | Todos |
+| **Activo** | El Sotto sigue la conversación por su cuenta: sugiere la próxima respuesta y avisa cuando lo que el agente escribió contradice lo que está en el Cérebro. | Scale |
+
+El Sotto activo puede activarse por defecto en todas las conversaciones nuevas, en **Configurações > Atendimento > Regras de Conversa** (Configuración > Atención > Reglas de Conversación), o conversación por conversación, mediante el interruptor junto a la pestaña **Sotto**. El interruptor solo aparece en conversaciones conducidas por un agente y asignadas a la persona que está mirando.
+
+---
+
+## Qué consulta
+
+Antes de sugerir, el Sotto reúne tres cosas:
+
+1. **El historial de la conversación**, incluido el resumen que Tino dejó al pasar la atención, para continuar donde Tino se quedó.
+2. **El Cérebro**: el conocimiento de la empresa, público y privado, el tono de voz y las reglas.
+3. **Tu pregunta**, cuando le preguntas algo específico en la pestaña Sotto. Puedes adjuntar hasta 5 imágenes de 8 MB.
+
+El conocimiento privado es la diferencia entre el Sotto y Tino. Tino solo le dice al cliente lo que está marcado como Conocimiento Público. El Sotto ve todo, porque quien lee la sugerencia es el equipo. Consulta [El Cérebro explicado](/es/cerebro/o-cerebro-explicado).
+
+---
+
+## Quién tiene acceso
+
+El acceso se da persona por persona, en la columna **Sotto** de **Configurações > Empresa > Usuários**, por quien gestiona usuarios. Sin el acceso habilitado, la pestaña Sotto no aparece y el botón **Sugerir com Sotto** queda bloqueado, con la pista que explica el motivo. Consulta [Invita y gestiona usuarios](/es/equipe/usuarios).
+
+---
+
+## Dónde acompañar
+
+- **Métricas > Tino**, sección **apoio do Sotto ao time** (apoyo del Sotto al equipo): cuándo la IA sugirió y qué decidió el equipo, con el panel de cada agente mostrando las sugerencias aceptadas, enviadas directo, insertadas en el borrador y descartadas. Consulta [Métricas del Tino](/es/metricas/tino).
+- **Configurações > Cobrança > Créditos** (Configuración > Facturación > Créditos): lo que el Sotto consume, en la categoría de IA. Consulta [Créditos explicados](/es/visao-geral/creditos-explicados).
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿El Sotto le responde al cliente?">
+  No. Le sugiere al agente, y la persona decide si lo envía, lo edita o lo ignora. Quien habla con el cliente por su cuenta es Tino.
+  </Accordion>
+  <Accordion title="¿Por qué no veo la pestaña Sotto?">
+  Todavía no tienes el acceso habilitado. Pídele a un gestor que lo active en **Configurações > Empresa > Usuários**.
+  </Accordion>
+  <Accordion title="¿El Sotto activo es obligatorio?">
+  No. El estándar viene de Regras de Conversa, y el propio agente puede apagarlo en una conversación específica mediante el interruptor junto a la pestaña.
+  </Accordion>
+  <Accordion title="¿Las sugerencias desaparecen al transferir la conversación?">
+  Sí. Transferir borra las sugerencias pendientes del agente anterior.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<Lista>
+  <Artigo titulo="Usa el Sotto" href="/es/agentes/sotto/use-o-sotto">Pide sugerencias, conversa con el Sotto y activa el modo activo.</Artigo>
+  <Artigo titulo="Invita y gestiona usuarios" href="/es/equipe/usuarios">Habilita el Sotto para cada persona.</Artigo>
+  <Artigo titulo="Define las reglas de conversación" href="/es/atendimento/regras-de-conversa">El Sotto activo por defecto en las conversaciones nuevas.</Artigo>
+  <Artigo titulo="Los agentes de IA explicados" href="/es/agentes/os-agentes-explicados">Cómo el Sotto conversa con Tino, el Scout y el Cérebro.</Artigo>
+</Lista>

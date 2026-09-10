@@ -1,0 +1,89 @@
+---
+title: "Quattro explained"
+sidebarTitle: "Quattro explained"
+description: "The agent that writes the operation down: how it builds a process with you, what happens after publishing, and where it lives."
+---
+
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
+Quattro is the AI agent that writes the operation down. You describe, in your own words, how a service interaction happens today: a duplicate invoice, a booking, an exchange. Quattro asks what's missing and builds the process, with steps, transitions, and outcomes. Nothing it builds takes effect without your approval.
+
+<Note>
+  Quattro is in **Cérebro > Processos > Mapeamento** (Cérebro > Processes > Mapping). Mapping is done by the Administrator or the Company Manager. Processes are part of the Scale and Enterprise plans, and the conversation with Quattro consumes AI credits.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## How it works
+
+Mapping a process isn't filling out a form: it's a conversation.
+
+<Steps>
+  <Step title="You describe">In **Cérebro > Processos > Mapeamento**, click **Novo processo** (New process) or one of the example cards, and describe how the service interaction happens.</Step>
+  <Step title="Quattro asks">It asks for what's missing: who does it, when, what happens at each outcome. Next to the conversation, a panel shows the process filling in in real time.</Step>
+  <Step title="It measures capacity">With the step-by-step ready, **Avaliar capacidade** (Assess capacity) measures what Tino resolves on its own at each step.</Step>
+  <Step title="You review and publish">In **Revisar e publicar** (Review and publish), you check the 5W2H, the coverage, and the steps, adjust the suggested outcomes, and click **Publicar processo** (Publish process).</Step>
+</Steps>
+
+See the full step-by-step in [Map processes from conversations](/en/agentes/quattro/mapeie-processos).
+
+---
+
+## What it builds
+
+Each process brings together:
+
+- **5W2H**: the what, why, who, when, where, and how much of that service interaction.
+- **Passo a passo** (Step-by-step): the steps Tino follows, with the text it sends at each one.
+- **Saídas** (Outcomes): where the conversation goes at each ending, such as Concluído (Completed), Parcial (Partial), Falhou (Failed), or Faltou dado (Missing data).
+- **Cobertura do Tino** (Tino's coverage): how much of the process Tino resolves on its own, step by step.
+- **Ferramentas** (Tools): a step that uses one of the company's connectors, for example to check a system, is included too. You choose which tools are available for that process. See [Connect external tools to the AI](/en/integracoes/conectores).
+
+---
+
+## What happens after publishing
+
+The published process takes effect on both sides of the service interaction:
+
+- **Tino follows it.** During the conversation, it uses the process that matches the customer's request, step by step, and follows the outcome set for that ending.
+- **Scout checks it.** It audits real conversations against what was mapped and shows what Tino resolved on its own, where it needed help, and where what was expected didn't match what happened. See [See Process Adherence](/en/agentes/scout/processos-e-aderencia).
+
+To change a published process, use **Editar conteúdo** (Edit content) to adjust only the text, or **Editar com o Quattro** (Edit with Quattro) to change the structure: add, remove, or reorder steps.
+
+---
+
+## Discoveries
+
+Quattro also prepares the documentation from what the company already has. Process candidates identified in content indexed in the Cérebro, or in documents sent just for this analysis, arrive in **Cérebro > Processos > Descobertas** (Cérebro > Processes > Discoveries). You open the mapping to review it, approve it, approve and publish it already active, or discard it. A process created from a discovery starts out inactive, unless you choose to publish it active.
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="What's the difference between Quattro and Tino?">
+  Quattro leads the mapping conversation with you. Tino serves the actual customer, following the process that's already published.
+  </Accordion>
+  <Accordion title="Does saving without publishing leave Tino using the process?">
+  No. Saving without publishing creates or updates the process as inactive and doesn't save the outcomes. The process only goes into operation once it's published.
+  </Accordion>
+  <Accordion title="Can I change the steps without talking to Quattro?">
+  No. Adding, removing, or reordering steps, and changing gates and conditions, is only possible through the conversation with Quattro. The content editor is only for text that already exists.
+  </Accordion>
+  <Accordion title="Does Quattro consume credits?">
+  Yes. The mapping conversation consumes AI credits, like other interactions with the agents.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<Lista>
+  <Artigo titulo="Map processes from conversations" href="/en/agentes/quattro/mapeie-processos">The step-by-step of the conversation, the review, and the publication.</Artigo>
+  <Artigo titulo="Processes explained" href="/en/cerebro/processos-explicados">What a process is and how Tino uses it.</Artigo>
+  <Artigo titulo="Organize processes into groups" href="/en/cerebro/grupos-de-processos">Sets of processes with their own outcomes, used by campaigns.</Artigo>
+  <Artigo titulo="The agents explained" href="/en/agentes/os-agentes-explicados">How Quattro talks to Tino, Scout, and the Cérebro.</Artigo>
+</Lista>

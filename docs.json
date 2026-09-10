@@ -25,7 +25,6 @@
                 "icon": "book-open",
                 "pages": [
                   "visao-geral/o-que-e-o-tartini",
-                  "visao-geral/os-agentes-de-ia",
                   "visao-geral/conheca-a-navegacao",
                   "visao-geral/papeis-e-acessos",
                   "visao-geral/planos-e-recursos",
@@ -118,7 +117,6 @@
                     "icon": "diagram-project",
                     "pages": [
                       "cerebro/processos-explicados",
-                      "cerebro/mapeie-processos",
                       "cerebro/grupos-de-processos",
                       "cerebro/consistencia-e-insights"
                     ]
@@ -126,12 +124,47 @@
                 ]
               },
               {
-                "group": "Tino, o agente de atendimento",
+                "group": "Agentes",
                 "icon": "robot",
                 "pages": [
-                  "tino/o-tino-explicado",
-                  "tino/ia-por-canal",
-                  "tino/handoff"
+                  "agentes/os-agentes-explicados",
+                  {
+                    "group": "Tino",
+                    "icon": "headset",
+                    "pages": [
+                      "agentes/tino/o-tino-explicado",
+                      "agentes/tino/ia-por-canal",
+                      "agentes/tino/handoff"
+                    ]
+                  },
+                  {
+                    "group": "Sotto",
+                    "icon": "wand-magic-sparkles",
+                    "pages": [
+                      "agentes/sotto/o-sotto-explicado",
+                      "agentes/sotto/use-o-sotto"
+                    ]
+                  },
+                  {
+                    "group": "Scout",
+                    "icon": "compass",
+                    "pages": [
+                      "agentes/scout/o-scout-explicado",
+                      "agentes/scout/avaliacoes",
+                      "agentes/scout/concorde-ou-corrija",
+                      "agentes/scout/desempenho-da-equipe",
+                      "agentes/scout/processos-e-aderencia",
+                      "agentes/scout/satisfacao"
+                    ]
+                  },
+                  {
+                    "group": "Quattro",
+                    "icon": "pen-ruler",
+                    "pages": [
+                      "agentes/quattro/o-quattro-explicado",
+                      "agentes/quattro/mapeie-processos"
+                    ]
+                  }
                 ]
               },
               {
@@ -140,7 +173,6 @@
                 "pages": [
                   "inbox/conheca-o-inbox",
                   "inbox/atenda-uma-conversa",
-                  "inbox/sotto",
                   "inbox/mensagens-rapidas",
                   "inbox/transfira-notas-e-tags",
                   "inbox/encerre-uma-conversa",
@@ -174,18 +206,6 @@
                   "campanhas/webhook-e-inbound",
                   "campanhas/resultados",
                   "campanhas/contatos-de-campanha"
-                ]
-              },
-              {
-                "group": "Scout",
-                "icon": "compass",
-                "pages": [
-                  "scout/o-scout-explicado",
-                  "scout/avaliacoes",
-                  "scout/concorde-ou-corrija",
-                  "scout/desempenho-da-equipe",
-                  "scout/processos-e-aderencia",
-                  "scout/satisfacao"
                 ]
               },
               {
@@ -251,35 +271,10 @@
             "tab": "Para desenvolvedores",
             "groups": [
               {
-                "group": "Visão geral",
+                "group": "API",
                 "icon": "code",
                 "pages": [
                   "api-reference/introduction"
-                ]
-              },
-              {
-                "group": "Conceitos",
-                "icon": "book",
-                "pages": [
-                  "concepts/authentication",
-                  "concepts/rag",
-                  "concepts/errors"
-                ]
-              },
-              {
-                "group": "Endpoints",
-                "icon": "terminal",
-                "pages": [
-                  "api-reference/endpoint/status",
-                  "api-reference/endpoint/rag-retrieve"
-                ]
-              },
-              {
-                "group": "Webhooks e API",
-                "icon": "webhook",
-                "pages": [
-                  "desenvolvedores/webhook-de-atendimento",
-                  "desenvolvedores/conexao-via-api"
                 ]
               }
             ]
@@ -328,7 +323,6 @@
                 "icon": "book-open",
                 "pages": [
                   "en/visao-geral/o-que-e-o-tartini",
-                  "en/visao-geral/os-agentes-de-ia",
                   "en/visao-geral/conheca-a-navegacao",
                   "en/visao-geral/papeis-e-acessos",
                   "en/visao-geral/planos-e-recursos",
@@ -421,7 +415,6 @@
                     "icon": "diagram-project",
                     "pages": [
                       "en/cerebro/processos-explicados",
-                      "en/cerebro/mapeie-processos",
                       "en/cerebro/grupos-de-processos",
                       "en/cerebro/consistencia-e-insights"
                     ]
@@ -429,12 +422,47 @@
                 ]
               },
               {
-                "group": "Tino, the customer-facing agent",
+                "group": "Agents",
                 "icon": "robot",
                 "pages": [
-                  "en/tino/o-tino-explicado",
-                  "en/tino/ia-por-canal",
-                  "en/tino/handoff"
+                  "en/agentes/os-agentes-explicados",
+                  {
+                    "group": "Tino",
+                    "icon": "headset",
+                    "pages": [
+                      "en/agentes/tino/o-tino-explicado",
+                      "en/agentes/tino/ia-por-canal",
+                      "en/agentes/tino/handoff"
+                    ]
+                  },
+                  {
+                    "group": "Sotto",
+                    "icon": "wand-magic-sparkles",
+                    "pages": [
+                      "en/agentes/sotto/o-sotto-explicado",
+                      "en/agentes/sotto/use-o-sotto"
+                    ]
+                  },
+                  {
+                    "group": "Scout",
+                    "icon": "compass",
+                    "pages": [
+                      "en/agentes/scout/o-scout-explicado",
+                      "en/agentes/scout/avaliacoes",
+                      "en/agentes/scout/concorde-ou-corrija",
+                      "en/agentes/scout/desempenho-da-equipe",
+                      "en/agentes/scout/processos-e-aderencia",
+                      "en/agentes/scout/satisfacao"
+                    ]
+                  },
+                  {
+                    "group": "Quattro",
+                    "icon": "pen-ruler",
+                    "pages": [
+                      "en/agentes/quattro/o-quattro-explicado",
+                      "en/agentes/quattro/mapeie-processos"
+                    ]
+                  }
                 ]
               },
               {
@@ -443,7 +471,6 @@
                 "pages": [
                   "en/inbox/conheca-o-inbox",
                   "en/inbox/atenda-uma-conversa",
-                  "en/inbox/sotto",
                   "en/inbox/mensagens-rapidas",
                   "en/inbox/transfira-notas-e-tags",
                   "en/inbox/encerre-uma-conversa",
@@ -477,18 +504,6 @@
                   "en/campanhas/webhook-e-inbound",
                   "en/campanhas/resultados",
                   "en/campanhas/contatos-de-campanha"
-                ]
-              },
-              {
-                "group": "Scout",
-                "icon": "compass",
-                "pages": [
-                  "en/scout/o-scout-explicado",
-                  "en/scout/avaliacoes",
-                  "en/scout/concorde-ou-corrija",
-                  "en/scout/desempenho-da-equipe",
-                  "en/scout/processos-e-aderencia",
-                  "en/scout/satisfacao"
                 ]
               },
               {
@@ -554,35 +569,10 @@
             "tab": "For developers",
             "groups": [
               {
-                "group": "Overview",
+                "group": "API",
                 "icon": "code",
                 "pages": [
                   "en/api-reference/introduction"
-                ]
-              },
-              {
-                "group": "Concepts",
-                "icon": "book",
-                "pages": [
-                  "en/concepts/authentication",
-                  "en/concepts/rag",
-                  "en/concepts/errors"
-                ]
-              },
-              {
-                "group": "Endpoints",
-                "icon": "terminal",
-                "pages": [
-                  "en/api-reference/endpoint/status",
-                  "en/api-reference/endpoint/rag-retrieve"
-                ]
-              },
-              {
-                "group": "Webhooks and API",
-                "icon": "webhook",
-                "pages": [
-                  "en/desenvolvedores/webhook-de-atendimento",
-                  "en/desenvolvedores/conexao-via-api"
                 ]
               }
             ]
@@ -631,7 +621,6 @@
                 "icon": "book-open",
                 "pages": [
                   "es/visao-geral/o-que-e-o-tartini",
-                  "es/visao-geral/os-agentes-de-ia",
                   "es/visao-geral/conheca-a-navegacao",
                   "es/visao-geral/papeis-e-acessos",
                   "es/visao-geral/planos-e-recursos",
@@ -724,7 +713,6 @@
                     "icon": "diagram-project",
                     "pages": [
                       "es/cerebro/processos-explicados",
-                      "es/cerebro/mapeie-processos",
                       "es/cerebro/grupos-de-processos",
                       "es/cerebro/consistencia-e-insights"
                     ]
@@ -732,12 +720,47 @@
                 ]
               },
               {
-                "group": "Tino, el agente de atención",
+                "group": "Agentes",
                 "icon": "robot",
                 "pages": [
-                  "es/tino/o-tino-explicado",
-                  "es/tino/ia-por-canal",
-                  "es/tino/handoff"
+                  "es/agentes/os-agentes-explicados",
+                  {
+                    "group": "Tino",
+                    "icon": "headset",
+                    "pages": [
+                      "es/agentes/tino/o-tino-explicado",
+                      "es/agentes/tino/ia-por-canal",
+                      "es/agentes/tino/handoff"
+                    ]
+                  },
+                  {
+                    "group": "Sotto",
+                    "icon": "wand-magic-sparkles",
+                    "pages": [
+                      "es/agentes/sotto/o-sotto-explicado",
+                      "es/agentes/sotto/use-o-sotto"
+                    ]
+                  },
+                  {
+                    "group": "Scout",
+                    "icon": "compass",
+                    "pages": [
+                      "es/agentes/scout/o-scout-explicado",
+                      "es/agentes/scout/avaliacoes",
+                      "es/agentes/scout/concorde-ou-corrija",
+                      "es/agentes/scout/desempenho-da-equipe",
+                      "es/agentes/scout/processos-e-aderencia",
+                      "es/agentes/scout/satisfacao"
+                    ]
+                  },
+                  {
+                    "group": "Quattro",
+                    "icon": "pen-ruler",
+                    "pages": [
+                      "es/agentes/quattro/o-quattro-explicado",
+                      "es/agentes/quattro/mapeie-processos"
+                    ]
+                  }
                 ]
               },
               {
@@ -746,7 +769,6 @@
                 "pages": [
                   "es/inbox/conheca-o-inbox",
                   "es/inbox/atenda-uma-conversa",
-                  "es/inbox/sotto",
                   "es/inbox/mensagens-rapidas",
                   "es/inbox/transfira-notas-e-tags",
                   "es/inbox/encerre-uma-conversa",
@@ -780,18 +802,6 @@
                   "es/campanhas/webhook-e-inbound",
                   "es/campanhas/resultados",
                   "es/campanhas/contatos-de-campanha"
-                ]
-              },
-              {
-                "group": "Scout",
-                "icon": "compass",
-                "pages": [
-                  "es/scout/o-scout-explicado",
-                  "es/scout/avaliacoes",
-                  "es/scout/concorde-ou-corrija",
-                  "es/scout/desempenho-da-equipe",
-                  "es/scout/processos-e-aderencia",
-                  "es/scout/satisfacao"
                 ]
               },
               {
@@ -857,35 +867,10 @@
             "tab": "Para desarrolladores",
             "groups": [
               {
-                "group": "Visión general",
+                "group": "API",
                 "icon": "code",
                 "pages": [
                   "es/api-reference/introduction"
-                ]
-              },
-              {
-                "group": "Conceptos",
-                "icon": "book",
-                "pages": [
-                  "es/concepts/authentication",
-                  "es/concepts/rag",
-                  "es/concepts/errors"
-                ]
-              },
-              {
-                "group": "Endpoints",
-                "icon": "terminal",
-                "pages": [
-                  "es/api-reference/endpoint/status",
-                  "es/api-reference/endpoint/rag-retrieve"
-                ]
-              },
-              {
-                "group": "Webhooks y API",
-                "icon": "webhook",
-                "pages": [
-                  "es/desenvolvedores/webhook-de-atendimento",
-                  "es/desenvolvedores/conexao-via-api"
                 ]
               }
             ]
@@ -939,16 +924,6 @@
   "search": {
     "prompt": "Pesquisar na central de ajuda…"
   },
-  "api": {
-    "baseUrl": "https://api-talk.saninternet.com/v1",
-    "auth": {
-      "method": "bearer",
-      "name": "Authorization"
-    }
-  },
-  "openapi": [
-    "/api-reference/openapi.json"
-  ],
   "contextual": {
     "options": [
       "copy",
@@ -1004,11 +979,11 @@
     },
     {
       "source": "/atendimento/copilot",
-      "destination": "/inbox/sotto"
+      "destination": "/agentes/sotto/use-o-sotto"
     },
     {
       "source": "/atendimento/atendente-passivo",
-      "destination": "/tino/o-tino-explicado"
+      "destination": "/agentes/tino/o-tino-explicado"
     },
     {
       "source": "/atendimento/mensagens-rapidas",
@@ -1164,11 +1139,11 @@
     },
     {
       "source": "/avaliacao/conversas",
-      "destination": "/scout/avaliacoes"
+      "destination": "/agentes/scout/avaliacoes"
     },
     {
       "source": "/avaliacao/atendentes",
-      "destination": "/scout/desempenho-da-equipe"
+      "destination": "/agentes/scout/desempenho-da-equipe"
     },
     {
       "source": "/conta/configuracoes-de-usuario",
@@ -1179,16 +1154,244 @@
       "destination": "/conta/sessoes-e-dispositivos"
     },
     {
+      "source": "/tino/o-tino-explicado",
+      "destination": "/agentes/tino/o-tino-explicado"
+    },
+    {
+      "source": "/tino/ia-por-canal",
+      "destination": "/agentes/tino/ia-por-canal"
+    },
+    {
+      "source": "/tino/handoff",
+      "destination": "/agentes/tino/handoff"
+    },
+    {
+      "source": "/scout/o-scout-explicado",
+      "destination": "/agentes/scout/o-scout-explicado"
+    },
+    {
+      "source": "/scout/avaliacoes",
+      "destination": "/agentes/scout/avaliacoes"
+    },
+    {
+      "source": "/scout/concorde-ou-corrija",
+      "destination": "/agentes/scout/concorde-ou-corrija"
+    },
+    {
+      "source": "/scout/desempenho-da-equipe",
+      "destination": "/agentes/scout/desempenho-da-equipe"
+    },
+    {
+      "source": "/scout/processos-e-aderencia",
+      "destination": "/agentes/scout/processos-e-aderencia"
+    },
+    {
+      "source": "/scout/satisfacao",
+      "destination": "/agentes/scout/satisfacao"
+    },
+    {
+      "source": "/inbox/sotto",
+      "destination": "/agentes/sotto/use-o-sotto"
+    },
+    {
       "source": "/inbox/copilot",
-      "destination": "/inbox/sotto"
+      "destination": "/agentes/sotto/use-o-sotto"
+    },
+    {
+      "source": "/cerebro/mapeie-processos",
+      "destination": "/agentes/quattro/mapeie-processos"
+    },
+    {
+      "source": "/visao-geral/os-agentes-de-ia",
+      "destination": "/agentes/os-agentes-explicados"
+    },
+    {
+      "source": "/concepts/authentication",
+      "destination": "/api-reference/introduction"
+    },
+    {
+      "source": "/concepts/rag",
+      "destination": "/api-reference/introduction"
+    },
+    {
+      "source": "/concepts/errors",
+      "destination": "/api-reference/introduction"
+    },
+    {
+      "source": "/api-reference/endpoint/status",
+      "destination": "/api-reference/introduction"
+    },
+    {
+      "source": "/api-reference/endpoint/rag-retrieve",
+      "destination": "/api-reference/introduction"
+    },
+    {
+      "source": "/desenvolvedores/webhook-de-atendimento",
+      "destination": "/api-reference/introduction"
+    },
+    {
+      "source": "/desenvolvedores/conexao-via-api",
+      "destination": "/api-reference/introduction"
+    },
+    {
+      "source": "/en/tino/o-tino-explicado",
+      "destination": "/en/agentes/tino/o-tino-explicado"
+    },
+    {
+      "source": "/en/tino/ia-por-canal",
+      "destination": "/en/agentes/tino/ia-por-canal"
+    },
+    {
+      "source": "/en/tino/handoff",
+      "destination": "/en/agentes/tino/handoff"
+    },
+    {
+      "source": "/en/scout/o-scout-explicado",
+      "destination": "/en/agentes/scout/o-scout-explicado"
+    },
+    {
+      "source": "/en/scout/avaliacoes",
+      "destination": "/en/agentes/scout/avaliacoes"
+    },
+    {
+      "source": "/en/scout/concorde-ou-corrija",
+      "destination": "/en/agentes/scout/concorde-ou-corrija"
+    },
+    {
+      "source": "/en/scout/desempenho-da-equipe",
+      "destination": "/en/agentes/scout/desempenho-da-equipe"
+    },
+    {
+      "source": "/en/scout/processos-e-aderencia",
+      "destination": "/en/agentes/scout/processos-e-aderencia"
+    },
+    {
+      "source": "/en/scout/satisfacao",
+      "destination": "/en/agentes/scout/satisfacao"
+    },
+    {
+      "source": "/en/inbox/sotto",
+      "destination": "/en/agentes/sotto/use-o-sotto"
     },
     {
       "source": "/en/inbox/copilot",
-      "destination": "/en/inbox/sotto"
+      "destination": "/en/agentes/sotto/use-o-sotto"
+    },
+    {
+      "source": "/en/cerebro/mapeie-processos",
+      "destination": "/en/agentes/quattro/mapeie-processos"
+    },
+    {
+      "source": "/en/visao-geral/os-agentes-de-ia",
+      "destination": "/en/agentes/os-agentes-explicados"
+    },
+    {
+      "source": "/en/concepts/authentication",
+      "destination": "/en/api-reference/introduction"
+    },
+    {
+      "source": "/en/concepts/rag",
+      "destination": "/en/api-reference/introduction"
+    },
+    {
+      "source": "/en/concepts/errors",
+      "destination": "/en/api-reference/introduction"
+    },
+    {
+      "source": "/en/api-reference/endpoint/status",
+      "destination": "/en/api-reference/introduction"
+    },
+    {
+      "source": "/en/api-reference/endpoint/rag-retrieve",
+      "destination": "/en/api-reference/introduction"
+    },
+    {
+      "source": "/en/desenvolvedores/webhook-de-atendimento",
+      "destination": "/en/api-reference/introduction"
+    },
+    {
+      "source": "/en/desenvolvedores/conexao-via-api",
+      "destination": "/en/api-reference/introduction"
+    },
+    {
+      "source": "/es/tino/o-tino-explicado",
+      "destination": "/es/agentes/tino/o-tino-explicado"
+    },
+    {
+      "source": "/es/tino/ia-por-canal",
+      "destination": "/es/agentes/tino/ia-por-canal"
+    },
+    {
+      "source": "/es/tino/handoff",
+      "destination": "/es/agentes/tino/handoff"
+    },
+    {
+      "source": "/es/scout/o-scout-explicado",
+      "destination": "/es/agentes/scout/o-scout-explicado"
+    },
+    {
+      "source": "/es/scout/avaliacoes",
+      "destination": "/es/agentes/scout/avaliacoes"
+    },
+    {
+      "source": "/es/scout/concorde-ou-corrija",
+      "destination": "/es/agentes/scout/concorde-ou-corrija"
+    },
+    {
+      "source": "/es/scout/desempenho-da-equipe",
+      "destination": "/es/agentes/scout/desempenho-da-equipe"
+    },
+    {
+      "source": "/es/scout/processos-e-aderencia",
+      "destination": "/es/agentes/scout/processos-e-aderencia"
+    },
+    {
+      "source": "/es/scout/satisfacao",
+      "destination": "/es/agentes/scout/satisfacao"
+    },
+    {
+      "source": "/es/inbox/sotto",
+      "destination": "/es/agentes/sotto/use-o-sotto"
     },
     {
       "source": "/es/inbox/copilot",
-      "destination": "/es/inbox/sotto"
+      "destination": "/es/agentes/sotto/use-o-sotto"
+    },
+    {
+      "source": "/es/cerebro/mapeie-processos",
+      "destination": "/es/agentes/quattro/mapeie-processos"
+    },
+    {
+      "source": "/es/visao-geral/os-agentes-de-ia",
+      "destination": "/es/agentes/os-agentes-explicados"
+    },
+    {
+      "source": "/es/concepts/authentication",
+      "destination": "/es/api-reference/introduction"
+    },
+    {
+      "source": "/es/concepts/rag",
+      "destination": "/es/api-reference/introduction"
+    },
+    {
+      "source": "/es/concepts/errors",
+      "destination": "/es/api-reference/introduction"
+    },
+    {
+      "source": "/es/api-reference/endpoint/status",
+      "destination": "/es/api-reference/introduction"
+    },
+    {
+      "source": "/es/api-reference/endpoint/rag-retrieve",
+      "destination": "/es/api-reference/introduction"
+    },
+    {
+      "source": "/es/desenvolvedores/webhook-de-atendimento",
+      "destination": "/es/api-reference/introduction"
+    },
+    {
+      "source": "/es/desenvolvedores/conexao-via-api",
+      "destination": "/es/api-reference/introduction"
     }
   ]
 }

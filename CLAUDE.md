@@ -163,6 +163,10 @@ A terceira aba da navegação, **Marca**, é o manual da marca do Tartini em `ma
 
 Os "Artigos relacionados" e "Próximos passos" usam a lista em linhas, uma embaixo da outra e com a seta à direita, como nas coleções da Intercom: componente `Lista`/`Artigo` em `components/lista-artigos.jsx`, estilo em `style.css`. Em artigo novo, importe com `import { Lista, Artigo } from "/components/lista-artigos.jsx";` logo após o frontmatter e use `<Lista><Artigo titulo="..." href="...">descrição</Artigo></Lista>`. Não use `CardGroup` para listar artigos; a grade fica só nas homes (`index.mdx`), como a home da Intercom. `python3 scripts/lista-de-artigos.py` converte grades esquecidas.
 
+## Coleção Agentes e aba API
+
+Os quatro agentes têm coleção própria, `agentes/`, com uma seção por agente: `agentes/tino/`, `agentes/sotto/` (o antigo Copilot), `agentes/scout/` e `agentes/quattro/`, mais a abertura `agentes/os-agentes-explicados`. Cada seção começa por "O <agente> explicado" e segue com os artigos de uso. Artigo novo sobre um agente entra na seção dele, não em Inbox ou Cérebro. A aba "Para desenvolvedores" tem uma única página, `api-reference/introduction`: a API é liberada sob solicitação ao time, sem rotas nem exemplos de código na central. Caminhos antigos (`tino/`, `scout/`, `inbox/copilot`, `concepts/`, `desenvolvedores/`) redirecionam pelo gerador do `docs.json`.
+
 ## Antes de publicar
 
 - [ ] Um tipo de artigo, um recurso, título com o verbo certo.

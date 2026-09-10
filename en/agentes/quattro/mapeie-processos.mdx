@@ -1,0 +1,120 @@
+---
+title: "Map processes from conversations"
+sidebarTitle: "Map processes"
+description: "Build the playbook for a service by talking with Quattro, or approve the processes Tino has already identified on its own."
+---
+
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
+Mapping a process isn't about filling out a form: you talk with Quattro, who builds the playbook while understanding how service actually happens at your company.
+
+<Note>
+  Who sees this: Administrator and Company Manager. Requires the Scale plan. Talking with Quattro uses credits.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Start a new process
+
+By default, the Mapeamento (Mapping) list shows the processes already mapped, with a shortcut to start a new one.
+
+Where to find it: **Cérebro > Processos > Mapeamento** (Brain > Processes > Mapping).
+
+<Steps>
+  <Step title="Choose a starting point">Click **Novo processo** (New process) to start from scratch, or one of the example cards, such as "2ª via de boleto" or "Reset de senha", to start with a ready-made message.</Step>
+  <Step title="Talk with Quattro">Describe, in your own words, how the service happens. Quattro asks about what's missing.</Step>
+  <Step title="Watch the preview">Next to the conversation, a panel shows the process fields filling in in real time.</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/mapeamento-nova-sessao.png | alt: Tela de mapeamento com o chat do Quattro à esquerda e a prévia do processo à direita | olhar: os cartões 5W2H sendo preenchidos na prévia */}
+
+---
+
+## Evaluate and publish the process
+
+By default, the mapping is only considered complete after the Saídas (Outputs) step.
+
+<Steps>
+  <Step title="Evaluate capacity, if available">When there's already a step-by-step, click **Avaliar capacidade** (Evaluate capacity) for Quattro to measure what Tino resolves at each step, or **Pular por ora** (Skip for now).</Step>
+  <Step title="Review">Click **Revisar** (Review) (or **Revisar e publicar** (Review and publish)) to check the full 5W2H, coverage, and step-by-step.</Step>
+  <Step title="Adjust the outputs">For each outcome, accept, edit, or discard the destination Quattro suggested.</Step>
+  <Step title="Publish">Click **Publicar processo** (Publish process).</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/mapeamento-revisao-final.png | alt: Tela de revisão final do processo com o passo a passo e a seção Revisar saídas | olhar: o botão Publicar processo no rodapé */}
+
+<Note>
+  Saving without publishing creates or updates the process, but deactivated, and doesn't save the outputs. Outputs are only saved when you publish.
+</Note>
+
+---
+
+## View and edit an already mapped process
+
+Where to find it: **Cérebro > Processos > Mapeamento**, click any card in the list.
+
+<Steps>
+  <Step title="Open the process">Click the process card.</Step>
+  <Step title="Choose the type of edit">Use **Editar conteúdo** (Edit content) to change only text and step codes, or **Editar com o Quattro** (Edit with Quattro) to change the structure, add, remove, or reorder steps.</Step>
+  <Step title="Save">Confirm the edit.</Step>
+</Steps>
+
+<Note>
+  Adding, removing, or reordering steps, and changing gateways and conditions, is only possible through the conversation with Quattro. The content editor is only for text that already exists.
+</Note>
+
+---
+
+## See the process's output path
+
+Where to find it: the process card, the **Ver fluxo** (View flow) icon, or inside the process detail.
+
+A graph shows where the conversation goes for each outcome of that process. It's read-only: to change the outputs, use **Editar com o Quattro**.
+
+{/* CAPTURA: images/cerebro/mapeamento-fluxo-processo.png | alt: Grafo de saídas de um processo com os nós de desfecho e as arestas coloridas | olhar: a legenda de cores no topo do grafo */}
+
+---
+
+## Review process discoveries
+
+Tino also identifies process candidates on its own, from content already indexed in the Cérebro or from documents uploaded specifically for this analysis.
+
+Where to find it: **Cérebro > Processos > Descobertas** (Brain > Processes > Discoveries).
+
+<Steps>
+  <Step title="Upload documents, if you want">Drag or select up to 10 files to discover processes from them.</Step>
+  <Step title="Review a candidate">Click **Abrir mapeamento** (Open mapping) to review in detail, without discarding or publishing anything yet.</Step>
+  <Step title="Approve">Click **Aprovar** (Approve) to create the process inactive, or **Aprovar e publicar ativo** (Approve and publish active) to put it into operation right away.</Step>
+  <Step title="Or discard">Click **Descartar** (Discard) and confirm.</Step>
+</Steps>
+
+<Note>
+  Uploading a document on this screen is only for discovering processes: the content isn't indexed in the Cérebro as knowledge.
+</Note>
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Does saving without publishing leave Tino using the process?">
+  No. The process stays deactivated until it's manually activated or published through the review.
+  </Accordion>
+  <Accordion title="If I open the mapping for a candidate and don't finish, does it disappear from the Descobertas queue?">
+  No. Opening the mapping doesn't discard or finalize the candidate. It stays pending until the process is published.
+  </Accordion>
+  <Accordion title="Are the outputs Quattro suggests saved along with the process when I save it?">
+  No. Outputs are only actually saved when you publish, during the review step.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<Lista>
+  <Artigo titulo="Processes explained" href="/en/cerebro/processos-explicados">Understand what a process is and how Tino uses it.</Artigo>
+  <Artigo titulo="Organize processes into groups" href="/en/cerebro/grupos-de-processos">Bring related processes together for use in campaigns.</Artigo>
+</Lista>

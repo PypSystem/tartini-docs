@@ -1,0 +1,107 @@
+---
+title: "Veja a aderência aos processos"
+sidebarTitle: "Processos e aderência"
+description: "Descubra quais processos cadastrados no Cérebro não estão entrando, não evoluem ou pioram a experiência do cliente."
+---
+
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
+A tela Processos cruza os processos cadastrados no Cérebro com as conversas reais e mostra onde cada um está falhando, sem você reler avaliação por avaliação.
+
+<Note>
+  Disponível a partir do plano Scale. Todos os papéis veem esta tela, no próprio recorte.
+</Note>
+
+---
+
+## Veja quantos atendimentos cada processo teve
+
+Por padrão o gráfico ordena os processos pelo número de atendimentos, do maior para o menor.
+
+Onde fica: **Scout > Processos**.
+
+<Steps>
+  <Step title="Abra a tela">Vá em **Scout > Processos**.</Step>
+  <Step title="Escolha o critério">Clique em **ordenar por** para alternar entre atendimentos, taxa de conclusão e taxa de não conclusão.</Step>
+  <Step title="Inverta se quiser">Clique no ícone de ordem para trocar entre maior primeiro e menor primeiro.</Step>
+  <Step title="Veja a quebra">Passe o mouse numa barra para ler quantas conversas concluíram, concluíram em parte, não concluíram ou ficaram sem uma informação obrigatória.</Step>
+</Steps>
+
+{/* CAPTURA: images/scout/processos-grafico.png | alt: Gráfico Atendimentos por processo com barras empilhadas por desfecho | olhar: a legenda de cores concluiu, concluiu em parte e não concluiu */}
+
+<Note>
+  Um processo que não entrou nenhuma vez no recorte aparece assim, mesmo que ele exista no Cérebro.
+</Note>
+
+---
+
+## Veja a cobertura do processo
+
+Dois cards mostram o percentual de conversas com processo disponível que de fato entraram num processo: um para **em campanha** e outro para **no atendimento do dia a dia**.
+
+<Note>
+  Sem registro de quais processos estavam disponíveis fora de campanha, o card do dia a dia aparece como não medido, mesmo que o processo esteja rodando normalmente.
+</Note>
+
+---
+
+## Veja o desempenho por processo
+
+Por padrão a tabela segue a mesma ordem do gráfico acima.
+
+Onde fica: tabela **Desempenho por processo**, abaixo do gráfico.
+
+<Steps>
+  <Step title="Filtre pelas falhas">Marque **só processos com falha** para ver só quem precisa de atenção.</Step>
+  <Step title="Escolha a ordem">Alterne entre a mesma ordem do gráfico e **pior leitura** primeiro.</Step>
+  <Step title="Leia as três colunas">Compare **uso correto**, **conclusão** e **nota das conversas** de cada processo.</Step>
+</Steps>
+
+{/* CAPTURA: images/scout/processos-tabela.png | alt: Tabela Desempenho por processo com as colunas uso correto, conclusão e nota das conversas | olhar: o ponto de saúde à esquerda de cada linha */}
+
+<Note>
+  **Uso correto** mede se, nas conversas avaliadas, o Tino acertou a decisão de usar ou de não usar aquele processo. **Conclusão** mede se as conversas que entraram no processo chegaram ao fim dele. **Nota das conversas** é a nota de 0 a 10 das conversas em que o processo apareceu, com o piso de 10 conversas avaliadas.
+</Note>
+
+---
+
+## Abra o diagnóstico de um processo
+
+Clicar numa barra do gráfico ou numa linha da tabela abre o diagnóstico daquele processo: o motivo exato da falha, seja na entrada, na evolução ou no efeito sobre o cliente, e um botão que leva direto à tela do Cérebro onde isso se corrige.
+
+<Steps>
+  <Step title="Abra o processo">Clique na barra ou na linha do processo.</Step>
+  <Step title="Leia o diagnóstico">Veja a frase que explica o que está falhando naquele processo.</Step>
+  <Step title="Corrija">Clique no botão de correção. Ele leva à tela certa do Cérebro, já no contexto desse processo.</Step>
+</Steps>
+
+<Note>
+  Abaixo de 10 conversas avaliadas com o processo, a tela ainda não indica um conserto. Amplie o período ou espere mais atendimentos.
+</Note>
+
+---
+
+## Perguntas frequentes
+
+<AccordionGroup>
+  <Accordion title="Por que a nota de um processo aparece com um traço?">
+  Menos de 10 conversas avaliadas com esse processo no recorte escolhido.
+  </Accordion>
+  <Accordion title="Por que a cobertura do dia a dia aparece como não medido?">
+  A base só registra quais processos estavam disponíveis durante campanhas. Fora delas, esse registro ainda não existe.
+  </Accordion>
+  <Accordion title="Um Gestor de Área consegue usar o botão de correção?">
+  {/* CONFIRMAR: o botão de correção leva ao Cérebro, que pede nível Empresa; não está claro se um Gestor de Área ou de Unidade consegue usá-lo */}
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artigos relacionados
+
+<Lista>
+  <Artigo titulo="O Scout explicado" href="/agentes/scout/o-scout-explicado">Papéis, planos e o menu do Scout.</Artigo>
+  <Artigo titulo="O Cérebro explicado" href="/cerebro/o-cerebro-explicado">Onde os processos são cadastrados.</Artigo>
+  <Artigo titulo="Mapeie processos a partir das conversas" href="/agentes/quattro/mapeie-processos">Como um processo é criado e mantido.</Artigo>
+  <Artigo titulo="Planos e o que cada um libera" href="/visao-geral/planos-e-recursos">O que o plano Scale libera além de Processos.</Artigo>
+</Lista>

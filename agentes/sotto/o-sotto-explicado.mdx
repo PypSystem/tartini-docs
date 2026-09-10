@@ -1,0 +1,91 @@
+---
+title: "O Sotto explicado"
+sidebarTitle: "O Sotto explicado"
+description: "O agente que fica ao lado de quem atende: o que ele consulta, os dois modos em que trabalha, quem tem acesso e onde acompanhar."
+---
+
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
+O Sotto é o agente de IA que fica ao lado de quem atende. Ele lê o histórico da conversa, inclusive o resumo que o Tino deixou quando passou o atendimento, e pergunta ao Cérebro o que a empresa sabe sobre o assunto, inclusive o conhecimento privado, que o cliente nunca vê. Com isso, sugere ao atendente a próxima resposta. Quem decide o que vai para o cliente continua sendo a pessoa.
+
+<Note>
+  O acesso ao Sotto é liberado por pessoa, em **Configurações > Empresa > Usuários**. O modo de consulta está em todos os planos; o Sotto ativo pede o plano Scale. Cada pergunta e cada sugestão consomem créditos de IA.
+</Note>
+
+---
+
+## Onde ele aparece
+
+O Sotto vive dentro da conversa, no Inbox, em três lugares:
+
+| Onde | O que faz |
+|---|---|
+| Botão **Sugerir com Sotto**, no rodapé da conversa | Pede uma resposta pronta para enviar. |
+| Aba **Sotto**, no painel de detalhes | O chat com o Sotto: você pergunta e ele responde, mostrando as fontes que consultou. |
+| Caixa no fim da conversa | Com o Sotto ativo ligado, as sugestões aparecem sozinhas, sem você pedir. |
+
+---
+
+## Os dois modos
+
+| Modo | Como funciona | Plano |
+|---|---|---|
+| **Consulta** | O atendente pergunta e o Sotto responde. O botão **Sugerir com Sotto** pede uma resposta pronta. Cada resposta mostra as fontes usadas. | Todos |
+| **Ativo** | O Sotto acompanha a conversa por conta própria: sugere a próxima resposta e avisa quando o que o atendente escreveu contradiz o que está no Cérebro. | Scale |
+
+O Sotto ativo pode ser ligado por padrão em todas as conversas novas, em **Configurações > Atendimento > Regras de Conversa**, ou conversa a conversa, pelo switch ao lado da aba **Sotto**. O switch só aparece em conversas conduzidas por um atendente e atribuídas a quem está olhando.
+
+---
+
+## O que ele consulta
+
+Antes de sugerir, o Sotto junta três coisas:
+
+1. **O histórico da conversa**, inclusive o resumo que o Tino deixou ao passar o atendimento, para continuar de onde o Tino parou.
+2. **O Cérebro**: o conhecimento da empresa, público e privado, o tom de voz e as regras.
+3. **A sua pergunta**, quando você pergunta algo específico na aba Sotto. Dá para anexar até 5 imagens de 8 MB.
+
+O conhecimento privado é a diferença entre o Sotto e o Tino. O Tino só diz ao cliente o que está marcado como Conhecimento Público. O Sotto vê tudo, porque quem lê a sugestão é a equipe. Veja [O Cérebro explicado](/cerebro/o-cerebro-explicado).
+
+---
+
+## Quem tem acesso
+
+O acesso é dado pessoa a pessoa, na coluna **Sotto** de **Configurações > Empresa > Usuários**, por quem gerencia usuários. Sem o acesso liberado, a aba Sotto não aparece e o botão **Sugerir com Sotto** fica bloqueado, com a dica explicando o motivo. Veja [Convide e gerencie usuários](/equipe/usuarios).
+
+---
+
+## Onde acompanhar
+
+- **Métricas > Tino**, seção **apoio do Sotto ao time**: quando a IA sugeriu e o que a equipe decidiu, com o painel de cada atendente mostrando as sugestões aceitas, enviadas direto, inseridas no rascunho e descartadas. Veja [Métricas do Tino](/metricas/tino).
+- **Configurações > Cobrança > Créditos**: o que o Sotto consome, na categoria de IA. Veja [Créditos explicados](/visao-geral/creditos-explicados).
+
+---
+
+## Perguntas frequentes
+
+<AccordionGroup>
+  <Accordion title="O Sotto responde ao cliente?">
+  Não. Ele sugere ao atendente, e a pessoa decide se envia, edita ou ignora. Quem fala com o cliente sozinho é o Tino.
+  </Accordion>
+  <Accordion title="Por que não vejo a aba Sotto?">
+  Você ainda não tem acesso liberado. Peça a um gestor para ativar em **Configurações > Empresa > Usuários**.
+  </Accordion>
+  <Accordion title="O Sotto ativo é obrigatório?">
+  Não. O padrão vem de Regras de Conversa, e o próprio atendente pode desligar numa conversa específica pelo switch ao lado da aba.
+  </Accordion>
+  <Accordion title="As sugestões somem ao transferir a conversa?">
+  Sim. Transferir apaga as sugestões pendentes do atendente anterior.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artigos relacionados
+
+<Lista>
+  <Artigo titulo="Use o Sotto" href="/agentes/sotto/use-o-sotto">Peça sugestões, converse com o Sotto e ligue o modo ativo.</Artigo>
+  <Artigo titulo="Convide e gerencie usuários" href="/equipe/usuarios">Libere o Sotto para cada pessoa.</Artigo>
+  <Artigo titulo="Defina as regras de conversa" href="/atendimento/regras-de-conversa">O Sotto ativo por padrão nas conversas novas.</Artigo>
+  <Artigo titulo="Os agentes explicados" href="/agentes/os-agentes-explicados">Como o Sotto conversa com o Tino, o Scout e o Cérebro.</Artigo>
+</Lista>

@@ -1,0 +1,137 @@
+---
+title: "Los agentes de IA explicados"
+sidebarTitle: "Los agentes explicados"
+description: "Todo parte del Cérebro: qué es, qué hace cada uno de los cuatro agentes, dónde aparece y cómo conversan entre sí."
+---
+
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
+Todo parte del Cérebro. Le entregas el material de tu empresa, él aprende tu estándar y coordina el equipo de agentes que trabaja por ti. Son cuatro agentes, cada uno con su puesto y todos con la misma fuente: Tino habla con el cliente, Sotto está al lado de quien atiende, Scout lee la conversación después de que se cierra y Quattro pone la operación por escrito. El Cérebro orquesta a los agentes, y ellos conversan entre sí: cuando uno necesita lo que el otro sabe, pregunta, y la respuesta llega antes de que el mensaje alcance al cliente.
+
+<Note>
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## El Cérebro
+
+El Cérebro es el menú **Cérebro** (Cerebro): la memoria y el estándar de la empresa. Lo entrenas con la identidad de tu empresa, tal como es o tal como quieres que sea: las **Propriedades** (Propiedades) (el sitio, documentos, preguntas y respuestas), la **Personalidade** (Personalidad) (comunicación, directrices y cumplimiento), las **Operações** (Operaciones) (aclaraciones, campos del contacto, estado del contacto, enrutamiento, disponibilidad y contexto situacional) y los **Processos** (Procesos), cómo debe transcurrir cada atención de principio a fin.
+
+Lo enseñaste una vez, y vale para toda la atención. De él es de donde los agentes sacan lo que responden en primera línea, lo que sugieren al lado del equipo y la vara con la que evalúan cada conversación. Las habilidades de los agentes vienen listas; la identidad es tuya.
+
+Cada fuente entra al Cérebro con una de dos etiquetas, **Conhecimento Público** (Conocimiento Público) o **Conhecimento Privado** (Conocimiento Privado), marcada elemento por elemento. Lo público es lo que Tino puede decirle al cliente; lo privado solo lo ve tu equipo, a través de Sotto. No todo lo que la empresa sabe debe llegar al cliente, y dónde pasa esa línea lo decides tú.
+
+<Note>
+  Solo el Administrador y el Gestor de la Empresa abren el Cérebro. Operaciones y Procesos requieren el plan Scale. Cada empresa tiene su propio Cérebro, y uno nunca toca al otro.
+</Note>
+
+Consulta [El Cérebro explicado](/es/cerebro/o-cerebro-explicado).
+
+---
+
+## Tino
+
+Tino es el agente que habla con el cliente. Lo activas canal por canal en **Configurações > Atendimento > IA por canal** (Configuración > Atención > IA por canal), y defines cuándo atiende, el mensaje fuera de horario, cuántas veces vuelve a llamar y cuándo cierra la conversación.
+
+Responde a partir de lo que marcaste como visible para el cliente, y nada más que eso. En cada respuesta consulta al Cérebro: el conocimiento, el tono de voz, las reglas y el proceso que aplica a la solicitud. Cuando el tema supera lo que puede resolver, la conversación pasa a una persona junto con el historial y un resumen de lo que ya se dijo, que el agente lee y Sotto usa para continuar donde Tino se quedó.
+
+En el Inbox, una conversación conducida por Tino muestra el sello **Tino conversando** y el campo de mensaje bloqueado. Para tomar el control, la persona hace clic en **Interromper** (Interrumpir). Tino también aborda contactos en **Campanhas** (Campañas), y cada mensaje suyo tiene un **Por que ela disse isso** (Por qué dijo eso), que muestra qué proceso, directriz o regla del Cérebro guio la respuesta.
+
+<Note>
+  Tino forma parte de los planes Scale y Enterprise y consume créditos de IA.
+</Note>
+
+Consulta [Tino explicado](/es/agentes/tino/o-tino-explicado).
+
+---
+
+## Sotto
+
+Sotto está al lado de quien atiende, en la pestaña **Sotto** del panel de detalles. Leyó el historial de la conversación, incluido el resumen que Tino dejó al pasar la conversación, y le pregunta al Cérebro lo que la empresa sabe sobre el tema, incluido el conocimiento privado, que el cliente nunca ve.
+
+- **En el modo de consulta**, el agente pregunta y Sotto responde, mostrando las fuentes que consultó. El botón **Sugerir com Sotto** (Sugerir con Sotto) pide una respuesta lista para enviar.
+- **En el modo activo**, Sotto sigue la conversación por su cuenta: sugiere la próxima respuesta y avisa cuando lo que el agente escribió contradice lo que está en el Cérebro.
+
+El acceso a Sotto se habilita por persona, en la pantalla de Usuarios. El modo activo requiere el plan Scale y puede activarse por defecto en las Reglas de Conversación o conversación por conversación.
+
+<Note>
+  Cada pregunta a Sotto y cada sugerencia del modo activo consumen créditos de IA.
+</Note>
+
+Consulta [Usa el Sotto](/es/agentes/sotto/use-o-sotto).
+
+---
+
+## Scout
+
+Scout lee la conversación después de que se cierra. Con **Ativar Scout ao finalizar conversa** (Activar Scout al finalizar conversación) activado en las Reglas de Conversación, cada conversación cerrada, por el equipo o por Tino, recibe un resumen, una nota y la evaluación por criterio. Para evaluar, Scout le pide al Cérebro la vara de la empresa y, cuando la conversación pasó por un proceso, revisa paso a paso lo que se hizo.
+
+Lo que se sale de tu criterio te llega como punto de atención. Estás de acuerdo o corriges, y la corrección se vuelve entrenamiento: el Cérebro reaprende con lo que decidiste. Cada hallazgo de Scout señala la pantalla del Cérebro donde se escribe la corrección, y la retroalimentación llega al agente.
+
+Scout muestra el desempeño por agente, Unidad, Área y Empresa, la adherencia a los procesos y la satisfacción de los clientes. El agente ve su propio desempeño y la retroalimentación.
+
+<Note>
+  Cada análisis de Scout consume créditos de IA. Scout está en todos los planes; la adherencia a procesos requiere el Scale.
+</Note>
+
+Consulta [Scout explicado](/es/agentes/scout/o-scout-explicado).
+
+---
+
+## Quattro
+
+Quattro pone la operación por escrito. En **Cérebro > Processos > Mapeamento** (Cérebro > Procesos > Mapeo), le cuentas, con tus propias palabras, cómo ocurre hoy una atención: un duplicado de factura, una cita, un cambio. Quattro pregunta lo que faltó y arma el proceso, con etapas, transiciones y salidas. También puede incluirse una etapa que consulta un sistema tuyo: tú autorizas, y la IA hace la verificación durante la atención.
+
+Nada de lo que arma entra en vigor sin tu aprobación. El proceso publicado se convierte en el playbook que Tino sigue en cada conversación y en la vara con la que Scout mide si el proceso se cumplió. Quattro también prepara la documentación: los candidatos a proceso descubiertos en las conversaciones y en los documentos te llegan en **Descobertas** (Descubrimientos), para aprobar o descartar.
+
+<Note>
+  Los procesos forman parte de los planes Scale y Enterprise. Quien mapea es el Administrador o el Gestor de la Empresa.
+</Note>
+
+Consulta [Procesos explicados](/es/cerebro/processos-explicados) y [Mapea procesos a partir de las conversaciones](/es/agentes/quattro/mapeie-processos).
+
+---
+
+## Cómo conversan entre sí
+
+Cada agente recurre al otro en el punto donde termina su propia responsabilidad, y el Cérebro orquesta:
+
+| Quién | Le pregunta a quién | Qué |
+|---|---|---|
+| **Tino** | Cérebro | Qué responder, en qué tono, siguiendo qué proceso, y cuándo transferir |
+| **Tino** | Equipo y Sotto | Entrega el historial y el resumen de la atención al pasar la conversación |
+| **Sotto** | Cérebro | Lo que la empresa sabe sobre el tema, incluido el conocimiento privado |
+| **Sotto** | Tino | Lo que ya se dijo e hizo antes de que la conversación llegara al equipo |
+| **Scout** | Cérebro | La vara de medición: personalidad, reglas y procesos para evaluar la conversación |
+| **Scout** | Tino y equipo | Qué hizo cada uno en la conversación cerrada |
+| **Quattro** | Tú | Qué faltó para que el proceso quedara completo |
+| **Quattro** | Cérebro | Publica el proceso, que se convierte en playbook para Tino y en vara de medición para Scout |
+| **Tino y Scout** | Cérebro | Devuelven sugerencias, hallazgos y el camino de la corrección; tú apruebas, y el Cérebro reaprende |
+
+1. Enseñas al Cérebro con lo que la empresa ya tiene escrito.
+2. Quattro pone los procesos por escrito contigo, y el Cérebro pasa a saber cómo debe transcurrir cada atención.
+3. Tino atiende consultando al Cérebro; Sotto sugiere al agente consultando al Cérebro y lo que dejó Tino.
+4. Scout lee la conversación cerrada, le pide la vara de medición al Cérebro y evalúa a las personas y a Tino de la misma manera.
+5. Tino y Scout le devuelven al Cérebro lo que aprendieron; tú aceptas, corriges o niegas, y el Cérebro reaprende. La próxima conversación ya sale distinta.
+
+---
+
+## Quién puede qué
+
+| Acción | Quién |
+|---|---|
+| Editar el Cérebro y mapear procesos con Quattro | Administrador y Gestor de la Empresa |
+| Activar a Tino en un canal | Gestor de Área o superior |
+| Habilitar Sotto para una persona | Quien gestiona usuarios |
+| Usar Sotto | Quien recibió acceso |
+| Validar las evaluaciones de Scout | Gestores y Administrador |
+
+---
+
+## Artículos relacionados
+
+<Lista>
+  <Artigo titulo="El Cérebro explicado" href="/es/cerebro/o-cerebro-explicado">Todo parte de él.</Artigo>
+  <Artigo titulo="Planes y qué desbloquea cada uno" href="/es/visao-geral/planos-e-recursos">Dónde entran Tino, Quattro y el Sotto activo.</Artigo>
+</Lista>

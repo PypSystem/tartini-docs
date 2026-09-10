@@ -1,0 +1,107 @@
+---
+title: "See Process Adherence"
+sidebarTitle: "Processes and Adherence"
+description: "Find out which processes registered in the Cérebro aren't being entered, aren't progressing, or are worsening the customer experience."
+---
+
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
+The Processos screen cross-references the processes registered in the Cérebro with real conversations and shows where each one is failing, without you having to reread evaluation after evaluation.
+
+<Note>
+  Available starting with the Scale plan. Every role sees this screen, in their own scope. The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## See How Many Services Each Process Had
+
+By default, the chart orders processes by number of services, from highest to lowest.
+
+Where it is: **Scout > Processos** (Scout > Processes).
+
+<Steps>
+  <Step title="Open the screen">Go to **Scout > Processos**.</Step>
+  <Step title="Choose the criterion">Click **ordenar por** (sort by) to switch between services, completion rate, and non-completion rate.</Step>
+  <Step title="Reverse if you want">Click the order icon to switch between highest first and lowest first.</Step>
+  <Step title="See the breakdown">Hover over a bar to read how many conversations completed, partially completed, didn't complete, or were missing a required piece of information.</Step>
+</Steps>
+
+{/* CAPTURA: images/scout/processos-grafico.png | alt: Gráfico Atendimentos por processo com barras empilhadas por desfecho | olhar: a legenda de cores concluiu, concluiu em parte e não concluiu */}
+
+<Note>
+  A process that was never entered within the scope still appears this way, even if it exists in the Cérebro.
+</Note>
+
+---
+
+## See Process Coverage
+
+Two cards show the percentage of conversations with an available process that actually entered a process: one for **em campanha** (in campaign) and another for **no atendimento do dia a dia** (in day-to-day service).
+
+<Note>
+  Without a record of which processes were available outside of campaigns, the day-to-day card shows as not measured, even if the process is running normally.
+</Note>
+
+---
+
+## See Performance by Process
+
+By default, the table follows the same order as the chart above.
+
+Where it is: the **Desempenho por processo** (Performance by process) table, below the chart.
+
+<Steps>
+  <Step title="Filter by failures">Check **só processos com falha** (only processes with failures) to see only what needs attention.</Step>
+  <Step title="Choose the order">Switch between the same order as the chart and **pior leitura** (worst reading) first.</Step>
+  <Step title="Read the three columns">Compare **uso correto** (correct use), **conclusão** (completion), and **nota das conversas** (conversation score) for each process.</Step>
+</Steps>
+
+{/* CAPTURA: images/scout/processos-tabela.png | alt: Tabela Desempenho por processo com as colunas uso correto, conclusão e nota das conversas | olhar: o ponto de saúde à esquerda de cada linha */}
+
+<Note>
+  **Uso correto** measures whether, in the evaluated conversations, Tino made the right call to use or not use that process. **Conclusão** measures whether the conversations that entered the process reached its end. **Nota das conversas** is the score from 0 to 10 of the conversations where the process appeared, with a floor of 10 evaluated conversations.
+</Note>
+
+---
+
+## Open a Process's Diagnosis
+
+Clicking a bar in the chart or a row in the table opens that process's diagnosis: the exact reason for the failure, whether at entry, in progression, or in its effect on the customer, and a button that leads straight to the Cérebro screen where it gets fixed.
+
+<Steps>
+  <Step title="Open the process">Click the bar or the row for the process.</Step>
+  <Step title="Read the diagnosis">See the sentence that explains what's failing in that process.</Step>
+  <Step title="Fix it">Click the fix button. It takes you to the right Cérebro screen, already in the context of that process.</Step>
+</Steps>
+
+<Note>
+  Below 10 evaluated conversations with the process, the screen doesn't yet indicate a fix. Widen the period or wait for more services.
+</Note>
+
+---
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Why does a process's score show a dash?">
+  Fewer than 10 evaluated conversations with that process in the chosen scope.
+  </Accordion>
+  <Accordion title="Why does day-to-day coverage show as not measured?">
+  The database only records which processes were available during campaigns. Outside of them, that record doesn't exist yet.
+  </Accordion>
+  <Accordion title="Can an Area Manager use the fix button?">
+  {/* CONFIRMAR: o botão de correção leva ao Cérebro, que pede nível Empresa; não está claro se um Gestor de Área ou de Unidade consegue usá-lo */}
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related Articles
+
+<Lista>
+  <Artigo titulo="The Scout Explained" href="/en/agentes/scout/o-scout-explicado">Roles, plans, and the Scout menu.</Artigo>
+  <Artigo titulo="The Cérebro Explained" href="/en/cerebro/o-cerebro-explicado">Where processes are registered.</Artigo>
+  <Artigo titulo="Map processes from conversations" href="/en/agentes/quattro/mapeie-processos">How a process is created and maintained.</Artigo>
+  <Artigo titulo="Plans and what each one unlocks" href="/en/visao-geral/planos-e-recursos">What the Scale plan unlocks beyond Processos.</Artigo>
+</Lista>

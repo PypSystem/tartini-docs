@@ -1,57 +1,39 @@
 ---
-title: "API Reference"
-sidebarTitle: "Visão geral"
-description: "Documentação completa da API pública do Tartini."
+title: "A API do Tartini"
+sidebarTitle: "API"
+description: "O que a API do Tartini permite fazer e como pedir acesso."
 ---
 
 import { Lista, Artigo } from "/components/lista-artigos.jsx";
 
-A API pública do Tartini permite integrar funcionalidades de inteligência artificial e base de conhecimento a sistemas externos: chatbots, CRMs, aplicações web e mais.
+A API do Tartini é o caminho para o sistema da sua empresa conversar com a plataforma por conta própria: um CRM, um e-commerce, um sistema de cobrança ou qualquer aplicação sua que precise falar com o Tartini sem passar pela tela.
 
-## Base URL
+---
 
-Todas as requisições devem ser feitas para:
+## Como ter acesso
 
-```
-https://api-talk.saninternet.com/v1
-```
-
-## Autenticação
-
-Todas as requisições exigem uma API key válida enviada no header `Authorization`:
-
-```
-Authorization: Bearer pyp_live_SUA_API_KEY
-```
+O acesso à API é liberado sob solicitação. Para receber a documentação técnica e as credenciais, entre em contato com o time do Tartini pelo canal de atendimento da sua conta. O time confirma o que a sua integração precisa e libera o acesso.
 
 <Note>
-  API keys são geradas no [Dashboard](https://talk.saninternet.com) em **Configurações > API Keys**. Veja o guia completo em [Autenticação](/concepts/authentication).
+  A Conexão via API faz parte dos planos Scale e Enterprise. Quem gera e revoga os tokens de acesso dentro do Tartini é o Administrador, em **Configurações > Integrações > Conexão via API**.
 </Note>
 
-## Endpoints disponíveis
+---
+
+## O que já existe sem a API
+
+Antes de pedir acesso, vale conferir se o que você precisa já está pronto na plataforma:
+
+- **Webhooks**: o Tartini avisa o seu sistema a cada atendimento finalizado, com os dados do contato, o motivo do encerramento e, se você quiser, o resumo do Tino e o histórico. Veja [Receba eventos no seu sistema](/integracoes/webhooks).
+- **Conectores**: o Tino consulta e age no seu sistema durante a conversa, por integrações prontas ou por um servidor MCP da sua empresa. Veja [Conecte ferramentas externas à IA](/integracoes/conectores).
+- **Campanhas por webhook**: o seu sistema envia cada contato que o Tino deve abordar. Veja [Dispare campanhas por webhook ou por mensagem recebida](/campanhas/webhook-e-inbound).
+
+---
+
+## Artigos relacionados
 
 <Lista>
-  <Artigo titulo="GET /api/status" href="/api-reference/endpoint/status">Verifica se a API está operacional e valida sua API key.</Artigo>
-  <Artigo titulo="POST /api/rag/retrieve" href="/api-reference/endpoint/rag-retrieve">Busca chunks relevantes e gera respostas com IA.</Artigo>
+  <Artigo titulo="Conecte seu sistema pela API" href="/integracoes/conexao-via-api">Onde os tokens de acesso são gerados e revogados.</Artigo>
+  <Artigo titulo="Receba eventos no seu sistema" href="/integracoes/webhooks">O aviso automático a cada atendimento finalizado.</Artigo>
+  <Artigo titulo="Planos e o que cada um libera" href="/visao-geral/planos-e-recursos">Onde a Conexão via API entra.</Artigo>
 </Lista>
-
-## Formato de resposta
-
-Todas as respostas são retornadas em JSON. Em caso de erro:
-
-```json
-{
-  "statusCode": 401,
-  "error": "Unauthorized",
-  "message": "Invalid or expired API key"
-}
-```
-
-## Códigos de status
-
-| Código | Descrição |
-|--------|-----------|
-| `200` | Sucesso |
-| `401` | API key ausente, inválida ou expirada |
-| `403` | Assinatura inativa (`SubscriptionInactive`) |
-| `422` | Erro de validação no corpo da requisição |
