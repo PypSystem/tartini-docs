@@ -24,7 +24,7 @@ na ordem da jornada:
 
 ```
 visao-geral · primeiros-passos (guias, configuracao, boas-praticas, perguntas-frequentes)
-cerebro · tino · inbox · canais · campanhas · scout · metricas
+cerebro · tino · inbox · canais · campanhas · sotto · metricas
 equipe · atendimento · creditos · integracoes · conta
 ```
 
@@ -44,7 +44,7 @@ marcada no texto como `{/* CONFIRMAR: ... */}`.
   agentes." Os agentes são quatro, cada um com o seu posto e todos com a mesma fonte:
   o **Tino** fala com o cliente (ligado em Configurações > Atendimento > IA por canal),
   o **Copilot** fica ao lado de quem atende (consulta em todos os planos, modo ativo no
-  Scale), o **Scout** lê a conversa depois que fecha (ligado nas Regras de Conversa) e
+  Scale), o **Sotto** lê a conversa depois que fecha (ligado nas Regras de Conversa) e
   o **Quattro** põe a operação por escrito (Cérebro > Processos > Mapeamento, Scale).
   A referência de copy sobre eles é a landing https://www.tartini.com.br/tartini
   (frase canônica: "O Cérebro orquestra os agentes, e eles conversam entre si";
@@ -52,7 +52,7 @@ marcada no texto como `{/* CONFIRMAR: ... */}`.
   identidade é sua"; neuroplasticidade: o Cérebro evolui a cada interação). Em texto
   genérico, "os agentes" no plural.
 - **Menu principal:** Página Inicial · Inbox · Métricas · Central de Conversas · Cérebro
-  · Scout · Campanhas. Configurações no rodapé do menu.
+  · Sotto · Campanhas. Configurações no rodapé do menu.
 - **Configurações:** Empresa (Informações, Áreas & Unidades, Usuários) · Canais
   (WhatsApp Business, Chat Widget, WABA, Conexão via API) · Atendimento (Regras de
   Conversa, IA por canal, Mensagens Rápidas, SLA de Atendimento, Pesquisa de
@@ -73,7 +73,7 @@ marcada no texto como `{/* CONFIRMAR: ... */}`.
 
 | Tipo | Título | Esqueleto |
 |---|---|---|
-| Visão geral ("X explicado") | "O Scout explicado" | O que é, para que serve, o submenu, quem vê, e links para as tarefas |
+| Visão geral ("X explicado") | "O Sotto explicado" | O que é, para que serve, o submenu, quem vê, e links para as tarefas |
 | Recurso e tarefas | Imperativo: "Defina o SLA de atendimento" | Abertura com o resultado → `<Note>` de papel e plano → por tarefa, separada por `---`: `## verbo`, estado padrão, onde fica (caminho em negrito), `<Steps>` com o botão em negrito, captura, `<Note>` com os detalhes → `## Perguntas frequentes` em `<AccordionGroup>` → `## Artigos relacionados` |
 | Guia de início rápido | Gerúndio: "Configurando o Inbox" | Abertura → lista numerada dos passos com âncoras → `## Passo N: verbo`, vídeo, porquê, `###` subtarefas com links, `<Info>` Saiba mais → `## Próximos passos` |
 | Boas práticas | "Boas práticas para entrar no ar" | Para quem é → `## Opção N` com a favor, contra e como fazer → a recomendação |
@@ -88,9 +88,9 @@ Tamanhos: tarefa entre 500 e 1.200 palavras; guia entre 500 e 1.000; visão gera
 - Segunda pessoa (você, sua equipe); o produto e os agentes na terceira; "nós" só
   quando a SAN age.
 - Os agentes conversam entre si. Cada um tem a sua responsabilidade e, quando falta
-  uma informação, pergunta ao outro: o Tino e o Copilot consultam o Cérebro, o Scout
+  uma informação, pergunta ao outro: o Tino e o Copilot consultam o Cérebro, o Sotto
   pede ao Cérebro a régua, o Tino entrega o resumo ao Copilot e à equipe, e o Tino e o
-  Scout devolvem ao Cérebro o que aprenderam. Nunca descrever um agente como isolado.
+  Sotto devolvem ao Cérebro o que aprenderam. Nunca descrever um agente como isolado.
 - Frases de até 20 palavras. Parágrafos de até duas frases. Enumeração com mais de dois
   itens vira lista.
 - `description`: uma frase com o benefício, até 25 palavras.
@@ -102,7 +102,7 @@ Tamanhos: tarefa entre 500 e 1.200 palavras; guia entre 500 e 1.000; visão gera
   vem do inventário; sem certeza, não invente.
 - Exemplos do mundo de quem lê: loja, clínica, franquia, rede; nomes fictícios.
 - O texto do link diz o que a pessoa vai encontrar. Nunca "clique aqui".
-- Termos que a interface mostra em inglês ficam em inglês: Copilot, Scout, widget,
+- Termos que a interface mostra em inglês ficam em inglês: Copilot, Sotto, widget,
   webhook, WABA, handoff, CSAT, SLA.
 
 Vocabulário: pessoas (não gente); processos e etapas (não fluxos); o Tino atende, a IA

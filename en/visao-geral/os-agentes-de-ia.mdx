@@ -6,7 +6,7 @@ description: "Everything starts from the Cérebro: what it is, what each of the 
 
 import { Lista, Artigo } from "/components/lista-artigos.jsx";
 
-Everything starts from the Cérebro. You hand over your company's material, it learns your standard, and it coordinates the team of agents that works for you. There are four agents, each with its own post and all sharing the same source: Tino talks to the customer, Copilot stays alongside whoever is serving, Scout reads the conversation after it closes, and Quattro writes the operation down. The Cérebro orchestrates the agents, and they talk to one another: when one needs what another knows, it asks, and the answer comes back before the message reaches the customer.
+Everything starts from the Cérebro. You hand over your company's material, it learns your standard, and it coordinates the team of agents that works for you. There are four agents, each with its own post and all sharing the same source: Tino talks to the customer, Copilot stays alongside whoever is serving, Sotto reads the conversation after it closes, and Quattro writes the operation down. The Cérebro orchestrates the agents, and they talk to one another: when one needs what another knows, it asks, and the answer comes back before the message reaches the customer.
 
 <Note>
   The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
@@ -63,19 +63,19 @@ See [Use Copilot](/en/inbox/copilot).
 
 ---
 
-## Scout
+## Sotto
 
-Scout reads the conversation after it closes. With **Ativar Scout ao finalizar conversa** (Activate Scout when closing a conversation) turned on in Conversation Rules, every closed conversation, whether by the team or by Tino, gets a summary, a score, and an evaluation by criterion. To evaluate, Scout asks the Cérebro for the company's standard and, when the conversation went through a process, checks step by step what was done.
+Sotto reads the conversation after it closes. With **Ativar Sotto ao finalizar conversa** (Activate Sotto when closing a conversation) turned on in Conversation Rules, every closed conversation, whether by the team or by Tino, gets a summary, a score, and an evaluation by criterion. To evaluate, Sotto asks the Cérebro for the company's standard and, when the conversation went through a process, checks step by step what was done.
 
-Anything that falls outside your criteria reaches you as a point of attention. You agree or correct it, and the correction becomes training: the Cérebro relearns from what you decided. Every finding from Scout points to the Cérebro screen where the correction is written, and the feedback reaches the agent.
+Anything that falls outside your criteria reaches you as a point of attention. You agree or correct it, and the correction becomes training: the Cérebro relearns from what you decided. Every finding from Sotto points to the Cérebro screen where the correction is written, and the feedback reaches the agent.
 
-Scout shows performance by agent, Unit, Area, and Company, adherence to processes, and customer satisfaction. Agents see their own performance and feedback.
+Sotto shows performance by agent, Unit, Area, and Company, adherence to processes, and customer satisfaction. Agents see their own performance and feedback.
 
 <Note>
-  Every Scout analysis consumes AI credits. Scout is available on every plan; process adherence requires Scale.
+  Every Sotto analysis consumes AI credits. Sotto is available on every plan; process adherence requires Scale.
 </Note>
 
-See [Scout explained](/en/scout/o-scout-explicado).
+See [Sotto explained](/en/sotto/o-sotto-explicado).
 
 ---
 
@@ -83,7 +83,7 @@ See [Scout explained](/en/scout/o-scout-explicado).
 
 Quattro writes the operation down. In **Cérebro > Processos > Mapeamento** (Cérebro > Processes > Mapping), you describe, in your own words, how a service interaction happens today: a duplicate invoice, a booking, an exchange. Quattro asks what's missing and builds the process, with steps, transitions, and outcomes. A step that checks one of your systems is included too: you authorize it, and the AI performs the check during service.
 
-Nothing it builds takes effect without your approval. The published process becomes the playbook that Tino follows in every conversation and the standard by which Scout measures whether the process was followed. Quattro also prepares the documentation: process candidates discovered in conversations and documents reach you in **Descobertas** (Discoveries), for you to approve or discard.
+Nothing it builds takes effect without your approval. The published process becomes the playbook that Tino follows in every conversation and the standard by which Sotto measures whether the process was followed. Quattro also prepares the documentation: process candidates discovered in conversations and documents reach you in **Descobertas** (Discoveries), for you to approve or discard.
 
 <Note>
   Processes are part of the Scale and Enterprise plans. Mapping is done by the Administrator or the Company Manager.
@@ -103,17 +103,17 @@ Each agent turns to another right at the point where its own responsibility ends
 | **Tino** | Team and Copilot | Delivers the history and the service summary when handing off the conversation |
 | **Copilot** | Cérebro | What the company knows about the subject, including private knowledge |
 | **Copilot** | Tino | What has already been said and done before the conversation reaches the team |
-| **Scout** | Cérebro | The standard: personality, rules, and processes to evaluate the conversation |
-| **Scout** | Tino and team | What each one did in the closed conversation |
+| **Sotto** | Cérebro | The standard: personality, rules, and processes to evaluate the conversation |
+| **Sotto** | Tino and team | What each one did in the closed conversation |
 | **Quattro** | You | What was missing for the process to be complete |
-| **Quattro** | Cérebro | Publishes the process, which becomes a playbook for Tino and a standard for Scout |
-| **Tino and Scout** | Cérebro | Return suggestions, findings, and the path to the correction; you approve, and the Cérebro relearns |
+| **Quattro** | Cérebro | Publishes the process, which becomes a playbook for Tino and a standard for Sotto |
+| **Tino and Sotto** | Cérebro | Return suggestions, findings, and the path to the correction; you approve, and the Cérebro relearns |
 
 1. You teach the Cérebro with what the company already has written down.
 2. Quattro writes the processes down with you, and the Cérebro learns how each service interaction should run.
 3. Tino serves by consulting the Cérebro; Copilot suggests replies to the agent by consulting the Cérebro and what Tino left behind.
-4. Scout reads the closed conversation, asks the Cérebro for the standard, and evaluates people and Tino the same way.
-5. Tino and Scout return to the Cérebro what they learned; you accept, correct, or deny it, and the Cérebro relearns. The next conversation already comes out different.
+4. Sotto reads the closed conversation, asks the Cérebro for the standard, and evaluates people and Tino the same way.
+5. Tino and Sotto return to the Cérebro what they learned; you accept, correct, or deny it, and the Cérebro relearns. The next conversation already comes out different.
 
 ---
 
@@ -125,7 +125,7 @@ Each agent turns to another right at the point where its own responsibility ends
 | Turn Tino on in a channel | Area Manager or above |
 | Grant Copilot access to a person | Whoever manages users |
 | Use Copilot | Whoever was granted access |
-| Validate Scout's evaluations | Managers and Administrator |
+| Validate Sotto's evaluations | Managers and Administrator |
 
 ---
 

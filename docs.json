@@ -177,15 +177,15 @@
                 ]
               },
               {
-                "group": "Scout",
+                "group": "Sotto",
                 "icon": "compass",
                 "pages": [
-                  "scout/o-scout-explicado",
-                  "scout/avaliacoes",
-                  "scout/concorde-ou-corrija",
-                  "scout/desempenho-da-equipe",
-                  "scout/processos-e-aderencia",
-                  "scout/satisfacao"
+                  "sotto/o-sotto-explicado",
+                  "sotto/avaliacoes",
+                  "sotto/concorde-ou-corrija",
+                  "sotto/desempenho-da-equipe",
+                  "sotto/processos-e-aderencia",
+                  "sotto/satisfacao"
                 ]
               },
               {
@@ -480,15 +480,15 @@
                 ]
               },
               {
-                "group": "Scout",
+                "group": "Sotto",
                 "icon": "compass",
                 "pages": [
-                  "en/scout/o-scout-explicado",
-                  "en/scout/avaliacoes",
-                  "en/scout/concorde-ou-corrija",
-                  "en/scout/desempenho-da-equipe",
-                  "en/scout/processos-e-aderencia",
-                  "en/scout/satisfacao"
+                  "en/sotto/o-sotto-explicado",
+                  "en/sotto/avaliacoes",
+                  "en/sotto/concorde-ou-corrija",
+                  "en/sotto/desempenho-da-equipe",
+                  "en/sotto/processos-e-aderencia",
+                  "en/sotto/satisfacao"
                 ]
               },
               {
@@ -783,15 +783,15 @@
                 ]
               },
               {
-                "group": "Scout",
+                "group": "Sotto",
                 "icon": "compass",
                 "pages": [
-                  "es/scout/o-scout-explicado",
-                  "es/scout/avaliacoes",
-                  "es/scout/concorde-ou-corrija",
-                  "es/scout/desempenho-da-equipe",
-                  "es/scout/processos-e-aderencia",
-                  "es/scout/satisfacao"
+                  "es/sotto/o-sotto-explicado",
+                  "es/sotto/avaliacoes",
+                  "es/sotto/concorde-ou-corrija",
+                  "es/sotto/desempenho-da-equipe",
+                  "es/sotto/processos-e-aderencia",
+                  "es/sotto/satisfacao"
                 ]
               },
               {
@@ -1164,11 +1164,11 @@
     },
     {
       "source": "/avaliacao/conversas",
-      "destination": "/scout/avaliacoes"
+      "destination": "/sotto/avaliacoes"
     },
     {
       "source": "/avaliacao/atendentes",
-      "destination": "/scout/desempenho-da-equipe"
+      "destination": "/sotto/desempenho-da-equipe"
     },
     {
       "source": "/conta/configuracoes-de-usuario",
@@ -1177,6 +1177,78 @@
     {
       "source": "/conta/sessoes-ativas",
       "destination": "/conta/sessoes-e-dispositivos"
+    },
+    {
+      "source": "/scout/o-scout-explicado",
+      "destination": "/sotto/o-sotto-explicado"
+    },
+    {
+      "source": "/scout/avaliacoes",
+      "destination": "/sotto/avaliacoes"
+    },
+    {
+      "source": "/scout/concorde-ou-corrija",
+      "destination": "/sotto/concorde-ou-corrija"
+    },
+    {
+      "source": "/scout/desempenho-da-equipe",
+      "destination": "/sotto/desempenho-da-equipe"
+    },
+    {
+      "source": "/scout/processos-e-aderencia",
+      "destination": "/sotto/processos-e-aderencia"
+    },
+    {
+      "source": "/scout/satisfacao",
+      "destination": "/sotto/satisfacao"
+    },
+    {
+      "source": "/en/scout/o-scout-explicado",
+      "destination": "/en/sotto/o-sotto-explicado"
+    },
+    {
+      "source": "/en/scout/avaliacoes",
+      "destination": "/en/sotto/avaliacoes"
+    },
+    {
+      "source": "/en/scout/concorde-ou-corrija",
+      "destination": "/en/sotto/concorde-ou-corrija"
+    },
+    {
+      "source": "/en/scout/desempenho-da-equipe",
+      "destination": "/en/sotto/desempenho-da-equipe"
+    },
+    {
+      "source": "/en/scout/processos-e-aderencia",
+      "destination": "/en/sotto/processos-e-aderencia"
+    },
+    {
+      "source": "/en/scout/satisfacao",
+      "destination": "/en/sotto/satisfacao"
+    },
+    {
+      "source": "/es/scout/o-scout-explicado",
+      "destination": "/es/sotto/o-sotto-explicado"
+    },
+    {
+      "source": "/es/scout/avaliacoes",
+      "destination": "/es/sotto/avaliacoes"
+    },
+    {
+      "source": "/es/scout/concorde-ou-corrija",
+      "destination": "/es/sotto/concorde-ou-corrija"
+    },
+    {
+      "source": "/es/scout/desempenho-da-equipe",
+      "destination": "/es/sotto/desempenho-da-equipe"
+    },
+    {
+      "source": "/es/scout/processos-e-aderencia",
+      "destination": "/es/sotto/processos-e-aderencia"
+    },
+    {
+      "source": "/es/scout/satisfacao",
+      "destination": "/es/sotto/satisfacao"
     }
   ]
 }
