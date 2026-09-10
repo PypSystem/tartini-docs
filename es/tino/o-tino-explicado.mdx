@@ -4,6 +4,8 @@ sidebarTitle: "Tino explicado"
 description: "El agente que atiende al cliente en primera línea: dónde se activa, cómo conduce la conversación y cuándo la pasa al equipo."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Tino es el agente de IA que habla con el cliente. Cuando está activado en un canal, es él quien responde el primer mensaje, consulta al Cérebro en cada respuesta, recopila datos en la ficha del contacto y pasa la conversación al equipo cuando tú lo indicaste o cuando no puede continuar. No trabaja aislado: le pregunta al Cérebro lo que no sabe, le entrega a Copilot y al equipo el resumen de lo que hizo, y Scout lo analiza.
 
 <Note>
@@ -92,7 +94,7 @@ Por otro lado, Scout lee las conversaciones de Tino con la misma vara que usa co
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Activa a Tino en un canal" href="/es/tino/ia-por-canal">La pantalla IA por canal, campo a campo.</Card>
-  <Card title="Cuándo Tino pasa la conversación" href="/es/tino/handoff">Qué ve el equipo y cómo tomar el control.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Activa a Tino en un canal" href="/es/tino/ia-por-canal">La pantalla IA por canal, campo a campo.</Artigo>
+  <Artigo titulo="Cuándo Tino pasa la conversación" href="/es/tino/handoff">Qué ve el equipo y cómo tomar el control.</Artigo>
+</Lista>

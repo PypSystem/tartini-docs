@@ -4,6 +4,8 @@ sidebarTitle: "First Access"
 description: "What happens the first time the account owner signs in: password, two-factor authentication, company name, and structure."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 When the account is created by SAN, the owner signs in through the client area, and Tartini asks for three things before unlocking the Home page: a password, the company name, and the structure. If the company requires two-factor authentication, it comes between the password and the name.
 
 <Note>
@@ -85,7 +87,7 @@ The Home page opens with the setup checklist. Follow [Get Your Operation Ready w
 
 ## Related articles
 
-<CardGroup cols={2}>
-  <Card title="Get Your Operation Ready with the Checklist" href="/en/primeiros-passos/configuracao/checklist-de-preparacao">The steps on the Home page.</Card>
-  <Card title="Sign in to Tartini and recover your password" href="/en/conta/entrar-e-recuperar-senha">The everyday sign-in screen.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Get Your Operation Ready with the Checklist" href="/en/primeiros-passos/configuracao/checklist-de-preparacao">The steps on the Home page.</Artigo>
+  <Artigo titulo="Sign in to Tartini and recover your password" href="/en/conta/entrar-e-recuperar-senha">The everyday sign-in screen.</Artigo>
+</Lista>

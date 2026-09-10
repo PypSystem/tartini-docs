@@ -4,6 +4,8 @@ sidebarTitle: "Tino explained"
 description: "The agent that serves the customer on the front line: where it's turned on, how it runs the conversation, and when it hands off to the team."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Tino is the AI agent that talks to the customer. When it's turned on in a channel, it's the one that answers the first message, consults the Cérebro on every reply, collects data in the contact's record, and hands off the conversation to the team when you've told it to or when it can't proceed. It doesn't work alone: it asks the Cérebro what it doesn't know, delivers a summary of what it did to Copilot and the team, and is read by Scout.
 
 <Note>
@@ -92,7 +94,7 @@ On the other side, Scout reads Tino's conversations with the same standard as th
 
 ## Related articles
 
-<CardGroup cols={2}>
-  <Card title="Turn Tino on in a channel" href="/en/tino/ia-por-canal">The AI by channel screen, field by field.</Card>
-  <Card title="When Tino hands off the conversation" href="/en/tino/handoff">What the team sees and how to take over.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Turn Tino on in a channel" href="/en/tino/ia-por-canal">The AI by channel screen, field by field.</Artigo>
+  <Artigo titulo="When Tino hands off the conversation" href="/en/tino/handoff">What the team sees and how to take over.</Artigo>
+</Lista>

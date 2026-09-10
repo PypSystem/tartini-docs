@@ -4,6 +4,8 @@ sidebarTitle: "Panorama"
 description: "Veja em uma tela só o que mudou no período: quanto o Tino absorveu, como está o SLA e para onde olhar primeiro."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 O Panorama junta os números da equipe e do Tino num retrato só, já comparado com o período anterior. Em poucos segundos você sabe o que melhorou, o que perdeu força e para qual tela ir em seguida.
 
 <Note>
@@ -131,9 +133,9 @@ Use **refinar** para restringir a um ou mais canais (**WhatsApp**, **WhatsApp Bu
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Métricas da operação" href="/metricas/operacao">Os números da equipe, seção por seção.</Card>
-  <Card title="Métricas do Tino" href="/metricas/tino">O que o Tino resolveu e a que velocidade.</Card>
-  <Card title="SLA de atendimento" href="/atendimento/sla">Como o prazo de primeira resposta é configurado.</Card>
-  <Card title="Papéis e acessos explicados" href="/visao-geral/papeis-e-acessos">Quem enxerga cada nível da estrutura.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Métricas da operação" href="/metricas/operacao">Os números da equipe, seção por seção.</Artigo>
+  <Artigo titulo="Métricas do Tino" href="/metricas/tino">O que o Tino resolveu e a que velocidade.</Artigo>
+  <Artigo titulo="SLA de atendimento" href="/atendimento/sla">Como o prazo de primeira resposta é configurado.</Artigo>
+  <Artigo titulo="Papéis e acessos explicados" href="/visao-geral/papeis-e-acessos">Quem enxerga cada nível da estrutura.</Artigo>
+</Lista>

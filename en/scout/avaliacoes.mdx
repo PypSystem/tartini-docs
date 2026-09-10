@@ -4,6 +4,8 @@ sidebarTitle: "Evaluations"
 description: "Find the conversations Scout has already evaluated, filter for the ones that need your attention, and read the full analysis."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 For every closed conversation, Scout already leaves a summary and a score ready. You open the Conversas screen, choose what to review first, and read the analysis without reopening the entire conversation.
 
 <Note>
@@ -103,9 +105,9 @@ Where it is: the **Ler conversa completa** (Read full conversation) button, in t
 
 ## Related Articles
 
-<CardGroup cols={2}>
-  <Card title="Agree with Scout or correct the score" href="/en/scout/concorde-ou-corrija">How to validate the score and what changes afterward.</Card>
-  <Card title="The Scout Explained" href="/en/scout/o-scout-explicado">What Scout evaluates and how the cycle works.</Card>
-  <Card title="Set the conversation rules" href="/en/atendimento/regras-de-conversa">Turn on Scout when closing conversations.</Card>
-  <Card title="Track your credit balance and statement" href="/en/creditos/creditos-e-extrato">See the consumption of each analysis.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Agree with Scout or correct the score" href="/en/scout/concorde-ou-corrija">How to validate the score and what changes afterward.</Artigo>
+  <Artigo titulo="The Scout Explained" href="/en/scout/o-scout-explicado">What Scout evaluates and how the cycle works.</Artigo>
+  <Artigo titulo="Set the conversation rules" href="/en/atendimento/regras-de-conversa">Turn on Scout when closing conversations.</Artigo>
+  <Artigo titulo="Track your credit balance and statement" href="/en/creditos/creditos-e-extrato">See the consumption of each analysis.</Artigo>
+</Lista>

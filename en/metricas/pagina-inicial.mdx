@@ -4,6 +4,8 @@ sidebarTitle: "Home Page"
 description: "The day's dashboard: the real-time queue, what needs you, today's numbers and the team, or your own conversations if you provide service."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 After the setup checklist, the Página Inicial (Home Page) becomes the day's dashboard. Managers see the whole operation; agents see their own conversations and their own performance.
 
 <Note>
@@ -81,7 +83,7 @@ The last fourteen days: **Clientes atendidos** (Customers served), **Tempo médi
 
 ## Related Articles
 
-<CardGroup cols={2}>
-  <Card title="Operation Metrics" href="/en/metricas/operacao">The numbers by period, Unit, and agent.</Card>
-  <Card title="Tino Metrics" href="/en/metricas/tino">What Tino resolves and how much it consumes.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Operation Metrics" href="/en/metricas/operacao">The numbers by period, Unit, and agent.</Artigo>
+  <Artigo titulo="Tino Metrics" href="/en/metricas/tino">What Tino resolves and how much it consumes.</Artigo>
+</Lista>

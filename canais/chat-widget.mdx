@@ -4,6 +4,8 @@ sidebarTitle: "Chat Widget"
 description: "Adicione um chat de atendimento ao seu site e receba as conversas direto no Inbox da sua equipe."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Com o Chat Widget instalado, qualquer visitante do seu site pode abrir uma conversa que chega direto no Inbox, junto com os outros canais.
 
 <Note>Quem ativa e configura: Administrador, Gestor da Empresa, Gestor de Área e Gestor de Unidade. Disponível em todos os planos; ligar o Tino no widget é do plano Scale.</Note>
@@ -91,7 +93,7 @@ Por padrão, o Tino fica desligado em todo widget novo.
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Canais explicados" href="/canais/canais-explicados">Os canais disponíveis no Tartini.</Card>
-  <Card title="Ligue o Tino em um canal" href="/tino/ia-por-canal">Horários, follow-up e encerramento para este canal.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Canais explicados" href="/canais/canais-explicados">Os canais disponíveis no Tartini.</Artigo>
+  <Artigo titulo="Ligue o Tino em um canal" href="/tino/ia-por-canal">Horários, follow-up e encerramento para este canal.</Artigo>
+</Lista>

@@ -4,6 +4,8 @@ sidebarTitle: "Inteligência da Base"
 description: "Revise, direto de cada conteúdo indexado, o que o Tino descobriu sozinho e decida o que vira personalidade ou processo."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Enquanto indexa um documento, uma pergunta e resposta ou uma página de site, o Tino também procura por padrões: um jeito de falar, uma regra de conformidade, um processo inteiro. Essas descobertas ficam separadas até você revisar cada uma.
 
 <Note>
@@ -77,7 +79,7 @@ Para o passo a passo completo de mapeamento e o funcionamento da fila central de
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Cadastre as propriedades da empresa" href="/cerebro/propriedades-da-empresa">Veja a lista completa de conteúdo indexado.</Card>
-  <Card title="Mapeie processos a partir das conversas" href="/cerebro/mapeie-processos">Revise a fila central de candidatos a processo.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Cadastre as propriedades da empresa" href="/cerebro/propriedades-da-empresa">Veja a lista completa de conteúdo indexado.</Artigo>
+  <Artigo titulo="Mapeie processos a partir das conversas" href="/cerebro/mapeie-processos">Revise a fila central de candidatos a processo.</Artigo>
+</Lista>

@@ -4,6 +4,8 @@ sidebarTitle: "Scout"
 description: "Veja como o Scout avalia cada conversa encerrada e onde encontrar cada parte do diagnóstico da sua operação."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 O Scout lê cada conversa encerrada, pela sua equipe ou pelo Tino, pergunta ao Cérebro qual é o padrão da empresa e devolve um resumo, uma nota e o que ajustar. Você abre um só lugar e sabe onde a operação precisa da sua atenção. E, com o tempo, as suas correções e os achados do Scout vão ensinando ao Cérebro o jeito como a sua empresa atende e quer atender.
 
 <Note>
@@ -111,11 +113,11 @@ Em todas as telas, a barra de escopo fica no topo: o nível (Empresa, Área, Uni
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Leia as avaliações do Scout" href="/scout/avaliacoes">A lista de conversas avaliadas e a análise completa de cada uma.</Card>
-  <Card title="Concorde com o Scout ou corrija a nota" href="/scout/concorde-ou-corrija">Como validar a nota e o que muda depois.</Card>
-  <Card title="Acompanhe o desempenho da equipe" href="/scout/desempenho-da-equipe">A nota por Área, Unidade e atendente, e a análise mensal.</Card>
-  <Card title="Acompanhe a satisfação dos clientes" href="/scout/satisfacao">A nota da pesquisa e onde ela varia.</Card>
-  <Card title="Veja a aderência aos processos" href="/scout/processos-e-aderencia">Onde os processos do Cérebro estão falhando.</Card>
-  <Card title="Defina as regras de conversa" href="/atendimento/regras-de-conversa">Ligue o Scout ao encerrar conversas.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Leia as avaliações do Scout" href="/scout/avaliacoes">A lista de conversas avaliadas e a análise completa de cada uma.</Artigo>
+  <Artigo titulo="Concorde com o Scout ou corrija a nota" href="/scout/concorde-ou-corrija">Como validar a nota e o que muda depois.</Artigo>
+  <Artigo titulo="Acompanhe o desempenho da equipe" href="/scout/desempenho-da-equipe">A nota por Área, Unidade e atendente, e a análise mensal.</Artigo>
+  <Artigo titulo="Acompanhe a satisfação dos clientes" href="/scout/satisfacao">A nota da pesquisa e onde ela varia.</Artigo>
+  <Artigo titulo="Veja a aderência aos processos" href="/scout/processos-e-aderencia">Onde os processos do Cérebro estão falhando.</Artigo>
+  <Artigo titulo="Defina as regras de conversa" href="/atendimento/regras-de-conversa">Ligue o Scout ao encerrar conversas.</Artigo>
+</Lista>

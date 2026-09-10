@@ -4,6 +4,8 @@ sidebarTitle: "Canales"
 description: "Descubre las formas de hablar con tus clientes dentro de Tartini y elige el canal correcto para cada situación."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Cada canal conectado se convierte en una puerta de entrada para las conversaciones de tus clientes, que llegan directo al Inbox de tu equipo. Puedes conectar más de uno al mismo tiempo y decidir, canal por canal, si Tino atiende solo.
 
 <Note>
@@ -89,9 +91,9 @@ Todo canal muestra un estado:
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Conecta WhatsApp por código QR" href="/es/canais/whatsapp-qr-code">Escanea un código y empieza a atender por WhatsApp.</Card>
-  <Card title="Conecta WhatsApp Business API (WABA)" href="/es/canais/whatsapp-business-api">La conexión oficial de Meta, paso a paso.</Card>
-  <Card title="Instala el Chat Widget en tu sitio" href="/es/canais/chat-widget">Un chat de atención directo en tu sitio.</Card>
-  <Card title="Resuelve problemas de conexión" href="/es/canais/problemas-de-conexao">Síntomas comunes y cómo corregirlos.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Conecta WhatsApp por código QR" href="/es/canais/whatsapp-qr-code">Escanea un código y empieza a atender por WhatsApp.</Artigo>
+  <Artigo titulo="Conecta WhatsApp Business API (WABA)" href="/es/canais/whatsapp-business-api">La conexión oficial de Meta, paso a paso.</Artigo>
+  <Artigo titulo="Instala el Chat Widget en tu sitio" href="/es/canais/chat-widget">Un chat de atención directo en tu sitio.</Artigo>
+  <Artigo titulo="Resuelve problemas de conexión" href="/es/canais/problemas-de-conexao">Síntomas comunes y cómo corregirlos.</Artigo>
+</Lista>

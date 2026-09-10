@@ -4,6 +4,8 @@ sidebarTitle: "Operation"
 description: "Track what's happening right now, the quality of service, and each team member's performance."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 The Operação screen shows the health of service during the period: who's online right now, whether the SLA is on track, where conversations come from, and how each agent is doing. Everything compared with the previous period.
 
 <Note>
@@ -119,9 +121,9 @@ Below the comparison, the table lists every agent with activity in the period: *
 
 ## Related Articles
 
-<CardGroup cols={2}>
-  <Card title="The Metrics Panorama" href="/en/metricas/panorama">The period's executive snapshot.</Card>
-  <Card title="Tino Metrics" href="/en/metricas/tino">What the AI delivered and how fast.</Card>
-  <Card title="Service SLA" href="/en/atendimento/sla">The deadline that appears in 1ª resposta.</Card>
-  <Card title="Use the Conversation Center" href="/en/inbox/central-de-conversas">See the conversations behind each number.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="The Metrics Panorama" href="/en/metricas/panorama">The period's executive snapshot.</Artigo>
+  <Artigo titulo="Tino Metrics" href="/en/metricas/tino">What the AI delivered and how fast.</Artigo>
+  <Artigo titulo="Service SLA" href="/en/atendimento/sla">The deadline that appears in 1ª resposta.</Artigo>
+  <Artigo titulo="Use the Conversation Center" href="/en/inbox/central-de-conversas">See the conversations behind each number.</Artigo>
+</Lista>

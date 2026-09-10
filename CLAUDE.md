@@ -159,6 +159,10 @@ mesmo commit.
 
 A terceira aba da navegação, **Marca**, é o manual da marca do Tartini em `marca/` (oito capítulos), com traduções em `en/marca` e `es/marca`. A fonte da verdade é o site: `app/src/app/(ai)/tartini/marca/*/page.tsx`, `marca/_marca/capitulos.ts` e `_sections/marcaSimbolos.tsx` no repositório san-site-js (branch `site-tartini`). Para alterar um capítulo, releia o código do site e reflita o texto aqui; nada de regra inventada. As pranchas em `images/marca/*.svg` são geradas a partir da geometria canônica do símbolo, não desenhadas à mão. `marca/voz.mdx` lista as palavras banidas de propósito e fica fora do lint de vocabulário.
 
+## Lista de artigos relacionados
+
+Os "Artigos relacionados" e "Próximos passos" usam a lista em linhas, uma embaixo da outra e com a seta à direita, como nas coleções da Intercom: componente `Lista`/`Artigo` em `components/lista-artigos.jsx`, estilo em `style.css`. Em artigo novo, importe com `import { Lista, Artigo } from "/components/lista-artigos.jsx";` logo após o frontmatter e use `<Lista><Artigo titulo="..." href="...">descrição</Artigo></Lista>`. Não use `CardGroup` para listar artigos; a grade fica só nas homes (`index.mdx`), como a home da Intercom. `python3 scripts/lista-de-artigos.py` converte grades esquecidas.
+
 ## Antes de publicar
 
 - [ ] Um tipo de artigo, um recurso, título com o verbo certo.

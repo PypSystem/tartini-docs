@@ -4,6 +4,8 @@ sidebarTitle: "Aceite um convite"
 description: "Recebeu um convite de um gestor? Crie a senha, ative a conta e entre direto no Inbox."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 O convite chega por e-mail, enviado por um gestor ou administrador da sua empresa. Você define nome e senha, e a conta fica ativa na hora.
 
 ---
@@ -51,7 +53,7 @@ O link tem prazo. Se a tela disser que o token é inválido ou expirado, peça a
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Conheça a tela do Tartini" href="/visao-geral/conheca-a-navegacao">O menu e a troca de Unidade.</Card>
-  <Card title="Conheça o Inbox" href="/inbox/conheca-o-inbox">Por onde as conversas chegam.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Conheça a tela do Tartini" href="/visao-geral/conheca-a-navegacao">O menu e a troca de Unidade.</Artigo>
+  <Artigo titulo="Conheça o Inbox" href="/inbox/conheca-o-inbox">Por onde as conversas chegam.</Artigo>
+</Lista>

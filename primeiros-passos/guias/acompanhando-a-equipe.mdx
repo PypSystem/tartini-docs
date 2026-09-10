@@ -4,6 +4,8 @@ sidebarTitle: "Acompanhando a equipe"
 description: "Ligue o Scout, leia o Panorama, valide as avaliações e acompanhe o desempenho e a satisfação, com o Copilot ao lado de quem atende."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 O Scout lê cada conversa encerrada, pede ao Cérebro o padrão da empresa e devolve nota, resumo e recomendações, para o gestor e de volta ao Cérebro. Este guia liga o Scout, ensina a validar as avaliações e mostra onde acompanhar a equipe.
 
 Dividimos em passos:
@@ -88,7 +90,7 @@ O Copilot é a devolutiva do Scout aplicada em tempo real: ele responde ao atend
 
 ## Próximos passos
 
-<CardGroup cols={2}>
-  <Card title="Ligando o Tino" href="/primeiros-passos/guias/ligando-o-tino">A IA na linha de frente, com o Scout avaliando.</Card>
-  <Card title="Métricas da operação" href="/metricas/operacao">Os números da equipe por período.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Ligando o Tino" href="/primeiros-passos/guias/ligando-o-tino">A IA na linha de frente, com o Scout avaliando.</Artigo>
+  <Artigo titulo="Métricas da operação" href="/metricas/operacao">Os números da equipe por período.</Artigo>
+</Lista>

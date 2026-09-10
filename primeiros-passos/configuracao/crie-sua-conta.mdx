@@ -4,6 +4,8 @@ sidebarTitle: "Crie sua conta"
 description: "Três passos para criar a conta da sua empresa e entrar no Tartini na hora."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Ao criar a conta você já diz como a sua empresa se organiza, e entra direto na Página Inicial com tudo pronto para configurar.
 
 <Note>
@@ -59,7 +61,7 @@ A Página Inicial mostra o checklist de preparação: Identidade da Empresa, can
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Prepare sua operação com o checklist" href="/primeiros-passos/configuracao/checklist-de-preparacao">As etapas da Página Inicial.</Card>
-  <Card title="Começando com o Tartini" href="/primeiros-passos/guias/comecando-com-o-tartini">O guia completo, na ordem certa.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Prepare sua operação com o checklist" href="/primeiros-passos/configuracao/checklist-de-preparacao">As etapas da Página Inicial.</Artigo>
+  <Artigo titulo="Começando com o Tartini" href="/primeiros-passos/guias/comecando-com-o-tartini">O guia completo, na ordem certa.</Artigo>
+</Lista>

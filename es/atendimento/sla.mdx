@@ -4,6 +4,8 @@ sidebarTitle: "SLA de atención"
 description: "Dile al equipo cuánto tiempo puede esperar el cliente por la primera respuesta humana y recibe una alerta antes de que se venza."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Con el SLA configurado, tu equipo sabe exactamente cuánto tiempo tiene para la primera respuesta humana, y los gestores reciben una alerta antes de que se venza el plazo.
 
 <Note>
@@ -95,7 +97,7 @@ El cronómetro del SLA solo cuenta dentro del horario comercial registrado. Fuer
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Define las reglas de conversación" href="/es/atendimento/regras-de-conversa">Configura el cierre automático, la firma y el Scout.</Card>
-  <Card title="Define horarios y zona horaria de la IA" href="/es/cerebro/disponibilidade">Configura el horario comercial que pausa el SLA.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Define las reglas de conversación" href="/es/atendimento/regras-de-conversa">Configura el cierre automático, la firma y el Scout.</Artigo>
+  <Artigo titulo="Define horarios y zona horaria de la IA" href="/es/cerebro/disponibilidade">Configura el horario comercial que pausa el SLA.</Artigo>
+</Lista>

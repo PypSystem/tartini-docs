@@ -4,6 +4,8 @@ sidebarTitle: "WABA"
 description: "Ligue um número comercial de WhatsApp pela API oficial da Meta e ganhe mais estabilidade no atendimento."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 O WABA conecta seu número comercial pela API oficial da Meta. É mais estável que a conexão por QR Code e permite enviar templates de mensagem aprovados.
 
 <Note>Quem conecta: Administrador, Gestor da Empresa, Gestor de Área e Gestor de Unidade. Disponível em todos os planos, com faturamento baseado no uso.</Note>
@@ -99,9 +101,9 @@ Use quando a autorização da Meta expirar ou quando precisar trocar de número.
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Canais explicados" href="/canais/canais-explicados">Os canais disponíveis no Tartini e quando usar cada um.</Card>
-  <Card title="Crie templates de mensagem do WhatsApp" href="/canais/templates">Mensagens aprovadas pela Meta para iniciar conversas.</Card>
-  <Card title="Resolva problemas de conexão" href="/canais/problemas-de-conexao">Sintomas comuns e como corrigir.</Card>
-  <Card title="Ligue o Tino em um canal" href="/tino/ia-por-canal">Configure horários e follow-up para este número.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Canais explicados" href="/canais/canais-explicados">Os canais disponíveis no Tartini e quando usar cada um.</Artigo>
+  <Artigo titulo="Crie templates de mensagem do WhatsApp" href="/canais/templates">Mensagens aprovadas pela Meta para iniciar conversas.</Artigo>
+  <Artigo titulo="Resolva problemas de conexão" href="/canais/problemas-de-conexao">Sintomas comuns e como corrigir.</Artigo>
+  <Artigo titulo="Ligue o Tino em um canal" href="/tino/ia-por-canal">Configure horários e follow-up para este número.</Artigo>
+</Lista>

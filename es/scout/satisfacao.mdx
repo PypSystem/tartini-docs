@@ -4,6 +4,8 @@ sidebarTitle: "Satisfacción"
 description: "Consulta la nota que los clientes dieron en la encuesta de satisfacción, dónde varía y las conversaciones detrás de cada nota."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 La pantalla Satisfação (Satisfacción) junta la nota que el cliente dio en la encuesta con la lectura del Scout sobre la conversación, para que veas rápido dónde está cayendo la experiencia.
 
 <Note>
@@ -120,9 +122,9 @@ Dónde está: tarjeta de aviso en la propia pantalla, o directamente en **Config
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Configura la encuesta de satisfacción" href="/es/atendimento/pesquisa-de-satisfacao">Activa la encuesta por canal.</Card>
-  <Card title="Scout explicado" href="/es/scout/o-scout-explicado">Roles, planes y el menú del Scout.</Card>
-  <Card title="Usa la Central de Conversas" href="/es/inbox/central-de-conversas">Abre cualquier conversación en modo lectura.</Card>
-  <Card title="Lee las evaluaciones del Scout" href="/es/scout/avaliacoes">El análisis completo de cada conversación.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Configura la encuesta de satisfacción" href="/es/atendimento/pesquisa-de-satisfacao">Activa la encuesta por canal.</Artigo>
+  <Artigo titulo="Scout explicado" href="/es/scout/o-scout-explicado">Roles, planes y el menú del Scout.</Artigo>
+  <Artigo titulo="Usa la Central de Conversas" href="/es/inbox/central-de-conversas">Abre cualquier conversación en modo lectura.</Artigo>
+  <Artigo titulo="Lee las evaluaciones del Scout" href="/es/scout/avaliacoes">El análisis completo de cada conversación.</Artigo>
+</Lista>

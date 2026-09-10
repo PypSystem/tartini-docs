@@ -4,6 +4,8 @@ sidebarTitle: "Transferir, notas e tags"
 description: "Passe a conversa para outro atendente ou setor, registre notas internas e organize contatos com tags."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Transferir leva a conversa para quem deve continuar o atendimento. Notas e tags guardam o que a equipe precisa lembrar sobre o contato.
 
 <Note>
@@ -99,9 +101,9 @@ Onde fica: ficha do contato, cartão **Tags**.
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="A ficha do contato" href="/inbox/ficha-do-contato">Onde as tags e as notas do contato vivem.</Card>
-  <Card title="Atenda uma conversa" href="/inbox/atenda-uma-conversa">Abrir, responder, anexar e assumir do Tino.</Card>
-  <Card title="Encerre uma conversa e envie a pesquisa" href="/inbox/encerre-uma-conversa">Finalize com o motivo certo.</Card>
-  <Card title="Gerencie os contatos" href="/inbox/contatos">Busque, edite e junte contatos duplicados.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="A ficha do contato" href="/inbox/ficha-do-contato">Onde as tags e as notas do contato vivem.</Artigo>
+  <Artigo titulo="Atenda uma conversa" href="/inbox/atenda-uma-conversa">Abrir, responder, anexar e assumir do Tino.</Artigo>
+  <Artigo titulo="Encerre uma conversa e envie a pesquisa" href="/inbox/encerre-uma-conversa">Finalize com o motivo certo.</Artigo>
+  <Artigo titulo="Gerencie os contatos" href="/inbox/contatos">Busque, edite e junte contatos duplicados.</Artigo>
+</Lista>

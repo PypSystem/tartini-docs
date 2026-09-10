@@ -4,6 +4,8 @@ sidebarTitle: "Contacts and CSV"
 description: "Build the right spreadsheet, upload it, and check the preview before Tino starts reaching out to the list."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 A well-formatted list loads into the wizard without errors and reaches Tino with all the context data ready for the conversation.
 
 <Note>
@@ -100,9 +102,9 @@ If you have access to more than one Unit, you can replicate the same list to oth
 
 ## Related articles
 
-<CardGroup cols={2}>
-  <Card title="Create a campaign" href="/en/campanhas/crie-uma-campanha">The wizard in three steps.</Card>
-  <Card title="Build the structure in Areas and Units" href="/en/equipe/areas-e-unidades">How Units are organized.</Card>
-  <Card title="Track the results" href="/en/campanhas/resultados">Where to see how many contacts entered and converted.</Card>
-  <Card title="Pull contacts from external systems" href="/en/campanhas/contatos-de-campanha">Connect Varejo Online and SAN.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Create a campaign" href="/en/campanhas/crie-uma-campanha">The wizard in three steps.</Artigo>
+  <Artigo titulo="Build the structure in Areas and Units" href="/en/equipe/areas-e-unidades">How Units are organized.</Artigo>
+  <Artigo titulo="Track the results" href="/en/campanhas/resultados">Where to see how many contacts entered and converted.</Artigo>
+  <Artigo titulo="Pull contacts from external systems" href="/en/campanhas/contatos-de-campanha">Connect Varejo Online and SAN.</Artigo>
+</Lista>

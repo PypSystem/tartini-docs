@@ -4,6 +4,8 @@ sidebarTitle: "Catálogo"
 description: "Veja o que está quebrado no cadastro dos seus processos, sem depender de conversas, e corrija com um clique."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 O Catálogo audita a estrutura dos seus processos mapeados, saídas sem destino, gatilhos repetidos, processos sem passo a passo, e mostra o próximo passo para cada problema encontrado.
 
 <Note>
@@ -94,7 +96,7 @@ O Catálogo olha só o cadastro, sem depender de conversas reais. Para ver como 
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Mapeie processos a partir das conversas" href="/cerebro/mapeie-processos">Corrija o passo a passo direto na origem.</Card>
-  <Card title="Veja a aderência aos processos" href="/scout/processos-e-aderencia">Acompanhe, no Scout, o que o Tino resolveu seguindo cada processo.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Mapeie processos a partir das conversas" href="/cerebro/mapeie-processos">Corrija o passo a passo direto na origem.</Artigo>
+  <Artigo titulo="Veja a aderência aos processos" href="/scout/processos-e-aderencia">Acompanhe, no Scout, o que o Tino resolveu seguindo cada processo.</Artigo>
+</Lista>

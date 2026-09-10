@@ -4,6 +4,8 @@ sidebarTitle: "Encuesta de Satisfacción"
 description: "Envía una encuesta de satisfacción al cliente después de la atención y haz seguimiento de las notas en el Scout."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Con la encuesta configurada, todo cliente recibe una invitación para evaluar la atención, y tú haces seguimiento del resultado sin salir de Tartini.
 
 <Note>
@@ -105,7 +107,7 @@ Las evaluaciones aparecen en [Scout, en la sección de Satisfacción](/es/scout/
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Haz seguimiento de la satisfacción de los clientes" href="/es/scout/satisfacao">Mira las notas y comentarios recopilados por la encuesta.</Card>
-  <Card title="Define las reglas de conversación" href="/es/atendimento/regras-de-conversa">Configura el cierre que dispara la encuesta.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Haz seguimiento de la satisfacción de los clientes" href="/es/scout/satisfacao">Mira las notas y comentarios recopilados por la encuesta.</Artigo>
+  <Artigo titulo="Define las reglas de conversación" href="/es/atendimento/regras-de-conversa">Configura el cierre que dispara la encuesta.</Artigo>
+</Lista>

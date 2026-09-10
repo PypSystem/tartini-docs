@@ -4,6 +4,8 @@ sidebarTitle: "Contatos e CSV"
 description: "Monte a planilha certa, envie e confira a prévia antes de o Tino começar a abordar a lista."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Uma lista bem formatada entra sem erro no assistente e chega ao Tino com todos os dados de contexto prontos para a conversa.
 
 <Note>
@@ -98,9 +100,9 @@ Se você tem acesso a mais de uma Unidade, pode replicar a mesma lista para outr
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Crie uma campanha" href="/campanhas/crie-uma-campanha">O assistente em três passos.</Card>
-  <Card title="Monte a estrutura em Áreas e Unidades" href="/equipe/areas-e-unidades">Como as Unidades se organizam.</Card>
-  <Card title="Acompanhe os resultados" href="/campanhas/resultados">Onde ver quantos contatos entraram e converteram.</Card>
-  <Card title="Puxe contatos de sistemas externos" href="/campanhas/contatos-de-campanha">Conecte Varejo Online e SAN.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Crie uma campanha" href="/campanhas/crie-uma-campanha">O assistente em três passos.</Artigo>
+  <Artigo titulo="Monte a estrutura em Áreas e Unidades" href="/equipe/areas-e-unidades">Como as Unidades se organizam.</Artigo>
+  <Artigo titulo="Acompanhe os resultados" href="/campanhas/resultados">Onde ver quantos contatos entraram e converteram.</Artigo>
+  <Artigo titulo="Puxe contatos de sistemas externos" href="/campanhas/contatos-de-campanha">Conecte Varejo Online e SAN.</Artigo>
+</Lista>

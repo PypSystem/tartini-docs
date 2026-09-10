@@ -4,6 +4,8 @@ sidebarTitle: "Papéis e acessos"
 description: "Quem vê o quê no Tartini: dono da conta, administrador, gestores e atendentes, e como o acesso desce pela estrutura da empresa."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Cada pessoa da sua equipe entra no Tartini com um papel num ponto da estrutura da empresa. O papel diz o que ela pode fazer; o ponto da estrutura diz até onde ela enxerga.
 
 ---
@@ -87,7 +89,7 @@ Onde está "só o seu escopo", a pessoa vê a tela, mas apenas as Unidades, conv
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Convide e gerencie usuários" href="/equipe/usuarios">Dê acesso a uma pessoa em um ou mais pontos da estrutura.</Card>
-  <Card title="Áreas e Unidades" href="/equipe/areas-e-unidades">Monte a estrutura da sua empresa.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Convide e gerencie usuários" href="/equipe/usuarios">Dê acesso a uma pessoa em um ou mais pontos da estrutura.</Artigo>
+  <Artigo titulo="Áreas e Unidades" href="/equipe/areas-e-unidades">Monte a estrutura da sua empresa.</Artigo>
+</Lista>

@@ -4,6 +4,8 @@ sidebarTitle: "Questions and Answers"
 description: "Write the question the customer would ask and the ideal answer, the most direct way to train Tino."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Registering questions and answers is the most direct way to train Tino: without needing a document, you write exactly the question and answer you want it to use.
 
 <Note>
@@ -99,7 +101,7 @@ Where to find it: the pair's details panel, in **Cérebro > Propriedades**.
 
 ## Related articles
 
-<CardGroup cols={2}>
-  <Card title="Register the company's properties" href="/en/cerebro/propriedades-da-empresa">See, edit, and manage what's already been registered.</Card>
-  <Card title="Teach the AI with documents" href="/en/cerebro/documentos">Upload files to the knowledge base.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Register the company's properties" href="/en/cerebro/propriedades-da-empresa">See, edit, and manage what's already been registered.</Artigo>
+  <Artigo titulo="Teach the AI with documents" href="/en/cerebro/documentos">Upload files to the knowledge base.</Artigo>
+</Lista>

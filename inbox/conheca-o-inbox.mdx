@@ -4,6 +4,8 @@ sidebarTitle: "Conheça o Inbox"
 description: "Veja como o Inbox reúne as conversas de WhatsApp e do Chat Widget, o que cada status significa e onde encontrar cada ação de atendimento."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 O Inbox reúne todas as conversas de WhatsApp e do Chat Widget da sua unidade em um só lugar. Você abre, filtra e responde sem trocar de tela.
 
 <Note>
@@ -101,11 +103,11 @@ A aba **Detalhes** mostra o cartão do contato, um resumo da ficha, os dados da 
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Atenda uma conversa" href="/inbox/atenda-uma-conversa">Abrir, responder, anexar e assumir do Tino.</Card>
-  <Card title="Use o Copilot" href="/inbox/copilot">Peça sugestões de resposta durante o atendimento.</Card>
-  <Card title="Transfira, anote e marque conversas" href="/inbox/transfira-notas-e-tags">Passe a conversa adiante e registre o que importa.</Card>
-  <Card title="Encerre uma conversa e envie a pesquisa" href="/inbox/encerre-uma-conversa">Finalize com o motivo certo.</Card>
-  <Card title="Gerencie os contatos" href="/inbox/contatos">Busque, edite e junte contatos duplicados.</Card>
-  <Card title="Use a Central de Conversas" href="/inbox/central-de-conversas">Audite e exporte o histórico completo.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Atenda uma conversa" href="/inbox/atenda-uma-conversa">Abrir, responder, anexar e assumir do Tino.</Artigo>
+  <Artigo titulo="Use o Copilot" href="/inbox/copilot">Peça sugestões de resposta durante o atendimento.</Artigo>
+  <Artigo titulo="Transfira, anote e marque conversas" href="/inbox/transfira-notas-e-tags">Passe a conversa adiante e registre o que importa.</Artigo>
+  <Artigo titulo="Encerre uma conversa e envie a pesquisa" href="/inbox/encerre-uma-conversa">Finalize com o motivo certo.</Artigo>
+  <Artigo titulo="Gerencie os contatos" href="/inbox/contatos">Busque, edite e junte contatos duplicados.</Artigo>
+  <Artigo titulo="Use a Central de Conversas" href="/inbox/central-de-conversas">Audite e exporte o histórico completo.</Artigo>
+</Lista>

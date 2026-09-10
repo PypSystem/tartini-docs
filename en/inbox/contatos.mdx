@@ -4,6 +4,8 @@ sidebarTitle: "Contacts"
 description: "Search, edit, and merge duplicate contacts in a single list, organized by unit."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 The Contatos list brings together everyone who has ever talked to your company. Search, filter, and open each person's full record.
 
 <Note>
@@ -101,9 +103,9 @@ The list loads 30 contacts per page, with infinite scroll. If you open a contact
 
 ## Related articles
 
-<CardGroup cols={2}>
-  <Card title="The contact record" href="/en/inbox/ficha-do-contato">Data, status, fields, notes, and conversations.</Card>
-  <Card title="Get to know the Inbox" href="/en/inbox/conheca-o-inbox">The screen, the lists, and conversation statuses.</Card>
-  <Card title="Track site visitors" href="/en/inbox/visitantes">Who is browsing through the Chat Widget right now.</Card>
-  <Card title="Transfer, note, and tag conversations" href="/en/inbox/transfira-notas-e-tags">Pass the conversation along and record what matters.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="The contact record" href="/en/inbox/ficha-do-contato">Data, status, fields, notes, and conversations.</Artigo>
+  <Artigo titulo="Get to know the Inbox" href="/en/inbox/conheca-o-inbox">The screen, the lists, and conversation statuses.</Artigo>
+  <Artigo titulo="Track site visitors" href="/en/inbox/visitantes">Who is browsing through the Chat Widget right now.</Artigo>
+  <Artigo titulo="Transfer, note, and tag conversations" href="/en/inbox/transfira-notas-e-tags">Pass the conversation along and record what matters.</Artigo>
+</Lista>

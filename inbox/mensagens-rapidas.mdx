@@ -4,6 +4,8 @@ sidebarTitle: "Mensagens rápidas"
 description: "Cadastre atalhos de texto para responder mais rápido e mantenha um conjunto padrão para toda a equipe."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Mensagens rápidas inserem um texto pronto no campo de mensagem só de digitar uma barra e o atalho. Você economiza tempo em respostas que se repetem.
 
 <Note>
@@ -100,9 +102,9 @@ Onde fica: campo de mensagem, dentro de uma conversa aberta.
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Atenda uma conversa" href="/inbox/atenda-uma-conversa">Abrir, responder, anexar e assumir do Tino.</Card>
-  <Card title="Conheça o Inbox" href="/inbox/conheca-o-inbox">A tela, as listas e os status de conversa.</Card>
-  <Card title="Defina as regras de conversa" href="/atendimento/regras-de-conversa">Assinatura, encerramento automático e Copilot ativo.</Card>
-  <Card title="Papéis e acessos explicados" href="/visao-geral/papeis-e-acessos">Quem é gestor e o que cada papel libera.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Atenda uma conversa" href="/inbox/atenda-uma-conversa">Abrir, responder, anexar e assumir do Tino.</Artigo>
+  <Artigo titulo="Conheça o Inbox" href="/inbox/conheca-o-inbox">A tela, as listas e os status de conversa.</Artigo>
+  <Artigo titulo="Defina as regras de conversa" href="/atendimento/regras-de-conversa">Assinatura, encerramento automático e Copilot ativo.</Artigo>
+  <Artigo titulo="Papéis e acessos explicados" href="/visao-geral/papeis-e-acessos">Quem é gestor e o que cada papel libera.</Artigo>
+</Lista>

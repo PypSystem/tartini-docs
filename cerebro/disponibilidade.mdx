@@ -4,6 +4,8 @@ sidebarTitle: "Disponibilidade"
 description: "Configure o fuso horário e os horários de atendimento da empresa para orientar quando o Tino está em operação."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Definir os horários de atendimento deixa claro, dia por dia, quando a sua empresa está operando, na base de tempo certa.
 
 <Note>
@@ -103,7 +105,7 @@ Onde fica: dentro do dia expandido, ao lado de cada faixa de horário.
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Configure o roteamento" href="/cerebro/roteamento">Defina quando o Tino transfere para uma pessoa.</Card>
-  <Card title="Informe um contexto temporário" href="/cerebro/contexto-situacional">Registre situações fora do horário padrão.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Configure o roteamento" href="/cerebro/roteamento">Defina quando o Tino transfere para uma pessoa.</Artigo>
+  <Artigo titulo="Informe um contexto temporário" href="/cerebro/contexto-situacional">Registre situações fora do horário padrão.</Artigo>
+</Lista>

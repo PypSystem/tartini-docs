@@ -4,6 +4,8 @@ sidebarTitle: "Página de inicio"
 description: "El panel del día: la cola en tiempo real, lo que necesita de ti, los números de hoy y el equipo, o tus conversaciones si tú atiendes."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Después del checklist de preparación, la Página Inicial (Página de inicio) se convierte en el panel del día. Los gestores ven toda la operación; los agentes ven sus propias conversaciones y su propio desempeño.
 
 <Note>
@@ -83,7 +85,7 @@ Los últimos catorce días: **Clientes atendidos**, **Tempo médio** (Tiempo pro
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Métricas de la operación" href="/es/metricas/operacao">Los números por período, Unidad y agente.</Card>
-  <Card title="Métricas del Tino" href="/es/metricas/tino">Qué resuelve el Tino y cuánto consume.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Métricas de la operación" href="/es/metricas/operacao">Los números por período, Unidad y agente.</Artigo>
+  <Artigo titulo="Métricas del Tino" href="/es/metricas/tino">Qué resuelve el Tino y cuánto consume.</Artigo>
+</Lista>

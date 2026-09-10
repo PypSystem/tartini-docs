@@ -4,6 +4,8 @@ sidebarTitle: "Sessões e dispositivos"
 description: "Veja em quais navegadores e celulares a sua conta está aberta e desconecte o que não reconhece."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Cada entrada no Tartini abre uma sessão no navegador ou no celular usado. A lista fica em **Configurações > Pessoal > Segurança**, em **Sessões ativas**, e mostra dispositivo, local aproximado, última atividade e data de criação de cada uma.
 
 {/* CAPTURA: images/conta/sessoes-ativas.png | Seção Sessões ativas com a sessão atual em verde e outras sessões abaixo | O card Sessão atual e o botão Encerrar todas */}
@@ -47,7 +49,7 @@ Para sair do dispositivo em que você está, use **Sair** no menu do perfil ou *
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Ative a autenticação em dois fatores" href="/conta/autenticacao-em-dois-fatores">Proteja a conta com o app autenticador.</Card>
-  <Card title="Entre no Tartini e recupere sua senha" href="/conta/entrar-e-recuperar-senha">A tela de entrada.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Ative a autenticação em dois fatores" href="/conta/autenticacao-em-dois-fatores">Proteja a conta com o app autenticador.</Artigo>
+  <Artigo titulo="Entre no Tartini e recupere sua senha" href="/conta/entrar-e-recuperar-senha">A tela de entrada.</Artigo>
+</Lista>

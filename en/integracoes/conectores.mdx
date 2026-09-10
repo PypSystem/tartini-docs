@@ -4,6 +4,8 @@ sidebarTitle: "Connectors"
 description: "Give Tino access to your calendar, your CRM, or your system so he can look things up and take action during the conversation."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 With a connector, Tino stops just replying and starts acting: he checks the calendar and books a time, opens a deal in the CRM, looks up an order in your system. Connectors live under **Configurações > Integrações > Conectores** (Settings > Integrations > Connectors).
 
 <Note>
@@ -81,7 +83,7 @@ The **Usado pelos processos** (Used by processes) section shows which processes 
 
 ## Related articles
 
-<CardGroup cols={2}>
-  <Card title="Processes explained" href="/en/cerebro/processos-explicados">Where the tools come into action.</Card>
-  <Card title="Receive events in your system" href="/en/integracoes/webhooks">The reverse path: Tartini notifies your system.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Processes explained" href="/en/cerebro/processos-explicados">Where the tools come into action.</Artigo>
+  <Artigo titulo="Receive events in your system" href="/en/integracoes/webhooks">The reverse path: Tartini notifies your system.</Artigo>
+</Lista>

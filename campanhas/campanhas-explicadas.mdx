@@ -4,6 +4,8 @@ sidebarTitle: "Campanhas explicadas"
 description: "Entenda como o Tino aborda contatos por conta própria, os tipos de campanha, os status e o que preparar antes de criar uma."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Uma campanha faz o Tino abordar os contatos primeiro e conduzir a conversa inteira, do início ao fim. Você decide quem entra, o que ele segue e por onde a mensagem sai.
 
 <Note>
@@ -125,9 +127,9 @@ A tela **Configurações > Integrações > Contatos de Campanha** é mais restri
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Prepare a Unidade para campanhas" href="/campanhas/setup">Canal, template e créditos antes de criar.</Card>
-  <Card title="Crie uma campanha" href="/campanhas/crie-uma-campanha">O assistente em três passos.</Card>
-  <Card title="Agende o envio e os follow-ups" href="/campanhas/agendamento-e-follow-ups">Horários, tentativas, pausar e retomar.</Card>
-  <Card title="Acompanhe os resultados" href="/campanhas/resultados">Conversas, conversões e abandonos.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Prepare a Unidade para campanhas" href="/campanhas/setup">Canal, template e créditos antes de criar.</Artigo>
+  <Artigo titulo="Crie uma campanha" href="/campanhas/crie-uma-campanha">O assistente em três passos.</Artigo>
+  <Artigo titulo="Agende o envio e os follow-ups" href="/campanhas/agendamento-e-follow-ups">Horários, tentativas, pausar e retomar.</Artigo>
+  <Artigo titulo="Acompanhe os resultados" href="/campanhas/resultados">Conversas, conversões e abandonos.</Artigo>
+</Lista>

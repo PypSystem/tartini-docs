@@ -4,6 +4,8 @@ sidebarTitle: "Perfil e notificações"
 description: "Mude seu nome, o nome que o cliente vê nas mensagens, a senha e como o Tartini avisa você."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 O nome de atendimento é o que o cliente vê como assinatura quando você envia uma mensagem. Ele, o seu nome completo e a senha ficam em **Configurações > Pessoal > Configurações de usuário**. Você também chega lá clicando no seu nome, no menu do perfil.
 
 {/* CAPTURA: images/conta/configuracoes-de-usuario.png | Tela Configurações de usuário com os cards Informações Pessoais e Segurança | O campo Nome de atendimento e os dois interruptores de notificação */}
@@ -57,7 +59,7 @@ Os dois interruptores abaixo dos cards valem na hora, sem precisar salvar:
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Ative a autenticação em dois fatores" href="/conta/autenticacao-em-dois-fatores">Uma camada a mais de proteção.</Card>
-  <Card title="Assine as mensagens" href="/inbox/atenda-uma-conversa">Onde a assinatura aparece na conversa.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Ative a autenticação em dois fatores" href="/conta/autenticacao-em-dois-fatores">Uma camada a mais de proteção.</Artigo>
+  <Artigo titulo="Assine as mensagens" href="/inbox/atenda-uma-conversa">Onde a assinatura aparece na conversa.</Artigo>
+</Lista>

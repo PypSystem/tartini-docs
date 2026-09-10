@@ -4,6 +4,8 @@ sidebarTitle: "Cerrar conversación"
 description: "Finaliza la atención con el motivo correcto y entiende cuándo la encuesta de satisfacción sale automáticamente."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Cerrar avisa que la atención terminó y libera la conversación de la cola. Si tu empresa usa encuesta de satisfacción, puede salir automáticamente justo después.
 
 <Note>
@@ -90,9 +92,9 @@ Los campos son "Coletar em" (Recolectar en), "Regra de disparo" (Regla de dispar
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Configura la encuesta de satisfacción" href="/es/atendimento/pesquisa-de-satisfacao">Reglas de disparo y tiempo límite de respuesta.</Card>
-  <Card title="Define las reglas de conversación" href="/es/atendimento/regras-de-conversa">Firma, cierre automático y Copilot activo.</Card>
-  <Card title="El Scout explicado" href="/es/scout/o-scout-explicado">Cómo nacen el resumen y la nota de la conversación.</Card>
-  <Card title="Atiende una conversación" href="/es/inbox/atenda-uma-conversa">Abrir, responder, adjuntar y retomar de Tino.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Configura la encuesta de satisfacción" href="/es/atendimento/pesquisa-de-satisfacao">Reglas de disparo y tiempo límite de respuesta.</Artigo>
+  <Artigo titulo="Define las reglas de conversación" href="/es/atendimento/regras-de-conversa">Firma, cierre automático y Copilot activo.</Artigo>
+  <Artigo titulo="El Scout explicado" href="/es/scout/o-scout-explicado">Cómo nacen el resumen y la nota de la conversación.</Artigo>
+  <Artigo titulo="Atiende una conversación" href="/es/inbox/atenda-uma-conversa">Abrir, responder, adjuntar y retomar de Tino.</Artigo>
+</Lista>

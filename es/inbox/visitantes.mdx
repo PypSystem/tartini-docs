@@ -4,6 +4,8 @@ sidebarTitle: "Visitantes"
 description: "Mira quién está navegando en tu sitio web ahora mismo a través del Chat Widget y comienza una conversación antes de que te pregunte."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Visitantes online (Visitantes en línea) muestra quién está en tu sitio web a través del Chat Widget en este momento. Tú inicias la conversación incluso antes de que el visitante escriba.
 
 <Note>
@@ -84,9 +86,9 @@ Si la pantalla muestra "Chat Widget não configurado", haz clic en **Configurar 
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Instala el Chat Widget en tu sitio" href="/es/canais/chat-widget">Activa el canal que alimenta a los visitantes en línea.</Card>
-  <Card title="Conoce el Inbox" href="/es/inbox/conheca-o-inbox">La pantalla, las listas y los estados de la conversación.</Card>
-  <Card title="Gestiona los contactos" href="/es/inbox/contatos">Busca, edita y une contactos duplicados.</Card>
-  <Card title="Atiende una conversación" href="/es/inbox/atenda-uma-conversa">Abrir, responder, adjuntar y tomar el relevo de Tino.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Instala el Chat Widget en tu sitio" href="/es/canais/chat-widget">Activa el canal que alimenta a los visitantes en línea.</Artigo>
+  <Artigo titulo="Conoce el Inbox" href="/es/inbox/conheca-o-inbox">La pantalla, las listas y los estados de la conversación.</Artigo>
+  <Artigo titulo="Gestiona los contactos" href="/es/inbox/contatos">Busca, edita y une contactos duplicados.</Artigo>
+  <Artigo titulo="Atiende una conversación" href="/es/inbox/atenda-uma-conversa">Abrir, responder, adjuntar y tomar el relevo de Tino.</Artigo>
+</Lista>

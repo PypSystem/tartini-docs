@@ -4,6 +4,8 @@ sidebarTitle: "Áreas y Unidades"
 description: "Organiza tu empresa en áreas y unidades para gestionar accesos, canales y atención por tienda, sucursal o departamento."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Con la estructura organizada, defines quién accede a cada tienda, sucursal o sector de tu empresa. Cada unidad tiene sus propios canales, usuarios y conversaciones.
 
 <Note>
@@ -127,7 +129,7 @@ Para desactivar un sector sin borrar su historial, usa **Desativar** (Desactivar
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Invita y gestiona usuarios" href="/es/equipe/usuarios">Agrega personas a las áreas y unidades que creaste.</Card>
-  <Card title="Roles y accesos explicados" href="/es/visao-geral/papeis-e-acessos">Entiende qué ve cada rol en cada nivel.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Invita y gestiona usuarios" href="/es/equipe/usuarios">Agrega personas a las áreas y unidades que creaste.</Artigo>
+  <Artigo titulo="Roles y accesos explicados" href="/es/visao-geral/papeis-e-acessos">Entiende qué ve cada rol en cada nivel.</Artigo>
+</Lista>

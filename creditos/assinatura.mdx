@@ -4,6 +4,8 @@ sidebarTitle: "Assinatura"
 description: "Veja seu plano, a franquia contratada e os dados cadastrais da sua conta em um só lugar."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Com esta tela, você confirma de olhada qual plano está ativo, quanto ainda tem de franquia e se os dados da sua conta estão corretos.
 
 <Note>
@@ -99,7 +101,7 @@ Onde fica: **Configurações > Cobrança > Assinatura**, botão **Gerenciar plan
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Acompanhe o saldo e o extrato de créditos" href="/creditos/creditos-e-extrato">Veja o consumo diário de créditos.</Card>
-  <Card title="Planos e o que cada um libera" href="/visao-geral/planos-e-recursos">Compare os recursos de cada plano.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Acompanhe o saldo e o extrato de créditos" href="/creditos/creditos-e-extrato">Veja o consumo diário de créditos.</Artigo>
+  <Artigo titulo="Planos e o que cada um libera" href="/visao-geral/planos-e-recursos">Compare os recursos de cada plano.</Artigo>
+</Lista>

@@ -4,6 +4,8 @@ sidebarTitle: "Copilot"
 description: "Pide sugerencias de respuesta al Copilot durante la atención, acéptalas, edítalas o deja que el Copilot activo avise por su cuenta."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 El Copilot lee el historial de la conversación, incluido el resumen que Tino dejó al pasar la atención, y le pregunta al Cérebro (el cerebro de la empresa) qué sabe la empresa sobre el tema para sugerir una respuesta lista. Tú decides si la envías directo, la editas antes o la ignoras.
 
 <Note>
@@ -114,9 +116,9 @@ Cada pregunta al Copilot consume créditos de la franquicia mensual de tu empres
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Atiende una conversación" href="/es/inbox/atenda-uma-conversa">Abrir, responder, adjuntar y asumir el control de Tino.</Card>
-  <Card title="Conoce el Inbox" href="/es/inbox/conheca-o-inbox">La pantalla, las listas y los estados de conversación.</Card>
-  <Card title="Revisa el saldo y el extracto de créditos" href="/es/creditos/creditos-e-extrato">Mira cuánto consumió tu empresa con la IA.</Card>
-  <Card title="Define las reglas de conversación" href="/es/atendimento/regras-de-conversa">El estándar del Copilot activo por conversación nueva.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Atiende una conversación" href="/es/inbox/atenda-uma-conversa">Abrir, responder, adjuntar y asumir el control de Tino.</Artigo>
+  <Artigo titulo="Conoce el Inbox" href="/es/inbox/conheca-o-inbox">La pantalla, las listas y los estados de conversación.</Artigo>
+  <Artigo titulo="Revisa el saldo y el extracto de créditos" href="/es/creditos/creditos-e-extrato">Mira cuánto consumió tu empresa con la IA.</Artigo>
+  <Artigo titulo="Define las reglas de conversación" href="/es/atendimento/regras-de-conversa">El estándar del Copilot activo por conversación nueva.</Artigo>
+</Lista>

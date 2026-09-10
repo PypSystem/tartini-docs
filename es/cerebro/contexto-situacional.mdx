@@ -4,6 +4,8 @@ sidebarTitle: "Contexto Situacional"
 description: "Avisa a Tino sobre mantenimientos, promociones o cambios de horario, con fecha de inicio y fin definidas por ti."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Un contexto situacional avisa a Tino sobre una situación pasajera, como un mantenimiento programado o una promoción, sin necesidad de tocar las reglas permanentes.
 
 <Note>
@@ -98,7 +100,7 @@ Dónde está: **Cérebro > Operações > Contexto Situacional**, bloque **Sugest
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Define horarios y zona horaria de la IA" href="/es/cerebro/disponibilidade">Configura los horarios fijos de atención.</Card>
-  <Card title="Configura el enrutamiento" href="/es/cerebro/roteamento">Define cuándo Tino transfiere a una persona.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Define horarios y zona horaria de la IA" href="/es/cerebro/disponibilidade">Configura los horarios fijos de atención.</Artigo>
+  <Artigo titulo="Configura el enrutamiento" href="/es/cerebro/roteamento">Define cuándo Tino transfiere a una persona.</Artigo>
+</Lista>

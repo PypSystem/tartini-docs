@@ -4,6 +4,8 @@ sidebarTitle: "Perfil y notificaciones"
 description: "Cambia tu nombre, el nombre que ve el cliente en los mensajes, la contraseña y cómo te avisa Tartini."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 El nombre de atención es lo que el cliente ve como firma cuando envías un mensaje. Ese nombre, tu nombre completo y la contraseña están en **Configurações > Pessoal > Configurações de usuário** (Configuración > Personal > Configuración de usuario). También llegas ahí haciendo clic en tu nombre, en el menú del perfil.
 
 <Note>
@@ -61,7 +63,7 @@ Los dos interruptores debajo de las tarjetas valen al instante, sin necesidad de
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Activa la autenticación en dos factores" href="/es/conta/autenticacao-em-dois-fatores">Una capa más de protección.</Card>
-  <Card title="Firma los mensajes" href="/es/inbox/atenda-uma-conversa">Dónde aparece la firma en la conversación.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Activa la autenticación en dos factores" href="/es/conta/autenticacao-em-dois-fatores">Una capa más de protección.</Artigo>
+  <Artigo titulo="Firma los mensajes" href="/es/inbox/atenda-uma-conversa">Dónde aparece la firma en la conversación.</Artigo>
+</Lista>

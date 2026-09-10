@@ -4,6 +4,8 @@ sidebarTitle: "Ficha del contacto"
 description: "Ve todo sobre un contacto en un solo lugar: datos, estado, campos, notas y el historial de conversaciones."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 La ficha del contacto es la memoria de la relación con el cliente. Nombre, estado, campos completados, notas y todas las conversaciones están en un solo lugar.
 
 <Note>
@@ -125,9 +127,9 @@ La tarjeta **Conversas** (Conversaciones) lista hasta 50 conversaciones más rec
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Gestiona los contactos" href="/es/inbox/contatos">Buscar, editar y unir contactos duplicados.</Card>
-  <Card title="Transfiere, anota y etiqueta conversaciones" href="/es/inbox/transfira-notas-e-tags">Las etiquetas y notas dentro de la conversación.</Card>
-  <Card title="Atiende una conversación" href="/es/inbox/atenda-uma-conversa">Abrir, responder, adjuntar y retomar de Tino.</Card>
-  <Card title="Lee las evaluaciones del Scout" href="/es/scout/avaliacoes">El resumen y la nota de cada conversación.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Gestiona los contactos" href="/es/inbox/contatos">Buscar, editar y unir contactos duplicados.</Artigo>
+  <Artigo titulo="Transfiere, anota y etiqueta conversaciones" href="/es/inbox/transfira-notas-e-tags">Las etiquetas y notas dentro de la conversación.</Artigo>
+  <Artigo titulo="Atiende una conversación" href="/es/inbox/atenda-uma-conversa">Abrir, responder, adjuntar y retomar de Tino.</Artigo>
+  <Artigo titulo="Lee las evaluaciones del Scout" href="/es/scout/avaliacoes">El resumen y la nota de cada conversación.</Artigo>
+</Lista>

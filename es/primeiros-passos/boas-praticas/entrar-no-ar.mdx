@@ -4,6 +4,8 @@ sidebarTitle: "Salir en vivo"
 description: "Tres caminos para empezar a operar, que varían según tu operación, y qué revisar antes de activar el Tino para los clientes."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Esta guía es para quien ya conectó un canal y entrenó lo mínimo del Cérebro, y quiere decidir cómo empezar. Hay tres caminos, y el correcto depende de tu operación: de cuánto conoce el equipo la atención con IA, del volumen que llega y de cuánto material tiene ya la empresa en el Cérebro.
 
 <Note>
@@ -60,7 +62,7 @@ Revisa estos puntos, en orden:
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Activa el Tino en un canal" href="/es/tino/ia-por-canal">Horarios, seguimiento y cierre.</Card>
-  <Card title="El Scout explicado" href="/es/scout/o-scout-explicado">Qué evalúa y cómo calibrarlo.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Activa el Tino en un canal" href="/es/tino/ia-por-canal">Horarios, seguimiento y cierre.</Artigo>
+  <Artigo titulo="El Scout explicado" href="/es/scout/o-scout-explicado">Qué evalúa y cómo calibrarlo.</Artigo>
+</Lista>

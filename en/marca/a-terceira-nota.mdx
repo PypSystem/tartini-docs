@@ -4,6 +4,8 @@ sidebarTitle: "The third tone"
 description: "Where the product's name comes from and the standard it sets for the brand's design."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 This is the Tartini brand manual: the symbol, the colors, the letters, the voice, and the measures of application. Each chapter covers what can be done, what cannot, and why.
 
 <Note>
@@ -45,12 +47,12 @@ In the brand, each side has a color, and where the two meet has its own:
 
 ## The manual
 
-<CardGroup cols={2}>
-  <Card title="The symbol" icon="comment" href="/en/marca/simbolo">Anatomy, fixed proportions, the five variants, minimum size, and lockup.</Card>
-  <Card title="The colors" icon="palette" href="/en/marca/cores">Neutral base, the two signals, semantic states, dark theme, and screen ratio.</Card>
-  <Card title="The gradient" icon="droplet" href="/en/marca/gradiente">The system's only authorized decorative use, with the list of what it can and cannot do.</Card>
-  <Card title="The letters" icon="font" href="/en/marca/letras">The three type families and their roles, the scale, and the wordmark.</Card>
-  <Card title="The voice" icon="message" href="/en/marca/voz">How the brand writes, the permitted vocabulary, the banned terms, and the AI signature.</Card>
-  <Card title="The application" icon="ruler-combined" href="/en/marca/aplicacao">Grid, spacing, corners, borders, shadows, focus, buttons, density, and motion.</Card>
-  <Card title="What is never done" icon="ban" href="/en/marca/o-que-nunca">The checklist that the rest of the manual exists to support.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="The symbol" href="/en/marca/simbolo">Anatomy, fixed proportions, the five variants, minimum size, and lockup.</Artigo>
+  <Artigo titulo="The colors" href="/en/marca/cores">Neutral base, the two signals, semantic states, dark theme, and screen ratio.</Artigo>
+  <Artigo titulo="The gradient" href="/en/marca/gradiente">The system's only authorized decorative use, with the list of what it can and cannot do.</Artigo>
+  <Artigo titulo="The letters" href="/en/marca/letras">The three type families and their roles, the scale, and the wordmark.</Artigo>
+  <Artigo titulo="The voice" href="/en/marca/voz">How the brand writes, the permitted vocabulary, the banned terms, and the AI signature.</Artigo>
+  <Artigo titulo="The application" href="/en/marca/aplicacao">Grid, spacing, corners, borders, shadows, focus, buttons, density, and motion.</Artigo>
+  <Artigo titulo="What is never done" href="/en/marca/o-que-nunca">The checklist that the rest of the manual exists to support.</Artigo>
+</Lista>

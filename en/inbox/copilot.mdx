@@ -4,6 +4,8 @@ sidebarTitle: "Copilot"
 description: "Ask Copilot for reply suggestions while helping customers, accept them, edit them, or let active Copilot suggest on its own."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Copilot reads the conversation history, including the summary Tino leaves when handing off a conversation, and asks the Cérebro (the company's brain) what the company knows about the topic to suggest a ready-to-send reply. You decide whether to send it directly, edit it first, or ignore it.
 
 <Note>
@@ -114,9 +116,9 @@ Every question to Copilot consumes credits from your company's monthly allowance
 
 ## Related articles
 
-<CardGroup cols={2}>
-  <Card title="Handle a conversation" href="/en/inbox/atenda-uma-conversa">Open, reply, attach files, and take over from Tino.</Card>
-  <Card title="Get to know the Inbox" href="/en/inbox/conheca-o-inbox">The screen, the lists, and conversation statuses.</Card>
-  <Card title="Track your credit balance and statement" href="/en/creditos/creditos-e-extrato">See how much your company has spent on AI.</Card>
-  <Card title="Set the conversation rules" href="/en/atendimento/regras-de-conversa">The active Copilot default for each new conversation.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Handle a conversation" href="/en/inbox/atenda-uma-conversa">Open, reply, attach files, and take over from Tino.</Artigo>
+  <Artigo titulo="Get to know the Inbox" href="/en/inbox/conheca-o-inbox">The screen, the lists, and conversation statuses.</Artigo>
+  <Artigo titulo="Track your credit balance and statement" href="/en/creditos/creditos-e-extrato">See how much your company has spent on AI.</Artigo>
+  <Artigo titulo="Set the conversation rules" href="/en/atendimento/regras-de-conversa">The active Copilot default for each new conversation.</Artigo>
+</Lista>

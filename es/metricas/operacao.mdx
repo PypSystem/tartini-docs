@@ -4,6 +4,8 @@ sidebarTitle: "Operación"
 description: "Sigue lo que está pasando ahora, la calidad del atendimiento y el desempeño de cada persona del equipo."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 La pantalla Operação (Operación) muestra la salud del atendimiento en el período: quién está en línea ahora, si el SLA está al día, de dónde vienen las conversaciones y cómo le va a cada agente. Todo comparado con el período anterior.
 
 <Note>
@@ -121,9 +123,9 @@ Debajo del comparativo, la tabla lista todos los agentes con actividad en el per
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="El Panorama de las métricas" href="/es/metricas/panorama">El retrato ejecutivo del período.</Card>
-  <Card title="Métricas del Tino" href="/es/metricas/tino">Qué entregó la IA y a qué velocidad.</Card>
-  <Card title="SLA de atendimiento" href="/es/atendimento/sla">El plazo que aparece en la 1ª respuesta.</Card>
-  <Card title="Usa la Central de Conversas" href="/es/inbox/central-de-conversas">Consulta las conversaciones detrás de cada número.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="El Panorama de las métricas" href="/es/metricas/panorama">El retrato ejecutivo del período.</Artigo>
+  <Artigo titulo="Métricas del Tino" href="/es/metricas/tino">Qué entregó la IA y a qué velocidad.</Artigo>
+  <Artigo titulo="SLA de atendimiento" href="/es/atendimento/sla">El plazo que aparece en la 1ª respuesta.</Artigo>
+  <Artigo titulo="Usa la Central de Conversas" href="/es/inbox/central-de-conversas">Consulta las conversaciones detrás de cada número.</Artigo>
+</Lista>

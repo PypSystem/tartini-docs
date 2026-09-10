@@ -4,6 +4,8 @@ sidebarTitle: "Documentos"
 description: "Sube manuales, catálogos y políticas para que Tino aprenda el contenido automáticamente."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Subir un documento es la forma más rápida de incorporar contenido ya existente a la base de conocimiento: Tino lee el archivo y aprende solo, sin que tengas que reescribir nada.
 
 <Note>
@@ -78,7 +80,7 @@ Para revisar o corregir el texto extraído, editar la audiencia o eliminar el do
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Registra las propiedades de la empresa" href="/es/cerebro/propriedades-da-empresa">Consulta, edita y gestiona lo que ya se registró.</Card>
-  <Card title="Usa la inteligencia de la base de conocimiento" href="/es/cerebro/inteligencia-da-base">Revisa lo que Tino descubrió a partir de tus documentos.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Registra las propiedades de la empresa" href="/es/cerebro/propriedades-da-empresa">Consulta, edita y gestiona lo que ya se registró.</Artigo>
+  <Artigo titulo="Usa la inteligencia de la base de conocimiento" href="/es/cerebro/inteligencia-da-base">Revisa lo que Tino descubrió a partir de tus documentos.</Artigo>
+</Lista>

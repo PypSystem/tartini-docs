@@ -4,6 +4,8 @@ sidebarTitle: "Visitantes"
 description: "Veja quem está navegando no seu site agora pelo Chat Widget e comece uma conversa antes que ele pergunte."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Visitantes online mostra quem está no seu site pelo Chat Widget neste momento. Você inicia a conversa antes mesmo de o visitante escrever.
 
 <Note>
@@ -82,9 +84,9 @@ Se a tela mostra "Chat Widget não configurado", clique em **Configurar Chat Wid
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Instale o Chat Widget no seu site" href="/canais/chat-widget">Ative o canal que alimenta os visitantes online.</Card>
-  <Card title="Conheça o Inbox" href="/inbox/conheca-o-inbox">A tela, as listas e os status de conversa.</Card>
-  <Card title="Gerencie os contatos" href="/inbox/contatos">Busque, edite e junte contatos duplicados.</Card>
-  <Card title="Atenda uma conversa" href="/inbox/atenda-uma-conversa">Abrir, responder, anexar e assumir do Tino.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Instale o Chat Widget no seu site" href="/canais/chat-widget">Ative o canal que alimenta os visitantes online.</Artigo>
+  <Artigo titulo="Conheça o Inbox" href="/inbox/conheca-o-inbox">A tela, as listas e os status de conversa.</Artigo>
+  <Artigo titulo="Gerencie os contatos" href="/inbox/contatos">Busque, edite e junte contatos duplicados.</Artigo>
+  <Artigo titulo="Atenda uma conversa" href="/inbox/atenda-uma-conversa">Abrir, responder, anexar e assumir do Tino.</Artigo>
+</Lista>

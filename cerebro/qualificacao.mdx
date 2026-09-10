@@ -4,6 +4,8 @@ sidebarTitle: "Campos do Contato"
 description: "Defina os dados que o Tino coleta durante a conversa e que a equipe também pode preencher na ficha do contato."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Cada campo do contato guarda uma informação sobre a pessoa, como nome da empresa, e-mail ou orçamento, e a pergunta exata que o Tino faz para consegui-la.
 
 <Note>
@@ -86,7 +88,7 @@ Onde fica: **Cérebro > Operações > Campos do Contato**, clique em qualquer ca
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Configure os esclarecimentos" href="/cerebro/esclarecimentos">Defina quando o Tino pede mais informação.</Card>
-  <Card title="Configure os status de contato" href="/cerebro/status-de-contato">Organize em que ponto do relacionamento cada contato está.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Configure os esclarecimentos" href="/cerebro/esclarecimentos">Defina quando o Tino pede mais informação.</Artigo>
+  <Artigo titulo="Configure os status de contato" href="/cerebro/status-de-contato">Organize em que ponto do relacionamento cada contato está.</Artigo>
+</Lista>

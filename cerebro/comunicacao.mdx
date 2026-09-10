@@ -4,6 +4,8 @@ sidebarTitle: "Comunicação"
 description: "Cadastre estilos de comunicação complementares para o Tino falar do jeito que a sua empresa fala."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 O Tartini já tem recursos nativos de comunicação profissional. Aqui você adiciona estilos complementares, formal, casual, técnico ou empático, para adaptar a linguagem do Tino a cada contexto de atendimento.
 
 <Note>
@@ -100,7 +102,7 @@ Onde fica: **Cérebro > Personalidade > Comunicação**, bloco **Sugestões do T
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Crie diretrizes para a IA" href="/cerebro/diretrizes">Adicione procedimentos e saudações do seu jeito.</Card>
-  <Card title="Crie regras de conformidade" href="/cerebro/conformidade">Defina o que o Tino nunca pode fazer.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Crie diretrizes para a IA" href="/cerebro/diretrizes">Adicione procedimentos e saudações do seu jeito.</Artigo>
+  <Artigo titulo="Crie regras de conformidade" href="/cerebro/conformidade">Defina o que o Tino nunca pode fazer.</Artigo>
+</Lista>

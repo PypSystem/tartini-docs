@@ -4,6 +4,8 @@ sidebarTitle: "Sitios"
 description: "Pega el enlace de tu sitio y elige exactamente qué páginas aprende Tino, sin costo por descubrir lo que existe."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Sincronizar un sitio importa el contenido de tus páginas a la base de conocimiento, con control total sobre lo que entra: tú decides qué páginas aprende realmente Tino.
 
 <Note>
@@ -104,7 +106,7 @@ Los sitios con 50 páginas o más seleccionadas a la vez muestran un aviso antes
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Registra las propiedades de la empresa" href="/es/cerebro/propriedades-da-empresa">Consulta, edita y gestiona lo que ya se registró.</Card>
-  <Card title="Usa la inteligencia de la base de conocimiento" href="/es/cerebro/inteligencia-da-base">Revisa lo que Tino descubrió a partir de tu sitio.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Registra las propiedades de la empresa" href="/es/cerebro/propriedades-da-empresa">Consulta, edita y gestiona lo que ya se registró.</Artigo>
+  <Artigo titulo="Usa la inteligencia de la base de conocimiento" href="/es/cerebro/inteligencia-da-base">Revisa lo que Tino descubrió a partir de tu sitio.</Artigo>
+</Lista>

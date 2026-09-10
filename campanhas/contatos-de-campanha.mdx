@@ -4,6 +4,8 @@ sidebarTitle: "Contatos de Campanha"
 description: "Conecte a chave do Varejo Online e veja o status da integração com a SAN para trazer dados de clientes para o Tartini."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Conectar o Varejo Online guarda a chave da sua conta com segurança e deixa o Tartini pronto para usar os dados do seu sistema de gestão em campanhas.
 
 <Note>
@@ -80,9 +82,9 @@ Conectar o Varejo Online e conferir a SAN aqui prepara a base para trazer client
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Importe os contatos da campanha" href="/campanhas/contatos-e-csv">O formato de CSV aceito hoje pelo assistente.</Card>
-  <Card title="Conecte ferramentas externas à IA" href="/integracoes/conectores">Outras integrações do Tartini.</Card>
-  <Card title="Campanhas explicadas" href="/campanhas/campanhas-explicadas">Visão geral da área de Campanhas.</Card>
-  <Card title="Crie uma campanha" href="/campanhas/crie-uma-campanha">O assistente em três passos.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Importe os contatos da campanha" href="/campanhas/contatos-e-csv">O formato de CSV aceito hoje pelo assistente.</Artigo>
+  <Artigo titulo="Conecte ferramentas externas à IA" href="/integracoes/conectores">Outras integrações do Tartini.</Artigo>
+  <Artigo titulo="Campanhas explicadas" href="/campanhas/campanhas-explicadas">Visão geral da área de Campanhas.</Artigo>
+  <Artigo titulo="Crie uma campanha" href="/campanhas/crie-uma-campanha">O assistente em três passos.</Artigo>
+</Lista>

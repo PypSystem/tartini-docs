@@ -4,6 +4,8 @@ sidebarTitle: "Satisfação"
 description: "Veja a nota que os clientes deram na pesquisa de satisfação, onde ela varia e as conversas por trás de cada nota."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 A tela Satisfação junta a nota que o cliente deu na pesquisa com a leitura do Scout sobre a conversa, para você ver rápido onde a experiência está caindo.
 
 <Note>
@@ -118,9 +120,9 @@ Onde fica: card de aviso na própria tela, ou direto em **Configurações > Aten
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Configure a pesquisa de satisfação" href="/atendimento/pesquisa-de-satisfacao">Ligue a pesquisa por canal.</Card>
-  <Card title="O Scout explicado" href="/scout/o-scout-explicado">Papéis, planos e o menu do Scout.</Card>
-  <Card title="Use a Central de Conversas" href="/inbox/central-de-conversas">Abra qualquer conversa em modo leitura.</Card>
-  <Card title="Leia as avaliações do Scout" href="/scout/avaliacoes">A análise completa de cada conversa.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Configure a pesquisa de satisfação" href="/atendimento/pesquisa-de-satisfacao">Ligue a pesquisa por canal.</Artigo>
+  <Artigo titulo="O Scout explicado" href="/scout/o-scout-explicado">Papéis, planos e o menu do Scout.</Artigo>
+  <Artigo titulo="Use a Central de Conversas" href="/inbox/central-de-conversas">Abra qualquer conversa em modo leitura.</Artigo>
+  <Artigo titulo="Leia as avaliações do Scout" href="/scout/avaliacoes">A análise completa de cada conversa.</Artigo>
+</Lista>

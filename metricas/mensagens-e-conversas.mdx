@@ -4,6 +4,8 @@ sidebarTitle: "Mensagens e Conversas"
 description: "Veja quantas conversas e mensagens sua operação trocou, por canal, tipo de conteúdo e direção."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Esta tela mostra o volume de conversas e mensagens da sua empresa no período, sem entrar em créditos ou custo. Serve para entender por onde passa o movimento: qual canal, quem enviou e que tipo de conteúdo.
 
 <Note>
@@ -81,9 +83,9 @@ Cada canal ativo (**WhatsApp Business**, **WABA**, **Chat Widget**) ganha um car
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="O Panorama das métricas" href="/metricas/panorama">O retrato executivo do período, por Área e Unidade.</Card>
-  <Card title="Métricas da operação" href="/metricas/operacao">Volume e origem das conversas por equipe e Tino.</Card>
-  <Card title="Acompanhe o saldo e o extrato de créditos" href="/creditos/creditos-e-extrato">Quanto cada conversa consumiu.</Card>
-  <Card title="Canais explicados" href="/canais/canais-explicados">O que cada canal é e como conectar.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="O Panorama das métricas" href="/metricas/panorama">O retrato executivo do período, por Área e Unidade.</Artigo>
+  <Artigo titulo="Métricas da operação" href="/metricas/operacao">Volume e origem das conversas por equipe e Tino.</Artigo>
+  <Artigo titulo="Acompanhe o saldo e o extrato de créditos" href="/creditos/creditos-e-extrato">Quanto cada conversa consumiu.</Artigo>
+  <Artigo titulo="Canais explicados" href="/canais/canais-explicados">O que cada canal é e como conectar.</Artigo>
+</Lista>

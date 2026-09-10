@@ -4,6 +4,8 @@ sidebarTitle: "Scout"
 description: "Descubre cómo el Scout evalúa cada conversación cerrada y dónde encontrar cada parte del diagnóstico de tu operación."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 El Scout lee cada conversación cerrada, ya sea por tu equipo o por el Tino, le pregunta al Cérebro cuál es el estándar de la empresa y te devuelve un resumen, una nota y qué ajustar. Abres un solo lugar y sabes dónde la operación necesita tu atención. Y, con el tiempo, tus correcciones y los hallazgos del Scout le van enseñando al Cérebro la forma en que tu empresa atiende y quiere atender.
 
 <Note>
@@ -113,11 +115,11 @@ En todas las pantallas, la barra de alcance queda en la parte superior: el nivel
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Lee las evaluaciones del Scout" href="/es/scout/avaliacoes">La lista de conversaciones evaluadas y el análisis completo de cada una.</Card>
-  <Card title="Está de acuerdo con el Scout o corrige la nota" href="/es/scout/concorde-ou-corrija">Cómo validar la nota y qué cambia después.</Card>
-  <Card title="Sigue el desempeño del equipo" href="/es/scout/desempenho-da-equipe">La nota por Área, Unidad y agente, y el análisis mensual.</Card>
-  <Card title="Sigue la satisfacción de los clientes" href="/es/scout/satisfacao">La nota de la encuesta y dónde varía.</Card>
-  <Card title="Consulta la adherencia a los procesos" href="/es/scout/processos-e-aderencia">Dónde los procesos del Cérebro están fallando.</Card>
-  <Card title="Define las reglas de conversación" href="/es/atendimento/regras-de-conversa">Activa el Scout al cerrar conversaciones.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Lee las evaluaciones del Scout" href="/es/scout/avaliacoes">La lista de conversaciones evaluadas y el análisis completo de cada una.</Artigo>
+  <Artigo titulo="Está de acuerdo con el Scout o corrige la nota" href="/es/scout/concorde-ou-corrija">Cómo validar la nota y qué cambia después.</Artigo>
+  <Artigo titulo="Sigue el desempeño del equipo" href="/es/scout/desempenho-da-equipe">La nota por Área, Unidad y agente, y el análisis mensual.</Artigo>
+  <Artigo titulo="Sigue la satisfacción de los clientes" href="/es/scout/satisfacao">La nota de la encuesta y dónde varía.</Artigo>
+  <Artigo titulo="Consulta la adherencia a los procesos" href="/es/scout/processos-e-aderencia">Dónde los procesos del Cérebro están fallando.</Artigo>
+  <Artigo titulo="Define las reglas de conversación" href="/es/atendimento/regras-de-conversa">Activa el Scout al cerrar conversaciones.</Artigo>
+</Lista>

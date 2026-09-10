@@ -4,6 +4,8 @@ sidebarTitle: "Conexão via API"
 description: "Gere tokens de acesso para integrar seus próprios sistemas diretamente com o Tartini."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Com um token de API, o seu sistema conversa diretamente com o Tartini, sem precisar de ninguém abrindo a tela.
 
 <Note>Quem gera e revoga tokens: só o Administrador. Disponível no plano Scale.</Note>
@@ -91,7 +93,7 @@ Cada token cadastrado mostra o nome, a descrição, quando foi criado e a últim
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Receba eventos no seu sistema" href="/integracoes/webhooks">Avisos automáticos de atendimento finalizado.</Card>
-  <Card title="Canais explicados" href="/canais/canais-explicados">Os canais disponíveis no Tartini.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Receba eventos no seu sistema" href="/integracoes/webhooks">Avisos automáticos de atendimento finalizado.</Artigo>
+  <Artigo titulo="Canais explicados" href="/canais/canais-explicados">Os canais disponíveis no Tartini.</Artigo>
+</Lista>

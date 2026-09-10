@@ -4,6 +4,8 @@ sidebarTitle: "Overview"
 description: "Complete documentation for Tartini's public API."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Tartini's public API lets you integrate artificial intelligence and knowledge base features into external systems: chatbots, CRMs, web applications, and more.
 
 ---
@@ -34,14 +36,10 @@ Authorization: Bearer pyp_live_SUA_API_KEY
 
 ## Available Endpoints
 
-<CardGroup cols={2}>
-  <Card title="GET /api/status" icon="signal" href="/en/api-reference/endpoint/status">
-    Checks whether the API is operational and validates your API key.
-  </Card>
-  <Card title="POST /api/rag/retrieve" icon="magnifying-glass" href="/en/api-reference/endpoint/rag-retrieve">
-    Searches relevant chunks and generates AI-powered answers.
-  </Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="GET /api/status" href="/en/api-reference/endpoint/status">Checks whether the API is operational and validates your API key.</Artigo>
+  <Artigo titulo="POST /api/rag/retrieve" href="/en/api-reference/endpoint/rag-retrieve">Searches relevant chunks and generates AI-powered answers.</Artigo>
+</Lista>
 
 ---
 

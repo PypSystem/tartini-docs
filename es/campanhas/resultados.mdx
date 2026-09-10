@@ -4,6 +4,8 @@ sidebarTitle: "Resultados"
 description: "Mira cuántos contactos respondieron, cuántos convirtieron y dónde aparecen las conversaciones de una campaña en el Inbox."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 El panel de una campaña muestra lo que pasó con cada contacto que abordó, desde el primer contacto hasta la conversión, sin que necesites abrir conversación por conversación.
 
 <Note>
@@ -105,9 +107,9 @@ Toda conversación abierta por una campaña aparece en el Inbox con un chip **Ca
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Crea una campaña" href="/es/campanhas/crie-uma-campanha">Dónde se elige la definición de éxito.</Card>
-  <Card title="Programa el envío y los follow-ups" href="/es/campanhas/agendamento-e-follow-ups">Pausar, reanudar y seguir la cola.</Card>
-  <Card title="La ficha del contacto" href="/es/inbox/ficha-do-contato">Dónde aparece el link Abrir campanha.</Card>
-  <Card title="Usa la Central de Conversaciones" href="/es/inbox/central-de-conversas">Otra forma de seguir conversaciones en curso.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Crea una campaña" href="/es/campanhas/crie-uma-campanha">Dónde se elige la definición de éxito.</Artigo>
+  <Artigo titulo="Programa el envío y los follow-ups" href="/es/campanhas/agendamento-e-follow-ups">Pausar, reanudar y seguir la cola.</Artigo>
+  <Artigo titulo="La ficha del contacto" href="/es/inbox/ficha-do-contato">Dónde aparece el link Abrir campanha.</Artigo>
+  <Artigo titulo="Usa la Central de Conversaciones" href="/es/inbox/central-de-conversas">Otra forma de seguir conversaciones en curso.</Artigo>
+</Lista>

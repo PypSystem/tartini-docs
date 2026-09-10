@@ -4,6 +4,8 @@ sidebarTitle: "Esclarecimentos"
 description: "Diga ao Tino quando pedir mais detalhes ao cliente antes de seguir com o atendimento."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Esclarecimentos ensinam o Tino a reconhecer uma mensagem vaga ou incompleta e pedir a informação que falta antes de continuar.
 
 <Note>
@@ -108,7 +110,7 @@ Onde fica: **Cérebro > Operações > Esclarecimentos**, bloco **Sugestões do T
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Configure os campos do contato" href="/cerebro/qualificacao">Defina os dados que o Tino coleta na conversa.</Card>
-  <Card title="Configure o roteamento" href="/cerebro/roteamento">Defina quando o Tino transfere para uma pessoa.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Configure os campos do contato" href="/cerebro/qualificacao">Defina os dados que o Tino coleta na conversa.</Artigo>
+  <Artigo titulo="Configure o roteamento" href="/cerebro/roteamento">Defina quando o Tino transfere para uma pessoa.</Artigo>
+</Lista>

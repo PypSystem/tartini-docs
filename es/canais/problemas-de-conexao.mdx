@@ -4,6 +4,8 @@ sidebarTitle: "Problemas de conexión"
 description: "Síntomas comunes al conectar WhatsApp por código QR o por WABA, con la causa probable y cómo corregirlos."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Esta página reúne los problemas más comunes al conectar o mantener un canal de WhatsApp activo en Tartini.
 
 <Note>
@@ -108,7 +110,7 @@ Esta página reúne los problemas más comunes al conectar o mantener un canal d
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Conecta WhatsApp por código QR" href="/es/canais/whatsapp-qr-code">Conexión paso a paso por la cámara o por código.</Card>
-  <Card title="Conecta WhatsApp Business API (WABA)" href="/es/canais/whatsapp-business-api">Prerrequisitos y conexión del canal oficial.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Conecta WhatsApp por código QR" href="/es/canais/whatsapp-qr-code">Conexión paso a paso por la cámara o por código.</Artigo>
+  <Artigo titulo="Conecta WhatsApp Business API (WABA)" href="/es/canais/whatsapp-business-api">Prerrequisitos y conexión del canal oficial.</Artigo>
+</Lista>

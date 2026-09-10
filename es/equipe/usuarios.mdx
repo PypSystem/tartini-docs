@@ -4,6 +4,8 @@ sidebarTitle: "Usuarios"
 description: "Invita a tu equipo, define qué accede cada persona y mantén los accesos siempre actualizados."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Con la lista de usuarios organizada, sabes quién está activo, qué accede cada persona y quién todavía necesita aceptar la invitación.
 
 <Note>
@@ -128,7 +130,7 @@ Si la lista no muestra el cambio de inmediato, actualiza la página.
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Arma la estructura en Áreas y Unidades" href="/es/equipe/areas-e-unidades">Crea las áreas y unidades donde van a actuar los usuarios.</Card>
-  <Card title="Roles y accesos explicados" href="/es/visao-geral/papeis-e-acessos">Consulta qué ve cada rol en cada nivel.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Arma la estructura en Áreas y Unidades" href="/es/equipe/areas-e-unidades">Crea las áreas y unidades donde van a actuar los usuarios.</Artigo>
+  <Artigo titulo="Roles y accesos explicados" href="/es/visao-geral/papeis-e-acessos">Consulta qué ve cada rol en cada nivel.</Artigo>
+</Lista>

@@ -4,6 +4,8 @@ sidebarTitle: "Reglas de Conversación"
 description: "Define cómo se cierran las conversaciones solas, cómo aparece la firma del agente y cuándo entran en acción el Scout y el Copilot."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Con estas reglas configuradas, toda conversación de tu operación sigue el mismo patrón de firma, cierre y evaluación, sin depender de que cada agente lo recuerde.
 
 <Note>
@@ -102,7 +104,7 @@ Si tu plan no incluye el Copilot activo, la sección muestra un aviso de mejora 
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Define el SLA de atención" href="/es/atendimento/sla">Mide el tiempo hasta la primera respuesta humana.</Card>
-  <Card title="Usa el Copilot" href="/es/inbox/copilot">Mira cómo el Copilot ayuda al agente durante la conversación.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Define el SLA de atención" href="/es/atendimento/sla">Mide el tiempo hasta la primera respuesta humana.</Artigo>
+  <Artigo titulo="Usa el Copilot" href="/es/inbox/copilot">Mira cómo el Copilot ayuda al agente durante la conversación.</Artigo>
+</Lista>

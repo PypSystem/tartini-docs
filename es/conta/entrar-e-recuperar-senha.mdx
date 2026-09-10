@@ -4,6 +4,8 @@ sidebarTitle: "Entrar y recuperar contraseña"
 description: "La pantalla de acceso, el código de doble factor y el camino para restablecer la contraseña cuando la olvidas."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Entras a [talk.saninternet.com](https://talk.saninternet.com) con correo electrónico y contraseña. Si tu cuenta tiene autenticación en dos factores, la pantalla también pide el código de la app autenticadora.
 
 <Note>
@@ -79,7 +81,7 @@ Quien tiene la cuenta vinculada al área de cliente SAN puede entrar desde ahí,
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Activa la autenticación en dos factores" href="/es/conta/autenticacao-em-dois-fatores">Protege la cuenta con la app autenticadora.</Card>
-  <Card title="Edita tu perfil y las notificaciones" href="/es/conta/perfil-e-notificacoes">Nombre, nombre de atención y contraseña.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Activa la autenticación en dos factores" href="/es/conta/autenticacao-em-dois-fatores">Protege la cuenta con la app autenticadora.</Artigo>
+  <Artigo titulo="Edita tu perfil y las notificaciones" href="/es/conta/perfil-e-notificacoes">Nombre, nombre de atención y contraseña.</Artigo>
+</Lista>

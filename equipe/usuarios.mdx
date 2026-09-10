@@ -4,6 +4,8 @@ sidebarTitle: "Usuários"
 description: "Convide sua equipe, defina o que cada pessoa acessa e mantenha os acessos sempre atualizados."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Com a lista de usuários organizada, você sabe quem está ativo, o que cada pessoa acessa e quem ainda precisa aceitar o convite.
 
 <Note>
@@ -126,7 +128,7 @@ Se a lista não mostrar a mudança na hora, atualize a página.
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Monte a estrutura em Áreas e Unidades" href="/equipe/areas-e-unidades">Crie as áreas e unidades onde os usuários vão atuar.</Card>
-  <Card title="Papéis e acessos explicados" href="/visao-geral/papeis-e-acessos">Veja o que cada papel enxerga em cada nível.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Monte a estrutura em Áreas e Unidades" href="/equipe/areas-e-unidades">Crie as áreas e unidades onde os usuários vão atuar.</Artigo>
+  <Artigo titulo="Papéis e acessos explicados" href="/visao-geral/papeis-e-acessos">Veja o que cada papel enxerga em cada nível.</Artigo>
+</Lista>

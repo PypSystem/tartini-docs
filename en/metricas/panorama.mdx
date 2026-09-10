@@ -4,6 +4,8 @@ sidebarTitle: "Panorama"
 description: "See in a single screen what changed in the period: how much Tino absorbed, how the SLA is doing, and where to look first."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Panorama brings together the team's and Tino's numbers into a single snapshot, already compared with the previous period. In a few seconds you know what improved, what lost strength, and which screen to go to next.
 
 <Note>
@@ -131,9 +133,9 @@ Use **refinar** (refine) to restrict to one or more channels (**WhatsApp**, **Wh
 
 ## Related Articles
 
-<CardGroup cols={2}>
-  <Card title="Operation Metrics" href="/en/metricas/operacao">The team's numbers, section by section.</Card>
-  <Card title="Tino Metrics" href="/en/metricas/tino">What Tino resolved and how fast.</Card>
-  <Card title="Service SLA" href="/en/atendimento/sla">How the first response deadline is configured.</Card>
-  <Card title="Roles and Access Explained" href="/en/visao-geral/papeis-e-acessos">Who sees each level of the structure.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Operation Metrics" href="/en/metricas/operacao">The team's numbers, section by section.</Artigo>
+  <Artigo titulo="Tino Metrics" href="/en/metricas/tino">What Tino resolved and how fast.</Artigo>
+  <Artigo titulo="Service SLA" href="/en/atendimento/sla">How the first response deadline is configured.</Artigo>
+  <Artigo titulo="Roles and Access Explained" href="/en/visao-geral/papeis-e-acessos">Who sees each level of the structure.</Artigo>
+</Lista>

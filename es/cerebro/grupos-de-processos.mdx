@@ -4,6 +4,8 @@ sidebarTitle: "Grupos"
 description: "Reúne los procesos que una campaña puede usar y define el camino de salidas específico de ese conjunto."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Un grupo reúne los procesos que una campaña puede encadenar, con su propio camino de salidas, sin afectar cómo se comporta cada proceso en cualquier otra situación.
 
 <Note>
@@ -104,7 +106,7 @@ Dónde está: configuración del grupo, pestaña **Fluxo** (Flujo).
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Mapea procesos a partir de las conversaciones" href="/es/cerebro/mapeie-processos">Construye y publica el proceso antes de agruparlo.</Card>
-  <Card title="Haz seguimiento del Catálogo de procesos" href="/es/cerebro/consistencia-e-insights">Mira problemas estructurales en el registro de procesos.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Mapea procesos a partir de las conversaciones" href="/es/cerebro/mapeie-processos">Construye y publica el proceso antes de agruparlo.</Artigo>
+  <Artigo titulo="Haz seguimiento del Catálogo de procesos" href="/es/cerebro/consistencia-e-insights">Mira problemas estructurales en el registro de procesos.</Artigo>
+</Lista>

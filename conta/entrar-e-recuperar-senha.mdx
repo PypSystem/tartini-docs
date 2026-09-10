@@ -4,6 +4,8 @@ sidebarTitle: "Entrar e recuperar senha"
 description: "A tela de entrada, o código de dois fatores e o caminho para redefinir a senha quando você a esquece."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Você entra em [talk.saninternet.com](https://talk.saninternet.com) com e-mail e senha. Se a sua conta tem autenticação em dois fatores, a tela pede também o código do app autenticador.
 
 ---
@@ -75,7 +77,7 @@ Quem tem a conta ligada à área de cliente SAN pode entrar por lá, pelo link d
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Ative a autenticação em dois fatores" href="/conta/autenticacao-em-dois-fatores">Proteja a conta com o app autenticador.</Card>
-  <Card title="Edite seu perfil e as notificações" href="/conta/perfil-e-notificacoes">Nome, nome de atendimento e senha.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Ative a autenticação em dois fatores" href="/conta/autenticacao-em-dois-fatores">Proteja a conta com o app autenticador.</Artigo>
+  <Artigo titulo="Edite seu perfil e as notificações" href="/conta/perfil-e-notificacoes">Nome, nome de atendimento e senha.</Artigo>
+</Lista>

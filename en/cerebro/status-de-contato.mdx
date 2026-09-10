@@ -4,6 +4,8 @@ sidebarTitle: "Contact Status"
 description: "Build the list of statuses the team uses on the contact record to say where each person stands in the relationship."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Contact statuses show, in a standardized way, where each person stands in the relationship, such as "Lead", "Cliente ativo", or "Inativo". The order set here is the same one that appears in the contact record's selector.
 
 <Note>
@@ -88,7 +90,7 @@ Where to find it: **Cérebro > Operações > Status de Contato**, action buttons
 
 ## Related articles
 
-<CardGroup cols={2}>
-  <Card title="Set up contact fields" href="/en/cerebro/qualificacao">Define the data Tino collects in the conversation.</Card>
-  <Card title="Set up clarifications" href="/en/cerebro/esclarecimentos">Define when Tino asks for more information.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Set up contact fields" href="/en/cerebro/qualificacao">Define the data Tino collects in the conversation.</Artigo>
+  <Artigo titulo="Set up clarifications" href="/en/cerebro/esclarecimentos">Define when Tino asks for more information.</Artigo>
+</Lista>

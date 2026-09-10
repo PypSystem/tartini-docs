@@ -4,6 +4,8 @@ sidebarTitle: "Directrices"
 description: "Enseña saludos personalizados, procedimientos estándar y pasos específicos de tu negocio, además de las buenas prácticas nativas de Tino."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Tartini ya sigue directrices nativas de buenas prácticas de atención. Aquí agregas las tuyas: saludos personalizados, procedimientos estándar y pasos específicos de tu empresa.
 
 <Note>
@@ -114,7 +116,7 @@ Si llegaste a esta pantalla a partir de un hallazgo señalado en otra parte de T
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Define el tono de voz" href="/es/cerebro/comunicacao">Registra estilos de comunicación complementarios.</Card>
-  <Card title="Crea reglas de conformidad" href="/es/cerebro/conformidade">Define lo que Tino nunca puede hacer.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Define el tono de voz" href="/es/cerebro/comunicacao">Registra estilos de comunicación complementarios.</Artigo>
+  <Artigo titulo="Crea reglas de conformidad" href="/es/cerebro/conformidade">Define lo que Tino nunca puede hacer.</Artigo>
+</Lista>

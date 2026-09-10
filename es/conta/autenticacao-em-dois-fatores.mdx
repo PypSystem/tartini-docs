@@ -4,6 +4,8 @@ sidebarTitle: "Doble factor"
 description: "Un código del celular en cada entrada. Aunque alguien descubra tu contraseña, no entra sin él."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Con la autenticación en dos factores, la pantalla de acceso pide la contraseña y, después, un código de seis dígitos generado por una app autenticadora en tu celular. Todo está en **Configurações > Pessoal > Segurança** (Configuración > Personal > Seguridad), en la tarjeta **Autenticação em dois fatores** (Autenticación en dos factores).
 
 <Note>
@@ -85,7 +87,7 @@ Haz clic en **Desativar** (Desactivar), confirma con la **Senha atual** (Contras
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Cierra sesiones en otros dispositivos" href="/es/conta/sessoes-e-dispositivos">Consulta dónde está abierta tu cuenta.</Card>
-  <Card title="Entra a Tartini y recupera tu contraseña" href="/es/conta/entrar-e-recuperar-senha">La pantalla de acceso con el código.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Cierra sesiones en otros dispositivos" href="/es/conta/sessoes-e-dispositivos">Consulta dónde está abierta tu cuenta.</Artigo>
+  <Artigo titulo="Entra a Tartini y recupera tu contraseña" href="/es/conta/entrar-e-recuperar-senha">La pantalla de acceso con el código.</Artigo>
+</Lista>

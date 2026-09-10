@@ -4,6 +4,8 @@ sidebarTitle: "Primeiro acesso"
 description: "O que acontece na primeira vez que o dono da conta entra: senha, autenticação em dois fatores, nome da empresa e estrutura."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Quando a conta é criada pela SAN, o dono entra pela área de cliente e o Tartini pede três coisas antes de liberar a Página Inicial: uma senha, o nome da empresa e a estrutura. Se a empresa exige autenticação em dois fatores, ela entra entre a senha e o nome.
 
 <Note>
@@ -83,7 +85,7 @@ A Página Inicial abre com o checklist de preparação. Siga [Prepare sua opera�
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Prepare sua operação com o checklist" href="/primeiros-passos/configuracao/checklist-de-preparacao">As etapas da Página Inicial.</Card>
-  <Card title="Entre no Tartini e recupere sua senha" href="/conta/entrar-e-recuperar-senha">A tela de entrada no dia a dia.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Prepare sua operação com o checklist" href="/primeiros-passos/configuracao/checklist-de-preparacao">As etapas da Página Inicial.</Artigo>
+  <Artigo titulo="Entre no Tartini e recupere sua senha" href="/conta/entrar-e-recuperar-senha">A tela de entrada no dia a dia.</Artigo>
+</Lista>

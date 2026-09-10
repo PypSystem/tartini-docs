@@ -4,6 +4,8 @@ sidebarTitle: "Processos"
 description: "Entenda o que é um processo mapeado, como o Tino usa esse playbook e como acompanhar se ele está sendo seguido."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Um processo é o playbook de um tipo de atendimento: como a sua empresa resolve um pedido de 2ª via de boleto, um reembolso ou um agendamento, passo a passo. Mapeado, ele vira o roteiro que o Tino segue nas conversas reais.
 
 <Note>
@@ -54,12 +56,12 @@ Depois que um processo está no ar, o Scout audita as conversas reais contra o q
 
 ## Para onde cada tarefa aponta
 
-<CardGroup cols={2}>
-  <Card title="Mapeie processos a partir das conversas" href="/cerebro/mapeie-processos">Construa um processo conversando com o Quattro e revise as descobertas automáticas.</Card>
-  <Card title="Organize processos em grupos" href="/cerebro/grupos-de-processos">Reúna processos relacionados para uso em campanhas.</Card>
-  <Card title="Acompanhe o Catálogo de processos" href="/cerebro/consistencia-e-insights">Veja o que está quebrado no cadastro dos processos.</Card>
-  <Card title="Veja a aderência aos processos" href="/scout/processos-e-aderencia">Acompanhe, no Scout, o que o Tino resolveu seguindo cada processo.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Mapeie processos a partir das conversas" href="/cerebro/mapeie-processos">Construa um processo conversando com o Quattro e revise as descobertas automáticas.</Artigo>
+  <Artigo titulo="Organize processos em grupos" href="/cerebro/grupos-de-processos">Reúna processos relacionados para uso em campanhas.</Artigo>
+  <Artigo titulo="Acompanhe o Catálogo de processos" href="/cerebro/consistencia-e-insights">Veja o que está quebrado no cadastro dos processos.</Artigo>
+  <Artigo titulo="Veja a aderência aos processos" href="/scout/processos-e-aderencia">Acompanhe, no Scout, o que o Tino resolveu seguindo cada processo.</Artigo>
+</Lista>
 
 ---
 
@@ -81,7 +83,7 @@ Depois que um processo está no ar, o Scout audita as conversas reais contra o q
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Mapeie processos a partir das conversas" href="/cerebro/mapeie-processos">Construa o playbook de cada tipo de atendimento.</Card>
-  <Card title="O Cérebro explicado" href="/cerebro/o-cerebro-explicado">Entenda as demais partes do Cérebro.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Mapeie processos a partir das conversas" href="/cerebro/mapeie-processos">Construa o playbook de cada tipo de atendimento.</Artigo>
+  <Artigo titulo="O Cérebro explicado" href="/cerebro/o-cerebro-explicado">Entenda as demais partes do Cérebro.</Artigo>
+</Lista>

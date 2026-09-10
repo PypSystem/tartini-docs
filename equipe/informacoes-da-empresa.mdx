@@ -4,6 +4,8 @@ sidebarTitle: "Informações"
 description: "Defina o nome da empresa, o idioma das respostas do Tino e se todos precisam entrar com autenticação em dois fatores."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Com essas informações atualizadas, o nome certo aparece para toda a equipe e para os clientes, e o Tino responde no idioma da sua operação.
 
 <Note>
@@ -106,7 +108,7 @@ Onde fica: **Configurações > Empresa > Informações**, seção **Segurança**
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="O Tino explicado" href="/tino/o-tino-explicado">Entenda como o Tino atende seus clientes.</Card>
-  <Card title="Monte a estrutura em Áreas e Unidades" href="/equipe/areas-e-unidades">Organize sua empresa em áreas e unidades.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="O Tino explicado" href="/tino/o-tino-explicado">Entenda como o Tino atende seus clientes.</Artigo>
+  <Artigo titulo="Monte a estrutura em Áreas e Unidades" href="/equipe/areas-e-unidades">Organize sua empresa em áreas e unidades.</Artigo>
+</Lista>

@@ -4,6 +4,8 @@ sidebarTitle: "Créditos"
 description: "A franquia mensal, o que consome créditos, o que acontece quando acabam e onde acompanhar tudo isso."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 A IA e as mensagens do Tartini consomem créditos. Todo mês entra uma franquia de créditos na conta; o uso do mês sai dela. Quem acompanha é o Administrador, em **Configurações > Cobrança > Créditos**.
 
 ---
@@ -78,7 +80,7 @@ O botão **Gerenciar plano e franquia**, na tela de Assinatura, abre a escolha d
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Planos e o que cada um libera" href="/visao-geral/planos-e-recursos">Essential, Scale e Enterprise.</Card>
-  <Card title="Acompanhe o saldo e o extrato" href="/creditos/creditos-e-extrato">A tela de Créditos em detalhe.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Planos e o que cada um libera" href="/visao-geral/planos-e-recursos">Essential, Scale e Enterprise.</Artigo>
+  <Artigo titulo="Acompanhe o saldo e o extrato" href="/creditos/creditos-e-extrato">A tela de Créditos em detalhe.</Artigo>
+</Lista>

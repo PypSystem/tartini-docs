@@ -4,6 +4,8 @@ sidebarTitle: "Webhook and inbound"
 description: "Connect your system so every new contact enters the campaign on its own, or activate Tino when someone writes a keyword."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Not every campaign starts with a ready-made list. Two other sources put Tino to work without you having to upload a file: your own system notifying each new contact, or a word the customer writes first.
 
 <Note>
@@ -109,9 +111,9 @@ Once created, the campaign starts **Ativa** (Active) right away, listening for t
 
 ## Related articles
 
-<CardGroup cols={2}>
-  <Card title="Create a campaign" href="/en/campanhas/crie-uma-campanha">The wizard in three steps.</Card>
-  <Card title="Receive events in your system" href="/en/integracoes/webhooks">Other Tartini webhooks.</Card>
-  <Card title="Track the results" href="/en/campanhas/resultados">Where to see conversations from each source.</Card>
-  <Card title="Manage contacts" href="/en/inbox/contatos">The tag applied by a keyword campaign.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Create a campaign" href="/en/campanhas/crie-uma-campanha">The wizard in three steps.</Artigo>
+  <Artigo titulo="Receive events in your system" href="/en/integracoes/webhooks">Other Tartini webhooks.</Artigo>
+  <Artigo titulo="Track the results" href="/en/campanhas/resultados">Where to see conversations from each source.</Artigo>
+  <Artigo titulo="Manage contacts" href="/en/inbox/contatos">The tag applied by a keyword campaign.</Artigo>
+</Lista>

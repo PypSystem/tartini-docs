@@ -4,6 +4,8 @@ sidebarTitle: "Créditos"
 description: "Veja quanto sobra da sua franquia, para onde os créditos vão e o extrato de cada dia."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Com o saldo à vista, você sabe quanto ainda tem de franquia, o que mais consome créditos e quando o ciclo vira.
 
 <Note>
@@ -95,7 +97,7 @@ Onde fica: **Configurações > Cobrança > Créditos**, seção **Consumo por co
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Veja a assinatura e o plano" href="/creditos/assinatura">Veja seu plano, sua franquia e os dados da conta.</Card>
-  <Card title="O que acontece quando os créditos acabam" href="/creditos/quando-os-creditos-acabam">Entenda as faixas de aviso e o que para.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Veja a assinatura e o plano" href="/creditos/assinatura">Veja seu plano, sua franquia e os dados da conta.</Artigo>
+  <Artigo titulo="O que acontece quando os créditos acabam" href="/creditos/quando-os-creditos-acabam">Entenda as faixas de aviso e o que para.</Artigo>
+</Lista>

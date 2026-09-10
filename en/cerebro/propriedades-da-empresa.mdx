@@ -4,6 +4,8 @@ sidebarTitle: "Properties"
 description: "See, filter, and manage in one place everything Tino and Copilot have already been taught."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Propriedades e Fontes (Properties and Sources) is the central list of everything that makes up your company's knowledge: documents, questions and answers, and website pages. It's where you check what's indexed, edit the content, and decide who uses each item.
 
 <Note>
@@ -127,7 +129,7 @@ Where to find it: right below the newly indexed item in the list, and also insid
 
 ## Related articles
 
-<CardGroup cols={2}>
-  <Card title="Teach the AI with documents" href="/en/cerebro/documentos">Upload files to the knowledge base.</Card>
-  <Card title="Teach the AI with your website" href="/en/cerebro/sites">Sync and index pages from your website.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Teach the AI with documents" href="/en/cerebro/documentos">Upload files to the knowledge base.</Artigo>
+  <Artigo titulo="Teach the AI with your website" href="/en/cerebro/sites">Sync and index pages from your website.</Artigo>
+</Lista>

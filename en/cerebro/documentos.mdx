@@ -4,6 +4,8 @@ sidebarTitle: "Documents"
 description: "Upload manuals, catalogs, and policies so Tino learns the content automatically."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Uploading a document is the fastest way to put existing content into the knowledge base: Tino reads the file and learns on its own, without you needing to rewrite anything.
 
 <Note>
@@ -78,7 +80,7 @@ To review or correct the extracted text, edit the audience, or delete the docume
 
 ## Related articles
 
-<CardGroup cols={2}>
-  <Card title="Register the company's properties" href="/en/cerebro/propriedades-da-empresa">See, edit, and manage what's already been registered.</Card>
-  <Card title="Use the knowledge base intelligence" href="/en/cerebro/inteligencia-da-base">Review what Tino discovered from your documents.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Register the company's properties" href="/en/cerebro/propriedades-da-empresa">See, edit, and manage what's already been registered.</Artigo>
+  <Artigo titulo="Use the knowledge base intelligence" href="/en/cerebro/inteligencia-da-base">Review what Tino discovered from your documents.</Artigo>
+</Lista>

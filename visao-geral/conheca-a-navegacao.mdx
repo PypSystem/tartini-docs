@@ -4,6 +4,8 @@ sidebarTitle: "A tela do Tartini"
 description: "O menu da esquerda, a troca de Unidade, o menu do perfil e o que muda no celular."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Tudo no Tartini parte do menu da esquerda, a coluna fixa que ocupa a lateral da tela do topo ao rodapé. Ele mostra só o que o seu papel pode usar, então a sua tela pode ter menos itens do que a de um colega. Veja [Papéis e acessos explicados](/visao-geral/papeis-e-acessos).
 
 {/* CAPTURA: images/visao-geral/menu-principal-expandido.png | Menu principal expandido com os sete itens e o rodapé | Os itens do menu na ordem e o botão de Área e Unidade abaixo do logotipo */}
@@ -100,7 +102,7 @@ Três avisos podem aparecer acima do conteúdo:
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Papéis e acessos explicados" href="/visao-geral/papeis-e-acessos">Quem vê o quê em cada tela.</Card>
-  <Card title="A Página Inicial explicada" href="/metricas/pagina-inicial">O painel do dia para gestores e atendentes.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Papéis e acessos explicados" href="/visao-geral/papeis-e-acessos">Quem vê o quê em cada tela.</Artigo>
+  <Artigo titulo="A Página Inicial explicada" href="/metricas/pagina-inicial">O painel do dia para gestores e atendentes.</Artigo>
+</Lista>

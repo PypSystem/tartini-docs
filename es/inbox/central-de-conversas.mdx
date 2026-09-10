@@ -4,6 +4,8 @@ sidebarTitle: "Central de Conversaciones"
 description: "Busca, audita y exporta cualquier conversación que ya haya pasado por tu empresa, con filtros y finalización masiva."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 La Central de Conversas (Central de Conversaciones) guarda el historial completo, con filtros para encontrar exactamente lo que necesitas. Exporta en CSV o finaliza varias conversaciones a la vez.
 
 <Note>
@@ -117,9 +119,9 @@ El Panorama muestra el retrato del momento: cuánto hay en abierto, qué se venc
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Conoce el Inbox" href="/es/inbox/conheca-o-inbox">La pantalla, las listas y los estados de la conversación.</Card>
-  <Card title="Cierra una conversación y envía la encuesta" href="/es/inbox/encerre-uma-conversa">Finaliza una conversación a la vez, con el motivo correcto.</Card>
-  <Card title="Define el SLA de atención" href="/es/atendimento/sla">El tiempo máximo de respuesta por canal.</Card>
-  <Card title="Scout explicado" href="/es/scout/o-scout-explicado">Cómo nacen el resumen y la nota de la conversación.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Conoce el Inbox" href="/es/inbox/conheca-o-inbox">La pantalla, las listas y los estados de la conversación.</Artigo>
+  <Artigo titulo="Cierra una conversación y envía la encuesta" href="/es/inbox/encerre-uma-conversa">Finaliza una conversación a la vez, con el motivo correcto.</Artigo>
+  <Artigo titulo="Define el SLA de atención" href="/es/atendimento/sla">El tiempo máximo de respuesta por canal.</Artigo>
+  <Artigo titulo="Scout explicado" href="/es/scout/o-scout-explicado">Cómo nacen el resumen y la nota de la conversación.</Artigo>
+</Lista>

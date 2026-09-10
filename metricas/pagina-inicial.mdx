@@ -4,6 +4,8 @@ sidebarTitle: "Página Inicial"
 description: "O painel do dia: a fila em tempo real, o que precisa de você, os números de hoje e a equipe, ou as suas conversas se você atende."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Depois do checklist de preparação, a Página Inicial vira o painel do dia. Gestores veem a operação inteira; atendentes veem as próprias conversas e o próprio desempenho.
 
 <Note>
@@ -81,7 +83,7 @@ Os últimos catorze dias: **Clientes atendidos**, **Tempo médio** de atendiment
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Métricas da operação" href="/metricas/operacao">Os números por período, Unidade e atendente.</Card>
-  <Card title="Métricas do Tino" href="/metricas/tino">O que o Tino resolve e quanto consome.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Métricas da operação" href="/metricas/operacao">Os números por período, Unidade e atendente.</Artigo>
+  <Artigo titulo="Métricas do Tino" href="/metricas/tino">O que o Tino resolve e quanto consome.</Artigo>
+</Lista>

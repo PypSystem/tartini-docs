@@ -34,6 +34,7 @@ for f in sorted(files):
     body=s[fm.end():] if fm else s
     # remove comentários mdx e blocos de código para algumas checagens
     nocom=re.sub(r"\{/\*.*?\*/\}","",body,flags=re.S)
+    nocom=re.sub(r"^import .*$","",nocom,flags=re.M)  # imports de componentes (ex.: lista-artigos.jsx)
     nocode=re.sub(r"```.*?```","",nocom,flags=re.S); nocode=re.sub(r"`[^`\n]*`","",nocode)
     for pat,name in BAN:
         if rel.endswith("marca/voz.mdx") and name not in ("travessão","comentário HTML"): continue  # a página lista as palavras banidas de propósito
@@ -52,7 +53,7 @@ for f in sorted(files):
         if link.startswith("/images/"): continue
         if link not in slugs and link not in existing: issues.append(f"link fora do mapa: {link}")
     # '<' em texto (fora de tags conhecidas)
-    for m in re.finditer(r"<(?!/?(Note|Tip|Info|Warning|Steps|Step|Frame|img|CardGroup|Card|Accordion|AccordionGroup|Tabs|Tab|CodeGroup|iframe|video|br)\b)[A-Za-z0-9]",nocode):
+    for m in re.finditer(r"<(?!/?(Note|Tip|Info|Warning|Steps|Step|Frame|img|CardGroup|Card|Lista|Artigo|Accordion|AccordionGroup|Tabs|Tab|CodeGroup|iframe|video|br)\b)[A-Za-z0-9]",nocode):
         issues.append(f"'<' suspeito: {nocode[m.start():m.start()+30]!r}")
     words=len(re.sub(r"<[^>]+>","",nocode).split())
     if issues:

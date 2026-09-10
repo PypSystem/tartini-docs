@@ -4,6 +4,8 @@ sidebarTitle: "Programación y follow-ups"
 description: "Elige cuándo Tino aborda a cada contacto, cuántas veces insiste y cuándo pausar el envío."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Definir los horarios correctos y los intentos de follow-up evita que Tino escriba fuera del horario de atención y garantiza que un contacto que no respondió sea abordado de nuevo, sin que tu equipo tenga que acordarse.
 
 <Note>
@@ -123,9 +125,9 @@ Allí ves cuántos jobs están **Agendados** (Programados), **Ativos** (Activos)
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Crea una campaña" href="/es/campanhas/crie-uma-campanha">El asistente en tres pasos.</Card>
-  <Card title="Define horarios y zona horaria de la IA" href="/es/cerebro/disponibilidade">La disponibilidad que alimenta la ventana predeterminada.</Card>
-  <Card title="Sigue los resultados" href="/es/campanhas/resultados">Conversaciones, conversiones y abandonos.</Card>
-  <Card title="Crea plantillas de mensaje de WhatsApp" href="/es/canais/templates">Plantillas exigidas en los follow-ups de WABA.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Crea una campaña" href="/es/campanhas/crie-uma-campanha">El asistente en tres pasos.</Artigo>
+  <Artigo titulo="Define horarios y zona horaria de la IA" href="/es/cerebro/disponibilidade">La disponibilidad que alimenta la ventana predeterminada.</Artigo>
+  <Artigo titulo="Sigue los resultados" href="/es/campanhas/resultados">Conversaciones, conversiones y abandonos.</Artigo>
+  <Artigo titulo="Crea plantillas de mensaje de WhatsApp" href="/es/canais/templates">Plantillas exigidas en los follow-ups de WABA.</Artigo>
+</Lista>

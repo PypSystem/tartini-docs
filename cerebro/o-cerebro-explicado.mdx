@@ -4,6 +4,8 @@ sidebarTitle: "Cérebro"
 description: "Entenda onde fica todo o conhecimento, a personalidade e as regras que orientam o Tino e o Copilot, e para onde ir para configurar cada parte."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Tudo parte do Cérebro. Você entrega o material da sua empresa, ele aprende o seu padrão e coordena o time de agentes que trabalha por você. Ensinou uma vez, vale para todo o atendimento: é dele que o Tino tira o que responde na linha de frente, o Copilot o que sugere ao lado do time, e o Scout a régua que avalia cada conversa. É o único lugar onde você mantém esse conhecimento atualizado.
 
 <Note>
@@ -85,20 +87,20 @@ Dentro do Cérebro, Panorama, Propriedades e Personalidade estão liberados em q
 
 ## Para onde cada tarefa aponta
 
-<CardGroup cols={2}>
-  <Card title="Cadastre as propriedades da empresa" href="/cerebro/propriedades-da-empresa">Veja, filtre e gerencie tudo que já foi ensinado ao Tino.</Card>
-  <Card title="Ensine a IA com documentos" href="/cerebro/documentos">Envie arquivos para a base de conhecimento.</Card>
-  <Card title="Ensine a IA com perguntas e respostas" href="/cerebro/perguntas-e-respostas">Cadastre pares de pergunta e resposta.</Card>
-  <Card title="Ensine a IA com o seu site" href="/cerebro/sites">Sincronize e indexe páginas do seu site.</Card>
-  <Card title="Defina o tom de voz" href="/cerebro/comunicacao">Cadastre estilos de comunicação complementares.</Card>
-  <Card title="Crie diretrizes para a IA" href="/cerebro/diretrizes">Adicione procedimentos e saudações do seu jeito.</Card>
-  <Card title="Crie regras de conformidade" href="/cerebro/conformidade">Defina o que o Tino nunca pode fazer.</Card>
-  <Card title="Defina horários e fuso da IA" href="/cerebro/disponibilidade">Configure quando a empresa está em atendimento.</Card>
-  <Card title="Configure o roteamento" href="/cerebro/roteamento">Diga quando o Tino deve transferir para uma pessoa.</Card>
-  <Card title="Configure os campos do contato" href="/cerebro/qualificacao">Defina os dados que o Tino coleta na conversa.</Card>
-  <Card title="Mapeie processos a partir das conversas" href="/cerebro/mapeie-processos">Construa o playbook de cada tipo de atendimento.</Card>
-  <Card title="Acompanhe o Catálogo de processos" href="/cerebro/consistencia-e-insights">Veja o que está quebrado no cadastro de processos.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Cadastre as propriedades da empresa" href="/cerebro/propriedades-da-empresa">Veja, filtre e gerencie tudo que já foi ensinado ao Tino.</Artigo>
+  <Artigo titulo="Ensine a IA com documentos" href="/cerebro/documentos">Envie arquivos para a base de conhecimento.</Artigo>
+  <Artigo titulo="Ensine a IA com perguntas e respostas" href="/cerebro/perguntas-e-respostas">Cadastre pares de pergunta e resposta.</Artigo>
+  <Artigo titulo="Ensine a IA com o seu site" href="/cerebro/sites">Sincronize e indexe páginas do seu site.</Artigo>
+  <Artigo titulo="Defina o tom de voz" href="/cerebro/comunicacao">Cadastre estilos de comunicação complementares.</Artigo>
+  <Artigo titulo="Crie diretrizes para a IA" href="/cerebro/diretrizes">Adicione procedimentos e saudações do seu jeito.</Artigo>
+  <Artigo titulo="Crie regras de conformidade" href="/cerebro/conformidade">Defina o que o Tino nunca pode fazer.</Artigo>
+  <Artigo titulo="Defina horários e fuso da IA" href="/cerebro/disponibilidade">Configure quando a empresa está em atendimento.</Artigo>
+  <Artigo titulo="Configure o roteamento" href="/cerebro/roteamento">Diga quando o Tino deve transferir para uma pessoa.</Artigo>
+  <Artigo titulo="Configure os campos do contato" href="/cerebro/qualificacao">Defina os dados que o Tino coleta na conversa.</Artigo>
+  <Artigo titulo="Mapeie processos a partir das conversas" href="/cerebro/mapeie-processos">Construa o playbook de cada tipo de atendimento.</Artigo>
+  <Artigo titulo="Acompanhe o Catálogo de processos" href="/cerebro/consistencia-e-insights">Veja o que está quebrado no cadastro de processos.</Artigo>
+</Lista>
 
 ---
 
@@ -120,7 +122,7 @@ Dentro do Cérebro, Panorama, Propriedades e Personalidade estão liberados em q
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Cadastre as propriedades da empresa" href="/cerebro/propriedades-da-empresa">A base de conhecimento completa, em uma lista.</Card>
-  <Card title="Processos explicados" href="/cerebro/processos-explicados">O que é um processo e como ele orienta o Tino.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Cadastre as propriedades da empresa" href="/cerebro/propriedades-da-empresa">A base de conhecimento completa, em uma lista.</Artigo>
+  <Artigo titulo="Processos explicados" href="/cerebro/processos-explicados">O que é um processo e como ele orienta o Tino.</Artigo>
+</Lista>

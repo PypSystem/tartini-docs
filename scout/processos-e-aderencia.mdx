@@ -4,6 +4,8 @@ sidebarTitle: "Processos e aderência"
 description: "Descubra quais processos cadastrados no Cérebro não estão entrando, não evoluem ou pioram a experiência do cliente."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 A tela Processos cruza os processos cadastrados no Cérebro com as conversas reais e mostra onde cada um está falhando, sem você reler avaliação por avaliação.
 
 <Note>
@@ -97,9 +99,9 @@ Clicar numa barra do gráfico ou numa linha da tabela abre o diagnóstico daquel
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="O Scout explicado" href="/scout/o-scout-explicado">Papéis, planos e o menu do Scout.</Card>
-  <Card title="O Cérebro explicado" href="/cerebro/o-cerebro-explicado">Onde os processos são cadastrados.</Card>
-  <Card title="Mapeie processos a partir das conversas" href="/cerebro/mapeie-processos">Como um processo é criado e mantido.</Card>
-  <Card title="Planos e o que cada um libera" href="/visao-geral/planos-e-recursos">O que o plano Scale libera além de Processos.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="O Scout explicado" href="/scout/o-scout-explicado">Papéis, planos e o menu do Scout.</Artigo>
+  <Artigo titulo="O Cérebro explicado" href="/cerebro/o-cerebro-explicado">Onde os processos são cadastrados.</Artigo>
+  <Artigo titulo="Mapeie processos a partir das conversas" href="/cerebro/mapeie-processos">Como um processo é criado e mantido.</Artigo>
+  <Artigo titulo="Planos e o que cada um libera" href="/visao-geral/planos-e-recursos">O que o plano Scale libera além de Processos.</Artigo>
+</Lista>

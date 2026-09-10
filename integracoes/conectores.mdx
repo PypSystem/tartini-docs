@@ -4,6 +4,8 @@ sidebarTitle: "Conectores"
 description: "Dê ao Tino acesso à sua agenda, ao seu CRM ou ao seu sistema para ele consultar e agir durante a conversa."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Com um conector, o Tino deixa de só responder e passa a agir: consulta a agenda e marca um horário, abre uma negociação no CRM, busca um pedido no seu sistema. Os conectores ficam em **Configurações > Integrações > Conectores**.
 
 <Note>
@@ -79,7 +81,7 @@ A seção **Usado pelos processos** mostra quais processos usam o conector. Enqu
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Processos explicados" href="/cerebro/processos-explicados">Onde as ferramentas entram em ação.</Card>
-  <Card title="Receba eventos no seu sistema" href="/integracoes/webhooks">O caminho inverso: o Tartini avisa o seu sistema.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Processos explicados" href="/cerebro/processos-explicados">Onde as ferramentas entram em ação.</Artigo>
+  <Artigo titulo="Receba eventos no seu sistema" href="/integracoes/webhooks">O caminho inverso: o Tartini avisa o seu sistema.</Artigo>
+</Lista>

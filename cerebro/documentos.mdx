@@ -4,6 +4,8 @@ sidebarTitle: "Documentos"
 description: "Envie manuais, catálogos e políticas para que o Tino aprenda o conteúdo automaticamente."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Enviar um documento é a forma mais rápida de colocar conteúdo já existente na base de conhecimento: o Tino lê o arquivo e aprende sozinho, sem que você precise reescrever nada.
 
 <Note>
@@ -76,7 +78,7 @@ Para revisar ou corrigir o texto extraído, editar a audiência ou excluir o doc
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Cadastre as propriedades da empresa" href="/cerebro/propriedades-da-empresa">Veja, edite e gerencie o que já foi cadastrado.</Card>
-  <Card title="Use a inteligência da base de conhecimento" href="/cerebro/inteligencia-da-base">Revise o que o Tino descobriu a partir dos seus documentos.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Cadastre as propriedades da empresa" href="/cerebro/propriedades-da-empresa">Veja, edite e gerencie o que já foi cadastrado.</Artigo>
+  <Artigo titulo="Use a inteligência da base de conhecimento" href="/cerebro/inteligencia-da-base">Revise o que o Tino descobriu a partir dos seus documentos.</Artigo>
+</Lista>

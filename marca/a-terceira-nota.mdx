@@ -4,6 +4,8 @@ sidebarTitle: "A terceira nota"
 description: "De onde vem o nome do produto e qual critério ele impõe ao desenho da marca."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Este é o manual da marca do Tartini: o símbolo, as cores, as letras, a voz e as medidas de aplicação. Cada capítulo traz o que pode ser feito, o que não pode, e o motivo.
 
 <Note>
@@ -45,12 +47,12 @@ Na marca, cada lado tem uma cor, e o encontro entre os dois tem a sua:
 
 ## O manual
 
-<CardGroup cols={2}>
-  <Card title="O símbolo" icon="comment" href="/marca/simbolo">Anatomia, proporções fixas, as cinco variantes, tamanho mínimo e lockup.</Card>
-  <Card title="As cores" icon="palette" href="/marca/cores">Base neutra, os dois sinais, os estados semânticos, o tema escuro e a proporção de tela.</Card>
-  <Card title="O gradiente" icon="droplet" href="/marca/gradiente">O único uso decorativo autorizado do sistema, com a lista do que pode e do que não pode.</Card>
-  <Card title="As letras" icon="font" href="/marca/letras">As três famílias e suas funções, a escala e o wordmark.</Card>
-  <Card title="A voz" icon="message" href="/marca/voz">Como a marca escreve, o vocabulário permitido, os termos banidos e a assinatura da IA.</Card>
-  <Card title="A aplicação" icon="ruler-combined" href="/marca/aplicacao">Grade, espaço, cantos, bordas, sombras, foco, botões, densidade e movimento.</Card>
-  <Card title="O que nunca se faz" icon="ban" href="/marca/o-que-nunca">A lista de conferência que o resto do manual existe para sustentar.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="O símbolo" href="/marca/simbolo">Anatomia, proporções fixas, as cinco variantes, tamanho mínimo e lockup.</Artigo>
+  <Artigo titulo="As cores" href="/marca/cores">Base neutra, os dois sinais, os estados semânticos, o tema escuro e a proporção de tela.</Artigo>
+  <Artigo titulo="O gradiente" href="/marca/gradiente">O único uso decorativo autorizado do sistema, com a lista do que pode e do que não pode.</Artigo>
+  <Artigo titulo="As letras" href="/marca/letras">As três famílias e suas funções, a escala e o wordmark.</Artigo>
+  <Artigo titulo="A voz" href="/marca/voz">Como a marca escreve, o vocabulário permitido, os termos banidos e a assinatura da IA.</Artigo>
+  <Artigo titulo="A aplicação" href="/marca/aplicacao">Grade, espaço, cantos, bordas, sombras, foco, botões, densidade e movimento.</Artigo>
+  <Artigo titulo="O que nunca se faz" href="/marca/o-que-nunca">A lista de conferência que o resto do manual existe para sustentar.</Artigo>
+</Lista>

@@ -4,6 +4,8 @@ sidebarTitle: "Créditos agotados"
 description: "Entiende las dos franjas de aviso, qué se detiene en tu operación y qué sigue funcionando con normalidad."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Cuando la franquicia del mes termina, solo la inteligencia artificial se pausa. Tu equipo sigue atendiendo por el Inbox, en todos los canales.
 
 <Note>
@@ -76,7 +78,7 @@ Al hacer clic en la franja, amarilla o roja, vas directo a **Configurações > C
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Consulta el saldo y el extracto de créditos" href="/es/creditos/creditos-e-extrato">Revisa el consumo diario y la franquicia del ciclo.</Card>
-  <Card title="Revisa la suscripción y el plan" href="/es/creditos/assinatura">Ajusta tu franquicia o mejora tu plan.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Consulta el saldo y el extracto de créditos" href="/es/creditos/creditos-e-extrato">Revisa el consumo diario y la franquicia del ciclo.</Artigo>
+  <Artigo titulo="Revisa la suscripción y el plan" href="/es/creditos/assinatura">Ajusta tu franquicia o mejora tu plan.</Artigo>
+</Lista>

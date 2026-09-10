@@ -4,6 +4,8 @@ sidebarTitle: "Descripción general"
 description: "Documentación completa de la API pública de Tartini."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 La API pública de Tartini permite integrar funcionalidades de inteligencia artificial y base de conocimiento a sistemas externos: chatbots, CRMs, aplicaciones web y más.
 
 ---
@@ -34,14 +36,10 @@ Authorization: Bearer pyp_live_SUA_API_KEY
 
 ## Endpoints disponibles
 
-<CardGroup cols={2}>
-  <Card title="GET /api/status" icon="signal" href="/es/api-reference/endpoint/status">
-    Verifica si la API está operativa y valida tu API key.
-  </Card>
-  <Card title="POST /api/rag/retrieve" icon="magnifying-glass" href="/es/api-reference/endpoint/rag-retrieve">
-    Busca chunks relevantes y genera respuestas con IA.
-  </Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="GET /api/status" href="/es/api-reference/endpoint/status">Verifica si la API está operativa y valida tu API key.</Artigo>
+  <Artigo titulo="POST /api/rag/retrieve" href="/es/api-reference/endpoint/rag-retrieve">Busca chunks relevantes y genera respuestas con IA.</Artigo>
+</Lista>
 
 ---
 

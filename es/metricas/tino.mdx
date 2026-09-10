@@ -4,6 +4,8 @@ sidebarTitle: "Tino"
 description: "Consulta cuánto de la operación absorbió el Tino, la velocidad de las respuestas y el apoyo del Copilot al equipo."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 La pantalla Tino muestra lo que la IA entregó en el período: cuánto resolvió sola, con qué rapidez respondió y dónde rinde más entre áreas y unidades. Una sección aparte muestra cuánto ayudó el Copilot al equipo.
 
 <Note>
@@ -115,9 +117,9 @@ El Tino también aparece en otras dos pantallas de Tartini. Los procesos que sig
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="El Panorama de las métricas" href="/es/metricas/panorama">El retrato ejecutivo del período.</Card>
-  <Card title="Métricas de la operación" href="/es/metricas/operacao">Los números del equipo, sección por sección.</Card>
-  <Card title="Usa el Copilot" href="/es/inbox/copilot">Cómo llegan las sugerencias al agente.</Card>
-  <Card title="Planes y qué habilita cada uno" href="/es/visao-geral/planos-e-recursos">Qué cambia entre Essential, Scale y Enterprise.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="El Panorama de las métricas" href="/es/metricas/panorama">El retrato ejecutivo del período.</Artigo>
+  <Artigo titulo="Métricas de la operación" href="/es/metricas/operacao">Los números del equipo, sección por sección.</Artigo>
+  <Artigo titulo="Usa el Copilot" href="/es/inbox/copilot">Cómo llegan las sugerencias al agente.</Artigo>
+  <Artigo titulo="Planes y qué habilita cada uno" href="/es/visao-geral/planos-e-recursos">Qué cambia entre Essential, Scale y Enterprise.</Artigo>
+</Lista>

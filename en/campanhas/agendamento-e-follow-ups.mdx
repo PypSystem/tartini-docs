@@ -4,6 +4,8 @@ sidebarTitle: "Scheduling and follow-ups"
 description: "Choose when Tino reaches out to each contact, how many times it follows up, and when to pause the send."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Setting the right hours and follow-up attempts keeps Tino from writing outside business hours and makes sure a contact who didn't respond gets reached out to again, without your team having to remember.
 
 <Note>
@@ -123,9 +125,9 @@ There you see how many jobs are **Agendados** (Scheduled), **Ativos** (Active), 
 
 ## Related articles
 
-<CardGroup cols={2}>
-  <Card title="Create a campaign" href="/en/campanhas/crie-uma-campanha">The wizard in three steps.</Card>
-  <Card title="Set hours and the AI's time zone" href="/en/cerebro/disponibilidade">The availability that feeds the default window.</Card>
-  <Card title="Track the results" href="/en/campanhas/resultados">Conversations, conversions, and drop-offs.</Card>
-  <Card title="Create WhatsApp message templates" href="/en/canais/templates">Templates required for WABA follow-ups.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Create a campaign" href="/en/campanhas/crie-uma-campanha">The wizard in three steps.</Artigo>
+  <Artigo titulo="Set hours and the AI's time zone" href="/en/cerebro/disponibilidade">The availability that feeds the default window.</Artigo>
+  <Artigo titulo="Track the results" href="/en/campanhas/resultados">Conversations, conversions, and drop-offs.</Artigo>
+  <Artigo titulo="Create WhatsApp message templates" href="/en/canais/templates">Templates required for WABA follow-ups.</Artigo>
+</Lista>

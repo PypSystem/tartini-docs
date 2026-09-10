@@ -4,6 +4,8 @@ sidebarTitle: "Suscripción"
 description: "Consulta tu plan, la franquicia contratada y los datos registrados de tu cuenta en un solo lugar."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Con esta pantalla, confirmas de un vistazo qué plan está activo, cuánto te queda de franquicia y si los datos de tu cuenta están correctos.
 
 <Note>
@@ -101,7 +103,7 @@ Dónde está: **Configurações > Cobrança > Assinatura**, botón **Gerenciar p
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Consulta el saldo y el extracto de créditos" href="/es/creditos/creditos-e-extrato">Consulta el consumo diario de créditos.</Card>
-  <Card title="Planes y qué habilita cada uno" href="/es/visao-geral/planos-e-recursos">Compara los recursos de cada plan.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Consulta el saldo y el extracto de créditos" href="/es/creditos/creditos-e-extrato">Consulta el consumo diario de créditos.</Artigo>
+  <Artigo titulo="Planes y qué habilita cada uno" href="/es/visao-geral/planos-e-recursos">Compara los recursos de cada plan.</Artigo>
+</Lista>

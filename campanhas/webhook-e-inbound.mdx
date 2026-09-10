@@ -4,6 +4,8 @@ sidebarTitle: "Webhook e inbound"
 description: "Conecte seu sistema para que cada novo contato entre na campanha sozinho, ou ative o Tino quando alguém escrever uma palavra-chave."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Nem toda campanha começa com uma lista pronta. Duas outras origens colocam o Tino para agir sem que você precise subir um arquivo: seu próprio sistema avisando cada novo contato, ou uma palavra que o cliente escreve primeiro.
 
 <Note>
@@ -107,9 +109,9 @@ Ao criar, a campanha já nasce **Ativa**, escutando as palavras configuradas. N�
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Crie uma campanha" href="/campanhas/crie-uma-campanha">O assistente em três passos.</Card>
-  <Card title="Receba eventos no seu sistema" href="/integracoes/webhooks">Outros webhooks do Tartini.</Card>
-  <Card title="Acompanhe os resultados" href="/campanhas/resultados">Onde ver as conversas de cada origem.</Card>
-  <Card title="Gerencie os contatos" href="/inbox/contatos">A tag aplicada por uma campanha de palavra-chave.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Crie uma campanha" href="/campanhas/crie-uma-campanha">O assistente em três passos.</Artigo>
+  <Artigo titulo="Receba eventos no seu sistema" href="/integracoes/webhooks">Outros webhooks do Tartini.</Artigo>
+  <Artigo titulo="Acompanhe os resultados" href="/campanhas/resultados">Onde ver as conversas de cada origem.</Artigo>
+  <Artigo titulo="Gerencie os contatos" href="/inbox/contatos">A tag aplicada por uma campanha de palavra-chave.</Artigo>
+</Lista>

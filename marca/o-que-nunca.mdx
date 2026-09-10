@@ -4,6 +4,8 @@ sidebarTitle: "O que nunca se faz"
 description: "A lista de conferência que o resto do manual existe para sustentar."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Cada item abaixo já foi, em algum momento, uma boa ideia isolada. O problema aparece na soma.
 
 ---
@@ -30,9 +32,9 @@ Cada item abaixo já foi, em algum momento, uma boa ideia isolada. O problema ap
 
 ## Onde cada regra vem
 
-<CardGroup cols={2}>
-  <Card title="O símbolo" href="/marca/simbolo">Dois pontos, nunca três; nada de girar, sombrear ou encaixar em forma.</Card>
-  <Card title="As cores" href="/marca/cores">Tinta quente, cobalto protegido, vermelho só para perigo.</Card>
-  <Card title="O gradiente" href="/marca/gradiente">Um significado, um uso por vista.</Card>
-  <Card title="As letras" href="/marca/letras">Schibsted, Hanken e Plex Mono; nada além delas.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="O símbolo" href="/marca/simbolo">Dois pontos, nunca três; nada de girar, sombrear ou encaixar em forma.</Artigo>
+  <Artigo titulo="As cores" href="/marca/cores">Tinta quente, cobalto protegido, vermelho só para perigo.</Artigo>
+  <Artigo titulo="O gradiente" href="/marca/gradiente">Um significado, um uso por vista.</Artigo>
+  <Artigo titulo="As letras" href="/marca/letras">Schibsted, Hanken e Plex Mono; nada além delas.</Artigo>
+</Lista>

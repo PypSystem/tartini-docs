@@ -4,6 +4,8 @@ sidebarTitle: "Pesquisa de Satisfação"
 description: "Envie uma pesquisa de satisfação ao cliente depois do atendimento e acompanhe as notas no Scout."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Com a pesquisa configurada, todo cliente recebe um convite para avaliar o atendimento, e você acompanha o resultado sem sair do Tartini.
 
 <Note>
@@ -103,7 +105,7 @@ As avaliações aparecem em [Scout, na seção de Satisfação](/scout/satisfaca
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Acompanhe a satisfação dos clientes" href="/scout/satisfacao">Veja as notas e comentários coletados pela pesquisa.</Card>
-  <Card title="Defina as regras de conversa" href="/atendimento/regras-de-conversa">Configure o encerramento que dispara a pesquisa.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Acompanhe a satisfação dos clientes" href="/scout/satisfacao">Veja as notas e comentários coletados pela pesquisa.</Artigo>
+  <Artigo titulo="Defina as regras de conversa" href="/atendimento/regras-de-conversa">Configure o encerramento que dispara a pesquisa.</Artigo>
+</Lista>

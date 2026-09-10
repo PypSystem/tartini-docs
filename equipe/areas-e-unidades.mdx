@@ -4,6 +4,8 @@ sidebarTitle: "Áreas & Unidades"
 description: "Organize sua empresa em áreas e unidades para gerenciar acessos, canais e atendimento por loja, filial ou departamento."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Com a estrutura organizada, você define quem acessa cada loja, filial ou setor da sua empresa. Cada unidade tem seus próprios canais, usuários e conversas.
 
 <Note>
@@ -125,7 +127,7 @@ Para desativar um setor sem apagar seu histórico, use **Desativar** no menu de 
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Convide e gerencie usuários" href="/equipe/usuarios">Adicione pessoas às áreas e unidades que você criou.</Card>
-  <Card title="Papéis e acessos explicados" href="/visao-geral/papeis-e-acessos">Entenda o que cada papel enxerga em cada nível.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Convide e gerencie usuários" href="/equipe/usuarios">Adicione pessoas às áreas e unidades que você criou.</Artigo>
+  <Artigo titulo="Papéis e acessos explicados" href="/visao-geral/papeis-e-acessos">Entenda o que cada papel enxerga em cada nível.</Artigo>
+</Lista>

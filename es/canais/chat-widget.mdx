@@ -4,6 +4,8 @@ sidebarTitle: "Chat Widget"
 description: "Agrega un chat de atención a tu sitio y recibe las conversaciones directo en el Inbox de tu equipo."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Con el Chat Widget instalado, cualquier visitante de tu sitio puede abrir una conversación que llega directo al Inbox, junto con los demás canales.
 
 <Note>
@@ -95,7 +97,7 @@ De forma predeterminada, Tino queda apagado en todo widget nuevo.
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Canales explicados" href="/es/canais/canais-explicados">Los canales disponibles en Tartini.</Card>
-  <Card title="Activa Tino en un canal" href="/es/tino/ia-por-canal">Horarios, follow-up y cierre para este canal.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Canales explicados" href="/es/canais/canais-explicados">Los canales disponibles en Tartini.</Artigo>
+  <Artigo titulo="Activa Tino en un canal" href="/es/tino/ia-por-canal">Horarios, follow-up y cierre para este canal.</Artigo>
+</Lista>

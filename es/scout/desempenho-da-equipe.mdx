@@ -4,6 +4,8 @@ sidebarTitle: "Desempeño"
 description: "Compara la nota del equipo y del Tino por Área, Unidad y agente, y genera el análisis mensual que cada persona recibe."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 La pantalla Desempenho (Desempeño) muestra la nota de tu equipo y del Tino lado a lado, en el alcance que elijas, y reúne el feedback mensual que cada agente recibe.
 
 <Note>
@@ -121,9 +123,9 @@ En un Área, Unidad o agente, haz clic en **Relatório anual** (Informe anual) p
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Lee las evaluaciones del Scout" href="/es/scout/avaliacoes">Las conversaciones que forman la nota del período.</Card>
-  <Card title="Está de acuerdo con el Scout o corrige la nota" href="/es/scout/concorde-ou-corrija">Cómo la corrección entra en la nota efectiva.</Card>
-  <Card title="Scout explicado" href="/es/scout/o-scout-explicado">Roles, planes y el menú del Scout.</Card>
-  <Card title="Consulta el saldo y el extracto de créditos" href="/es/creditos/creditos-e-extrato">El consumo de generar y regenerar el análisis.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Lee las evaluaciones del Scout" href="/es/scout/avaliacoes">Las conversaciones que forman la nota del período.</Artigo>
+  <Artigo titulo="Está de acuerdo con el Scout o corrige la nota" href="/es/scout/concorde-ou-corrija">Cómo la corrección entra en la nota efectiva.</Artigo>
+  <Artigo titulo="Scout explicado" href="/es/scout/o-scout-explicado">Roles, planes y el menú del Scout.</Artigo>
+  <Artigo titulo="Consulta el saldo y el extracto de créditos" href="/es/creditos/creditos-e-extrato">El consumo de generar y regenerar el análisis.</Artigo>
+</Lista>

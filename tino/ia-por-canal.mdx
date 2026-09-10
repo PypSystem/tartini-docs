@@ -4,6 +4,8 @@ sidebarTitle: "IA por canal"
 description: "Defina em quais canais o Tino atende sozinho, com que horário, follow-up e encerramento."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Com o Tino ligado num canal, ele responde ao cliente automaticamente dentro do horário que você definir, e passa a conversa para a equipe quando for preciso.
 
 <Note>Quem configura: Administrador, Gestor da Empresa e Gestor de Área. Disponível no plano Scale.</Note>
@@ -96,7 +98,7 @@ Com o Tino ligado e dentro do horário, ele atende a conversa assim que ela cheg
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Canais explicados" href="/canais/canais-explicados">Os canais disponíveis no Tartini.</Card>
-  <Card title="Defina as regras de conversa" href="/atendimento/regras-de-conversa">Encerramento automático das conversas com a equipe.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Canais explicados" href="/canais/canais-explicados">Os canais disponíveis no Tartini.</Artigo>
+  <Artigo titulo="Defina as regras de conversa" href="/atendimento/regras-de-conversa">Encerramento automático das conversas com a equipe.</Artigo>
+</Lista>

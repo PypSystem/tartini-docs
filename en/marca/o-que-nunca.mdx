@@ -4,6 +4,8 @@ sidebarTitle: "What is never done"
 description: "The checklist that the rest of the manual exists to support."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Each item below was, at some point, a good idea in isolation. The problem shows up in the sum.
 
 ---
@@ -30,9 +32,9 @@ Each item below was, at some point, a good idea in isolation. The problem shows 
 
 ## Where each rule comes from
 
-<CardGroup cols={2}>
-  <Card title="The symbol" href="/en/marca/simbolo">Two dots, never three; no rotating, shadowing, or fitting into a shape.</Card>
-  <Card title="The colors" href="/en/marca/cores">Warm ink, protected cobalt, red only for danger.</Card>
-  <Card title="The gradient" href="/en/marca/gradiente">One meaning, one use per view.</Card>
-  <Card title="The letters" href="/en/marca/letras">Schibsted, Hanken, and Plex Mono; nothing beyond them.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="The symbol" href="/en/marca/simbolo">Two dots, never three; no rotating, shadowing, or fitting into a shape.</Artigo>
+  <Artigo titulo="The colors" href="/en/marca/cores">Warm ink, protected cobalt, red only for danger.</Artigo>
+  <Artigo titulo="The gradient" href="/en/marca/gradiente">One meaning, one use per view.</Artigo>
+  <Artigo titulo="The letters" href="/en/marca/letras">Schibsted, Hanken, and Plex Mono; nothing beyond them.</Artigo>
+</Lista>

@@ -4,6 +4,8 @@ sidebarTitle: "Acepta una invitación"
 description: "¿Recibiste una invitación de un gestor? Crea la contraseña, activa la cuenta y entra directo al Inbox."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 La invitación llega por correo electrónico, enviada por un gestor o administrador de tu empresa. Tú defines nombre y contraseña, y la cuenta queda activa al instante.
 
 <Note>
@@ -55,7 +57,7 @@ El enlace tiene un plazo. Si la pantalla indica que el token es inválido o expi
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Conoce la pantalla de Tartini" href="/es/visao-geral/conheca-a-navegacao">El menú y el cambio de Unidad.</Card>
-  <Card title="Conoce el Inbox" href="/es/inbox/conheca-o-inbox">Por dónde llegan las conversaciones.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Conoce la pantalla de Tartini" href="/es/visao-geral/conheca-a-navegacao">El menú y el cambio de Unidad.</Artigo>
+  <Artigo titulo="Conoce el Inbox" href="/es/inbox/conheca-o-inbox">Por dónde llegan las conversaciones.</Artigo>
+</Lista>

@@ -4,6 +4,8 @@ sidebarTitle: "Roles y accesos"
 description: "Quién ve qué en Tartini: titular de la cuenta, administrador, gestores y agentes, y cómo desciende el acceso por la estructura de la empresa."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Cada persona de tu equipo entra a Tartini con un rol en un punto de la estructura de la empresa. El rol dice qué puede hacer; el punto de la estructura dice hasta dónde puede ver.
 
 <Note>
@@ -91,7 +93,7 @@ Donde dice "solo tu alcance", la persona ve la pantalla, pero solo las Unidades,
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Invita y gestiona usuarios" href="/es/equipe/usuarios">Da acceso a una persona en uno o más puntos de la estructura.</Card>
-  <Card title="Áreas y Unidades" href="/es/equipe/areas-e-unidades">Arma la estructura de tu empresa.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Invita y gestiona usuarios" href="/es/equipe/usuarios">Da acceso a una persona en uno o más puntos de la estructura.</Artigo>
+  <Artigo titulo="Áreas y Unidades" href="/es/equipe/areas-e-unidades">Arma la estructura de tu empresa.</Artigo>
+</Lista>

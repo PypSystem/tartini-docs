@@ -4,6 +4,8 @@ sidebarTitle: "Tino passa a conversa"
 description: "Como uma conversa sai do Tino e chega à equipe, o que a pessoa vê ao recebê-la e como assumir a qualquer momento."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Uma conversa começa com o Tino e termina com uma pessoa quando você quer, quando ele não consegue seguir ou quando alguém da equipe decide assumir. Em todos os casos a pessoa recebe a conversa com o histórico e um resumo do que o Tino já fez.
 
 <Note>
@@ -84,7 +86,7 @@ A conversa segue as regras da equipe: o encerramento automático das Regras de C
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Atenda uma conversa" href="/inbox/atenda-uma-conversa">O campo de mensagem, a assinatura e os anexos.</Card>
-  <Card title="Configure o roteamento" href="/cerebro/roteamento">Quando a IA transfere e para quem.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Atenda uma conversa" href="/inbox/atenda-uma-conversa">O campo de mensagem, a assinatura e os anexos.</Artigo>
+  <Artigo titulo="Configure o roteamento" href="/cerebro/roteamento">Quando a IA transfere e para quem.</Artigo>
+</Lista>

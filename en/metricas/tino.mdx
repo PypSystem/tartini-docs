@@ -4,6 +4,8 @@ sidebarTitle: "Tino"
 description: "See how much of the operation Tino absorbed, the speed of its responses, and how Copilot supports the team."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 The Tino screen shows what the AI delivered in the period: how much it resolved on its own, how quickly it responded, and where it performs best across areas and units. A separate section shows how much Copilot helped the team.
 
 <Note>
@@ -113,9 +115,9 @@ Tino also appears on two other Tartini screens. The processes it follows live in
 
 ## Related Articles
 
-<CardGroup cols={2}>
-  <Card title="The Metrics Panorama" href="/en/metricas/panorama">The period's executive snapshot.</Card>
-  <Card title="Operation Metrics" href="/en/metricas/operacao">The team's numbers, section by section.</Card>
-  <Card title="Use Copilot" href="/en/inbox/copilot">How suggestions reach the agent.</Card>
-  <Card title="Plans and what each one unlocks" href="/en/visao-geral/planos-e-recursos">What changes between Essential, Scale, and Enterprise.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="The Metrics Panorama" href="/en/metricas/panorama">The period's executive snapshot.</Artigo>
+  <Artigo titulo="Operation Metrics" href="/en/metricas/operacao">The team's numbers, section by section.</Artigo>
+  <Artigo titulo="Use Copilot" href="/en/inbox/copilot">How suggestions reach the agent.</Artigo>
+  <Artigo titulo="Plans and what each one unlocks" href="/en/visao-geral/planos-e-recursos">What changes between Essential, Scale, and Enterprise.</Artigo>
+</Lista>

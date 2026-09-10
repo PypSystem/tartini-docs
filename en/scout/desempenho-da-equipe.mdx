@@ -4,6 +4,8 @@ sidebarTitle: "Performance"
 description: "Compare the team's and Tino's score by Area, Unit, and agent, and generate the monthly analysis each person receives."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 The Desempenho screen shows your team's and Tino's score side by side, in the scope you choose, and gathers the monthly feedback each agent receives.
 
 <Note>
@@ -119,9 +121,9 @@ In an Area, Unit, or agent, click **Relatório anual** (Annual report) to downlo
 
 ## Related Articles
 
-<CardGroup cols={2}>
-  <Card title="Read Scout's evaluations" href="/en/scout/avaliacoes">The conversations that make up the period's score.</Card>
-  <Card title="Agree with Scout or correct the score" href="/en/scout/concorde-ou-corrija">How the correction factors into the effective score.</Card>
-  <Card title="The Scout Explained" href="/en/scout/o-scout-explicado">Roles, plans, and the Scout menu.</Card>
-  <Card title="Track your credit balance and statement" href="/en/creditos/creditos-e-extrato">The consumption of generating and regenerating the analysis.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Read Scout's evaluations" href="/en/scout/avaliacoes">The conversations that make up the period's score.</Artigo>
+  <Artigo titulo="Agree with Scout or correct the score" href="/en/scout/concorde-ou-corrija">How the correction factors into the effective score.</Artigo>
+  <Artigo titulo="The Scout Explained" href="/en/scout/o-scout-explicado">Roles, plans, and the Scout menu.</Artigo>
+  <Artigo titulo="Track your credit balance and statement" href="/en/creditos/creditos-e-extrato">The consumption of generating and regenerating the analysis.</Artigo>
+</Lista>

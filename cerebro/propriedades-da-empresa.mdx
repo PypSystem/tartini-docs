@@ -4,6 +4,8 @@ sidebarTitle: "Propriedades"
 description: "Veja, filtre e gerencie em um só lugar tudo que já foi ensinado ao Tino e ao Copilot."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Propriedades e Fontes é a lista central de tudo que compõe o conhecimento da sua empresa: documentos, perguntas e respostas e páginas de site. É onde você confere o que está indexado, edita o conteúdo e decide quem usa cada item.
 
 <Note>
@@ -125,7 +127,7 @@ Onde fica: logo abaixo do item recém-indexado, na lista, e também dentro do pa
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Ensine a IA com documentos" href="/cerebro/documentos">Envie arquivos para a base de conhecimento.</Card>
-  <Card title="Ensine a IA com o seu site" href="/cerebro/sites">Sincronize e indexe páginas do seu site.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Ensine a IA com documentos" href="/cerebro/documentos">Envie arquivos para a base de conhecimento.</Artigo>
+  <Artigo titulo="Ensine a IA com o seu site" href="/cerebro/sites">Sincronize e indexe páginas do seu site.</Artigo>
+</Lista>

@@ -4,6 +4,8 @@ sidebarTitle: "WhatsApp por código QR"
 description: "Conecta tu número de WhatsApp a Tartini en minutos, escaneando un código con el celular."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Una vez conectado, los mensajes de tu número de WhatsApp empiezan a llegar directo al Inbox de tu equipo. Puedes reconectar o cambiar de número cuando lo necesites.
 
 <Note>
@@ -98,9 +100,9 @@ De forma predeterminada, un canal desconectado queda detenido hasta que alguien 
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Canales explicados" href="/es/canais/canais-explicados">Los canales disponibles en Tartini y cuándo usar cada uno.</Card>
-  <Card title="Conecta WhatsApp Business API (WABA)" href="/es/canais/whatsapp-business-api">La conexión oficial de Meta, más estable.</Card>
-  <Card title="Resuelve problemas de conexión" href="/es/canais/problemas-de-conexao">Síntomas comunes y cómo corregirlos.</Card>
-  <Card title="Activa Tino en un canal" href="/es/tino/ia-por-canal">Configura horarios y follow-up para este número.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Canales explicados" href="/es/canais/canais-explicados">Los canales disponibles en Tartini y cuándo usar cada uno.</Artigo>
+  <Artigo titulo="Conecta WhatsApp Business API (WABA)" href="/es/canais/whatsapp-business-api">La conexión oficial de Meta, más estable.</Artigo>
+  <Artigo titulo="Resuelve problemas de conexión" href="/es/canais/problemas-de-conexao">Síntomas comunes y cómo corregirlos.</Artigo>
+  <Artigo titulo="Activa Tino en un canal" href="/es/tino/ia-por-canal">Configura horarios y follow-up para este número.</Artigo>
+</Lista>

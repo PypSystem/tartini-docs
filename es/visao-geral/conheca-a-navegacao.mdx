@@ -4,6 +4,8 @@ sidebarTitle: "La pantalla de Tartini"
 description: "El menú de la izquierda, el cambio de Unidad, el menú del perfil y qué cambia en el celular."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Todo en Tartini parte del menú de la izquierda, la columna fija que ocupa el lateral de la pantalla de arriba abajo. Muestra solo lo que tu rol puede usar, así que tu pantalla puede tener menos elementos que la de un colega. Consulta [Roles y accesos explicados](/es/visao-geral/papeis-e-acessos).
 
 <Note>
@@ -104,7 +106,7 @@ Tres avisos pueden aparecer encima del contenido:
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Roles y accesos explicados" href="/es/visao-geral/papeis-e-acessos">Quién ve qué en cada pantalla.</Card>
-  <Card title="La Página Inicial explicada" href="/es/metricas/pagina-inicial">El panel del día para gestores y agentes.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Roles y accesos explicados" href="/es/visao-geral/papeis-e-acessos">Quién ve qué en cada pantalla.</Artigo>
+  <Artigo titulo="La Página Inicial explicada" href="/es/metricas/pagina-inicial">El panel del día para gestores y agentes.</Artigo>
+</Lista>

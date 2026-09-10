@@ -4,6 +4,8 @@ sidebarTitle: "Enrutamiento"
 description: "Define las condiciones que hacen que Tino transfiera la conversación a un agente humano."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 El enrutamiento le indica a Tino cuándo detenerse y pasar la conversación a una persona, como un cliente molesto o un pedido para hablar con un agente.
 
 <Note>
@@ -107,7 +109,7 @@ Dónde está: dentro de la edición de la tarjeta del criterio.
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Configura los esclarecimientos" href="/es/cerebro/esclarecimentos">Define cuándo Tino pide más información.</Card>
-  <Card title="Define horarios y zona horaria de la IA" href="/es/cerebro/disponibilidade">Configura cuándo la empresa está en atendimiento.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Configura los esclarecimientos" href="/es/cerebro/esclarecimentos">Define cuándo Tino pide más información.</Artigo>
+  <Artigo titulo="Define horarios y zona horaria de la IA" href="/es/cerebro/disponibilidade">Configura cuándo la empresa está en atendimiento.</Artigo>
+</Lista>

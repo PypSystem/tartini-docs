@@ -4,6 +4,8 @@ sidebarTitle: "Mapeamento"
 description: "Construa o playbook de um atendimento conversando com o Quattro, ou aprove os processos que o Tino já identificou sozinho."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Mapear um processo não é preencher formulário: você conversa com o Quattro, que monta o playbook enquanto entende como o atendimento realmente acontece na sua empresa.
 
 <Note>
@@ -110,7 +112,7 @@ Onde fica: **Cérebro > Processos > Descobertas**.
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Processos explicados" href="/cerebro/processos-explicados">Entenda o que é um processo e como o Tino o usa.</Card>
-  <Card title="Organize processos em grupos" href="/cerebro/grupos-de-processos">Reúna processos relacionados para uso em campanhas.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Processos explicados" href="/cerebro/processos-explicados">Entenda o que é um processo e como o Tino o usa.</Artigo>
+  <Artigo titulo="Organize processos em grupos" href="/cerebro/grupos-de-processos">Reúna processos relacionados para uso em campanhas.</Artigo>
+</Lista>

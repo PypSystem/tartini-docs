@@ -4,6 +4,8 @@ sidebarTitle: "Créditos"
 description: "Consulta cuánto te queda de franquicia, adónde van los créditos y el extracto de cada día."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Con el saldo a la vista, sabes cuánto te queda de franquicia, qué es lo que más consume créditos y cuándo cambia el ciclo.
 
 <Note>
@@ -97,7 +99,7 @@ Dónde está: **Configurações > Cobrança > Créditos**, sección **Consumo po
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Consulta la suscripción y el plan" href="/es/creditos/assinatura">Consulta tu plan, tu franquicia y los datos de la cuenta.</Card>
-  <Card title="Qué sucede cuando se acaban los créditos" href="/es/creditos/quando-os-creditos-acabam">Entiende los rangos de aviso y qué se detiene.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Consulta la suscripción y el plan" href="/es/creditos/assinatura">Consulta tu plan, tu franquicia y los datos de la cuenta.</Artigo>
+  <Artigo titulo="Qué sucede cuando se acaban los créditos" href="/es/creditos/quando-os-creditos-acabam">Entiende los rangos de aviso y qué se detiene.</Artigo>
+</Lista>

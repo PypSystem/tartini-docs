@@ -4,6 +4,8 @@ sidebarTitle: "Lo que nunca se hace"
 description: "La lista de verificación que el resto del manual existe para sustentar."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Cada ítem de abajo ya fue, en algún momento, una buena idea aislada. El problema aparece en la suma.
 
 ---
@@ -30,9 +32,9 @@ Cada ítem de abajo ya fue, en algún momento, una buena idea aislada. El proble
 
 ## De dónde viene cada regla
 
-<CardGroup cols={2}>
-  <Card title="El símbolo" href="/es/marca/simbolo">Dos puntos, nunca tres; nada de girar, sombrear o encajar en una forma.</Card>
-  <Card title="Los colores" href="/es/marca/cores">Tinta cálida, cobalto protegido, rojo solo para peligro.</Card>
-  <Card title="El gradiente" href="/es/marca/gradiente">Un significado, un uso por vista.</Card>
-  <Card title="Las letras" href="/es/marca/letras">Schibsted, Hanken y Plex Mono; nada más que ellas.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="El símbolo" href="/es/marca/simbolo">Dos puntos, nunca tres; nada de girar, sombrear o encajar en una forma.</Artigo>
+  <Artigo titulo="Los colores" href="/es/marca/cores">Tinta cálida, cobalto protegido, rojo solo para peligro.</Artigo>
+  <Artigo titulo="El gradiente" href="/es/marca/gradiente">Un significado, un uso por vista.</Artigo>
+  <Artigo titulo="Las letras" href="/es/marca/letras">Schibsted, Hanken y Plex Mono; nada más que ellas.</Artigo>
+</Lista>

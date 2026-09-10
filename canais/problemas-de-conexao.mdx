@@ -4,6 +4,8 @@ sidebarTitle: "Problemas de conexão"
 description: "Sintomas comuns ao conectar o WhatsApp por QR Code ou pelo WABA, com a causa provável e como corrigir."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Esta página reúne os problemas mais comuns ao conectar ou manter um canal de WhatsApp ativo no Tartini.
 
 <Note>Quem resolve: Administrador, Gestor da Empresa, Gestor de Área e Gestor de Unidade.</Note>
@@ -104,7 +106,7 @@ Esta página reúne os problemas mais comuns ao conectar ou manter um canal de W
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Conecte o WhatsApp por QR Code" href="/canais/whatsapp-qr-code">Conexão passo a passo pela câmera ou por código.</Card>
-  <Card title="Conecte o WhatsApp Business API (WABA)" href="/canais/whatsapp-business-api">Pré-requisitos e conexão do canal oficial.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Conecte o WhatsApp por QR Code" href="/canais/whatsapp-qr-code">Conexão passo a passo pela câmera ou por código.</Artigo>
+  <Artigo titulo="Conecte o WhatsApp Business API (WABA)" href="/canais/whatsapp-business-api">Pré-requisitos e conexão do canal oficial.</Artigo>
+</Lista>

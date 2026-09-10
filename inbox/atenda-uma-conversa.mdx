@@ -4,6 +4,8 @@ sidebarTitle: "Atenda uma conversa"
 description: "Responda pelo texto certo, com mídia, áudio ou assinatura, e saiba quando assumir o atendimento do Tino."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Cada conversa do Inbox tem tudo que você precisa para responder rápido: texto, mídia, áudio e assinatura. Quando o Tino está atendendo, você assume o controle a qualquer momento.
 
 ---
@@ -162,9 +164,9 @@ No WhatsApp Business API (WABA), a Meta exige um template aprovado para você fa
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Conheça o Inbox" href="/inbox/conheca-o-inbox">A tela, as listas e os status de conversa.</Card>
-  <Card title="Use o Copilot" href="/inbox/copilot">Peça sugestões de resposta durante o atendimento.</Card>
-  <Card title="Transfira, anote e marque conversas" href="/inbox/transfira-notas-e-tags">Passe a conversa adiante e registre o que importa.</Card>
-  <Card title="Encerre uma conversa e envie a pesquisa" href="/inbox/encerre-uma-conversa">Finalize com o motivo certo.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Conheça o Inbox" href="/inbox/conheca-o-inbox">A tela, as listas e os status de conversa.</Artigo>
+  <Artigo titulo="Use o Copilot" href="/inbox/copilot">Peça sugestões de resposta durante o atendimento.</Artigo>
+  <Artigo titulo="Transfira, anote e marque conversas" href="/inbox/transfira-notas-e-tags">Passe a conversa adiante e registre o que importa.</Artigo>
+  <Artigo titulo="Encerre uma conversa e envie a pesquisa" href="/inbox/encerre-uma-conversa">Finalize com o motivo certo.</Artigo>
+</Lista>

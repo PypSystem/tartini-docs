@@ -4,6 +4,8 @@ sidebarTitle: "Templates"
 description: "Prepare mensagens aprovadas pela Meta para iniciar conversas com clientes fora da janela normal do WhatsApp."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Um template aprovado permite chamar o cliente primeiro, fora da janela normal de atendimento do WhatsApp. Eles alimentam as campanhas do Tartini e qualquer contato iniciado pela sua empresa.
 
 <Note>Disponível para canais WABA. Quem gerencia: Administrador, Gestor da Empresa, Gestor de Área e Gestor de Unidade. {/* CONFIRMAR: quem exatamente pode criar, editar e excluir templates no backend */}</Note>
@@ -91,7 +93,7 @@ Templates aprovados aparecem na hora de criar uma campanha, para começar a conv
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Conecte o WhatsApp Business API (WABA)" href="/canais/whatsapp-business-api">Pré-requisitos e conexão do canal oficial.</Card>
-  <Card title="Canais explicados" href="/canais/canais-explicados">Os canais disponíveis no Tartini.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Conecte o WhatsApp Business API (WABA)" href="/canais/whatsapp-business-api">Pré-requisitos e conexão do canal oficial.</Artigo>
+  <Artigo titulo="Canais explicados" href="/canais/canais-explicados">Os canais disponíveis no Tartini.</Artigo>
+</Lista>

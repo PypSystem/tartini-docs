@@ -4,6 +4,8 @@ sidebarTitle: "Checklist de preparação"
 description: "As etapas da Página Inicial que deixam o Tino pronto para atender: Identidade, Processos, canal e equipe."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Nas primeiras semanas a Página Inicial funciona como um checklist. Ele mostra o que falta para a IA começar a trabalhar e libera as etapas na ordem certa.
 
 <Note>
@@ -75,7 +77,7 @@ Com as quatro etapas concluídas, o widget mostra **Tudo pronto!** e o botão **
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Começando com o Tartini" href="/primeiros-passos/guias/comecando-com-o-tartini">O guia completo, passo a passo.</Card>
-  <Card title="Conecte o WhatsApp por QR Code" href="/canais/whatsapp-qr-code">O caminho mais rápido para o primeiro canal.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Começando com o Tartini" href="/primeiros-passos/guias/comecando-com-o-tartini">O guia completo, passo a passo.</Artigo>
+  <Artigo titulo="Conecte o WhatsApp por QR Code" href="/canais/whatsapp-qr-code">O caminho mais rápido para o primeiro canal.</Artigo>
+</Lista>

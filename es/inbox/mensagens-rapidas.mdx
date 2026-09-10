@@ -4,6 +4,8 @@ sidebarTitle: "Mensajes rápidos"
 description: "Registra atajos de texto para responder más rápido y mantén un conjunto estándar para todo el equipo."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Los mensajes rápidos insertan un texto listo en el campo de mensaje con solo escribir una barra y el atajo. Ahorras tiempo en respuestas que se repiten.
 
 <Note>
@@ -102,9 +104,9 @@ Dónde está: campo de mensaje, dentro de una conversación abierta.
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Atiende una conversación" href="/es/inbox/atenda-uma-conversa">Abrir, responder, adjuntar y asumir el control de Tino.</Card>
-  <Card title="Conoce el Inbox" href="/es/inbox/conheca-o-inbox">La pantalla, las listas y los estados de conversación.</Card>
-  <Card title="Define las reglas de conversación" href="/es/atendimento/regras-de-conversa">Firma, cierre automático y Copilot activo.</Card>
-  <Card title="Roles y accesos explicados" href="/es/visao-geral/papeis-e-acessos">Quién es gestor y qué habilita cada rol.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Atiende una conversación" href="/es/inbox/atenda-uma-conversa">Abrir, responder, adjuntar y asumir el control de Tino.</Artigo>
+  <Artigo titulo="Conoce el Inbox" href="/es/inbox/conheca-o-inbox">La pantalla, las listas y los estados de conversación.</Artigo>
+  <Artigo titulo="Define las reglas de conversación" href="/es/atendimento/regras-de-conversa">Firma, cierre automático y Copilot activo.</Artigo>
+  <Artigo titulo="Roles y accesos explicados" href="/es/visao-geral/papeis-e-acessos">Quién es gestor y qué habilita cada rol.</Artigo>
+</Lista>

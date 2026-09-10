@@ -4,6 +4,8 @@ sidebarTitle: "WhatsApp por QR Code"
 description: "Ligue seu número de WhatsApp ao Tartini em minutos, escaneando um código com o celular."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Depois de conectado, as mensagens do seu número de WhatsApp passam a chegar direto no Inbox da sua equipe. Você pode reconectar ou trocar de número sempre que precisar.
 
 <Note>Quem conecta: Administrador, Gestor da Empresa, Gestor de Área e Gestor de Unidade. Disponível em todos os planos.</Note>
@@ -94,9 +96,9 @@ Por padrão, um canal desconectado fica parado até alguém reconectar.
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Canais explicados" href="/canais/canais-explicados">Os canais disponíveis no Tartini e quando usar cada um.</Card>
-  <Card title="Conecte o WhatsApp Business API (WABA)" href="/canais/whatsapp-business-api">A conexão oficial da Meta, mais estável.</Card>
-  <Card title="Resolva problemas de conexão" href="/canais/problemas-de-conexao">Sintomas comuns e como corrigir.</Card>
-  <Card title="Ligue o Tino em um canal" href="/tino/ia-por-canal">Configure horários e follow-up para este número.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Canais explicados" href="/canais/canais-explicados">Os canais disponíveis no Tartini e quando usar cada um.</Artigo>
+  <Artigo titulo="Conecte o WhatsApp Business API (WABA)" href="/canais/whatsapp-business-api">A conexão oficial da Meta, mais estável.</Artigo>
+  <Artigo titulo="Resolva problemas de conexão" href="/canais/problemas-de-conexao">Sintomas comuns e como corrigir.</Artigo>
+  <Artigo titulo="Ligue o Tino em um canal" href="/tino/ia-por-canal">Configure horários e follow-up para este número.</Artigo>
+</Lista>

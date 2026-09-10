@@ -4,6 +4,8 @@ sidebarTitle: "Perguntas e Respostas"
 description: "Escreva a pergunta que o cliente faria e a resposta ideal, a forma mais direta de treinar o Tino."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Cadastrar perguntas e respostas é o jeito mais direto de treinar o Tino: sem precisar de um documento, você escreve exatamente a pergunta e a resposta que quer que ele use.
 
 <Note>
@@ -97,7 +99,7 @@ Onde fica: painel de detalhes do par, em **Cérebro > Propriedades**.
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Cadastre as propriedades da empresa" href="/cerebro/propriedades-da-empresa">Veja, edite e gerencie o que já foi cadastrado.</Card>
-  <Card title="Ensine a IA com documentos" href="/cerebro/documentos">Envie arquivos para a base de conhecimento.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Cadastre as propriedades da empresa" href="/cerebro/propriedades-da-empresa">Veja, edite e gerencie o que já foi cadastrado.</Artigo>
+  <Artigo titulo="Ensine a IA com documentos" href="/cerebro/documentos">Envie arquivos para a base de conhecimento.</Artigo>
+</Lista>

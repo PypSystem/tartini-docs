@@ -4,6 +4,8 @@ sidebarTitle: "API connection"
 description: "Generate access tokens to integrate your own systems directly with Tartini."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 With an API token, your system talks directly to Tartini, without needing anyone to open the screen.
 
 <Note>
@@ -95,7 +97,7 @@ Each registered token shows the name, the description, when it was created, and 
 
 ## Related articles
 
-<CardGroup cols={2}>
-  <Card title="Receive events in your system" href="/en/integracoes/webhooks">Automatic notifications when a conversation is closed.</Card>
-  <Card title="Channels explained" href="/en/canais/canais-explicados">The channels available in Tartini.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Receive events in your system" href="/en/integracoes/webhooks">Automatic notifications when a conversation is closed.</Artigo>
+  <Artigo titulo="Channels explained" href="/en/canais/canais-explicados">The channels available in Tartini.</Artigo>
+</Lista>

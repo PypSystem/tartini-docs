@@ -4,6 +4,8 @@ sidebarTitle: "Satisfaction"
 description: "See the score customers gave in the satisfaction survey, where it varies, and the conversations behind each score."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 The Satisfação screen brings together the score the customer gave in the survey with Scout's read on the conversation, so you can quickly see where the experience is dropping.
 
 <Note>
@@ -118,9 +120,9 @@ Where it is: the warning card on the screen itself, or directly at **Configuraç
 
 ## Related Articles
 
-<CardGroup cols={2}>
-  <Card title="Configure the satisfaction survey" href="/en/atendimento/pesquisa-de-satisfacao">Turn on the survey by channel.</Card>
-  <Card title="The Scout Explained" href="/en/scout/o-scout-explicado">Roles, plans, and the Scout menu.</Card>
-  <Card title="Use the Conversation Center" href="/en/inbox/central-de-conversas">Open any conversation in read-only mode.</Card>
-  <Card title="Read Scout's evaluations" href="/en/scout/avaliacoes">The full analysis of each conversation.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Configure the satisfaction survey" href="/en/atendimento/pesquisa-de-satisfacao">Turn on the survey by channel.</Artigo>
+  <Artigo titulo="The Scout Explained" href="/en/scout/o-scout-explicado">Roles, plans, and the Scout menu.</Artigo>
+  <Artigo titulo="Use the Conversation Center" href="/en/inbox/central-de-conversas">Open any conversation in read-only mode.</Artigo>
+  <Artigo titulo="Read Scout's evaluations" href="/en/scout/avaliacoes">The full analysis of each conversation.</Artigo>
+</Lista>

@@ -4,6 +4,8 @@ sidebarTitle: "Transferir, notas y etiquetas"
 description: "Pasa la conversación a otro agente o sector, registra notas internas y organiza contactos con etiquetas."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Transferir lleva la conversación a quien debe continuar la atención. Las notas y las etiquetas guardan lo que el equipo necesita recordar sobre el contacto.
 
 <Note>
@@ -101,9 +103,9 @@ Dónde está: ficha del contacto, tarjeta **Tags** (Etiquetas).
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="La ficha del contacto" href="/es/inbox/ficha-do-contato">Dónde viven las etiquetas y las notas del contacto.</Card>
-  <Card title="Atiende una conversación" href="/es/inbox/atenda-uma-conversa">Abrir, responder, adjuntar y retomar de Tino.</Card>
-  <Card title="Cierra una conversación y envía la encuesta" href="/es/inbox/encerre-uma-conversa">Finaliza con el motivo correcto.</Card>
-  <Card title="Gestiona los contactos" href="/es/inbox/contatos">Busca, edita y une contactos duplicados.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="La ficha del contacto" href="/es/inbox/ficha-do-contato">Dónde viven las etiquetas y las notas del contacto.</Artigo>
+  <Artigo titulo="Atiende una conversación" href="/es/inbox/atenda-uma-conversa">Abrir, responder, adjuntar y retomar de Tino.</Artigo>
+  <Artigo titulo="Cierra una conversación y envía la encuesta" href="/es/inbox/encerre-uma-conversa">Finaliza con el motivo correcto.</Artigo>
+  <Artigo titulo="Gestiona los contactos" href="/es/inbox/contatos">Busca, edita y une contactos duplicados.</Artigo>
+</Lista>

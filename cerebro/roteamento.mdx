@@ -4,6 +4,8 @@ sidebarTitle: "Roteamento"
 description: "Defina as condições que fazem o Tino transferir a conversa para um atendente humano."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 O roteamento diz ao Tino quando parar e passar a conversa para uma pessoa, como um cliente irritado ou um pedido para falar com um atendente.
 
 <Note>
@@ -105,7 +107,7 @@ Onde fica: dentro da edição do card do critério.
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Configure os esclarecimentos" href="/cerebro/esclarecimentos">Defina quando o Tino pede mais informação.</Card>
-  <Card title="Defina horários e fuso da IA" href="/cerebro/disponibilidade">Configure quando a empresa está em atendimento.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Configure os esclarecimentos" href="/cerebro/esclarecimentos">Defina quando o Tino pede mais informação.</Artigo>
+  <Artigo titulo="Defina horários e fuso da IA" href="/cerebro/disponibilidade">Configure quando a empresa está em atendimento.</Artigo>
+</Lista>

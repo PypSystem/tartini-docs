@@ -4,6 +4,8 @@ sidebarTitle: "Concordar ou corrigir"
 description: "Confirme a nota do Scout quando ela está certa ou corrija os critérios e ajude o Scout a acertar mais nas próximas conversas."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Depois de ler a análise de uma conversa, você decide se a nota do Scout está certa ou se precisa mudar. Essa decisão passa a valer como a nota real daquele atendimento.
 
 <Note>
@@ -100,9 +102,9 @@ Uma avaliação já revisada aparece em modo leitura, com os botões **Editar** 
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Leia as avaliações do Scout" href="/scout/avaliacoes">A lista de conversas e o que a análise mostra.</Card>
-  <Card title="Acompanhe o desempenho da equipe" href="/scout/desempenho-da-equipe">Como a correção entra na nota da equipe.</Card>
-  <Card title="O Scout explicado" href="/scout/o-scout-explicado">O ciclo avaliar, validar e aprender.</Card>
-  <Card title="O Cérebro explicado" href="/cerebro/o-cerebro-explicado">Onde ficam as réguas de tom de voz, diretrizes e compliance.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Leia as avaliações do Scout" href="/scout/avaliacoes">A lista de conversas e o que a análise mostra.</Artigo>
+  <Artigo titulo="Acompanhe o desempenho da equipe" href="/scout/desempenho-da-equipe">Como a correção entra na nota da equipe.</Artigo>
+  <Artigo titulo="O Scout explicado" href="/scout/o-scout-explicado">O ciclo avaliar, validar e aprender.</Artigo>
+  <Artigo titulo="O Cérebro explicado" href="/cerebro/o-cerebro-explicado">Onde ficam as réguas de tom de voz, diretrizes e compliance.</Artigo>
+</Lista>

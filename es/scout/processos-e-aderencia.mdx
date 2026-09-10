@@ -4,6 +4,8 @@ sidebarTitle: "Procesos y adherencia"
 description: "Descubre qué procesos registrados en el Cérebro no están entrando, no evolucionan o empeoran la experiencia del cliente."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 La pantalla Processos (Procesos) cruza los procesos registrados en el Cérebro con las conversaciones reales y muestra dónde cada uno está fallando, sin que tengas que releer evaluación por evaluación.
 
 <Note>
@@ -99,9 +101,9 @@ Al hacer clic en una barra del gráfico o en una fila de la tabla se abre el dia
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Scout explicado" href="/es/scout/o-scout-explicado">Roles, planes y el menú del Scout.</Card>
-  <Card title="El Cérebro explicado" href="/es/cerebro/o-cerebro-explicado">Dónde se registran los procesos.</Card>
-  <Card title="Mapea procesos a partir de las conversaciones" href="/es/cerebro/mapeie-processos">Cómo se crea y se mantiene un proceso.</Card>
-  <Card title="Planes y qué habilita cada uno" href="/es/visao-geral/planos-e-recursos">Qué habilita el plan Scale además de Processos.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Scout explicado" href="/es/scout/o-scout-explicado">Roles, planes y el menú del Scout.</Artigo>
+  <Artigo titulo="El Cérebro explicado" href="/es/cerebro/o-cerebro-explicado">Dónde se registran los procesos.</Artigo>
+  <Artigo titulo="Mapea procesos a partir de las conversaciones" href="/es/cerebro/mapeie-processos">Cómo se crea y se mantiene un proceso.</Artigo>
+  <Artigo titulo="Planes y qué habilita cada uno" href="/es/visao-geral/planos-e-recursos">Qué habilita el plan Scale además de Processos.</Artigo>
+</Lista>

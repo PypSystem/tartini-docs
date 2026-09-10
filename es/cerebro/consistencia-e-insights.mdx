@@ -4,6 +4,8 @@ sidebarTitle: "Catálogo"
 description: "Mira qué está roto en el registro de tus procesos, sin depender de conversaciones, y corrígelo con un clic."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 El Catálogo audita la estructura de tus procesos mapeados, salidas sin destino, disparadores repetidos, procesos sin paso a paso, y muestra el próximo paso para cada problema encontrado.
 
 <Note>
@@ -96,7 +98,7 @@ El Catálogo mira solo el registro, sin depender de conversaciones reales. Para 
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Mapea procesos a partir de las conversaciones" href="/es/cerebro/mapeie-processos">Corrige el paso a paso directamente en el origen.</Card>
-  <Card title="Mira la adherencia a los procesos" href="/es/scout/processos-e-aderencia">Haz seguimiento, en el Scout, de lo que Tino resolvió siguiendo cada proceso.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Mapea procesos a partir de las conversaciones" href="/es/cerebro/mapeie-processos">Corrige el paso a paso directamente en el origen.</Artigo>
+  <Artigo titulo="Mira la adherencia a los procesos" href="/es/scout/processos-e-aderencia">Haz seguimiento, en el Scout, de lo que Tino resolvió siguiendo cada proceso.</Artigo>
+</Lista>

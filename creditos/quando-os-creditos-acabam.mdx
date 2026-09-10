@@ -4,6 +4,8 @@ sidebarTitle: "Créditos esgotados"
 description: "Entenda as duas faixas de aviso, o que para na sua operação e o que continua funcionando normalmente."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Quando a franquia do mês termina, só a inteligência artificial pausa. Sua equipe continua atendendo pelo Inbox, em todos os canais.
 
 <Note>
@@ -74,7 +76,7 @@ Clicar na faixa, amarela ou vermelha, leva direto para **Configurações > Cobra
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Acompanhe o saldo e o extrato de créditos" href="/creditos/creditos-e-extrato">Veja o consumo diário e a franquia do ciclo.</Card>
-  <Card title="Veja a assinatura e o plano" href="/creditos/assinatura">Ajuste sua franquia ou faça upgrade de plano.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Acompanhe o saldo e o extrato de créditos" href="/creditos/creditos-e-extrato">Veja o consumo diário e a franquia do ciclo.</Artigo>
+  <Artigo titulo="Veja a assinatura e o plano" href="/creditos/assinatura">Ajuste sua franquia ou faça upgrade de plano.</Artigo>
+</Lista>

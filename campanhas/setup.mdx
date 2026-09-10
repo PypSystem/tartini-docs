@@ -4,6 +4,8 @@ sidebarTitle: "Prepare a Unidade"
 description: "Deixe o canal, o template de abertura e os créditos prontos para que o assistente de campanhas não trave em nenhum passo."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Uma Unidade pronta evita que o assistente de criação pare no meio do caminho pedindo canal ou template. Três coisas precisam estar certas antes de criar a primeira campanha.
 
 <Note>
@@ -89,9 +91,9 @@ Onde fica: **Configurações > Cobrança > Créditos**.
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Conecte o WhatsApp Business API (WABA)" href="/canais/whatsapp-business-api">Conecte um canal oficial da Meta.</Card>
-  <Card title="Crie templates de mensagem do WhatsApp" href="/canais/templates">Crie, sincronize e acompanhe a aprovação.</Card>
-  <Card title="Créditos explicados" href="/visao-geral/creditos-explicados">Como a franquia mensal funciona.</Card>
-  <Card title="Crie uma campanha" href="/campanhas/crie-uma-campanha">O assistente em três passos.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Conecte o WhatsApp Business API (WABA)" href="/canais/whatsapp-business-api">Conecte um canal oficial da Meta.</Artigo>
+  <Artigo titulo="Crie templates de mensagem do WhatsApp" href="/canais/templates">Crie, sincronize e acompanhe a aprovação.</Artigo>
+  <Artigo titulo="Créditos explicados" href="/visao-geral/creditos-explicados">Como a franquia mensal funciona.</Artigo>
+  <Artigo titulo="Crie uma campanha" href="/campanhas/crie-uma-campanha">O assistente em três passos.</Artigo>
+</Lista>

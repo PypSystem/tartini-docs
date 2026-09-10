@@ -4,6 +4,8 @@ sidebarTitle: "Central de Conversas"
 description: "Busque, audite e exporte qualquer conversa que já passou pela sua empresa, com filtros e finalização em massa."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 A Central de Conversas guarda o histórico completo, com filtros para achar exatamente o que precisa. Exporte em CSV ou finalize várias conversas de uma vez.
 
 <Note>
@@ -115,9 +117,9 @@ O Panorama mostra o retrato do momento: quanto está em aberto, o que estourou o
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Conheça o Inbox" href="/inbox/conheca-o-inbox">A tela, as listas e os status de conversa.</Card>
-  <Card title="Encerre uma conversa e envie a pesquisa" href="/inbox/encerre-uma-conversa">Finalize uma conversa por vez, com o motivo certo.</Card>
-  <Card title="Defina o SLA de atendimento" href="/atendimento/sla">O tempo máximo de resposta por canal.</Card>
-  <Card title="O Scout explicado" href="/scout/o-scout-explicado">Como o resumo e a nota da conversa nascem.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Conheça o Inbox" href="/inbox/conheca-o-inbox">A tela, as listas e os status de conversa.</Artigo>
+  <Artigo titulo="Encerre uma conversa e envie a pesquisa" href="/inbox/encerre-uma-conversa">Finalize uma conversa por vez, com o motivo certo.</Artigo>
+  <Artigo titulo="Defina o SLA de atendimento" href="/atendimento/sla">O tempo máximo de resposta por canal.</Artigo>
+  <Artigo titulo="O Scout explicado" href="/scout/o-scout-explicado">Como o resumo e a nota da conversa nascem.</Artigo>
+</Lista>

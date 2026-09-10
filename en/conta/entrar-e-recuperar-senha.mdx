@@ -4,6 +4,8 @@ sidebarTitle: "Sign in and recover password"
 description: "The sign-in screen, the two-factor code, and the path to reset your password when you forget it."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 You sign in at [talk.saninternet.com](https://talk.saninternet.com) with email and password. If your account has two-factor authentication, the screen also asks for the code from the authenticator app.
 
 <Note>
@@ -79,7 +81,7 @@ Anyone whose account is linked to the SAN customer area can sign in from there, 
 
 ## Related articles
 
-<CardGroup cols={2}>
-  <Card title="Turn on two-factor authentication" href="/en/conta/autenticacao-em-dois-fatores">Protect the account with the authenticator app.</Card>
-  <Card title="Edit your profile and notifications" href="/en/conta/perfil-e-notificacoes">Name, service name, and password.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Turn on two-factor authentication" href="/en/conta/autenticacao-em-dois-fatores">Protect the account with the authenticator app.</Artigo>
+  <Artigo titulo="Edit your profile and notifications" href="/en/conta/perfil-e-notificacoes">Name, service name, and password.</Artigo>
+</Lista>

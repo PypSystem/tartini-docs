@@ -4,6 +4,8 @@ sidebarTitle: "Resultados"
 description: "Veja quantos contatos responderam, quantos converteram e onde as conversas de uma campanha aparecem no Inbox."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 O painel de uma campanha mostra o que aconteceu com cada contato que ela abordou, do primeiro contato até a conversão, sem você precisar abrir conversa por conversa.
 
 <Note>
@@ -103,9 +105,9 @@ Toda conversa aberta por uma campanha aparece no Inbox com um chip **Campanha**,
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Crie uma campanha" href="/campanhas/crie-uma-campanha">Onde a definição de sucesso é escolhida.</Card>
-  <Card title="Agende o envio e os follow-ups" href="/campanhas/agendamento-e-follow-ups">Pausar, retomar e acompanhar a fila.</Card>
-  <Card title="A ficha do contato" href="/inbox/ficha-do-contato">Onde o link Abrir campanha aparece.</Card>
-  <Card title="Use a Central de Conversas" href="/inbox/central-de-conversas">Outra forma de acompanhar conversas em andamento.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Crie uma campanha" href="/campanhas/crie-uma-campanha">Onde a definição de sucesso é escolhida.</Artigo>
+  <Artigo titulo="Agende o envio e os follow-ups" href="/campanhas/agendamento-e-follow-ups">Pausar, retomar e acompanhar a fila.</Artigo>
+  <Artigo titulo="A ficha do contato" href="/inbox/ficha-do-contato">Onde o link Abrir campanha aparece.</Artigo>
+  <Artigo titulo="Use a Central de Conversas" href="/inbox/central-de-conversas">Outra forma de acompanhar conversas em andamento.</Artigo>
+</Lista>

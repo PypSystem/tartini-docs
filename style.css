@@ -26,3 +26,93 @@ samp {
 .dark #topbar-cta-button .text-white\/90 {
   color: rgb(20 18 15 / 0.9);
 }
+
+/* Lista de artigos no formato de central de ajuda (uma linha por artigo,
+   seta à direita), usada nos "Artigos relacionados". Componente em
+   components/lista-artigos.jsx. Medidas do manual: canto 16, borda 1px linha,
+   hover em apoio, transição de 200ms. */
+.lista-artigos {
+  margin: 1.25rem 0 0;
+  border: 1px solid #e4e4e0;
+  border-radius: 16px;
+  background: #ffffff;
+  overflow: hidden;
+}
+.lista-artigos-titulo {
+  margin: 0;
+  padding: 18px 22px 14px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+  color: #14120f;
+  border-bottom: 1px solid #e4e4e0;
+}
+.lista-artigos-itens {
+  display: flex;
+  flex-direction: column;
+}
+.lista-artigos-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 22px;
+  color: #14120f;
+  text-decoration: none;
+  border-top: 1px solid #e4e4e0;
+  transition: background-color 200ms ease;
+}
+.lista-artigos-item:first-child,
+.lista-artigos-titulo + .lista-artigos-itens > .lista-artigos-item:first-child {
+  border-top: 0;
+}
+.lista-artigos-item:hover {
+  background: #f6f6f4;
+}
+.lista-artigos-item:focus-visible {
+  outline: 2px solid #2b2823;
+  outline-offset: -2px;
+}
+.lista-artigos-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+.lista-artigos-nome {
+  font-weight: 500;
+  font-size: 0.97rem;
+  line-height: 1.4;
+}
+.lista-artigos-desc {
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: #8d8779;
+}
+.lista-artigos-seta {
+  flex: 0 0 auto;
+  color: #8d8779;
+}
+
+.dark .lista-artigos {
+  background: #1d1a16;
+  border-color: #2b2823;
+}
+.dark .lista-artigos-titulo {
+  color: #faf7f0;
+  border-color: #2b2823;
+}
+.dark .lista-artigos-item {
+  color: #faf7f0;
+  border-color: #2b2823;
+}
+.dark .lista-artigos-item:hover {
+  background: #2b2823;
+}
+.dark .lista-artigos-item:focus-visible {
+  outline-color: #b9b2a2;
+}
+.dark .lista-artigos-desc,
+.dark .lista-artigos-seta {
+  color: #b9b2a2;
+}

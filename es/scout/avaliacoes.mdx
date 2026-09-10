@@ -4,6 +4,8 @@ sidebarTitle: "Evaluaciones"
 description: "Encuentra las conversaciones que el Scout ya evaluó, filtra por las que necesitan tu atención y lee el análisis completo."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 En cada conversación cerrada, el Scout ya deja listos un resumen y una nota. Abres la pantalla Conversas (Conversaciones), eliges qué revisar primero y lees el análisis sin reabrir la conversación entera.
 
 <Note>
@@ -105,9 +107,9 @@ Dónde está: botón **Ler conversa completa** (Leer conversación completa), en
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Está de acuerdo con el Scout o corrige la nota" href="/es/scout/concorde-ou-corrija">Cómo validar la nota y qué cambia después.</Card>
-  <Card title="Scout explicado" href="/es/scout/o-scout-explicado">Qué evalúa el Scout y cómo funciona el ciclo.</Card>
-  <Card title="Define las reglas de conversación" href="/es/atendimento/regras-de-conversa">Activa el Scout al cerrar conversaciones.</Card>
-  <Card title="Consulta el saldo y el extracto de créditos" href="/es/creditos/creditos-e-extrato">Consulta el consumo de cada análisis.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Está de acuerdo con el Scout o corrige la nota" href="/es/scout/concorde-ou-corrija">Cómo validar la nota y qué cambia después.</Artigo>
+  <Artigo titulo="Scout explicado" href="/es/scout/o-scout-explicado">Qué evalúa el Scout y cómo funciona el ciclo.</Artigo>
+  <Artigo titulo="Define las reglas de conversación" href="/es/atendimento/regras-de-conversa">Activa el Scout al cerrar conversaciones.</Artigo>
+  <Artigo titulo="Consulta el saldo y el extracto de créditos" href="/es/creditos/creditos-e-extrato">Consulta el consumo de cada análisis.</Artigo>
+</Lista>

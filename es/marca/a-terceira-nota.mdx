@@ -4,6 +4,8 @@ sidebarTitle: "El tercer sonido"
 description: "De dónde viene el nombre del producto y qué criterio impone al diseño de la marca."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Este es el manual de marca de Tartini: el símbolo, los colores, las letras, la voz y las medidas de aplicación. Cada capítulo trae qué se puede hacer, qué no, y el motivo.
 
 <Note>
@@ -45,12 +47,12 @@ En la marca, cada lado tiene un color, y el encuentro entre los dos tiene el suy
 
 ## El manual
 
-<CardGroup cols={2}>
-  <Card title="El símbolo" icon="comment" href="/es/marca/simbolo">Anatomía, proporciones fijas, las cinco variantes, tamaño mínimo y lockup.</Card>
-  <Card title="Los colores" icon="palette" href="/es/marca/cores">Base neutra, las dos señales, los estados semánticos, el tema oscuro y la proporción de pantalla.</Card>
-  <Card title="El gradiente" icon="droplet" href="/es/marca/gradiente">El único uso decorativo autorizado del sistema, con la lista de lo que se puede y lo que no.</Card>
-  <Card title="Las letras" icon="font" href="/es/marca/letras">Las tres familias y sus funciones, la escala y el wordmark.</Card>
-  <Card title="La voz" icon="message" href="/es/marca/voz">Cómo escribe la marca, el vocabulario permitido, los términos prohibidos y la firma de la IA.</Card>
-  <Card title="La aplicación" icon="ruler-combined" href="/es/marca/aplicacao">Cuadrícula, espacio, esquinas, bordes, sombras, foco, botones, densidad y movimiento.</Card>
-  <Card title="Lo que nunca se hace" icon="ban" href="/es/marca/o-que-nunca">La lista de verificación que el resto del manual existe para sustentar.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="El símbolo" href="/es/marca/simbolo">Anatomía, proporciones fijas, las cinco variantes, tamaño mínimo y lockup.</Artigo>
+  <Artigo titulo="Los colores" href="/es/marca/cores">Base neutra, las dos señales, los estados semánticos, el tema oscuro y la proporción de pantalla.</Artigo>
+  <Artigo titulo="El gradiente" href="/es/marca/gradiente">El único uso decorativo autorizado del sistema, con la lista de lo que se puede y lo que no.</Artigo>
+  <Artigo titulo="Las letras" href="/es/marca/letras">Las tres familias y sus funciones, la escala y el wordmark.</Artigo>
+  <Artigo titulo="La voz" href="/es/marca/voz">Cómo escribe la marca, el vocabulario permitido, los términos prohibidos y la firma de la IA.</Artigo>
+  <Artigo titulo="La aplicación" href="/es/marca/aplicacao">Cuadrícula, espacio, esquinas, bordes, sombras, foco, botones, densidad y movimiento.</Artigo>
+  <Artigo titulo="Lo que nunca se hace" href="/es/marca/o-que-nunca">La lista de verificación que el resto del manual existe para sustentar.</Artigo>
+</Lista>

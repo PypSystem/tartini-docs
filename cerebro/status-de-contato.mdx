@@ -4,6 +4,8 @@ sidebarTitle: "Status de Contato"
 description: "Monte a lista de status que a equipe usa na ficha do contato para dizer em que ponto do relacionamento cada pessoa está."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Os status de contato dizem, de forma padronizada, em que ponto do relacionamento cada pessoa está, como "Lead", "Cliente ativo" ou "Inativo". A ordem definida aqui é a mesma que aparece no seletor da ficha do contato.
 
 <Note>
@@ -86,7 +88,7 @@ Onde fica: **Cérebro > Operações > Status de Contato**, botões de ação em 
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Configure os campos do contato" href="/cerebro/qualificacao">Defina os dados que o Tino coleta na conversa.</Card>
-  <Card title="Configure os esclarecimentos" href="/cerebro/esclarecimentos">Defina quando o Tino pede mais informação.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Configure os campos do contato" href="/cerebro/qualificacao">Defina os dados que o Tino coleta na conversa.</Artigo>
+  <Artigo titulo="Configure os esclarecimentos" href="/cerebro/esclarecimentos">Defina quando o Tino pede mais informação.</Artigo>
+</Lista>

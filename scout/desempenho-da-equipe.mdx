@@ -4,6 +4,8 @@ sidebarTitle: "Desempenho"
 description: "Compare a nota da equipe e do Tino por Área, Unidade e atendente, e gere a análise mensal que cada pessoa recebe."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 A tela Desempenho mostra a nota da sua equipe e do Tino lado a lado, no recorte que você escolher, e reúne o feedback mensal que cada atendente recebe.
 
 <Note>
@@ -119,9 +121,9 @@ Numa Área, Unidade ou atendente, clique em **Relatório anual** para baixar um 
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Leia as avaliações do Scout" href="/scout/avaliacoes">As conversas que formam a nota do período.</Card>
-  <Card title="Concorde com o Scout ou corrija a nota" href="/scout/concorde-ou-corrija">Como a correção entra na nota efetiva.</Card>
-  <Card title="O Scout explicado" href="/scout/o-scout-explicado">Papéis, planos e o menu do Scout.</Card>
-  <Card title="Acompanhe o saldo e o extrato de créditos" href="/creditos/creditos-e-extrato">O consumo de gerar e regerar a análise.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Leia as avaliações do Scout" href="/scout/avaliacoes">As conversas que formam a nota do período.</Artigo>
+  <Artigo titulo="Concorde com o Scout ou corrija a nota" href="/scout/concorde-ou-corrija">Como a correção entra na nota efetiva.</Artigo>
+  <Artigo titulo="O Scout explicado" href="/scout/o-scout-explicado">Papéis, planos e o menu do Scout.</Artigo>
+  <Artigo titulo="Acompanhe o saldo e o extrato de créditos" href="/creditos/creditos-e-extrato">O consumo de gerar e regerar a análise.</Artigo>
+</Lista>

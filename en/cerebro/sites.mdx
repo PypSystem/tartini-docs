@@ -4,6 +4,8 @@ sidebarTitle: "Sites"
 description: "Paste your website's link and choose exactly which pages Tino learns, at no cost to discover what's there."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Syncing a site imports the content from your pages into the knowledge base, with full control over what comes in: you decide which pages Tino actually learns.
 
 <Note>
@@ -104,7 +106,7 @@ Sites with 50 or more pages selected at once show a notice before indexing, beca
 
 ## Related articles
 
-<CardGroup cols={2}>
-  <Card title="Register the company's properties" href="/en/cerebro/propriedades-da-empresa">See, edit, and manage what's already been registered.</Card>
-  <Card title="Use the knowledge base intelligence" href="/en/cerebro/inteligencia-da-base">Review what Tino discovered from your website.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Register the company's properties" href="/en/cerebro/propriedades-da-empresa">See, edit, and manage what's already been registered.</Artigo>
+  <Artigo titulo="Use the knowledge base intelligence" href="/en/cerebro/inteligencia-da-base">Review what Tino discovered from your website.</Artigo>
+</Lista>

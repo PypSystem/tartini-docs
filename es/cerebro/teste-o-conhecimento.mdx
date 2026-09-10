@@ -4,6 +4,8 @@ sidebarTitle: "Prueba el Conocimiento"
 description: "Conversa con el Cérebro para comprobar, antes de que el cliente pregunte, lo que Tino realmente sabe responder."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Antes de confiar un contenido nuevo a la atención, puedes preguntarle directamente al Cérebro (el cerebro de la empresa) y ver la respuesta que daría, sin esperar a una conversación real.
 
 <Note>
@@ -73,7 +75,7 @@ El chat tiene un selector de audiencia, etiquetado **Propriedades** (Propiedades
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Registra las propiedades de la empresa" href="/es/cerebro/propriedades-da-empresa">Consulta la tarjeta Tino aprendeu (Tino aprendió) en cada elemento indexado.</Card>
-  <Card title="El Cérebro explicado" href="/es/cerebro/o-cerebro-explicado">Descubre el Panorama y el resto del Cérebro.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Registra las propiedades de la empresa" href="/es/cerebro/propriedades-da-empresa">Consulta la tarjeta Tino aprendeu (Tino aprendió) en cada elemento indexado.</Artigo>
+  <Artigo titulo="El Cérebro explicado" href="/es/cerebro/o-cerebro-explicado">Descubre el Panorama y el resto del Cérebro.</Artigo>
+</Lista>

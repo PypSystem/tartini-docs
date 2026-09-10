@@ -4,6 +4,8 @@ sidebarTitle: "Credits"
 description: "The monthly allowance, what consumes credits, what happens when they run out, and where to keep track of it all."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 AI and messages in Tartini consume credits. Every month a credit allowance enters the account; the month's usage draws from it. The Administrator keeps track, in **Configurações > Cobrança > Créditos** (Settings > Billing > Credits).
 
 <Note>
@@ -82,7 +84,7 @@ The **Gerenciar plano e franquia** (Manage plan and allowance) button, on the Su
 
 ## Related articles
 
-<CardGroup cols={2}>
-  <Card title="Plans and what each one unlocks" href="/en/visao-geral/planos-e-recursos">Essential, Scale, and Enterprise.</Card>
-  <Card title="Track your balance and statement" href="/en/creditos/creditos-e-extrato">The Credits screen in detail.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Plans and what each one unlocks" href="/en/visao-geral/planos-e-recursos">Essential, Scale, and Enterprise.</Artigo>
+  <Artigo titulo="Track your balance and statement" href="/en/creditos/creditos-e-extrato">The Credits screen in detail.</Artigo>
+</Lista>

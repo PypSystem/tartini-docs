@@ -4,6 +4,8 @@ sidebarTitle: "Crie uma campanha"
 description: "Monte a campanha em três passos, do que o Tino vai fazer a quando a mensagem sai."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 O assistente de criação leva você por três passos até a campanha estar pronta para rodar, com uma prévia de como o Tino abriria a conversa antes de você confirmar.
 
 <Note>
@@ -112,9 +114,9 @@ Em qualquer caso, você volta para a lista de campanhas da Unidade.
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Prepare a Unidade para campanhas" href="/campanhas/setup">Canal, template e créditos antes de criar.</Card>
-  <Card title="Importe os contatos da campanha" href="/campanhas/contatos-e-csv">O formato do CSV e a prévia de importação.</Card>
-  <Card title="Agende o envio e os follow-ups" href="/campanhas/agendamento-e-follow-ups">Horários, tentativas, pausar e retomar.</Card>
-  <Card title="Mapeie processos a partir das conversas" href="/cerebro/mapeie-processos">O playbook que o Tino segue.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Prepare a Unidade para campanhas" href="/campanhas/setup">Canal, template e créditos antes de criar.</Artigo>
+  <Artigo titulo="Importe os contatos da campanha" href="/campanhas/contatos-e-csv">O formato do CSV e a prévia de importação.</Artigo>
+  <Artigo titulo="Agende o envio e os follow-ups" href="/campanhas/agendamento-e-follow-ups">Horários, tentativas, pausar e retomar.</Artigo>
+  <Artigo titulo="Mapeie processos a partir das conversas" href="/cerebro/mapeie-processos">O playbook que o Tino segue.</Artigo>
+</Lista>

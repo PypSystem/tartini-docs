@@ -4,6 +4,8 @@ sidebarTitle: "Test the Knowledge"
 description: "Chat with the Cérebro to check, before the customer asks, what Tino actually knows how to answer."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Before trusting new content to customer service, you can ask the Cérebro directly and see the answer it would give, without waiting for a real conversation.
 
 <Note>
@@ -73,7 +75,7 @@ The chat has an audience selector, labeled **Propriedades** (Properties), with t
 
 ## Related articles
 
-<CardGroup cols={2}>
-  <Card title="Register the company's properties" href="/en/cerebro/propriedades-da-empresa">See the Tino aprendeu card on each indexed item.</Card>
-  <Card title="The Cérebro explained" href="/en/cerebro/o-cerebro-explicado">Understand the Overview and the rest of the Cérebro.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Register the company's properties" href="/en/cerebro/propriedades-da-empresa">See the Tino aprendeu card on each indexed item.</Artigo>
+  <Artigo titulo="The Cérebro explained" href="/en/cerebro/o-cerebro-explicado">Understand the Overview and the rest of the Cérebro.</Artigo>
+</Lista>

@@ -4,6 +4,8 @@ sidebarTitle: "Credits"
 description: "See how much of your monthly allowance is left, where credits go, and the statement for each day."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 With the balance in view, you know how much of your monthly allowance is left, what consumes the most credits, and when the cycle turns over.
 
 <Note>
@@ -97,7 +99,7 @@ Where to find it: **Configurações > Cobrança > Créditos**, **Consumo por con
 
 ## Related articles
 
-<CardGroup cols={2}>
-  <Card title="View your subscription and plan" href="/en/creditos/assinatura">See your plan, your monthly allowance, and your account details.</Card>
-  <Card title="What happens when credits run out" href="/en/creditos/quando-os-creditos-acabam">Understand the warning thresholds and what stops.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="View your subscription and plan" href="/en/creditos/assinatura">See your plan, your monthly allowance, and your account details.</Artigo>
+  <Artigo titulo="What happens when credits run out" href="/en/creditos/quando-os-creditos-acabam">Understand the warning thresholds and what stops.</Artigo>
+</Lista>

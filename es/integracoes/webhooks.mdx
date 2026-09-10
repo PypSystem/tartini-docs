@@ -4,6 +4,8 @@ sidebarTitle: "Webhooks"
 description: "Configura un aviso automático en tu sistema cada vez que se finalice una atención en Tartini."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Con el webhook activado, tu sistema recibe un aviso automático en cuanto termina una conversación, sin necesidad de consultar a Tartini.
 
 <Note>
@@ -85,7 +87,7 @@ Activa también **Registrar apenas atendimentos relevantes** (Registrar solo ate
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Usa Tartini como canal de tu sistema" href="/es/integracoes/conexao-via-api">Genera tokens para integrar tus sistemas.</Card>
-  <Card title="Canales explicados" href="/es/canais/canais-explicados">Los canales disponibles en Tartini.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Usa Tartini como canal de tu sistema" href="/es/integracoes/conexao-via-api">Genera tokens para integrar tus sistemas.</Artigo>
+  <Artigo titulo="Canales explicados" href="/es/canais/canais-explicados">Los canales disponibles en Tartini.</Artigo>
+</Lista>

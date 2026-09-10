@@ -4,6 +4,8 @@ sidebarTitle: "Conformidade"
 description: "Defina as regras de segurança e política que o Tino respeita em toda conversa, além das boas práticas nativas do Tartini."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Conformidade reúne as regras de segurança e política da sua empresa que o Tino segue sempre, como pedir uma confirmação antes de tratar de dados sensíveis.
 
 <Note>
@@ -131,7 +133,7 @@ Onde fica: dentro da edição da regra, na tabela **Regras no ar**.
 
 ## Artigos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Defina o tom de voz" href="/cerebro/comunicacao">Cadastre estilos de comunicação complementares.</Card>
-  <Card title="Crie diretrizes para a IA" href="/cerebro/diretrizes">Adicione procedimentos e saudações do seu jeito.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Defina o tom de voz" href="/cerebro/comunicacao">Cadastre estilos de comunicação complementares.</Artigo>
+  <Artigo titulo="Crie diretrizes para a IA" href="/cerebro/diretrizes">Adicione procedimentos e saudações do seu jeito.</Artigo>
+</Lista>

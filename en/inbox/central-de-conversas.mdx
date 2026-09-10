@@ -4,6 +4,8 @@ sidebarTitle: "Central de Conversas"
 description: "Search, audit, and export any conversation that has ever gone through your company, with filters and bulk closing."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 The Central de Conversas (Conversation Center) keeps the complete history, with filters to find exactly what you need. Export to CSV or close several conversations at once.
 
 <Note>
@@ -117,9 +119,9 @@ The Panorama shows a snapshot of the moment: how much is open, what has breached
 
 ## Related articles
 
-<CardGroup cols={2}>
-  <Card title="Get to know the Inbox" href="/en/inbox/conheca-o-inbox">The screen, the lists, and conversation statuses.</Card>
-  <Card title="Close a conversation and send the survey" href="/en/inbox/encerre-uma-conversa">Close one conversation at a time, with the right reason.</Card>
-  <Card title="Set the support SLA" href="/en/atendimento/sla">The maximum response time per channel.</Card>
-  <Card title="Scout explained" href="/en/scout/o-scout-explicado">How the conversation's summary and score come about.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Get to know the Inbox" href="/en/inbox/conheca-o-inbox">The screen, the lists, and conversation statuses.</Artigo>
+  <Artigo titulo="Close a conversation and send the survey" href="/en/inbox/encerre-uma-conversa">Close one conversation at a time, with the right reason.</Artigo>
+  <Artigo titulo="Set the support SLA" href="/en/atendimento/sla">The maximum response time per channel.</Artigo>
+  <Artigo titulo="Scout explained" href="/en/scout/o-scout-explicado">How the conversation's summary and score come about.</Artigo>
+</Lista>

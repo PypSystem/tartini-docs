@@ -4,6 +4,8 @@ sidebarTitle: "Sessions and devices"
 description: "See which browsers and phones your account is signed in on, and disconnect anything you don't recognize."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Every sign-in to Tartini opens a session on the browser or phone used. The list is found in **Configurações > Pessoal > Segurança** (Settings > Personal > Security), under **Sessões ativas** (Active sessions), and shows the device, approximate location, last activity, and creation date of each one.
 
 <Note>
@@ -51,7 +53,7 @@ To sign out of the device you're on, use **Sair** (Sign out) in the profile menu
 
 ## Related articles
 
-<CardGroup cols={2}>
-  <Card title="Turn on two-factor authentication" href="/en/conta/autenticacao-em-dois-fatores">Protect the account with the authenticator app.</Card>
-  <Card title="Sign in to Tartini and recover your password" href="/en/conta/entrar-e-recuperar-senha">The sign-in screen.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Turn on two-factor authentication" href="/en/conta/autenticacao-em-dois-fatores">Protect the account with the authenticator app.</Artigo>
+  <Artigo titulo="Sign in to Tartini and recover your password" href="/en/conta/entrar-e-recuperar-senha">The sign-in screen.</Artigo>
+</Lista>

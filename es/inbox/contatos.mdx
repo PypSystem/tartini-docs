@@ -4,6 +4,8 @@ sidebarTitle: "Contactos"
 description: "Busca, edita y une contactos duplicados en una sola lista, organizada por unidad."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 La lista de Contactos reúne a todos los que ya hablaron con tu empresa. Busca, filtra y abre la ficha completa de cada uno.
 
 <Note>
@@ -101,9 +103,9 @@ La lista carga 30 contactos por página, con desplazamiento infinito. Si abres l
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="La ficha del contacto" href="/es/inbox/ficha-do-contato">Datos, estado, campos, notas y conversaciones.</Card>
-  <Card title="Conoce el Inbox" href="/es/inbox/conheca-o-inbox">La pantalla, las listas y los estados de conversación.</Card>
-  <Card title="Sigue a los visitantes del sitio" href="/es/inbox/visitantes">Quién está navegando por el Chat Widget ahora.</Card>
-  <Card title="Transfiere, anota y etiqueta conversaciones" href="/es/inbox/transfira-notas-e-tags">Pasa la conversación y registra lo que importa.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="La ficha del contacto" href="/es/inbox/ficha-do-contato">Datos, estado, campos, notas y conversaciones.</Artigo>
+  <Artigo titulo="Conoce el Inbox" href="/es/inbox/conheca-o-inbox">La pantalla, las listas y los estados de conversación.</Artigo>
+  <Artigo titulo="Sigue a los visitantes del sitio" href="/es/inbox/visitantes">Quién está navegando por el Chat Widget ahora.</Artigo>
+  <Artigo titulo="Transfiere, anota y etiqueta conversaciones" href="/es/inbox/transfira-notas-e-tags">Pasa la conversación y registra lo que importa.</Artigo>
+</Lista>

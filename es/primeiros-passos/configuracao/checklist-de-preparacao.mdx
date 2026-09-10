@@ -4,6 +4,8 @@ sidebarTitle: "Lista de verificación de preparación"
 description: "Las etapas de la Página Inicial que dejan al Tino listo para atender: Identidad, Procesos, canal y equipo."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 En las primeras semanas la Página Inicial funciona como una lista de verificación. Muestra lo que falta para que la IA empiece a trabajar y libera las etapas en el orden correcto.
 
 <Note>
@@ -77,7 +79,7 @@ Con las cuatro etapas completadas, el widget muestra **Tudo pronto!** (¡Todo li
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Comenzando con Tartini" href="/es/primeiros-passos/guias/comecando-com-o-tartini">La guía completa, paso a paso.</Card>
-  <Card title="Conecta el WhatsApp por código QR" href="/es/canais/whatsapp-qr-code">El camino más rápido para el primer canal.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Comenzando con Tartini" href="/es/primeiros-passos/guias/comecando-com-o-tartini">La guía completa, paso a paso.</Artigo>
+  <Artigo titulo="Conecta el WhatsApp por código QR" href="/es/canais/whatsapp-qr-code">El camino más rápido para el primer canal.</Artigo>
+</Lista>

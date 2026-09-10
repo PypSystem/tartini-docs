@@ -4,6 +4,8 @@ sidebarTitle: "Estar de acuerdo o corregir"
 description: "Confirma la nota del Scout cuando está correcta o corrige los criterios y ayuda al Scout a acertar más en las próximas conversaciones."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Después de leer el análisis de una conversación, decides si la nota del Scout está correcta o si necesita cambiar. Esa decisión pasa a valer como la nota real de ese atendimiento.
 
 <Note>
@@ -102,9 +104,9 @@ Una evaluación ya revisada aparece en modo lectura, con los botones **Editar** 
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Lee las evaluaciones del Scout" href="/es/scout/avaliacoes">La lista de conversaciones y lo que muestra el análisis.</Card>
-  <Card title="Sigue el desempeño del equipo" href="/es/scout/desempenho-da-equipe">Cómo la corrección entra en la nota del equipo.</Card>
-  <Card title="Scout explicado" href="/es/scout/o-scout-explicado">El ciclo evaluar, validar y aprender.</Card>
-  <Card title="El Cérebro explicado" href="/es/cerebro/o-cerebro-explicado">Dónde están las reglas de tono de voz, directrices y compliance.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Lee las evaluaciones del Scout" href="/es/scout/avaliacoes">La lista de conversaciones y lo que muestra el análisis.</Artigo>
+  <Artigo titulo="Sigue el desempeño del equipo" href="/es/scout/desempenho-da-equipe">Cómo la corrección entra en la nota del equipo.</Artigo>
+  <Artigo titulo="Scout explicado" href="/es/scout/o-scout-explicado">El ciclo evaluar, validar y aprender.</Artigo>
+  <Artigo titulo="El Cérebro explicado" href="/es/cerebro/o-cerebro-explicado">Dónde están las reglas de tono de voz, directrices y compliance.</Artigo>
+</Lista>

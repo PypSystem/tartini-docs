@@ -4,6 +4,8 @@ sidebarTitle: "Para principiantes"
 description: "Las dudas más comunes de quien acaba de entrar a Tartini, respondidas en pocas líneas."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 Reunimos aquí las preguntas que llegan en las primeras semanas. Cada respuesta señala el artículo que profundiza.
 
 <Note>
@@ -116,7 +118,7 @@ Reunimos aquí las preguntas que llegan en las primeras semanas. Cada respuesta 
 
 ## Artículos relacionados
 
-<CardGroup cols={2}>
-  <Card title="Comenzando con Tartini" href="/es/primeiros-passos/guias/comecando-com-o-tartini">La guía completa, en el orden correcto.</Card>
-  <Card title="Glosario" href="/es/visao-geral/glossario">Los términos de las pantallas, en una frase cada uno.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Comenzando con Tartini" href="/es/primeiros-passos/guias/comecando-com-o-tartini">La guía completa, en el orden correcto.</Artigo>
+  <Artigo titulo="Glosario" href="/es/visao-geral/glossario">Los términos de las pantallas, en una frase cada uno.</Artigo>
+</Lista>

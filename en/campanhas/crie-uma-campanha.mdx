@@ -4,6 +4,8 @@ sidebarTitle: "Create a campaign"
 description: "Build the campaign in three steps, from what Tino will do to when the message goes out."
 ---
 
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
 The creation wizard walks you through three steps until the campaign is ready to run, with a preview of how Tino would open the conversation before you confirm.
 
 <Note>
@@ -114,9 +116,9 @@ Either way, you're taken back to the Unit's campaign list.
 
 ## Related articles
 
-<CardGroup cols={2}>
-  <Card title="Prepare the Unit for campaigns" href="/en/campanhas/setup">Channel, template, and credits before you create one.</Card>
-  <Card title="Import campaign contacts" href="/en/campanhas/contatos-e-csv">The CSV format and the import preview.</Card>
-  <Card title="Schedule the send and follow-ups" href="/en/campanhas/agendamento-e-follow-ups">Hours, attempts, pause and resume.</Card>
-  <Card title="Map processes from conversations" href="/en/cerebro/mapeie-processos">The playbook Tino follows.</Card>
-</CardGroup>
+<Lista>
+  <Artigo titulo="Prepare the Unit for campaigns" href="/en/campanhas/setup">Channel, template, and credits before you create one.</Artigo>
+  <Artigo titulo="Import campaign contacts" href="/en/campanhas/contatos-e-csv">The CSV format and the import preview.</Artigo>
+  <Artigo titulo="Schedule the send and follow-ups" href="/en/campanhas/agendamento-e-follow-ups">Hours, attempts, pause and resume.</Artigo>
+  <Artigo titulo="Map processes from conversations" href="/en/cerebro/mapeie-processos">The playbook Tino follows.</Artigo>
+</Lista>
