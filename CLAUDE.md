@@ -36,7 +36,7 @@ marcada no texto como `{/* CONFIRMAR: ... */}`.
 
 ## O produto, o mínimo para escrever
 
-- **Nome:** Tartini. Dashboard em https://talk.saninternet.com. Nunca "Talk", "Talk AI"
+- **Nome:** Tartini. Dashboard em https://app.tartini.com.br. Nunca "Talk", "Talk AI"
   ou "SAN Talk".
 - **O Cérebro e os agentes.** O Cérebro (menu Cérebro: Panorama, Propriedades,
   Personalidade, Processos, Operações) não é um agente: é o centro. "Tudo parte do

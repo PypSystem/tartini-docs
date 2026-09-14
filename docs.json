@@ -918,7 +918,7 @@
     "primary": {
       "type": "button",
       "label": "Acessar",
-      "href": "https://talk.saninternet.com/login"
+      "href": "https://app.tartini.com.br/login"
     }
   },
   "search": {
@@ -931,7 +931,7 @@
   },
   "footer": {
     "socials": {
-      "website": "https://talk.saninternet.com"
+      "website": "https://app.tartini.com.br"
     }
   },
   "background": {
