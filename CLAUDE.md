@@ -171,6 +171,10 @@ Os quatro agentes têm coleção própria, `agentes/`, com uma seção por agent
 
 - **Transferir, nunca passar.** O Tino transfere a conversa para uma pessoa; a conversa é transferida para a equipe. "Passar a conversa", "passou o atendimento" e "passe adiante" não entram (Artur: palavreado chulo).
 
+## O quê e para quê, não o como por dentro
+
+A central explica o que a tela mostra, o que aquilo significa para quem lê e como usar. Não explica como o motor chega ao resultado: pesos de nota, composição de veredito, o que cada agente "consulta" para decidir, como o Cérebro aprende por dentro, vocabulário de implementação (backend, servidor, variáveis de ambiente). Um número ou limiar só entra quando muda o que o leitor vê ou precisa fazer (menos de 5 respostas aparece como sem base; 30 achados por página). Artur: "não quero entregar a receita do molho". É o que a Intercom faz com o Fin: diz o que ele responde e como você controla, nunca como ele escolhe.
+
 ## Antes de publicar
 
 - [ ] Um tipo de artigo, um recurso, título com o verbo certo.
