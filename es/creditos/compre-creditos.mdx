@@ -1,0 +1,75 @@
+---
+title: "Compra créditos extra"
+sidebarTitle: "Comprar créditos"
+description: "Compra paquetes de recarga o activa la recarga automática para que la IA no se detenga cuando se acabe la franquicia."
+---
+
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
+Con créditos extra, la IA sigue atendiendo aunque el mes consuma más que la franquicia. Compras cuando lo necesitas o dejas que Tartini recargue solo.
+
+<Note>
+  Quién compra: el Administrador, en el Área del Cliente de SAN. Los créditos extra expiran al final del ciclo, igual que los de la franquicia.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Compra un paquete de recarga
+
+De forma predeterminada, la cuenta no tiene paquete extra: solo la franquicia del mes. Dónde está: **Área do Cliente da SAN** (Área del Cliente de SAN), en el servicio Tartini. {/* CONFIRMAR: rótulo exato do menu de pacotes na Área do Cliente */}
+
+<Steps>
+  <Step title="Elige el paquete">Elige entre 500, 1.000, 2.000 o 3.000 créditos. No hay límite de paquetes por ciclo.</Step>
+  <Step title="Revisa el precio">El valor del paquete varía con la cotización del día y aparece antes de que confirmes.</Step>
+  <Step title="Paga la factura">Los créditos entran en el saldo en cuanto se confirma el pago y se suman a lo que ya existe.</Step>
+</Steps>
+
+{/* CAPTURA: images/creditos/pacote-recarga.png | alt: Escolha de pacote de recarga na Área do Cliente | olhar: os quatro tamanhos de pacote e o preço antes da confirmação */}
+
+<Note>
+  Con una factura de la mensualidad vencida y sin pagar, la compra de paquetes queda deshabilitada hasta que se regularice.
+</Note>
+
+---
+
+## Activa la recarga automática
+
+De forma predeterminada, la recarga automática viene desactivada. Dónde está: **Área do Cliente da SAN** (Área del Cliente de SAN), en el servicio Tartini. {/* CONFIRMAR: rótulo exato da configuração de recarga automática */}
+
+<Steps>
+  <Step title="Abre la configuración">Abre la recarga automática y revisa los paquetes disponibles, el disparador de la recarga y el límite de recargas por ciclo.</Step>
+  <Step title="Autoriza el cobro">Confirma la autorización previa de cobro para que la recarga ocurra sin que tengas que actuar.</Step>
+</Steps>
+
+Cuando se acabe la franquicia, Tartini intenta la recarga antes de usar el margen extra. Con cada recarga realizada, recibes un aviso.
+
+<Tip>
+  Si la recarga automática entra casi todos los meses, aumentar la franquicia en [Suscripción](/es/creditos/assinatura) hace más previsible el valor de la factura.
+</Tip>
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Los créditos del paquete valen para el mes siguiente?">
+  No. Siguen la regla de la franquicia y expiran en el cambio de ciclo.
+  </Accordion>
+  <Accordion title="¿Cuál es la diferencia entre comprar un paquete y aumentar la franquicia?">
+  El paquete es una compra puntual, para el ciclo actual. La franquicia es el valor mensual fijo, que entra en cada renovación y cambia tu factura recurrente.
+  </Accordion>
+  <Accordion title="¿Y si la recarga automática falla?">
+  Tartini usa el margen extra de hasta el 10% de la franquicia. Cuando también se acaba, la IA se detiene hasta que compres un paquete. Consulta [Qué pasa cuando se agotan los créditos](/es/creditos/quando-os-creditos-acabam).
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<Lista>
+  <Artigo titulo="Créditos explicados" href="/es/visao-geral/creditos-explicados">Franquicia, consumo y qué pasa cuando se acaba.</Artigo>
+  <Artigo titulo="Qué pasa cuando se agotan los créditos" href="/es/creditos/quando-os-creditos-acabam">Las franjas de aviso y qué se detiene.</Artigo>
+</Lista>

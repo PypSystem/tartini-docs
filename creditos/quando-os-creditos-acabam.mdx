@@ -1,32 +1,46 @@
 ---
 title: "O que acontece quando os créditos acabam"
 sidebarTitle: "Créditos esgotados"
-description: "Entenda as duas faixas de aviso, o que para na sua operação e o que continua funcionando normalmente."
+description: "Entenda a ordem em que o Tartini age, as faixas de aviso e como voltar a ligar a IA."
 ---
 
 import { Lista, Artigo } from "/components/lista-artigos.jsx";
 
-Quando a franquia do mês termina, só a inteligência artificial pausa. Sua equipe continua atendendo pelo Inbox, em todos os canais.
+Quando a franquia do mês termina, só a IA pode parar. Sua equipe continua atendendo pelo Inbox, em todos os canais.
 
 <Note>
-  Isso vale para contas pagas. Uma conta gratuita nunca entra nessas faixas.
+  Quem vê as faixas: todos os usuários. Quem recarrega: o Administrador, na Área do Cliente da SAN.
 </Note>
 
 ---
 
-## A faixa amarela: os créditos do mês esgotaram
+## A ordem em que o Tartini age
+
+| Etapa | O que acontece | A IA |
+|---|---|---|
+| 1. Recarga automática | Se estiver ligada, o Tartini recarrega sozinho e avisa você. | Continua |
+| 2. Margem extra | Sem recarga automática, ou se ela falhar, entra um adiantamento de até 10% da franquia. | Continua |
+| 3. Sem créditos | A margem também acabou. | Para |
+
+---
+
+## A faixa amarela: a franquia esgotou
 
 Uma faixa amarela aparece no topo da tela, avisando que os créditos do mês esgotaram e que é hora de contratar mais para evitar interrupções.
 
-Nessa faixa, a IA continua funcionando, usando a margem extra: um adiantamento de até 10% da franquia do próximo mês. O valor usado é descontado assim que a franquia seguinte entra.
+Nessa faixa, a IA continua funcionando com a margem extra. O valor usado é descontado da franquia do ciclo seguinte.
 
 ---
 
 ## A faixa vermelha: sem créditos, nem a margem extra
 
-Quando a margem extra também acaba, a faixa fica vermelha, avisando que não há créditos disponíveis, incluindo a margem extra, e que é preciso contratar mais para evitar a parada.
+Quando a margem extra também acaba, a faixa fica vermelha, avisando que não há créditos disponíveis e que é preciso contratar mais.
 
-Nessa faixa, os recursos de IA ficam pausados até você recarregar.
+Nessa faixa, a IA para de atender novas interações. As conversas que o Tino estava conduzindo são transferidas para a equipe.
+
+<Warning>
+  Sem créditos, o Tino não responde. Garanta que haja alguém da equipe para assumir as conversas transferidas, ou recarregue antes de chegar aqui.
+</Warning>
 
 ---
 
@@ -35,25 +49,25 @@ Nessa faixa, os recursos de IA ficam pausados até você recarregar.
 | Para | Continua |
 |---|---|
 | O Tino atendendo o cliente | O Inbox e os canais conectados |
-| O Sotto sugerindo respostas | O atendimento manual pela equipe |
-| O Scout avaliando conversas | As métricas e os relatórios |
+| As campanhas e os follow-ups | O atendimento pela equipe |
+| O Sotto sugerindo respostas | As métricas e os relatórios |
+| O Scout avaliando conversas | O extrato e o saldo de créditos |
 
 ---
 
-## O aviso de upgrade
+## Volte a ligar a IA
 
-Clicar na faixa, amarela ou vermelha, leva direto para **Configurações > Cobrança > Créditos**, onde você acompanha o saldo e recarrega.
+Clicar na faixa, amarela ou vermelha, leva direto para **Configurações > Cobrança > Créditos**, onde você acompanha o saldo.
 
 {/* CAPTURA: images/creditos/faixa-creditos-esgotados.png | alt: Faixa vermelha de créditos esgotados no topo da tela | olhar: o texto de aviso e o link para a tela de Créditos */}
 
----
-
-## Como ajustar a franquia ou comprar créditos
-
 <Steps>
-  <Step title="Veja o saldo">Abra [Créditos](/creditos/creditos-e-extrato) para ver o saldo atual e a projeção de quando ele deve acabar no ciclo.</Step>
-  <Step title="Ajuste a franquia ou compre créditos">Em [Assinatura](/creditos/assinatura), ajuste a franquia mensal. Em [Créditos](/creditos/creditos-e-extrato), compre créditos extras quando essa opção estiver disponível para a sua conta.</Step>
+  <Step title="Compre um pacote de recarga">Na Área do Cliente da SAN, escolha um pacote. Os créditos entram assim que o pagamento é confirmado, e a IA volta a responder.</Step>
+  <Step title="Ligue a recarga automática">Para não chegar à faixa vermelha de novo, configure a recarga automática na Área do Cliente.</Step>
+  <Step title="Revise a franquia">Se o saldo acaba todo mês, aumente a franquia em [Assinatura](/creditos/assinatura).</Step>
 </Steps>
+
+Veja os detalhes em [Compre créditos extras](/creditos/compre-creditos).
 
 ---
 
@@ -61,13 +75,16 @@ Clicar na faixa, amarela ou vermelha, leva direto para **Configurações > Cobra
 
 <AccordionGroup>
   <Accordion title="O Inbox para de funcionar quando os créditos acabam?">
-  Não. Só os recursos de IA pausam. Inbox, canais e métricas continuam funcionando.
+  Não. Só a IA para. Inbox, canais e métricas continuam, e a equipe atende normalmente.
   </Accordion>
   <Accordion title="O que é a margem extra?">
-  Um adiantamento de até 10% da franquia do próximo mês, usado automaticamente quando a franquia do ciclo atual termina.
+  Um adiantamento de até 10% da franquia, usado automaticamente quando a franquia do ciclo termina e não há recarga automática. O que você usar é descontado da franquia do ciclo seguinte.
+  </Accordion>
+  <Accordion title="O que acontece com as conversas que o Tino estava atendendo?">
+  São transferidas para a equipe, que continua o atendimento pelo Inbox.
   </Accordion>
   <Accordion title="Como eu evito chegar na faixa vermelha?">
-  Acompanhe o saldo em Créditos e aumente sua franquia ou compre créditos antes que a margem extra se esgote.
+  Ligue a recarga automática, ou acompanhe o saldo em Créditos e aumente a franquia antes que a margem extra se esgote.
   </Accordion>
 </AccordionGroup>
 
@@ -76,6 +93,7 @@ Clicar na faixa, amarela ou vermelha, leva direto para **Configurações > Cobra
 ## Artigos relacionados
 
 <Lista>
+  <Artigo titulo="Compre créditos extras" href="/creditos/compre-creditos">Pacotes de recarga e recarga automática.</Artigo>
   <Artigo titulo="Acompanhe o saldo e o extrato de créditos" href="/creditos/creditos-e-extrato">Veja o consumo diário e a franquia do ciclo.</Artigo>
   <Artigo titulo="Veja a assinatura e o plano" href="/creditos/assinatura">Ajuste sua franquia ou faça upgrade de plano.</Artigo>
 </Lista>

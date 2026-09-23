@@ -1,7 +1,7 @@
 ---
 title: "Créditos explicados"
 sidebarTitle: "Créditos"
-description: "A franquia mensal, o que consome créditos, o que acontece quando acabam e onde acompanhar tudo isso."
+description: "A franquia mensal, o que consome créditos, como comprar mais e o que acontece quando o saldo acaba."
 ---
 
 import { Lista, Artigo } from "/components/lista-artigos.jsx";
@@ -12,36 +12,56 @@ A IA e as mensagens do Tartini consomem créditos. Todo mês entra uma franquia 
 
 ## A franquia e o ciclo
 
-A franquia é contratada em reais por mês. A cada virada de ciclo ela entra como créditos na conta, e a quantidade de créditos depende da cotação do dia. A tela mostra **Franquia mensal**, a barra do que já foi consumido e a data em que o próximo ciclo começa.
+Ao contratar, você escolhe quanto quer destinar por mês à franquia, entre R$ 500 e R$ 10.000. Valores acima disso são sob consulta. A cada renovação, esse valor entra na conta como créditos.
 
-O que sobra ao fim do ciclo depende do plano: em alguns a franquia acumula, em outros o saldo restante expira na virada. O extrato registra qual foi o caso.
+A tela mostra **Franquia mensal**, a barra do que já foi consumido e a data em que o próximo ciclo começa.
 
 <Note>
-  Conta gratuita não tem franquia nem cobrança. A tela mostra só os créditos gastos no ciclo.
+  Os créditos não acumulam. O saldo que sobra ao fim do ciclo expira na virada, tanto o da franquia quanto o de pacotes comprados no mês.
 </Note>
 
 ---
 
 ## O que consome créditos
 
+Os créditos são consumidos em duas frentes: o trabalho da IA e as mensagens. A IA consome mais créditos do que uma mensagem simples, e quanto mais longa ou complexa a informação, maior o consumo.
+
 | Consome | Onde acompanhar |
 |---|---|
-| O Tino atendendo e abordando contatos em campanhas | Créditos, categoria de IA |
+| O Tino atendendo, fazendo follow-up e abordando contatos em campanhas | Créditos, categoria de IA |
 | Cada pergunta ao Sotto e cada sugestão do Sotto ativo | Créditos, categoria de IA |
-| Cada análise do Scout ao encerrar uma conversa | Créditos, categoria de IA |
-| Ingestão e busca na base de conhecimento, indexação de sites | Créditos, categoria de IA |
-| Transcrição de áudio na conversa | Créditos, categoria de IA |
-| Mensagens enviadas pelos canais | Créditos, categoria **Mensagens**, medida no nível da empresa |
+| Cada análise do Scout e cada resumo de conversa | Créditos, categoria de IA |
+| O Cérebro aprendendo: documentos, perguntas e respostas e indexação de sites | Créditos, categoria de IA |
+| Transcrição de áudio e leitura de imagens na conversa | Créditos, categoria de IA |
+| Mensagens trocadas pelos canais, inclusive as da equipe, com áudios, imagens e arquivos | Créditos, categoria **Mensagens**, medida no nível da empresa |
 
-Não consomem créditos: o Inbox, os canais conectados, as métricas e a Central de Conversas.
+Conectar canais, navegar pelas telas e consultar métricas não consome créditos. Toda mensagem que passa pelos canais consome, com ou sem IA na conversa.
+
+<Note>
+  A tabela de conversão de cada atividade em créditos fica na Área do Cliente da SAN. Quando uma mudança altera de forma significativa o custo das atividades de IA, a SAN avisa você.
+</Note>
 
 ---
 
-## Quando os créditos acabam
+## Quando o saldo acaba
 
-Ao esgotar a franquia do mês, o Tartini usa uma margem extra, um adiantamento de até dez por cento da franquia do próximo ciclo. Uma faixa amarela avisa no topo de todas as telas. Quando a margem também acaba, a faixa fica vermelha e a IA pausa: Tino, Sotto e Scout param até a recarga. O Inbox, os canais e as métricas continuam.
+Quando a franquia do mês se esgota, o Tartini segue esta ordem:
 
-A margem usada é descontada da franquia do próximo ciclo. Veja [O que acontece quando os créditos acabam](/creditos/quando-os-creditos-acabam).
+1. Se a recarga automática estiver ligada, ele recarrega sozinho e a IA continua normalmente.
+2. Sem recarga automática, ou se ela falhar, entra a margem extra: um adiantamento de até 10% da franquia, descontado do ciclo seguinte. Uma faixa amarela avisa no topo das telas.
+3. Quando a margem também acaba, a faixa fica vermelha e a IA para. As conversas em andamento são transferidas para a equipe.
+
+O Inbox, os canais e as métricas continuam. Veja [O que acontece quando os créditos acabam](/creditos/quando-os-creditos-acabam).
+
+---
+
+## Como ter mais créditos
+
+- **Aumente a franquia**, a qualquer momento. A fatura mensal passa a refletir o novo valor. Veja [Veja a assinatura e o plano](/creditos/assinatura).
+- **Compre um pacote de recarga** de 500, 1.000, 2.000 ou 3.000 créditos, quantas vezes precisar.
+- **Ligue a recarga automática**, para o Tartini recarregar sozinho quando o saldo acabar.
+
+Pacotes e recarga automática estão em [Compre créditos extras](/creditos/compre-creditos).
 
 ---
 
@@ -49,27 +69,21 @@ A margem usada é descontada da franquia do próximo ciclo. Veja [O que acontece
 
 - **Saldo atual** e a projeção de quando o saldo deve acabar no ritmo atual.
 - **Onde os créditos vão**: o consumo por categoria de IA e por mensagens, com a variação em relação ao período anterior.
-- **Extrato**: dia a dia, com saldo inicial, entradas, consumo de IA, mensagens e saldo final, e a narrativa de cada virada de ciclo.
+- **Extrato**: dia a dia, com saldo inicial, entradas, consumo de IA, mensagens e saldo final, e o registro de cada virada de ciclo.
 - **Consumo por conversa**: quais conversas gastaram créditos de IA, com o contato e as categorias.
 
 Veja [Acompanhe o saldo e o extrato de créditos](/creditos/creditos-e-extrato).
 
 ---
 
-## Como mudar a franquia
-
-O botão **Gerenciar plano e franquia**, na tela de Assinatura, abre a escolha de plano e de franquia. A troca vale a partir da próxima renovação e não gera cobrança na hora. Para créditos extras agora, fale com a SAN. Veja [Veja a assinatura e o plano](/creditos/assinatura).
-
----
-
 ## Perguntas frequentes
 
 <AccordionGroup>
-  <Accordion title="Créditos são a mesma coisa que tokens?">
-  Não. Os tokens são a unidade técnica dos modelos de IA. O Tartini converte tudo em créditos, e é em créditos que a conta é medida.
-  </Accordion>
   <Accordion title="A franquia acumula de um mês para o outro?">
-  Depende do plano. O extrato diz, na linha da virada de ciclo, se o saldo anterior foi mantido ou expirou.
+  Não. O saldo que sobra expira na virada do ciclo, inclusive o de pacotes de recarga.
+  </Accordion>
+  <Accordion title="As mensagens da equipe também consomem créditos?">
+  Sim. Toda mensagem trocada pelos canais consome créditos na categoria Mensagens, com ou sem a IA na conversa. O consumo é bem menor que o da IA.
   </Accordion>
   <Accordion title="Quem vê os créditos?">
   O Administrador. Os gestores veem o consumo do mês no card **Tino em ação** da Página Inicial, mas o link para a tela de Créditos abre só para o Administrador.
@@ -81,6 +95,8 @@ O botão **Gerenciar plano e franquia**, na tela de Assinatura, abre a escolha d
 ## Artigos relacionados
 
 <Lista>
-  <Artigo titulo="Planos e o que cada um libera" href="/visao-geral/planos-e-recursos">Essential, Scale e Enterprise.</Artigo>
+  <Artigo titulo="Compre créditos extras" href="/creditos/compre-creditos">Pacotes de recarga e recarga automática.</Artigo>
   <Artigo titulo="Acompanhe o saldo e o extrato" href="/creditos/creditos-e-extrato">A tela de Créditos em detalhe.</Artigo>
+  <Artigo titulo="Planos e o que cada um libera" href="/visao-geral/planos-e-recursos">Essential, Scale e Enterprise.</Artigo>
+  <Artigo titulo="Pagamento, bloqueio e cancelamento" href="/creditos/pagamento-bloqueio-e-cancelamento">Prazos da fatura e o que acontece com os créditos.</Artigo>
 </Lista>

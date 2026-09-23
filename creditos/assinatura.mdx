@@ -1,7 +1,7 @@
 ---
 title: "Veja a assinatura e o plano"
 sidebarTitle: "Assinatura"
-description: "Veja seu plano, a franquia contratada e os dados cadastrais da sua conta em um só lugar."
+description: "Veja seu plano, a franquia contratada e os dados da conta, e saiba quando cada mudança de plano passa a valer."
 ---
 
 import { Lista, Artigo } from "/components/lista-artigos.jsx";
@@ -24,10 +24,6 @@ Onde fica: **Configurações > Cobrança > Assinatura**.
 </Steps>
 
 {/* CAPTURA: images/creditos/assinatura-plano.png | alt: Bloco Plano na tela Assinatura com nome, preço e barra de franquia | olhar: o nome do plano e a barra de consumo */}
-
-<Note>
-  Uma conta gratuita não tem franquia nem cobrança. Nesse caso a tela mostra só o aviso de conta gratuita.
-</Note>
 
 ---
 
@@ -65,6 +61,8 @@ Fora de Ativa e Completa, a plataforma inteira entra em modo somente leitura.
   Com a assinatura fora de Ativa ou Completa, uma faixa avisa que a assinatura não está ativa e que o acesso está em modo somente leitura. Botões, campos e seleções ficam desabilitados. A navegação continua funcionando normalmente.
 </Warning>
 
+Com a fatura em atraso, a conta é bloqueada 11 dias após o vencimento e encerrada em 91 dias. Veja [Pagamento, bloqueio e cancelamento](/creditos/pagamento-bloqueio-e-cancelamento).
+
 ---
 
 ## Altere seu plano ou sua franquia
@@ -74,11 +72,19 @@ Onde fica: **Configurações > Cobrança > Assinatura**, botão **Gerenciar plan
 <Steps>
   <Step title="Abra as opções">Clique em **Gerenciar plano e franquia**.</Step>
   <Step title="Escolha o que mudar">Veja os planos disponíveis, ou ajuste a franquia mensal contratada.</Step>
-  <Step title="Confirme fora do Tartini">A mudança de plano ou de franquia é concluída num portal externo, fora do Tartini.</Step>
+  <Step title="Confirme na Área do Cliente">A mudança é concluída na Área do Cliente da SAN. Se preferir, fale com o time comercial da SAN.</Step>
 </Steps>
 
+Cada mudança tem o seu momento:
+
+| Mudança | Quando vale | Como é cobrada |
+|---|---|---|
+| Upgrade de plano | Na hora, assim que a fatura da diferença é paga | Uma fatura avulsa com a diferença proporcional aos dias que faltam no ciclo. Do ciclo seguinte em diante, a mensalidade é a do plano novo. |
+| Downgrade de plano | No início do ciclo seguinte | Sem cobrança proporcional, sem estorno e sem reembolso. Até lá, você segue com o plano atual. |
+| Franquia mensal | A qualquer momento, para mais ou para menos | A fatura mensal passa a refletir o novo valor. |
+
 <Note>
-  O botão só aparece em contas pagas. A mudança de plano ou de franquia vale a partir da próxima renovação, nunca imediatamente.
+  O upgrade não mexe nos créditos: o saldo do ciclo continua o mesmo e a franquia segue a contratada. Para mais créditos agora, veja [Compre créditos extras](/creditos/compre-creditos).
 </Note>
 
 ---
@@ -93,7 +99,10 @@ Onde fica: **Configurações > Cobrança > Assinatura**, botão **Gerenciar plan
   Só o Administrador da empresa acessa Assinatura. Outros papéis são redirecionados para o início das Configurações.
   </Accordion>
   <Accordion title="Mudar de plano cobra algo na hora?">
-  Não. A troca só vale a partir do próximo ciclo de renovação.
+  Depende. O upgrade gera uma fatura avulsa com a diferença proporcional e vale assim que ela é paga. O downgrade não cobra nada na hora e vale a partir do ciclo seguinte.
+  </Accordion>
+  <Accordion title="Fiz downgrade. Recebo de volta a diferença do mês?">
+  Não. O downgrade não gera estorno nem reembolso. Você segue com o plano atual até o fim do ciclo.
   </Accordion>
 </AccordionGroup>
 
@@ -104,4 +113,5 @@ Onde fica: **Configurações > Cobrança > Assinatura**, botão **Gerenciar plan
 <Lista>
   <Artigo titulo="Acompanhe o saldo e o extrato de créditos" href="/creditos/creditos-e-extrato">Veja o consumo diário de créditos.</Artigo>
   <Artigo titulo="Planos e o que cada um libera" href="/visao-geral/planos-e-recursos">Compare os recursos de cada plano.</Artigo>
+  <Artigo titulo="Pagamento, bloqueio e cancelamento" href="/creditos/pagamento-bloqueio-e-cancelamento">Os prazos depois do vencimento da fatura.</Artigo>
 </Lista>

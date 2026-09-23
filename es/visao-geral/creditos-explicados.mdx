@@ -1,7 +1,7 @@
 ---
 title: "Créditos explicados"
 sidebarTitle: "Créditos"
-description: "La franquicia mensual, qué consume créditos, qué pasa cuando se acaban y dónde acompañar todo esto."
+description: "La franquicia mensual, qué consume créditos, cómo comprar más y qué pasa cuando se acaba el saldo."
 ---
 
 import { Lista, Artigo } from "/components/lista-artigos.jsx";
@@ -16,36 +16,56 @@ La IA y los mensajes de Tartini consumen créditos. Cada mes entra una franquici
 
 ## La franquicia y el ciclo
 
-La franquicia se contrata en reales por mes. En cada cambio de ciclo entra como créditos en la cuenta, y la cantidad de créditos depende de la cotización del día. La pantalla muestra **Franquia mensal** (Franquicia mensual), la barra de lo que ya se consumió y la fecha en que empieza el próximo ciclo.
+Al contratar, eliges cuánto quieres destinar por mes a la franquicia, entre R$ 500 y R$ 10.000. Los valores superiores son a consultar. En cada renovación, ese valor entra en la cuenta como créditos.
 
-Lo que sobra al final del ciclo depende del plan: en algunos la franquicia se acumula, en otros el saldo restante expira en el cambio de ciclo. El extracto registra cuál fue el caso.
+La pantalla muestra **Franquia mensal** (Franquicia mensual), la barra de lo que ya se consumió y la fecha en que empieza el próximo ciclo.
 
 <Note>
-  La cuenta gratuita no tiene franquicia ni facturación. La pantalla muestra solo los créditos gastados en el ciclo.
+  Los créditos no se acumulan. El saldo que sobra al final del ciclo expira en el cambio de ciclo, tanto el de la franquicia como el de los paquetes comprados en el mes.
 </Note>
 
 ---
 
 ## Qué consume créditos
 
+Los créditos se consumen en dos frentes: el trabajo de la IA y los mensajes. La IA consume más créditos que un mensaje simple, y cuanto más larga o compleja es la información, mayor es el consumo.
+
 | Consume | Dónde acompañar |
 |---|---|
-| Tino atendiendo y abordando contactos en campañas | Créditos, categoría de IA |
+| Tino atendiendo, haciendo seguimiento y abordando contactos en campañas | Créditos, categoría de IA |
 | Cada pregunta a Sotto y cada sugerencia del Sotto activo | Créditos, categoría de IA |
-| Cada análisis de Scout al cerrar una conversación | Créditos, categoría de IA |
-| Ingesta y búsqueda en la base de conocimiento, indexación de sitios | Créditos, categoría de IA |
-| Transcripción de audio en la conversación | Créditos, categoría de IA |
-| Mensajes enviados por los canales | Créditos, categoría **Mensagens** (Mensajes), medida a nivel de la empresa |
+| Cada análisis de Scout y cada resumen de conversación | Créditos, categoría de IA |
+| El Cérebro aprendiendo: documentos, preguntas y respuestas e indexación de sitios | Créditos, categoría de IA |
+| Transcripción de audio y lectura de imágenes en la conversación | Créditos, categoría de IA |
+| Mensajes intercambiados por los canales, incluidos los del equipo, con audios, imágenes y archivos | Créditos, categoría **Mensagens** (Mensajes), medida a nivel de la empresa |
 
-No consumen créditos: el Inbox, los canales conectados, las métricas y la Central de Conversaciones.
+Conectar canales, navegar por las pantallas y consultar métricas no consume créditos. Todo mensaje que pasa por los canales consume, con o sin IA en la conversación.
+
+<Note>
+  La tabla de conversión de cada actividad en créditos está en el Área del Cliente de SAN. Cuando un cambio altera de forma significativa el costo de las actividades de IA, SAN te avisa.
+</Note>
 
 ---
 
-## Cuándo se acaban los créditos
+## Cuándo se acaba el saldo
 
-Al agotarse la franquicia del mes, Tartini usa un margen extra, un adelanto de hasta diez por ciento de la franquicia del próximo ciclo. Una franja amarilla avisa en la parte superior de todas las pantallas. Cuando el margen también se acaba, la franja se pone roja y la IA se pausa: Tino, Sotto y Scout se detienen hasta la recarga. El Inbox, los canales y las métricas continúan.
+Cuando la franquicia del mes se agota, Tartini sigue este orden:
 
-El margen usado se descuenta de la franquicia del próximo ciclo. Consulta [Qué pasa cuando se acaban los créditos](/es/creditos/quando-os-creditos-acabam).
+1. Si la recarga automática está activada, recarga sola y la IA continúa con normalidad.
+2. Sin recarga automática, o si falla, entra el margen extra: un adelanto de hasta el 10% de la franquicia, descontado del ciclo siguiente. Una franja amarilla avisa en la parte superior de las pantallas.
+3. Cuando el margen también se acaba, la franja se pone roja y la IA se detiene. Las conversaciones en curso se transfieren al equipo.
+
+El Inbox, los canales y las métricas continúan. Consulta [Qué pasa cuando se acaban los créditos](/es/creditos/quando-os-creditos-acabam).
+
+---
+
+## Cómo tener más créditos
+
+- **Aumenta la franquicia**, en cualquier momento. La factura mensual pasa a reflejar el nuevo valor. Consulta [Consulta la suscripción y el plan](/es/creditos/assinatura).
+- **Compra un paquete de recarga** de 500, 1.000, 2.000 o 3.000 créditos, tantas veces como necesites.
+- **Activa la recarga automática**, para que Tartini recargue solo cuando se acabe el saldo.
+
+Los paquetes y la recarga automática están en [Compra créditos extra](/es/creditos/compre-creditos).
 
 ---
 
@@ -53,27 +73,21 @@ El margen usado se descuenta de la franquicia del próximo ciclo. Consulta [Qué
 
 - **Saldo actual** y la proyección de cuándo debería acabarse el saldo al ritmo actual.
 - **Adónde van los créditos**: el consumo por categoría de IA y por mensajes, con la variación respecto al período anterior.
-- **Extracto**: día a día, con saldo inicial, entradas, consumo de IA, mensajes y saldo final, y la narrativa de cada cambio de ciclo.
+- **Extracto**: día a día, con saldo inicial, entradas, consumo de IA, mensajes y saldo final, y el registro de cada cambio de ciclo.
 - **Consumo por conversación**: qué conversaciones gastaron créditos de IA, con el contacto y las categorías.
 
 Consulta [Acompaña el saldo y el extracto de créditos](/es/creditos/creditos-e-extrato).
 
 ---
 
-## Cómo cambiar la franquicia
-
-El botón **Gerenciar plano e franquia** (Gestionar plan y franquicia), en la pantalla de Suscripción, abre la elección de plan y de franquicia. El cambio vale a partir de la próxima renovación y no genera cobro en el momento. Para créditos extra ahora, habla con SAN. Consulta [Consulta la suscripción y el plan](/es/creditos/assinatura).
-
----
-
 ## Preguntas frecuentes
 
 <AccordionGroup>
-  <Accordion title="¿Los créditos son lo mismo que los tokens?">
-  No. Los tokens son la unidad técnica de los modelos de IA. Tartini convierte todo en créditos, y en créditos es como se mide la cuenta.
-  </Accordion>
   <Accordion title="¿La franquicia se acumula de un mes a otro?">
-  Depende del plan. El extracto indica, en la línea del cambio de ciclo, si el saldo anterior se mantuvo o expiró.
+  No. El saldo que sobra expira en el cambio de ciclo, incluido el de los paquetes de recarga.
+  </Accordion>
+  <Accordion title="¿Los mensajes del equipo también consumen créditos?">
+  Sí. Todo mensaje intercambiado por los canales consume créditos en la categoría Mensagens, con o sin la IA en la conversación. El consumo es mucho menor que el de la IA.
   </Accordion>
   <Accordion title="¿Quién ve los créditos?">
   El Administrador. Los gestores ven el consumo del mes en la tarjeta **Tino em ação** (Tino en acción) de la Página Inicial, pero el enlace a la pantalla de Créditos se abre solo para el Administrador.
@@ -85,6 +99,8 @@ El botón **Gerenciar plano e franquia** (Gestionar plan y franquicia), en la pa
 ## Artículos relacionados
 
 <Lista>
-  <Artigo titulo="Planes y qué desbloquea cada uno" href="/es/visao-geral/planos-e-recursos">Essential, Scale y Enterprise.</Artigo>
+  <Artigo titulo="Compra créditos extra" href="/es/creditos/compre-creditos">Paquetes de recarga y recarga automática.</Artigo>
   <Artigo titulo="Acompaña el saldo y el extracto" href="/es/creditos/creditos-e-extrato">La pantalla de Créditos en detalle.</Artigo>
+  <Artigo titulo="Planes y qué desbloquea cada uno" href="/es/visao-geral/planos-e-recursos">Essential, Scale y Enterprise.</Artigo>
+  <Artigo titulo="Pago, bloqueo y cancelación" href="/es/creditos/pagamento-bloqueio-e-cancelamento">Plazos de la factura y qué pasa con los créditos.</Artigo>
 </Lista>

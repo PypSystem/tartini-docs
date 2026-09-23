@@ -1,7 +1,7 @@
 ---
 title: "Credits explained"
 sidebarTitle: "Credits"
-description: "The monthly allowance, what consumes credits, what happens when they run out, and where to keep track of it all."
+description: "The monthly allowance, what consumes credits, how to buy more, and what happens when the balance runs out."
 ---
 
 import { Lista, Artigo } from "/components/lista-artigos.jsx";
@@ -16,36 +16,56 @@ AI and messages in Tartini consume credits. Every month a credit allowance enter
 
 ## The allowance and the cycle
 
-The allowance is contracted in reais per month. At each cycle change it enters the account as credits, and the number of credits depends on that day's exchange rate. The screen shows **Franquia mensal** (Monthly allowance), the bar of what's already been consumed, and the date the next cycle begins.
+When you sign up, you choose how much to put toward the monthly allowance, between R$ 500 and R$ 10,000. Higher amounts are available on request. At each renewal, that amount enters the account as credits.
 
-What's left at the end of the cycle depends on the plan: on some it rolls over, on others the remaining balance expires at the change. The statement records which was the case.
+The screen shows **Franquia mensal** (Monthly allowance), the bar of what's already been consumed, and the date the next cycle begins.
 
 <Note>
-  A free account has no allowance and no billing. The screen shows only the credits spent in the cycle.
+  Credits don't roll over. The balance left at the end of the cycle expires at the turnover, both the allowance and any packs bought during the month.
 </Note>
 
 ---
 
 ## What consumes credits
 
+Credits are consumed on two fronts: the AI's work and messages. The AI consumes more credits than a simple message, and the longer or more complex the information, the higher the consumption.
+
 | Consumes | Where to track it |
 |---|---|
-| Tino serving customers and reaching out to contacts in campaigns | Credits, AI category |
+| Tino serving customers, following up, and reaching out to contacts in campaigns | Credits, AI category |
 | Every question to Sotto and every active-mode Sotto suggestion | Credits, AI category |
-| Every Scout analysis when a conversation closes | Credits, AI category |
-| Ingestion and search in the knowledge base, website indexing | Credits, AI category |
-| Audio transcription in the conversation | Credits, AI category |
-| Messages sent through the channels | Credits, **Mensagens** (Messages) category, measured at the company level |
+| Every Scout analysis and every conversation summary | Credits, AI category |
+| The Cérebro learning: documents, questions and answers, and website indexing | Credits, AI category |
+| Audio transcription and image reading in the conversation | Credits, AI category |
+| Messages exchanged through the channels, including your team's, with audio, images, and files | Credits, **Mensagens** (Messages) category, measured at the company level |
 
-These do not consume credits: the Inbox, connected channels, metrics, and the Conversation Center.
+Connecting channels, browsing the screens, and checking metrics don't consume credits. Every message that goes through the channels consumes credits, with or without AI in the conversation.
+
+<Note>
+  The table converting each activity into credits is in the SAN Customer Area. When a change significantly alters the cost of AI activities, SAN lets you know.
+</Note>
 
 ---
 
-## When credits run out
+## When the balance runs out
 
-Once the month's allowance is exhausted, Tartini uses an extra margin, an advance of up to ten percent of the next cycle's allowance. A yellow banner warns at the top of every screen. When the margin also runs out, the banner turns red and the AI pauses: Tino, Sotto, and Scout stop until the recharge. The Inbox, channels, and metrics continue.
+When the month's allowance is exhausted, Tartini follows this order:
 
-The margin used is deducted from the next cycle's allowance. See [What happens when credits run out](/en/creditos/quando-os-creditos-acabam).
+1. If auto-recharge is on, it recharges on its own and the AI continues normally.
+2. Without auto-recharge, or if it fails, the extra margin kicks in: an advance of up to 10% of the allowance, deducted from the next cycle. A yellow banner warns at the top of the screens.
+3. When the margin also runs out, the banner turns red and the AI stops. Ongoing conversations are transferred to your team.
+
+The Inbox, channels, and metrics continue. See [What happens when credits run out](/en/creditos/quando-os-creditos-acabam).
+
+---
+
+## How to get more credits
+
+- **Increase the allowance**, at any time. The monthly invoice then reflects the new amount. See [View your subscription and plan](/en/creditos/assinatura).
+- **Buy a recharge pack** of 500, 1,000, 2,000, or 3,000 credits, as many times as you need.
+- **Turn on auto-recharge**, so Tartini recharges on its own when the balance runs out.
+
+Packs and auto-recharge are covered in [Buy extra credits](/en/creditos/compre-creditos).
 
 ---
 
@@ -53,27 +73,21 @@ The margin used is deducted from the next cycle's allowance. See [What happens w
 
 - **Saldo atual** (Current balance) and the projection of when the balance should run out at the current pace.
 - **Onde os créditos vão** (Where credits go): consumption by AI category and by messages, with the change from the previous period.
-- **Extrato** (Statement): day by day, with opening balance, deposits, AI consumption, messages, and closing balance, and the narrative for each cycle change.
+- **Extrato** (Statement): day by day, with opening balance, deposits, AI consumption, messages, and closing balance, and the record of each cycle turnover.
 - **Consumo por conversa** (Consumption per conversation): which conversations spent AI credits, with the contact and the categories.
 
 See [Track your credit balance and statement](/en/creditos/creditos-e-extrato).
 
 ---
 
-## How to change the allowance
-
-The **Gerenciar plano e franquia** (Manage plan and allowance) button, on the Subscription screen, opens the choice of plan and allowance. The change takes effect from the next renewal and doesn't generate a charge right away. For extra credits now, talk to SAN. See [View your subscription and plan](/en/creditos/assinatura).
-
----
-
 ## FAQ
 
 <AccordionGroup>
-  <Accordion title="Are credits the same thing as tokens?">
-  No. Tokens are the AI models' technical unit. Tartini converts everything into credits, and the account is measured in credits.
-  </Accordion>
   <Accordion title="Does the allowance roll over from one month to the next?">
-  It depends on the plan. The statement says, on the cycle-change line, whether the previous balance was kept or expired.
+  No. The remaining balance expires at the cycle turnover, including recharge packs.
+  </Accordion>
+  <Accordion title="Do my team's messages also consume credits?">
+  Yes. Every message exchanged through the channels consumes credits in the Messages category, with or without AI in the conversation. The consumption is much lower than the AI's.
   </Accordion>
   <Accordion title="Who sees the credits?">
   The Administrator. Managers see the month's consumption in the **Tino em ação** (Tino in action) card on the Home page, but the link to the Credits screen opens only for the Administrator.
@@ -85,6 +99,8 @@ The **Gerenciar plano e franquia** (Manage plan and allowance) button, on the Su
 ## Related articles
 
 <Lista>
-  <Artigo titulo="Plans and what each one unlocks" href="/en/visao-geral/planos-e-recursos">Essential, Scale, and Enterprise.</Artigo>
+  <Artigo titulo="Buy extra credits" href="/en/creditos/compre-creditos">Recharge packs and auto-recharge.</Artigo>
   <Artigo titulo="Track your balance and statement" href="/en/creditos/creditos-e-extrato">The Credits screen in detail.</Artigo>
+  <Artigo titulo="Plans and what each one unlocks" href="/en/visao-geral/planos-e-recursos">Essential, Scale, and Enterprise.</Artigo>
+  <Artigo titulo="Payment, suspension, and cancellation" href="/en/creditos/pagamento-bloqueio-e-cancelamento">Invoice deadlines and what happens to your credits.</Artigo>
 </Lista>

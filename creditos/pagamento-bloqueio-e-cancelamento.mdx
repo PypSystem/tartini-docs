@@ -1,0 +1,104 @@
+---
+title: "Pagamento, bloqueio e cancelamento"
+sidebarTitle: "Pagamento e bloqueio"
+description: "Saiba o que acontece com a sua conta quando a fatura atrasa e como guardar seus dados antes de encerrar."
+---
+
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
+Com a fatura em dia, a conta fica sempre ativa. Se atrasar, você sabe quanto tempo tem e o que muda em cada etapa.
+
+<Note>
+  Quem acompanha: o Administrador. Faturas, pagamentos e pedidos ficam na Área do Cliente da SAN.
+</Note>
+
+---
+
+## Os prazos depois do vencimento
+
+Os prazos contam em dias corridos a partir do vencimento da fatura, incluindo fins de semana e feriados.
+
+| Etapa | Quando | O que acontece |
+|---|---|---|
+| Ativação | Na confirmação do pagamento | A conta é liberada na hora. |
+| Bloqueio | 11 dias após o vencimento | A IA, as campanhas e o recebimento de mensagens param. |
+| Desbloqueio | Na confirmação do pagamento | Tudo volta a funcionar na hora. |
+| Encerramento | 91 dias após o vencimento | A conta é encerrada e os dados são apagados. |
+
+---
+
+## O que funciona com a conta bloqueada
+
+| Bloqueado | Liberado |
+|---|---|
+| O Tino e a IA enviando mensagens | O histórico do Inbox, para consulta |
+| O recebimento de mensagens dos contatos | O painel, as métricas e os relatórios |
+| As campanhas e os follow-ups | Os dados guardados: contatos, conversas e Cérebro |
+| Os webhooks e as integrações | A Área do Cliente e o pagamento das faturas |
+| As notificações em tempo real | |
+
+Na tela, a conta bloqueada aparece com a assinatura fora de **Ativa** e em modo somente leitura. Veja os status em [Veja a assinatura e o plano](/creditos/assinatura).
+
+---
+
+## Peça um desbloqueio temporário
+
+Se você já pagou e a confirmação ainda não chegou, dá para pedir a liberação antes.
+
+<Steps>
+  <Step title="Abra um ticket">Na Área do Cliente da SAN, abra um ticket pedindo o desbloqueio temporário.</Step>
+  <Step title="Anexe o comprovante">Envie o comprovante de pagamento da fatura.</Step>
+</Steps>
+
+<Note>
+  O desbloqueio temporário pode ser usado uma vez a cada 90 dias.
+</Note>
+
+---
+
+## Exporte seus dados antes de encerrar
+
+O Tartini não tem botão de exportação. Os dados saem por pedido formal à SAN, como cópia do banco de dados no formato padrão da SAN.
+
+<Steps>
+  <Step title="Peça a exportação">Faça o pedido por qualquer canal de suporte ou atendimento da SAN, antes do encerramento da conta.</Step>
+  <Step title="Aguarde a entrega">A SAN tem até 60 dias úteis para entregar. Enquanto isso, o apagamento fica suspenso e a conta segue bloqueada.</Step>
+</Steps>
+
+<Warning>
+  Depois do encerramento, os dados são apagados sem possibilidade de recuperação: o Cérebro, o histórico de conversas, os contatos e as campanhas. Pedidos feitos depois do encerramento não podem ser atendidos.
+</Warning>
+
+---
+
+## O saldo de créditos no encerramento
+
+O saldo de créditos que restar quando a conta encerra, por atraso ou por cancelamento, é perdido. Ele não é reembolsado e não entra na exportação dos dados.
+
+---
+
+## Perguntas frequentes
+
+<AccordionGroup>
+  <Accordion title="Paguei a fatura atrasada. Quanto tempo leva para voltar?">
+  O desbloqueio é imediato assim que o banco confirma o pagamento. Se precisar antes disso, peça o desbloqueio temporário com o comprovante.
+  </Accordion>
+  <Accordion title="A conta bloqueada recebe mensagens dos clientes?">
+  Não. Com a conta bloqueada, o recebimento de mensagens para. A equipe consegue consultar o histórico, mas não atende.
+  </Accordion>
+  <Accordion title="Posso comprar créditos com a fatura atrasada?">
+  Não. A compra de pacotes de recarga fica indisponível enquanto houver mensalidade vencida e não paga.
+  </Accordion>
+  <Accordion title="Cancelei o serviço. Recebo o saldo de créditos de volta?">
+  Não. O saldo restante não é reembolsável.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artigos relacionados
+
+<Lista>
+  <Artigo titulo="Veja a assinatura e o plano" href="/creditos/assinatura">Os status da assinatura e a troca de plano.</Artigo>
+  <Artigo titulo="Créditos explicados" href="/visao-geral/creditos-explicados">Franquia, consumo e recarga.</Artigo>
+</Lista>

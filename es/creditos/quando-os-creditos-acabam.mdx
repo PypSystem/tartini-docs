@@ -1,34 +1,48 @@
 ---
 title: "Qué pasa cuando se agotan los créditos"
 sidebarTitle: "Créditos agotados"
-description: "Entiende las dos franjas de aviso, qué se detiene en tu operación y qué sigue funcionando con normalidad."
+description: "Entiende el orden en que actúa Tartini, las franjas de aviso y cómo volver a activar la IA."
 ---
 
 import { Lista, Artigo } from "/components/lista-artigos.jsx";
 
-Cuando la franquicia del mes termina, solo la inteligencia artificial se pausa. Tu equipo sigue atendiendo por el Inbox, en todos los canales.
+Cuando la franquicia del mes termina, solo la IA puede detenerse. Tu equipo sigue atendiendo por el Inbox, en todos los canales.
 
 <Note>
-  Esto aplica a cuentas pagas. Una cuenta gratuita nunca entra en estas franjas.
+  Quién ve las franjas: todos los usuarios. Quién recarga: el Administrador, en el Área del Cliente de SAN.
 
   La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
 </Note>
 
 ---
 
-## La franja amarilla: los créditos del mes se agotaron
+## El orden en que actúa Tartini
+
+| Etapa | Qué pasa | La IA |
+|---|---|---|
+| 1. Recarga automática | Si está activada, Tartini recarga solo y te avisa. | Continúa |
+| 2. Margen extra | Sin recarga automática, o si falla, entra un adelanto de hasta el 10% de la franquicia. | Continúa |
+| 3. Sin créditos | El margen también se acabó. | Se detiene |
+
+---
+
+## La franja amarilla: la franquicia se agotó
 
 Aparece una franja amarilla en la parte superior de la pantalla, avisando que los créditos del mes se agotaron y que es momento de contratar más para evitar interrupciones.
 
-En esta franja, la IA sigue funcionando, usando el margen extra: un adelanto de hasta el 10% de la franquicia del próximo mes. El valor usado se descuenta en cuanto entra la siguiente franquicia.
+En esta franja, la IA sigue funcionando con el margen extra. El valor usado se descuenta de la franquicia del ciclo siguiente.
 
 ---
 
 ## La franja roja: sin créditos, ni el margen extra
 
-Cuando el margen extra también se acaba, la franja se pone roja, avisando que no hay créditos disponibles, incluyendo el margen extra, y que es necesario contratar más para evitar la interrupción.
+Cuando el margen extra también se acaba, la franja se pone roja, avisando que no hay créditos disponibles y que es necesario contratar más.
 
-En esta franja, las funciones de IA quedan pausadas hasta que recargues.
+En esta franja, la IA deja de atender nuevas interacciones. Las conversaciones que Tino estaba llevando se transfieren al equipo.
+
+<Warning>
+  Sin créditos, Tino no responde. Asegúrate de que haya alguien del equipo para asumir las conversaciones transferidas, o recarga antes de llegar aquí.
+</Warning>
 
 ---
 
@@ -37,25 +51,25 @@ En esta franja, las funciones de IA quedan pausadas hasta que recargues.
 | Se detiene | Sigue |
 |---|---|
 | Tino atendiendo al cliente | El Inbox y los canales conectados |
-| Sotto sugiriendo respuestas | La atención manual del equipo |
-| Scout evaluando conversaciones | Las métricas y los informes |
+| Las campañas y los seguimientos | La atención del equipo |
+| Sotto sugiriendo respuestas | Las métricas y los informes |
+| Scout evaluando conversaciones | El extracto y el saldo de créditos |
 
 ---
 
-## El aviso de upgrade
+## Vuelve a activar la IA
 
-Al hacer clic en la franja, amarilla o roja, vas directo a **Configurações > Cobrança > Créditos** (Configuración > Facturación > Créditos), donde consultas el saldo y recargas.
+Al hacer clic en la franja, amarilla o roja, vas directo a **Configurações > Cobrança > Créditos** (Configuración > Facturación > Créditos), donde consultas el saldo.
 
 {/* CAPTURA: images/creditos/faixa-creditos-esgotados.png | alt: Faixa vermelha de créditos esgotados no topo da tela | olhar: o texto de aviso e o link para a tela de Créditos */}
 
----
-
-## Cómo ajustar la franquicia o comprar créditos
-
 <Steps>
-  <Step title="Consulta el saldo">Abre [Créditos](/es/creditos/creditos-e-extrato) para ver el saldo actual y la proyección de cuándo debería agotarse en el ciclo.</Step>
-  <Step title="Ajusta la franquicia o compra créditos">En [Suscripción](/es/creditos/assinatura), ajusta la franquicia mensual. En [Créditos](/es/creditos/creditos-e-extrato), compra créditos extra cuando esa opción esté disponible para tu cuenta.</Step>
+  <Step title="Compra un paquete de recarga">En el Área del Cliente de SAN, elige un paquete. Los créditos entran en cuanto se confirma el pago, y la IA vuelve a responder.</Step>
+  <Step title="Activa la recarga automática">Para no volver a llegar a la franja roja, configura la recarga automática en el Área del Cliente.</Step>
+  <Step title="Revisa la franquicia">Si el saldo se acaba todos los meses, aumenta la franquicia en [Suscripción](/es/creditos/assinatura).</Step>
 </Steps>
+
+Consulta los detalles en [Compra créditos extra](/es/creditos/compre-creditos).
 
 ---
 
@@ -63,13 +77,16 @@ Al hacer clic en la franja, amarilla o roja, vas directo a **Configurações > C
 
 <AccordionGroup>
   <Accordion title="¿El Inbox deja de funcionar cuando se agotan los créditos?">
-  No. Solo se pausan las funciones de IA. El Inbox, los canales y las métricas siguen funcionando.
+  No. Solo la IA se detiene. El Inbox, los canales y las métricas continúan, y el equipo atiende con normalidad.
   </Accordion>
   <Accordion title="¿Qué es el margen extra?">
-  Un adelanto de hasta el 10% de la franquicia del próximo mes, usado automáticamente cuando termina la franquicia del ciclo actual.
+  Un adelanto de hasta el 10% de la franquicia, usado automáticamente cuando la franquicia del ciclo termina y no hay recarga automática. Lo que uses se descuenta de la franquicia del ciclo siguiente.
+  </Accordion>
+  <Accordion title="¿Qué pasa con las conversaciones que Tino estaba atendiendo?">
+  Se transfieren al equipo, que continúa la atención por el Inbox.
   </Accordion>
   <Accordion title="¿Cómo evito llegar a la franja roja?">
-  Consulta el saldo en Créditos y aumenta tu franquicia o compra créditos antes de que se agote el margen extra.
+  Activa la recarga automática, o consulta el saldo en Créditos y aumenta la franquicia antes de que se agote el margen extra.
   </Accordion>
 </AccordionGroup>
 
@@ -78,6 +95,7 @@ Al hacer clic en la franja, amarilla o roja, vas directo a **Configurações > C
 ## Artículos relacionados
 
 <Lista>
+  <Artigo titulo="Compra créditos extra" href="/es/creditos/compre-creditos">Paquetes de recarga y recarga automática.</Artigo>
   <Artigo titulo="Consulta el saldo y el extracto de créditos" href="/es/creditos/creditos-e-extrato">Revisa el consumo diario y la franquicia del ciclo.</Artigo>
-  <Artigo titulo="Revisa la suscripción y el plan" href="/es/creditos/assinatura">Ajusta tu franquicia o mejora tu plan.</Artigo>
+  <Artigo titulo="Consulta la suscripción y el plan" href="/es/creditos/assinatura">Ajusta tu franquicia o mejora tu plan.</Artigo>
 </Lista>

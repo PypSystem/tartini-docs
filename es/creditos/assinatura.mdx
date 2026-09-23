@@ -1,7 +1,7 @@
 ---
 title: "Consulta la suscripción y el plan"
 sidebarTitle: "Suscripción"
-description: "Consulta tu plan, la franquicia contratada y los datos registrados de tu cuenta en un solo lugar."
+description: "Consulta tu plan, la franquicia contratada y los datos de la cuenta, y entiende cuándo entra en vigor cada cambio de plan."
 ---
 
 import { Lista, Artigo } from "/components/lista-artigos.jsx";
@@ -26,10 +26,6 @@ Dónde está: **Configurações > Cobrança > Assinatura** (Configuración > Fac
 </Steps>
 
 {/* CAPTURA: images/creditos/assinatura-plano.png | alt: Bloco Plano na tela Assinatura com nome, preço e barra de franquia | olhar: o nome do plano e a barra de consumo */}
-
-<Note>
-  Una cuenta gratuita no tiene franquicia ni facturación. En ese caso, la pantalla muestra solo el aviso de cuenta gratuita.
-</Note>
 
 ---
 
@@ -67,6 +63,8 @@ Fuera de Ativa y Completa, toda la plataforma entra en modo de solo lectura.
   Con la suscripción fuera de Ativa o Completa, una franja avisa que la suscripción no está activa y que el acceso está en modo de solo lectura. Los botones, campos y selecciones quedan deshabilitados. La navegación sigue funcionando con normalidad.
 </Warning>
 
+Con la factura atrasada, la cuenta se bloquea 11 días después del vencimiento y se cierra a los 91 días. Consulta [Pago, bloqueo y cancelación](/es/creditos/pagamento-bloqueio-e-cancelamento).
+
 ---
 
 ## Cambia tu plan o tu franquicia
@@ -76,11 +74,19 @@ Dónde está: **Configurações > Cobrança > Assinatura**, botón **Gerenciar p
 <Steps>
   <Step title="Abre las opciones">Haz clic en **Gerenciar plano e franquia**.</Step>
   <Step title="Elige qué cambiar">Consulta los planes disponibles, o ajusta la franquicia mensual contratada.</Step>
-  <Step title="Confirma fuera de Tartini">El cambio de plan o de franquicia se completa en un portal externo, fuera de Tartini.</Step>
+  <Step title="Confirma en el Área del Cliente">El cambio se completa en el Área del Cliente de SAN. Si lo prefieres, habla con el equipo comercial de SAN.</Step>
 </Steps>
 
+Cada cambio tiene su momento:
+
+| Cambio | Cuándo entra en vigor | Cómo se cobra |
+|---|---|---|
+| Upgrade de plan | En el momento, en cuanto se paga la factura de la diferencia | Una factura puntual con la diferencia proporcional a los días que faltan del ciclo. Del ciclo siguiente en adelante, la mensualidad es la del plan nuevo. |
+| Downgrade de plan | Al inicio del ciclo siguiente | Sin cobro proporcional y sin ningún tipo de reembolso. Hasta entonces, sigues con el plan actual. |
+| Franquicia mensual | En cualquier momento, para más o para menos | La factura mensual pasa a reflejar el nuevo valor. |
+
 <Note>
-  El botón solo aparece en cuentas de pago. El cambio de plan o de franquicia entra en vigor a partir de la próxima renovación, nunca de inmediato.
+  El upgrade no cambia los créditos: el saldo del ciclo sigue igual y la franquicia sigue siendo la contratada. Para más créditos ahora, consulta [Compra créditos extra](/es/creditos/compre-creditos).
 </Note>
 
 ---
@@ -95,7 +101,10 @@ Dónde está: **Configurações > Cobrança > Assinatura**, botón **Gerenciar p
   Solo el Administrador de la empresa accede a Assinatura. Otros roles son redirigidos al inicio de Configurações.
   </Accordion>
   <Accordion title="¿Cambiar de plan cobra algo de inmediato?">
-  No. El cambio solo entra en vigor a partir del próximo ciclo de renovación.
+  Depende. El upgrade genera una factura puntual con la diferencia proporcional y entra en vigor en cuanto se paga. El downgrade no cobra nada en el momento y entra en vigor a partir del ciclo siguiente.
+  </Accordion>
+  <Accordion title="Hice un downgrade. ¿Me devuelven la diferencia del mes?">
+  No. El downgrade no genera ningún tipo de reembolso. Sigues con el plan actual hasta el final del ciclo.
   </Accordion>
 </AccordionGroup>
 
@@ -105,5 +114,6 @@ Dónde está: **Configurações > Cobrança > Assinatura**, botón **Gerenciar p
 
 <Lista>
   <Artigo titulo="Consulta el saldo y el extracto de créditos" href="/es/creditos/creditos-e-extrato">Consulta el consumo diario de créditos.</Artigo>
-  <Artigo titulo="Planes y qué habilita cada uno" href="/es/visao-geral/planos-e-recursos">Compara los recursos de cada plan.</Artigo>
+  <Artigo titulo="Planes y qué desbloquea cada uno" href="/es/visao-geral/planos-e-recursos">Compara los recursos de cada plan.</Artigo>
+  <Artigo titulo="Pago, bloqueo y cancelación" href="/es/creditos/pagamento-bloqueio-e-cancelamento">Los plazos después del vencimiento de la factura.</Artigo>
 </Lista>

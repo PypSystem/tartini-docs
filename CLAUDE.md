@@ -34,6 +34,13 @@ Fonte da verdade do conteúdo: a interface do produto, lida no repositório
 `PypSystem/tartini-web`. Nada que a tela não mostre entra na central. Dúvida fica
 marcada no texto como `{/* CONFIRMAR: ... */}`.
 
+Exceção: as regras comerciais (planos, franquia, pacotes de recarga, upgrade e
+downgrade, fatura, bloqueio, encerramento, exportação de dados) seguem os **Termos de
+Uso do Tartini**, que prevalecem sobre a tela. O conteúdo é o do TU, escrito na voz da
+central, sem juridiquês. Cláusulas de responsabilidade (LGPD, IA, propriedade
+intelectual) não entram; a central só aponta para o TU. Se a tela divergir do TU,
+escreva o que o TU diz e marque a divergência com `CONFIRMAR`.
+
 ## O produto, o mínimo para escrever
 
 - **Nome:** Tartini. Dashboard em https://app.tartini.com.br. Nunca "Talk", "Talk AI"
@@ -43,8 +50,8 @@ marcada no texto como `{/* CONFIRMAR: ... */}`.
   Cérebro: você entrega o material, ele aprende o seu padrão e coordena o time de
   agentes." Os agentes são quatro, cada um com o seu posto e todos com a mesma fonte:
   o **Tino** fala com o cliente (ligado em Configurações > Atendimento > IA por canal),
-  o **Sotto** fica ao lado de quem atende (consulta em todos os planos, modo ativo no
-  Scale), o **Scout** lê a conversa depois que fecha (ligado nas Regras de Conversa) e
+  o **Sotto** fica ao lado de quem atende (consulta e modo ativo em todos os
+  planos), o **Scout** lê a conversa depois que fecha (ligado nas Regras de Conversa) e
   o **Quattro** põe a operação por escrito (Cérebro > Processos > Mapeamento, Scale).
   A referência de copy sobre eles é a landing https://www.tartini.com.br/tartini
   (frase canônica: "O Cérebro orquestra os agentes, e eles conversam entre si";
@@ -63,11 +70,14 @@ marcada no texto como `{/* CONFIRMAR: ... */}`.
   conta, Administrador, Gestor da Empresa, Gestor de Área, Gestor de Unidade,
   Atendente. "Proprietário", "Gerente", "OWNER" e "BACKOFFICE" não existem mais.
 - **Planos:** Essential (a IA trabalha para dentro), Scale (a IA fala com o cliente:
-  Tino, IA por canal, Operações e Processos do Cérebro, Sotto ativo, Campanhas,
+  Tino, IA por canal, Operações e Processos do Cérebro, Campanhas,
   Conectores, API e Webhooks) e Enterprise (sob consulta). Recurso do Scale leva uma
   `<Note>` de disponibilidade.
-- **Créditos:** a IA e as mensagens consomem créditos de uma franquia mensal. Sempre
-  créditos, nunca tokens, dólar ou reais.
+- **Créditos:** a IA e as mensagens consomem créditos de uma franquia mensal. O
+  consumo, o saldo e os pacotes são sempre em créditos, nunca tokens ou dólar. Reais
+  só onde se fala de contratação e fatura (a franquia é contratada entre R$ 500 e
+  R$ 10.000 por mês). Os créditos não acumulam: o saldo expira na virada do ciclo.
+  Conta gratuita não existe.
 
 ## Tipos de artigo
 

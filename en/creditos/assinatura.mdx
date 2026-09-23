@@ -1,7 +1,7 @@
 ---
 title: "View your subscription and plan"
 sidebarTitle: "Subscription"
-description: "See your plan, your contracted monthly allowance, and your account details in one place."
+description: "See your plan, your contracted allowance, and your account details, and find out when each plan change takes effect."
 ---
 
 import { Lista, Artigo } from "/components/lista-artigos.jsx";
@@ -26,10 +26,6 @@ Where to find it: **Configurações > Cobrança > Assinatura** (Settings > Billi
 </Steps>
 
 {/* CAPTURA: images/creditos/assinatura-plano.png | alt: Bloco Plano na tela Assinatura com nome, preço e barra de franquia | olhar: o nome do plano e a barra de consumo */}
-
-<Note>
-  A free account has no monthly allowance or billing. In that case the screen only shows the free account notice.
-</Note>
 
 ---
 
@@ -67,6 +63,8 @@ Outside of Ativa and Completa, the entire platform switches to read-only mode.
   With the subscription outside of Ativa or Completa, a banner warns that the subscription isn't active and that access is in read-only mode. Buttons, fields, and selections are disabled. Navigation keeps working normally.
 </Warning>
 
+With an overdue invoice, the account is suspended 11 days after the due date and closed after 91 days. See [Payment, suspension, and cancellation](/en/creditos/pagamento-bloqueio-e-cancelamento).
+
 ---
 
 ## Change your plan or your monthly allowance
@@ -76,11 +74,19 @@ Where to find it: **Configurações > Cobrança > Assinatura**, **Gerenciar plan
 <Steps>
   <Step title="Open the options">Click **Gerenciar plano e franquia**.</Step>
   <Step title="Choose what to change">See the available plans, or adjust the contracted monthly allowance.</Step>
-  <Step title="Confirm outside Tartini">The plan or allowance change is completed on an external portal, outside Tartini.</Step>
+  <Step title="Confirm in the Customer Area">The change is completed in the SAN Customer Area. If you prefer, talk to the SAN sales team.</Step>
 </Steps>
 
+Each change has its own timing:
+
+| Change | When it takes effect | How it's charged |
+|---|---|---|
+| Plan upgrade | Right away, as soon as the invoice for the difference is paid | A one-off invoice for the difference, prorated to the days left in the cycle. From the next cycle on, the monthly fee is the new plan's. |
+| Plan downgrade | At the start of the next cycle | No prorated charge and no refund of any kind. Until then, you keep the current plan. |
+| Monthly allowance | At any time, up or down | The monthly invoice then reflects the new amount. |
+
 <Note>
-  The button only appears on paid accounts. Plan or allowance changes take effect from the next renewal, never immediately.
+  An upgrade doesn't touch your credits: the cycle's balance stays the same and the allowance stays as contracted. For more credits now, see [Buy extra credits](/en/creditos/compre-creditos).
 </Note>
 
 ---
@@ -95,7 +101,10 @@ Where to find it: **Configurações > Cobrança > Assinatura**, **Gerenciar plan
   Only the company's Administrator can access Assinatura. Other roles are redirected to the start of Settings.
   </Accordion>
   <Accordion title="Does changing plans charge anything right away?">
-  No. The change only takes effect from the next renewal cycle.
+  It depends. An upgrade generates a one-off invoice for the prorated difference and takes effect as soon as it's paid. A downgrade charges nothing right away and takes effect from the next cycle.
+  </Accordion>
+  <Accordion title="I downgraded. Do I get the month's difference back?">
+  No. A downgrade gives no refund of any kind. You keep the current plan until the end of the cycle.
   </Accordion>
 </AccordionGroup>
 
@@ -106,4 +115,5 @@ Where to find it: **Configurações > Cobrança > Assinatura**, **Gerenciar plan
 <Lista>
   <Artigo titulo="Track your credit balance and statement" href="/en/creditos/creditos-e-extrato">See your daily credit consumption.</Artigo>
   <Artigo titulo="Plans and what each one unlocks" href="/en/visao-geral/planos-e-recursos">Compare the features of each plan.</Artigo>
+  <Artigo titulo="Payment, suspension, and cancellation" href="/en/creditos/pagamento-bloqueio-e-cancelamento">The deadlines after the invoice due date.</Artigo>
 </Lista>

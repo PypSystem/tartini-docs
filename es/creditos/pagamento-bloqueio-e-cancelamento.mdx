@@ -1,0 +1,106 @@
+---
+title: "Pago, bloqueo y cancelación"
+sidebarTitle: "Pago y bloqueo"
+description: "Entiende qué pasa con tu cuenta cuando la factura se atrasa y cómo guardar tus datos antes de cerrarla."
+---
+
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
+Con la factura al día, la cuenta siempre está activa. Si se atrasa, sabes cuánto tiempo tienes y qué cambia en cada etapa.
+
+<Note>
+  Quién lo acompaña: el Administrador. Las facturas, los pagos y las solicitudes están en el Área del Cliente de SAN.
+
+  La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Los plazos después del vencimiento
+
+Los plazos cuentan en días corridos a partir del vencimiento de la factura, incluidos fines de semana y feriados.
+
+| Etapa | Cuándo | Qué pasa |
+|---|---|---|
+| Activación | Al confirmarse el pago | La cuenta se habilita en el momento. |
+| Bloqueo | 11 días después del vencimiento | La IA, las campañas y la recepción de mensajes se detienen. |
+| Desbloqueo | Al confirmarse el pago | Todo vuelve a funcionar en el momento. |
+| Cierre | 91 días después del vencimiento | La cuenta se cierra y los datos se borran. |
+
+---
+
+## Qué funciona con la cuenta bloqueada
+
+| Bloqueado | Habilitado |
+|---|---|
+| Tino y la IA enviando mensajes | El historial del Inbox, para consulta |
+| La recepción de mensajes de los contactos | El panel, las métricas y los informes |
+| Las campañas y los seguimientos | Los datos guardados: contactos, conversaciones y Cérebro |
+| Los webhooks y las integraciones | El Área del Cliente y el pago de las facturas |
+| Las notificaciones en tiempo real | |
+
+En pantalla, la cuenta bloqueada aparece con la suscripción fuera de **Ativa** (Activa) y en modo de solo lectura. Consulta los estados en [Consulta la suscripción y el plan](/es/creditos/assinatura).
+
+---
+
+## Pide un desbloqueo temporal
+
+Si ya pagaste y la confirmación todavía no llegó, puedes pedir la habilitación antes.
+
+<Steps>
+  <Step title="Abre un ticket">En el Área del Cliente de SAN, abre un ticket pidiendo el desbloqueo temporal.</Step>
+  <Step title="Adjunta el comprobante">Envía el comprobante de pago de la factura.</Step>
+</Steps>
+
+<Note>
+  El desbloqueo temporal se puede usar una vez cada 90 días.
+</Note>
+
+---
+
+## Exporta tus datos antes del cierre
+
+Tartini no tiene botón de exportación. Los datos se entregan mediante una solicitud formal a SAN, como copia de la base de datos en el formato estándar de SAN.
+
+<Steps>
+  <Step title="Pide la exportación">Haz la solicitud por cualquier canal de soporte o atención de SAN, antes del cierre de la cuenta.</Step>
+  <Step title="Espera la entrega">SAN tiene hasta 60 días hábiles para entregar. Mientras tanto, el borrado queda suspendido y la cuenta sigue bloqueada.</Step>
+</Steps>
+
+<Warning>
+  Después del cierre, los datos se borran sin posibilidad de recuperación: el Cérebro, el historial de conversaciones, los contactos y las campañas. Las solicitudes hechas después del cierre no se pueden atender.
+</Warning>
+
+---
+
+## El saldo de créditos al cerrar la cuenta
+
+El saldo de créditos que quede cuando la cuenta se cierra, por atraso o por cancelación, se pierde. No se reembolsa y no entra en la exportación de los datos.
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="Pagué la factura atrasada. ¿Cuánto tarda en volver?">
+  El desbloqueo es inmediato en cuanto el banco confirma el pago. Si lo necesitas antes, pide el desbloqueo temporal con el comprobante.
+  </Accordion>
+  <Accordion title="¿La cuenta bloqueada recibe mensajes de los clientes?">
+  No. Con la cuenta bloqueada, la recepción de mensajes se detiene. El equipo puede consultar el historial, pero no atiende.
+  </Accordion>
+  <Accordion title="¿Puedo comprar créditos con la factura atrasada?">
+  No. La compra de paquetes de recarga queda deshabilitada mientras haya una mensualidad vencida y sin pagar.
+  </Accordion>
+  <Accordion title="Cancelé el servicio. ¿Me devuelven el saldo de créditos?">
+  No. El saldo restante no es reembolsable.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<Lista>
+  <Artigo titulo="Consulta la suscripción y el plan" href="/es/creditos/assinatura">Los estados de la suscripción y el cambio de plan.</Artigo>
+  <Artigo titulo="Créditos explicados" href="/es/visao-geral/creditos-explicados">Franquicia, consumo y recarga.</Artigo>
+</Lista>

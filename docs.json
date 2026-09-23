@@ -10,6 +10,9 @@
   "appearance": {
     "default": "light"
   },
+  "styling": {
+    "latex": false
+  },
   "favicon": "/favicon.svg",
   "navigation": {
     "global": {
@@ -261,8 +264,10 @@
                 "icon": "credit-card",
                 "pages": [
                   "creditos/creditos-e-extrato",
+                  "creditos/compre-creditos",
                   "creditos/assinatura",
-                  "creditos/quando-os-creditos-acabam"
+                  "creditos/quando-os-creditos-acabam",
+                  "creditos/pagamento-bloqueio-e-cancelamento"
                 ]
               },
               {
@@ -559,8 +564,10 @@
                 "icon": "credit-card",
                 "pages": [
                   "en/creditos/creditos-e-extrato",
+                  "en/creditos/compre-creditos",
                   "en/creditos/assinatura",
-                  "en/creditos/quando-os-creditos-acabam"
+                  "en/creditos/quando-os-creditos-acabam",
+                  "en/creditos/pagamento-bloqueio-e-cancelamento"
                 ]
               },
               {
@@ -857,8 +864,10 @@
                 "icon": "credit-card",
                 "pages": [
                   "es/creditos/creditos-e-extrato",
+                  "es/creditos/compre-creditos",
                   "es/creditos/assinatura",
-                  "es/creditos/quando-os-creditos-acabam"
+                  "es/creditos/quando-os-creditos-acabam",
+                  "es/creditos/pagamento-bloqueio-e-cancelamento"
                 ]
               },
               {
