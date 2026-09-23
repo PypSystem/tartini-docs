@@ -12,6 +12,25 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Site Tartini",
+          "icon": "globe",
+          "href": "https://www.tartini.com.br"
+        },
+        {
+          "anchor": "Dashboard",
+          "icon": "gauge",
+          "href": "https://app.tartini.com.br"
+        },
+        {
+          "anchor": "Central de ajuda Cloud",
+          "icon": "book",
+          "href": "https://docs.saninternet.com"
+        }
+      ]
+    },
     "languages": [
       {
         "language": "pt-BR",

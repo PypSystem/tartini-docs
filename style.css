@@ -116,6 +116,71 @@ samp {
   color: #b9b2a2;
 }
 
+/* Links fixos no alto da barra lateral (navigation.global.anchors). O tema Mint
+   os desenha com o ícone numa caixa com borda e em cinza claro, o que destoa
+   dos títulos de grupo logo abaixo. Aqui ficam no mesmo desenho dos grupos:
+   ícone em tinta, sem caixa, texto na mesma vertical, e uma linha fecha o bloco. */
+#navigation-items > ul:first-child {
+  margin-left: 1rem;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgb(20 18 15 / 0.08);
+}
+.dark #navigation-items > ul:first-child {
+  border-bottom-color: rgb(250 247 240 / 0.1);
+}
+#sidebar a.nav-anchor {
+  margin-bottom: 0.75rem;
+  color: #3d3a34;
+}
+#sidebar li:last-child > a.nav-anchor {
+  margin-bottom: 0;
+}
+/* Sem caixa e sem fundo, nem no hover: o tema acende a caixa ao passar o mouse. */
+#sidebar a.nav-anchor > div,
+#sidebar a.nav-anchor:hover > div {
+  margin-right: 0.5rem;
+  padding: 0;
+  background: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+#sidebar a.nav-anchor svg,
+#sidebar a.nav-anchor:hover svg {
+  background-color: currentColor !important;
+  opacity: 1;
+}
+/* O tema desenha os ícones das âncoras em duotone; os grupos usam o regular.
+   O desenho vem de mask-image inline, então a troca é por link. */
+#sidebar a.nav-anchor[href*="www.tartini.com.br"] svg {
+  -webkit-mask-image: url("https://d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/regular/globe.svg") !important;
+  mask-image: url("https://d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/regular/globe.svg") !important;
+}
+#sidebar a.nav-anchor[href*="app.tartini.com.br"] svg {
+  -webkit-mask-image: url("https://d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/regular/gauge.svg") !important;
+  mask-image: url("https://d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/regular/gauge.svg") !important;
+}
+#sidebar a.nav-anchor[href*="docs.saninternet.com"] svg {
+  -webkit-mask-image: url("https://d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/regular/book.svg") !important;
+  mask-image: url("https://d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/regular/book.svg") !important;
+}
+#sidebar a.nav-anchor:hover {
+  color: #14120f;
+}
+/* Os três levam para fora da central: a seta avisa antes do clique. */
+#sidebar a.nav-anchor::after {
+  content: "↗";
+  margin-left: 0.375rem;
+  font-size: 0.75rem;
+  opacity: 0.45;
+}
+.dark #sidebar a.nav-anchor {
+  color: #b9b2a2;
+}
+.dark #sidebar a.nav-anchor:hover {
+  color: #faf7f0;
+}
+
 /* Assistente de IA do Mintlify: desligado no dashboard (Assistant > status).
    A barra flutuante "Fazer uma pergunta" fica escondida também por CSS, para
    não reaparecer se o tema a renderizar num build antigo. */
