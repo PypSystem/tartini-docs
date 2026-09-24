@@ -139,11 +139,13 @@ Right now Telegram doesn't charge for using its Bot API. In Tartini, the channel
 
 **Fix:** there's nothing to do from Tartini. Only the customer can unblock the bot and write again.
 
-### The channel stopped receiving messages after changes in @BotFather
+### The channel became Disconnected after changes in @BotFather
 
-**Cause:** the token was revoked or changed in @BotFather. The old token stops working and the channel stops receiving and sending, but it still shows as **Conectado** (Connected) in the list.
+**Cause:** the token was revoked or changed in @BotFather, and Telegram rejects the old token. Tartini notices on the next reply sent or within 10 minutes.
 
-**Fix:** copy the current token in @BotFather, click the ⋮ next to the channel, and paste the token under **Trocar bot** (Change bot) or **Conectar bot** (Connect bot). With the same bot, the published link stays the same.
+At that point, the channel changes to **Desconectado** (Disconnected) and your team gets the **Canal desconectado** (Channel disconnected) alert, which takes you straight to the Telegram screen.
+
+**Fix:** copy the current token in @BotFather, click the ⋮ next to the channel, choose **Conectar bot** (Connect bot), and paste the token. With the same bot, the published link stays the same.
 
 ### "Este bot já está conectado a outro canal" shows up
 

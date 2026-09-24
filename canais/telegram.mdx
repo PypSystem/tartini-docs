@@ -135,11 +135,13 @@ Hoje o Telegram não cobra pelo uso da API de bots. No Tartini, o canal consome 
 
 **Correção:** não há o que fazer pelo Tartini. Só o próprio cliente pode desbloquear o bot e voltar a escrever.
 
-### O canal parou de receber mensagens depois de mexer no @BotFather
+### O canal ficou Desconectado depois de mexer no @BotFather
 
-**Causa:** o token foi revogado ou trocado no @BotFather. O token antigo deixa de valer e o canal para de receber e enviar, mas continua aparecendo como **Conectado** na lista.
+**Causa:** o token foi revogado ou trocado no @BotFather, e o Telegram recusa o token antigo. O Tartini percebe na próxima resposta enviada ou em até 10 minutos.
 
-**Correção:** copie o token atual no @BotFather, clique no ⋮ ao lado do canal e cole o token em **Trocar bot** ou **Conectar bot**. Com o mesmo bot, o link publicado continua o mesmo.
+Nesse momento, o canal passa a **Desconectado** e a equipe recebe o aviso **Canal desconectado**, que leva direto para a tela do Telegram.
+
+**Correção:** copie o token atual no @BotFather, clique no ⋮ ao lado do canal, escolha **Conectar bot** e cole o token. Com o mesmo bot, o link publicado continua o mesmo.
 
 ### Aparece "Este bot já está conectado a outro canal"
 
