@@ -18,11 +18,12 @@ Every connected channel becomes a doorway for your customers' conversations, whi
 
 ## The available channels
 
-Tartini connects four types of channel:
+Tartini connects five types of channel:
 
 - **WhatsApp Business**: connection by QR Code or pairing code, the same process you already use in the phone app.
 - **WABA**: WhatsApp Business API, Meta's official connection.
 - **Chat Widget**: a support chat embedded in your website.
+- **Telegram**: Telegram's official connection, created in @BotFather.
 - **API Connection**: a way for your own system to talk to Tartini as if it were one more channel.
 
 ---
@@ -47,6 +48,14 @@ The Chat Widget puts a support chat on your website. You customize colors, welco
 
 ---
 
+## Telegram
+
+Telegram connects through Telegram's official API, with a token generated in @BotFather. Your contacts always start the conversation, through the link or the QR Code you share.
+
+The customer is identified by their Telegram account, not by phone number. See the details in [Connect Telegram](/en/canais/telegram).
+
+---
+
 ## API Connection
 
 API Connection integrates your system directly with Tartini, using access tokens. It's the path for teams with technical resources who want to send or receive data on their own.
@@ -55,7 +64,7 @@ API Connection integrates your system directly with Tartini, using access tokens
 
 ## Channel limit per Unit
 
-Each Unit can have one WhatsApp Business (QR Code) channel, one WABA channel, and one Chat Widget, each connected only once. To connect another number of the same type, use another Unit.
+Each Unit can have one WhatsApp Business (QR Code) channel, one WABA channel, one Chat Widget, and one Telegram channel, each connected only once. To connect another number of the same type, use another Unit.
 
 ---
 
@@ -95,5 +104,6 @@ Every channel shows a status:
   <Artigo titulo="Connect WhatsApp by QR Code" href="/en/canais/whatsapp-qr-code">Scan a code and start handling conversations on WhatsApp.</Artigo>
   <Artigo titulo="Connect WhatsApp Business API (WABA)" href="/en/canais/whatsapp-business-api">Meta's official connection, step by step.</Artigo>
   <Artigo titulo="Install the Chat Widget on your website" href="/en/canais/chat-widget">A support chat directly on your website.</Artigo>
+  <Artigo titulo="Connect Telegram" href="/en/canais/telegram">Handle Telegram conversations in the same Inbox.</Artigo>
   <Artigo titulo="Fix connection issues" href="/en/canais/problemas-de-conexao">Common symptoms and how to fix them.</Artigo>
 </Lista>

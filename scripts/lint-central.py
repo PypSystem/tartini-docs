@@ -24,7 +24,7 @@ for f in files:
 BAN=[(r"—","travessão"),(r"\bautomatiza\w*|\bautomação\b","automação"),(r"\bfluxos?\b(?! do processo| do grupo)","fluxo"),(r"\bchatbots?\b|\bbots?\b|\brobôs?\b","bot"),(r"\bgente\b","gente"),(r"^.*\btokens?\b.*(cr[eé]dit|consum|custo|\bIA\b|modelo).*$|^.*(cr[eé]dit|consum|custo|\bIA\b|modelo).*\btokens?\b.*$","tokens como unidade de consumo"),(r"<!--","comentário HTML"),(r"\bclique aqui\b","clique aqui"),(r"\bpotencializ\w*|\brevolucion\w*|\bnova era\b|\bpiloto automático\b|\bnunca tira folga\b","venda")]
 probs=0
 for f in sorted(files):
-    rel=os.path.relpath(f,D); s=open(f,encoding="utf-8").read()
+    rel=os.path.relpath(f,D).replace(os.sep,"/"); s=open(f,encoding="utf-8").read()
     issues=[]
     fm=re.match(r"^---\n(.*?)\n---\n",s,re.S)
     if not fm: issues.append("sem frontmatter")
@@ -38,6 +38,7 @@ for f in sorted(files):
     nocode=re.sub(r"```.*?```","",nocom,flags=re.S); nocode=re.sub(r"`[^`\n]*`","",nocode)
     for pat,name in BAN:
         if rel.endswith("marca/voz.mdx") and name not in ("travessão","comentário HTML"): continue  # a página lista as palavras banidas de propósito
+        if rel.endswith("canais/telegram.mdx") and name=="bot": continue  # "bot" é o nome que o Telegram e a tela dão ao canal; nunca o Tino
         for m in re.finditer(pat,nocode,re.I|re.M):
             ln=body[:body.find(m.group(0))].count("\n")+1 if m.group(0) in body else "?"
             issues.append(f"{name}: '{m.group(0)}'")

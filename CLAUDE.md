@@ -180,6 +180,7 @@ Os quatro agentes têm coleção própria, `agentes/`, com uma seção por agent
 ## Vocabulário
 
 - **Transferir, nunca passar.** O Tino transfere a conversa para uma pessoa; a conversa é transferida para a equipe. "Passar a conversa", "passou o atendimento" e "passe adiante" não entram (Artur: palavreado chulo).
+- **"Bot" só no Telegram.** É o nome que o Telegram e a tela dão ao canal (@BotFather, "bloqueou o bot"), então `canais/telegram.mdx` (e as traduções) fica fora da regra "bot" do lint. Nas outras páginas o Telegram aparece sem a palavra, e o Tino nunca é bot.
 
 ## O quê e para quê, não o como por dentro
 

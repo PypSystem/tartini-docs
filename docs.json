@@ -213,6 +213,7 @@
                   "canais/whatsapp-business-api",
                   "canais/templates",
                   "canais/chat-widget",
+                  "canais/telegram",
                   "canais/problemas-de-conexao"
                 ]
               },
@@ -513,6 +514,7 @@
                   "en/canais/whatsapp-business-api",
                   "en/canais/templates",
                   "en/canais/chat-widget",
+                  "en/canais/telegram",
                   "en/canais/problemas-de-conexao"
                 ]
               },
@@ -813,6 +815,7 @@
                   "es/canais/whatsapp-business-api",
                   "es/canais/templates",
                   "es/canais/chat-widget",
+                  "es/canais/telegram",
                   "es/canais/problemas-de-conexao"
                 ]
               },

@@ -1,0 +1,184 @@
+---
+title: "Connect Telegram"
+sidebarTitle: "Telegram"
+description: "Handle Telegram conversations in the same Inbox as your other channels, with the same team and the same Tino."
+---
+
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
+With Telegram connected, your bot's conversations arrive in the same Inbox as your WhatsApp channels. Your team replies from there, and Tino handles them if you turn on AI for the channel.
+
+<Note>
+  Who connects: Administrator, Company Manager, Area Manager, and Unit Manager. Available on all plans; Tino and Campaigns on Telegram require the Scale plan.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Create the bot in @BotFather
+
+Tartini connects through Telegram's official Bot API. Before going to Tartini, create the bot in Telegram itself:
+
+<Steps>
+  <Step title="Open @BotFather">In Telegram, open the chat with **@BotFather**, Telegram's official account for creating bots.</Step>
+  <Step title="Create the bot">Send `/newbot`, then choose a name and a username ending in "bot".</Step>
+  <Step title="Keep the token">At the end, @BotFather replies with a line similar to `123456789:AAH...`. That is the token that connects the channel.</Step>
+</Steps>
+
+<Warning>
+  The token gives full control of the bot and is a credential of your company. Keep it like a password and don't share it outside the team that manages your channels.
+</Warning>
+
+---
+
+## Connect the bot to Tartini
+
+By default, no Unit has a Telegram channel.
+
+Where to find it: **Configurações > Canais > Telegram** (Settings > Channels > Telegram).
+
+<Steps>
+  <Step title="Start the connection">In the **Atenda pelo Telegram com o mesmo Inbox** (Handle Telegram in the same Inbox) box, at the top of the screen, click **Conectar bot do Telegram** (Connect Telegram bot).</Step>
+  <Step title="Fill in the channel details">Choose the **Entidade** (Entity) and enter a **Nome do canal** (Channel name) that helps your team identify it later.</Step>
+  <Step title="Create the channel">Click **Criar canal e colar o token** (Create channel and paste the token). The **Conectar o bot do Telegram** (Connect the Telegram bot) modal opens next.</Step>
+  <Step title="Paste the token">In the **Token do bot** (Bot token) field, paste the whole line @BotFather sent and click **Conectar bot** (Connect bot).</Step>
+</Steps>
+
+{/* CAPTURA: images/canais/telegram-conectar.png | alt: modal Conectar o bot do Telegram com o campo Token do bot preenchido e mascarado | olhar: o campo Token do bot e o botão Conectar bot */}
+
+<Note>
+  If you close the modal without pasting the token, the channel is created and stays **Desconectado** (Disconnected). To finish later, click the ⋮ next to it, under **Bots conectados** (Connected bots), and choose **Conectar bot** (Connect bot).
+</Note>
+
+---
+
+## Share your bot's link
+
+On Telegram, the customer always starts the conversation. They open your bot's link and tap **INICIAR** (START); the bot can't reach anyone first.
+
+Where to find it: **Configurações > Canais > Telegram**, **Divulgue seu bot** (Share your bot) section, which shows up after the connection.
+
+<Steps>
+  <Step title="Copy the link">Next to the address under **link do seu bot** (your bot's link), click the copy button.</Step>
+  <Step title="Download the QR Code">Click the download button, to the right of the copy button, to save the QR Code as an image.</Step>
+  <Step title="Publish it">Put the link or the QR Code where your customers are: website, social media bio, menu, email signature.</Step>
+</Steps>
+
+{/* CAPTURA: images/canais/telegram-divulgar.png | alt: seção Divulgue seu bot com o QR Code e o link do bot | olhar: o link e os botões de copiar e baixar ao lado dele */}
+
+<Tip>
+  This QR Code doesn't connect the channel, it brings customers to it. Without a published link, the channel stays connected and empty.
+</Tip>
+
+---
+
+## See how the contact shows up in the Inbox
+
+A Telegram customer is identified by their Telegram account, with the name they use there. The phone number doesn't show, because Telegram doesn't provide it.
+
+When the conversation is closed, the customer gets a one-time invitation to share their number, with a button. If they accept, the phone number shows up in the contact details.
+
+The channel has a few differences from WhatsApp:
+
+- **No delivery or read receipts.** Messages stay as **Enviada** (Sent) and don't change; this isn't a failure.
+- **No 24-hour window and no templates.** You reply whenever you want.
+- **One-on-one conversations only.** Telegram groups, supergroups, and channels don't come into Tartini.
+- **Separate contacts.** A Telegram contact doesn't merge with contacts from other channels, even if it's the same person.
+
+<Note>
+  When the customer blocks or deletes the bot, the **bloqueou o bot** (blocked the bot) badge shows next to their name in the Inbox. The badge goes away on its own when they write again.
+</Note>
+
+---
+
+## Turn on Tino for Telegram
+
+With the channel connected, the Telegram screen shows the **Inteligência Artificial destes canais** (AI for these channels) shortcut. Click **Configurar** (Configure) to open AI per channel and turn on Tino, just like on other channels.
+
+<Note>Available from the Scale plan. See the details in [Turn Tino on in a channel](/en/agentes/tino/ia-por-canal).</Note>
+
+---
+
+## Use Telegram in campaigns
+
+A Telegram campaign only reaches people who have already started a conversation with the bot and haven't blocked it.
+
+That's why the audience doesn't accept a CSV list: you pick contacts from the channel's own list, which only shows people who have talked to the bot. Anyone who blocked the bot shows the **bloqueou o bot** (blocked the bot) badge and only receives the message if they unblock it before the send.
+
+<Note>Campaigns require the Scale plan. See the step by step in [Create a campaign](/en/campanhas/crie-uma-campanha).</Note>
+
+---
+
+## Change the channel's bot
+
+Where to find it: **Configurações > Canais > Telegram**, **Bots conectados** (Connected bots) section.
+
+<Steps>
+  <Step title="Open the channel menu">Click the ⋮ next to the channel and choose **Trocar bot** (Change bot).</Step>
+  <Step title="Paste the new token">In the **Trocar o bot do canal** (Change the channel's bot) modal, paste the token and click **Trocar bot** (Change bot).</Step>
+</Steps>
+
+<Warning>
+  When you change the bot, the published link changes: anyone with the old link no longer reaches the channel. Conversations with the old bot don't carry over to the new one.
+</Warning>
+
+---
+
+## Channel cost
+
+Right now Telegram doesn't charge for using its Bot API. In Tartini, the channel uses credits like any other: messages and AI follow the rules in [Credits explained](/en/visao-geral/creditos-explicados).
+
+---
+
+## Troubleshoot the channel
+
+### The customer blocked the bot
+
+**Cause:** the customer blocked or deleted the bot on Telegram, and Telegram refuses any message sent to them.
+
+**Fix:** there's nothing to do from Tartini. Only the customer can unblock the bot and write again.
+
+### The channel stopped receiving messages after changes in @BotFather
+
+**Cause:** the token was revoked or changed in @BotFather. The old token stops working and the channel stops. {/* CONFIRMAR: se o status do canal muda sozinho para Desconectado quando o token é revogado */}
+
+**Fix:** copy the current token in @BotFather, click the ⋮ next to the channel, and paste the token under **Trocar bot** (Change bot) or **Conectar bot** (Connect bot). With the same bot, the published link stays the same.
+
+### "Este bot já está conectado a outro canal" shows up
+
+This message means "This bot is already connected to another channel".
+
+**Cause:** each bot delivers messages to a single channel at a time.
+
+**Fix:** create another bot in @BotFather for this channel, or use the channel the bot is already on.
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Can I send the first message to a customer on Telegram?">
+  No. On Telegram, the customer always starts, by opening the bot's link and tapping **INICIAR** (START). After that, your team and Tino reply as usual.
+  </Accordion>
+  <Accordion title="Can I connect more than one bot on the same Unit?">
+  No. Each Unit has one Telegram channel, and each channel has one bot. For another bot, use another Unit.
+  </Accordion>
+  <Accordion title="Does Telegram show the customer's phone number?">
+  Only if the customer shares it. The invitation with the button reaches them once, when the conversation is closed.
+  </Accordion>
+  <Accordion title="Why does the message stay as Sent?">
+  Telegram doesn't report delivery or reads. The message went out normally; the status just doesn't move forward on this channel.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<Lista>
+  <Artigo titulo="Channels explained" href="/en/canais/canais-explicados">The channels available in Tartini and when to use each one.</Artigo>
+  <Artigo titulo="Turn Tino on in a channel" href="/en/agentes/tino/ia-por-canal">Hours, follow-up, and closing for this channel.</Artigo>
+  <Artigo titulo="Plans and what each one unlocks" href="/en/visao-geral/planos-e-recursos">What each plan includes, channel by channel.</Artigo>
+  <Artigo titulo="Credits explained" href="/en/visao-geral/creditos-explicados">How the credit allowance works.</Artigo>
+</Lista>
