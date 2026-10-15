@@ -61,21 +61,22 @@ If the token leaks or you want to invalidate the old URL, regenerate the token o
 
 ## Keyword campaign (inbound)
 
-A keyword campaign activates Tino when a contact writes something that matches a pattern you define, for example a word tied to a promotion.
+A keyword campaign activates Tino when a person writes on the channel with the campaign's subject: a registered word or phrase, a phrase similar to it or, with the option turned on, the same intent in other words. Tino replies to what the person wrote.
 
-Where to find it: step 2 of the wizard, **O cliente chega até mim** (The customer comes to me) source.
+Where to find it: **Público** (Audience) step of the wizard, **Palavra-chave** (Keyword) source, **Como a campanha reconhece quem entra** (How the campaign recognizes who enters) section.
 
 <Steps>
-  <Step title="Choose the source">In the **Público** step, check **O cliente chega até mim**.</Step>
-  <Step title="Add the keywords">Type each word and press Enter. Remove one with the **X** next to it.</Step>
-  <Step title="Choose the match type">**Contém** (Contains, default), **Igual a** (Equals), **Começa com** (Starts with), **Termina com** (Ends with), or **Regex**, for anyone who needs a more advanced pattern.</Step>
-  <Step title="Set the tag applied to the contact">Choose a color and write the tag's text, for example `BF25`. It tags the contact as soon as they write the keyword.</Step>
-  <Step title="Adjust the fine-grained options">Check **Diferenciar maiúsculas** (Case-sensitive) if you want the match to be case-sensitive. **Aplicar somente na primeira mensagem** (Apply only to the first message) is checked by default, so the trigger doesn't repeat on every message from the contact.</Step>
+  <Step title="Choose the source">In the **Público** step, check **Palavra-chave**.</Step>
+  <Step title="Set how the campaign recognizes who enters">Register words and phrases and, if you want, turn on **Frase parecida** (Similar phrase), **Entender a intenção** (Understand the intent), or **Campanha padrão para conversas novas deste canal** (Default campaign for new conversations on this channel).</Step>
+  <Step title="Set the tag applied to the contact">Choose a color and write the tag's text, for example `BF25`. It tags the contact as soon as they enter the campaign.</Step>
+  <Step title="Test a message">Paste a text in **testar mensagem** (test message) to see whether it would activate the campaign and in which way.</Step>
 </Steps>
 
-{/* CAPTURA: images/campanhas/inbound-palavras-chave.png | alt: Passo Público com os chips de palavras-chave, o tipo de correspondência e a tag colorida | olhar: os chips de palavras-chave e o seletor de cor da tag */}
+{/* CAPTURA: images/campanhas/inbound-palavras-chave.png | alt: Passo Público com os chips de palavras e frases, o tipo de correspondência e a tag colorida | olhar: os chips de palavras e frases e o seletor de cor da tag */}
 
-Once created, the campaign starts **Ativa** (Active) right away, listening for the configured words. There's no external connection step for this source: everything happens inside Tartini.
+Each way of recognizing, the channel default campaign, and entry from the Inbox are in [Set how the campaign recognizes who enters](/en/campanhas/palavra-chave).
+
+There's no external connection step for this source: everything happens inside Tartini.
 
 ---
 
@@ -83,7 +84,7 @@ Once created, the campaign starts **Ativa** (Active) right away, listening for t
 
 - Campaign dashboard, **Detalhes** tab: the webhook's URL and token, or the keyword's pattern and tag.
 - Campaign dashboard, **Fila de Eventos** (Event queue) tab (webhook) or **Execuções** (Executions) tab (keyword): one record per contact that entered.
-- Inbox: conversations opened by a campaign show a **Campanha** (Campaign) chip.
+- Inbox: conversations opened by a campaign show a **Campanha** (Campaign) chip, and the **Entrou na campanha** (Entered the campaign) line says why the person entered.
 
 ---
 
@@ -100,7 +101,10 @@ Once created, the campaign starts **Ativa** (Active) right away, listening for t
   Not through the interface today. It waits for the next available time slot.
   </Accordion>
   <Accordion title="Does the keyword campaign repeat for every message from the same contact?">
-  Only if you uncheck **Aplicar somente na primeira mensagem**, which is checked by default.
+  No. While the campaign conversation is ongoing, the person doesn't enter again. With **Aplicar somente na primeira mensagem** (Apply only to the first message) unchecked, a registered word also activates the campaign in the middle of a conversation that isn't in it yet.
+  </Accordion>
+  <Accordion title="The person edited the ad's message and didn't enter. What do I do?">
+  Turn on **Frase parecida** or **Entender a intenção**, or put the person in the campaign from the Inbox. See [Set how the campaign recognizes who enters](/en/campanhas/palavra-chave).
   </Accordion>
   <Accordion title="Can I switch from webhook to list after creating the campaign?">
   No. The source of the contacts is set at creation and doesn't change when editing.
@@ -112,6 +116,7 @@ Once created, the campaign starts **Ativa** (Active) right away, listening for t
 ## Related articles
 
 <Lista>
+  <Artigo titulo="Set how the campaign recognizes who enters" href="/en/campanhas/palavra-chave">Words, similar phrase, intent, default campaign, and entry from the Inbox.</Artigo>
   <Artigo titulo="Create a campaign" href="/en/campanhas/crie-uma-campanha">The wizard in three steps.</Artigo>
   <Artigo titulo="Receive events in your system" href="/en/integracoes/webhooks">Other Tartini webhooks.</Artigo>
   <Artigo titulo="Track the results" href="/en/campanhas/resultados">Where to see conversations from each source.</Artigo>

@@ -59,21 +59,22 @@ Se o token vazar ou se você quiser invalidar a URL antiga, regenere o token na 
 
 ## Campanha por palavra-chave (inbound)
 
-Uma campanha de palavra-chave ativa o Tino quando um contato escreve algo que combina com um padrão que você define, por exemplo uma palavra de uma promoção.
+Uma campanha de palavra-chave ativa o Tino quando uma pessoa escreve no canal com o assunto da campanha: uma palavra ou frase cadastrada, uma frase parecida com ela ou, com a opção ligada, a mesma intenção em outras palavras. O Tino responde ao que a pessoa escreveu.
 
-Onde fica: passo 2 do assistente, origem **O cliente chega até mim**.
+Onde fica: passo **Público** do assistente, origem **Palavra-chave**, seção **Como a campanha reconhece quem entra**.
 
 <Steps>
-  <Step title="Escolha a origem">No passo **Público**, marque **O cliente chega até mim**.</Step>
-  <Step title="Adicione as palavras-chave">Digite cada palavra e pressione Enter. Remova uma com o **X** ao lado dela.</Step>
-  <Step title="Escolha o tipo de correspondência">**Contém** (padrão), **Igual a**, **Começa com**, **Termina com** ou **Regex**, para quem precisa de um padrão mais avançado.</Step>
-  <Step title="Defina a tag aplicada ao contato">Escolha uma cor e escreva o texto da tag, por exemplo `BF25`. Ela marca o contato assim que ele escreve a palavra-chave.</Step>
-  <Step title="Ajuste as opções finas">Marque **Diferenciar maiúsculas** se quiser que a correspondência seja sensível a caixa. **Aplicar somente na primeira mensagem** vem marcada por padrão, para o gatilho não repetir a cada mensagem do contato.</Step>
+  <Step title="Escolha a origem">No passo **Público**, marque **Palavra-chave**.</Step>
+  <Step title="Defina como a campanha reconhece quem entra">Cadastre palavras e frases e, se quiser, ligue **Frase parecida**, **Entender a intenção** ou **Campanha padrão para conversas novas deste canal**.</Step>
+  <Step title="Defina a tag aplicada ao contato">Escolha uma cor e escreva o texto da tag, por exemplo `BF25`. Ela marca o contato assim que ele entra na campanha.</Step>
+  <Step title="Teste uma mensagem">Cole um texto em **testar mensagem** para ver se ele ativaria a campanha e por qual forma.</Step>
 </Steps>
 
-{/* CAPTURA: images/campanhas/inbound-palavras-chave.png | alt: Passo Público com os chips de palavras-chave, o tipo de correspondência e a tag colorida | olhar: os chips de palavras-chave e o seletor de cor da tag */}
+{/* CAPTURA: images/campanhas/inbound-palavras-chave.png | alt: Passo Público com os chips de palavras e frases, o tipo de correspondência e a tag colorida | olhar: os chips de palavras e frases e o seletor de cor da tag */}
 
-Ao criar, a campanha já nasce **Ativa**, escutando as palavras configuradas. Não há passo de conexão externa nessa origem: tudo acontece dentro do Tartini.
+Cada forma de reconhecimento, a campanha padrão do canal e a entrada pelo Inbox estão em [Defina como a campanha reconhece quem entra](/campanhas/palavra-chave).
+
+Não há passo de conexão externa nessa origem: tudo acontece dentro do Tartini.
 
 ---
 
@@ -81,7 +82,7 @@ Ao criar, a campanha já nasce **Ativa**, escutando as palavras configuradas. N�
 
 - Painel da campanha, aba **Detalhes**: URL e token do webhook, ou o padrão e a tag da palavra-chave.
 - Painel da campanha, aba **Fila de Eventos** (webhook) ou **Execuções** (palavra-chave): um registro por contato que entrou.
-- Inbox: as conversas abertas por uma campanha mostram um chip **Campanha**.
+- Inbox: as conversas abertas por uma campanha mostram um chip **Campanha**, e a linha **Entrou na campanha** diz por que a pessoa entrou.
 
 ---
 
@@ -98,7 +99,10 @@ Ao criar, a campanha já nasce **Ativa**, escutando as palavras configuradas. N�
   Não pela interface hoje. Ele aguarda o próximo horário disponível.
   </Accordion>
   <Accordion title="A campanha de palavra-chave repete a cada mensagem do mesmo contato?">
-  Só se você desmarcar **Aplicar somente na primeira mensagem**, que vem marcada por padrão.
+  Não. Enquanto a conversa da campanha estiver em andamento, a pessoa não entra de novo. Com **Aplicar somente na primeira mensagem** desmarcada, uma palavra cadastrada também ativa a campanha no meio de uma conversa que ainda não está nela.
+  </Accordion>
+  <Accordion title="A pessoa editou a mensagem do anúncio e não entrou. O que faço?">
+  Ligue **Frase parecida** ou **Entender a intenção**, ou coloque a pessoa na campanha pelo Inbox. Veja [Defina como a campanha reconhece quem entra](/campanhas/palavra-chave).
   </Accordion>
   <Accordion title="Posso trocar de webhook para lista depois de criar?">
   Não. A origem dos contatos é fixada na criação e não muda na edição.
@@ -110,6 +114,7 @@ Ao criar, a campanha já nasce **Ativa**, escutando as palavras configuradas. N�
 ## Artigos relacionados
 
 <Lista>
+  <Artigo titulo="Defina como a campanha reconhece quem entra" href="/campanhas/palavra-chave">Palavras, frase parecida, intenção, campanha padrão e entrada pelo Inbox.</Artigo>
   <Artigo titulo="Crie uma campanha" href="/campanhas/crie-uma-campanha">O assistente em três passos.</Artigo>
   <Artigo titulo="Receba eventos no seu sistema" href="/integracoes/webhooks">Outros webhooks do Tartini.</Artigo>
   <Artigo titulo="Acompanhe os resultados" href="/campanhas/resultados">Onde ver as conversas de cada origem.</Artigo>

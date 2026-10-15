@@ -1,0 +1,181 @@
+---
+title: "Set how the campaign recognizes who enters"
+sidebarTitle: "Keyword and recognition"
+description: "Make the campaign start for anyone who arrives with its subject, even when the message doesn't have the exact words."
+---
+
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
+People who come from an ad can delete or edit the prefilled message before sending it. With the right recognition, that person still enters the campaign, and Tino replies to what they wrote.
+
+<Note>
+  Campaigns is a feature of the Scale and Enterprise plans. Who configures it: Administrator (Company), Company Manager, Area Manager, and Unit Manager. Anyone on the team with access to the conversation can put someone in the campaign from the Inbox.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+The campaign recognizes who enters in four ways, from the simplest to the broadest:
+
+1. **Palavras e frases** (Words and phrases): the message contains a registered word or phrase.
+2. **Frase parecida** (Similar phrase): the message resembles a registered phrase, with words swapped or added.
+3. **Entender a intenção** (Understand the intent): the message has the campaign's subject, in other words.
+4. **Campanha padrão do canal** (Channel default campaign): every new conversation on the channel that no other campaign recognized.
+
+If more than one campaign recognizes the same message, the most specific one wins, in that order. In a tie, the **prioridade** (priority) you set wins.
+
+---
+
+## Register words and phrases
+
+By default, the campaign starts when the message contains one of the words or phrases on the list. Accents, punctuation, and extra spaces don't matter: "promocao", "Promoção!", and "promoção" activate the same campaign.
+
+Where to find it: **Campanhas > Campanhas > Nova campanha** (Campaigns > Campaigns > New campaign), **Público** (Audience) step, **Palavra-chave** (Keyword) source, **Como a campanha reconhece quem entra** (How the campaign recognizes who enters) section.
+
+<Steps>
+  <Step title="Add the words and phrases">Type each one in the **palavras e frases que ativam a campanha** (words and phrases that activate the campaign) field and press Enter. Whole phrases work, like your ad's message.</Step>
+  <Step title="Choose the match type">**Contém** (Contains, default), **Igual a** (Equals), **Começa com** (Starts with), **Termina com** (Ends with), or **Regex**.</Step>
+  <Step title="Set the tag">Choose the color and the text in **tag aplicada no contato** (tag applied to the contact), for example `BF25`.</Step>
+  <Step title="Adjust the options">**Aplicar somente na primeira mensagem** (Apply only to the first message) comes checked. **Diferenciar maiúsculas** (Case-sensitive) comes unchecked.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/reconhecimento-palavras.png | alt: Seção Como a campanha reconhece quem entra com os chips de palavras e frases | olhar: o campo de palavras e frases e a dica sobre acentos */}
+
+<Tip>
+  Generic messages like "Olá! Posso ter mais informações sobre isso?" (Hi! Can I get more information about this?) don't state the subject. That's WhatsApp's default text for ads: register it as a phrase of the ad's campaign, or use the channel default campaign.
+</Tip>
+
+---
+
+## Turn on similar phrase
+
+With **Frase parecida** turned on, the message activates the campaign when it resembles one of the registered phrases, even with words swapped or added. Register the ad's message as a phrase: it becomes the reference.
+
+For example, with the phrase "Gostaria de saber os benefícios que tenho na minha região" (I'd like to know the benefits I have in my region), the message "quero saber os beneficios da minha regiao" (I want to know the benefits of my region) activates the campaign. "Qual o horário de funcionamento?" (What are your opening hours?) doesn't.
+
+<Steps>
+  <Step title="Register the reference phrase">Add the ad's message in **palavras e frases que ativam a campanha**.</Step>
+  <Step title="Turn on the option">Check **Frase parecida**.</Step>
+</Steps>
+
+<Note>
+  Similar phrase works for phrases, not single words, and is unavailable with the **Regex** match type.
+</Note>
+
+---
+
+## Let the AI understand the intent
+
+With **Entender a intenção** turned on, the AI checks whether the first message has the campaign's subject when the words and phrases didn't recognize it. You describe in one sentence who should enter.
+
+<Steps>
+  <Step title="Turn on the option">Check **Entender a intenção**.</Step>
+  <Step title="Describe who should enter">In the field that appears, write something like "pessoas interessadas no clube de benefícios e em descontos de viagem" (people interested in the benefits club and in travel discounts).</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/reconhecimento-intencao.png | alt: Opção Entender a intenção marcada com a descrição de quem deve entrar | olhar: o campo de descrição */}
+
+<Note>
+  The intent is only checked on the first message of a new conversation, never in the middle of a conversation. The same check covers every campaign in the Unit with the option turned on.
+</Note>
+
+{/* CONFIRMAR: se a avaliação de intenção aparece no extrato de créditos como categoria própria ou dentro da leitura das mensagens. */}
+
+---
+
+## Set the channel default campaign
+
+The default campaign receives every first message of a new conversation on the channel that doesn't activate any other campaign, whatever the text. It's for numbers used only for lead capture, where every new person is approached the same way.
+
+<Steps>
+  <Step title="Choose the channel">At the top of the **Público** step, choose the campaign's channel. Without a channel, the option stays locked.</Step>
+  <Step title="Turn on the option">Check **Campanha padrão para conversas novas deste canal** (Default campaign for new conversations on this channel).</Step>
+</Steps>
+
+<Note>
+  Each channel has one default campaign. If another campaign is already the channel's default, Tartini warns you when you save and shows which one it is.
+</Note>
+
+---
+
+## Break ties with priority
+
+When two campaigns recognize the same message in the same way, for example both by the word "viagem" (travel), the one with the higher **prioridade** wins. The default value is 0; use higher numbers for the campaign that should win.
+
+---
+
+## Test a message
+
+Before saving, paste a message in **testar mensagem** (test message) and click **Testar** (Test). Tartini shows whether it would activate the campaign and in which way: **Palavra ou frase** (Word or phrase), **Frase parecida**, **Intenção** (Intent), or **Campanha padrão do canal**. The test uses what's on screen, even without saving.
+
+{/* CAPTURA: images/campanhas/reconhecimento-testar.png | alt: Campo testar mensagem com o resultado Ativaria por frase parecida | olhar: o resultado abaixo do campo */}
+
+<Warning>
+  With **Entender a intenção** turned on, every test that the words and phrases don't recognize uses an AI check and consumes credits.
+</Warning>
+
+The test considers the first message of a new conversation, which is where every way of recognizing applies.
+
+---
+
+## Put a person in the campaign from the Inbox
+
+When the message slips past every way of recognizing, you put the person in the campaign straight from the conversation. Tino reads what has already been said and reaches out right away.
+
+Where to find it: **Inbox**, megaphone icon **Colocar na campanha** (Put in campaign) in the conversation header, next to **Transferir conversa** (Transfer conversation). On mobile, in the **Mais opções** (More options) menu.
+
+<Steps>
+  <Step title="Open the conversation">Select the conversation in the **Inbox**.</Step>
+  <Step title="Click Colocar na campanha">The panel lists the active keyword campaigns that talk through the conversation's channel.</Step>
+  <Step title="Choose the campaign">Campaigns the person is already in show up disabled, with the notice **já está nesta campanha** (already in this campaign).</Step>
+  <Step title="Confirm">Click **Colocar e abordar** (Put in and reach out). The campaign's tag is applied and Tino takes over the conversation.</Step>
+</Steps>
+
+{/* CAPTURA: images/inbox/colocar-na-campanha.png | alt: Painel Colocar na campanha com a lista de campanhas e o botão Colocar e abordar | olhar: a campanha selecionada e o botão */}
+
+<Note>
+  Entry from the Inbox also works for conversations that are with an agent: you're the one who decides to transfer the conversation to the campaign. On official WhatsApp (WABA), if the person hasn't written in more than 24 hours, the campaign needs an opening template.
+</Note>
+
+---
+
+## See why the person entered
+
+Every entry is recorded in the conversation. In the **Inbox**, the **Entrou na campanha** (Entered the campaign) line shows the campaign's name and a label with the reason: the recognized word or phrase, the similar phrase, the intent, the channel default campaign, or the manual entry. Use that record to fine-tune the words, the phrases, and the intent description.
+
+{/* CAPTURA: images/inbox/entrou-na-campanha.png | alt: Linha Entrou na campanha na conversa com a etiqueta Frase parecida | olhar: a etiqueta do motivo */}
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Does Tino answer the question the person asked in the first message?">
+  Yes. When the campaign starts from a message, Tino's first reply answers what the person wrote and then follows the campaign's goal.
+  </Accordion>
+  <Accordion title="Does someone already in a campaign enter it again?">
+  No. While the campaign conversation is ongoing, the person doesn't enter it again. If another campaign recognizes the message, that other one takes over.
+  </Accordion>
+  <Accordion title="Does a conversation with an agent enter the campaign on its own?">
+  No. A conversation that is already with someone on the team doesn't enter through automatic recognition. From the Inbox, the team can put it in the campaign.
+  </Accordion>
+  <Accordion title="Does the campaign recognize messages from another channel?">
+  No. A campaign with a chosen channel only recognizes messages that arrive through that channel, so Tino replies from the same number the person used.
+  </Accordion>
+  <Accordion title="Do I need to register words to use the intent or the default campaign?">
+  No. The campaign needs at least one way of recognizing: words and phrases, the intent turned on, or the channel default campaign.
+  </Accordion>
+  <Accordion title="Do audio messages activate the campaign?">
+  Yes. What the person said goes through the same ways of recognizing as a written message.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<Lista>
+  <Artigo titulo="Trigger campaigns by webhook or by incoming message" href="/en/campanhas/webhook-e-inbound">The other sources of a campaign.</Artigo>
+  <Artigo titulo="Create a campaign" href="/en/campanhas/crie-uma-campanha">The wizard in three steps.</Artigo>
+  <Artigo titulo="Track the results" href="/en/campanhas/resultados">Who entered and how the conversation ended.</Artigo>
+  <Artigo titulo="Transfer, note, and tag conversations" href="/en/inbox/transfira-notas-e-tags">Other actions in the conversation header.</Artigo>
+</Lista>

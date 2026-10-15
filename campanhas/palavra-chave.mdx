@@ -1,0 +1,179 @@
+---
+title: "Defina como a campanha reconhece quem entra"
+sidebarTitle: "Palavra-chave e reconhecimento"
+description: "Faça a campanha começar para quem chega com o assunto dela, mesmo quando a mensagem não traz as palavras exatas."
+---
+
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
+Quem chega por um anúncio pode apagar ou editar a mensagem pronta antes de enviar. Com o reconhecimento certo, essa pessoa entra na campanha do mesmo jeito, e o Tino responde ao que ela escreveu.
+
+<Note>
+  Campanhas é um recurso dos planos Scale e Enterprise. Quem configura: Administrador (Empresa), Gestor da Empresa, Gestor de Área e Gestor de Unidade. Qualquer pessoa da equipe com acesso à conversa pode colocar alguém na campanha pelo Inbox.
+</Note>
+
+A campanha reconhece quem entra de quatro formas, da mais simples para a mais ampla:
+
+1. **Palavras e frases**: a mensagem traz uma palavra ou frase cadastrada.
+2. **Frase parecida**: a mensagem lembra uma frase cadastrada, com palavras trocadas ou a mais.
+3. **Entender a intenção**: a mensagem tem o assunto da campanha, em outras palavras.
+4. **Campanha padrão do canal**: toda conversa nova do canal que nenhuma outra campanha reconheceu.
+
+Se mais de uma campanha reconhecer a mesma mensagem, vale a mais específica, nessa ordem. Em empate, vale a **prioridade** que você definir.
+
+---
+
+## Cadastre palavras e frases
+
+Por padrão, a campanha começa quando a mensagem contém uma das palavras ou frases da lista. Acento, pontuação e espaço a mais não importam: "promocao", "Promoção!" e "promoção" ativam a mesma campanha.
+
+Onde fica: **Campanhas > Campanhas > Nova campanha**, passo **Público**, origem **Palavra-chave**, seção **Como a campanha reconhece quem entra**.
+
+<Steps>
+  <Step title="Adicione as palavras e frases">Digite cada uma no campo **palavras e frases que ativam a campanha** e pressione Enter. Vale frase inteira, como a mensagem do seu anúncio.</Step>
+  <Step title="Escolha o tipo de correspondência">**Contém** (padrão), **Igual a**, **Começa com**, **Termina com** ou **Regex**.</Step>
+  <Step title="Defina a tag">Escolha a cor e o texto em **tag aplicada no contato**, por exemplo `BF25`.</Step>
+  <Step title="Ajuste as opções">**Aplicar somente na primeira mensagem** vem marcada. **Diferenciar maiúsculas** vem desmarcada.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/reconhecimento-palavras.png | alt: Seção Como a campanha reconhece quem entra com os chips de palavras e frases | olhar: o campo de palavras e frases e a dica sobre acentos */}
+
+<Tip>
+  Mensagens genéricas como "Olá! Posso ter mais informações sobre isso?" não dizem o assunto. Esse é o texto padrão do WhatsApp para anúncios: cadastre-o como frase da campanha do anúncio, ou use a campanha padrão do canal.
+</Tip>
+
+---
+
+## Ligue a frase parecida
+
+Com **Frase parecida** ligada, a mensagem ativa a campanha quando lembra uma das frases cadastradas, mesmo com palavras trocadas ou a mais. Cadastre a mensagem do anúncio como frase: ela vira a referência.
+
+Por exemplo, com a frase "Gostaria de saber os benefícios que tenho na minha região", a mensagem "quero saber os beneficios da minha regiao" ativa a campanha. "Qual o horário de funcionamento?" não ativa.
+
+<Steps>
+  <Step title="Cadastre a frase de referência">Adicione a mensagem do anúncio em **palavras e frases que ativam a campanha**.</Step>
+  <Step title="Ligue a opção">Marque **Frase parecida**.</Step>
+</Steps>
+
+<Note>
+  A frase parecida vale para frases, não para palavras soltas, e fica indisponível com o tipo de correspondência **Regex**.
+</Note>
+
+---
+
+## Deixe a IA entender a intenção
+
+Com **Entender a intenção** ligada, a IA avalia se a primeira mensagem tem o assunto da campanha quando as palavras e frases não reconheceram. Você descreve em uma frase quem deve entrar.
+
+<Steps>
+  <Step title="Ligue a opção">Marque **Entender a intenção**.</Step>
+  <Step title="Descreva quem deve entrar">No campo que aparece, escreva algo como "pessoas interessadas no clube de benefícios e em descontos de viagem".</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/reconhecimento-intencao.png | alt: Opção Entender a intenção marcada com a descrição de quem deve entrar | olhar: o campo de descrição */}
+
+<Note>
+  A intenção só é avaliada na primeira mensagem de uma conversa nova, nunca no meio de uma conversa. A mesma avaliação vale para todas as campanhas da unidade com a opção ligada.
+</Note>
+
+{/* CONFIRMAR: se a avaliação de intenção aparece no extrato de créditos como categoria própria ou dentro da leitura das mensagens. */}
+
+---
+
+## Defina a campanha padrão do canal
+
+A campanha padrão recebe toda primeira mensagem de conversa nova do canal que não ativar nenhuma outra campanha, qualquer que seja o texto. Serve para números usados só para captação, em que toda pessoa nova é abordada do mesmo jeito.
+
+<Steps>
+  <Step title="Escolha o canal">No topo do passo **Público**, escolha o canal da campanha. Sem canal, a opção fica bloqueada.</Step>
+  <Step title="Ligue a opção">Marque **Campanha padrão para conversas novas deste canal**.</Step>
+</Steps>
+
+<Note>
+  Cada canal tem uma campanha padrão. Se outra campanha já for a padrão do canal, o Tartini avisa ao salvar e mostra qual é.
+</Note>
+
+---
+
+## Desempate com a prioridade
+
+Quando duas campanhas reconhecem a mesma mensagem do mesmo jeito, por exemplo as duas pela palavra "viagem", vale a de maior **prioridade**. O valor padrão é 0; use números maiores para a campanha que deve vencer.
+
+---
+
+## Teste uma mensagem
+
+Antes de salvar, cole uma mensagem em **testar mensagem** e clique em **Testar**. O Tartini mostra se ela ativaria a campanha e por qual forma: **Palavra ou frase**, **Frase parecida**, **Intenção** ou **Campanha padrão do canal**. O teste usa o que está na tela, mesmo sem salvar.
+
+{/* CAPTURA: images/campanhas/reconhecimento-testar.png | alt: Campo testar mensagem com o resultado Ativaria por frase parecida | olhar: o resultado abaixo do campo */}
+
+<Warning>
+  Com **Entender a intenção** ligada, cada teste que as palavras e frases não reconhecem usa uma avaliação da IA e consome créditos.
+</Warning>
+
+O teste considera a primeira mensagem de uma conversa nova, que é onde todas as formas valem.
+
+---
+
+## Coloque uma pessoa na campanha pelo Inbox
+
+Quando a mensagem escapa de todas as formas de reconhecimento, você coloca a pessoa na campanha direto da conversa. O Tino lê o que já foi dito e aborda em seguida.
+
+Onde fica: **Inbox**, ícone de megafone **Colocar na campanha** no cabeçalho da conversa, ao lado de **Transferir conversa**. No celular, no menu **Mais opções**.
+
+<Steps>
+  <Step title="Abra a conversa">Selecione a conversa no **Inbox**.</Step>
+  <Step title="Clique em Colocar na campanha">O painel lista as campanhas de palavra-chave ativas que falam pelo canal da conversa.</Step>
+  <Step title="Escolha a campanha">Campanhas em que a pessoa já está aparecem desabilitadas, com o aviso **já está nesta campanha**.</Step>
+  <Step title="Confirme">Clique em **Colocar e abordar**. A tag da campanha é aplicada e o Tino assume a conversa.</Step>
+</Steps>
+
+{/* CAPTURA: images/inbox/colocar-na-campanha.png | alt: Painel Colocar na campanha com a lista de campanhas e o botão Colocar e abordar | olhar: a campanha selecionada e o botão */}
+
+<Note>
+  A entrada pelo Inbox vale também para conversas que estão com um atendente: é você quem decide transferir a conversa para a campanha. No WhatsApp oficial (WABA), se a pessoa não escreve há mais de 24 horas, a campanha precisa de um template de início.
+</Note>
+
+---
+
+## Veja por que a pessoa entrou
+
+Toda entrada fica registrada na conversa. No **Inbox**, a linha **Entrou na campanha** mostra o nome da campanha e uma etiqueta com o motivo: a palavra ou frase reconhecida, a frase parecida, a intenção, a campanha padrão do canal ou a entrada manual. Use esse registro para ajustar as palavras, as frases e a descrição da intenção.
+
+{/* CAPTURA: images/inbox/entrou-na-campanha.png | alt: Linha Entrou na campanha na conversa com a etiqueta Frase parecida | olhar: a etiqueta do motivo */}
+
+---
+
+## Perguntas frequentes
+
+<AccordionGroup>
+  <Accordion title="O Tino responde à pergunta que a pessoa fez na primeira mensagem?">
+  Sim. Quando a campanha começa por uma mensagem, a primeira resposta do Tino responde ao que a pessoa escreveu e depois segue o objetivo da campanha.
+  </Accordion>
+  <Accordion title="Quem já está numa campanha entra de novo?">
+  Não. Enquanto a conversa da campanha estiver em andamento, a pessoa não entra nela outra vez. Se outra campanha reconhecer a mensagem, essa outra assume.
+  </Accordion>
+  <Accordion title="Uma conversa com um atendente entra na campanha sozinha?">
+  Não. Conversa que já está com uma pessoa da equipe não entra por reconhecimento automático. Pelo Inbox, a equipe pode colocá-la na campanha.
+  </Accordion>
+  <Accordion title="A campanha reconhece mensagens de outro canal?">
+  Não. Uma campanha com canal escolhido só reconhece mensagens que chegam por esse canal, para o Tino responder pelo mesmo número que a pessoa usou.
+  </Accordion>
+  <Accordion title="Preciso cadastrar palavras para usar a intenção ou a campanha padrão?">
+  Não. A campanha precisa de pelo menos uma forma de reconhecimento: palavras e frases, a intenção ligada ou a campanha padrão do canal.
+  </Accordion>
+  <Accordion title="Áudios ativam a campanha?">
+  Sim. O que a pessoa falou passa pelas mesmas formas de reconhecimento que uma mensagem escrita.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artigos relacionados
+
+<Lista>
+  <Artigo titulo="Dispare campanhas por webhook ou por mensagem recebida" href="/campanhas/webhook-e-inbound">As outras origens de uma campanha.</Artigo>
+  <Artigo titulo="Crie uma campanha" href="/campanhas/crie-uma-campanha">O assistente em três passos.</Artigo>
+  <Artigo titulo="Acompanhe os resultados" href="/campanhas/resultados">Quem entrou e como a conversa terminou.</Artigo>
+  <Artigo titulo="Transfira, anote e marque conversas" href="/inbox/transfira-notas-e-tags">Outras ações no cabeçalho da conversa.</Artigo>
+</Lista>

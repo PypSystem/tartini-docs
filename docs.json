@@ -227,6 +227,7 @@
                   "campanhas/contatos-e-csv",
                   "campanhas/agendamento-e-follow-ups",
                   "campanhas/webhook-e-inbound",
+                  "campanhas/palavra-chave",
                   "campanhas/resultados",
                   "campanhas/contatos-de-campanha"
                 ]
@@ -528,6 +529,7 @@
                   "en/campanhas/contatos-e-csv",
                   "en/campanhas/agendamento-e-follow-ups",
                   "en/campanhas/webhook-e-inbound",
+                  "en/campanhas/palavra-chave",
                   "en/campanhas/resultados",
                   "en/campanhas/contatos-de-campanha"
                 ]
@@ -829,6 +831,7 @@
                   "es/campanhas/contatos-e-csv",
                   "es/campanhas/agendamento-e-follow-ups",
                   "es/campanhas/webhook-e-inbound",
+                  "es/campanhas/palavra-chave",
                   "es/campanhas/resultados",
                   "es/campanhas/contatos-de-campanha"
                 ]

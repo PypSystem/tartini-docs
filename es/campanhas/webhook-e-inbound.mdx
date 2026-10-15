@@ -61,21 +61,22 @@ Si el token se filtra o si quieres invalidar la URL antigua, regenera el token e
 
 ## Campaña por palabra clave (inbound)
 
-Una campaña de palabra clave activa a Tino cuando un contacto escribe algo que coincide con un patrón que tú defines, por ejemplo una palabra de una promoción.
+Una campaña de palabra clave activa a Tino cuando una persona escribe en el canal con el tema de la campaña: una palabra o frase registrada, una frase parecida a ella o, con la opción activada, la misma intención con otras palabras. Tino responde a lo que la persona escribió.
 
-Dónde está: paso 2 del asistente, origen **O cliente chega até mim** (El cliente llega hasta mí).
+Dónde está: paso **Público** del asistente, origen **Palavra-chave** (Palabra clave), sección **Como a campanha reconhece quem entra** (Cómo la campaña reconoce quién entra).
 
 <Steps>
-  <Step title="Elige el origen">En el paso **Público**, marca **O cliente chega até mim**.</Step>
-  <Step title="Agrega las palabras clave">Escribe cada palabra y presiona Enter. Elimina una con la **X** al lado de ella.</Step>
-  <Step title="Elige el tipo de correspondencia">**Contém** (Contiene, predeterminado), **Igual a**, **Começa com** (Empieza con), **Termina com** (Termina con) o **Regex**, para quien necesita un patrón más avanzado.</Step>
-  <Step title="Define la tag aplicada al contacto">Elige un color y escribe el texto de la tag, por ejemplo `BF25`. Marca al contacto en cuanto escribe la palabra clave.</Step>
-  <Step title="Ajusta las opciones finas">Marca **Diferenciar maiúsculas** (Diferenciar mayúsculas) si quieres que la correspondencia sea sensible a mayúsculas y minúsculas. **Aplicar somente na primeira mensagem** (Aplicar solo en el primer mensaje) viene marcada de forma predeterminada, para que el disparador no se repita en cada mensaje del contacto.</Step>
+  <Step title="Elige el origen">En el paso **Público**, marca **Palavra-chave**.</Step>
+  <Step title="Define cómo la campaña reconoce quién entra">Registra palabras y frases y, si quieres, activa **Frase parecida**, **Entender a intenção** (Entender la intención) o **Campanha padrão para conversas novas deste canal** (Campaña predeterminada para conversaciones nuevas de este canal).</Step>
+  <Step title="Define la tag aplicada al contacto">Elige un color y escribe el texto de la tag, por ejemplo `BF25`. Marca al contacto en cuanto entra en la campaña.</Step>
+  <Step title="Prueba un mensaje">Pega un texto en **testar mensagem** (probar mensaje) para ver si activaría la campaña y de qué forma.</Step>
 </Steps>
 
-{/* CAPTURA: images/campanhas/inbound-palavras-chave.png | alt: Passo Público com os chips de palavras-chave, o tipo de correspondência e a tag colorida | olhar: os chips de palavras-chave e o seletor de cor da tag */}
+{/* CAPTURA: images/campanhas/inbound-palavras-chave.png | alt: Passo Público com os chips de palavras e frases, o tipo de correspondência e a tag colorida | olhar: os chips de palavras e frases e o seletor de cor da tag */}
 
-Al crear, la campaña ya nace **Ativa** (Activa), escuchando las palabras configuradas. No hay paso de conexión externa en este origen: todo pasa dentro de Tartini.
+Cada forma de reconocimiento, la campaña predeterminada del canal y la entrada desde el Inbox están en [Define cómo la campaña reconoce quién entra](/es/campanhas/palavra-chave).
+
+No hay paso de conexión externa en este origen: todo pasa dentro de Tartini.
 
 ---
 
@@ -83,7 +84,7 @@ Al crear, la campaña ya nace **Ativa** (Activa), escuchando las palabras config
 
 - Panel de la campaña, pestaña **Detalhes**: URL y token del webhook, o el patrón y la tag de la palabra clave.
 - Panel de la campaña, pestaña **Fila de Eventos** (webhook) o **Execuções** (palabra clave): un registro por contacto que entró.
-- Inbox: las conversaciones abiertas por una campaña muestran un chip **Campanha** (Campaña).
+- Inbox: las conversaciones abiertas por una campaña muestran un chip **Campanha** (Campaña), y la línea **Entrou na campanha** (Entró en la campaña) dice por qué la persona entró.
 
 ---
 
@@ -100,7 +101,10 @@ Al crear, la campaña ya nace **Ativa** (Activa), escuchando las palabras config
   No por la interfaz hoy. Espera el próximo horario disponible.
   </Accordion>
   <Accordion title="¿La campaña de palabra clave se repite en cada mensaje del mismo contacto?">
-  Solo si desmarcas **Aplicar somente na primeira mensagem**, que viene marcada de forma predeterminada.
+  No. Mientras la conversación de la campaña esté en curso, la persona no entra de nuevo. Con **Aplicar somente na primeira mensagem** (Aplicar solo en el primer mensaje) desmarcada, una palabra registrada también activa la campaña en medio de una conversación que todavía no está en ella.
+  </Accordion>
+  <Accordion title="La persona editó el mensaje del anuncio y no entró. ¿Qué hago?">
+  Activa **Frase parecida** o **Entender a intenção**, o pon a la persona en la campaña desde el Inbox. Mira [Define cómo la campaña reconoce quién entra](/es/campanhas/palavra-chave).
   </Accordion>
   <Accordion title="¿Puedo cambiar de webhook a lista después de crear?">
   No. El origen de los contactos se fija en la creación y no cambia en la edición.
@@ -112,6 +116,7 @@ Al crear, la campaña ya nace **Ativa** (Activa), escuchando las palabras config
 ## Artículos relacionados
 
 <Lista>
+  <Artigo titulo="Define cómo la campaña reconoce quién entra" href="/es/campanhas/palavra-chave">Palabras, frase parecida, intención, campaña predeterminada y entrada desde el Inbox.</Artigo>
   <Artigo titulo="Crea una campaña" href="/es/campanhas/crie-uma-campanha">El asistente en tres pasos.</Artigo>
   <Artigo titulo="Recibe eventos en tu sistema" href="/es/integracoes/webhooks">Otros webhooks de Tartini.</Artigo>
   <Artigo titulo="Sigue los resultados" href="/es/campanhas/resultados">Dónde ver las conversaciones de cada origen.</Artigo>
