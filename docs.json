@@ -214,6 +214,7 @@
                   "canais/templates",
                   "canais/chat-widget",
                   "canais/telegram",
+                  "canais/instagram",
                   "canais/problemas-de-conexao"
                 ]
               },
@@ -515,6 +516,7 @@
                   "en/canais/templates",
                   "en/canais/chat-widget",
                   "en/canais/telegram",
+                  "en/canais/instagram",
                   "en/canais/problemas-de-conexao"
                 ]
               },
@@ -816,6 +818,7 @@
                   "es/canais/templates",
                   "es/canais/chat-widget",
                   "es/canais/telegram",
+                  "es/canais/instagram",
                   "es/canais/problemas-de-conexao"
                 ]
               },
