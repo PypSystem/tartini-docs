@@ -44,7 +44,7 @@ Dónde está: dentro del widget de la Unidad, sección **Chave pública & Integr
 </Steps>
 
 <Note>
-  Si tu sitio ya tiene inicio de sesión de usuario, existe una configuración avanzada para identificar quién está conversando. Quien administra tu sistema encuentra los detalles junto al snippet, en el bloque **Sistema com login** (Sistema con inicio de sesión).
+  Si tu sitio tiene inicio de sesión, activa **Sistema com login** (Sistema con inicio de sesión) en **Configurações do chat** (Configuración del chat) y guarda. Después, genera el secret en **Identidade verificada (HMAC)** (Identidad verificada): quien administra tu sistema sigue las instrucciones junto al snippet.
 </Note>
 
 ---
@@ -88,6 +88,9 @@ Dónde está: dentro del widget de la Unidad, sección **Chave pública & Integr
   </Accordion>
   <Accordion title="Los visitantes aparecen como 'Visitante' en vez del nombre del cliente. ¿Por qué?">
   Esto pasa cuando el sitio no envía la identificación del usuario que inició sesión. Genera un secret de identidad en la sección **Chave pública & Integração** y configúralo con quien administra tu sistema.
+  </Accordion>
+  <Accordion title="¿Qué cambia en la atención cuando el cliente inició sesión?">
+  Tino ya sabe quién es y no le pide un documento para identificarlo. En el Inbox, la conversación muestra el sello **cliente logado** (cliente con sesión iniciada) mientras está en el sitio.
   </Accordion>
 </AccordionGroup>
 

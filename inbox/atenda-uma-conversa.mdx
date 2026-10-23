@@ -28,6 +28,31 @@ Onde fica: **Inbox**.
 
 ---
 
+## Veja quem é o cliente
+
+Por padrão, o cabeçalho mostra o nome do contato, o canal e o protocolo da conversa.
+
+Onde fica: no lado direito do cabeçalho da conversa, antes do relógio de SLA e dos ícones de ação.
+
+<Steps>
+  <Step title="Abra a conversa">Clique na conversa na lista do Inbox.</Step>
+  <Step title="Procure o selo">Com o cliente já reconhecido, o cabeçalho mostra **cliente logado** ou **identificado**.</Step>
+  <Step title="Veja os detalhes">Passe o mouse sobre o selo para ver o nome do cliente e de onde veio o reconhecimento.</Step>
+</Steps>
+
+| Selo | O que quer dizer |
+|---|---|
+| **cliente logado** | O cliente está no site da empresa, logado na conta dele. O Tino já sabe quem ele é e não pede documento para identificá-lo. |
+| **identificado** | O Tino identificou o cliente nesta conversa por um conector. Até a conversa encerrar, ele não pede a identificação de novo. |
+
+{/* CAPTURA: images/inbox/inbox-cabecalho-cliente-identificado.png | alt: cabeçalho de uma conversa aberta com o selo identificado à direita e a dica do selo visível | olhar: o selo antes do relógio de SLA e o texto da dica */}
+
+<Note>
+  Os selos somem quando a conversa encerra e não aparecem no celular. O selo **identificado** depende de um conector, recurso dos planos Scale e Enterprise, e não aparece com o cliente logado.
+</Note>
+
+---
+
 ## Responda ao cliente
 
 Por padrão o campo de mensagem fica vazio, com o texto "Digite sua mensagem...".
@@ -160,6 +185,9 @@ No WhatsApp Business API (WABA), para falar com quem ainda não escreveu para vo
   <Accordion title="Minha mensagem ficou parada com o ícone de relógio, é erro?">
   Não necessariamente. Pode estar enviando, ou o canal reconectando. Se virar vermelho, toque para reenviar.
   </Accordion>
+  <Accordion title="O selo identificado é o mesmo da aba Identificados, em Visitantes online?">
+  Não: em **Visitantes online**, a aba **Identificados** reúne os visitantes com nome reconhecido pelo Chat Widget. O selo **identificado** quer dizer que o Tino confirmou quem é o cliente por um conector.
+  </Accordion>
 </AccordionGroup>
 
 ---
@@ -171,4 +199,6 @@ No WhatsApp Business API (WABA), para falar com quem ainda não escreveu para vo
   <Artigo titulo="Use o Sotto" href="/agentes/sotto/use-o-sotto">Peça sugestões de resposta durante o atendimento.</Artigo>
   <Artigo titulo="Transfira, anote e marque conversas" href="/inbox/transfira-notas-e-tags">Transfira a conversa e registre o que importa.</Artigo>
   <Artigo titulo="Encerre uma conversa e acompanhe a pesquisa de satisfação" href="/inbox/encerre-uma-conversa">Finalize com o motivo certo.</Artigo>
+  <Artigo titulo="Conecte ferramentas externas à IA" href="/integracoes/conectores">Como o Tino identifica o cliente por um conector.</Artigo>
+  <Artigo titulo="Acompanhe os visitantes do site" href="/inbox/visitantes">As abas Todos, Identificados e Anônimos.</Artigo>
 </Lista>

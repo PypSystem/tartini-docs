@@ -24,6 +24,7 @@ Each process brings together:
 - **Passo a passo** (Step by step): the steps Tino follows, with the text it sends at each one.
 - **Saídas** (Outputs): where the conversation goes when the process ends, for each possible outcome (Concluído (Completed), Parcial (Partial), Falhou (Failed), or Faltou dado (Missing data)).
 - **Cobertura do Tino** (Tino's Coverage): how much of that process Tino resolves on its own.
+- **Ferramentas** (Tools): the connectors Tino can use while it runs the process, with an optional usage instruction.
 
 A mapped process only takes effect in service once it's active. Processes created through automatic discovery start out inactive, unless you choose to publish them already active.
 
@@ -33,12 +34,11 @@ A mapped process only takes effect in service once it's active. Processes create
 
 Where to find it: **Cérebro > Processos** (Brain > Processes).
 
-1. **Mapeamento** (Mapping): lists every process already mapped and is the entry point for creating a new one, by talking with the mapping agent.
+1. **Meus processos** (My processes): lists every process already mapped and is the entry point for creating a new one, by talking with the mapping agent.
 2. **Descobertas** (Discoveries): queue of process candidates that Tino identified on its own, from content already indexed in Cérebro or from documents uploaded specifically for that analysis.
-3. **Grupos** (Groups): sets of processes with their own output path, used by campaigns.
-4. **Catálogo** (Catalog): an audit of the process records, independent of conversations, showing structural problems and how to fix them.
+3. **Catálogo** (Catalog): an audit of the process records, independent of conversations, showing structural problems and how to fix them.
 
-{/* CAPTURA: images/cerebro/processos-submenu.png | alt: Sidebar do Cérebro com a seção Processos expandida mostrando Mapeamento, Descobertas, Grupos e Catálogo | olhar: o badge de contagem em Descobertas */}
+{/* CAPTURA: images/cerebro/processos-submenu.png | alt: Sidebar do Cérebro com a seção Processos expandida mostrando Meus processos, Descobertas e Catálogo | olhar: o badge de contagem em Descobertas */}
 
 ---
 
@@ -47,6 +47,22 @@ Where to find it: **Cérebro > Processos** (Brain > Processes).
 During service, Tino follows the step-by-step of the process that matches the customer's request. At each step, it uses the text set in the mapping, or writes the message on its own when the script doesn't define fixed text. At the end, it follows the output set for that outcome, or returns to triage if no output was defined.
 
 The one who puts the process in writing with you is **Quattro**, Tartini's fourth agent. You explain, in your own words, how service happens today; Quattro asks what's missing and builds the process, with steps, transitions, and outputs. A step that uses one of your connectors, for example to check a system, is included too: you choose which tools are available for that process. Nothing it builds takes effect without your approval. Once published, the process becomes the playbook Tino follows in real conversations, and the yardstick Scout uses to measure each one.
+
+---
+
+## The process's tools
+
+Where to find it: **Cérebro > Processos > Meus processos** (Brain > Processes > My processes), in the process detail, **Ferramentas** section.
+
+That's where the process's connectors are, with the chosen tools and the **Instrução de uso (opcional)** (Usage instruction (optional)). The tools and the instruction apply only while the process is in progress.
+
+With a base connector, the section notes that its tools already apply to any conversation, including this process. Link the base connector to a process only to give it a usage instruction for that process.
+
+{/* CAPTURA: images/cerebro/processo-ferramentas-conector-base.png | alt: seção Ferramentas do detalhe de um processo com o aviso do conector base acima dos conectores vinculados | olhar: o aviso com o nome do conector base */}
+
+<Note>
+  Who links tools to a process: Administrator and Company Manager. Creating and setting up the connectors, under **Configurações > Integrações > Conectores** (Settings > Integrations > Connectors), is for the Administrator only.
+</Note>
 
 ---
 
@@ -60,7 +76,7 @@ Once a process is live, Scout audits real conversations against what was mapped 
 
 <Lista>
   <Artigo titulo="Map processes from conversations" href="/en/agentes/quattro/mapeie-processos">Build a process by talking with Quattro and review the automatic discoveries.</Artigo>
-  <Artigo titulo="Organize processes into groups" href="/en/cerebro/grupos-de-processos">Bring related processes together for use in campaigns.</Artigo>
+  <Artigo titulo="Connect external tools to the AI" href="/en/integracoes/conectores">Link a connector's tools to the process and choose the base connector.</Artigo>
   <Artigo titulo="Track the process Catalog" href="/en/cerebro/consistencia-e-insights">See what's broken in the process records.</Artigo>
   <Artigo titulo="See adherence to the processes" href="/en/agentes/scout/processos-e-aderencia">Track, in Scout, what Tino resolved by following each process.</Artigo>
 </Lista>
