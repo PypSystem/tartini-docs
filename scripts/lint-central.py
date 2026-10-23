@@ -40,6 +40,7 @@ for f in sorted(files):
         if rel.endswith("marca/voz.mdx") and name not in ("travessão","comentário HTML"): continue  # a página lista as palavras banidas de propósito
         if rel.endswith("canais/telegram.mdx") and name=="bot": continue  # "bot" é o nome que o Telegram e a tela dão ao canal; nunca o Tino
         for m in re.finditer(pat,nocode,re.I|re.M):
+            if (rel.endswith("canais/instagram.mdx") or rel.endswith("agentes/tino/ia-por-canal.mdx")) and m.group(0).lower() in ("automatizado","automatizada"): continue  # rótulo da tela "Aviso de atendimento automatizado" (e a tradução em es), exigência da Meta
             ln=body[:body.find(m.group(0))].count("\n")+1 if m.group(0) in body else "?"
             issues.append(f"{name}: '{m.group(0)}'")
     # chaves soltas fora de JSX/comentários: qualquer { não precedido de < ou = e não iniciando {/*
