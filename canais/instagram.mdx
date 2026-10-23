@@ -1,0 +1,301 @@
+---
+title: "Conecte o Instagram"
+sidebarTitle: "Instagram"
+description: "Atenda o Direct do Instagram no mesmo Inbox dos outros canais, com a mesma equipe e o mesmo Tino."
+---
+
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
+Com o Instagram conectado, as mensagens do Direct, as respostas a stories e as menções chegam no mesmo Inbox dos outros canais. A equipe responde de lá, e o Tino atende se você ligar a IA no canal.
+
+<Note>Quem conecta: Administrador, Gestor da Empresa, Gestor de Área e Gestor de Unidade. Disponível em todos os planos; o Tino e as Campanhas no Instagram são do plano Scale.</Note>
+
+---
+
+## Prepare a conta do Instagram
+
+O Tartini se conecta pela API oficial do Instagram. Antes de ir para o Tartini, confira duas coisas na conta:
+
+- **A conta é profissional.** Comercial ou Criador de conteúdo. No app do Instagram, você muda em **Configurações > Tipo de conta**. Não é preciso ter Página do Facebook.
+- **O acesso às mensagens está liberado.** A opção **Permitir acesso às mensagens** precisa estar ligada, senão as mensagens do Direct não chegam ao Tartini.
+
+No app do Instagram, abra **Configurações e atividade** > **Mensagens e respostas a stories** > **Pedidos de contato** e ligue **Permitir acesso às mensagens**. A opção só aparece em conta profissional.
+
+---
+
+## Conecte a conta ao Tartini
+
+Por padrão, nenhuma Unidade tem um canal de Instagram. Cada Unidade pode ter um.
+
+Onde fica: **Configurações > Canais > Instagram**.
+
+<Steps>
+  <Step title="Comece a conexão">No quadro **Atenda o Direct do Instagram no mesmo Inbox**, no topo da tela, clique em **Conectar Instagram**.</Step>
+  <Step title="Preencha os dados do canal">Escolha a **Entidade** e dê um **Nome do canal** que ajude sua equipe a identificá-lo depois.</Step>
+  <Step title="Entre no Instagram">Clique em **Conectar com Instagram**. A tela do login do Instagram abre na mesma aba: entre com a conta profissional da Unidade e autorize o Tartini.</Step>
+  <Step title="Confira a conta">De volta ao Tartini, a tela **Instagram conectado** mostra **Conectado como** e o @ da conta. Clique em **Ir para o canal**.</Step>
+</Steps>
+
+<Frame caption="A linha Conectado como e o botão Ir para o canal">
+  <img src="/images/canais/instagram-conectado.png" alt="Instagram conectado com o @ da conta" />
+</Frame>
+
+<Note>
+  Se o login falhar ou for cancelado, a tela **Não foi possível conectar** explica o motivo. Clique em **Tentar de novo** para voltar à tela de canais.
+</Note>
+
+---
+
+## Saiba o que chega no Inbox
+
+As conversas do Instagram chegam no Inbox como as dos outros canais. Entram:
+
+- Texto, foto, vídeo, áudio e arquivo.
+- Reações e cliques em botão.
+- Respostas e menções em story, posts e reels compartilhados. Entram como a mídia, com um rótulo como "Respondeu ao seu story".
+- Mensagens que a pessoa apagou, que aparecem como apagadas.
+
+Quando o Instagram não deixa mostrar um conteúdo, a conversa mostra no lugar dele o aviso **[Conteúdo que o Instagram não permite exibir aqui]**.
+
+### Como o contato aparece
+
+O contato chega com nome, foto e o @, que leva ao perfil dele no Instagram. Quando a pessoa segue a sua conta, a ficha do contato mostra **Segue sua empresa**.
+
+<Note>
+  A Meta só libera o nome e a foto de quem já escreveu para a sua conta. O telefone não aparece, porque o Instagram não o informa.
+</Note>
+
+### O pedido de telefone ao encerrar
+
+Quando o atendimento é encerrado, se o contato não tem telefone e a última mensagem dele foi há menos de 24 horas, o Tartini pergunta se a pessoa quer compartilhar o número e explica para quê. O Instagram mostra um botão com o número da própria pessoa. Se ela tocar, o telefone aparece nos dados do contato.
+
+O pedido sai uma única vez por contato. Fora do prazo de 24 horas, ele espera o próximo encerramento.
+
+### Status das mensagens
+
+O "visto" funciona: quando a pessoa lê, a mensagem aparece como lida. O Instagram não confirma a entrega, então a mensagem vai de enviada direto para lida.
+
+---
+
+## Responda pelo Instagram
+
+A equipe responde pelo Inbox, como nos outros canais. O Instagram tem algumas diferenças:
+
+- **Texto sem formatação.** O Instagram não tem negrito nem itálico, e o nome do atendente na assinatura sai sem negrito.
+- **Textos longos em partes.** Acima de 1.000 caracteres, o texto vai dividido em mais de uma mensagem.
+- **Anexos.** Foto, vídeo, áudio e PDF vão como anexo; outros arquivos vão como link. A legenda chega numa mensagem logo depois do anexo.
+- **Reações.** Só o ❤️ é garantido.
+- **Sem apagar, editar ou template.** Mensagem enviada não pode ser apagada nem editada pelo Tartini, e o canal não tem template.
+
+<Note>
+  Respostas dadas pelo app do Instagram ou pelo Meta Business Suite entram no histórico como respostas da equipe. Elas não acionam o Tino.
+</Note>
+
+---
+
+## Respeite o prazo para responder
+
+No Instagram, quem começa a conversa é sempre a pessoa. A sua conta não consegue chamar alguém que nunca escreveu para ela, e há prazo para responder, contado a partir da última mensagem do contato:
+
+| Tempo desde a última mensagem do contato | Quem pode responder |
+|---|---|
+| Até 24 horas | O Tino e a equipe |
+| De 24 horas a 7 dias | Só a equipe. O Tino, o follow-up e a pesquisa de satisfação não enviam |
+| Mais de 7 dias, ou o contato nunca escreveu | Ninguém, até o contato escrever de novo |
+
+O Inbox mostra o prazo acima do campo de mensagem:
+
+- Até 24 horas: **Responda em até** e o tempo que falta.
+- De 24 horas a 7 dias: **Passaram 24h: só a equipe pode responder**, com o horário limite.
+- Depois de 7 dias: o campo fica bloqueado com **O prazo do Instagram acabou. Aguarde o contato escrever de novo.**
+
+<Frame caption="O aviso com o tempo restante para responder">
+  <img src="/images/canais/instagram-prazo.png" alt="conversa do Instagram com o aviso de prazo acima do campo de mensagem" />
+</Frame>
+
+{/* CONFIRMAR: a resposta da equipe entre 24 horas e 7 dias depende de uma aprovação da Meta ainda em andamento; confirmar se já vale antes de publicar */}
+
+<Note>A regra é da Meta e vale para qualquer ferramenta conectada ao Instagram.</Note>
+
+---
+
+## Ligue o Tino no Instagram
+
+Com o canal conectado, a tela do Instagram mostra o atalho para a IA por canal. Ligue o Tino e configure horários, follow-up e encerramento, como nos outros canais.
+
+<Note>Disponível a partir do plano Scale. Veja os detalhes em [Ligue o Tino em um canal](/agentes/tino/ia-por-canal).</Note>
+
+### O aviso de que o atendimento é automático
+
+No Instagram, a Meta exige que o atendimento automático avise que é automático. Por isso o bloco **Aviso de atendimento automatizado** fica sempre ligado neste canal: você edita o texto, mas não desliga.
+
+Onde fica: **Configurações > Atendimento > IA por canal**, no canal do Instagram.
+
+O texto padrão é: "Olá! Sou o assistente virtual da `{empresa}`. Se preferir falar com uma pessoa da equipe, é só pedir." O `{empresa}` vira o nome da sua empresa.
+
+O Tino envia o aviso em três momentos:
+
+- Na primeira resposta da conversa.
+- Quando a conversa volta da equipe para ele.
+- Depois de 24 horas sem ele falar na conversa.
+
+<Tip>Nos outros canais, o mesmo aviso existe e é opcional.</Tip>
+
+### A pesquisa de satisfação
+
+No Instagram, a pesquisa de satisfação chega com botões de 1 a 5. Ela só sai dentro das primeiras 24 horas do prazo.
+
+---
+
+## Configure as perguntas prontas e o menu
+
+As perguntas prontas e o menu fixo dão à pessoa um jeito rápido de começar ou continuar a conversa, sem digitar.
+
+Onde fica: **Configurações > Canais > Instagram**, no canal, seção **Perguntas prontas e menu**.
+
+- **Perguntas prontas:** até 4, com até 80 caracteres cada. Aparecem para quem abre a conversa com a sua conta pela primeira vez, só no app do Instagram no celular.
+- **Menu fixo:** até 5 itens, cada um com um título de até 30 caracteres e, se quiser, um link que comece com `https://`.
+
+Tocar numa pergunta pronta, ou num item do menu sem link, é o mesmo que enviar aquele texto: a mensagem chega no Inbox e o Tino responde. Um item com link abre o link.
+
+Para tirar as perguntas ou o menu da conta, deixe a lista vazia e salve.
+
+<Frame caption="Os campos de pergunta e os itens do menu com link">
+  <img src="/images/canais/instagram-perguntas-menu.png" alt="seção Perguntas prontas e menu com perguntas e itens de menu" />
+</Frame>
+
+---
+
+## Descubra de onde a pessoa veio
+
+O Tartini registra a origem quando a pessoa chega por um anúncio da Meta que leva ao Direct, ou quando responde a uma mensagem de um [gatilho de comentário](#responda-comentários-com-uma-mensagem-no-direct):
+
+- A conversa no Inbox mostra a etiqueta **Veio de anúncio**, ou que a pessoa veio de um comentário, com o nome da regra.
+- A ficha do contato tem a seção **Origem**, com o histórico.
+- O Tino recebe essa informação para entender o que trouxe a pessoa.
+
+<Note>A Meta informa a origem do anúncio uma única vez, na chegada da pessoa por aquele anúncio.</Note>
+
+{/* TODO: origem por link ig.me?ref= — a Meta hoje não entrega o ref; documentar se passar a entregar */}
+
+---
+
+## Responda comentários com uma mensagem no Direct
+
+Com os gatilhos de comentário, quem comenta uma palavra-chave num post ou reel da sua conta recebe uma mensagem privada no Direct. Se a pessoa responder, a conversa entra no Inbox e o Tino atende.
+
+{/* CONFIRMAR: disponibilidade após App Review de comentários */}
+
+<Note>O recurso depende da aprovação da Meta para a permissão de comentários e só fica disponível depois dela. Canais conectados antes de o recurso ser liberado precisam ser reconectados uma vez para dar essa permissão; a tela mostra um aviso quando for preciso.</Note>
+
+Onde fica: **Configurações > Canais > Instagram**, no canal, seção **Gatilhos de comentário**.
+
+<Steps>
+  <Step title="Dê um nome à regra">O nome ajuda a equipe a reconhecer a regra e aparece como origem da conversa no Inbox.</Step>
+  <Step title="Escolha o post">Escolha um post ou reel entre os mais recentes da conta, ou **Qualquer post**.</Step>
+  <Step title="Defina as palavras-chave">De 1 a 10 palavras ou frases. A regra vale para palavras inteiras, sem diferença entre maiúsculas e minúsculas nem entre letras com e sem acento.</Step>
+  <Step title="Escreva a mensagem privada">É o texto que chega no Direct de quem comentou.</Step>
+  <Step title="Se quiser, responda o comentário em público">Uma resposta curta no próprio comentário, como "Te chamei no direct". É opcional.</Step>
+</Steps>
+
+<Frame caption="O post escolhido, as palavras-chave e o total de mensagens privadas enviadas">
+  <img src="/images/canais/instagram-gatilhos-comentario.png" alt="seção Gatilhos de comentário com uma regra ligada" />
+</Frame>
+
+Cada regra pode ser ligada ou desligada, e a tela mostra quantas mensagens privadas ela já enviou.
+
+Quando um comentário combina com mais de uma regra, vale a regra do post específico sobre a de **Qualquer post**. Entre regras do mesmo tipo, vale a mais antiga.
+
+Além disso, o Tartini manda no máximo uma mensagem privada por pessoa em cada post. Se a mesma pessoa comentar a palavra-chave de novo no mesmo post, nada é enviado. Se a mensagem anterior falhou ou o prazo dela acabou, um comentário novo vale. Num post diferente, numa regra de **Qualquer post**, a pessoa recebe a mensagem de novo.
+
+### As regras da Meta
+
+- Uma mensagem privada por comentário.
+- A mensagem só sai até 7 dias depois do comentário.
+- A conversa só continua se a pessoa responder.
+- Até 750 mensagens privadas por hora por conta. Acima disso, as mensagens esperam a vez.
+
+### Quando a pessoa responde
+
+A resposta vira uma conversa normal no Inbox, e o Tino atende se a IA estiver ligada no canal. A conversa mostra como origem que a pessoa veio de um comentário, com o nome da regra. A mesma origem aparece na seção **Origem** da [ficha do contato](/inbox/ficha-do-contato), e o Tino sabe que a pessoa chegou por um comentário.
+
+<Note>Os comentários em si não entram no Inbox nem em outra tela do Tartini. Comentários em lives não acionam as regras.</Note>
+
+---
+
+## Campanhas no Instagram
+
+Uma campanha pelo Instagram só alcança quem já conversou com a sua conta no Instagram e escreveu nas últimas 24 horas. A campanha não usa template nem o prazo de 7 dias da equipe.
+
+<Note>Campanhas são do plano Scale. Veja as regras e a aba **Audiência** em [Crie uma campanha](/campanhas/crie-uma-campanha).</Note>
+
+---
+
+## Resolva problemas do canal
+
+Na lista de contas conectadas, o selo **sem receber** aparece ao lado do canal quando as mensagens não estão chegando ao Tartini.
+
+### O canal ficou desconectado
+
+**Causa:** a conexão com o Instagram vence em 60 dias, mas o Tartini a renova sozinho. O canal só cai se alguém remover o Tartini das ferramentas conectadas da conta, ou se a conexão falhar.
+
+Nesse momento, a Unidade recebe um e-mail avisando.
+
+**Correção:** clique no ⋮ ao lado do canal e escolha **Reconectar**. Entre com a mesma conta: o histórico e os contatos são dela, e outra conta é recusada.
+
+### Outro app é o principal da conta
+
+**Causa:** a conta tem outro app como principal para as mensagens, como o Inbox do próprio Instagram, o Meta Business Suite ou outra ferramenta. Assim o Tartini não recebe as mensagens.
+
+A tela do Instagram mostra um aviso amarelo: **outro app é o principal desta conta do Instagram, e o Tartini não está recebendo as mensagens.**
+
+**Correção:** defina o Tartini como app principal da conta. O aviso mostra o caminho:
+
+- No app do Instagram: **Configurações > Mensagens e respostas a stories > Controles de mensagens > Ferramentas conectadas**.
+- No Meta Business Suite: **Configurações > Caixa de entrada > Apps conectados**.
+
+{/* CONFIRMAR: caminho exato para tornar o Tartini o app principal, no app do Instagram e no Meta Business Suite */}
+
+### A Meta não está entregando as mensagens
+
+**Causa:** a Meta parou de entregar as mensagens da conta ao Tartini. O Tartini confere isso todo dia e se reinscreve sozinho; o aviso aparece quando não consegue.
+
+A tela do Instagram mostra um aviso vermelho: **a Meta não está entregando as mensagens desta conta ao Tartini.**
+
+**Correção:** clique em **Reconectar** no próprio aviso e entre com a mesma conta. O histórico continua.
+
+---
+
+## Perguntas frequentes
+
+<AccordionGroup>
+  <Accordion title="Consigo mandar a primeira mensagem para alguém pelo Instagram?">
+  Não. A pessoa sempre começa, com uma mensagem no Direct, uma resposta a story ou uma menção. Depois disso, a equipe e o Tino respondem dentro do prazo.
+  </Accordion>
+  <Accordion title="O Instagram mostra o telefone do contato?">
+  Só se a própria pessoa compartilhar. O pedido com o botão chega a ela uma vez, quando o atendimento é encerrado dentro das 24 horas.
+  </Accordion>
+  <Accordion title="Preciso de uma Página do Facebook?">
+  Não. Basta a conta do Instagram ser profissional, Comercial ou Criador de conteúdo.
+  </Accordion>
+  <Accordion title="Posso conectar outra conta no lugar da atual?">
+  Não pela reconexão: ela só aceita a mesma conta, porque o histórico e os contatos são dela. Para outra conta, use outra Unidade.
+  </Accordion>
+  <Accordion title="Por que a mensagem não aparece como entregue?">
+  O Instagram não confirma a entrega. A mensagem fica como enviada e passa a lida quando a pessoa vê.
+  </Accordion>
+  <Accordion title="Por que o Tino parou de responder numa conversa?">
+  Passaram 24 horas desde a última mensagem do contato. Até 7 dias, só a equipe responde; depois, só quando o contato escrever de novo.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artigos relacionados
+
+<Lista>
+  <Artigo titulo="Canais explicados" href="/canais/canais-explicados">Os canais disponíveis no Tartini e quando usar cada um.</Artigo>
+  <Artigo titulo="Ligue o Tino em um canal" href="/agentes/tino/ia-por-canal">Horários, follow-up e o aviso de atendimento automático.</Artigo>
+  <Artigo titulo="Atenda uma conversa" href="/inbox/atenda-uma-conversa">Responda, anexe arquivos e assuma do Tino.</Artigo>
+  <Artigo titulo="Resolva problemas de conexão" href="/canais/problemas-de-conexao">Sintomas comuns e como corrigir.</Artigo>
+</Lista>

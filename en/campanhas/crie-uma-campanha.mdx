@@ -67,7 +67,7 @@ This step sets the channel, the hours, and what to do when the contact doesn't r
   <Step title="Choose the opening template (WABA channel)">On an official channel, choose an **Aprovado** (Approved) template or create a new one in the editor. This is required: without a template, the wizard won't continue.</Step>
   <Step title="Set when to trigger">For a list, choose the start date and, if you want, the end date. For webhook, choose between reaching out **24 horas por dia** (24 hours a day) or only within a time window. Keyword doesn't ask for anything here: Tino responds as soon as the customer writes in.</Step>
   <Step title="Adjust the time window">When applicable, mark the days of the week and the start and end times. By default, the window comes pre-filled from the Unit's registered business hours.</Step>
-  <Step title="Set up the follow-ups (optional)">Add up to 4 attempts for when the contact doesn't respond: 4 hours, 1, 2, 3, or 7 days after the opening. On a WABA channel, attempts 24 hours or later require an approved template for each one.</Step>
+  <Step title="Set up the follow-ups (optional)">Add up to 4 attempts for when the contact doesn't respond, with any time you want. Each one counts from the previous message, and the **Linha do tempo** (Timeline) shows when it goes out. If you want, also turn on the follow-up for people who stop responding mid-conversation.</Step>
   <Step title="Generate the preview">Give the agent a name and click **Gerar exemplo** (Generate example) to see how Tino would open the conversation with the first contact on the list.</Step>
   <Step title="Create the campaign">Click **Criar campanha** (Create campaign).</Step>
 </Steps>
@@ -75,8 +75,31 @@ This step sets the channel, the hours, and what to do when the contact doesn't r
 {/* CAPTURA: images/campanhas/criar-passo3-lancamento.png | alt: Passo 3 do assistente com canal, janela de horários e a prévia da abordagem no celular | olhar: o botão Gerar exemplo e a mensagem de abertura */}
 
 <Note>
-  As soon as the contact replies, Tino cancels the following follow-up attempts and takes over the conversation.
+  As soon as the contact replies, the attempts for no reply to the opening stop. If the mid-conversation follow-up is on, it handles people who stop responding later.
 </Note>
+
+---
+
+## Campaigns on Instagram
+
+An Instagram campaign only reaches people who have already talked to your account on Instagram and wrote in the last 24 hours. As with Telegram, the account can't reach out to someone who never wrote.
+
+- **No template.** Instagram has no templates: the opening is Tino's own message.
+- **Only within 24 hours.** The campaign never uses the window reserved for the team. Between 24 hours and 7 days after the contact's last message, it doesn't send either.
+- **Contacts by phone number.** When you add contacts by phone number or by list, only people who have already talked to the account on Instagram and shared their number are included.
+- **No test on your WhatsApp.** Instagram campaigns don't have the test send to your WhatsApp. To see the approach, use the simulation.
+
+In the campaign's **Audiência** (Audience) tab, you see how many Instagram contacts will be reached and how many are left out, with the reason:
+
+| Reason | What it means |
+|---|---|
+| Never talked to the account | The person never wrote to your Instagram account. |
+| 24-hour window closed | Their last message was more than 24 hours ago. The count is redone at dispatch: if the person writes again, they come back into the audience. |
+| Blocked the account | The person blocked your Instagram account. |
+
+{/* CONFIRMAR: rótulos exatos dos motivos na aba Audiência */}
+
+See the channel rules in [Connect Instagram](/en/canais/instagram).
 
 ---
 
@@ -108,7 +131,7 @@ Either way, you're taken back to the Unit's campaign list.
   Not through the wizard. The contact list of an already-created campaign is tracked in the campaign dashboard, execution by execution.
   </Accordion>
   <Accordion title="Do I need to choose a template for every follow-up?">
-  Only on a WABA channel, and only for attempts 24 hours or later. Shorter attempts and unofficial channels don't require a template.
+  Only on a WABA channel, for attempts that go out more than 24 hours after the person's last message. The screen flags each one. In list and webhook campaigns, the person hasn't written yet, so every attempt for no reply to the opening needs a template.
   </Accordion>
 </AccordionGroup>
 

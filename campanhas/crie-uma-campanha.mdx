@@ -65,7 +65,7 @@ Este passo define o canal, os horários e o que fazer quando o contato não resp
   <Step title="Escolha o template de abertura (canal WABA)">Em canal oficial, escolha um template **Aprovado** ou crie um novo pelo editor. Isso é obrigatório: sem template, o assistente não avança.</Step>
   <Step title="Defina quando disparar">Em lista, escolha a data de início e, se quiser, a data de fim. Em webhook, escolha entre abordar **24 horas por dia** ou só dentro de uma janela de horários. Palavra-chave não pede nada aqui: o Tino responde assim que o cliente escreve.</Step>
   <Step title="Ajuste a janela de horários">Quando aplicável, marque os dias da semana e o horário de início e fim. Por padrão, a janela vem pré-carregada do funcionamento cadastrado da Unidade.</Step>
-  <Step title="Configure os follow-ups (opcional)">Adicione até 4 tentativas para quando o contato não responder: 4 horas, 1, 2, 3 ou 7 dias depois da abertura. Em canal WABA, tentativas de 24 horas ou mais exigem um template aprovado para cada uma.</Step>
+  <Step title="Configure os follow-ups (opcional)">Adicione até 4 tentativas para quando o contato não responder, com o tempo que quiser. Cada uma conta a partir da mensagem anterior, e a **Linha do tempo** mostra quando ela sai. Se quiser, ligue também a retomada para quem parar de responder no meio da conversa.</Step>
   <Step title="Gere a prévia">Dê um nome ao agente e clique em **Gerar exemplo** para ver como o Tino abriria a conversa com o primeiro contato da lista.</Step>
   <Step title="Crie a campanha">Clique em **Criar campanha**.</Step>
 </Steps>
@@ -73,8 +73,31 @@ Este passo define o canal, os horários e o que fazer quando o contato não resp
 {/* CAPTURA: images/campanhas/criar-passo3-lancamento.png | alt: Passo 3 do assistente com canal, janela de horários e a prévia da abordagem no celular | olhar: o botão Gerar exemplo e a mensagem de abertura */}
 
 <Note>
-  Assim que o contato responde, o Tino cancela as tentativas de follow-up seguintes e assume a conversa.
+  Assim que o contato responde, as tentativas sem resposta à abertura param. Se a retomada do meio da conversa estiver ligada, ela cuida de quem parar de responder depois.
 </Note>
+
+---
+
+## Campanhas pelo Instagram
+
+Uma campanha pelo Instagram só alcança quem já conversou com a sua conta no Instagram e escreveu nas últimas 24 horas. Como no Telegram, a conta não consegue chamar quem nunca escreveu.
+
+- **Sem template.** O Instagram não tem template: a abertura é a própria mensagem do Tino.
+- **Só dentro das 24 horas.** A campanha nunca usa o prazo reservado à equipe. Entre 24 horas e 7 dias desde a última mensagem do contato, ela também não envia.
+- **Contatos por telefone.** Ao adicionar contatos por telefone ou por lista, só entram as pessoas que já conversaram com a conta no Instagram e compartilharam o número.
+- **Sem teste no seu WhatsApp.** Campanha do Instagram não tem o envio de teste para o seu WhatsApp. Para ver a abordagem, use a simulação.
+
+Na aba **Audiência** da campanha, você vê quantos contatos do Instagram serão alcançados e quantos ficam de fora, com o motivo:
+
+| Motivo | O que significa |
+|---|---|
+| Nunca conversou com a conta | A pessoa nunca escreveu para a sua conta no Instagram. |
+| Prazo de 24 horas encerrado | A última mensagem dela passou de 24 horas. A conta é refeita no disparo: se a pessoa escrever de novo, ela volta para a audiência. |
+| Bloqueou a conta | A pessoa bloqueou a sua conta no Instagram. |
+
+{/* CONFIRMAR: rótulos exatos dos motivos na aba Audiência */}
+
+Veja as regras do canal em [Conecte o Instagram](/canais/instagram).
 
 ---
 
@@ -106,7 +129,7 @@ Em qualquer caso, você volta para a lista de campanhas da Unidade.
   Não pelo assistente. A lista de contatos de uma campanha já criada é acompanhada no painel da campanha, execução por execução.
   </Accordion>
   <Accordion title="Preciso escolher um template para cada follow-up?">
-  Só em canal WABA, e só para tentativas de 24 horas ou mais. Tentativas mais curtas e canais não-oficiais não exigem template.
+  Só em canal WABA, nas tentativas que saem mais de 24 horas depois da última mensagem da pessoa. A tela marca cada uma. Em lista e webhook, a pessoa ainda não escreveu, então toda tentativa sem resposta à abertura precisa de template.
   </Accordion>
 </AccordionGroup>
 

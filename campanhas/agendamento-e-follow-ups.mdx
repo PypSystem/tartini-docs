@@ -1,12 +1,12 @@
 ---
 title: "Agende o envio e os follow-ups"
 sidebarTitle: "Agendamento e follow-ups"
-description: "Escolha quando o Tino aborda cada contato, quantas vezes ele insiste e quando pausar o envio."
+description: "Escolha quando o Tino aborda cada contato, quando ele insiste com quem não respondeu e quando pausar o envio."
 ---
 
 import { Lista, Artigo } from "/components/lista-artigos.jsx";
 
-A janela de horários define quando o Tino pode agir numa campanha, e as tentativas de follow-up definem quantas vezes ele insiste com um contato que não respondeu.
+A janela de horários define quando o Tino pode agir numa campanha. As tentativas de follow-up definem quando ele insiste com quem não respondeu ou parou de responder.
 
 <Note>
   Campanhas é um recurso dos planos Scale e Enterprise. Quem configura: Administrador (Empresa), Gestor da Empresa, Gestor de Área e Gestor de Unidade.
@@ -29,7 +29,7 @@ Onde fica: passo 3 do assistente, **Campanhas > Campanhas > Nova campanha**, se�
 {/* CAPTURA: images/campanhas/agendamento-janela-horarios.png | alt: Seção de janela de horários com os dias da semana marcados e o horário de início e fim | olhar: os chips de dias da semana e os dois campos de horário */}
 
 <Note>
-  A janela de horários vale para campanhas de lista e para campanhas de webhook configuradas com **Somente dentro da janela de horários**. Palavra-chave não usa janela: o Tino responde no instante em que o cliente escreve.
+  A janela de horários vale para campanhas de lista e para campanhas de webhook configuradas com **Somente dentro da janela de horários**. Palavra-chave não usa janela: o Tino responde no instante em que o cliente escreve. As tentativas de follow-up seguem outra regra, explicada mais abaixo em **Entenda quando uma tentativa não sai**.
 </Note>
 
 ---
@@ -51,24 +51,73 @@ Onde fica: mesmo passo 3, seção **Quando disparar**.
 
 ---
 
-## Configure os follow-ups
+## Configure as tentativas quando o contato não responde
 
-Por padrão, uma campanha nova já vem com duas tentativas: 24 horas e 72 horas depois da primeira mensagem.
+Por padrão, uma campanha nova vem com duas tentativas: 1 dia depois da abertura e 2 dias depois da primeira tentativa.
 
 Onde fica: passo 3 do assistente, seção **Se o contato não responder**.
 
 <Steps>
-  <Step title="Revise as tentativas padrão">Cada tentativa mostra quanto tempo depois da abertura ela dispara: 4 horas, 1, 2, 3 ou 7 dias.</Step>
-  <Step title="Adicione uma tentativa">Clique num dos intervalos disponíveis para acrescentar. O limite é 4 tentativas.</Step>
+  <Step title="Defina o tempo de cada tentativa">Digite um número e escolha a unidade: **min**, **h** ou **dias**. O tempo conta a partir da mensagem anterior: a abertura, para a primeira tentativa, e a tentativa anterior, para as demais.</Step>
+  <Step title="Adicione uma tentativa">Clique num atalho ao lado de **adicionar tentativa**: **1h**, **3h**, **24h** ou **3 dias**. Depois ajuste o tempo, se quiser. O limite é 4 tentativas.</Step>
+  <Step title="Escreva uma orientação (opcional)">No campo de orientação, diga o que a tentativa deve abordar, como "lembrar do desconto". Sem orientação, o Tino decide o que dizer.</Step>
+  <Step title="Confira a linha do tempo">Abaixo das tentativas, a **Linha do tempo** mostra quando cada uma sai. Exemplo: 1ª, 1 hora depois da abertura; 2ª, 1 dia depois da 1ª, ou seja, 25h após a abertura.</Step>
   <Step title="Remova uma tentativa">Use o botão de remover ao lado da tentativa que não quer mais.</Step>
-  <Step title="Escolha o template, se for canal WABA">Tentativas de 24 horas ou mais em canal oficial exigem um template aprovado para cada uma.</Step>
 </Steps>
 
-{/* CAPTURA: images/campanhas/agendamento-follow-ups.png | alt: Lista de tentativas de follow-up com os intervalos de 24h e 72h configurados | olhar: os selos de que tentativa exige template */}
+{/* CAPTURA: images/campanhas/agendamento-follow-ups.png | alt: Seção Se o contato não responder com duas tentativas, o tempo de cada uma e a linha do tempo | olhar: o campo de número com as unidades min, h e dias, e a linha do tempo abaixo */}
 
 <Note>
-  Assim que o contato responde, o Tino cancela todas as tentativas seguintes e assume a conversa a partir dali, sem repetir a abordagem.
+  Assim que o contato responde, as tentativas desta sequência param. Se ele conversar e depois parar de responder, quem cuida é a retomada do meio da conversa.
 </Note>
+
+---
+
+## Retome a conversa quando a pessoa para de responder
+
+Por padrão, a retomada no meio da conversa vem desligada.
+
+Onde fica: passo 3 do assistente, seção **Se o contato não responder**, opção **Retomar quando a pessoa parar de responder no meio da conversa**.
+
+<Steps>
+  <Step title="Ligue a retomada">Ative a opção. A tela sugere duas tentativas: 1 hora e 1 dia.</Step>
+  <Step title="Ajuste as tentativas">Defina o tempo e a orientação de cada uma, como na sequência da abertura. O tempo conta a partir da última mensagem do Tino que ficou sem resposta.</Step>
+  <Step title="Defina o limite por conversa">No campo de **retomadas por conversa**, escolha de 1 a 20. O padrão é 3.</Step>
+</Steps>
+
+O Tino retoma de onde a conversa parou, por exemplo perguntando "conseguiu criar sua conta?". Ele não repete a abertura.
+
+<Note>
+  Quando a pessoa volta a responder, a contagem recomeça do zero para o próximo silêncio. O limite por conversa soma todas as retomadas e não recomeça.
+</Note>
+
+---
+
+## Entenda quando uma tentativa não sai
+
+Por padrão, cada tentativa sai no tempo configurado. O Tino não manda a tentativa quando:
+
+- a conversa foi transferida para a equipe ou foi encerrada;
+- a pessoa já converteu ou o objetivo da campanha foi alcançado;
+- a pessoa disse que não tem interesse ou pediu para parar.
+
+Se a pessoa pediu para esperar, como "te respondo amanhã", o Tino pula aquela tentativa. A próxima, se houver, segue no tempo configurado.
+
+Nenhuma tentativa sai de madrugada. Na campanha de lista e na de webhook com **Somente dentro da janela de horários**, vale a janela da campanha.
+
+Nas demais, vale o funcionamento da Unidade cadastrado em Cérebro. Sem cadastro, vale de segunda a sexta, das 09:00 às 18:00.
+
+<Note>
+  A tentativa que cairia fora do horário sai no início do próximo horário permitido. Enquanto houver tentativa pendente, a conversa não é encerrada por inatividade.
+</Note>
+
+No WhatsApp oficial (WABA), a Meta só aceita modelo aprovado depois de 24 horas da última mensagem da pessoa. A tela marca as tentativas nessa situação e pede o modelo de cada uma.
+
+Na campanha de lista e na de webhook, a pessoa ainda não escreveu. Por isso, toda tentativa sem resposta à abertura precisa de modelo.
+
+<Warning>
+  Tentativa que precisa de modelo e está sem ele é pulada. Escolha o modelo de cada tentativa marcada antes de criar a campanha.
+</Warning>
 
 ---
 
@@ -84,7 +133,7 @@ Onde fica: **Campanhas > Campanhas** (lista) ou no cabeçalho do painel da campa
 </Steps>
 
 <Note>
-  Enquanto pausada, nenhum contato novo entra na campanha até você retomar. {/* CONFIRMAR: se follow-ups já agendados para contatos que entraram antes da pausa continuam disparando ou ficam suspensos */}
+  Enquanto pausada, nenhum contato novo entra e nenhuma tentativa de follow-up sai. Ao retomar, as tentativas pendentes voltam a valer.
 </Note>
 
 ---
@@ -106,16 +155,19 @@ Lá você vê quantos jobs estão **Agendados**, **Ativos**, **Completados** e *
   Sim, pela edição da campanha. A mudança vale para os próximos disparos e para os turnos de conversas em andamento.
   </Accordion>
   <Accordion title="Uma campanha pausada continua contando os follow-ups?">
-  Novos contatos não entram na campanha enquanto ela está pausada. {/* CONFIRMAR: se as tentativas de follow-up já agendadas para contatos anteriores continuam sendo enviadas durante a pausa */}
+  Não. Durante a pausa, nenhuma tentativa sai. Ao retomar, as tentativas pendentes voltam a valer, e a que venceu na pausa sai logo, dentro do horário de envio.
   </Accordion>
   <Accordion title="O que acontece se o contato responder no meio das tentativas?">
-  As tentativas seguintes são canceladas na hora. O Tino segue a conversa a partir da resposta do contato.
+  As tentativas sem resposta à abertura param. Se a retomada do meio da conversa estiver ligada, ela entra em ação quando a pessoa parar de responder de novo.
+  </Accordion>
+  <Accordion title="Se eu mudar os tempos, as conversas em andamento mudam também?">
+  Sim. O tempo novo vale para as tentativas que ainda não saíram, contando a partir da mesma mensagem.
   </Accordion>
   <Accordion title="Posso adicionar mais contatos numa campanha de lista já em andamento?">
   A tela avisa que isso é possível quando a campanha não tem data de fim, mas não há um botão dedicado a isso no assistente hoje.
   </Accordion>
   <Accordion title="Existe um limite de tentativas de follow-up?">
-  Sim, 4 por campanha, nos intervalos de 4 horas, 1, 2, 3 ou 7 dias.
+  Sim, 4 em cada sequência, com qualquer tempo entre 1 minuto e 30 dias. A retomada do meio da conversa também tem um limite total por conversa, de 1 a 20.
   </Accordion>
 </AccordionGroup>
 

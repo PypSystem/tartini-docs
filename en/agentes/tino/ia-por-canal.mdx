@@ -76,6 +76,25 @@ Three situations, each with its own message:
 
 ---
 
+## Let people know the service is automatic
+
+The **Aviso de atendimento automatizado** (Automated service notice) block makes Tino introduce itself as a virtual assistant and remind the person they can ask for someone on the team.
+
+Where to find it: **Configurações > Atendimento > IA por canal** (Settings > Service > AI per channel), in the channel details.
+
+- **On Instagram, it's always on.** Meta requires automatic service to say it is automatic, so you edit the text, but you can't turn it off. See [Connect Instagram](/en/canais/instagram).
+- **On the other channels, it's optional.** Turn it on when you want Tino to introduce itself.
+
+The default text is: "Olá! Sou o assistente virtual da `{empresa}`. Se preferir falar com uma pessoa da equipe, é só pedir." (Hi! I'm the virtual assistant of `{empresa}`. If you'd rather talk to someone on the team, just ask.) `{empresa}` becomes your company's name; you can rewrite the text and keep `{empresa}` wherever you like.
+
+Tino sends the notice before its reply at three moments:
+
+- In the first reply of the conversation.
+- When the conversation comes back to it from the team.
+- After 24 hours without it speaking in the conversation.
+
+---
+
 ## What changes when Tino is turned on
 
 With Tino turned on and within business hours, it serves the conversation as soon as it arrives, without waiting for an agent. Outside business hours, or when the customer needs a person, the conversation goes to the team.
