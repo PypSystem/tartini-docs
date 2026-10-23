@@ -67,7 +67,7 @@ Este paso define el canal, los horarios y qué hacer cuando el contacto no respo
   <Step title="Elige la plantilla de apertura (canal WABA)">En canal oficial, elige una plantilla **Aprovado** (Aprobado) o crea una nueva por el editor. Esto es obligatorio: sin plantilla, el asistente no avanza.</Step>
   <Step title="Define cuándo disparar">En lista, elige la fecha de inicio y, si quieres, la fecha de fin. En webhook, elige entre abordar **24 horas por dia** (24 horas al día) o solo dentro de una ventana de horarios. Palabra clave no pide nada aquí: Tino responde en cuanto el cliente escribe.</Step>
   <Step title="Ajusta la ventana de horarios">Cuando aplique, marca los días de la semana y el horario de inicio y fin. De forma predeterminada, la ventana viene precargada del funcionamiento registrado de la Unidad.</Step>
-  <Step title="Configura los follow-ups (opcional)">Agrega hasta 4 intentos para cuando el contacto no responda: 4 horas, 1, 2, 3 o 7 días después de la apertura. En canal WABA, los intentos de 24 horas o más exigen una plantilla aprobada para cada uno.</Step>
+  <Step title="Configura los follow-ups (opcional)">Agrega hasta 4 intentos para cuando el contacto no responda, con el tiempo que quieras. Cada uno cuenta desde el mensaje anterior, y la **Linha do tempo** (Línea de tiempo) muestra cuándo sale. Si quieres, activa también la retoma para quien deje de responder en medio de la conversación.</Step>
   <Step title="Genera la vista previa">Dale un nombre al agente y haz clic en **Gerar exemplo** (Generar ejemplo) para ver cómo Tino abriría la conversación con el primer contacto de la lista.</Step>
   <Step title="Crea la campaña">Haz clic en **Criar campanha** (Crear campaña).</Step>
 </Steps>
@@ -75,7 +75,7 @@ Este paso define el canal, los horarios y qué hacer cuando el contacto no respo
 {/* CAPTURA: images/campanhas/criar-passo3-lancamento.png | alt: Passo 3 do assistente com canal, janela de horários e a prévia da abordagem no celular | olhar: o botão Gerar exemplo e a mensagem de abertura */}
 
 <Note>
-  En cuanto el contacto responde, Tino cancela los intentos de follow-up siguientes y asume la conversación.
+  En cuanto el contacto responde, los intentos sin respuesta a la apertura se detienen. Si la retoma en medio de la conversación está activada, se encarga de quien deje de responder después.
 </Note>
 
 ---
@@ -108,7 +108,7 @@ En cualquier caso, vuelves a la lista de campañas de la Unidad.
   No por el asistente. La lista de contactos de una campaña ya creada se sigue en el panel de la campaña, ejecución por ejecución.
   </Accordion>
   <Accordion title="¿Tengo que elegir una plantilla para cada follow-up?">
-  Solo en canal WABA, y solo para intentos de 24 horas o más. Los intentos más cortos y los canales no oficiales no exigen plantilla.
+  Solo en canal WABA, en los intentos que salen más de 24 horas después del último mensaje de la persona. La pantalla marca cada uno. En lista y webhook, la persona aún no escribió, así que todo intento sin respuesta a la apertura necesita plantilla.
   </Accordion>
 </AccordionGroup>
 

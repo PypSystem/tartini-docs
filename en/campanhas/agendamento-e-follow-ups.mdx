@@ -1,12 +1,12 @@
 ---
 title: "Schedule the send and follow-ups"
 sidebarTitle: "Scheduling and follow-ups"
-description: "Choose when Tino reaches out to each contact, how many times it follows up, and when to pause the send."
+description: "Choose when Tino reaches out to each contact, when it follows up with people who didn't respond, and when to pause the send."
 ---
 
 import { Lista, Artigo } from "/components/lista-artigos.jsx";
 
-The time window sets when Tino can act on a campaign, and the follow-up attempts set how many times it follows up with a contact who didn't respond.
+The time window sets when Tino can act on a campaign. The follow-up attempts set when it follows up with people who didn't respond or stopped responding.
 
 <Note>
   Campaigns is a feature of the Scale and Enterprise plans. Who configures it: Administrator (Company), Company Manager, Area Manager, and Unit Manager.
@@ -31,7 +31,7 @@ Where to find it: step 3 of the wizard, **Campanhas > Campanhas > Nova campanha*
 {/* CAPTURA: images/campanhas/agendamento-janela-horarios.png | alt: Seção de janela de horários com os dias da semana marcados e o horário de início e fim | olhar: os chips de dias da semana e os dois campos de horário */}
 
 <Note>
-  The time window applies to list campaigns and to webhook campaigns set to **Somente dentro da janela de horários** (Only within the time window). Keyword doesn't use a window: Tino responds the instant the customer writes in.
+  The time window applies to list campaigns and to webhook campaigns set to **Somente dentro da janela de horários** (Only within the time window). Keyword doesn't use a window: Tino responds the instant the customer writes in. Follow-up attempts follow another rule, explained below in **Understand when an attempt doesn't go out**.
 </Note>
 
 ---
@@ -53,24 +53,73 @@ Where to find it: same step 3, **Quando disparar** section.
 
 ---
 
-## Set up the follow-ups
+## Set up attempts for when the contact doesn't respond
 
-By default, a new campaign already comes with two attempts: 24 hours and 72 hours after the first message.
+By default, a new campaign comes with two attempts: 1 day after the opening and 2 days after the first attempt.
 
 Where to find it: step 3 of the wizard, **Se o contato não responder** (If the contact doesn't respond) section.
 
 <Steps>
-  <Step title="Review the default attempts">Each attempt shows how long after the opening it triggers: 4 hours, 1, 2, 3, or 7 days.</Step>
-  <Step title="Add an attempt">Click one of the available intervals to add it. The limit is 4 attempts.</Step>
+  <Step title="Set each attempt's time">Type a number and choose the unit: **min**, **h**, or **dias** (days). The time counts from the previous message: the opening for the first attempt, and the previous attempt for the others.</Step>
+  <Step title="Add an attempt">Click a shortcut next to **adicionar tentativa** (add attempt): **1h**, **3h**, **24h**, or **3 dias** (3 days). Then adjust the time if you want. The limit is 4 attempts.</Step>
+  <Step title="Write a guidance note (optional)">In the guidance field, say what the attempt should cover, like "remind them about the discount". Without guidance, Tino decides what to say.</Step>
+  <Step title="Check the timeline">Below the attempts, the **Linha do tempo** (Timeline) shows when each one goes out. Example: 1st, 1 hour after the opening; 2nd, 1 day after the 1st, that is, 25h after the opening.</Step>
   <Step title="Remove an attempt">Use the remove button next to the attempt you no longer want.</Step>
-  <Step title="Choose the template, if it's a WABA channel">Attempts 24 hours or later on an official channel require an approved template for each one.</Step>
 </Steps>
 
-{/* CAPTURA: images/campanhas/agendamento-follow-ups.png | alt: Lista de tentativas de follow-up com os intervalos de 24h e 72h configurados | olhar: os selos de que tentativa exige template */}
+{/* CAPTURA: images/campanhas/agendamento-follow-ups.png | alt: Seção Se o contato não responder com duas tentativas, o tempo de cada uma e a linha do tempo | olhar: o campo de número com as unidades min, h e dias, e a linha do tempo abaixo */}
 
 <Note>
-  As soon as the contact responds, Tino cancels all the following attempts and takes over the conversation from there, without repeating the approach.
+  As soon as the contact responds, the attempts in this sequence stop. If they talk and then stop responding, the mid-conversation follow-up takes over.
 </Note>
+
+---
+
+## Resume the conversation when the person stops responding
+
+By default, the mid-conversation follow-up is off.
+
+Where to find it: step 3 of the wizard, **Se o contato não responder** section, **Retomar quando a pessoa parar de responder no meio da conversa** (Resume when the person stops responding mid-conversation) option.
+
+<Steps>
+  <Step title="Turn it on">Turn the option on. The screen suggests two attempts: 1 hour and 1 day.</Step>
+  <Step title="Adjust the attempts">Set each one's time and guidance, as in the opening sequence. The time counts from Tino's last message that went unanswered.</Step>
+  <Step title="Set the per-conversation limit">In the **retomadas por conversa** (follow-ups per conversation) field, choose from 1 to 20. The default is 3.</Step>
+</Steps>
+
+Tino picks up where the conversation stopped, for example by asking "did you manage to create your account?". It doesn't repeat the opening.
+
+<Note>
+  When the person responds again, the count restarts from zero for the next silence. The per-conversation limit adds up all follow-ups and doesn't restart.
+</Note>
+
+---
+
+## Understand when an attempt doesn't go out
+
+By default, each attempt goes out at the configured time. Tino doesn't send the attempt when:
+
+- the conversation was transferred to the team or was closed;
+- the person already converted or the campaign's goal was reached;
+- the person said they're not interested or asked to stop.
+
+If the person asked to wait, like "I'll get back to you tomorrow", Tino skips that attempt. The next one, if any, follows the configured time.
+
+No attempt goes out in the middle of the night. In list campaigns and in webhook campaigns set to **Somente dentro da janela de horários**, the campaign's window applies.
+
+In the others, the Unit's business hours registered in Cérebro apply. With nothing registered, Monday through Friday, from 9:00 AM to 6:00 PM.
+
+<Note>
+  An attempt that would fall outside these hours goes out at the start of the next allowed time. While an attempt is pending, the conversation isn't closed for inactivity.
+</Note>
+
+On official WhatsApp (WABA), Meta only accepts an approved template after 24 hours from the person's last message. The screen flags the attempts in this situation and asks for a template for each one.
+
+In list and webhook campaigns, the person hasn't written yet. That's why every attempt for no reply to the opening needs a template.
+
+<Warning>
+  An attempt that needs a template and doesn't have one is skipped. Choose the template for each flagged attempt before creating the campaign.
+</Warning>
 
 ---
 
@@ -86,7 +135,7 @@ Where to find it: **Campanhas > Campanhas** (Campaigns > Campaigns, the list) or
 </Steps>
 
 <Note>
-  While paused, no new contact enters the campaign until you resume it. {/* CONFIRMAR: se follow-ups já agendados para contatos que entraram antes da pausa continuam disparando ou ficam suspensos */}
+  While paused, no new contact enters and no follow-up attempt goes out. When you resume, the pending attempts apply again.
 </Note>
 
 ---
@@ -108,16 +157,19 @@ There you see how many jobs are **Agendados** (Scheduled), **Ativos** (Active), 
   Yes, by editing the campaign. The change applies to the next sends and to conversation turns already in progress.
   </Accordion>
   <Accordion title="Does a paused campaign keep counting the follow-ups?">
-  New contacts don't enter the campaign while it's paused. {/* CONFIRMAR: se as tentativas de follow-up já agendadas para contatos anteriores continuam sendo enviadas durante a pausa */}
+  No. During the pause, no attempt goes out. When you resume, the pending attempts apply again, and one that came due during the pause goes out right away, within the sending hours.
   </Accordion>
   <Accordion title="What happens if the contact responds in the middle of the attempts?">
-  The following attempts are canceled right away. Tino continues the conversation from the contact's response.
+  The attempts for no reply to the opening stop. If the mid-conversation follow-up is on, it kicks in when the person stops responding again.
+  </Accordion>
+  <Accordion title="If I change the times, do conversations in progress change too?">
+  Yes. The new time applies to the attempts that haven't gone out yet, counting from the same message.
   </Accordion>
   <Accordion title="Can I add more contacts to a list campaign that's already in progress?">
   The screen notes that this is possible when the campaign has no end date, but there's no dedicated button for it in the wizard today.
   </Accordion>
   <Accordion title="Is there a limit on follow-up attempts?">
-  Yes, 4 per campaign, at intervals of 4 hours, 1, 2, 3, or 7 days.
+  Yes, 4 in each sequence, with any time from 1 minute to 30 days. The mid-conversation follow-up also has a total limit per conversation, from 1 to 20.
   </Accordion>
 </AccordionGroup>
 
