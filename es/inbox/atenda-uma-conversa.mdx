@@ -32,6 +32,31 @@ Dónde está: **Inbox**.
 
 ---
 
+## Mira quién es el cliente
+
+De forma predeterminada, el encabezado muestra el nombre del contacto, el canal y el protocolo de la conversación.
+
+Dónde está: en el lado derecho del encabezado de la conversación, antes del reloj de SLA y de los íconos de acción.
+
+<Steps>
+  <Step title="Abre la conversación">Haz clic en la conversación en la lista del Inbox.</Step>
+  <Step title="Busca el sello">Con el cliente ya reconocido, el encabezado muestra **cliente logado** (cliente con sesión iniciada) o **identificado**.</Step>
+  <Step title="Mira los detalles">Pasa el mouse sobre el sello para ver el nombre del cliente y de dónde vino el reconocimiento.</Step>
+</Steps>
+
+| Sello | Qué significa |
+|---|---|
+| **cliente logado** | El cliente está en el sitio de la empresa, con sesión iniciada en su cuenta. Tino ya sabe quién es y no le pide un documento para identificarlo. |
+| **identificado** | Tino identificó al cliente en esta conversación a través de un conector. Hasta que la conversación se cierre, no vuelve a pedir la identificación. |
+
+{/* CAPTURA: images/inbox/inbox-cabecalho-cliente-identificado.png | alt: cabeçalho de uma conversa aberta com o selo identificado à direita e a dica do selo visível | olhar: o selo antes do relógio de SLA e o texto da dica */}
+
+<Note>
+  Los sellos desaparecen cuando la conversación se cierra y no aparecen en el celular. El sello **identificado** depende de un conector, función de los planes Scale y Enterprise, y no aparece si el cliente inició sesión.
+</Note>
+
+---
+
 ## Responde al cliente
 
 De forma predeterminada, el campo de mensaje aparece vacío, con el texto "Digite sua mensagem..." (Escribe tu mensaje...).
@@ -182,6 +207,9 @@ Cuando la persona llega por Instagram desde un anuncio de Meta, el encabezado de
   <Accordion title="Mi mensaje quedó detenido con el ícono de reloj, ¿es un error?">
   No necesariamente. Puede estar enviándose, o el canal reconectándose. Si se pone rojo, toca para reenviar.
   </Accordion>
+  <Accordion title="¿El sello identificado es lo mismo que la pestaña Identificados, en Visitantes online?">
+  No: en **Visitantes online** (Visitantes en línea), la pestaña **Identificados** reúne a los visitantes con nombre reconocido por el Chat Widget. El sello **identificado** significa que Tino confirmó quién es el cliente a través de un conector.
+  </Accordion>
 </AccordionGroup>
 
 ---
@@ -193,4 +221,6 @@ Cuando la persona llega por Instagram desde un anuncio de Meta, el encabezado de
   <Artigo titulo="Usa el Sotto" href="/es/agentes/sotto/use-o-sotto">Pide sugerencias de respuesta durante la atención.</Artigo>
   <Artigo titulo="Transfiere, anota y etiqueta conversaciones" href="/es/inbox/transfira-notas-e-tags">Pasa la conversación adelante y registra lo que importa.</Artigo>
   <Artigo titulo="Cierra una conversación y sigue la encuesta de satisfacción" href="/es/inbox/encerre-uma-conversa">Finaliza con el motivo correcto.</Artigo>
+  <Artigo titulo="Conecta herramientas externas a la IA" href="/es/integracoes/conectores">Cómo Tino identifica al cliente a través de un conector.</Artigo>
+  <Artigo titulo="Sigue a los visitantes de tu sitio web" href="/es/inbox/visitantes">Las pestañas Todos, Identificados y Anônimos (Anónimos).</Artigo>
 </Lista>

@@ -32,6 +32,31 @@ Where to find it: **Inbox**.
 
 ---
 
+## See who the customer is
+
+By default, the header shows the contact's name, the channel, and the conversation's protocol.
+
+Where to find it: on the right side of the conversation header, before the SLA clock and the action icons.
+
+<Steps>
+  <Step title="Open the conversation">Click the conversation in the Inbox list.</Step>
+  <Step title="Look for the badge">With the customer already recognized, the header shows **cliente logado** (logged-in customer) or **identificado** (identified).</Step>
+  <Step title="See the details">Hover over the badge to see the customer's name and where the recognition came from.</Step>
+</Steps>
+
+| Badge | What it means |
+|---|---|
+| **cliente logado** | The customer is on the company's website, logged in to their account. Tino already knows who they are and doesn't ask for a document number to identify them. |
+| **identificado** | Tino identified the customer in this conversation through a connector. Until the conversation is closed, he doesn't ask for identification again. |
+
+{/* CAPTURA: images/inbox/inbox-cabecalho-cliente-identificado.png | alt: cabeçalho de uma conversa aberta com o selo identificado à direita e a dica do selo visível | olhar: o selo antes do relógio de SLA e o texto da dica */}
+
+<Note>
+  The badges go away when the conversation is closed and don't appear on mobile. The **identificado** badge requires a connector, part of the Scale and Enterprise plans, and doesn't appear for a logged-in customer.
+</Note>
+
+---
+
 ## Reply to the customer
 
 By default the message field is empty, with the text "Digite sua mensagem...".
@@ -182,6 +207,9 @@ When the person arrives on Instagram through a Meta ad, the conversation header 
   <Accordion title="My message is stuck with the clock icon, is that an error?">
   Not necessarily. It could be sending, or the channel could be reconnecting. If it turns red, tap to resend.
   </Accordion>
+  <Accordion title="Is the identificado badge the same as the Identificados tab, in Visitantes online?">
+  No: in **Visitantes online** (Online visitors), the **Identificados** (Identified) tab lists the visitors with a name recognized by the Chat Widget. The **identificado** badge means Tino confirmed who the customer is through a connector.
+  </Accordion>
 </AccordionGroup>
 
 ---
@@ -193,4 +221,6 @@ When the person arrives on Instagram through a Meta ad, the conversation header 
   <Artigo titulo="Use Sotto" href="/en/agentes/sotto/use-o-sotto">Ask for reply suggestions while helping customers.</Artigo>
   <Artigo titulo="Transfer, note, and tag conversations" href="/en/inbox/transfira-notas-e-tags">Pass the conversation along and record what matters.</Artigo>
   <Artigo titulo="Close a conversation and track the satisfaction survey" href="/en/inbox/encerre-uma-conversa">Close it out with the right reason.</Artigo>
+  <Artigo titulo="Connect external tools to the AI" href="/en/integracoes/conectores">How Tino identifies the customer through a connector.</Artigo>
+  <Artigo titulo="Track site visitors" href="/en/inbox/visitantes">The Todos (All), Identificados (Identified), and Anônimos (Anonymous) tabs.</Artigo>
 </Lista>

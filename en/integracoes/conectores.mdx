@@ -1,7 +1,7 @@
 ---
 title: "Connect external tools to the AI"
 sidebarTitle: "Connectors"
-description: "Give Tino access to your calendar, your CRM, or your system so he can look things up and take action during the conversation."
+description: "Give Tino access to your calendar, your CRM, or your system so he can look things up, act, and recognize the customer during the conversation."
 ---
 
 import { Lista, Artigo } from "/components/lista-artigos.jsx";
@@ -9,7 +9,7 @@ import { Lista, Artigo } from "/components/lista-artigos.jsx";
 With a connector, Tino stops just replying and starts acting: he checks the calendar and books a time, moves a deal forward in the CRM, looks up an order in your system. Connectors live under **Configurações > Integrações > Conectores** (Settings > Integrations > Connectors).
 
 <Note>
-  Only Administrator can see this screen. Connectors are part of the Scale and Enterprise plans. For Tino to use a connector's tools, it needs to be linked to a process in the Cérebro (the company's brain).
+  Only the Administrator sees this screen and sets up the connectors, which are part of the Scale and Enterprise plans. Tino uses the tools of connectors linked to processes in the Cérebro (the company's brain) and those of the company's base connector.
 
   The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
 </Note>
@@ -22,7 +22,7 @@ By default no integration is connected. The **Biblioteca de integrações** (Int
 
 <Steps>
   <Step title="Choose the integration">Under **Configurações > Integrações > Conectores**, find the card in the **Biblioteca de integrações**, and click **Conectar** (Connect).</Step>
-  <Step title="Authorize on the service">You're taken to the service's site to authorize access. When you come back, the screen confirms with "Integração conectada com sucesso!" and opens the connector's detail.</Step>
+  <Step title="Authorize on the service">You're taken to the service's site to authorize access. When you come back, the screen confirms with "Integração conectada com sucesso!" (Integration connected successfully!) and opens the connector's detail.</Step>
   <Step title="Check the tools">In the detail view, the **Ferramentas** (Tools) section lists what Tino can do with that integration. Turn each tool on or off.</Step>
 </Steps>
 
@@ -52,15 +52,108 @@ If your company has its own MCP server, the **Conector próprio (MCP)** (Custom 
 
 ## Adjust the tools
 
-In the connector's detail view, each tool has a switch to enable it and a detail with the description and the **Timeout (ms)**. On a custom connector, the description is editable: it's the text Tino reads to decide when to use the tool, so describe what it does and when it's worth calling. Click **Salvar alterações** (Save changes).
+By default, every discovered tool arrives enabled.
 
-The **Usado pelos processos** (Used by processes) section shows which processes use the connector. While it's empty, Tino doesn't use any of its tools: link the connector to a process. See [Organize processes into groups](/en/cerebro/grupos-de-processos).
+Where to find it: the connector's detail, **Ferramentas** section.
+
+<Steps>
+  <Step title="Open the connector">Under **Conectados** (Connected), click the connector's card.</Step>
+  <Step title="Turn it on or off">Use the switch to the right of each tool: the change applies right away. A tool that's turned off doesn't reach Tino.</Step>
+  <Step title="Adjust the detail">Click the tool's name. On a custom connector, edit the description, which Tino reads to decide when to use the tool, and the **Timeout (ms)**.</Step>
+  <Step title="Save">If you changed the detail, click **Salvar alterações** (Save changes), which appears below it.</Step>
+</Steps>
+
+{/* CAPTURA: images/integracoes/conectores-ferramentas.png | alt: detalhe de um conector próprio com a lista de ferramentas e uma delas aberta | olhar: o interruptor de cada ferramenta e o campo de descrição */}
+
+**Atualizar ferramentas** (Refresh tools) brings in the server's new tools and doesn't change the description of existing ones. On the base connector, the new ones arrive turned off.
+
+---
+
+## Link the connector to a process
+
+By default, a new connector isn't in any process. Apart from the base connector, Tino only uses tools linked to processes.
+
+Where to find it: **Cérebro > Processos > Meus processos** (Brain > Processes > My processes), in the process detail, **Ferramentas** section.
+
+<Steps>
+  <Step title="Link the connector">Click **Vincular conector** (Link connector) and choose one of the **Conectores disponíveis** (Available connectors).</Step>
+  <Step title="Choose the tools">Open the linked connector and check the tools the script needs. With none checked, all of the connector's enabled tools apply.</Step>
+  <Step title="Write the usage instruction, if you want">In **Instrução de uso (opcional)** (Usage instruction (optional)), say how to use the tools in this process, for example "use apenas para consultar" (use only to look things up).</Step>
+  <Step title="Save">Click **Salvar seleção** (Save selection).</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/processo-ferramentas.png | alt: seção Ferramentas do detalhe de um processo com um conector vinculado e aberto | olhar: as ferramentas marcadas e o campo Instrução de uso */}
+
+<Note>
+  Who links: Administrator and Company Manager. The tools and the usage instruction apply only while Tino is running that process.
+</Note>
+
+---
+
+## Choose the base connector
+
+By default, no connector is the base one.
+
+Where to find it: the connector's detail, **Conector base da empresa** (Company base connector) section.
+
+The base connector's enabled tools are within Tino's reach in any conversation, with or without a process. They apply in customer service, in campaigns, and in the [Cérebro test chat](/en/cerebro/teste-o-conhecimento).
+
+<Steps>
+  <Step title="Open the connector">Under **Conectados**, click the connector that should apply to every conversation.</Step>
+  <Step title="Turn on the switch">In the **Conector base da empresa** section, turn on the switch on the right. The screen confirms: "Conector base definido." (Base connector set.)</Step>
+  <Step title="Review the tools">Under **Ferramentas**, leave on only the ones Tino can use in any conversation.</Step>
+</Steps>
+
+{/* CAPTURA: images/integracoes/conectores-conector-base.png | alt: detalhe do conector com o selo Conector base no cabeçalho e o interruptor da seção Conector base da empresa ligado | olhar: o interruptor à direita da seção e o selo com estrela ao lado do nome */}
+
+Only one connector can be the base: choosing another one unchecks the current one. The chosen connector gets the **Base** badge in the connector list and the **Conector base** (Base connector) badge in the detail.
+
+<Warning>
+  On the base connector, every enabled tool applies to any conversation, including those that take actions, like changing a record. Turn on only the ones Tino should use.
+</Warning>
+
+---
+
+## Mark the tool that identifies the customer
+
+By default, no tool identifies the customer.
+
+Where to find it: the connector's detail, **Ferramentas** section, in the tool's detail.
+
+Use it when a tool in your system checks who the customer is and returns their code. For example, by email and document number.
+
+<Steps>
+  <Step title="Open the tool">Click the name of the tool that identifies the customer.</Step>
+  <Step title="Check the option">Check **Esta ferramenta identifica o cliente** (This tool identifies the customer).</Step>
+  <Step title="Enter the identifier field">In **Campo do identificador na resposta** (Identifier field in the response), write the name of the field that carries the customer's code. For a field inside another one, use a dot, like `data.cliente.clientId`.</Step>
+  <Step title="Enter the name field, if you want">In **Campo do nome (opcional)** (Name field (optional)), write the field with the customer's name, which the team sees in the Inbox.</Step>
+  <Step title="Save">Click **Salvar alterações**. The tool now shows the **identifica o cliente** (identifies the customer) badge.</Step>
+</Steps>
+
+{/* CAPTURA: images/integracoes/conectores-identifica-cliente.png | alt: detalhe de uma ferramenta aberto com a opção Esta ferramenta identifica o cliente marcada e os dois campos preenchidos | olhar: os campos Campo do identificador na resposta e Campo do nome (opcional) */}
+
+The tool must be turned on and within Tino's reach, on the base connector or in a process. From then on, in conversations:
+
+- Tino identifies the customer once and doesn't ask for the data again, unless it's to deal with another account.
+- The team sees the **identificado** (identified) badge in the conversation header, in the Inbox.
+- The identification goes away when the conversation is closed. In the next conversation, the customer identifies themselves again.
+- With the customer identified, the identification data, such as email and document number, doesn't go to the contact record. In a note written by Tino, that part appears as "[dado de identificação]" (identification data).
+- Tino only looks up the data of the customer identified in the conversation or logged in on the website, in the [Chat Widget](/en/canais/chat-widget). A code typed in the chat doesn't count as identification.
+- With the customer logged in on the website, the login prevails: they're already identified and the **identificado** badge doesn't appear.
+
+{/* CONFIRMAR: identificação que falha não guarda a impressão digital do e-mail e do documento; nas mensagens seguintes, o Tino pode gravar na ficha o e-mail ou o documento tentado. */}
+
+{/* CONFIRMAR: a trava contra código digitado ou inventado só cobre as ferramentas do conector que recebem um parâmetro com o mesmo nome do último trecho do campo do identificador (em data.cliente.clientId, o parâmetro clientId). Decidir se a central explica isso ao Administrador ou se fica com quem mantém o servidor MCP. */}
+
+<Note>
+  In campaigns, Tino doesn't identify the customer, and lookups that ask for the customer's code don't run. This also applies when the customer is logged in on the website.
+</Note>
 
 ---
 
 ## Turn off or remove
 
-- Under **Detalhes** (Details), the **Status** switch sets the connector to **Inativo** (Inactive) without deleting anything. Inactive connectors aren't available to Tino.
+- Under **Detalhes** (Details), the **Status** switch sets the connector to **Inativo** (Inactive) without deleting anything. Inactive connectors aren't available to Tino, not even as the base connector.
 - **Desconectar** (Disconnect) (ready-made integration) or **Excluir** (Delete) (custom connector) removes the connector for good, after confirming.
 
 ---
@@ -69,7 +162,13 @@ The **Usado pelos processos** (Used by processes) section shows which processes 
 
 <AccordionGroup>
   <Accordion title="I connected the integration and Tino isn't using it.">
-  Check the **Usado pelos processos** section. Tino only uses tools linked to processes. Also check whether the tools are enabled and whether the connector is active.
+  Check whether the connector is linked to a process, in the **Usado pelos processos** (Used by processes) section, or whether it's the base connector. Also check whether the tools are enabled and whether the connector is active.
+  </Accordion>
+  <Accordion title="The customer sent their own code in the chat. Does Tino use it?">
+  Not when the tool that identifies the customer is marked on the connector. In that case, Tino's lookups only use the code of the customer identified or logged in on the website. {/* CONFIRMAR: a trava só cobre as ferramentas do conector com um parâmetro de mesmo nome do último trecho do campo do identificador. */}
+  </Accordion>
+  <Accordion title="Why does Tino ask for identification with every question in the Cérebro test chat?">
+  Because the test chat doesn't keep the identification: it only applies to the message in which it was made. In real conversations, it applies until the conversation is closed.
   </Accordion>
   <Accordion title="The card says Reconectar.">
   Authorization on the service expired or was revoked. Click **Reconectar** and authorize again.
@@ -85,5 +184,6 @@ The **Usado pelos processos** (Used by processes) section shows which processes 
 
 <Lista>
   <Artigo titulo="Processes explained" href="/en/cerebro/processos-explicados">Where the tools come into action.</Artigo>
+  <Artigo titulo="Handle a conversation" href="/en/inbox/atenda-uma-conversa">The badges that show who the customer is.</Artigo>
   <Artigo titulo="Receive events in your system" href="/en/integracoes/webhooks">The reverse path: Tartini notifies your system.</Artigo>
 </Lista>

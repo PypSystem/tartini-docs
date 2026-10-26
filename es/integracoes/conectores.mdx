@@ -1,7 +1,7 @@
 ---
 title: "Conecta herramientas externas a la IA"
 sidebarTitle: "Conectores"
-description: "Dale a Tino acceso a tu agenda, tu CRM o tu sistema para que consulte y actúe durante la conversación."
+description: "Dale a Tino acceso a tu agenda, tu CRM o tu sistema para que consulte, actúe y reconozca al cliente durante la conversación."
 ---
 
 import { Lista, Artigo } from "/components/lista-artigos.jsx";
@@ -9,7 +9,7 @@ import { Lista, Artigo } from "/components/lista-artigos.jsx";
 Con un conector, Tino deja de solo responder y pasa a actuar: consulta la agenda y agenda un horario, mueve una negociación en el CRM, busca un pedido en tu sistema. Los conectores están en **Configurações > Integrações > Conectores** (Configuración > Integraciones > Conectores).
 
 <Note>
-  Solo el Administrador ve esta pantalla. Los conectores forman parte de los planes Scale y Enterprise. Para que Tino use las herramientas de un conector, este debe estar vinculado a un proceso en el Cérebro.
+  Solo el Administrador ve esta pantalla y configura los conectores, que forman parte de los planes Scale y Enterprise. Tino usa las herramientas de los conectores vinculados a procesos en el Cérebro y las del conector base de la empresa.
 
   La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
 </Note>
@@ -52,15 +52,108 @@ Si tu empresa tiene un servidor MCP propio, la tarjeta **Conector próprio (MCP)
 
 ## Ajusta las herramientas
 
-En el detalle del conector, cada herramienta tiene un interruptor para habilitarla y un detalle con la descripción y el **Timeout (ms)**. En conector propio, la descripción es editable: es el texto que Tino lee para decidir cuándo usar la herramienta, así que describe qué hace y cuándo vale la pena llamarla. Haz clic en **Salvar alterações** (Guardar cambios).
+De forma predeterminada, toda herramienta descubierta llega habilitada.
 
-La sección **Usado pelos processos** (Usado por los procesos) muestra qué procesos usan el conector. Mientras esté vacía, Tino no usa ninguna herramienta de ese conector: vincula el conector a un proceso. Consulta [Organiza los procesos en grupos](/es/cerebro/grupos-de-processos).
+Dónde está: detalle del conector, sección **Ferramentas**.
+
+<Steps>
+  <Step title="Abre el conector">En **Conectados**, haz clic en la tarjeta del conector.</Step>
+  <Step title="Activa o desactiva">Usa el interruptor a la derecha de cada herramienta: el cambio vale al instante. Una herramienta desactivada no llega a Tino.</Step>
+  <Step title="Ajusta el detalle">Haz clic en el nombre de la herramienta. En conector propio, edita la descripción, que Tino lee para decidir cuándo usar la herramienta, y el **Timeout (ms)**.</Step>
+  <Step title="Guarda">Si cambiaste el detalle, haz clic en **Salvar alterações** (Guardar cambios), que aparece debajo de él.</Step>
+</Steps>
+
+{/* CAPTURA: images/integracoes/conectores-ferramentas.png | alt: detalhe de um conector próprio com a lista de ferramentas e uma delas aberta | olhar: o interruptor de cada ferramenta e o campo de descrição */}
+
+**Atualizar ferramentas** (Actualizar herramientas) trae las herramientas nuevas del servidor y no cambia la descripción de las que ya existen. En el conector base, las nuevas llegan desactivadas.
+
+---
+
+## Vincula el conector a un proceso
+
+De forma predeterminada, un conector nuevo no está en ningún proceso. Fuera del conector base, Tino solo usa herramientas vinculadas a procesos.
+
+Dónde está: **Cérebro > Processos > Meus processos** (Cerebro > Procesos > Mis procesos), en el detalle del proceso, sección **Ferramentas**.
+
+<Steps>
+  <Step title="Vincula el conector">Haz clic en **Vincular conector** y elige uno de los **Conectores disponíveis** (Conectores disponibles).</Step>
+  <Step title="Elige las herramientas">Abre el conector vinculado y marca las herramientas que necesita la guía del proceso. Si no marcas ninguna, valen todas las habilitadas del conector.</Step>
+  <Step title="Escribe la instrucción de uso, si quieres">En **Instrução de uso (opcional)** (Instrucción de uso, opcional), indica cómo usar las herramientas en este proceso, por ejemplo "use apenas para consultar" (úsalas solo para consultar).</Step>
+  <Step title="Guarda">Haz clic en **Salvar seleção** (Guardar selección).</Step>
+</Steps>
+
+{/* CAPTURA: images/cerebro/processo-ferramentas.png | alt: seção Ferramentas do detalhe de um processo com um conector vinculado e aberto | olhar: as ferramentas marcadas e o campo Instrução de uso */}
+
+<Note>
+  Quién vincula: Administrador y Gestor de la Empresa. Las herramientas y la instrucción de uso valen solo mientras Tino conduce ese proceso.
+</Note>
+
+---
+
+## Elige el conector base
+
+De forma predeterminada, ningún conector es el base.
+
+Dónde está: detalle del conector, sección **Conector base da empresa** (Conector base de la empresa).
+
+Las herramientas habilitadas del conector base quedan al alcance de Tino en cualquier conversación, con o sin proceso. Valen en la atención, en las campañas y en el [chat de prueba del Cérebro](/es/cerebro/teste-o-conhecimento).
+
+<Steps>
+  <Step title="Abre el conector">En **Conectados**, haz clic en el conector que debe valer en toda conversación.</Step>
+  <Step title="Activa el interruptor">En la sección **Conector base da empresa**, activa el interruptor de la derecha. La pantalla confirma: "Conector base definido."</Step>
+  <Step title="Revisa las herramientas">En **Ferramentas**, deja activadas solo las que Tino puede usar en cualquier conversación.</Step>
+</Steps>
+
+{/* CAPTURA: images/integracoes/conectores-conector-base.png | alt: detalhe do conector com o selo Conector base no cabeçalho e o interruptor da seção Conector base da empresa ligado | olhar: o interruptor à direita da seção e o selo com estrela ao lado do nome */}
+
+Solo un conector puede ser el base: marcar otro desmarca el actual. El elegido recibe el sello **Base** en la lista de conectores y el sello **Conector base** en el detalle.
+
+<Warning>
+  En el conector base, toda herramienta activada vale en cualquier conversación, incluidas las que ejecutan acciones, como modificar un registro. Activa solo las que Tino debe usar.
+</Warning>
+
+---
+
+## Marca la herramienta que identifica al cliente
+
+De forma predeterminada, ninguna herramienta identifica al cliente.
+
+Dónde está: detalle del conector, sección **Ferramentas**, en el detalle de la herramienta.
+
+Úsalo cuando una herramienta de tu sistema verifica quién es el cliente y devuelve su código. Por ejemplo, por el correo electrónico y el documento.
+
+<Steps>
+  <Step title="Abre la herramienta">Haz clic en el nombre de la herramienta que identifica al cliente.</Step>
+  <Step title="Marca la opción">Marca **Esta ferramenta identifica o cliente** (Esta herramienta identifica al cliente).</Step>
+  <Step title="Indica el campo del identificador">En **Campo do identificador na resposta** (Campo del identificador en la respuesta), escribe el nombre del campo que trae el código del cliente. Para un campo dentro de otro, usa un punto, como `data.cliente.clientId`.</Step>
+  <Step title="Indica el campo del nombre, si quieres">En **Campo do nome (opcional)** (Campo del nombre, opcional), escribe el campo con el nombre del cliente, que el equipo ve en el Inbox.</Step>
+  <Step title="Guarda">Haz clic en **Salvar alterações**. La herramienta pasa a mostrar el sello **identifica o cliente** (identifica al cliente).</Step>
+</Steps>
+
+{/* CAPTURA: images/integracoes/conectores-identifica-cliente.png | alt: detalhe de uma ferramenta aberto com a opção Esta ferramenta identifica o cliente marcada e os dois campos preenchidos | olhar: os campos Campo do identificador na resposta e Campo do nome (opcional) */}
+
+La herramienta debe estar activada y al alcance de Tino, en el conector base o en un proceso. A partir de ahí, en las conversaciones:
+
+- Tino identifica al cliente una vez y no vuelve a pedir los datos, salvo si se trata de otra cuenta.
+- El equipo ve el sello **identificado** en el encabezado de la conversación, en el Inbox.
+- La identificación desaparece cuando la conversación se cierra. En la conversación siguiente, el cliente se identifica de nuevo.
+- Con el cliente identificado, los datos de la identificación, como el correo electrónico y el documento, no van a la ficha del contacto. En una nota de Tino, ese fragmento aparece como "[dado de identificação]" (dato de identificación).
+- Tino solo consulta los datos del cliente identificado en la conversación o del cliente que inició sesión en el sitio, en el [Chat Widget](/es/canais/chat-widget). Un código escrito en el chat no vale como identificación.
+- Si el cliente inició sesión en el sitio, vale el inicio de sesión: ya llega identificado y el sello **identificado** no aparece.
+
+{/* CONFIRMAR: identificação que falha não guarda a impressão digital do e-mail e do documento; nas mensagens seguintes, o Tino pode gravar na ficha o e-mail ou o documento tentado. */}
+
+{/* CONFIRMAR: a trava contra código digitado ou inventado só cobre as ferramentas do conector que recebem um parâmetro com o mesmo nome do último trecho do campo do identificador (em data.cliente.clientId, o parâmetro clientId). Decidir se a central explica isso ao Administrador ou se fica com quem mantém o servidor MCP. */}
+
+<Note>
+  En las campañas, Tino no identifica al cliente, y las consultas que piden el código del cliente no se ejecutan. Esto vale también para el cliente que inició sesión en el sitio.
+</Note>
 
 ---
 
 ## Desactiva o elimina
 
-- En **Detalhes** (Detalles), el interruptor **Status** deja el conector **Inativo** (Inactivo) sin borrar nada. Los conectores inactivos no están disponibles para Tino.
+- En **Detalhes** (Detalles), el interruptor **Status** deja el conector **Inativo** (Inactivo) sin borrar nada. Los conectores inactivos no están disponibles para Tino, ni como conector base.
 - **Desconectar** (integración lista) o **Excluir** (conector propio) elimina el conector de forma definitiva, después de confirmar.
 
 ---
@@ -69,7 +162,13 @@ La sección **Usado pelos processos** (Usado por los procesos) muestra qué proc
 
 <AccordionGroup>
   <Accordion title="Conecté la integración y Tino no la usa.">
-  Revisa la sección **Usado pelos processos**. Tino solo usa herramientas vinculadas a procesos. Revisa también si las herramientas están habilitadas y si el conector está activo.
+  Revisa si el conector está vinculado a un proceso, en la sección **Usado pelos processos** (Usado por los procesos), o si es el conector base. Revisa también si las herramientas están habilitadas y si el conector está activo.
+  </Accordion>
+  <Accordion title="El cliente envió su propio código en el chat. ¿Tino lo usa?">
+  No, cuando el conector tiene marcada la herramienta que identifica al cliente. En ese caso, Tino solo consulta con el código del cliente identificado o que inició sesión en el sitio. {/* CONFIRMAR: a trava só cobre as ferramentas do conector com um parâmetro de mesmo nome do último trecho do campo do identificador. */}
+  </Accordion>
+  <Accordion title="¿Por qué, en el chat de prueba del Cérebro, Tino pide la identificación en cada pregunta?">
+  Porque el chat de prueba no guarda la identificación: vale solo para el mensaje en que se hizo. En las conversaciones reales, vale hasta que la conversación se cierra.
   </Accordion>
   <Accordion title="La tarjeta dice Reconectar.">
   La autorización en el servicio expiró o fue revocada. Haz clic en **Reconectar** y autoriza de nuevo.
@@ -85,5 +184,6 @@ La sección **Usado pelos processos** (Usado por los procesos) muestra qué proc
 
 <Lista>
   <Artigo titulo="Procesos explicados" href="/es/cerebro/processos-explicados">Dónde entran en acción las herramientas.</Artigo>
+  <Artigo titulo="Atiende una conversación" href="/es/inbox/atenda-uma-conversa">Los sellos que muestran quién es el cliente.</Artigo>
   <Artigo titulo="Recibe eventos en tu sistema" href="/es/integracoes/webhooks">El camino inverso: Tartini avisa a tu sistema.</Artigo>
 </Lista>

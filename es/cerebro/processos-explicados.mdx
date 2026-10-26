@@ -24,6 +24,7 @@ Cada proceso reúne:
 - **Paso a paso**: las etapas que Tino sigue, con el texto que envía en cada una.
 - **Salidas**: hacia dónde va la conversación cuando el proceso termina, en cada desenlace posible (Concluído, Parcial, Falhou o Faltou dado).
 - **Cobertura de Tino**: cuánto de ese proceso resuelve Tino solo.
+- **Herramientas**: los conectores que Tino puede usar mientras conduce el proceso, con una instrucción de uso opcional.
 
 Un proceso mapeado solo empieza a valer en la atención cuando está activo. Los procesos creados por descubrimiento automático nacen inactivos, a menos que elijas publicarlos ya activos.
 
@@ -33,12 +34,11 @@ Un proceso mapeado solo empieza a valer en la atención cuando está activo. Los
 
 Dónde está: **Cérebro > Processos** (Cerebro > Procesos).
 
-1. **Mapeamento** (Mapeo): lista todos los procesos ya mapeados y es el punto de entrada para crear uno nuevo, conversando con el agente de mapeo.
+1. **Meus processos** (Mis procesos): lista todos los procesos ya mapeados y es el punto de entrada para crear uno nuevo, conversando con el agente de mapeo.
 2. **Descobertas** (Descubrimientos): fila de candidatos a proceso que Tino identificó solo, a partir de contenido ya indexado en el Cérebro o de documentos enviados específicamente para ese análisis.
-3. **Grupos**: conjuntos de procesos con un camino de salidas propio, usados por campañas.
-4. **Catálogo**: auditoría del registro de los procesos, sin depender de conversaciones, con los problemas estructurales y cómo corregirlos.
+3. **Catálogo**: auditoría del registro de los procesos, sin depender de conversaciones, con los problemas estructurales y cómo corregirlos.
 
-{/* CAPTURA: images/cerebro/processos-submenu.png | alt: Sidebar do Cérebro com a seção Processos expandida mostrando Mapeamento, Descobertas, Grupos e Catálogo | olhar: o badge de contagem em Descobertas */}
+{/* CAPTURA: images/cerebro/processos-submenu.png | alt: Sidebar do Cérebro com a seção Processos expandida mostrando Meus processos, Descobertas e Catálogo | olhar: o badge de contagem em Descobertas */}
 
 ---
 
@@ -47,6 +47,22 @@ Dónde está: **Cérebro > Processos** (Cerebro > Procesos).
 Durante la atención, Tino sigue el paso a paso del proceso que corresponde al pedido del cliente. En cada etapa, usa el texto definido en el mapeo, o redacta el mensaje solo cuando la guía no define un texto fijo. Al final, sigue la salida definida para ese desenlace, o vuelve a la clasificación si no se definió ninguna salida.
 
 Quien pone el proceso por escrito contigo es **Quattro**, el cuarto agente de Tartini. Tú cuentas, con tus palabras, cómo sucede la atención hoy; Quattro pregunta qué faltó y arma el proceso, con etapas, transiciones y salidas. Una etapa que usa un conector tuyo, por ejemplo para consultar un sistema, también entra: tú eliges qué herramientas quedan disponibles para ese proceso. Nada de lo que arma entra en vigor sin tu aprobación. Publicado, el proceso se convierte en el playbook que Tino sigue en las conversaciones reales y en la vara con la que el Scout mide cada una.
+
+---
+
+## Las herramientas del proceso
+
+Dónde está: **Cérebro > Processos > Meus processos** (Cerebro > Procesos > Mis procesos), en el detalle del proceso, sección **Ferramentas** (Herramientas).
+
+Ahí están los conectores del proceso, con las herramientas elegidas y la **Instrução de uso (opcional)** (Instrucción de uso, opcional). Las herramientas y la instrucción valen solo mientras el proceso está en curso.
+
+Con un conector base, la sección avisa que sus herramientas ya valen en cualquier conversación, incluso en el proceso. Vincula el conector base a un proceso solo para darle una instrucción de uso de ese proceso.
+
+{/* CAPTURA: images/cerebro/processo-ferramentas-conector-base.png | alt: seção Ferramentas do detalhe de um processo com o aviso do conector base acima dos conectores vinculados | olhar: o aviso com o nome do conector base */}
+
+<Note>
+  Quién vincula herramientas a un proceso: Administrador y Gestor de la Empresa. Crear y configurar los conectores, en **Configurações > Integrações > Conectores** (Configuración > Integraciones > Conectores), es solo del Administrador.
+</Note>
 
 ---
 
@@ -60,7 +76,7 @@ Después de que un proceso está en marcha, el Scout audita las conversaciones r
 
 <Lista>
   <Artigo titulo="Mapea procesos a partir de las conversaciones" href="/es/agentes/quattro/mapeie-processos">Construye un proceso conversando con Quattro y revisa los descubrimientos automáticos.</Artigo>
-  <Artigo titulo="Organiza procesos en grupos" href="/es/cerebro/grupos-de-processos">Reúne procesos relacionados para usar en campañas.</Artigo>
+  <Artigo titulo="Conecta herramientas externas a la IA" href="/es/integracoes/conectores">Vincula las herramientas de un conector al proceso y elige el conector base.</Artigo>
   <Artigo titulo="Haz seguimiento del Catálogo de procesos" href="/es/cerebro/consistencia-e-insights">Mira qué está roto en el registro de los procesos.</Artigo>
   <Artigo titulo="Mira la adherencia a los procesos" href="/es/agentes/scout/processos-e-aderencia">Haz seguimiento, en el Scout, de lo que Tino resolvió siguiendo cada proceso.</Artigo>
 </Lista>

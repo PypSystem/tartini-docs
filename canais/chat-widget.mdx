@@ -40,7 +40,7 @@ Onde fica: dentro do widget da Unidade, seção **Chave pública & Integração*
 </Steps>
 
 <Note>
-  Se o seu site já tem login de usuário, existe uma configuração avançada para identificar quem está conversando. Quem cuida do seu sistema encontra os detalhes junto do snippet, no bloco **Sistema com login**.
+  Se o seu site tem login, ligue **Sistema com login** em **Configurações do chat** e salve. Depois, gere o secret em **Identidade verificada (HMAC)**: quem cuida do seu sistema segue as instruções junto do snippet.
 </Note>
 
 ---
@@ -84,6 +84,9 @@ Onde fica: dentro do widget da Unidade, seção **Chave pública & Integração*
   </Accordion>
   <Accordion title="Os visitantes aparecem como 'Visitante' em vez do nome do cliente. Por quê?">
   Isso acontece quando o site não envia a identificação do usuário logado. Gere um secret de identidade na seção **Chave pública & Integração** e configure com quem cuida do seu sistema.
+  </Accordion>
+  <Accordion title="O que muda no atendimento quando o cliente está logado?">
+  O Tino já sabe quem ele é e não pede documento para identificá-lo. No Inbox, a conversa mostra o selo **cliente logado** enquanto ele está no site.
   </Accordion>
 </AccordionGroup>
 

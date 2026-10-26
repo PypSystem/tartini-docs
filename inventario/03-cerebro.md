@@ -20,10 +20,9 @@ nesta ordem:
    - **Comunicação** — `/identity/personality/communication` (badge de sugestões pendentes: `communication`)
    - **Diretrizes** — `/identity/personality/guidelines` (badge: `guideline`)
    - **Conformidade** — `/identity/personality/compliance` (badge: `compliance`)
-4. **Processos** — seção expansível (ícone `PhStack`), expandida por padrão:
-   - **Mapeamento** — `/identity/processes` (rota "ativa" também cobre o detalhe `/identity/processes/[id]`, `mapping/[sessionId]` etc. — tudo que não é Grupos/Descobertas/Catálogo)
+4. **Processos** — seção expansível (ícone `PhStack`), expandida por padrão (atualizado em 23/10/2026: "Mapeamento" virou "Meus processos" e "Grupos" saiu do menu):
+   - **Meus processos** — `/identity/processes` (rota "ativa" também cobre o detalhe `/identity/processes/[id]` e `/identity/processes/new`, tudo que não é Descobertas/Catálogo)
    - **Descobertas** — `/identity/processes/discovery` (badge: contagem de candidatos a processo pendentes; tooltip do badge: "Candidatos a processo pendentes de revisão")
-   - **Grupos** — `/identity/processes/groups`
    - **Catálogo** — `/identity/processes/consistency` (essa aba também cobre `/identity/processes/insights`)
 5. **Operações** — seção expansível (ícone `OperationsIcon`), expandida por padrão:
    - **Esclarecimentos** — `/identity/operations/clarifications` (badge: `clarification`)
@@ -1589,12 +1588,15 @@ Nota importante para a central de ajuda: o pedido original menciona `insights.vu
 - Botões: "Cancelar", "Salvar conteúdo" (ou "Salvando…"). Mensagem de sucesso: "Conteúdo do processo salvo."
 
 **`ProcessesToolsSection` (ferramentas/conectores do processo):**
-- Título "Ferramentas"; descrição "Conectores que Tino pode usar quando conduz este processo. Selecione só as ferramentas que o roteiro precisa — o próprio processo diz quando usá-las."
+- Título "Ferramentas"; descrição "Conectores que o Tino pode usar quando conduz este processo. Selecione só as ferramentas que o roteiro precisa — o próprio processo diz quando usá-las."
 - Botão "Vincular conector" (só se houver conectores disponíveis não vinculados ainda).
 - Picker: "Conectores disponíveis" com botões por conector.
 - Estado vazio: "Nenhuma ferramenta vinculada"; se a empresa não tem NENHUM conector cadastrado: "Conecte uma integração em [Conectores](/settings/connectors) e depois vincule as ferramentas aqui."; se já tem conectores mas nenhum vinculado a este processo: "Vincule um conector para o Tino poder executar as ações deste processo."
 - Cada vínculo expandido mostra: resumo "todas as ferramentas habilitadas do conector" ou "N ferramenta(s) selecionada(s)"; botão de lixeira "Desvincular do processo"; lista de tools do conector como checkboxes (ajuda: "Nenhuma marcada = todas as habilitadas do conector. Marque para restringir ao que o processo usa."); campo "Instrução de uso (opcional)" (textarea, placeholder "Ex.: use apenas para consultar; nunca crie ou altere registros."); botão "Salvar seleção" (ou "Salvando...") que só aparece havendo alteração.
 - Mensagens de sucesso: "{{servidor}} vinculado ao processo.", "Ferramentas do processo atualizadas.", "{{servidor}} desvinculado do processo."
+- **Conector base (novo, working tree do `tartini-web` de 23/10/2026, ainda sem deploy):** com um conector base ativo na empresa (marcado em Configurações > Integrações > Conectores), aparece abaixo da descrição da seção uma faixa cinza: "As ferramentas habilitadas de **{{nome}}**, o conector base da empresa, já ficam à mão do Tino em qualquer conversa, inclusive neste processo." No vínculo do próprio conector base, a ajuda acima das caixas troca para: "Este é o conector base: todas as ferramentas habilitadas dele já valem em qualquer conversa, então marcar aqui não restringe nada. O vínculo serve para a instrução de uso deste processo."
+- Aba **"Ferramentas"** do editor do processo (também no editor dentro da campanha), acima desta seção: "Toda campanha que usar este processo terá estas ferramentas, menos a que identifica o cliente: na campanha, as que pedem o código do cliente não rodam. A campanha não escolhe ferramentas." (working tree de 23/10/2026, ainda sem deploy).
+- **Regras (backend e motor, working tree de 23/10/2026, ainda sem deploy):** as ferramentas vinculadas ao processo só são oferecidas ao Tino com este processo em andamento (fora de processo, na triagem, nenhuma entra); as do conector base valem sempre. A instrução de uso é por processo: o Tino só a lê com este processo em andamento (o motor acrescenta a instrução à descrição da ferramenta; não aparece na tela); em outro processo, ou sem processo, vale só a descrição. Vincular, editar e desvincular aceitam Admin e Gestor da Empresa na API; a seção não tem gate de papel próprio no front: em /identity a área já exige Admin/Gestor da Empresa, mas a mesma seção abre na aba "Ferramentas" do editor do processo dentro da campanha, sem gate (Gestor de Área e de Unidade veem e recebem erro ao salvar). Criar e configurar o conector em si é só do Admin.
 
 **Fluxos:**
 1. **Reavaliar capacidade (aviso de avaliação desatualizada):** botão "Reavaliar" no header → `startMapping({ processId })` → abre sessão de mapeamento na fase de avaliação.

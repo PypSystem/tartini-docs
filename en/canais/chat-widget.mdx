@@ -44,7 +44,7 @@ Where to find it: inside the Unit's widget, **Chave pública & Integração** (P
 </Steps>
 
 <Note>
-  If your website already has user login, there's an advanced setting to identify who's chatting. Whoever manages your system will find the details next to the snippet, in the **Sistema com login** (System with login) block.
+  If your website has a login, turn on **Sistema com login** (System with login) in **Configurações do chat** (Chat settings) and save. Then generate the secret in **Identidade verificada (HMAC)** (Verified identity): whoever manages your system follows the instructions next to the snippet.
 </Note>
 
 ---
@@ -88,6 +88,9 @@ Where to find it: inside the Unit's widget, **Chave pública & Integração** (P
   </Accordion>
   <Accordion title="Visitors show up as 'Visitante' instead of the customer's name. Why?">
   This happens when the website doesn't send the logged-in user's identification. Generate an identity secret in the **Chave pública & Integração** section and set it up with whoever manages your system.
+  </Accordion>
+  <Accordion title="What changes in support when the customer is logged in?">
+  Tino already knows who they are and doesn't ask for a document number to identify them. In the Inbox, the conversation shows the **cliente logado** (logged-in customer) badge while they're on the website.
   </Accordion>
 </AccordionGroup>
 
