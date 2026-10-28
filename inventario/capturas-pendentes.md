@@ -43,6 +43,7 @@ Especificação das capturas no CLAUDE.md. Ao produzir uma captura, troque o mar
 
 ### campanhas/webhook-e-inbound.mdx
 - `images/campanhas/webhook-conecte-seu-sistema.png` · alt: Modal Conecte seu sistema com a URL do webhook, o token oculto e o exemplo de payload · olhar: os botões copiar da URL e do token
+- `images/campanhas/webhook-fila-tentativa-unica.png` · alt: Fila de Eventos Webhook com um evento Cancelada e a marca tentativa única abaixo do status · olhar: a marca tentativa única e o motivo que aparece sobre o status
 - `images/campanhas/inbound-palavras-chave.png` · alt: Passo Público com os chips de palavras-chave, o tipo de correspondência e a tag colorida · olhar: os chips de palavras-chave e o seletor de cor da tag
 
 ### canais/chat-widget.mdx

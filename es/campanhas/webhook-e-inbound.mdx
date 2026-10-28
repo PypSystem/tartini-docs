@@ -46,8 +46,33 @@ El ejemplo de payload que aparece en el modal y en la pestaña **Detalhes** mues
 </Steps>
 
 <Note>
-  Un contacto que llega fuera de la ventana de horarios queda en la **Fila de Eventos** (Cola de Eventos), en la pestaña del mismo nombre en el panel de la campaña, y se procesa en el próximo horario disponible, sin acción tuya.
+  Un contacto que llega fuera de la ventana de horarios queda en la **Fila de Eventos** (Cola de Eventos), en la pestaña del mismo nombre en el panel de la campaña, y se procesa en el próximo horario disponible, sin acción tuya. Esto vale también para el contacto con un solo intento.
 </Note>
+
+### Envía con un solo intento
+
+Algunos mensajes solo tienen sentido en el momento del envío, como el aviso de una oferta que termina en instantes. Para ellos, el envío puede tener un solo intento.
+
+De forma predeterminada, si el contacto está en una conversación, Tino aborda cuando termine. Si el canal está desconectado o el envío falla, la campaña lo intenta de nuevo más tarde.
+
+Con un solo intento, Tino intenta abordar al contacto una sola vez. Si en ese intento el contacto está en una conversación, el canal está desconectado o el envío falla, el contacto se descarta de la campaña.
+
+El intento ocurre cuando la campaña puede enviar. Un contacto que llega fuera de la ventana de horarios espera el próximo horario, como cualquier otro, y el intento se hace en él.
+
+Si pausas la campaña mientras espera, el contacto con un solo intento se descarta y no sale cuando la campaña vuelva.
+
+<Steps>
+  <Step title="Pide el campo a tu equipo técnico">Los datos de cada contacto que solo tiene sentido recibir en el momento del envío llevan `"singleAttempt": true`.</Step>
+  <Step title="Deja los demás contactos como están">Sin el campo, o con `false`, el contacto sigue el envío predeterminado.</Step>
+</Steps>
+
+<Note>
+  La elección vale contacto por contacto. Si tu sistema envía varios contactos a la vez, cada uno puede venir con la suya.
+</Note>
+
+En la pestaña **Fila de Eventos**, el contacto con un solo intento lleva la marca **tentativa única** (intento único) debajo del estado. Cuando se descarta, el estado queda **Cancelada** o **Falhou** (Falló), y el motivo aparece al pasar el mouse sobre el estado.
+
+{/* CAPTURA: images/campanhas/webhook-fila-tentativa-unica.png | alt: Fila de Eventos Webhook com um evento Cancelada e a marca tentativa única abaixo do status | olhar: a marca tentativa única e o motivo que aparece sobre o status */}
 
 ### Cambia el token si lo necesitas
 
@@ -95,7 +120,10 @@ No hay paso de conexión externa en este origen: todo pasa dentro de Tartini.
   Abre el panel de la campaña, pestaña **Detalhes**. La URL y el botón de copiar siguen ahí.
   </Accordion>
   <Accordion title="¿Qué pasa con un contacto que llega fuera de la ventana de horarios?">
-  Entra en la **Fila de Eventos** y se procesa en cuanto la ventana abra de nuevo, sin acción tuya.
+  Entra en la **Fila de Eventos** y se procesa en cuanto la ventana abra de nuevo, sin acción tuya. Con un solo intento también: el intento se hace cuando la ventana abra.
+  </Accordion>
+  <Accordion title="El contacto con un solo intento estaba en una conversación. ¿La campaña lo intenta de nuevo después?">
+  No. Queda como **Cancelada** en la **Fila de Eventos**, con el motivo, y la campaña no vuelve a abordarlo por ese envío.
   </Accordion>
   <Accordion title="¿Puedo cancelar un evento que está esperando en la cola?">
   No por la interfaz hoy. Espera el próximo horario disponible.

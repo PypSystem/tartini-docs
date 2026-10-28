@@ -46,8 +46,33 @@ The payload example shown in the modal and on the **Detalhes** tab shows the exp
 </Steps>
 
 <Note>
-  A contact that arrives outside the time window sits in the **Fila de Eventos** (Event queue), on the tab of the same name in the campaign dashboard, and is processed at the next available time slot, with no action from you.
+  A contact that arrives outside the time window sits in the **Fila de Eventos** (Event queue), on the tab of the same name in the campaign dashboard, and is processed at the next available time slot, with no action from you. This also applies to a single-attempt contact.
 </Note>
+
+### Send with a single attempt
+
+Some messages only make sense at the time of sending, like a notice about an offer that ends in moments. For those, the send can have a single attempt.
+
+By default, if the contact is in a conversation, Tino reaches out when it ends. If the channel is disconnected or the send fails, the campaign tries again later.
+
+With a single attempt, Tino tries to reach the contact only once. If during that attempt the contact is in a conversation, the channel is disconnected or the send fails, the contact is discarded from the campaign.
+
+The attempt happens when the campaign is allowed to send. A contact that arrives outside the time window waits for the next time slot, like any other, and the attempt is made then.
+
+If you pause the campaign while it waits, the single-attempt contact is discarded and doesn't go out when the campaign resumes.
+
+<Steps>
+  <Step title="Ask your technical team for the field">The data of each contact that only makes sense to receive at the time of sending carries `"singleAttempt": true`.</Step>
+  <Step title="Leave the other contacts as they are">Without the field, or with `false`, the contact follows the default send.</Step>
+</Steps>
+
+<Note>
+  The choice applies contact by contact. If your system sends several contacts at once, each one can carry its own.
+</Note>
+
+On the **Fila de Eventos** tab, a single-attempt contact carries the **tentativa única** (single attempt) tag below the status. When it's discarded, the status shows **Cancelada** (Canceled) or **Falhou** (Failed), and the reason appears when you hover over the status.
+
+{/* CAPTURA: images/campanhas/webhook-fila-tentativa-unica.png | alt: Fila de Eventos Webhook com um evento Cancelada e a marca tentativa única abaixo do status | olhar: a marca tentativa única e o motivo que aparece sobre o status */}
 
 ### Rotate the token if needed
 
@@ -95,7 +120,10 @@ There's no external connection step for this source: everything happens inside T
   Open the campaign dashboard, **Detalhes** tab. The URL and the copy button are still there.
   </Accordion>
   <Accordion title="What happens to a contact that arrives outside the time window?">
-  It enters the **Fila de Eventos** and is processed as soon as the window opens again, with no action from you.
+  It enters the **Fila de Eventos** and is processed as soon as the window opens again, with no action from you. With a single attempt too: the attempt is made when the window opens.
+  </Accordion>
+  <Accordion title="The single-attempt contact was in a conversation. Does the campaign try again later?">
+  No. It stays as **Cancelada** in the **Fila de Eventos**, with the reason, and the campaign doesn't reach out to it again for that send.
   </Accordion>
   <Accordion title="Can I cancel an event that's waiting in the queue?">
   Not through the interface today. It waits for the next available time slot.

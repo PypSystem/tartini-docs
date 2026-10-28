@@ -266,6 +266,7 @@ Componente `create/WebhookCreatedModal.vue`. Kicker **campanha criada · webhook
 }
 ```
   Nota: **contactData.phone é obrigatório; campos extras viram dados do contato, usáveis pelo Tino e no valor por conversão.**
+  Nota: **Opcional: "singleAttempt": true faz o envio ter uma única tentativa (no lote, em cada cliente). Fora da janela de horários, ele espera a janela como sempre. Na tentativa, se a campanha estiver pausada, o contato estiver em conversa, o canal estiver fora ou o envio falhar, a mensagem é descartada em vez de sair depois. Sem o campo, o envio segue a fila de sempre.** (o campo é opcional e vale false por padrão; valor diferente de true, "true" ou 1 também vale false)
 - Botão **Ir para a campanha →** (na prática leva a `/campaigns/dashboard?entityId={unidade}`, não ao detalhe). O URL e o token ficam disponíveis depois na aba **Detalhes** da campanha.
 
 ### Regras e limites do assistente
@@ -362,7 +363,7 @@ Dados: `GET /campaigns/:id/schedule-status` (jobs da fila de agendamento).
 
 ### Aba **Fila de Eventos** (webhook) — `CampaignScheduleTab.vue`
 Dados: `GET /campaigns/webhook/:id/queue`.
-- Cartão **Fila de Eventos Webhook** com **Atualizar** (**Carregando...**); tabela **Status** (**Pendente**, **Processando**, **Concluída**, **Falhou**, **Cancelada**), **Contato** (nome + telefone do payload), **Agendado para**, **Processado em** (ou **-**), **Tentativas**. Vazio: **Nenhum evento na fila** / **Eventos recebidos fora do horário de execução aparecerão aqui**. Nota: **Quando um evento webhook chega fora da janela de execução configurada, ele é enfileirado e processado automaticamente no próximo horário disponível. Eventos com status "Pendente" serão processados em breve.** Não há botão de cancelar evento.
+- Cartão **Fila de Eventos Webhook** com **Atualizar** (**Carregando...**); tabela **Status** (**Pendente**, **Processando**, **Concluída**, **Falhou**, **Cancelada**), **Contato** (nome + telefone do payload), **Agendado para**, **Processado em** (ou **-**), **Tentativas**. Evento de tentativa única leva a marca **tentativa única** abaixo do status; o status mostra o motivo (`errorMessage`) ao passar o mouse, por exemplo o de um evento descartado (**Cancelada** quando a campanha estava pausada ou o contato estava em conversa na tentativa, **Falhou** quando o canal estava fora ou o envio falhou; fora da janela o evento espera como os outros). Vazio: **Nenhum evento na fila** / **Eventos recebidos fora do horário de execução aparecerão aqui**. Nota: **Quando um evento webhook chega fora da janela de execução configurada, ele é enfileirado e processado automaticamente no próximo horário disponível. Eventos com status "Pendente" serão processados em breve.** Não há botão de cancelar evento.
 
 ### Aba **Testar** (`CampaignTestTab.vue`)
 Dados: `GET /campaigns/:id/dry-run/sample` (payload sugerido do último disparo real) e `POST /campaigns/:id/dry-run`.
