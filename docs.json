@@ -156,6 +156,7 @@
                     "pages": [
                       "agentes/tino/o-tino-explicado",
                       "agentes/tino/ia-por-canal",
+                      "agentes/tino/resposta-em-audio",
                       "agentes/tino/handoff"
                     ]
                   },
@@ -459,6 +460,7 @@
                     "pages": [
                       "en/agentes/tino/o-tino-explicado",
                       "en/agentes/tino/ia-por-canal",
+                      "en/agentes/tino/resposta-em-audio",
                       "en/agentes/tino/handoff"
                     ]
                   },
@@ -762,6 +764,7 @@
                     "pages": [
                       "es/agentes/tino/o-tino-explicado",
                       "es/agentes/tino/ia-por-canal",
+                      "es/agentes/tino/resposta-em-audio",
                       "es/agentes/tino/handoff"
                     ]
                   },

@@ -1,0 +1,135 @@
+---
+title: "Have Tino reply with audio"
+sidebarTitle: "Audio replies"
+description: "Tino replies with a voice note, like audio recorded on the spot, in the voice and tone you choose."
+---
+
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
+With audio replies, Tino replies with a voice note, just like audio recorded on the spot. You choose when this happens, the voice, and the tone.
+
+<Note>
+  Who configures it: Administrator, Company Manager, and Area Manager. Available on the Scale plan. Works on official WhatsApp, WhatsApp by QR Code, and Telegram. In the site chat and on Instagram, Tino always replies in text.
+
+  The Tartini interface is in Portuguese. Screen and button names appear here exactly as on screen, with the translation in parentheses.
+</Note>
+
+---
+
+## Choose when Tino replies with audio
+
+By default, Tino replies with audio **Quando o cliente mandar áudio** (When the customer sends audio). There are three options:
+
+- **Nunca** (Never): Tino always replies in text.
+- **Quando o cliente mandar áudio** (When the customer sends audio): if the customer's last message was audio, Tino replies with audio. If it was text, it replies in text.
+- **Sempre** (Always): every Tino reply goes out as audio.
+
+Where it is: **Configurações > Atendimento > IA por canal** (Settings > Service > AI by channel), in the channel detail, on the **Resposta em áudio** (Audio reply) card.
+
+<Steps>
+  <Step title="Open the channel">Go to **Configurações > Atendimento > IA por canal** (Settings > Service > AI by channel) and click the channel in the list on the left.</Step>
+  <Step title="Choose the option">On the **Resposta em áudio** (Audio reply) card, select **Nunca** (Never), **Quando o cliente mandar áudio** (When the customer sends audio), or **Sempre** (Always).</Step>
+  <Step title="Save">Click **Salvar** (Save).</Step>
+</Steps>
+
+{/* CAPTURA: images/tino/resposta-em-audio-modo.png | alt: card Resposta em áudio no detalhe do canal com as três opções | olhar: a opção Quando o cliente mandar áudio marcada */}
+
+While the audio is being prepared, the customer sees "recording audio...", as when someone records a voice note.
+
+---
+
+## Choose the voice and tone
+
+With **Quando o cliente mandar áudio** (When the customer sends audio) or **Sempre** (Always) selected, the card shows the voice and tone.
+
+Each voice provider appears with the approximate cost in credits per minute of audio and the average time to generate 30 seconds of speech. The time is the average of recent replies; until there are enough replies, the time measured in our tests is shown.
+
+<Steps>
+  <Step title="Choose the provider">Click the voice provider's card. The same voice can sound different with each one.</Step>
+  <Step title="Choose the voice">In the **Voz** (Voice) field, choose one of the voices, grouped into female, male, and neutral.</Step>
+  <Step title="Choose the tone">Select **Natural**, **Formal**, **Animado** (Upbeat), or **Calmo** (Calm).</Step>
+  <Step title="Listen before saving">Click **Ouvir amostra** (Listen to sample) to hear the same sentence with the chosen voice and tone.</Step>
+  <Step title="Save">Click **Salvar** (Save).</Step>
+</Steps>
+
+{/* CAPTURA: images/tino/resposta-em-audio-voz.png | alt: cards de fornecedor com créditos por minuto e tempo de geração, campo Voz, botão Ouvir amostra e opções de tom | olhar: o botão Ouvir amostra ao lado do campo Voz */}
+
+<Warning>
+  Audio uses credits, in addition to what Tino already uses to write the reply. The usage appears in the [Credits](/en/visao-geral/creditos-explicados) statement as **Tino - Resposta em áudio** (Tino - Audio reply). Listening to the sample doesn't use credits.
+</Warning>
+
+<Note>
+  The voices are the ones the provider offers. It isn't possible to record or copy a person's voice.
+</Note>
+
+---
+
+## Give a campaign its own rule
+
+By default, a campaign follows the channel's audio reply setting. You can give it its own rule, with a different voice or tone.
+
+Where it is: in the campaign wizard, **Passo 3** (Step 3), under **Configurações avançadas** (Advanced settings).
+
+<Steps>
+  <Step title="Open the advanced settings">In **Passo 3** (Step 3) of the wizard, click **Configurações avançadas** (Advanced settings).</Step>
+  <Step title="Turn on the campaign's own rule">Turn on the **resposta em áudio** (audio reply) switch. When it's off, the channel's setting applies.</Step>
+  <Step title="Choose when, the voice, and the tone">Make the same choices as for the channel and click **Ouvir amostra** (Listen to sample) to check.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/criar-passo3-resposta-em-audio.png | alt: Configurações avançadas do passo 3 com a resposta em áudio própria ligada | olhar: o botão que liga a regra própria da campanha */}
+
+<Note>
+  In a campaign, only Tino's replies to the contact's messages can become audio. The opening and the follow-ups always go out in text.
+</Note>
+
+---
+
+## What stays in text
+
+Even with audio replies turned on, Tino uses text in these cases:
+
+- **Data to copy.** Links, PIX keys, codes, amounts, addresses, and lists also arrive in a text message along with the audio, so the customer can copy them.
+- **Long replies.** A reply that would run over 1 minute of audio goes out in text.
+- **Audio failure.** If the audio can't be generated, the reply goes out in text. The customer is never left without an answer.
+- **Fixed messages.** The messages you configure, such as outside business hours, follow-up, closing, and the [satisfaction survey](/en/atendimento/pesquisa-de-satisfacao), go out as you wrote them.
+- **Official WhatsApp templates.** The campaign opening and messages after 24 hours without a reply require an approved template, which is always text.
+- **Notice that the service is automatic.** When the channel has the notice turned on, it goes out in writing before the audio. The audio doesn't say the voice is synthesized.
+
+---
+
+## Follow audio replies in the Inbox
+
+In the [Inbox](/en/inbox/atenda-uma-conversa), Tino's voice note appears with the player and, right below it, the text of what it said, under **O que o Tino falou** (What Tino said). The team reads the reply without having to listen.
+
+Scout and the conversation summary read this same text, so the conversation is evaluated the same way as a text conversation.
+
+{/* CAPTURA: images/inbox/nota-de-voz-do-tino.png | alt: mensagem do Tino na Inbox com o player de áudio e o bloco O que o Tino falou | olhar: o texto abaixo do player */}
+
+---
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="The customer sent audio and Tino replied in text. Why?">
+  Check the channel's option, or the campaign's, if it has its own rule. With **Nunca** (Never), the reply is always text. With the right option, the reply may have gone out in text because it was too long for 1 minute of audio or because the audio failed to generate.
+  </Accordion>
+  <Accordion title="Can I use different voices on different channels?">
+  Yes. The voice and tone are chosen channel by channel, and each campaign can have its own.
+  </Accordion>
+  <Accordion title="Does the audio use the Cérebro's tone of voice?">
+  The speaking tone is the one you choose on the card: **Natural**, **Formal**, **Animado** (Upbeat), or **Calmo** (Calm). What Tino says still follows the communication defined in the Cérebro, as in text replies.
+  </Accordion>
+  <Accordion title="How much does each audio cost?">
+  Each provider's card shows the approximate cost in credits per minute. The actual usage of each audio appears in the Credits statement, under **Tino - Resposta em áudio** (Tino - Audio reply).
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related articles
+
+<Lista>
+  <Artigo titulo="Turn Tino on in a channel" href="/en/agentes/tino/ia-por-canal">Tino's hours, follow-up, and closing in each channel.</Artigo>
+  <Artigo titulo="Create a campaign" href="/en/campanhas/crie-uma-campanha">The campaign wizard, from goal to launch.</Artigo>
+  <Artigo titulo="Credits explained" href="/en/visao-geral/creditos-explicados">What uses credits and where to track it.</Artigo>
+</Lista>
