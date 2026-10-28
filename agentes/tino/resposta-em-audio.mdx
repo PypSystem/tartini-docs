@@ -1,0 +1,131 @@
+---
+title: "Faça o Tino responder em áudio"
+sidebarTitle: "Resposta em áudio"
+description: "O Tino responde com nota de voz, como um áudio gravado na hora, na voz e no tom que você escolher."
+---
+
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
+Com a resposta em áudio, o Tino responde com nota de voz, igual a um áudio gravado na hora. Você escolhe quando isso acontece, a voz e o tom.
+
+<Note>Quem configura: Administrador, Gestor da Empresa e Gestor de Área. Disponível no plano Scale. Vale no WhatsApp oficial, no WhatsApp via QR Code e no Telegram. No chat do site e no Instagram, o Tino responde sempre em texto.</Note>
+
+---
+
+## Escolha quando o Tino responde em áudio
+
+Por padrão, o Tino responde em áudio **Quando o cliente mandar áudio**. São três opções:
+
+- **Nunca**: o Tino responde sempre em texto.
+- **Quando o cliente mandar áudio**: se a última mensagem do cliente foi um áudio, o Tino responde em áudio. Se foi texto, responde em texto.
+- **Sempre**: toda resposta do Tino vai em áudio.
+
+Onde fica: **Configurações > Atendimento > IA por canal**, no detalhe do canal, no card **Resposta em áudio**.
+
+<Steps>
+  <Step title="Abra o canal">Vá em **Configurações > Atendimento > IA por canal** e clique no canal na lista à esquerda.</Step>
+  <Step title="Escolha a opção">No card **Resposta em áudio**, marque **Nunca**, **Quando o cliente mandar áudio** ou **Sempre**.</Step>
+  <Step title="Salve">Clique em **Salvar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/tino/resposta-em-audio-modo.png | alt: card Resposta em áudio no detalhe do canal com as três opções | olhar: a opção Quando o cliente mandar áudio marcada */}
+
+Enquanto o áudio é preparado, o cliente vê "gravando áudio...", como quando alguém grava uma nota de voz.
+
+---
+
+## Escolha a voz e o tom
+
+Com **Quando o cliente mandar áudio** ou **Sempre** marcado, o card mostra a voz e o tom.
+
+Cada fornecedor de voz aparece com o custo aproximado em créditos por minuto de áudio e o tempo médio para gerar 30 segundos de fala. O tempo é a média das respostas recentes; enquanto não houver respostas suficientes, aparece o tempo medido nos nossos testes.
+
+<Steps>
+  <Step title="Escolha o fornecedor">Clique no card do fornecedor de voz. A mesma voz pode soar diferente em cada um.</Step>
+  <Step title="Escolha a voz">No campo **Voz**, escolha uma das vozes, separadas em femininas, masculinas e neutras.</Step>
+  <Step title="Escolha o tom">Marque **Natural**, **Formal**, **Animado** ou **Calmo**.</Step>
+  <Step title="Ouça antes de salvar">Clique em **Ouvir amostra** para ouvir a mesma frase com a voz e o tom escolhidos.</Step>
+  <Step title="Salve">Clique em **Salvar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/tino/resposta-em-audio-voz.png | alt: cards de fornecedor com créditos por minuto e tempo de geração, campo Voz, botão Ouvir amostra e opções de tom | olhar: o botão Ouvir amostra ao lado do campo Voz */}
+
+<Warning>
+  O áudio consome créditos, além do que o Tino já consome para escrever a resposta. O consumo aparece no extrato de [Créditos](/visao-geral/creditos-explicados) como **Tino - Resposta em áudio**. Ouvir a amostra não consome créditos.
+</Warning>
+
+<Note>
+  As vozes são as que o fornecedor oferece. Não é possível gravar ou copiar a voz de uma pessoa.
+</Note>
+
+---
+
+## Dê a uma campanha uma regra própria
+
+Por padrão, a campanha segue a resposta em áudio do canal. Você pode dar a ela uma regra própria, com outra voz ou outro tom.
+
+Onde fica: no assistente da campanha, **Passo 3**, em **Configurações avançadas**.
+
+<Steps>
+  <Step title="Abra as configurações avançadas">No **Passo 3** do assistente, clique em **Configurações avançadas**.</Step>
+  <Step title="Ligue a regra própria">Ative o botão de **resposta em áudio**. Desligado, vale a configuração do canal.</Step>
+  <Step title="Escolha quando, a voz e o tom">Faça as mesmas escolhas do canal e clique em **Ouvir amostra** para conferir.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/criar-passo3-resposta-em-audio.png | alt: Configurações avançadas do passo 3 com a resposta em áudio própria ligada | olhar: o botão que liga a regra própria da campanha */}
+
+<Note>
+  Na campanha, só as respostas do Tino às mensagens do contato podem virar áudio. A abertura e as retomadas vão sempre em texto.
+</Note>
+
+---
+
+## O que continua em texto
+
+Mesmo com a resposta em áudio ligada, o Tino usa texto nestes casos:
+
+- **Dados para copiar.** Links, chaves PIX, códigos, valores, endereços e listas também chegam numa mensagem de texto junto do áudio, para o cliente copiar.
+- **Resposta longa.** Uma resposta que passaria de 1 minuto de áudio vai em texto.
+- **Falha no áudio.** Se o áudio não puder ser gerado, a resposta vai em texto. O cliente nunca fica sem resposta.
+- **Mensagens fixas.** As mensagens que você configura, como fora do horário, follow-up, encerramento e [pesquisa de satisfação](/atendimento/pesquisa-de-satisfacao), vão como você escreveu.
+- **Templates do WhatsApp oficial.** A abertura de campanha e as mensagens depois de 24 horas sem resposta exigem template aprovado, que é sempre texto.
+- **Aviso de que o atendimento é automático.** Quando o canal tem o aviso ligado, ele vai por escrito antes do áudio. O áudio não diz que a voz é sintetizada.
+
+---
+
+## Acompanhe as respostas em áudio na Inbox
+
+Na [Inbox](/inbox/atenda-uma-conversa), a nota de voz do Tino aparece com o player e, logo abaixo, o texto do que ele falou, em **O que o Tino falou**. A equipe lê a resposta sem precisar ouvir.
+
+O Scout e o resumo da conversa leem esse mesmo texto, então a conversa é avaliada do mesmo jeito que uma conversa em texto.
+
+{/* CAPTURA: images/inbox/nota-de-voz-do-tino.png | alt: mensagem do Tino na Inbox com o player de áudio e o bloco O que o Tino falou | olhar: o texto abaixo do player */}
+
+---
+
+## Perguntas frequentes
+
+<AccordionGroup>
+  <Accordion title="O cliente mandou um áudio e o Tino respondeu em texto. Por quê?">
+  Confira a opção do canal, ou da campanha, se ela tiver regra própria. Com **Nunca**, a resposta é sempre texto. Com a opção certa, a resposta pode ter ido em texto por ser longa demais para 1 minuto de áudio ou por falha na geração do áudio.
+  </Accordion>
+  <Accordion title="Posso usar vozes diferentes em canais diferentes?">
+  Sim. A voz e o tom são escolhidos canal por canal, e cada campanha pode ter os seus.
+  </Accordion>
+  <Accordion title="O áudio sai com o tom de voz do Cérebro?">
+  O tom da fala é o que você escolhe no card: **Natural**, **Formal**, **Animado** ou **Calmo**. O que o Tino diz continua seguindo a comunicação definida no Cérebro, como nas respostas em texto.
+  </Accordion>
+  <Accordion title="Quanto custa cada áudio?">
+  O card de cada fornecedor mostra o custo aproximado em créditos por minuto. O consumo real de cada áudio aparece no extrato de Créditos, em **Tino - Resposta em áudio**.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artigos relacionados
+
+<Lista>
+  <Artigo titulo="Ligue o Tino em um canal" href="/agentes/tino/ia-por-canal">Horário, follow-up e encerramento do Tino em cada canal.</Artigo>
+  <Artigo titulo="Crie uma campanha" href="/campanhas/crie-uma-campanha">O assistente de campanha, do objetivo ao lançamento.</Artigo>
+  <Artigo titulo="Créditos explicados" href="/visao-geral/creditos-explicados">O que consome créditos e onde acompanhar.</Artigo>
+</Lista>

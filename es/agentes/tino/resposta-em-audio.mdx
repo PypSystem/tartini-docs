@@ -1,0 +1,135 @@
+---
+title: "Haz que Tino responda con audio"
+sidebarTitle: "Respuesta con audio"
+description: "Tino responde con una nota de voz, como un audio grabado en el momento, con la voz y el tono que elijas."
+---
+
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
+Con la respuesta con audio, Tino responde con una nota de voz, igual que un audio grabado en el momento. Tú eliges cuándo pasa, la voz y el tono.
+
+<Note>
+Quién configura: Administrador, Gestor de la Empresa y Gestor de Área. Disponible en el plan Scale. Funciona en WhatsApp oficial, WhatsApp por código QR y Telegram. En el chat del sitio y en Instagram, Tino responde siempre en texto.
+
+La interfaz de Tartini está en portugués. Los nombres de pantallas y botones aparecen aquí tal como se ven en pantalla, con la traducción entre paréntesis.
+</Note>
+
+---
+
+## Elige cuándo Tino responde con audio
+
+De forma predeterminada, Tino responde con audio **Quando o cliente mandar áudio** (Cuando el cliente envíe audio). Hay tres opciones:
+
+- **Nunca**: Tino responde siempre en texto.
+- **Quando o cliente mandar áudio** (Cuando el cliente envíe audio): si el último mensaje del cliente fue un audio, Tino responde con audio. Si fue texto, responde en texto.
+- **Sempre** (Siempre): toda respuesta de Tino sale en audio.
+
+Dónde está: **Configurações > Atendimento > IA por canal** (Configuración > Atención > IA por canal), en el detalle del canal, en la tarjeta **Resposta em áudio** (Respuesta con audio).
+
+<Steps>
+  <Step title="Abre el canal">Ve a **Configurações > Atendimento > IA por canal** (Configuración > Atención > IA por canal) y haz clic en el canal en la lista de la izquierda.</Step>
+  <Step title="Elige la opción">En la tarjeta **Resposta em áudio** (Respuesta con audio), marca **Nunca**, **Quando o cliente mandar áudio** (Cuando el cliente envíe audio) o **Sempre** (Siempre).</Step>
+  <Step title="Guarda">Haz clic en **Salvar** (Guardar).</Step>
+</Steps>
+
+{/* CAPTURA: images/tino/resposta-em-audio-modo.png | alt: card Resposta em áudio no detalhe do canal com as três opções | olhar: a opção Quando o cliente mandar áudio marcada */}
+
+Mientras se prepara el audio, el cliente ve "grabando audio...", como cuando alguien graba una nota de voz.
+
+---
+
+## Elige la voz y el tono
+
+Con **Quando o cliente mandar áudio** (Cuando el cliente envíe audio) o **Sempre** (Siempre) marcado, la tarjeta muestra la voz y el tono.
+
+Cada proveedor de voz aparece con el costo aproximado en créditos por minuto de audio y el tiempo promedio para generar 30 segundos de habla. El tiempo es el promedio de las respuestas recientes; mientras no haya respuestas suficientes, aparece el tiempo medido en nuestras pruebas.
+
+<Steps>
+  <Step title="Elige el proveedor">Haz clic en la tarjeta del proveedor de voz. La misma voz puede sonar distinta en cada uno.</Step>
+  <Step title="Elige la voz">En el campo **Voz**, elige una de las voces, separadas en femeninas, masculinas y neutras.</Step>
+  <Step title="Elige el tono">Marca **Natural**, **Formal**, **Animado** o **Calmo** (Tranquilo).</Step>
+  <Step title="Escucha antes de guardar">Haz clic en **Ouvir amostra** (Escuchar muestra) para oír la misma frase con la voz y el tono elegidos.</Step>
+  <Step title="Guarda">Haz clic en **Salvar** (Guardar).</Step>
+</Steps>
+
+{/* CAPTURA: images/tino/resposta-em-audio-voz.png | alt: cards de fornecedor com créditos por minuto e tempo de geração, campo Voz, botão Ouvir amostra e opções de tom | olhar: o botão Ouvir amostra ao lado do campo Voz */}
+
+<Warning>
+  El audio consume créditos, además de lo que Tino ya consume para escribir la respuesta. El consumo aparece en el extracto de [Créditos](/es/visao-geral/creditos-explicados) como **Tino - Resposta em áudio** (Tino - Respuesta con audio). Escuchar la muestra no consume créditos.
+</Warning>
+
+<Note>
+  Las voces son las que ofrece el proveedor. No es posible grabar ni copiar la voz de una persona.
+</Note>
+
+---
+
+## Dale a una campaña una regla propia
+
+De forma predeterminada, la campaña sigue la respuesta con audio del canal. Puedes darle una regla propia, con otra voz u otro tono.
+
+Dónde está: en el asistente de la campaña, **Passo 3** (Paso 3), en **Configurações avançadas** (Configuración avanzada).
+
+<Steps>
+  <Step title="Abre la configuración avanzada">En el **Passo 3** (Paso 3) del asistente, haz clic en **Configurações avançadas** (Configuración avanzada).</Step>
+  <Step title="Activa la regla propia">Activa el botón de **resposta em áudio** (respuesta con audio). Desactivado, vale la configuración del canal.</Step>
+  <Step title="Elige cuándo, la voz y el tono">Haz las mismas elecciones que en el canal y haz clic en **Ouvir amostra** (Escuchar muestra) para comprobar.</Step>
+</Steps>
+
+{/* CAPTURA: images/campanhas/criar-passo3-resposta-em-audio.png | alt: Configurações avançadas do passo 3 com a resposta em áudio própria ligada | olhar: o botão que liga a regra própria da campanha */}
+
+<Note>
+  En la campaña, solo las respuestas de Tino a los mensajes del contacto pueden volverse audio. La apertura y las retomas salen siempre en texto.
+</Note>
+
+---
+
+## Lo que sigue en texto
+
+Incluso con la respuesta con audio activada, Tino usa texto en estos casos:
+
+- **Datos para copiar.** Enlaces, claves PIX, códigos, valores, direcciones y listas también llegan en un mensaje de texto junto con el audio, para que el cliente los copie.
+- **Respuesta larga.** Una respuesta que pasaría de 1 minuto de audio sale en texto.
+- **Falla en el audio.** Si el audio no se puede generar, la respuesta sale en texto. El cliente nunca se queda sin respuesta.
+- **Mensajes fijos.** Los mensajes que configuras, como fuera de horario, follow-up, cierre y [encuesta de satisfacción](/es/atendimento/pesquisa-de-satisfacao), salen como los escribiste.
+- **Plantillas de WhatsApp oficial.** La apertura de campaña y los mensajes después de 24 horas sin respuesta exigen una plantilla aprobada, que siempre es texto.
+- **Aviso de que la atención es automática.** Cuando el canal tiene el aviso activado, sale por escrito antes del audio. El audio no dice que la voz es sintetizada.
+
+---
+
+## Acompaña las respuestas con audio en la Inbox
+
+En la [Inbox](/es/inbox/atenda-uma-conversa), la nota de voz de Tino aparece con el reproductor y, justo debajo, el texto de lo que dijo, en **O que o Tino falou** (Lo que dijo Tino). El equipo lee la respuesta sin tener que escucharla.
+
+Scout y el resumen de la conversación leen ese mismo texto, así que la conversación se evalúa igual que una conversación en texto.
+
+{/* CAPTURA: images/inbox/nota-de-voz-do-tino.png | alt: mensagem do Tino na Inbox com o player de áudio e o bloco O que o Tino falou | olhar: o texto abaixo do player */}
+
+---
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="El cliente envió un audio y Tino respondió en texto. ¿Por qué?">
+  Revisa la opción del canal, o de la campaña, si tiene regla propia. Con **Nunca**, la respuesta es siempre texto. Con la opción correcta, la respuesta pudo salir en texto por ser demasiado larga para 1 minuto de audio o por una falla al generar el audio.
+  </Accordion>
+  <Accordion title="¿Puedo usar voces distintas en canales distintos?">
+  Sí. La voz y el tono se eligen canal por canal, y cada campaña puede tener los suyos.
+  </Accordion>
+  <Accordion title="¿El audio sale con el tono de voz del Cérebro?">
+  El tono del habla es el que eliges en la tarjeta: **Natural**, **Formal**, **Animado** o **Calmo** (Tranquilo). Lo que Tino dice sigue la comunicación definida en el Cérebro, como en las respuestas en texto.
+  </Accordion>
+  <Accordion title="¿Cuánto cuesta cada audio?">
+  La tarjeta de cada proveedor muestra el costo aproximado en créditos por minuto. El consumo real de cada audio aparece en el extracto de Créditos, en **Tino - Resposta em áudio** (Tino - Respuesta con audio).
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artículos relacionados
+
+<Lista>
+  <Artigo titulo="Activa a Tino en un canal" href="/es/agentes/tino/ia-por-canal">Horario, follow-up y cierre de Tino en cada canal.</Artigo>
+  <Artigo titulo="Crea una campaña" href="/es/campanhas/crie-uma-campanha">El asistente de campaña, del objetivo al lanzamiento.</Artigo>
+  <Artigo titulo="Créditos explicados" href="/es/visao-geral/creditos-explicados">Qué consume créditos y dónde acompañarlo.</Artigo>
+</Lista>
