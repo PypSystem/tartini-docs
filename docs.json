@@ -156,6 +156,7 @@
                     "pages": [
                       "agentes/tino/o-tino-explicado",
                       "agentes/tino/ia-por-canal",
+                      "agentes/tino/resposta-em-audio",
                       "agentes/tino/handoff"
                     ]
                   },
