@@ -1,0 +1,147 @@
+---
+title: "Agende um follow-up"
+sidebarTitle: "Follow-ups"
+description: "Registre o combinado com o contato no Tartini e receba um lembrete na data ou deixe a IA retomar a conversa."
+---
+
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
+O combinado para depois fica registrado no contato, onde a conversa acontece. Na data marcada, o Tartini avisa quem precisa agir ou a IA escreve para o cliente.
+
+<Note>
+  Quem pode atender o contato pode agendar follow-up para ele. A opção **IA entra em contato** depende do plano em que o Tino fala com o cliente.
+</Note>
+
+---
+
+## Lembrete ou IA
+
+Ao agendar, você escolhe quem faz o contato:
+
+- **Lembrete:** na data marcada, o Tartini avisa você ou a equipe que é hora de retomar o contato.
+- **IA entra em contato:** na data marcada, a IA escreve para o contato no canal dele, a partir do motivo que você deixou.
+
+Isto é diferente do follow-up automático que a IA faz quando o cliente para de responder no meio de uma conversa. Esse continua como está.
+
+---
+
+## Agende pela conversa ou pela ficha
+
+Por padrão o contato não tem follow-up agendado.
+
+Onde fica: na conversa aberta, no cabeçalho, o ícone de calendário (tooltip "Agendar follow-up"). No celular: menu > **Agendar follow-up**. Na ficha do contato, o botão **Agendar follow-up** fica no canto superior direito, ao lado de **Abrir conversa**.
+
+<Steps>
+  <Step title="Escolha a data e a hora">Use os atalhos **Amanhã**, **Em 3 dias**, **Em 1 semana** ou **Em 1 mês**, ou escolha no calendário.</Step>
+  <Step title="Escreva o motivo">Um texto curto do que precisa ser feito. Ex.: "perguntar se conseguiu avaliar o orçamento enviado na terça".</Step>
+  <Step title="Escolha quem faz">**Lembrete** ou **IA entra em contato**.</Step>
+  <Step title="Complete a escolha">No lembrete, marque **Só para mim** ou **Para a equipe**. Na IA, escolha o que acontece quando o cliente responder.</Step>
+  <Step title="Clique em Agendar">O follow-up aparece na conversa e no item **Follow-ups** do Inbox.</Step>
+</Steps>
+
+{/* CAPTURA: images/inbox/follow-up-agendar.png | alt: janela Agendar follow-up com data, atalhos, motivo e a escolha Lembrete ou IA entra em contato | olhar: a escolha de quem faz */}
+
+<Note>
+  Um contato pode ter mais de um follow-up agendado. Enquanto houver um pendente, a conversa mostra uma faixa acima das mensagens, por exemplo "Follow-up agendado para 05/11 às 10:00 · Lembrete para a equipe". Assim, quem atender o contato antes da data sabe que existe um combinado.
+</Note>
+
+---
+
+## Receba o lembrete
+
+Na hora marcada, quem recebe o lembrete e está logado vê um aviso na tela. Clique no aviso para abrir a conversa.
+
+- **Só para mim:** só quem criou vê o lembrete, e só essa pessoa pode editar ou cancelar.
+- **Para a equipe:** todos que atendem a unidade do contato veem o lembrete. Qualquer pessoa da equipe pode marcar como feito, e o Tartini registra quem fez.
+
+O lembrete fica pendente até alguém marcar como feito, reagendar ou cancelar. O número ao lado de **Follow-ups**, no menu do Inbox, mostra os lembretes do dia e os atrasados.
+
+---
+
+## Deixe a IA entrar em contato
+
+Na hora marcada, a IA lê o histórico de conversas com o contato, a ficha dele e o motivo que você deixou. Então escreve a mensagem com o tom de voz e o conhecimento da empresa.
+
+- Se o assunto já foi tratado antes da data, a IA não envia e registra o motivo no follow-up. A situação fica **Não enviado (assunto já tratado)**.
+- Se não houver conversa aberta com o contato, o envio abre uma nova, que aparece no Inbox como qualquer outra.
+
+Quando o cliente responde, vale o que você escolheu ao agendar:
+
+- **A IA continua a conversa:** a IA segue o atendimento. Se a IA estiver desligada no canal nesse momento, a conversa vai para quem agendou.
+- **A conversa vem para mim:** a conversa é transferida para quem agendou.
+
+<Warning>
+  A mensagem enviada pela IA consome créditos como qualquer resposta da IA.
+</Warning>
+
+Se o envio falhar, por exemplo com o canal desconectado, o contato bloqueado ou o template indisponível, o follow-up fica como **Falhou**, com o motivo. Quem agendou recebe um aviso no Tartini e pode reagendar.
+
+---
+
+## Regras de cada canal
+
+O que a IA pode fazer depende do que cada canal permite. Quando o canal limita, a janela de agendamento explica o motivo na hora.
+
+| Canal | IA entra em contato |
+|---|---|
+| WhatsApp oficial (WABA) | Até 24h depois da última mensagem do cliente, a IA escreve. Para uma data além disso, você escolhe um template aprovado e preenche as variáveis. Se o cliente escrever nas 24h antes do envio, a IA escreve no lugar do template. |
+| WhatsApp não oficial | A IA escreve, sem limite de prazo. |
+| Instagram | A IA só pode escrever até 24h depois da última mensagem do contato. Para uma data além disso, só lembrete. |
+| Telegram | A IA escreve: o contato já conversou com a sua conta no Telegram. |
+| Chat do site | Só lembrete: o visitante só recebe mensagens enquanto está no site. |
+
+Em grupos, só lembrete.
+
+{/* CAPTURA: images/inbox/follow-up-template.png | alt: janela Agendar follow-up num contato do WhatsApp oficial com o aviso das 24h e a escolha do template | olhar: o aviso e o seletor de template */}
+
+---
+
+## Acompanhe os follow-ups
+
+Onde fica: **Inbox** > **Follow-ups**, no menu do Inbox.
+
+A lista separa os follow-ups em **Atrasados**, **Hoje**, **Próximos** e **Concluídos**. Use os filtros **Meus** e **Da equipe**, e **Lembrete** e **IA**, para recortar a lista.
+
+Cada item mostra o contato, o canal, a data e a hora, o motivo, quem criou, para quem é e a situação. As ações ficam no próprio item: abrir a conversa, marcar como feito, reagendar, editar e cancelar.
+
+| Situação | O que significa |
+|---|---|
+| Agendado | Aguardando a data, ou lembrete vencido ainda sem ação |
+| Feito | Alguém marcou o lembrete como feito |
+| Enviado pela IA | A IA escreveu para o contato |
+| Respondido | O cliente respondeu à mensagem da IA |
+| Não enviado (assunto já tratado) | A IA viu que o assunto já tinha sido resolvido e registrou o motivo |
+| Falhou | O envio da IA não aconteceu; o motivo aparece no item |
+| Cancelado | Alguém cancelou o follow-up |
+
+{/* CAPTURA: images/inbox/follow-ups-lista.png | alt: lista Follow-ups do Inbox com os grupos Atrasados, Hoje e Próximos | olhar: o número ao lado de Follow-ups no menu */}
+
+<Note>
+  Os follow-ups da equipe e os da IA podem ser editados e cancelados por quem criou, pelo Administrador e pelo Gestor. Reagendar um follow-up que falhou ou não foi enviado volta a deixá-lo agendado.
+</Note>
+
+---
+
+## Perguntas frequentes
+
+<AccordionGroup>
+  <Accordion title="O aviso chega por e-mail ou no celular?">
+    Não. O aviso aparece só dentro do Tartini, para quem está logado na hora marcada. Quem entrar depois encontra o lembrete em **Follow-ups**.
+  </Accordion>
+  <Accordion title="Dá para agendar um follow-up que se repete todo mês?">
+    Não. Cada follow-up vale para uma data. Depois de concluir, agende o próximo.
+  </Accordion>
+  <Accordion title="Dá para agendar para vários contatos de uma vez?">
+    Não. Follow-up é por contato. Para falar com muitos contatos ao mesmo tempo, use uma campanha.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artigos relacionados
+
+<Lista>
+  <Artigo titulo="Atenda uma conversa" href="/inbox/atenda-uma-conversa">Responder, usar a IA e acompanhar a conversa no Inbox.</Artigo>
+  <Artigo titulo="A ficha do contato" href="/inbox/ficha-do-contato">O que fica registrado sobre cada contato.</Artigo>
+  <Artigo titulo="Transfira, anote e marque conversas" href="/inbox/transfira-notas-e-tags">Levar a conversa para a pessoa certa.</Artigo>
+</Lista>
