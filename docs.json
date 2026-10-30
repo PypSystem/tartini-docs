@@ -23,6 +23,11 @@
           "href": "https://www.tartini.com.br"
         },
         {
+          "anchor": "Novidades",
+          "icon": "newspaper",
+          "href": "https://www.saninternet.com/tartini/novidades"
+        },
+        {
           "anchor": "Dashboard",
           "icon": "gauge",
           "href": "https://app.tartini.com.br"
