@@ -187,3 +187,14 @@ samp {
 .chat-assistant-floating-input {
   display: none !important;
 }
+
+/* Tabela dentro de sanfona. O Mintlify estica a tabela 20px para cada lado
+   (largura 100% + 40px com margem negativa), pensando no corpo da página; na
+   sanfona isso passa da borda e abre rolagem lateral mesmo com o texto
+   quebrando. Aqui a tabela fica na largura do conteúdo da sanfona. */
+.accordion-content [data-table-wrapper] {
+  --page-padding: 0px;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
