@@ -1,0 +1,134 @@
+---
+title: "Use o Tartini no Claude"
+sidebarTitle: "MCP Tartini"
+description: "Consulte e monte processos conversando com o Claude, com as mesmas permissões que você tem no painel."
+---
+
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
+Com o Tartini conectado ao Claude, você pede em uma conversa e ele faz no painel: lista os processos, escreve um processo novo a partir de uma descrição, ajusta as etapas e avalia o que o Tino consegue fazer sozinho. As instruções ficam em **Configurações > Integrações > MCP Tartini**.
+
+<Note>
+  Cada pessoa conecta a própria conta, e o assistente age com o papel dela: o que você não pode fazer no painel, ele também não pode. As ferramentas de processos e de conectores fazem parte dos planos Scale e Enterprise.
+</Note>
+
+---
+
+## Conecte o Claude
+
+Por padrão, nenhum assistente está conectado. O endereço do servidor aparece na tela **MCP Tartini**, com o botão **Copiar** ao lado.
+
+<Steps>
+  <Step title="Copie o endereço">Em **Configurações > Integrações > MCP Tartini**, clique em **Copiar** ao lado do endereço do servidor.</Step>
+  <Step title="Adicione o conector no Claude">No Claude, abra **Configurações > Conectores** e clique em **Adicionar conector personalizado**. Dê o nome Tartini e cole o endereço.</Step>
+  <Step title="Entre com a sua conta">Clique em **Conectar**. Abre uma tela do Tartini: entre com o seu e-mail e senha, se ainda não estiver no painel.</Step>
+  <Step title="Escolha a empresa e o acesso">Se você está em mais de uma empresa, escolha qual o Claude vai usar. Ligue **Somente consulta** se ele só deve ler, e clique em **Conectar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/integracoes/assistentes-de-ia-conectar.png | alt: tela Conectar do Tartini com a escolha da empresa e a chave Somente consulta | olhar: a chave Somente consulta e o botão Conectar */}
+
+<Note>
+  Em contas de organização do Claude, pode ser preciso que o administrador da organização adicione o conector antes.
+</Note>
+
+### No Claude Code
+
+A tela **MCP Tartini** traz o comando pronto, com o botão **Copiar**. Rode o comando no terminal e, no Claude Code, use `/mcp` para entrar com a sua conta.
+
+### Em outros assistentes
+
+Qualquer assistente que aceite servidor MCP remoto com login conecta pelo mesmo endereço, com os mesmos passos de entrada e escolha do acesso.
+
+---
+
+## Peça ao Claude
+
+Depois de conectado, peça em linguagem natural. O Claude escolhe a ferramenta certa e mostra o que fez, com o link para abrir no painel.
+
+- "Liste os processos inativos da minha empresa."
+- "Já existe um processo de troca de produto com defeito?"
+- "Crie um processo de agendamento de consulta a partir deste texto." e cole o roteiro da sua clínica.
+- "Na etapa 3 do processo de orçamento, peça também o CEP."
+- "Quando o processo de cancelamento terminar sem acordo, transfira para o setor Financeiro."
+- "Avalie o processo de segunda via de boleto e me diga o que falta para o Tino fazer sozinho."
+- "Como foi a operação na última semana em comparação com a anterior?"
+
+O Claude confere antes de criar: procura processos parecidos e usa só setores, canais e campos que existem na sua empresa.
+
+<Tip>
+  Um processo criado pelo Claude entra ativo, como na tela, e o Tino passa a seguir. Peça para criar inativo se quiser revisar antes no painel.
+</Tip>
+
+---
+
+## Ferramentas disponíveis
+
+O Claude só vê as ferramentas que o plano da empresa inclui e que o seu papel permite usar. Em **Somente consulta**, só as de leitura.
+
+| Ferramenta | O que faz | Quem usa |
+|---|---|---|
+| Listar processos | Lista os processos, todos ou só os ativos. | Quem vê processos |
+| Ver processo | Abre um processo inteiro: etapas, gatilhos, saídas e a avaliação da IA. | Quem vê processos |
+| Buscar processos parecidos | Procura processos do mesmo assunto, ativos ou não, antes de criar outro. | Quem vê processos |
+| Ver o que um processo pode usar | Mostra os setores, canais, campos de qualificação e ferramentas da empresa. | Quem vê processos |
+| Ver ferramentas do processo | Mostra as ferramentas que o Tino tem à mão quando segue o processo. | Quem vê processos |
+| Criar processo | Cria um processo no mesmo formato da tela. | Administrador e Gestor da Empresa |
+| Editar processo | Muda só o que você pediu e mantém o resto. | Administrador e Gestor da Empresa |
+| Ativar ou desativar processo | Liga ou desliga um processo sem apagá-lo. | Administrador e Gestor da Empresa |
+| Definir saída do processo | Diz o que acontece quando o processo termina: transferir para um setor, encerrar ou outra saída. | Administrador e Gestor da Empresa |
+| Avaliar capacidade da IA no processo | É o botão **Avaliar capacidade** da tela: avalia etapa por etapa o que o Tino faz sozinho. | Administrador e Gestor da Empresa |
+| Listar conectores | Lista os conectores da empresa e as ferramentas de cada um. | Todos, no plano com Conectores |
+| Visão da operação no período | Traz os números de **Métricas > Operação** num período, comparados ao anterior. | Quem vê Métricas, no recorte do seu papel |
+
+<Warning>
+  Avaliar a capacidade da IA consome créditos da empresa, como o botão da tela. Criar ou editar um processo não avalia sozinho: peça a avaliação quando terminar as mudanças.
+</Warning>
+
+Quando a avaliação encontra uma etapa que precisa de um conector, ela vincula o conector ao processo. Escolher só algumas ferramentas, escrever a instrução de uso e desvincular continuam na tela do processo, na seção **Ferramentas**.
+
+O que o Claude não faz: apagar processos, mudar a configuração dos conectores e ler as conversas dos seus clientes.
+
+---
+
+## Veja e desconecte os assistentes
+
+Onde fica: **Configurações > Pessoal > Segurança**, seção **Assistentes de IA conectados**. A mesma lista aparece no fim da tela **MCP Tartini**.
+
+<Steps>
+  <Step title="Encontre a conexão">Cada linha mostra o assistente, a empresa, se é somente consulta e quando foi usado pela última vez.</Step>
+  <Step title="Desconecte">Clique em **Desconectar** e confirme. O assistente perde o acesso na hora.</Step>
+</Steps>
+
+{/* CAPTURA: images/conta/seguranca-assistentes-de-ia.png | alt: seção Assistentes de IA conectados na tela Segurança com uma conexão do Claude | olhar: a linha da conexão e o botão Desconectar */}
+
+<Note>
+  O Administrador vê também a seção **Assistentes de IA na empresa**, com as conexões de todas as pessoas, e pode desconectar qualquer uma.
+</Note>
+
+---
+
+## Perguntas frequentes
+
+<AccordionGroup>
+  <Accordion title="O Claude disse que não pode criar o processo.">
+  Criar e editar processos é do Administrador e do Gestor da Empresa. Confira também se a conexão não está em **Somente consulta**: para mudar, desconecte e conecte de novo sem a chave.
+  </Accordion>
+  <Accordion title="Mudei o papel de uma pessoa. O assistente dela continua com o acesso antigo?">
+  Não. O papel é conferido a cada pedido, então a mudança vale já no pedido seguinte.
+  </Accordion>
+  <Accordion title="Uma ferramenta nova não aparece no Claude.">
+  O Claude carrega a lista de ferramentas quando conecta. No Claude Code, use `/mcp` e escolha reconectar. {/* CONFIRMAR: como recarregar as ferramentas no Claude site e aplicativo (conversa nova ou reconectar o conector). */}
+  </Accordion>
+  <Accordion title="Usar o Claude consome créditos do Tartini?">
+  Só a avaliação da capacidade da IA, como na tela. As outras ferramentas não consomem créditos do Tartini. A conversa com o Claude segue o plano que você tem no Claude.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artigos relacionados
+
+<Lista>
+  <Artigo titulo="Processos explicados" href="/cerebro/processos-explicados">O que o Claude cria e edita por você.</Artigo>
+  <Artigo titulo="Conecte ferramentas externas à IA" href="/integracoes/conectores">O caminho inverso: o Tino usa outros sistemas.</Artigo>
+</Lista>
