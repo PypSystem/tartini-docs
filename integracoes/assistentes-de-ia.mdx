@@ -1,0 +1,194 @@
+---
+title: "Use o Tartini no Claude"
+sidebarTitle: "MCP Tartini"
+description: "Monte processos, listas e campanhas conversando com o Claude, com as mesmas permissões que você tem no painel."
+---
+
+import { Lista, Artigo } from "/components/lista-artigos.jsx";
+
+Com o Tartini conectado ao Claude, você pede em uma conversa e ele faz no painel: escreve um processo a partir de uma descrição, monta uma lista de público com a planilha que você já tem, cria a campanha, testa com clientes simulados e ativa quando você der o sinal. As instruções ficam em **Configurações > Integrações > MCP Tartini**.
+
+<Note>
+  Cada pessoa conecta a própria conta, e o assistente age com o papel dela: o que você não pode fazer no painel, ele também não pode. As ferramentas de processos, conectores e campanhas fazem parte dos planos Scale e Enterprise.
+</Note>
+
+---
+
+## Conecte o Claude
+
+Por padrão, nenhum assistente está conectado. O endereço do servidor aparece na tela **MCP Tartini**, com o botão **Copiar** ao lado.
+
+<Steps>
+  <Step title="Copie o endereço">Em **Configurações > Integrações > MCP Tartini**, clique em **Copiar** ao lado do endereço do servidor.</Step>
+  <Step title="Adicione o conector no Claude">No Claude, abra **Configurações > Conectores** e clique em **Adicionar conector personalizado**. Dê o nome Tartini e cole o endereço.</Step>
+  <Step title="Entre com a sua conta">Clique em **Conectar**. Abre uma tela do Tartini: entre com o seu e-mail e senha, se ainda não estiver no painel.</Step>
+  <Step title="Escolha a empresa e o acesso">Se você está em mais de uma empresa, escolha qual o Claude vai usar. Ligue **Somente consulta** se ele só deve ler, e clique em **Conectar**.</Step>
+</Steps>
+
+{/* CAPTURA: images/integracoes/assistentes-de-ia-conectar.png | alt: tela Conectar do Tartini com a escolha da empresa e a chave Somente consulta | olhar: a chave Somente consulta e o botão Conectar */}
+
+<Note>
+  Em contas de organização do Claude, pode ser preciso que o administrador da organização adicione o conector antes.
+</Note>
+
+### No Claude Code
+
+A tela **MCP Tartini** traz o comando pronto, com o botão **Copiar**. Rode o comando no terminal e, no Claude Code, use `/mcp` para entrar com a sua conta.
+
+### Em outros assistentes
+
+Qualquer assistente que aceite servidor MCP remoto com login conecta pelo mesmo endereço, com os mesmos passos de entrada e escolha do acesso.
+
+---
+
+## Peça ao Claude
+
+Depois de conectado, peça em linguagem natural. O Claude escolhe a ferramenta certa e mostra o que fez, com o link para abrir no painel.
+
+- "Liste os processos inativos da minha empresa."
+- "Já existe um processo de troca de produto com defeito?"
+- "Crie um processo de agendamento de consulta a partir deste texto." e cole o roteiro da sua clínica.
+- "Na etapa 3 do processo de orçamento, peça também o CEP."
+- "Quando o processo de cancelamento terminar sem acordo, transfira para o setor Financeiro."
+- "Avalie o processo de segunda via de boleto e me diga o que falta para o Tino fazer sozinho."
+- "Como foi a operação na última semana em comparação com a anterior?"
+- "Crie uma lista com os clientes desta planilha que vencem em dezembro." e anexe a planilha.
+- "Monte uma campanha de renovação para essa lista, com 10% de desconto até o dia 20 e um lembrete dois dias depois."
+- "Rode os testes da campanha de renovação e me diga o que falhou."
+- "Pause a campanha de Black Friday."
+
+O Claude confere antes de criar: procura processos e listas parecidos e usa só setores, canais e campos que existem na sua empresa.
+
+<Tip>
+  Um processo criado pelo Claude entra ativo, como na tela, e o Tino passa a seguir. Peça para criar inativo se quiser revisar antes no painel.
+</Tip>
+
+---
+
+## Ferramentas disponíveis
+
+O Claude só vê as ferramentas que o plano da empresa inclui e que o seu papel permite usar. Em **Somente consulta**, só as de leitura.
+
+<AccordionGroup>
+  <Accordion title="Processos" icon="diagram-project">
+  Quem vê processos consulta. Criar, editar, ativar, definir saída e avaliar são do Administrador e do Gestor da Empresa. Planos Scale e Enterprise.
+
+  | Ferramenta | O que faz |
+  |---|---|
+  | Listar processos | Lista os processos, todos ou só os ativos. |
+  | Ver processo | Abre um processo inteiro: etapas, gatilhos, saídas e a avaliação da IA. |
+  | Buscar processos parecidos | Procura processos do mesmo assunto, ativos ou não, antes de criar outro. |
+  | Ver o que um processo pode usar | Mostra os setores, canais, campos de qualificação e ferramentas da empresa. |
+  | Ver ferramentas do processo | Mostra as ferramentas que o Tino tem à mão quando segue o processo. |
+  | Criar processo | Cria um processo no mesmo formato da tela. |
+  | Editar processo | Muda só o que você pediu e mantém o resto. |
+  | Ativar ou desativar processo | Liga ou desliga um processo sem apagá-lo. |
+  | Definir saída do processo | Diz o que acontece quando o processo termina: transferir para um setor, encerrar ou outra saída. |
+  | Avaliar capacidade da IA no processo | É o botão **Avaliar capacidade** da tela: avalia etapa por etapa o que o Tino faz sozinho. |
+  </Accordion>
+  <Accordion title="Conectores" icon="plug">
+  Todos consultam. Planos com Conectores (Scale e Enterprise).
+
+  | Ferramenta | O que faz |
+  |---|---|
+  | Listar conectores | Lista os conectores da empresa e as ferramentas de cada um. |
+  </Accordion>
+  <Accordion title="Listas de público" icon="list-check">
+  Administrador e gestores de qualquer nível.
+
+  | Ferramenta | O que faz |
+  |---|---|
+  | Listar listas de público | Lista as listas da empresa, com quantas pessoas estão prontas e quantas estão com problema. |
+  | Ver lista de público | Mostra os campos da lista e as pessoas com problema, com o motivo. |
+  | Criar lista de público | Cria a lista e importa as pessoas da planilha, como a importação da tela. |
+  | Adicionar pessoas à lista | Importa mais pessoas numa lista. A mesma pessoa atualiza o cadastro em vez de repetir. |
+  </Accordion>
+  <Accordion title="Campanhas" icon="bullhorn">
+  Quem vê campanhas consulta. Criar, editar, testar, ativar e pausar são do Administrador e dos gestores. Planos Scale e Enterprise.
+
+  | Ferramenta | O que faz |
+  |---|---|
+  | Listar campanhas | Lista as campanhas, com a situação e o resultado dos testes. |
+  | Ver campanha | Mostra a configuração e o que ainda impede de ativar. |
+  | Ver o que uma campanha pode usar | Mostra as unidades, os canais, as listas e os processos que valem para a campanha. |
+  | Criar campanha | Cria uma campanha de envio para listas, no mesmo formato da tela. Ela nasce como rascunho. |
+  | Editar campanha | Muda só o que você pediu e mantém o resto. |
+  | Ver cenários de teste | Mostra os clientes simulados e o resultado do último teste de cada um. |
+  | Criar cenário de teste | Cria um cliente simulado e o que se espera da conversa. |
+  | Rodar cenários de teste | Roda os testes da campanha. Antes, mostra quanto vai custar. |
+  | Ver conversa de um teste | Mostra a conversa simulada e o julgamento de cada critério. |
+  | Ativar campanha | Começa o envio, ou retoma uma pausada. Antes, mostra quantas pessoas recebem e pede a sua confirmação. |
+  | Pausar campanha | Para o envio na hora. As conversas já abertas continuam. |
+  </Accordion>
+  <Accordion title="Métricas" icon="chart-line">
+  Quem vê Métricas, no recorte do seu papel: o Gestor de Área vê só a área dele.
+
+  | Ferramenta | O que faz |
+  |---|---|
+  | Visão da operação no período | Traz os números de **Métricas > Operação** num período, comparados ao anterior. |
+  </Accordion>
+</AccordionGroup>
+
+<Warning>
+  Avaliar a capacidade da IA e rodar os testes de campanha consomem créditos da empresa, como na tela. O Claude mostra o custo dos testes e só roda depois que você confirma.
+</Warning>
+
+Criar ou editar um processo não avalia sozinho: peça a avaliação quando terminar as mudanças.
+
+Quando a avaliação encontra uma etapa que precisa de um conector, ela vincula o conector ao processo. Escolher só algumas ferramentas, escrever a instrução de uso e desvincular continuam na tela do processo, na seção **Ferramentas**.
+
+O Claude cria campanhas de envio para listas. O modelo de mensagem do WABA Oficial, os materiais, a resposta em áudio e as campanhas por webhook ou palavra-chave são configurados na tela da campanha.
+
+O que o Claude não faz: apagar processos, listas e campanhas, mudar a configuração dos conectores e ler as conversas dos seus clientes.
+
+---
+
+## Veja e desconecte os assistentes
+
+Onde fica: **Configurações > Pessoal > Segurança**, seção **Assistentes de IA conectados**. A mesma lista aparece no fim da tela **MCP Tartini**.
+
+<Steps>
+  <Step title="Encontre a conexão">Cada linha mostra o assistente, a empresa, se é somente consulta e quando foi usado pela última vez.</Step>
+  <Step title="Desconecte">Clique em **Desconectar** e confirme. O assistente perde o acesso na hora.</Step>
+</Steps>
+
+{/* CAPTURA: images/conta/seguranca-assistentes-de-ia.png | alt: seção Assistentes de IA conectados na tela Segurança com uma conexão do Claude | olhar: a linha da conexão e o botão Desconectar */}
+
+<Note>
+  O Administrador vê também a seção **Assistentes de IA na empresa**, com as conexões de todas as pessoas, e pode desconectar qualquer uma.
+</Note>
+
+---
+
+## Perguntas frequentes
+
+<AccordionGroup>
+  <Accordion title="O Claude disse que não pode criar o processo.">
+  Criar e editar processos é do Administrador e do Gestor da Empresa. Confira também se a conexão não está em **Somente consulta**: para mudar, desconecte e conecte de novo sem a chave.
+  </Accordion>
+  <Accordion title="Mudei o papel de uma pessoa. O assistente dela continua com o acesso antigo?">
+  Não. O papel é conferido a cada pedido, então a mudança vale já no pedido seguinte.
+  </Accordion>
+  <Accordion title="Uma ferramenta nova não aparece no Claude.">
+  O Claude carrega a lista de ferramentas quando conecta. No Claude Code, use `/mcp` e escolha reconectar. {/* CONFIRMAR: como recarregar as ferramentas no Claude site e aplicativo (conversa nova ou reconectar o conector). */}
+  </Accordion>
+  <Accordion title="O Claude pode ativar uma campanha sem eu ver?">
+  Não. Antes de ativar, ele mostra quantas pessoas recebem, o que ainda impede o envio e os avisos, como canal desconectado ou pessoas com cadastro incompleto. A campanha só começa depois que você confirma.
+  </Accordion>
+  <Accordion title="A lista ficou com pessoas com problema. O que faço?">
+  Peça ao Claude para mostrar a lista: ele traz cada pessoa com problema e o motivo, como telefone inválido. Quem tem problema fica na lista e não recebe até o cadastro ser corrigido.
+  </Accordion>
+  <Accordion title="Usar o Claude consome créditos do Tartini?">
+  Só a avaliação da capacidade da IA e os testes de campanha, como na tela. As outras ferramentas não consomem créditos do Tartini. A conversa com o Claude segue o plano que você tem no Claude.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Artigos relacionados
+
+<Lista>
+  <Artigo titulo="Processos explicados" href="/cerebro/processos-explicados">O que o Claude cria e edita por você.</Artigo>
+  <Artigo titulo="Campanhas explicadas" href="/campanhas/campanhas-explicadas">O que o Claude monta e testa por você.</Artigo>
+  <Artigo titulo="Conecte ferramentas externas à IA" href="/integracoes/conectores">O caminho inverso: o Tino usa outros sistemas.</Artigo>
+</Lista>

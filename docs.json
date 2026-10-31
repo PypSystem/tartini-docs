@@ -280,6 +280,7 @@
                 "icon": "plug",
                 "pages": [
                   "integracoes/conectores",
+                  "integracoes/assistentes-de-ia",
                   "integracoes/webhooks",
                   "integracoes/conexao-via-api"
                 ]
