@@ -59,7 +59,8 @@ escreva o que o TU diz e marque a divergência com `CONFIRMAR`.
   identidade é sua"; neuroplasticidade: o Cérebro evolui a cada interação). Em texto
   genérico, "os agentes" no plural.
 - **Menu principal:** Página Inicial · Inbox · Métricas · Central de Conversas · Cérebro
-  · Scout · Campanhas. Configurações no rodapé do menu.
+  · Scout · Campanhas. Configurações, Novidades e Feedback no rodapé do menu (Novidades
+  abre o painel lateral; a página pública fica em https://www.saninternet.com/tartini/novidades).
 - **Configurações:** Empresa (Informações, Áreas & Unidades, Usuários) · Canais
   (WhatsApp Business, Chat Widget, WABA, Conexão via API) · Atendimento (Regras de
   Conversa, IA por canal, Mensagens Rápidas, SLA de Atendimento, Pesquisa de
