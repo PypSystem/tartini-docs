@@ -56,6 +56,8 @@ Depois de conectado, peça em linguagem natural. O Claude escolhe a ferramenta c
 - "Monte uma campanha de renovação para essa lista, com 10% de desconto até o dia 20 e um lembrete dois dias depois."
 - "Rode os testes da campanha de renovação e me diga o que falhou."
 - "Pause a campanha de Black Friday."
+- "O Cérebro já sabe a nossa política de troca?"
+- "Quais regras de Conformidade estão aguardando revisão?"
 
 O Claude confere antes de criar: procura processos e listas parecidos e usa só setores, canais e campos que existem na sua empresa.
 
@@ -85,6 +87,17 @@ O Claude só vê as ferramentas que o plano da empresa inclui e que o seu papel 
   | Ativar ou desativar processo | Liga ou desliga um processo sem apagá-lo. |
   | Definir saída do processo | Diz o que acontece quando o processo termina: transferir para um setor, encerrar ou outra saída. |
   | Avaliar capacidade da IA no processo | É o botão **Avaliar capacidade** da tela: avalia etapa por etapa o que o Tino faz sozinho. |
+  </Accordion>
+  <Accordion title="Cérebro" icon="brain">
+  Administrador e Gestor da Empresa, como na tela. Ver Operações faz parte dos planos Scale e Enterprise.
+
+  | Ferramenta | O que faz |
+  |---|---|
+  | Buscar em Propriedades pelo assunto | Procura o conteúdo sobre um assunto, mesmo sem saber o nome exato. Consome créditos. |
+  | Listar Propriedades | Lista os documentos, as perguntas e respostas, os sites e as pastas. |
+  | Ver conteúdo de uma Propriedade | Abre a pergunta e a resposta, ou o texto do documento ou do site. |
+  | Ver Personalidade | Traz Comunicação, Diretrizes e Conformidade, com a situação de cada item. |
+  | Ver Operações | Traz Disponibilidade, Roteamento, Qualificação, Esclarecimentos, Contexto situacional e Status de contato. |
   </Accordion>
   <Accordion title="Conectores" icon="plug">
   Todos consultam. Planos com Conectores (Scale e Enterprise).
@@ -178,8 +191,13 @@ Onde fica: **Configurações > Pessoal > Segurança**, seção **Assistentes de 
   <Accordion title="A lista ficou com pessoas com problema. O que faço?">
   Peça ao Claude para mostrar a lista: ele traz cada pessoa com problema e o motivo, como telefone inválido. Quem tem problema fica na lista e não recebe até o cadastro ser corrigido.
   </Accordion>
+  <Accordion title="O Claude mostra um item do Cérebro, mas o Tino não segue. Por quê?">
+  O Claude mostra o que está cadastrado, e nem tudo vale nas conversas. Confira a situação do item: uma sugestão da IA aguardando revisão ou um item desligado fica de fora.
+
+  Uma regra de Conformidade ou de Roteamento também pode valer só em um tipo de conversa, e um Contexto situacional só vale dentro das datas.
+  </Accordion>
   <Accordion title="Usar o Claude consome créditos do Tartini?">
-  Só a avaliação da capacidade da IA e os testes de campanha, como na tela. As outras ferramentas não consomem créditos do Tartini. A conversa com o Claude segue o plano que você tem no Claude.
+  Só a avaliação da capacidade da IA, os testes de campanha e a busca em Propriedades pelo assunto. As outras ferramentas não consomem créditos do Tartini. A conversa com o Claude segue o plano que você tem no Claude.
   </Accordion>
 </AccordionGroup>
 
