@@ -1,12 +1,12 @@
 ---
 title: "Use o Tartini no Claude"
 sidebarTitle: "MCP Tartini"
-description: "Monte processos, listas e campanhas conversando com o Claude, com as mesmas permissões que você tem no painel."
+description: "Monte processos, listas e campanhas e consulte as métricas conversando com o Claude, com as mesmas permissões do painel."
 ---
 
 import { Lista, Artigo } from "/components/lista-artigos.jsx";
 
-Com o Tartini conectado ao Claude, você pede em uma conversa e ele faz no painel: escreve um processo a partir de uma descrição, monta uma lista de público com a planilha que você já tem, cria a campanha, testa com clientes simulados e ativa quando você der o sinal. As instruções ficam em **Configurações > Integrações > MCP Tartini**.
+Com o Tartini conectado ao Claude, você pede em uma conversa e ele faz no painel: escreve um processo a partir de uma descrição, monta uma lista de público com a planilha que você já tem, cria a campanha, testa com clientes simulados e ativa quando você der o sinal. Ele também responde sobre as métricas, com os filtros e as comparações que você pedir. As instruções ficam em **Configurações > Integrações > MCP Tartini**.
 
 <Note>
   Cada pessoa conecta a própria conta, e o assistente age com o papel dela: o que você não pode fazer no painel, ele também não pode. As ferramentas de processos, conectores e campanhas fazem parte dos planos Scale e Enterprise.
@@ -52,6 +52,9 @@ Depois de conectado, peça em linguagem natural. O Claude escolhe a ferramenta c
 - "Quando o processo de cancelamento terminar sem acordo, transfira para o setor Financeiro."
 - "Avalie o processo de segunda via de boleto e me diga o que falta para o Tino fazer sozinho."
 - "Como foi a operação na última semana em comparação com a anterior?"
+- "Compare o tempo de primeira resposta por unidade neste mês e no mês passado."
+- "Quais campanhas tiveram conversão acima de 10% no último trimestre?"
+- "Em qual etapa do processo de orçamento as conversas mais param?"
 - "Crie uma lista com os clientes desta planilha que vencem em dezembro." e anexe a planilha.
 - "Monte uma campanha de renovação para essa lista, com 10% de desconto até o dia 20 e um lembrete dois dias depois."
 - "Rode os testes da campanha de renovação e me diga o que falhou."
@@ -71,7 +74,7 @@ O Claude só vê as ferramentas que o plano da empresa inclui e que o seu papel 
 
 <AccordionGroup>
   <Accordion title="Processos" icon="diagram-project">
-  Quem vê processos consulta. Criar, editar, ativar, definir saída e avaliar são do Administrador e do Gestor da Empresa. Planos Scale e Enterprise.
+  Administrador e Gestor da Empresa, como na tela. Planos Scale e Enterprise.
 
   | Ferramenta | O que faz |
   |---|---|
@@ -87,7 +90,7 @@ O Claude só vê as ferramentas que o plano da empresa inclui e que o seu papel 
   | Avaliar capacidade da IA no processo | É o botão **Avaliar capacidade** da tela: avalia etapa por etapa o que o Tino faz sozinho. |
   </Accordion>
   <Accordion title="Conectores" icon="plug">
-  Todos consultam. Planos com Conectores (Scale e Enterprise).
+  Administrador da empresa, como na tela. Planos com Conectores (Scale e Enterprise).
 
   | Ferramenta | O que faz |
   |---|---|
@@ -104,7 +107,7 @@ O Claude só vê as ferramentas que o plano da empresa inclui e que o seu papel 
   | Adicionar pessoas à lista | Importa mais pessoas numa lista. A mesma pessoa atualiza o cadastro em vez de repetir. |
   </Accordion>
   <Accordion title="Campanhas" icon="bullhorn">
-  Quem vê campanhas consulta. Criar, editar, testar, ativar e pausar são do Administrador e dos gestores. Planos Scale e Enterprise.
+  Administrador e gestores de qualquer nível, como na tela. Planos Scale e Enterprise.
 
   | Ferramenta | O que faz |
   |---|---|
@@ -121,11 +124,15 @@ O Claude só vê as ferramentas que o plano da empresa inclui e que o seu papel 
   | Pausar campanha | Para o envio na hora. As conversas já abertas continuam. |
   </Accordion>
   <Accordion title="Métricas" icon="chart-line">
-  Quem vê Métricas, no recorte do seu papel: o Gestor de Área vê só a área dele.
+  Administrador e gestores de qualquer nível, no recorte do seu papel: o Gestor de Área vê só a área dele.
 
   | Ferramenta | O que faz |
   |---|---|
-  | Visão da operação no período | Traz os números de **Métricas > Operação** num período, comparados ao anterior. |
+  | Ver métricas dos relatórios | Lista as métricas, os recortes e os filtros de cada área. |
+  | Consultar métricas de atendimento | Conversas, tempos, SLA, transferências, CSAT, abandono e resultado da IA. |
+  | Consultar métricas de campanhas | Resultado, conversão, falhas de envio, follow-up e desistências. Planos Scale e Enterprise. |
+  | Consultar métricas de processos | Uso, funil, qualidade e a etapa em que as conversas param. Planos Scale e Enterprise. |
+  | Consultar volume de mensagens | Mensagens por tipo, por canal e no tempo. Só o Administrador da empresa. |
   </Accordion>
 </AccordionGroup>
 
@@ -178,6 +185,14 @@ Onde fica: **Configurações > Pessoal > Segurança**, seção **Assistentes de 
   <Accordion title="A lista ficou com pessoas com problema. O que faço?">
   Peça ao Claude para mostrar a lista: ele traz cada pessoa com problema e o motivo, como telefone inválido. Quem tem problema fica na lista e não recebe até o cadastro ser corrigido.
   </Accordion>
+  <Accordion title="Uma métrica veio sem valor. Isso quer dizer zero?">
+  Não. Sem valor quer dizer que aquele número não foi medido no período ou no recorte que você pediu.
+  </Accordion>
+  <Accordion title="Como o Claude conta o sucesso de um follow-up de campanha?">
+  Pela continuidade da conversa: conta quem escreveu depois da última tentativa. Quem respondeu a uma tentativa anterior e não à última fica de fora.
+
+  Os números vêm separados pelo tipo configurado na campanha: sem resposta à abertura e parou no meio da conversa. Uma campanha só com a retomada do meio da conversa também a envia a quem nunca respondeu.
+  </Accordion>
   <Accordion title="Usar o Claude consome créditos do Tartini?">
   Só a avaliação da capacidade da IA e os testes de campanha, como na tela. As outras ferramentas não consomem créditos do Tartini. A conversa com o Claude segue o plano que você tem no Claude.
   </Accordion>
@@ -191,4 +206,5 @@ Onde fica: **Configurações > Pessoal > Segurança**, seção **Assistentes de 
   <Artigo titulo="Processos explicados" href="/cerebro/processos-explicados">O que o Claude cria e edita por você.</Artigo>
   <Artigo titulo="Campanhas explicadas" href="/campanhas/campanhas-explicadas">O que o Claude monta e testa por você.</Artigo>
   <Artigo titulo="Conecte ferramentas externas à IA" href="/integracoes/conectores">O caminho inverso: o Tino usa outros sistemas.</Artigo>
+  <Artigo titulo="Métricas da operação" href="/metricas/operacao">Os números que o Claude consulta, na tela.</Artigo>
 </Lista>
