@@ -58,6 +58,10 @@ Depois de conectado, peça em linguagem natural. O Claude escolhe a ferramenta c
 - "Pause a campanha de Black Friday."
 - "O Cérebro já sabe a nossa política de troca?"
 - "Quais regras de Conformidade estão aguardando revisão?"
+- "Cadastre no Cérebro as perguntas frequentes deste manual que ainda não estão lá." e anexe o manual.
+- "Atualize o Tartini com esta tabela de preços de 2027." e anexe a tabela.
+- "Transforme esta política de trocas em regras de Conformidade."
+- "De 24/12 a 02/01 atendemos das 9h às 13h."
 
 O Claude confere antes de criar: procura processos e listas parecidos e usa só setores, canais e campos que existem na sua empresa.
 
@@ -89,7 +93,7 @@ O Claude só vê as ferramentas que o plano da empresa inclui e que o seu papel 
   | Avaliar capacidade da IA no processo | É o botão **Avaliar capacidade** da tela: avalia etapa por etapa o que o Tino faz sozinho. |
   </Accordion>
   <Accordion title="Cérebro" icon="brain">
-  Administrador e Gestor da Empresa, como na tela. Ver Operações faz parte dos planos Scale e Enterprise.
+  Administrador e Gestor da Empresa, como na tela. As ferramentas de Operações, Qualificação e Disponibilidade fazem parte dos planos Scale e Enterprise.
 
   | Ferramenta | O que faz |
   |---|---|
@@ -98,6 +102,16 @@ O Claude só vê as ferramentas que o plano da empresa inclui e que o seu papel 
   | Ver conteúdo de uma Propriedade | Abre a pergunta e a resposta, ou o texto do documento ou do site. |
   | Ver Personalidade | Traz Comunicação, Diretrizes e Conformidade, com a situação de cada item. |
   | Ver Operações | Traz Disponibilidade, Roteamento, Qualificação, Esclarecimentos, Contexto situacional e Status de contato. |
+  | Adicionar perguntas e respostas | Cadastra perguntas e respostas e pula as que já existem com o mesmo texto. Consome créditos. |
+  | Editar pergunta e resposta | Muda a pergunta, a resposta ou as duas. Consome créditos. |
+  | Adicionar documento | Envia o texto de um documento, e a IA lê como no upload da tela. Consome créditos. |
+  | Editar conteúdo de documento ou site | Troca um trecho ou o texto inteiro. Consome créditos. |
+  | Adicionar site | Adiciona uma página, ou as páginas que você escolher. Consome créditos. |
+  | Criar pasta e renomear pasta | Organiza Propriedades. |
+  | Criar e editar item de Personalidade | Comunicação, Diretrizes e Conformidade, inclusive ligar e desligar. |
+  | Criar e editar item de Operações | Roteamento, Esclarecimentos e Contexto situacional. |
+  | Criar e editar campo de Qualificação | Os dados que o Tino coleta na conversa. |
+  | Definir Disponibilidade | Muda o horário dos dias que você pedir e mantém os outros. |
   </Accordion>
   <Accordion title="Conectores" icon="plug">
   Todos consultam. Planos com Conectores (Scale e Enterprise).
@@ -152,7 +166,11 @@ Quando a avaliação encontra uma etapa que precisa de um conector, ela vincula 
 
 O Claude cria campanhas de envio para listas. O modelo de mensagem do WABA Oficial, os materiais, a resposta em áudio e as campanhas por webhook ou palavra-chave são configurados na tela da campanha.
 
-O que o Claude não faz: apagar processos, listas e campanhas, mudar a configuração dos conectores e ler as conversas dos seus clientes.
+Um item de Personalidade ou de Operações criado pelo Claude vale nas conversas na hora, como quando você cria pela tela. Um documento enviado por ele passa pela leitura da IA, e as sugestões ficam aguardando a sua revisão na tela.
+
+O Claude envia documentos como texto: ele lê o PDF ou a planilha e cadastra o conteúdo, sem guardar o arquivo original.
+
+O que o Claude não faz: apagar processos, listas, campanhas e itens do Cérebro, aprovar sugestões da IA, mudar a configuração dos conectores e ler as conversas dos seus clientes.
 
 ---
 
@@ -197,7 +215,7 @@ Onde fica: **Configurações > Pessoal > Segurança**, seção **Assistentes de 
   Peça ao Claude para mostrar a lista: ele traz cada pessoa com problema e o motivo, como telefone inválido. Quem tem problema fica na lista e não recebe até o cadastro ser corrigido.
   </Accordion>
   <Accordion title="Usar o Claude consome créditos do Tartini?">
-  Só a avaliação da capacidade da IA, os testes de campanha e a busca em Propriedades pelo assunto. As outras ferramentas não consomem créditos do Tartini. A conversa com o Claude segue o plano que você tem no Claude.
+  Só a avaliação da capacidade da IA, os testes de campanha, a busca em Propriedades pelo assunto e adicionar ou editar conteúdo em Propriedades, como na tela. As outras ferramentas não consomem créditos do Tartini. A conversa com o Claude segue o plano que você tem no Claude.
   </Accordion>
 </AccordionGroup>
 
