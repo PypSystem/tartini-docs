@@ -1,7 +1,7 @@
 ---
 title: "Acompanhe os resultados"
 sidebarTitle: "Resultados"
-description: "Veja quantos contatos responderam, quantos converteram e onde as conversas de uma campanha aparecem no Inbox."
+description: "Veja quantos contatos responderam, quantos converteram, qual follow-up funcionou e onde as conversas aparecem no Inbox."
 ---
 
 import { Lista, Artigo } from "/components/lista-artigos.jsx";
@@ -68,6 +68,29 @@ Onde fica: aba **Métricas**, sub-aba **Conversões**.
 
 ---
 
+## Veja qual follow-up funcionou
+
+Por padrão, a sub-aba **Follow-up** mostra as tentativas que a campanha enviou e quais tiveram resposta.
+
+Onde fica: aba **Métricas**, sub-aba **Follow-up**.
+
+<Steps>
+  <Step title="Leia os números principais">**Tentativas Enviadas**, **Tentativas Respondidas**, **Sucesso por Tentativa** e **Conversas que Responderam** resumem o resultado.</Step>
+  <Step title="Compare as tentativas">A tabela **Qual tentativa funcionou** mostra cada posição da **Abertura** e da **Retomada**, com quantas saíram e quantas tiveram resposta.</Step>
+  <Step title="Separe pelo que a pessoa fez">Os cartões **Sem resposta à abertura** e **Parou no meio da conversa** mostram o resultado de cada situação.</Step>
+  <Step title="Veja o que não saiu">**Por que não saíram** lista os motivos, como a janela de 24h fechada ou um pedido de tempo da pessoa.</Step>
+</Steps>
+
+<Frame caption="A coluna Sucesso mostra qual tentativa funcionou">
+  <img src="/images/campanhas/resultados-follow-up.png" alt="Sub-aba Follow-up com os cartões de tentativas e a tabela Qual tentativa funcionou" />
+</Frame>
+
+<Note>
+  Cada resposta conta para uma tentativa só: a última enviada antes de a pessoa escrever. Quem entrou por palavra-chave e parou logo depois conta em **Sem resposta à abertura**.
+</Note>
+
+---
+
 ## Veja os abandonos
 
 Por padrão, a sub-aba **Abandonos** mostra conversas que foram transferidas para a equipe e depois ficaram sem resposta.
@@ -89,6 +112,12 @@ Toda conversa aberta por uma campanha aparece no Inbox com um chip **Campanha**,
 <AccordionGroup>
   <Accordion title="Onde vejo as conversas de uma campanha?">
   Na aba **Métricas › Conversas** do painel da campanha, ou no Inbox, procurando o chip **Campanha** nas conversas.
+  </Accordion>
+  <Accordion title="Por que aparecem tentativas sem detalhe em Follow-up?">
+  São tentativas enviadas antes de o registro por tentativa existir. Elas aparecem no aviso do topo da sub-aba e ficam fora das taxas.
+  </Accordion>
+  <Accordion title="O retorno depois de um &quot;vou ver e te falo&quot; conta como tentativa?">
+  Não. Esse retorno aparece em **Check-ins**, fora dos números de follow-up, porque a campanha não o configura.
   </Accordion>
   <Accordion title="Como marco uma venda manualmente?">
   Na aba **Métricas › Conversões**, use **Marcar conversão** na linha do contato. A origem fica registrada como **Manual**.
