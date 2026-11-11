@@ -59,6 +59,8 @@ Depois de conectado, peça em linguagem natural. O Claude escolhe a ferramenta c
 - "Monte uma campanha de renovação para essa lista, com 10% de desconto até o dia 20 e um lembrete dois dias depois."
 - "Rode os testes da campanha de renovação e me diga o que falhou."
 - "Pause a campanha de Black Friday."
+- "Crie uma campanha para quem escrever 'concurso' no WhatsApp do estande, e me diga em qual campanha entra quem só mandar 'oi'."
+- "Gere o endereço de entrada da lista de inscritos do evento: o CPF identifica a pessoa."
 - "O Cérebro já sabe a nossa política de troca?"
 - "Quais regras de Conformidade estão aguardando revisão?"
 - "Cadastre no Cérebro as perguntas frequentes deste manual que ainda não estão lá." e anexe o manual.
@@ -129,9 +131,11 @@ O Claude só vê as ferramentas que o plano da empresa inclui e que o seu papel 
   | Ferramenta | O que faz |
   |---|---|
   | Listar listas de público | Lista as listas da empresa, com quantas pessoas estão prontas e quantas estão com problema. |
-  | Ver lista de público | Mostra os campos da lista e as pessoas com problema, com o motivo. |
+  | Ver lista de público | Mostra os campos da lista, as pessoas com problema, com o motivo, e se a lista tem endereço de entrada. |
   | Criar lista de público | Cria a lista e importa as pessoas da planilha, como a importação da tela. |
   | Adicionar pessoas à lista | Importa mais pessoas numa lista. A mesma pessoa atualiza o cadastro em vez de repetir. |
+  | Configurar o endereço de entrada da lista | Gera o endereço que o formulário do site, o sistema do evento ou o CRM usa para inscrever pessoas, e diz qual campo identifica a pessoa e qual cancela a inscrição. |
+  | Ver o que chegou pelo endereço de entrada | Mostra as últimas inscrições, os campos que vieram e as que entraram com problema, com o motivo. |
   </Accordion>
   <Accordion title="Campanhas" icon="bullhorn">
   Administrador e gestores de qualquer nível, como na tela. Planos Scale e Enterprise.
@@ -142,12 +146,14 @@ O Claude só vê as ferramentas que o plano da empresa inclui e que o seu papel 
   | Ver campanha | Mostra a configuração e o que ainda impede de ativar. |
   | Ver o que uma campanha pode usar | Mostra as unidades, os canais, as listas e os processos que valem para a campanha. |
   | Criar campanha | Cria uma campanha de envio para listas, no mesmo formato da tela. Ela nasce como rascunho. |
-  | Editar campanha | Muda só o que você pediu e mantém o resto. |
+  | Criar campanha que começa quando a pessoa escreve | Cria a campanha por palavra-chave, por frase parecida, pela intenção da mensagem ou a padrão das conversas novas do canal. Ela nasce como rascunho. |
+  | Testar mensagem | Diz em qual campanha do canal uma mensagem entraria, e por quê. |
+  | Editar campanha | Muda só o que você pediu e mantém o resto, inclusive a retomada no meio da conversa. |
   | Ver cenários de teste | Mostra os clientes simulados e o resultado do último teste de cada um. |
   | Criar cenário de teste | Cria um cliente simulado e o que se espera da conversa. |
   | Rodar cenários de teste | Roda os testes da campanha. Antes, mostra quanto vai custar. |
   | Ver conversa de um teste | Mostra a conversa simulada e o julgamento de cada critério. |
-  | Ativar campanha | Começa o envio, ou retoma uma pausada. Antes, mostra quantas pessoas recebem e pede a sua confirmação. |
+  | Ativar campanha | Começa o envio, ou retoma uma pausada. Antes, mostra quantas pessoas recebem e pede a sua confirmação. Na campanha que começa quando a pessoa escreve, avisa que ela não manda mensagem para ninguém: responde a quem escrever. |
   | Pausar campanha | Para o envio na hora. As conversas já abertas continuam. |
   </Accordion>
   <Accordion title="Métricas" icon="chart-line">
@@ -171,7 +177,9 @@ Criar ou editar um processo não avalia sozinho: peça a avaliação quando term
 
 Quando a avaliação encontra uma etapa que precisa de um conector, ela vincula o conector ao processo. Escolher só algumas ferramentas, escrever a instrução de uso e desvincular continuam na tela do processo, na seção **Ferramentas**.
 
-O Claude cria campanhas de envio para listas. O modelo de mensagem do WABA Oficial, os materiais, a resposta em áudio e as campanhas por webhook ou palavra-chave são configurados na tela da campanha.
+O Claude cria campanhas de envio para listas e campanhas que começam quando a pessoa escreve. O modelo de mensagem do WABA Oficial, os materiais, a resposta em áudio e o gatilho de comentário do Instagram são configurados na tela da campanha.
+
+O endereço de entrada de uma lista funciona como uma senha: quem tem consegue inscrever pessoas na lista. Por isso o Claude mostra o endereço completo só quando ele é gerado, para você colar no formulário; depois disso, ele fica na tela da lista. Trocar o endereço faz o antigo parar de funcionar, e o Claude só troca quando você pede.
 
 Um item de Personalidade ou de Operações criado pelo Claude vale nas conversas na hora, como quando você cria pela tela. Um documento enviado por ele passa pela leitura da IA, e as sugestões ficam aguardando a sua revisão na tela.
 
