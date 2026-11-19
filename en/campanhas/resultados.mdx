@@ -1,7 +1,7 @@
 ---
 title: "Track the results"
 sidebarTitle: "Results"
-description: "See how many contacts responded, how many converted, and where a campaign's conversations show up in the Inbox."
+description: "See how many contacts responded, how many converted, which follow-up worked, and where conversations show up in the Inbox."
 ---
 
 import { Lista, Artigo } from "/components/lista-artigos.jsx";
@@ -70,6 +70,29 @@ Where to find it: **Métricas** tab, **Conversões** sub-tab.
 
 ---
 
+## See which follow-up worked
+
+By default, the **Follow-up** sub-tab shows the attempts the campaign sent and which ones got a reply.
+
+Where to find it: **Métricas** tab, **Follow-up** sub-tab.
+
+<Steps>
+  <Step title="Read the main numbers">**Tentativas Enviadas** (Attempts Sent), **Tentativas Respondidas** (Attempts Answered), **Sucesso por Tentativa** (Success per Attempt), and **Conversas que Responderam** (Conversations That Replied) sum up the result.</Step>
+  <Step title="Compare the attempts">The **Qual tentativa funcionou** (Which attempt worked) table shows each position of **Abertura** (Opening) and **Retomada** (Re-engagement), with how many went out and how many got a reply.</Step>
+  <Step title="Split by what the person did">The **Sem resposta à abertura** (No reply to the opening) and **Parou no meio da conversa** (Stopped mid-conversation) cards show the result of each situation.</Step>
+  <Step title="See what didn't go out">**Por que não saíram** (Why they didn't go out) lists the reasons, such as a closed 24-hour window or the person asking for time.</Step>
+</Steps>
+
+<Frame caption="The Sucesso column shows which attempt worked">
+  <img src="/images/campanhas/resultados-follow-up.png" alt="Follow-up sub-tab with the attempt cards and the Which attempt worked table" />
+</Frame>
+
+<Note>
+  Each reply counts for one attempt only: the last one sent before the person wrote. Someone who joined through a keyword and stopped right after counts under **Sem resposta à abertura**.
+</Note>
+
+---
+
 ## See the drop-offs
 
 By default, the **Abandonos** (Drop-offs) sub-tab shows conversations that were transferred to the team and then went unanswered.
@@ -91,6 +114,12 @@ Every conversation opened by a campaign shows up in the Inbox with a **Campanha*
 <AccordionGroup>
   <Accordion title="Where do I see a campaign's conversations?">
   On the **Métricas › Conversas** tab of the campaign dashboard, or in the Inbox, by looking for the **Campanha** chip on conversations.
+  </Accordion>
+  <Accordion title="Why does Follow-up show attempts without detail?">
+  They are attempts sent before per-attempt tracking existed. They show up in the notice at the top of the sub-tab and stay out of the rates.
+  </Accordion>
+  <Accordion title="Does the check back after an &quot;I'll look and let you know&quot; count as an attempt?">
+  No. It shows up under **Check-ins**, outside the follow-up numbers, because the campaign doesn't configure it.
   </Accordion>
   <Accordion title="How do I mark a sale manually?">
   On the **Métricas › Conversões** tab, use **Marcar conversão** on the contact's row. The source is recorded as **Manual**.

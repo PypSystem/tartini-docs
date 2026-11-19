@@ -1,7 +1,7 @@
 ---
 title: "Sigue los resultados"
 sidebarTitle: "Resultados"
-description: "Mira cuántos contactos respondieron, cuántos convirtieron y dónde aparecen las conversaciones de una campaña en el Inbox."
+description: "Mira cuántos contactos respondieron, cuántos convirtieron, qué follow-up funcionó y dónde aparecen las conversaciones en el Inbox."
 ---
 
 import { Lista, Artigo } from "/components/lista-artigos.jsx";
@@ -70,6 +70,29 @@ Dónde está: pestaña **Métricas**, subpestaña **Conversões**.
 
 ---
 
+## Mira qué follow-up funcionó
+
+De forma predeterminada, la subpestaña **Follow-up** muestra los intentos que envió la campaña y cuáles tuvieron respuesta.
+
+Dónde está: pestaña **Métricas**, subpestaña **Follow-up**.
+
+<Steps>
+  <Step title="Lee los números principales">**Tentativas Enviadas** (Intentos enviados), **Tentativas Respondidas** (Intentos respondidos), **Sucesso por Tentativa** (Éxito por intento) y **Conversas que Responderam** (Conversaciones que respondieron) resumen el resultado.</Step>
+  <Step title="Compara los intentos">La tabla **Qual tentativa funcionou** (Qué intento funcionó) muestra cada posición de **Abertura** (Apertura) y **Retomada** (Reanudación), con cuántos salieron y cuántos tuvieron respuesta.</Step>
+  <Step title="Separa por lo que hizo la persona">Las tarjetas **Sem resposta à abertura** (Sin respuesta a la apertura) y **Parou no meio da conversa** (Se detuvo a mitad de la conversación) muestran el resultado de cada situación.</Step>
+  <Step title="Mira lo que no salió">**Por que não saíram** (Por qué no salieron) lista los motivos, como la ventana de 24 h cerrada o un pedido de tiempo de la persona.</Step>
+</Steps>
+
+<Frame caption="La columna Sucesso muestra qué intento funcionó">
+  <img src="/images/campanhas/resultados-follow-up.png" alt="Subpestaña Follow-up con las tarjetas de intentos y la tabla Qué intento funcionó" />
+</Frame>
+
+<Note>
+  Cada respuesta cuenta para un solo intento: el último enviado antes de que la persona escribiera. Quien entró por palabra clave y se detuvo enseguida cuenta en **Sem resposta à abertura**.
+</Note>
+
+---
+
 ## Mira los abandonos
 
 De forma predeterminada, la subpestaña **Abandonos** muestra conversaciones que fueron transferidas al equipo y después quedaron sin respuesta.
@@ -91,6 +114,12 @@ Toda conversación abierta por una campaña aparece en el Inbox con un chip **Ca
 <AccordionGroup>
   <Accordion title="¿Dónde veo las conversaciones de una campaña?">
   En la pestaña **Métricas › Conversas** del panel de la campaña, o en el Inbox, buscando el chip **Campanha** en las conversaciones.
+  </Accordion>
+  <Accordion title="¿Por qué aparecen intentos sin detalle en Follow-up?">
+  Son intentos enviados antes de que existiera el registro por intento. Aparecen en el aviso de la parte superior de la subpestaña y quedan fuera de las tasas.
+  </Accordion>
+  <Accordion title="¿El regreso después de un &quot;voy a ver y te aviso&quot; cuenta como intento?">
+  No. Aparece en **Check-ins**, fuera de los números de follow-up, porque la campaña no lo configura.
   </Accordion>
   <Accordion title="¿Cómo marco una venta manualmente?">
   En la pestaña **Métricas › Conversões**, usa **Marcar conversão** en la fila del contacto. El origen queda registrado como **Manual**.
