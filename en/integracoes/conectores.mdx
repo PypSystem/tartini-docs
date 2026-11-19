@@ -65,7 +65,10 @@ Where to find it: the connector's detail, **Ferramentas** section.
 
 {/* CAPTURA: images/integracoes/conectores-ferramentas.png | alt: detalhe de um conector próprio com a lista de ferramentas e uma delas aberta | olhar: o interruptor de cada ferramenta e o campo de descrição */}
 
-**Atualizar ferramentas** (Refresh tools) brings in the server's new tools and doesn't change the description of existing ones. On the base connector, the new ones arrive turned off.
+Tartini refreshes the tools of every active connector on its own, every hour: new tools, and descriptions and parameters that changed on the server. **Atualizar ferramentas** (Refresh tools) does the same right away, and the detail view shows **Ferramentas atualizadas em** (Tools refreshed at) with the time of the last refresh. On the base connector, new tools arrive turned off.
+
+- **Edited description:** yours replaces the server's, even after refreshes. **Voltar à descrição do servidor** (Back to the server's description) undoes the edit.
+- **Saiu do servidor** (Left the server): a tool missing from the refresh gets this badge and Tino stops using it. If it comes back to the server, it returns as it was: on or off.
 
 ---
 
