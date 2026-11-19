@@ -1,12 +1,12 @@
 ---
 title: "Use o Tartini no Claude"
 sidebarTitle: "MCP Tartini"
-description: "Monte processos, listas e campanhas e consulte as métricas conversando com o Claude, com as mesmas permissões do painel."
+description: "Monte processos, listas e campanhas, consulte as métricas e descubra onde o atendimento pode melhorar conversando com o Claude, com as mesmas permissões do painel."
 ---
 
 import { Lista, Artigo } from "/components/lista-artigos.jsx";
 
-Com o Tartini conectado ao Claude, você pede em uma conversa e ele faz no painel: escreve um processo a partir de uma descrição, monta uma lista de público com a planilha que você já tem, cria a campanha, testa com clientes simulados e ativa quando você der o sinal. Ele também responde sobre as métricas, com os filtros e as comparações que você pedir. As instruções ficam em **Configurações > Integrações > MCP Tartini**.
+Com o Tartini conectado ao Claude, você pede em uma conversa e ele faz no painel: escreve um processo a partir de uma descrição, monta uma lista de público com a planilha que você já tem, cria a campanha, testa com clientes simulados e ativa quando você der o sinal. Ele também responde sobre as métricas, com os filtros e as comparações que você pedir, aponta onde o atendimento pode melhorar, mostra como cada canal está configurado e explica como usar o painel com os artigos desta central. As instruções ficam em **Configurações > Integrações > MCP Tartini**.
 
 <Note>
   Cada pessoa conecta a própria conta, e o assistente age com o papel dela: o que você não pode fazer no painel, ele também não pode. As ferramentas de processos, conectores e campanhas fazem parte dos planos Scale e Enterprise.
@@ -59,11 +59,17 @@ Depois de conectado, peça em linguagem natural. O Claude escolhe a ferramenta c
 - "Monte uma campanha de renovação para essa lista, com 10% de desconto até o dia 20 e um lembrete dois dias depois."
 - "Rode os testes da campanha de renovação e me diga o que falhou."
 - "Pause a campanha de Black Friday."
+- "Onde o atendimento pode melhorar este mês?"
+- "O que os clientes perguntam que o Tino não sabe responder?"
+- "Depois de quanto tempo a conversa no WhatsApp é encerrada sozinha?"
+- "O Tino responde fora do horário no Instagram?"
+- "Onde eu configuro o CSAT?"
 - "O Cérebro já sabe a nossa política de troca?"
 - "Quais regras de Conformidade estão aguardando revisão?"
 - "Cadastre no Cérebro as perguntas frequentes deste manual que ainda não estão lá." e anexe o manual.
 - "Atualize o Tartini com esta tabela de preços de 2027." e anexe a tabela.
 - "Transforme esta política de trocas em regras de Conformidade."
+- "Crie uma regra de Conformidade para não informar saldo sem confirmar quem é o cliente nas campanhas."
 - "De 24/12 a 02/01 atendemos das 9h às 13h."
 
 O Claude confere antes de criar: procura processos e listas parecidos e usa só setores, canais e campos que existem na sua empresa.
@@ -111,10 +117,26 @@ O Claude só vê as ferramentas que o plano da empresa inclui e que o seu papel 
   | Editar conteúdo de documento ou site | Troca um trecho ou o texto inteiro. Consome créditos. |
   | Adicionar site | Adiciona uma página, ou as páginas que você escolher. Consome créditos. |
   | Criar pasta e renomear pasta | Organiza Propriedades. |
-  | Criar e editar item de Personalidade | Comunicação, Diretrizes e Conformidade, inclusive ligar e desligar. |
+  | Criar e editar item de Personalidade | Comunicação, Diretrizes e Conformidade, inclusive ligar e desligar e os modos de cumprimento em Receptivo e Ativo. |
   | Criar e editar item de Operações | Roteamento, Esclarecimentos e Contexto situacional. |
   | Criar e editar campo de Qualificação | Os dados que o Tino coleta na conversa. |
   | Definir Disponibilidade | Muda o horário dos dias que você pedir e mantém os outros. |
+  </Accordion>
+  <Accordion title="Diagnóstico e configurações" icon="stethoscope">
+  Administrador e gestores de qualquer nível, no recorte do seu papel.
+
+  | Ferramenta | O que faz |
+  |---|---|
+  | Diagnosticar a qualidade do atendimento | Junta numa resposta as notas do Scout, os critérios que mais tiram nota, os números de atendimento, os processos com problema e o que os clientes perguntaram e o Tino não soube responder. |
+  | Ver configurações dos canais | Mostra a conexão de cada canal, a IA por canal (horários, follow-up, encerramento), a finalização automática, o SLA, o CSAT e as Regras de Conversa. |
+  </Accordion>
+  <Accordion title="Central de ajuda" icon="circle-question">
+  Qualquer pessoa conectada.
+
+  | Ferramenta | O que faz |
+  |---|---|
+  | Buscar na central de ajuda | Procura nos artigos desta central e diz onde fica a tela no menu. |
+  | Abrir página da central de ajuda | Abre um artigo inteiro desta central. |
   </Accordion>
   <Accordion title="Conectores" icon="plug">
   Administrador da empresa, como na tela. Planos com Conectores (Scale e Enterprise).
@@ -174,6 +196,10 @@ Quando a avaliação encontra uma etapa que precisa de um conector, ela vincula 
 O Claude cria campanhas de envio para listas. O modelo de mensagem do WABA Oficial, os materiais, a resposta em áudio e as campanhas por webhook ou palavra-chave são configurados na tela da campanha.
 
 Um item de Personalidade ou de Operações criado pelo Claude vale nas conversas na hora, como quando você cria pela tela. Um documento enviado por ele passa pela leitura da IA, e as sugestões ficam aguardando a sua revisão na tela.
+
+Uma regra de Conformidade criada pelo Claude sem modo escolhido é cumprida como está escrita até a IA ler a regra e propor os modos. Para o modo que dispensa conferir quem é o cliente, ele pede a sua confirmação antes.
+
+O diagnóstico usa os mesmos números das telas do Scout e dos relatórios. As perguntas que o Tino não soube responder vêm das conversas que o Scout avaliou, então a lista mostra parte delas, não todas.
 
 O Claude envia documentos como texto: ele lê o PDF ou a planilha e cadastra o conteúdo, sem guardar o arquivo original.
 
